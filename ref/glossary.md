@@ -287,7 +287,7 @@ A specialised processor that is designed to accelerate image processing and grap
 
 The characteristic of a system to continuously be available without failing for a higher-than-normal period of time. Anbox Cloud ensures high availability by keeping replicas of every service, which avoids having a single point of failure.
 
-See https://discourse.ubuntu.com/t/enable-high-availability/17754.
+See [Enable high availability](https://discourse.ubuntu.com/t/enable-high-availability/17754).
 
 <a name="hook"></a>
 ### Hook
@@ -301,7 +301,9 @@ See [Hooks](https://discourse.ubuntu.com/t/hooks/28555).
 
 The base for an instance, which contains all necessary components like Anbox or the Android root file system. Anbox Cloud provides images based on different Android and Ubuntu versions and different architectures.
 
-See https://discourse.ubuntu.com/t/manage-images/17758 and https://discourse.ubuntu.com/t/provided-images/24185.
+The images can be an Anbox Cloud AOSP image which is based on the Android Open Source Project (AOSP), an operating system typically used in mobile devices or an Anbox Cloud AAOS image which is based on the Android Automotive OS (AAOS), an infotainment platform used in automobiles.
+
+See [Manage images](https://discourse.ubuntu.com/t/manage-images/17758) and [Provided images](https://discourse.ubuntu.com/t/provided-images/24185).
 
 <a name="instance"></a>
 ### Instance

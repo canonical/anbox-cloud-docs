@@ -1,4 +1,5 @@
 AAM
+AAOS
 AAPT
 AAR
 AArch
@@ -294,6 +295,7 @@ vsync
 Vulkan
 vsync
 Wayland
+WebGL
 WebRTC
 WebSocket
 websocket
