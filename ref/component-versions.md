@@ -2,7 +2,8 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
-[Details=1.20.1]
+[Details=1.20.2]
+
 ### Charms
 
 #### Ubuntu 22.04
@@ -35,9 +36,71 @@ Not all components are updated with each release. When components are not update
 | `anbox-stream-agent` | `1.20/stable` | 271 |
 | `nats ` | `latest/stable` | 11 |
 
-### Validated revisions of 3rd party charms
+### Bundles
 
-n/a
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.20/stable` | 159 |
+| `anbox-cloud-core` | `1.20/stable` | 164 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.20/stable` | 1.20.2 |
+| `aar`    | `1.20/stable` | 1.20.2 |
+| `ams-node-controller` | `1.20/stable` | 1.20.2 |
+| `anbox-cloud-dashboard` | `1.20/stable` | 1.20.2 |
+| `anbox-stream-agent` | `1.20/stable` | 1.20.2 |
+| `anbox-stream-gateway` | `1.20/stable` | 1.20.2 |
+| `anbox-cloud-appliance` | `1.20/stable` | 1.20.2 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.20.2 |
+| `jammy:android13:arm64` | 1.20.2 |
+| `jammy:android12:amd64` | 1.20.2 |
+| `jammy:android12:arm64` | 1.20.2 |
+| `jammy:android11:amd64` | 1.20.2 |
+| `jammy:android11:arm64` | 1.20.2 |
+
+[/Details]
+
+[Details=1.20.1]
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.20/stable` | 259 |
+| `ams-node-controller` | `1.20/stable` | 267 |
+| `coturn` | `1.20/stable` | 261 |
+| `ams` | `1.20/stable` | 272 |
+| `aar` | `1.20/stable` | 266 |
+| `anbox-stream-gateway` | `1.20/stable` | 277 |
+| `ams-load-balancer` | `1.20/stable` | 267 |
+| `ams-lxd` | `1.20/stable` | 264 |
+| `anbox-stream-agent` | `1.20/stable` | 272 |
+| `nats ` | `latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.20/stable` | 258 |
+| `ams-node-controller` | `1.20/stable` | 266 |
+| `coturn` | `1.20/stable` | 260 |
+| `ams` | `1.20/stable` | 271 |
+| `aar` | `1.20/stable` | 265 |
+| `anbox-stream-gateway` | `1.20/stable` | 276 |
+| `ams-load-balancer` | `1.20/stable` | 266 |
+| `ams-lxd` | `1.20/stable` | 263 |
+| `anbox-stream-agent` | `1.20/stable` | 271 |
+| `nats ` | `latest/stable` | 11 |
 
 ### Bundles
 
@@ -105,10 +168,6 @@ n/a
 | `anbox-stream-agent` | `1.20/stable` | 240 |
 | `nats ` | `latest/stable` | 11 |
 
-### Validated revisions of 3rd party charms
-
-n/a
-
 ### Bundles
 
 | Name | Channel | Revision |
@@ -174,10 +233,6 @@ n/a
 | `ams-lxd` | `1.19/stable` | 212 |
 | `anbox-stream-agent` | `1.19/stable` | 220 |
 | `nats ` | `latest/stable` | 11 |
-
-### Validated revisions of 3rd party charms
-
-n/a
 
 ### Bundles
 
@@ -245,10 +300,6 @@ n/a
 | `anbox-stream-agent` | `1.19/stable` | 192 |
 | `nats ` | `latest/stable` | 11 |
 
-### Validated revisions of 3rd party charms
-
-n/a
-
 ### Bundles
 
 | Name | Channel | Revision |
@@ -315,10 +366,6 @@ n/a
 | `anbox-stream-agent` | `1.19/stable` | 174 |
 | `nats ` | `latest/stable` | 11 |
 
-### Validated revisions of 3rd party charms
-
-n/a
-
 ### Bundles
 
 | Name | Channel | Revision |
@@ -384,10 +431,6 @@ n/a
 | `ams-lxd` | `1.18/stable` | 138 |
 | `anbox-stream-agent` | `1.18/stable` | 146 |
 | `nats ` | `latest/stable` | 11 |
-
-### Validated revisions of 3rd party charms
-
-n/a
 
 ### Bundles
 
@@ -464,10 +507,6 @@ n/a
 | `anbox-stream-agent` | `1.18/stable` | 142 |
 | `nats ` | ` latest/stable` | 11 |
 
-### Validated revisions of 3rd party charms
-
-n/a
-
 ### Bundles
 
 | Name | Channel | Revision |
@@ -486,7 +525,6 @@ n/a
 | `anbox-stream-agent` | `1.18/stable` | 1.18.1 |
 | `anbox-stream-gateway` | `1.18/stable` | 1.18.1 |
 | `anbox-cloud-appliance` | `1.18/stable` | 1.18.1 |
-
 
 ### Anbox images
 
@@ -543,10 +581,6 @@ n/a
 | `anbox-stream-agent` | `1.18/stable` | 128 |
 | `nats ` | ` latest/stable` | 11 |
 
-### Validated revisions of 3rd party charms
-
-n/a
-
 ### Bundles
 
 | Name | Channel | Revision |
@@ -565,7 +599,6 @@ n/a
 | `anbox-stream-agent` | `1.18/stable` | 1.18.0 |
 | `anbox-stream-gateway` | `1.18/stable` | 1.18.0 |
 | `anbox-cloud-appliance` | `1.18/stable` | 1.18.0 |
-
 
 ### Anbox images
 
