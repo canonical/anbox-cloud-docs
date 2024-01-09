@@ -87,3 +87,10 @@ To enable the Android container to use a custom Android ID, add the feature flag
  * The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
 
 Once set, this feature flag will be considered by all newly launched instances.
+
+
+### WebRTC ICE candidate logging
+
+*since 1.20.2*
+
+For debugging purposes, Anbox Cloud can log ICE candidates from the server and client inside the system log of an instance. This is disabled by default and needs to be explicitly turned on with the feature flag `webrtc.enable_ice_logging`.
