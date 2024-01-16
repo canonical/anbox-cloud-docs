@@ -115,6 +115,7 @@ Graylog
 gRPC
 gzip
 HAProxy
+HIDL
 hotfix
 HTTPS
 HW
@@ -180,6 +181,7 @@ nvidia
 NVMe
 OAuth
 OBB
+OBD
 observability
 OES
 OOB
@@ -287,6 +289,7 @@ validator
 vCPU
 vCPUs
 VHAL
+VhalPropertyStatus
 viewport
 VirGL
 virglrenderer

@@ -63,6 +63,8 @@ HTTP code must be one of 400 or 500.
    * [`/1.0/sensors`](#heading--10sensors)
    * [`/1.0/tracing`](#heading--10tracing)
    * [`/1.0/platform`](#heading--10platform)
+   * [`/1.0/vhal`](#heading--10vhal)
+      * [`/1.0/vhal/config`](#heading--10vhalconfig)
 
 ## API details
 
@@ -86,7 +88,8 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
           "camera_static_data",
           "camera_video_streaming",
           "sensor_support",
-          "tracing_support"
+          "tracing_support",
+          "vhal_support"
         ],
         "api_status": "stable",       # API implementation status (one of, development, stable or deprecated)
         "api_version": "1.0"          # The API version as a string
@@ -509,3 +512,221 @@ Platform | Field name       | Available since   | JSON type | Access | Descripti
 ---------|------------------|-------------------|-----------|--------|--------------------|
 `webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
 `webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
+
+
+### `/1.0/vhal`
+
+This endpoint queries the [Android VHAL](https://source.android.com/docs/automotive/vhal)
+through Anbox. It mimics the
+[VHAL HIDL interface](https://source.android.com/docs/automotive/vhal/hidl-vhal-interface)
+for `get` and `set` and follows RESTful API conventions. All queries on this
+endpoint will fail with a 500 error code on non-automotive Anbox images.
+
+#### GET `1.0/vhal/{prop_id}/{area_id}`
+ * Description: Get a VHAL property value
+ * Operation: sync
+ * Return: Current value for requested property
+ * Parameters:
+    * `prop_id`: Property identifier. Can be given in decimal, octal or hexadecimal format.
+    * `area_id`: Valid area identifier for the property. Can be omitted for global properties. Can be given in decimal, octal, or hexadecimal format.
+    * Some properties require additional data for getting their values. See [OBD2_FREEZE_FRAME](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2061-2089) for an example. This additional data must be passed as JSON in the request body. The values must be set in the fields `int32_values`, `int64_values`, `float_values`, `bytes`, or `string_value`.
+
+To get the list of available properties and areas, query first the [`1.0/vhal/config` endpoint](#heading--10vhalconfig).
+
+Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/0x15600503/0x31 | jq .`:
+
+```bash
+{
+  "metadata": {
+    "value": {
+      "area_id": 49,         # Requested area.
+      "bytes": [],           # Raw bytes value as an 8-bit unsigned integer array.
+      "float_values": [      # Float array
+          16.0
+      ],
+      "int32_values": [],    # 32-bits signed integer array
+      "int64_values": [],    # 64-bits signed integer array
+      "prop": 358614275,     # Requested property.
+      "status": 0,           # Status of the property, see below.
+      "string_value": "",    # UTF-8 string value.
+      "timestamp": 0         # Time when the property was last set in nanoseconds since boot.
+    }
+  },
+  "status": "Success",
+  "status_code": 200,
+  "type": "sync"
+}
+```
+
+Usually, only one of `bytes`, `float_values`, `int32_values`, `int64_values`,
+`string_value` is set, and the rest is empty or omitted, depending on the
+property type (see [`1.0/vhal/config`](#heading--10vhalconfig)).
+`MIXED` property types may have multiple of these values set at the same time, see
+[VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
+
+Status can be one of the following values, taken from the
+[VhalPropertyStatus](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2700-2720)
+enumeration:
+
+|Name|Value|Description|
+|-|-|-|
+|Available|0|Property is available and behaving normally.|
+|Unavailable|1|Property is not available for reading or writing. Transient state.|
+|Error|2|Property has an error and is not available.|
+
+
+#### PUT
+ * Description: Set a VHAL property to a new value
+ * Operation: sync
+ * Return: standard return value or standard error
+
+Example input:
+
+```bash
+{
+  "prop_id": 286261505,  # Property identifier.
+  "area_id": 0,          # Area identifier. For global properties, it should be set to 0.
+  "status": 0,           # Status of the property, see below.
+  "bytes": [],           # (Optional) Raw bytes as 8-bit unsigned integer array
+  "float_values": [],    # (Optional) Float array
+  "int32_values": [],    # (Optional) 32-bit signed integer array
+  "int64_values": [],    # (Optional) 64-bit signed integer array
+  "string_value": "Foo", # (Optioanl) UTF-8 string
+}
+```
+
+At least one of `bytes`, `float_values`, `int32_values`, `int64_values`,
+`string_value` must be set, or the query will be considered invalid.
+
+Status can be one of the following values, taken from the
+[VhalPropertyStatus](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2700-2720)
+enumeration:
+
+|Name|Value|Description|
+|-|-|-|
+|Available|0|Property is available and behaving normally.|
+|Unavailable|1|Property is not available for reading or writing. Transient state.|
+|Error|2|Property has an error and is not available.|
+
+JSON does not allow for hexadecimal or octal integers, all integers (including
+`prop_id` and `area_id`) must be decimal.
+
+Return value for the input above:
+
+```bash
+{
+    "status": "Success",
+    "status_code": 200,
+    "type": "sync"
+}
+```
+
+### `/1.0/vhal/config`
+
+This endpoint queries the [Android VHAL](https://source.android.com/docs/automotive/vhal)
+through Anbox. It mimics the
+[VHAL HIDL interface](https://source.android.com/docs/automotive/vhal/hidl-vhal-interface)
+for `getAllPropConfigs` and `getPropConfigs` and follows RESTful API
+conventions. All queries on this endpoint will fail with a 500 error code on
+non-automotive Anbox images.
+
+#### GET
+ * Description: Get all VHAL property configurations
+ * Operation: sync
+ * Return: Current VHAL property configurations
+
+Example shortened return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/config | jq .`:
+
+```bash
+{
+  "metadata": {
+    "configs": [
+      {
+        "access": 3,
+        "area_configs": [
+          {
+            "area_id": 49,
+            "max_float_value": 10.0,
+            "max_int32_value": 0,
+            "max_int64_value": 0,
+            "min_float_value": -10.0,
+            "min_int32_value": 0,
+            "min_int64_value": 0
+          },
+          {
+            "area_id": 68,
+            "max_float_value": 10.0,
+            "max_int32_value": 0,
+            "max_int64_value": 0,
+            "min_float_value": -10.0,
+            "min_int32_value": 0,
+            "min_int64_value": 0
+          }
+        ],
+        "change_mode": 1,
+        "config_array": [],
+        "config_string": "",
+        "max_sample_rate": 0.0,
+        "min_sample_rate": 0.0,
+        "prop": 627048706,
+        "value_type": 6291456
+      },
+...
+      {
+        "access": 1,
+        "area_configs": [],
+        "change_mode": 0,
+        "config_array": [],
+        "config_string": "",
+        "max_sample_rate": 0.0,
+        "min_sample_rate": 0.0,
+        "prop": 289472773,
+        "value_type": 4259840
+      }
+    ]
+  },
+  "status": "Success",
+  "status_code": 200,
+  "type": "sync"
+}
+```
+
+See the [VHAL property configuration](https://source.android.com/docs/automotive/vhal/property-configuration) for more information on these fields.
+
+`value_type` is added as a convenience in the Anbox API and maps to the [VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
+
+#### GET `1.0/vhal/config/{prop_id},...,{prop_id}`
+ * Description: Get request VHAL property configurations
+ * Operation: sync
+ * Return: Current configuration for requested properties
+ * Parameters:
+    * `prop_id`: Property identifier(s). Can be given in decimal, octal or hexadecimal format. Can be given multiple times to query for the configuration of more than one property. If queried multiple times, property IDs must be separated by commas.
+
+Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/config/0x11100101 | jq .`:
+
+```bash
+{
+  "metadata": {
+    "configs": [
+      {
+        "access": 1,
+        "area_configs": [],
+        "change_mode": 0,
+        "config_array": [],
+        "config_string": "",
+        "max_sample_rate": 0.0,
+        "min_sample_rate": 0.0,
+        "prop": 286261505,
+        "value_type": 1048576    # Value type
+      }
+    ]
+  },
+  "status": "Success",
+  "status_code": 200,
+  "type": "sync"
+}
+```
+
+See the [VHAL property configuration](https://source.android.com/docs/automotive/vhal/property-configuration) for more information on these fields.
+
+`value_type` is added as a convenience in the Anbox API and maps to the [VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
