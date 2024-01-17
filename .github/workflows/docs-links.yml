@@ -18,7 +18,7 @@ jobs:
         with:
           files_ignore: |
             .github
-            release-notes
+            reference/release-notes
       
       - name: Find Anbox Cloud docs links
         id: find-anbox-cloud-docs-links
