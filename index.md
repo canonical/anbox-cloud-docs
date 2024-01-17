@@ -36,12 +36,12 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | -- | -- | -- |
 | 0 | / | [Anbox Cloud documentation](https://discourse.ubuntu.com/t/anbox-cloud-documentation/17029) |
 | 0 | | |
-| 1 | tut/landing | [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) |
-| 2 | tut/installing-appliance | [1. Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
-| 2 | tut/getting-started-dashboard | [2. Get started using the web dashboard](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
-| 2 | tut/getting-started | [3. Get started using the CLI](https://discourse.ubuntu.com/t/getting-started/17756)|
-| 2 | tut/stream-client | [4. Set up a stream client (Optional)](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
-| 2 | tut/creating-addon | [5. Create an addon (Optional)](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
+| 1 | tutorial/landing | [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) |
+| 2 | tutorial/installing-appliance | [1. Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
+| 2 | tutorial/getting-started-dashboard | [2. Get started using the web dashboard](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
+| 2 | tutorial/getting-started | [3. Get started using the CLI](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 2 | tutorial/stream-client | [4. Set up a stream client (Optional)](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
+| 2 | tutorial/creating-addon | [5. Create an addon (Optional)](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
 | 0 | | |
 | 1 | howto/landing | [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) |
 | 2 | howto/install-appliance/landing | [Install the appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) |
@@ -128,145 +128,145 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
 | 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
 | 0 | | |
-| 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
-| 2 | ref/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
-| 3 | ref/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
-| 3 | ref/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
-| 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) |
-| 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
-| 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
-| 2 | ref/appliance-command-reference/landing | [Appliance command reference](https://discourse.ubuntu.com/t/39525)|
-| 2 | ref/amc-command-reference/landing | [AMC command reference](https://discourse.ubuntu.com/t/40797) |
-| 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
-| 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
-| 2 | ref/supported-codecs | [Supported codecs](https://discourse.ubuntu.com/t/37323)|
-| 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
-| 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
-| 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
-| 2 | ref/api-reference | [APIs](https://discourse.ubuntu.com/t/api-reference/24339) |
-| 3 | ref/ams-http-api | [AMS HTTP API](https://anbox-cloud.github.io/latest/ams/)|
-| 3 | ref/anbox-https-api | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
-| 3 | ref/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/latest/anbox-stream-gateway/)|
-| 3 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
-| 2 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
-| 2 | ref/network-ports | [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)|
-| 2 | ref/addon-manifest | [Addon manifest](https://discourse.ubuntu.com/t/addons/25293)|
-| 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
-| 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
-| 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
-| 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
-| 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
-| 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
+| 1 | reference/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
+| 2 | reference/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
+| 3 | reference/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
+| 3 | reference/release-notes/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
+| 3 | reference/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) |
+| 3 | reference/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
+| 2 | reference/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
+| 2 | reference/appliance-command-reference/landing | [Appliance command reference](https://discourse.ubuntu.com/t/39525)|
+| 2 | reference/amc-command-reference/landing | [AMC command reference](https://discourse.ubuntu.com/t/40797) |
+| 2 | reference/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
+| 2 | reference/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
+| 2 | reference/supported-codecs | [Supported codecs](https://discourse.ubuntu.com/t/37323)|
+| 2 | reference/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
+| 2 | reference/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
+| 2 | reference/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
+| 2 | reference/api-reference | [APIs](https://discourse.ubuntu.com/t/api-reference/24339) |
+| 3 | reference/ams-http-api | [AMS HTTP API](https://anbox-cloud.github.io/latest/ams/)|
+| 3 | reference/anbox-https-api | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
+| 3 | reference/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/latest/anbox-stream-gateway/)|
+| 3 | reference/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
+| 2 | reference/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
+| 2 | reference/network-ports | [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)|
+| 2 | reference/addon-manifest | [Addon manifest](https://discourse.ubuntu.com/t/addons/25293)|
+| 2 | reference/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
+| 2 | reference/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
+| 2 | reference/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
+| 2 | reference/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
+| 2 | reference/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
+| 2 | reference/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | |
-| 1 | exp/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
-| 2 | exp/anbox-cloud | [Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
-| 2 | exp/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
-| 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
-| 2 | exp/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
-| 2 | exp/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
-| 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
-| 3 | exp/resources | [Resources and resource presets](https://discourse.ubuntu.com/t/24960)|
-| 2 | exp/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
-| 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 2 | exp/instances | [Instances](https://discourse.ubuntu.com/t/17763)|
-| 2 | exp/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
-| 2 | exp/gpus-instances | [GPUs and instances](https://discourse.ubuntu.com/t/17768)|
-| 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
-| 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416) |
-| 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
-| 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
+| 1 | explanation/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
+| 2 | explanation/anbox-cloud | [Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
+| 2 | explanation/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
+| 2 | explanation/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
+| 2 | explanation/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
+| 2 | explanation/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
+| 2 | explanation/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
+| 3 | explanation/resources | [Resources and resource presets](https://discourse.ubuntu.com/t/24960)|
+| 2 | explanation/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
+| 2 | explanation/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
+| 2 | explanation/instances | [Instances](https://discourse.ubuntu.com/t/17763)|
+| 2 | explanation/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
+| 2 | explanation/gpus-instances | [GPUs and instances](https://discourse.ubuntu.com/t/17768)|
+| 2 | explanation/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 2 | explanation/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416) |
+| 2 | explanation/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
+| 2 | explanation/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
 | 0 | | |
 | 1 | |[Documentation feedback](https://forms.gle/6yzgLbwN8rVYSdvG9)|
 | 0 | | |
-|   | release-notes/1.20.2 | [Release notes-Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686)|
-|   | release-notes/1.20.1 | [Release notes-Anbox Cloud 1.20.1](https://discourse.ubuntu.com/t/40988)|
-|   | release-notes/1.20.0 | [Release notes-Anbox Cloud 1.20.0](https://discourse.ubuntu.com/t/40281)|
-|   | release-notes/1.19.2 | [Release notes-Anbox Cloud 1.19.2](https://discourse.ubuntu.com/t/39311)|
-|   | release-notes/1.19.1 | [Release notes-Anbox Cloud 1.19.1](https://discourse.ubuntu.com/t/38595)|
-|   | release-notes/1.19.0-fix1 | [Hotfix release announcement](https://discourse.ubuntu.com/t/38250)|
-|   | release-notes/1.19.0 | [Release notes-Anbox Cloud 1.19.0](https://discourse.ubuntu.com/t/37849)|
-|   | release-notes/1.18.2 | [Release notes-Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)|
-|   | release-notes/1.18.1 | [Release notes-Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
-|   | release-notes/1.18.0 | [Release notes-Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
-|   | release-notes/1.17.2 | [Release notes-Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
-|   | release-notes/1.17.1 | [Release notes-Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
-|   | release-notes/1.17.0 | [Release notes-Anbox Cloud 1.17.0](https://discourse.ubuntu.com/t/33927)|
-|   | release-notes/1.16.4 | [Release notes-Anbox Cloud 1.16.4](https://discourse.ubuntu.com/t/33437)|
-|   | release-notes/1.16.3 | [Release notes-Anbox Cloud 1.16.3](https://discourse.ubuntu.com/t/33261)|
-|   | release-notes/1.16.2 | [Release notes-Anbox Cloud 1.16.2](https://discourse.ubuntu.com/t/33161)|
-|   | release-notes/1.16.1 | [Release notes-Anbox Cloud 1.16.1](https://discourse.ubuntu.com/t/32733)|
-|   | release-notes/1.16.0 | [Release notes-Anbox Cloud 1.16.0](https://discourse.ubuntu.com/t/32264)|
-|   | release-notes/1.15.3 | [Release notes-Anbox Cloud 1.15.3](https://discourse.ubuntu.com/t/31616)|
-|   | release-notes/1.15.2 | [Release notes-Anbox Cloud 1.15.2](https://discourse.ubuntu.com/t/31322)|
-|   | release-notes/1.15.1 | [Release notes-Anbox Cloud 1.15.1](https://discourse.ubuntu.com/t/30585)|
-|   | release-notes/1.15.0 | [Release notes-Anbox Cloud 1.15.0](https://discourse.ubuntu.com/t/30196)|
-|   | release-notes/1.14.2 | [Release notes-Anbox Cloud 1.14.2](https://discourse.ubuntu.com/t/29553)|
-|   | release-notes/1.14.1 | [Release notes-Anbox Cloud 1.14.1](https://discourse.ubuntu.com/t/28952)|
-|   | release-notes/1.14.0 | [Release notes-Anbox Cloud 1.14.0](https://discourse.ubuntu.com/t/28557)|
-|   | release-notes/1.13.2 | [Release notes-Anbox Cloud 1.13.2](https://discourse.ubuntu.com/t/27701)|
-|   | release-notes/1.13.1 | [Release notes-Anbox Cloud 1.13.1](https://discourse.ubuntu.com/t/27254)|
-|   | release-notes/1.13.0 | [Release notes-Anbox Cloud 1.13.0](https://discourse.ubuntu.com/t/26857)|
-|   | release-notes/1.12.5 | [Release notes-Anbox Cloud 1.12.5](https://discourse.ubuntu.com/t/26380)|
-|   | release-notes/1.12.4 | [Release notes-Anbox Cloud 1.12.4](https://discourse.ubuntu.com/t/26263)|
-|   | release-notes/1.12.3 | [Release notes-Anbox Cloud 1.12.3](https://discourse.ubuntu.com/t/26252)|
-|   | release-notes/1.12.2 | [Release notes-Anbox Cloud 1.12.2](https://discourse.ubuntu.com/t/25819)|
-|   | release-notes/1.12.1 | [Release notes-Anbox Cloud 1.12.1](https://discourse.ubuntu.com/t/25542)|
-|   | release-notes/1.12.0 | [Release notes-Anbox Cloud 1.12.0](https://discourse.ubuntu.com/t/25295)|
-|   | release-notes/1.11.5 | [Release notes-Anbox Cloud 1.11.5](https://discourse.ubuntu.com/t/26739)|
-|   | release-notes/1.11.4 | [Release notes-Anbox Cloud 1.11.4](https://discourse.ubuntu.com/t/25018)|
-|   | release-notes/1.11.3 | [Release notes-Anbox Cloud 1.11.3](https://discourse.ubuntu.com/t/24705)|
-|   | release-notes/1.11.2 | [Release notes-Anbox Cloud 1.11.2](https://discourse.ubuntu.com/t/24293)|
-|   | release-notes/1.11.1 | [Release notes-Anbox Cloud 1.11.1](https://discourse.ubuntu.com/t/23772)|
-|   | release-notes/1.11.0 | [Release notes-Anbox Cloud 1.11.0](https://discourse.ubuntu.com/t/23590)|
-|   | release-notes/1.10.3 | [Release notes-Anbox Cloud 1.10.3](https://discourse.ubuntu.com/t/23267)|
-|   | release-notes/1.10.2 | [Release notes-Anbox Cloud 1.10.2](https://discourse.ubuntu.com/t/22692)|
-|   | release-notes/1.10.1 | [Release notes-Anbox Cloud 1.10.1](https://discourse.ubuntu.com/t/22280)|
-|   | release-notes/1.10.0 | [Release notes-Anbox Cloud 1.10.0](https://discourse.ubuntu.com/t/22205)|
-|   | release-notes/1.9.5 | [Release notes-Anbox Cloud 1.9.5](https://discourse.ubuntu.com/t/22259)|
-|   | release-notes/1.9.4 | [Release notes-Anbox Cloud 1.9.4](https://discourse.ubuntu.com/t/22148)|
-|   | release-notes/1.9.3 | [Release notes-Anbox Cloud 1.9.3](https://discourse.ubuntu.com/t/21795)|
-|   | release-notes/1.9.2 | [Release notes-Anbox Cloud 1.9.2](https://discourse.ubuntu.com/t/21420)|
-|   | release-notes/1.9.1 | [Release notes-Anbox Cloud 1.9.1](https://discourse.ubuntu.com/t/21232)|
-|   | release-notes/1.9.0 | [Release notes-Anbox Cloud 1.9.0](https://discourse.ubuntu.com/t/20870)|
-|   | release-notes/1.8.3 | [Release notes-Anbox Cloud 1.8.3](https://discourse.ubuntu.com/t/20435)|
-|   | release-notes/1.8.2 | [Release notes-Anbox Cloud 1.8.2](https://discourse.ubuntu.com/t/19951)|
-|   | release-notes/1.8.1 | [Release notes-Anbox Cloud 1.8.1](https://discourse.ubuntu.com/t/19319)|
-|   | release-notes/1.8.0 | [Release notes-Anbox Cloud 1.8.0](https://discourse.ubuntu.com/t/19200)|
-|   | release-notes/1.7.4 | [Release notes-Anbox Cloud 1.7.4](https://discourse.ubuntu.com/t/18812)|
-|   | release-notes/1.7.3 | [Release notes-Anbox Cloud 1.7.3](https://discourse.ubuntu.com/t/18458)|
-|   | release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
-|   | release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
-|   | ref/appliance-command-reference/ams | [Appliance command reference - ams](https://discourse.ubuntu.com/t/39517)|
-|   | ref/appliance-command-reference/cluster | [Appliance command reference - cluster](https://discourse.ubuntu.com/t/39519)|
-|   | ref/appliance-command-reference/dashboard | [Appliance command reference - dashboard](https://discourse.ubuntu.com/t/39520)|
-|   | ref/appliance-command-reference/destroy | [Appliance command reference - destroy](https://discourse.ubuntu.com/t/39521)|
-|   | ref/appliance-command-reference/gateway | [Appliance command reference - gateway](https://discourse.ubuntu.com/t/39522)|
-|   | ref/appliance-command-reference/help | [Appliance command reference - help](https://discourse.ubuntu.com/t/39523)|
-|   | ref/appliance-command-reference/init | [Appliance command reference - init](https://discourse.ubuntu.com/t/39524)|
-|   | ref/appliance-command-reference/status | [Appliance command reference - status](https://discourse.ubuntu.com/t/39527)|
-|   | ref/appliance-command-reference/upgrade | [Appliance command reference - upgrade](https://discourse.ubuntu.com/t/39528)|
-|   | ref/amc-command-reference/addon | [AMC command reference - addon](https://discourse.ubuntu.com/t/40775) |
-|   | ref/amc-command-reference/application | [AMC command reference - application](https://discourse.ubuntu.com/t/40776) |
-|   | ref/amc-command-reference/benchmark | [AMC command reference - benchmark](https://discourse.ubuntu.com/t/40777) |
-|   | ref/amc-command-reference/completion | [AMC command reference - completion](https://discourse.ubuntu.com/t/40778) |
-|   | ref/amc-command-reference/config | [AMC command reference - config](https://discourse.ubuntu.com/t/40779) |
-|   | ref/amc-command-reference/delete | [AMC command reference - delete](https://discourse.ubuntu.com/t/40780) |
-|   | ref/amc-command-reference/exec | [AMC command reference - exec](https://discourse.ubuntu.com/t/40781) |
-|   | ref/amc-command-reference/help | [AMC command reference - help](https://discourse.ubuntu.com/t/40782) |
-|   | ref/amc-command-reference/image | [AMC command reference - image](https://discourse.ubuntu.com/t/40783) |
-|   | ref/amc-command-reference/info | [AMC command reference - info](https://discourse.ubuntu.com/t/40784) |
-|   | ref/amc-command-reference/init | [AMC command reference - init](https://discourse.ubuntu.com/t/40785) |
-|   | ref/amc-command-reference/launch | [AMC command reference - launch](https://discourse.ubuntu.com/t/40786) |
-|   | ref/amc-command-reference/list | [AMC command reference - list](https://discourse.ubuntu.com/t/40787) |
-|   | ref/amc-command-reference/logs | [AMC command reference - logs](https://discourse.ubuntu.com/t/40788) |
-|   | ref/amc-command-reference/node | [AMC command reference - node](https://discourse.ubuntu.com/t/40789) |
-|   | ref/amc-command-reference/remote | [AMC command reference - remote](https://discourse.ubuntu.com/t/40790) |
-|   | ref/amc-command-reference/shell | [AMC command reference - shell](https://discourse.ubuntu.com/t/40791) |
-|   | ref/amc-command-reference/show-log | [AMC command reference - show-log](https://discourse.ubuntu.com/t/40792) |
-|   | ref/amc-command-reference/show | [AMC command reference - show](https://discourse.ubuntu.com/t/40793) |
-|   | ref/amc-command-reference/start | [AMC command reference - start](https://discourse.ubuntu.com/t/40794) |
-|   | ref/amc-command-reference/stop | [AMC command reference - stop](https://discourse.ubuntu.com/t/40795) |
-|   | ref/amc-command-reference/wait | [AMC command reference - wait](https://discourse.ubuntu.com/t/40796) |
+|   | reference/release-notes/1.20.2 | [Release notes-Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686)|
+|   | reference/release-notes/1.20.1 | [Release notes-Anbox Cloud 1.20.1](https://discourse.ubuntu.com/t/40988)|
+|   | reference/release-notes/1.20.0 | [Release notes-Anbox Cloud 1.20.0](https://discourse.ubuntu.com/t/40281)|
+|   | reference/release-notes/1.19.2 | [Release notes-Anbox Cloud 1.19.2](https://discourse.ubuntu.com/t/39311)|
+|   | reference/release-notes/1.19.1 | [Release notes-Anbox Cloud 1.19.1](https://discourse.ubuntu.com/t/38595)|
+|   | reference/release-notes/1.19.0-fix1 | [Hotfix release announcement](https://discourse.ubuntu.com/t/38250)|
+|   | reference/release-notes/1.19.0 | [Release notes-Anbox Cloud 1.19.0](https://discourse.ubuntu.com/t/37849)|
+|   | reference/release-notes/1.18.2 | [Release notes-Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)|
+|   | reference/release-notes/1.18.1 | [Release notes-Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
+|   | reference/release-notes/1.18.0 | [Release notes-Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
+|   | reference/release-notes/1.17.2 | [Release notes-Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
+|   | reference/release-notes/1.17.1 | [Release notes-Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
+|   | reference/release-notes/1.17.0 | [Release notes-Anbox Cloud 1.17.0](https://discourse.ubuntu.com/t/33927)|
+|   | reference/release-notes/1.16.4 | [Release notes-Anbox Cloud 1.16.4](https://discourse.ubuntu.com/t/33437)|
+|   | reference/release-notes/1.16.3 | [Release notes-Anbox Cloud 1.16.3](https://discourse.ubuntu.com/t/33261)|
+|   | reference/release-notes/1.16.2 | [Release notes-Anbox Cloud 1.16.2](https://discourse.ubuntu.com/t/33161)|
+|   | reference/release-notes/1.16.1 | [Release notes-Anbox Cloud 1.16.1](https://discourse.ubuntu.com/t/32733)|
+|   | reference/release-notes/1.16.0 | [Release notes-Anbox Cloud 1.16.0](https://discourse.ubuntu.com/t/32264)|
+|   | reference/release-notes/1.15.3 | [Release notes-Anbox Cloud 1.15.3](https://discourse.ubuntu.com/t/31616)|
+|   | reference/release-notes/1.15.2 | [Release notes-Anbox Cloud 1.15.2](https://discourse.ubuntu.com/t/31322)|
+|   | reference/release-notes/1.15.1 | [Release notes-Anbox Cloud 1.15.1](https://discourse.ubuntu.com/t/30585)|
+|   | reference/release-notes/1.15.0 | [Release notes-Anbox Cloud 1.15.0](https://discourse.ubuntu.com/t/30196)|
+|   | reference/release-notes/1.14.2 | [Release notes-Anbox Cloud 1.14.2](https://discourse.ubuntu.com/t/29553)|
+|   | reference/release-notes/1.14.1 | [Release notes-Anbox Cloud 1.14.1](https://discourse.ubuntu.com/t/28952)|
+|   | reference/release-notes/1.14.0 | [Release notes-Anbox Cloud 1.14.0](https://discourse.ubuntu.com/t/28557)|
+|   | reference/release-notes/1.13.2 | [Release notes-Anbox Cloud 1.13.2](https://discourse.ubuntu.com/t/27701)|
+|   | reference/release-notes/1.13.1 | [Release notes-Anbox Cloud 1.13.1](https://discourse.ubuntu.com/t/27254)|
+|   | reference/release-notes/1.13.0 | [Release notes-Anbox Cloud 1.13.0](https://discourse.ubuntu.com/t/26857)|
+|   | reference/release-notes/1.12.5 | [Release notes-Anbox Cloud 1.12.5](https://discourse.ubuntu.com/t/26380)|
+|   | reference/release-notes/1.12.4 | [Release notes-Anbox Cloud 1.12.4](https://discourse.ubuntu.com/t/26263)|
+|   | reference/release-notes/1.12.3 | [Release notes-Anbox Cloud 1.12.3](https://discourse.ubuntu.com/t/26252)|
+|   | reference/release-notes/1.12.2 | [Release notes-Anbox Cloud 1.12.2](https://discourse.ubuntu.com/t/25819)|
+|   | reference/release-notes/1.12.1 | [Release notes-Anbox Cloud 1.12.1](https://discourse.ubuntu.com/t/25542)|
+|   | reference/release-notes/1.12.0 | [Release notes-Anbox Cloud 1.12.0](https://discourse.ubuntu.com/t/25295)|
+|   | reference/release-notes/1.11.5 | [Release notes-Anbox Cloud 1.11.5](https://discourse.ubuntu.com/t/26739)|
+|   | reference/release-notes/1.11.4 | [Release notes-Anbox Cloud 1.11.4](https://discourse.ubuntu.com/t/25018)|
+|   | reference/release-notes/1.11.3 | [Release notes-Anbox Cloud 1.11.3](https://discourse.ubuntu.com/t/24705)|
+|   | reference/release-notes/1.11.2 | [Release notes-Anbox Cloud 1.11.2](https://discourse.ubuntu.com/t/24293)|
+|   | reference/release-notes/1.11.1 | [Release notes-Anbox Cloud 1.11.1](https://discourse.ubuntu.com/t/23772)|
+|   | reference/release-notes/1.11.0 | [Release notes-Anbox Cloud 1.11.0](https://discourse.ubuntu.com/t/23590)|
+|   | reference/release-notes/1.10.3 | [Release notes-Anbox Cloud 1.10.3](https://discourse.ubuntu.com/t/23267)|
+|   | reference/release-notes/1.10.2 | [Release notes-Anbox Cloud 1.10.2](https://discourse.ubuntu.com/t/22692)|
+|   | reference/release-notes/1.10.1 | [Release notes-Anbox Cloud 1.10.1](https://discourse.ubuntu.com/t/22280)|
+|   | reference/release-notes/1.10.0 | [Release notes-Anbox Cloud 1.10.0](https://discourse.ubuntu.com/t/22205)|
+|   | reference/release-notes/1.9.5 | [Release notes-Anbox Cloud 1.9.5](https://discourse.ubuntu.com/t/22259)|
+|   | reference/release-notes/1.9.4 | [Release notes-Anbox Cloud 1.9.4](https://discourse.ubuntu.com/t/22148)|
+|   | reference/release-notes/1.9.3 | [Release notes-Anbox Cloud 1.9.3](https://discourse.ubuntu.com/t/21795)|
+|   | reference/release-notes/1.9.2 | [Release notes-Anbox Cloud 1.9.2](https://discourse.ubuntu.com/t/21420)|
+|   | reference/release-notes/1.9.1 | [Release notes-Anbox Cloud 1.9.1](https://discourse.ubuntu.com/t/21232)|
+|   | reference/release-notes/1.9.0 | [Release notes-Anbox Cloud 1.9.0](https://discourse.ubuntu.com/t/20870)|
+|   | reference/release-notes/1.8.3 | [Release notes-Anbox Cloud 1.8.3](https://discourse.ubuntu.com/t/20435)|
+|   | reference/release-notes/1.8.2 | [Release notes-Anbox Cloud 1.8.2](https://discourse.ubuntu.com/t/19951)|
+|   | reference/release-notes/1.8.1 | [Release notes-Anbox Cloud 1.8.1](https://discourse.ubuntu.com/t/19319)|
+|   | reference/release-notes/1.8.0 | [Release notes-Anbox Cloud 1.8.0](https://discourse.ubuntu.com/t/19200)|
+|   | reference/release-notes/1.7.4 | [Release notes-Anbox Cloud 1.7.4](https://discourse.ubuntu.com/t/18812)|
+|   | reference/release-notes/1.7.3 | [Release notes-Anbox Cloud 1.7.3](https://discourse.ubuntu.com/t/18458)|
+|   | reference/release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
+|   | reference/release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
+|   | reference/appliance-command-reference/ams | [Appliance command reference - ams](https://discourse.ubuntu.com/t/39517)|
+|   | reference/appliance-command-reference/cluster | [Appliance command reference - cluster](https://discourse.ubuntu.com/t/39519)|
+|   | reference/appliance-command-reference/dashboard | [Appliance command reference - dashboard](https://discourse.ubuntu.com/t/39520)|
+|   | reference/appliance-command-reference/destroy | [Appliance command reference - destroy](https://discourse.ubuntu.com/t/39521)|
+|   | reference/appliance-command-reference/gateway | [Appliance command reference - gateway](https://discourse.ubuntu.com/t/39522)|
+|   | reference/appliance-command-reference/help | [Appliance command reference - help](https://discourse.ubuntu.com/t/39523)|
+|   | reference/appliance-command-reference/init | [Appliance command reference - init](https://discourse.ubuntu.com/t/39524)|
+|   | reference/appliance-command-reference/status | [Appliance command reference - status](https://discourse.ubuntu.com/t/39527)|
+|   | reference/appliance-command-reference/upgrade | [Appliance command reference - upgrade](https://discourse.ubuntu.com/t/39528)|
+|   | reference/amc-command-reference/addon | [AMC command reference - addon](https://discourse.ubuntu.com/t/40775) |
+|   | reference/amc-command-reference/application | [AMC command reference - application](https://discourse.ubuntu.com/t/40776) |
+|   | reference/amc-command-reference/benchmark | [AMC command reference - benchmark](https://discourse.ubuntu.com/t/40777) |
+|   | reference/amc-command-reference/completion | [AMC command reference - completion](https://discourse.ubuntu.com/t/40778) |
+|   | reference/amc-command-reference/config | [AMC command reference - config](https://discourse.ubuntu.com/t/40779) |
+|   | reference/amc-command-reference/delete | [AMC command reference - delete](https://discourse.ubuntu.com/t/40780) |
+|   | reference/amc-command-reference/exec | [AMC command reference - exec](https://discourse.ubuntu.com/t/40781) |
+|   | reference/amc-command-reference/help | [AMC command reference - help](https://discourse.ubuntu.com/t/40782) |
+|   | reference/amc-command-reference/image | [AMC command reference - image](https://discourse.ubuntu.com/t/40783) |
+|   | reference/amc-command-reference/info | [AMC command reference - info](https://discourse.ubuntu.com/t/40784) |
+|   | reference/amc-command-reference/init | [AMC command reference - init](https://discourse.ubuntu.com/t/40785) |
+|   | reference/amc-command-reference/launch | [AMC command reference - launch](https://discourse.ubuntu.com/t/40786) |
+|   | reference/amc-command-reference/list | [AMC command reference - list](https://discourse.ubuntu.com/t/40787) |
+|   | reference/amc-command-reference/logs | [AMC command reference - logs](https://discourse.ubuntu.com/t/40788) |
+|   | reference/amc-command-reference/node | [AMC command reference - node](https://discourse.ubuntu.com/t/40789) |
+|   | reference/amc-command-reference/remote | [AMC command reference - remote](https://discourse.ubuntu.com/t/40790) |
+|   | reference/amc-command-reference/shell | [AMC command reference - shell](https://discourse.ubuntu.com/t/40791) |
+|   | reference/amc-command-reference/show-log | [AMC command reference - show-log](https://discourse.ubuntu.com/t/40792) |
+|   | reference/amc-command-reference/show | [AMC command reference - show](https://discourse.ubuntu.com/t/40793) |
+|   | reference/amc-command-reference/start | [AMC command reference - start](https://discourse.ubuntu.com/t/40794) |
+|   | reference/amc-command-reference/stop | [AMC command reference - stop](https://discourse.ubuntu.com/t/40795) |
+|   | reference/amc-command-reference/wait | [AMC command reference - wait](https://discourse.ubuntu.com/t/40796) |
 [/details]
 
 ## Redirects
@@ -282,18 +282,18 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
 | /docs/howto/containers/backup-and-restore | /docs/howto/instance/backup-and-restore |
-| /docs/exp/gpu-support | /docs/exp/gpus-instances |
+| /docs/exp/gpu-support | /docs/explanation/gpus-instances |
 | /docs/howto/container/launch | /docs/howto/instance/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
 | /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |
 | /docs/howto/manage/logs | /docs/howto/troubleshoot/logs |
-| /docs/ref/platforms | /docs/exp/platforms |
-| /docs/ref/instance-types | /docs/ref/application-manifest |
-| /docs/ref/supported-video-codecs | /docs/ref/supported-codecs |
-| /docs/howto/addons/best-practices | /docs/exp/addons |
-| /docs/ref/addons | /docs/ref/addon-manifest |
-| /docs/howto/manage/manage-appliance | /docs/ref/appliance-command-reference/landing |
-| /docs/exp/containers | /docs/exp/instances |
+| /docs/ref/platforms | /docs/explanation/platforms |
+| /docs/ref/instance-types | /docs/reference/application-manifest |
+| /docs/ref/supported-video-codecs | /docs/reference/supported-codecs |
+| /docs/howto/addons/best-practices | /docs/explanation/addons |
+| /docs/ref/addons | /docs/reference/addon-manifest |
+| /docs/howto/manage/manage-appliance | /docs/reference/appliance-command-reference/landing |
+| /docs/exp/containers | /docs/explanation/instances |
 | /docs/howto/container | /docs/howto/instance |
 | /docs/howto/troubleshoot/container-failures | /docs/howto/troubleshoot/instance-failures |
 | /docs/howto/container/access | /docs/howto/instance/access |
@@ -308,5 +308,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/container/start | /docs/howto/instance/start |
 | /docs/howto/container/stop | /docs/howto/instance/stop |
 | /docs/howto/container/wait | /docs/howto/instance/wait |
-| /docs/howto/application/resources | /docs/exp/resources |
+| /docs/howto/application/resources | /docs/explanation/resources |
 [/details]
