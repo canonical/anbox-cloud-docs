@@ -3,12 +3,12 @@ name: Generate and commit AMS configuration doc
 on:
   push:
     paths:
-      - 'ref/ams-configuration.tmpl.md'
-      - 'ref/ams-configuration.yaml'
+      - 'reference/ams-configuration.tmpl.md'
+      - 'reference/ams-configuration.yaml'
   pull_request:
     paths:
-      - 'ref/ams-configuration.tmpl.md'
-      - 'ref/ams-configuration.yaml'
+      - 'reference/ams-configuration.tmpl.md'
+      - 'reference/ams-configuration.yaml'
 
 jobs:
   generate:
@@ -22,7 +22,7 @@ jobs:
         run: python scripts/generate-ams-config.py
 
       - name: Show Markdown file
-        run: cat ref/ams-configuration.md
+        run: cat reference/ams-configuration.md
 
       - name: Commit changes
         if: ${{ github.ref == 'refs/heads/main' }}
@@ -30,4 +30,4 @@ jobs:
         with:
           default_author: github_actions
           message: 'Generate AMS configuration doc'
-          add: 'ref/ams-configuration.md'
+          add: 'reference/ams-configuration.md'

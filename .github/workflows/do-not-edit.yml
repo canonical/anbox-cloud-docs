@@ -5,10 +5,10 @@ on:
     branches-ignore:
       - main
     paths:
-      - 'ref/ams-configuration.md'
+      - 'reference/ams-configuration.md'
   pull_request:
     paths:
-      - 'ref/ams-configuration.md'
+      - 'reference/ams-configuration.md'
 
 jobs:
   check:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print error
-        run: echo "::error file=ref/ams-configuration.md::Never edit ref/ams-configuration.md manually - edit ref/ams-configuration.tmpl.md or ref/ams-configuration.yaml instead!"
+        run: echo "::error file=reference/ams-configuration.md::Never edit reference/ams-configuration.md manually - edit reference/ams-configuration.tmpl.md or reference/ams-configuration.yaml instead!"
 
       - name: Exit
         run: exit 1
