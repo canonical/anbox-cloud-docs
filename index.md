@@ -274,6 +274,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 [details=Mapping table]
 | Path | Location |
 | ---- | -------- |
+| /docs/tut | /docs/tutorial |
+| /docs/ref | /docs/reference |
+| /docs/exp | /docs/explanation |
+| /docs/release-notes | /docs/reference/release-notes |
 | /docs/manage/container-access | /docs/howto/instance/access |
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
