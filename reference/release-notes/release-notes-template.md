@@ -2,7 +2,7 @@
 
 The Anbox Cloud team is pleased to announce the release of Anbox Cloud < release-version >.
 
-Please see [component versions](https://anbox-cloud.io/docs/ref/component-versions) for a list of updated components.
+Please see [component versions](https://anbox-cloud.io/docs/reference/component-versions) for a list of updated components.
 
 ## New features & improvements
 

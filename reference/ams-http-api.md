@@ -1155,7 +1155,7 @@ Output:
       "images.version_lockstep": "true", // Prevent images of new minor releases to be pulled by AMS
       "registry.filter": "",             // (comma separated list) Filter out applications without matching tags
       "registry.fingerprint": <fingerprint>, // (string) Fingerprint of registry certificate
-      "registry.mode": "pull",           // (pull/push/manual) Whether AMS should act as a client or publisher automatically synchronizing applications with AAR, or manually doing so. Please refer to https://anbox-cloud.io/docs/exp/aar for all details.
+      "registry.mode": "pull",           // (pull/push/manual) Whether AMS should act as a client or publisher automatically synchronizing applications with AAR, or manually doing so. Please refer to https://anbox-cloud.io/docs/explanation/aar for all details.
       "registry.update_interval": "5s",  // (time) Frequency of updates from registry
       "registry.url": "https://127.0.0.1:3000", // (string) URL of Anbox Application Registry
       "scheduler.strategy": "spread"     // (spread|binpack) Container allocation schedule strategery
