@@ -13,7 +13,7 @@ else:
 
     for one in data:
         filename = one['filename']
-        if (filename == "ref/ams-configuration.yaml") or (filename == "ref/ams-configuration.tmpl.md"):
-            filename = "ref/ams-configuration.md"
+        if (filename == "reference/ams-configuration.yaml") or (filename == "reference/ams-configuration.tmpl.md"):
+            filename = "reference/ams-configuration.md"
         print("Publish "+filename)
         subprocess.call("./publish.sh "+filename, shell=True)
