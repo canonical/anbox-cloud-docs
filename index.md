@@ -282,6 +282,9 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
 | /docs/howto/containers/backup-and-restore | /docs/howto/instance/backup-and-restore |
+| /docs/howto/stream/web-client | /docs/tut/stream-client |
+| /docs/howto/troubleshoot/collect-info | /docs/howto/troubleshoot/landing |
+| /docs/manage/managing-containers | /docs/exp/instances |
 | /docs/exp/gpu-support | /docs/explanation/gpus-instances |
 | /docs/howto/container/launch | /docs/howto/instance/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
