@@ -31,7 +31,7 @@ Configure the boot disk by selecting **Boot disk > Change** to choose the operat
 
 ![Configure boot disk|690x440](https://assets.ubuntu.com/v1/884d0b10-boot-disk-config-2.png)
 
-Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and [attach your subscription](https://discourse.ubuntu.com/t/22681#attach-ubuntu-pro) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud. 
+Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and [attach your subscription](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#h-2-attach-your-machine-to-the-ubuntu-pro-subscription-4) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud.
 
 [note type="information" status="Note"]Remember that choosing the Ubuntu Pro option will impact your pricing. Google Cloud provides the resource details and associated costs in the **Pricing summary** section on the **Create an instance** page.[/note]
 

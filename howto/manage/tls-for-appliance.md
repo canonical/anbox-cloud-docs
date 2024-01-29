@@ -103,7 +103,7 @@ Before you start, make sure the following requirements are met:
   [note type="information" status="Note"]
   The screenshots in the following instructions use an example domain name that is not owned or controlled by Canonical. Replace it with your own domain name when following the setup instructions.
   [/note]
-- The Anbox Cloud Appliance is [installed](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703) and [initialised](https://discourse.ubuntu.com/t/22681#initialise).
+- The Anbox Cloud Appliance is [installed](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703) and [initialised](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#initialise-the-appliance-6).
 
 Then complete the following steps.
 

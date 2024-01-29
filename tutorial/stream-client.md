@@ -2,7 +2,10 @@ This tutorial guides you through the process of setting up a web-based streaming
 
 ## Preparation
 
+Complete the following preparatory steps:
+
 ### Install the Anbox Cloud Appliance
+
 We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the [appliance installation tutorial](https://discourse.ubuntu.com/t/22681) until you finish initialising the Appliance.
 
 ### Create an access token
@@ -22,6 +25,7 @@ See [How to access the stream gateway](https://discourse.ubuntu.com/t/how-to-acc
 Follow the instructions in [How to create an application](https://discourse.ubuntu.com/t/24198) and create an application. You can create any application, the application type does not matter.
 
 ## Set up the stream client
+
 Create a directory to set up the stream client:
 
     sudo mkdir -p /srv/stream-client

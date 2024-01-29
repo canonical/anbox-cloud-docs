@@ -7,12 +7,12 @@ Since Anbox Cloud uses system containers or virtual machines to emulate Android 
 Due to its highly scalable nature and performance optimisation, delivering device-agnostic mobile applications is very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
 
 ## In this documentation
+
 | | |
 |--|--|
 |  [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826)</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) </br> Step-by-step guides covering key operations and common tasks |
 |  [Explanation](https://discourse.ubuntu.com/t/explanation/28829) </br> Concepts - discussion and clarification of key topics, architecture  | [Reference](https://discourse.ubuntu.com/t/reference/28828) </br> Technical information - specifications, APIs |
 
-<a name="project-community"></a>
 ## Project and community
 
 Anbox Cloud is a Canonical product. It originally grew out of the [Anbox open-source project](https://github.com/anbox), but its code base is now completely independent.

@@ -2,7 +2,7 @@ The `init` command configures and initialises the Anbox Cloud Appliance. This co
 
     anbox-cloud-appliance init <options>
 
-See [Initialise the appliance](https://discourse.ubuntu.com/t/22681#initialise) for more information.
+See [Initialise the appliance](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#initialise-the-appliance-6) for more information.
 
 ## Options
 

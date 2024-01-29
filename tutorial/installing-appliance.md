@@ -4,14 +4,8 @@ There are differences between the Anbox Cloud Appliance and the full Anbox Cloud
 
 If you want to install **Anbox Cloud** instead, see [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) or if you want to install the appliance on a cloud platform, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702).
 
-This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance):
+This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance).
 
-1. [Check the prerequisites](#prerequisites)
-2. [Install the appliance](#install)
-3. [Initialise the appliance](#initialise)
-4. [Register with the dashboard](#register)
-
-<a name="prerequisites"></a>
 ## Check the prerequisites
 
 Make sure you have the following prerequisites:
@@ -22,7 +16,6 @@ Make sure you have the following prerequisites:
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 
-<a name="install"></a>
 ## Install the appliance
 
 The following instructions guide you through all relevant steps to install the Anbox Cloud Appliance from the [snap](https://snapcraft.io/anbox-cloud-appliance).
@@ -34,7 +27,6 @@ On your machine, run the following commands to ensure that all installed package
     sudo apt update
     sudo apt upgrade
 
-<a name="attach-ubuntu-pro"></a>
 ### 2. Attach your machine to the Ubuntu Pro subscription
 
 The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
@@ -43,7 +35,6 @@ Before installing the appliance, you must attach the machine on which you want t
 
     sudo pro attach <pro_token>
 
-<a name="enable-anbox-service"></a>
 ### 3. Enable the `anbox-cloud` service using the Ubuntu Pro client.
 
 On your machine, run the following command to install the Anbox Cloud Appliance and additional dependencies.
@@ -62,7 +53,6 @@ Running this command does the following:
 1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
 1. Configures the `apt` repositories for Anbox Cloud.
 
-<a name="initialise"></a>
 ## Initialise the appliance
 
 After the installation, access the appliance in your web browser by entering the IP of your machine (in the following steps referred to as `https://your-machine-address`). This web page provides status information for the following initialisation process.
@@ -94,7 +84,7 @@ update-available: false
 reboot-needed: false
 version: 1.19.1
 ```
-<a name="register"></a>
+
 ## Register with the dashboard
 
 Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).

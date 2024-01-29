@@ -3,6 +3,7 @@ This tutorial guides you through the first steps of managing Anbox Cloud from th
 The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.
 
 ## Preparation
+
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
 * [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
@@ -17,7 +18,7 @@ How and where to run `amc` depends on your use case:
 - If you are running the Anbox Cloud Appliance on AWS, `amc` is already installed on the machine that runs the appliance. Log on to that machine to run `amc`.
 
   Note that you must use the user name `ubuntu` and provide the path to your private key file when connecting. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
-- If you are running the Anbox Cloud Appliance on a physical or virtual machine, log on to that machine and ensure that you have [enabled the `anbox-cloud` service using the Ubuntu Pro client](https://discourse.ubuntu.com/t/22681#enable-anbox-service).
+- If you are running the Anbox Cloud Appliance on a physical or virtual machine, log on to that machine and ensure that you have [enabled the `anbox-cloud` service using the Ubuntu Pro client](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#h-3-enable-the-anbox-cloud-service-using-the-ubuntu-pro-client-5).
 - If you are running a full Anbox Cloud deployment, access the `ams/0` machine to run `amc`. You can do this by opening an SSH session with the `juju` command:
 
         juju ssh ams/0
@@ -88,8 +89,6 @@ Complete the following steps to create a virtual device:
    +----------------------+--------------------+---------------+--------+------+-----------+--------+---------------------+
    ```
 
-
-<a name="logon"></a>
 ## 4. Log on to the virtual device
 
 When the application for the virtual device is ready, you can launch it and log on to it:
@@ -126,7 +125,6 @@ When the application for the virtual device is ready, you can launch it and log 
 5. Enter some commands. For example, enter `ls` to display the files inside the Android container, or `logcat` to display the logs.
 6. Enter `exit` or press `Ctrl`+`D` once to exit the Android shell, and then again to exit the Linux container.
 
-<a name="scrcpy"></a>
 ## 5. Test the virtual device
 
 You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [How to access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#scrcpy) for more detailed instructions.
@@ -205,7 +203,7 @@ If no specific resources are mentioned, the [default resource preset](https://di
 
    Wait until the status of the application changes to `ready`.
 
-When the application is ready, you can launch it and then test it in the same way as the virtual device by either [logging on to it](#logon) or [connecting to it with `scrcpy`](#scrcpy).
+When the application is ready, you can launch it and then test it in the same way as the virtual device by either [logging on to it](#h-4-log-on-to-the-virtual-device-5) or [connecting to it with `scrcpy`](#h-5-test-the-virtual-device-6).
 
 ## 7. Update an application
 
