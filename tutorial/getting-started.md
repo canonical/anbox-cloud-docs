@@ -75,7 +75,7 @@ Complete the following steps to create a virtual device:
 
         amc application create /path/to/manifest/directory/
 
-3. The application is now being [bootstrapped](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). Enter the following command to monitor the progress:
+3. The application is now being [bootstrapped](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). Enter the following command to monitor the progress:
 
         watch -n 1 amc application ls
 
@@ -197,7 +197,7 @@ If no specific resources are mentioned, the [default resource preset](https://di
 
         amc application create /path/to/manifest/directory/
 
-3. The application is now being [bootstrapped](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). Enter the following command to monitor the progress:
+3. The application is now being [bootstrapped](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). Enter the following command to monitor the progress:
 
         watch -n 1 amc application ls
 

@@ -50,7 +50,7 @@ With everything in place, create the application by entering the following comma
 
     amc application create <path/to/application-content>
 
-When the `create` command returns, the application package is uploaded to the AMS service and the [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) is started. The application is not yet ready to be used. You can watch the status of the application with the following command:
+When the `create` command returns, the application package is uploaded to the AMS service and the [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2) is started. The application is not yet ready to be used. You can watch the status of the application with the following command:
 
     amc application show bcmap7u5nof07arqa2ag
 
@@ -128,4 +128,4 @@ Once the tarball is created, you can create the application:
     amc application create foo.tar.bz2
 
 
-The AMS service now starts the application [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). See [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
+The AMS service now starts the application [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). See [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.

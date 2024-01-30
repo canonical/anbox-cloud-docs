@@ -23,6 +23,7 @@ Consider the following questions to decide your networking requirements:
     * [How to configure an AAR](https://discourse.ubuntu.com/t/how-to-configure-an-aar/24319)
 
 ## Storage requirements
+
 Based on your safety protocols, think about where you would want to host your storage. Also, refer to the following links that will help you plan and calculate your storage needs:
 
 * [Requirements](https://discourse.ubuntu.com/t/requirements/17734)
@@ -38,6 +39,8 @@ You should also assess the number of instances that you require for each model/s
 Anbox Cloud comes with support for High Availability (HA) for both Core and the Streaming Stack.You can define HA by adding new Juju units. See [How to enable High availability?](https://discourse.ubuntu.com/t/how-to-enable-high-availability/17754) to plan your HA requirements.
 
 ## Security
+
+Consider the following security aspects when you are planning for a production deployment:
 
 ### Secure communication
 

@@ -2,19 +2,18 @@ When planning your Anbox Cloud deployment, you should start by estimating how mu
 
 When estimating capacity, consider the following questions to better understand your requirements:
 
-* [Application resources](#application-resources):
+* Application resources:
     - How much CPU, memory and disk space does your application need?
     - Will the application use hardware- or software-based video encoding?
     - If the application uses hardware-based encoding, how much GPU capacity is needed?
-* [CPU and memory](#overovercommitting):
+* CPU and memory:
     - Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
-* [Application](#application-requirements):
+* Application:
     - What type of application are you running?
     - What frame rate and what resolution does your application need?
     - How many instances will be running simultaneously?
     - What would be the impact of not being able to serve all users?
 
-<a name="application-resources"></a>
 ## Application resources
 
 A default resource preset will be set for every application. A resource preset specifies the resources that are available to the application:
@@ -26,13 +25,12 @@ A default resource preset will be set for every application. A resource preset s
 
 Depending on the resources that your application requires, if the [default resource preset](https://discourse.ubuntu.com/t/24960) does not suit, you can choose suitable [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) that fit your application.
 
-When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
+When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#over-committing-resources-3) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
     No suitable node to satisfy instance requirement available
 
 If an instance stops with an error, its disk space is preserved for inspection. Other resources are released. Therefore, if you have many instances with `error` status, you might run out of disk space.
 
-<a name="gpu-slots"></a>
 ### GPU slots
 
 An additional aspect to take into account when planning your resources is the number of required GPU slots (see [GPUs and instances](https://discourse.ubuntu.com/t/17768) for more information).
@@ -55,7 +53,6 @@ GPU slots are used to share GPUs amongst instances, but they do not impose limit
 The main purpose of GPU slots is to control the number of instances that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
 [/note]
 
-<a name="overcommitting"></a>
 ## Over-committing resources
 
 If the unused resources on a cluster node don't suffice to launch an instance for an application with its defined resource requirements, the instance cannot be launched. This behaviour is very restrictive, and in many cases unnecessary.
@@ -66,7 +63,6 @@ For example, consider an application that has a resource preset of 2 vCPU cores 
 
 The CPU allocation rate depends on the type of application and the amount of resources it requires. For applications that are not CPU-intensive, a higher allocation rate makes sense while for applications that are very CPU-intensive, a lower allocation rate is suitable.
 
-<a name="application-requirements"></a>
 ## Application requirements
 
 To realistically estimate the required capacity for your deployment, you must consider the type of application that you're running and the expected usage behaviour.

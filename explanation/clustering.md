@@ -2,7 +2,6 @@ While it is possible to install Anbox Cloud on a single machine, you usually wan
 
 The Anbox Cloud Appliance provides only basic and experimental support for multi-node setups, however, Anbox Cloud provides full clustering support.
 
-<a name="multi-node-appliance"></a>
 ## Multi-node support for the Anbox Cloud Appliance
 
 If you're running the Anbox Cloud Appliance and you want to extend the available instance capacity, you can [join additional machines to the appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054).
@@ -11,7 +10,6 @@ The appliance uses [FAN networking](https://wiki.ubuntu.com/FanNetworking) to sp
 
 [note type="information" status="Note"]FAN networking requires a `/16` or `/24` subnet on the network interface. If the appliance is installed on a machine that is not on such a subnet, the appliance disables FAN networking. In such cases, extending the appliance with additional nodes is be possible.[/note]
 
-<a name="clustering-anbox-cloud"></a>
 ## Clustering for full Anbox Cloud deployments
 
 In a clustering setup for a full Anbox Cloud deployment, one node is dedicated as the management node to host the Anbox Management Service (AMS). If you use the Streaming Stack, two additional nodes are dedicated to host the extra services required for streaming. All other nodes are used as worker nodes.
@@ -50,4 +48,5 @@ Future versions of Anbox Cloud will provide a framework which will help to imple
 See [How to scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322) and [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323) for instructions on how to add or remove nodes from the cluster.
 
 ## Related information
+
 * [Manage cluster nodes](https://discourse.ubuntu.com/t/how-to-manage-cluster-nodes/24334)

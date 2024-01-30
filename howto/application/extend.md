@@ -136,7 +136,7 @@ You can add your hooks directly to an application. To do so, complete the follow
 After the application is created, launch an instance. You should see that the hook is executed and that, for example, the system locale is changed or the standard Android launcher is replaced.
 
 [note type="information" status="Important"]
-By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://discourse.ubuntu.com/t/17760) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap) attribute in the application manifest file if you want to keep any content needed by the application running in a regular instance.
+By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://discourse.ubuntu.com/t/17760) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap-process-2) attribute in the application manifest file if you want to keep any content needed by the application running in a regular instance.
 [/note]
 
 <a name="addon"></a>

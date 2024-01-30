@@ -8,7 +8,7 @@ Anbox Cloud automatically detects GPU devices during the deployment and configur
 
 GPUs have limited capacity that can be shared amongst multiple instances. To fine-tune how many instances can run on a given node, configure the number of available GPU slots on the node.
 
-See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for detailed information.
+See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) for detailed information.
 
 ## Using GPUs inside an instance
 

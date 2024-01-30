@@ -1,6 +1,6 @@
 To run Anbox Cloud, you must fulfil a few minimum requirements, which differ depending on the kind of deployment you choose.
 
-The [General requirements](#general) apply to all kinds of deployments. In addition, check the [requirements for the Anbox Cloud Appliance](#appliance) if you run the appliance or the [requirements for Juju-based deployments](#juju-based) if you run Anbox Cloud. See [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants) for an explanation of the differences between both variants.
+The [General requirements](#general) apply to all kinds of deployments. In addition, check the [requirements for the Anbox Cloud Appliance](#appliance) if you run the appliance or the [requirements for Juju-based deployments](#juju-based) if you run Anbox Cloud. See [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1) for an explanation of the differences between both variants.
 
 <a name="general"></a>
 ## General requirements

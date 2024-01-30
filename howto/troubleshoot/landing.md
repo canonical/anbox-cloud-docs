@@ -11,7 +11,7 @@ The topics in this guide describe some commonly encountered problems with Anbox 
 
 If you still need help, use any of the following utilities to collect troubleshooting information and report an [issue](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
-[note type="information" status="Note"] The following utilities could be applicable for the regular Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see [Variants](https://discourse.ubuntu.com/t/17802#variants).[/note]
+[note type="information" status="Note"] The following utilities could be applicable for the regular Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1).[/note]
 
 ## Juju crashdump
 

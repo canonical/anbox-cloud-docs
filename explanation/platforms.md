@@ -51,4 +51,5 @@ For example, to configure the platform for a display height of 1080p and 60 FPS,
     amc launch -p webrtc --userdata '{"display_width":1920, "display_height":1080, "fps": 60}'
 
 ## Related information
+
 * [Supported platforms](https://discourse.ubuntu.com/t/37322#supported-platforms)

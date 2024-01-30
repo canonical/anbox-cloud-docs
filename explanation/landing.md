@@ -23,6 +23,7 @@ Understand the different objects used in the product stack and how to use them t
 | [Performance](https://discourse.ubuntu.com/t/29416) | Aspects that are relevant for tuning the performance of Anbox Cloud |
 
 ## Deploying Anbox Cloud
+
 Understand deployment configurations to plan your deployment.
 | Guides | What they explain  |
 |--|--|

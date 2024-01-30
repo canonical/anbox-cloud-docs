@@ -60,7 +60,7 @@ You must provide this file when deploying Anbox Cloud.
 
 ## Determine the machine mapping
 
-When running the deployment command, you must map the machines to the ones described in the [Juju bundle](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles) that you are deploying.
+When running the deployment command, you must map the machines to the ones described in the [Juju bundle](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7) that you are deploying.
 
 Run `juju list-machines` to display the available machines:
 
@@ -77,7 +77,7 @@ The `--map-machine` argument for the `juju deploy` command maps the machines def
 <a name="customise-storage"></a>
 ## Customise storage
 
-By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage) for more information.
+By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage-6) for more information.
 
 There are different ways of configuring a dedicated block storage device:
 
@@ -127,7 +127,7 @@ You do not need to prepare the storage device in any way. AMS takes care of crea
 
 Now you can deploy Anbox Cloud. The deployment is entirely handled by Juju and does not need any manual involvement other than running the actual deploy command.
 
-Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles):
+Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7):
 
 * For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 

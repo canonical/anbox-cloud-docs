@@ -79,7 +79,7 @@ This will give the same result as configuring the proxy values through Juju:
 
 Another way to change or customise a deployment is to store the YAML bundle file locally and edit it with a text editor.
 
-The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles) for more details on the available bundles.
+The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7) for more details on the available bundles.
 
 Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://juju.is/docs/sdk/bundle-reference).
 

@@ -108,11 +108,11 @@ Use "aar trust [command] --help" for more information about a command.
 
 Every AMS instance has a registry-specific client certificate that is stored at `/var/snap/ams/common/registry/client.crt`. To manually register an AMS client, you'll need to copy this certificate to the machine hosting AAR and use the CLI to trust it.
 
-To add an AMS client as a trusted [publisher](https://discourse.ubuntu.com/t/application-registry/17761#aar-roles), use the following command:
+To add an AMS client as a trusted [publisher](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761#how-aar-works-1), use the following command:
 
     sudo aar trust add client.crt --publisher
 
-To add an AMS client as a trusted [client](https://discourse.ubuntu.com/t/application-registry/17761#aar-roles), use the following command:
+To add an AMS client as a trusted [client](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761#how-aar-works-1), use the following command:
 
     sudo aar trust add client.crt
 

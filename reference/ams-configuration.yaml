@@ -283,7 +283,7 @@ node:
     default: "4"
     description: >-
       CPU allocation rate used for
-      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting).
+      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3).
     deprecated: false
   cpus:
     type: "integer"
@@ -306,7 +306,7 @@ node:
       GPU)<br/>10 (for nodes with AMD or Intel GPU)
     description: >-
       Number of
-      [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots)
+      [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2)
       available on the node.
     deprecated: false
   memory:
@@ -320,7 +320,7 @@ node:
     default: "2"
     description: >-
       Memory allocation rate used for
-      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting).
+      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3).
     deprecated: false
   public-address:
     type: "string"

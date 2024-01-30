@@ -24,4 +24,5 @@ If your application requires different resources than the default, specify the r
 In addition to the `cpus`, `memory` and the `disk-size` requirements, if your application requires a custom number of GPU slots, change the `gpu-slots` value for the `resources` attribute in the application manifest.
 
 ## Related information
+
 * [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)

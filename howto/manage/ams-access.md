@@ -12,7 +12,7 @@ To do so, use the following command:
 
 ## Install a trusted certificate
 
-Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See [Security certificates for remote clients](https://discourse.ubuntu.com/t/about-ams/24321#security-certificates) for more information.
+Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See [Security certificates for remote clients](https://discourse.ubuntu.com/t/anbox-management-service-ams/24321#security-certificates-for-remote-clients-2) for more information.
 
 ### Self-signed certificates
 

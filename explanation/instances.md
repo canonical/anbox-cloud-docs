@@ -9,7 +9,7 @@ Anbox Cloud differentiates between two types of instances: regular and base. The
 
 Regular instances are containers or virtual machines that are launched from either an application or an image. They exist until they are deleted.
 
-Base instances are temporary containers or virtual machines that are used when [bootstrapping an application](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). They are automatically deleted when the application bootstrap is completed.
+Base instances are temporary containers or virtual machines that are used when [bootstrapping an application](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). They are automatically deleted when the application bootstrap is completed.
 
 When we refer to instances in this documentation without specifying the instance type, we mean regular instances.
 

@@ -42,7 +42,7 @@ By default, AMS uses the `scheduler` option, because it provides the most generi
 
 See [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) for the minimum hardware requirements for Anbox Cloud. Note that these list the minimum requirements, and using more powerful hardware will increase performance.
 
-For optimal performance, you should use a dedicated block device for LXD storage. Using a loop file is considerably slower. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage) for more information.
+For optimal performance, you should use a dedicated block device for LXD storage. Using a loop file is considerably slower. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage-6) for more information.
 
 The overall performance depends not only on the hardware used for the actual Anbox Cloud deployment, but also on the setup used for other components that Anbox Cloud relies on. For example, the etcd database must use a hard disk that is fast enough. See [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/) for detailed information.
 

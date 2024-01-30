@@ -45,7 +45,7 @@ To try out the `minimal` platform, complete the following steps:
 
    The command prints out the ID of the instance. Note down this ID; you will need it in the next step.
 
-   The start of the raw instance takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) before the instance is ready to be used.
+   The start of the raw instance takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2) before the instance is ready to be used.
 
 1. When the instance is fully up and running, copy the `platform_minimal.so` module to it:
 

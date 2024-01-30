@@ -134,7 +134,7 @@ See https://discourse.ubuntu.com/t/about-anbox-cloud/17802.
 
 A self-contained deployment variant of Anbox Cloud.
 
-See [Variants](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#variants).
+See [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1).
 
 <a name="anbox-cloud-cluster"></a>
 ### Anbox Cloud cluster
@@ -250,7 +250,7 @@ The package to launch in an application instance once the system has booted.
 
 The process that builds the application and optimises it to run on Anbox Cloud.
 
-See [Bootstrap process](https://discourse.ubuntu.com/t/about-applications/17760#bootstrap).
+See [Bootstrap process](https://discourse.ubuntu.com/t/about-applications/17760#bootstrap-process-2).
 
 <a name="control-node"></a>
 ### Control node

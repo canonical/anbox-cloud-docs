@@ -46,7 +46,7 @@ Anbox Cloud uses unprivileged LXD instances only, which fully isolates the insta
 [note type="caution" status="Warning"]
 While instances are fully isolated, all instances currently use the same GPU resources. As a result, any instance that is launched with GPU support could take all GPU resources in a DDoS-like attack, which would prevent other instances from starting.
 
-See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
+See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) for more information.
 [/note]
 
 ### Secure communication with the Juju controller

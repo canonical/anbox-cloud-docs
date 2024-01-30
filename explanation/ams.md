@@ -1,13 +1,13 @@
 The Anbox Management Service (AMS) sits at the heart of Anbox Cloud and handles all aspects of the application and instance life cycle. It is responsible for managing instances, applications, addons, updates and more, while simultaneously ensuring high density, performance and fast startup times.
 
 ## Interacting with AMS
+
 AMS is usually managed through the command line interface, the Anbox Management Client (AMC), which can run either on the same machine as AMS or on a remote machine.
 
 Since AMS exposes an HTTP interface, any tool can use the [AMS HTTP API](https://anbox-cloud.github.io/latest/ams/) to interact with AMS. Both the AMC (when running as a remote client) and the Anbox Application Registry (AAR) use the AMS HTTP API to interact with AMS.
 
 You can also develop your own client by using the [AMS SDK](https://discourse.ubuntu.com/t/ams-sdk-api-reference/17845).
 
-<a name="security-certificates"></a>
 ### Security certificates for remote clients
 
 If the AMC is running on the same machine as AMS, it communicates with AMS through a UNIX domain socket, not through HTTP. Therefore, you do not need to worry about security certificates for local clients. However, in case of remote clients, interacting with AMS through HTTP requires a secure and trusted setup for communications, using TLS and [certificates](https://en.wikipedia.org/wiki/X.509).
@@ -47,6 +47,7 @@ You can access AMS either by IP or through a UNIX socket. The IP depends on your
 [note type="information" status="Tip"]If your client requires the AMS certificate, you can find it in `/var/snap/ams/common/server/ams.crt`.[/note]
 
 ## Related information
+
 * [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)
 * [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)
 * [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761)

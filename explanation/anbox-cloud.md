@@ -2,7 +2,6 @@ Anbox Cloud provides a rich software stack that enables you to run Android appli
 
 Anbox Cloud maintains a single Android system per [instance](https://discourse.ubuntu.com/t/26204#instance), providing higher density and better performance per host while ensuring security and isolation of each instance. Depending on the target platform, payload, and desired application performance (for example, frame rate), Anbox Cloud can run more than 100 instances on a single machine.
 
-<a name="variants"></a>
 ## Variants
 
 Anbox Cloud comes in two variants that serve different purposes:
@@ -92,7 +91,6 @@ You will be required to provide one or more frontend services. A frontend servic
 
 For example, your web client can be a mobile app used to access the provided Android containers. We provide the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844) as a starting point for creating a web client. The web dashboard in Anbox Cloud is an example for a frontend service and web client, combined into one.
 
-<a name="lxd"></a>
 ## LXD
 
 Anbox Cloud includes LXD for hosting and managing the Ubuntu instances that run the nested Android containers.
@@ -118,8 +116,6 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 ```
 
-<a name="lxd-storage"></a>
-
 ### LXD storage
 
 For LXD storage, Anbox Cloud uses a ZFS storage pool, which it creates automatically. This storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/en/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
@@ -130,7 +126,6 @@ If you are doing a full deployment, configure the storage before starting the de
 
 If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, including the instances created by Juju.
 
-<a name="juju-bundles"></a>
 ## Juju bundles
 
 The regular Anbox Cloud variant provides two different Juju bundles:

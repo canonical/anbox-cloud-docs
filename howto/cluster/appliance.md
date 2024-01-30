@@ -1,6 +1,6 @@
 If you're running the Anbox Cloud Appliance and you want to extend the available instance capacity, you can join additional machines to the appliance.
 
-The following instructions describe how to add a machine. Also see [Multi-node support for the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/capacity-planning/17765#clustering-anbox-cloud).
+The following instructions describe how to add a machine. Also see [Multi-node support for the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/capacity-planning/17765#clustering-for-full-anbox-cloud-deployments-2).
 
 ## Allow internal network communication
 

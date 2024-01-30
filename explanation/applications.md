@@ -1,6 +1,7 @@
 Applications are one of the main objects managed by Anbox Management Service (AMS). A single application encapsulates one Android APK ([Android Package Kit](https://en.wikipedia.org/wiki/Android_application_package)) and manages it within the cluster. It takes care of installing the supplied APK and making it available to users. AMS also manages updates to existing applications, which includes allowing the operator to test new uploaded versions before making them available to any users.
 
 ## Application requirements
+
 To run on the Anbox Cloud platform, applications must fulfil the following requirements:
 
 * The application **SHOULD NOT** download any additional resources on regular startup to contribute to short startup times. If additional resources need to be downloaded, this can be done during the application bootstrap phase.
@@ -8,7 +9,6 @@ To run on the Anbox Cloud platform, applications must fulfil the following requi
 
 If your application fulfils these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/indore-extern/+filebug).
 
-<a name="bootstrap"></a>
 ## Bootstrap process
 
 When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
@@ -77,6 +77,7 @@ Alternatively, [check the instance logs](https://discourse.ubuntu.com/t/24329) t
 When the application bootstrap succeeds, the base instance is automatically removed and the status of the application changes to `ready` indicating that the application is ready to use.
 
 ## Related information
+
 * [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)
 * [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)
 * [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)

@@ -27,6 +27,7 @@ In terms of performance, this could be perceived to have some transmission overh
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use ANGLE on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA. 
 
 ## Related information
+
 * [Supported rendering resources](https://discourse.ubuntu.com/t/37322)
 * [SurfaceFlinger](https://source.android.com/docs/core/graphics/surfaceflinger-windowmanager)
 * [Wayland](https://wayland.freedesktop.org/)
