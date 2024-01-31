@@ -51,6 +51,7 @@ If you are running the Anbox Cloud Appliance, use the following command:
 Type `anbox-stream-gateway --help` to list all commands.
 
 ## Related information
+
 * [About application streaming](https://discourse.ubuntu.com/t/17769)
 * [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/24321)
 * [Anbox Cloud streaming SDK](https://discourse.ubuntu.com/t/17844#anbox-cloud-streaming-sdk-8)

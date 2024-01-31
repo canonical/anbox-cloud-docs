@@ -172,4 +172,4 @@ You can check for the status of an existing application by running:
 
     amc application show <application id or name>
 
-In case automatic updates are disabled for applications, AMS cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-updates) to enable automatic updates or to manually update the applications.
+In case automatic updates are disabled for applications, AMS cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-application-updates-3) to enable automatic updates or to manually update the applications.

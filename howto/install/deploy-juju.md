@@ -63,7 +63,7 @@ You can retrieve your Ubuntu Pro token at https://ubuntu.com/pro after logging i
 
 [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 
-To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
+To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#use-overlay-files-1) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
 ```yaml
 applications:
@@ -126,7 +126,7 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 ## Customise the hardware configuration
 
-To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files). Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/olm/constraint#heading--complete-list-of-constraints) in the Juju documentation for details.
+To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#use-overlay-files-1). Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/olm/constraint#heading--complete-list-of-constraints) in the Juju documentation for details.
 
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 

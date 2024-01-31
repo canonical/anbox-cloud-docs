@@ -18,7 +18,7 @@ In the `anbox-cloud-appliance status` command output, the `update-available` fie
 
 The appliance will now perform all necessary steps to upgrade to the newer available version. 
 
-[note type="information" status="Note"]In case automatic updates are disabled for applications, Anbox Management Service (AMS) cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-updates) to enable automatic updates or to manually update the applications.[/note]
+[note type="information" status="Note"]In case automatic updates are disabled for applications, Anbox Management Service (AMS) cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-application-updates-3) to enable automatic updates or to manually update the applications.[/note]
 
 You can watch the upgrade progress on the web interface:
 

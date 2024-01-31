@@ -28,7 +28,6 @@ config:
     tags: []
 ```
 
-<a name="configure-allocation-rates"></a>
 ## Configure allocation rates
 
 AMS allows over-committing available resources on a node. This mechanism improves resource usage, because usually, instances don't use 100% of their dedicated resources all of the time.
@@ -42,7 +41,6 @@ Use the following commands to set the allocation rates on a node (for example, `
     amc node set <node> cpu-allocation-rate <value>
     amc node set <node> memory-allocation-rate <value>
 
-<a name="configure-node-accept-new-instances"></a>
 ## Configure if a node can accept new instances
 
 [note type="information" status="Note"]Currently Anbox Cloud does not support GPUs for virtual machine instances. This feature is planned for a future release.[/note]
@@ -53,7 +51,6 @@ Use the following command to prevent the node from accepting new instances:
 
     amc node set <node> unschedulable true
 
-<a name="configure-gpu-slots"></a>
 ## Configure GPU slots and GPU encoder slots
 
 GPU slots are used to share GPUs amongst instances. See [GPUs and instances](https://discourse.ubuntu.com/t/17768) and [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) for more information.
@@ -74,7 +71,6 @@ Use the following commands to set the number of GPU slots and GPU encoder slots 
 
 Replace `<node>` with the node name (for example, `lxd0`), `<n>` with the GPU number and `<number>` with the number of slots.
 
-<a name="configure-tags"></a>
 ## Tags
 
 A node can have a set of tags which can be used for different purposes. Use the following command to set the tags for a specific node:

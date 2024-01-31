@@ -37,7 +37,7 @@ An additional aspect to take into account when planning your resources is the nu
 
 [note type="information" status="Note"]Currently, Anbox Cloud does not have GPU support for virtual machines. This feature is planned for a future release.[/note]
 
-GPUs have limited capacity that can be shared amongst multiple instances, and GPU slots are a way to fine-tune how many instances can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see [Configure GPU slots](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-gpu-slots) for instructions).
+GPUs have limited capacity that can be shared amongst multiple instances, and GPU slots are a way to fine-tune how many instances can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see [Configure GPU slots](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-gpu-slots-and-gpu-encoder-slots-4) for instructions).
 
 To determine the best number of GPU slots for a specific GPU model, consider the following aspects:
 
@@ -57,7 +57,7 @@ The main purpose of GPU slots is to control the number of instances that are lau
 
 If the unused resources on a cluster node don't suffice to launch an instance for an application with its defined resource requirements, the instance cannot be launched. This behaviour is very restrictive, and in many cases unnecessary.
 
-Usually, an instance doesn't use its dedicated vCPU cores and memory at 100% all the time. Therefore, AMS allows over-committing available resources. By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`, which means that it allows four times the number of vCPU cores and twice the amount of RAM per node. See [Configure allocation rates](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-allocation-rates) for instructions on how to define the allocation rates for a node.
+Usually, an instance doesn't use its dedicated vCPU cores and memory at 100% all the time. Therefore, AMS allows over-committing available resources. By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`, which means that it allows four times the number of vCPU cores and twice the amount of RAM per node. See [Configure allocation rates](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-allocation-rates-2) for instructions on how to define the allocation rates for a node.
 
 For example, consider an application that has a resource preset of 2 vCPU cores and 3 GB of memory, and you have a node with 8 CPU cores and 16 GB of memory. Without over-commitment, you could only launch four instances before you run out of resources on the node. However, with a CPU allocation rate of `4` and a memory allocation rate of `2` (the default), the available resources on the node change to `4 * 8 physical CPU cores = 32 vCPU cores` and `2 * 16 GB memory = 32 GB memory`, which will allow up to ten instances on the node.
 

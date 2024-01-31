@@ -52,7 +52,7 @@ The `image` attribute defines which image the application is based on. If left e
 
 ## Node selector
 
-The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which an instance for the application can be scheduled. AMS will match the selector against the [tags](https://discourse.ubuntu.com/t/how-to-configure-cluster-nodes/28716#configure-tags) specified for each node.
+The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which an instance for the application can be scheduled. AMS will match the selector against the [tags](https://discourse.ubuntu.com/t/how-to-configure-cluster-nodes/28716#tags-5) specified for each node.
 
 The following manifest specifies a node selector that instructs the AMS to schedule only those instances having the tags `foo` and `bar`, onto a node:
 

@@ -1,4 +1,5 @@
 ## Session with an Error status
+
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
 On the **Sessions** page, you could see a session with an **Error** status when there are not enough resources to start a streaming session. 
@@ -10,6 +11,7 @@ Try the following actions:
 * Check if all the nodes are in [`unschedulable`](https://discourse.ubuntu.com/t/ams-configuration/20872) mode.
 
 ## Session does not start
+
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
 A session does not start and the session details page displays the following error:
@@ -20,6 +22,7 @@ A session does not start and the session details page displays the following err
 
 
 ## Instances(s) in Error status
+
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
 The **Instances** list page shows instances with Error status.
@@ -39,6 +42,7 @@ The **Error Message field** can give you a starting point for identifying the is
 If the reason for the instance failure is not obvious from the **Error Message**, check the **Logs** tab for more information.
 
 ## Logs unavailable for an instance
+
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
 ![Instance logs unavailable|690x440](https://assets.ubuntu.com/v1/9b3d4959-logs-unavailable-for-instance.png)
@@ -50,6 +54,7 @@ Logs are unavailable for an instance when:
 Normally, the logs are available if the instance is in an error state. If the instance is in the error state and yet there are no logs available, [check if you have enough resources](https://discourse.ubuntu.com/t/capacity-planning/28717).
 
 ## Terminal is unavailable for an instance
+
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
 ![Terminal unavailable for instance|690x440](https://assets.ubuntu.com/v1/3c745aa3-terminal-unavailable-for-instance.png)

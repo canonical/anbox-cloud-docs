@@ -2,22 +2,21 @@ Enabling out-of-band (OOB) data transmission between an Android application and 
 
 Anbox Cloud provides two versions of this OOB data exchange:
 
-* [Version 2](#oob-v2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
+* [Version 2](#version-2-1) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
   Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
-* [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in an [instance](https://discourse.ubuntu.com/t/26204#instance) and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
+* [Version 1](#version-1-10) enables Android application developers to trigger an action from an Android application running in an [instance](https://discourse.ubuntu.com/t/26204#instance) and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
 
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
 [note type="caution" status="Warning"]
-The support for [version 1](#oob-v1) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#oob-v2) for full-duplex data transmission and better performance.
+The support for [version 1](#version-1-10) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2-1) for full-duplex data transmission and better performance.
 [/note]
 
 See the instructions for exchanging OOB data using a specific implementation version below:
-* [Version 2](#oob-v2)
-* [Version 1](#oob-v1)
+* [Version 2](#version-2-1)
+* [Version 1](#version-1-10)
 
-<a name="oob-v2"></a>
 ## Version 2
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
@@ -269,18 +268,17 @@ try {
 <!-- wokeignore:rule=master -->
 For a complete Android example, see the [out_of_band_v2](https://github.com/anbox-cloud/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
-<a name="oob-v1"></a>
 ## Version 1
 
 [note type="caution" status="Warning"]
 The support for version 1 of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release.
 [/note]
 
+### Android application
+
 The following instructions will walk you through how to send a message from an Android application
 running in an instance to the client application developed with the Anbox Streaming
 SDK.
-
-### Android application
 
 #### Add required permissions
 

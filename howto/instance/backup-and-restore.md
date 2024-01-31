@@ -22,7 +22,7 @@ If [`boot-package`](https://discourse.ubuntu.com/t/application-manifest/24197) i
 
 ## Restore application data
 
-The application data can be restored with the following [pre-start hook](https://discourse.ubuntu.com/t/example-back-up-data/25289#restore) when an instance is up and running:
+The application data can be restored with the following [pre-start hook](https://discourse.ubuntu.com/t/example-back-up-data/25289#restore-data-2) when an instance is up and running:
 
 ```bash
 #!/bin/sh -ex

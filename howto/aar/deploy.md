@@ -15,7 +15,7 @@ When using the S3 storage backend, image downloads will be redirected to S3 inst
 
 To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the AWS documentation [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) for instructions on how to do this.
 
-If you don’t plan to use the [CloudFront CDN](#cloudfront), you should use a region close to your Anbox Cloud deployment to keep download times low.
+If you don’t plan to use the [CloudFront CDN](#aws-cloudfront-cdn-support-3), you should use a region close to your Anbox Cloud deployment to keep download times low.
 
 To allow the AAR to access the S3 bucket, create an [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) user with the following policy:
 
@@ -70,8 +70,6 @@ Finally, update the AAR configuration via the charm configuration:
 
     juju config aar -f config.yaml
 
-
-<a name="cloudfront"></a>
 ### AWS CloudFront CDN support
 
 The distribution of the images can be highly improved by adding support for the AWS CloudFront CDN, which brings the images closer to your Anbox Cloud deployments in a more world wide context. The [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) describes all necessary setup steps.

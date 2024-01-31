@@ -13,7 +13,10 @@ Before starting the procedure,
 
 ## Virtual machine setup
 
+To start the installation, you must create and configure a virtual machine:
+
 ### 1. Create a virtual machine
+
 Log in to [Google Cloud](https://console.cloud.google.com) and select the project for this deployment. Select **VM instances > Create Instance > New VM instance**.
 
 ### 2. Configure basic settings

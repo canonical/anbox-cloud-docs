@@ -1,13 +1,12 @@
 There are two main ways to customise the Anbox Cloud deployment:
 
-1. [Use overlays](#overlay-files) in conjunction with the published Anbox Cloud bundle.
-2. [Edit the bundle file](#edit-bundle) itself.
+1. Use overlays in conjunction with the published Anbox Cloud bundle.
+2. Edit the bundle file.
 
 Using an overlay means that you can easily apply your customisation to different versions of the bundle, with the possible downside that changes in the structure of new versions of Anbox Cloud might render your overlay obsolete or non-functional (depending on what exactly your overlay does).
 
 Saving a copy of the bundle file and editing that file means that your customisation will always work, but of course, this method requires that you create a new file for each version of Anbox Cloud.
 
-<a name="overlay-files"></a>
 ## Use overlay files
 
 An [overlay bundle](https://juju.is/docs/sdk/bundle-reference#heading--overlay-bundles) is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):

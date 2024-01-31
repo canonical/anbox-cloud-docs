@@ -5,7 +5,7 @@ You can use Anbox WebView to quickly integrate a client-side virtual keyboard fe
 * When the text editor of the application in the instance gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
 * When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
 
-The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See [Customising the virtual keyboard](#customising) for additional implementation options.
+The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See [Customising the virtual keyboard](#customising-the-virtual-keyboard-4) for additional implementation options.
 
 For the complete implementation details, refer to the `enhanced_webview_streaming` example in the `example/android` folder.
 
@@ -68,7 +68,6 @@ Adding the following JavaScript code snippet builds up a communication tunnel be
    </script>
    ```
 
-<a name="customising"></a>
 ## Customising the virtual keyboard
 
 You can take advantage of the interfaces that the Anbox WebView exposes to provide your own implementation of a client-side virtual keyboard that customises:

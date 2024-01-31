@@ -2,9 +2,8 @@ The Anbox Cloud Appliance uses a self-signed certificate to provide HTTPS servic
 
 [note type="information" status="Note"]This document assumes you have the Anbox Cloud Appliance installed. If you haven't, follow the [instructions](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) to do so.[/note]
 
-If you run the appliance on AWS, you can choose to [use the AWS Certificate Manager](#aws-certificate-manager). Otherwise, you must [manage the certificate yourself](#manual).
+If you run the appliance on AWS, you can choose to use the AWS Certificate Manager. Otherwise, you must manage the certificate yourself manually.
 
-<a name="manual"></a>
 ## Manage the certificate yourself
 
 To generate and install a certificate yourself, complete the following steps.
@@ -91,7 +90,6 @@ In this way, the SSL certificate auto-renewal is in place.
 
 [note type="information" status="Note"]The appliance will face a short downtime during the renewal of the SSL certificate but will come back online once the process is completed.[/note]
 
-<a name="aws-certificate-manager"></a>
 ## Use the AWS Certificate Manager
 
 If you run the Anbox Cloud Appliance on AWS, you can use the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) to provision and manage your TLS certificate.
@@ -107,7 +105,6 @@ Before you start, make sure the following requirements are met:
 
 Then complete the following steps.
 
-<a name="step1"></a>
 ### 1. Configure routing information and name servers
 
 [note type="information" status="Note"]
@@ -116,7 +113,7 @@ You can skip this step if you registered your domain name through Amazon Route 5
 
 If you want to use a domain name that was not registered through Amazon Route 53, you must manually create a [public hosted zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/AboutHZWorkingWith.html) for it, and then make your domain use Amazon Route 53 as its DNS service. A public hosted zone contains routing information for the domain, and Amazon Route 53 uses it to determine to which machine it should route the traffic to your domain.
 
-In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS load balancer (which we will set up in [step 3](#step3)).
+In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS load balancer (which we will set up in [step 3](##h-3-create-a-load-balancer-10).
 
 1. To create a public hosted zone, follow the instructions in [Creating a public hosted zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingHostedZone.html) in the Amazon Route 53 documentation.
 
@@ -135,7 +132,6 @@ In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS 
 
    ![Configure custom name servers for your domain with your domain provider](https://assets.ubuntu.com/v1/433fdfd9-manage_tls_enter-nameservers.png)
 
-<a name="step2"></a>
 ### 2. Create a public certificate
 
 To create a public certificate using the AWS Certificate Manager, you must first request a certificate and then validate that you own the domain that the certificate applies to.
@@ -147,13 +143,12 @@ To create a public certificate using the AWS Certificate Manager, you must first
    ![Certificate that is pending validation](https://assets.ubuntu.com/v1/5caeac31-manage_tls_cname-record.png)
 1. To validate the certificate, follow the instructions in [Validating domain ownership](https://docs.aws.amazon.com/acm/latest/userguide/domain-ownership-validation.html) in the AWS Certificate Manager documentation.
 
-   Since you have a public hosted zone for your domain in Amazon Route 53 (see [step 1](#step1)), you can follow the steps for creating records in Route 53.
+   Since you have a public hosted zone for your domain in Amazon Route 53 (see [step 1](#h-1-configure-routing-information-and-name-servers-8)), you can follow the steps for creating records in Route 53.
 
 DNS propagation usually takes a while. When it completes and the validation is successful, the status of the certificate changes to issued, and it is ready to use.
 
 ![Valid certificate in AWS Certification Manager](https://assets.ubuntu.com/v1/b95943aa-manage_tls_certificate-status.png)
 
-<a name="step3"></a>
 ### 3. Create a load balancer
 
 To use the Anbox Cloud Appliance through your domain name, AWS must route the HTTPS traffic for your domain to the Anbox Cloud Appliance. To ensure this, you must create a load balancer that listens for traffic and routes it to the appliance.
@@ -188,7 +183,6 @@ To use the Anbox Cloud Appliance through your domain name, AWS must route the HT
    ![Listener settings](https://assets.ubuntu.com/v1/3308aa3a-manage_tls_listener-settings.png)
 1. Check the **Summary**, and if everything looks correct, click **Create load balancer**.
 
-<a name="step4"></a>
 ### 4. Direct traffic from your domain to the load balancer
 
 When the load balancer is created, AWS assigns it an automatic DNS name. The following example shows where to find it:
@@ -198,7 +192,7 @@ When the load balancer is created, AWS assigns it an automatic DNS name. The fol
 You now need to route the traffic that goes to your domain name to the load balancer.
 
 1. Go to the [Route 53](https://console.aws.amazon.com/route53/) console.
-1. Select your public hosted zone (which was created automatically if you registered your domain through Amazon Route 53, or which you created in [step 1](#step1) otherwise).
+1. Select your public hosted zone (which was created automatically if you registered your domain through Amazon Route 53, or which you created in [step 1](#h-1-configure-routing-information-and-name-servers-8) otherwise).
 1. Create a type `A` DNS record that routes the traffic that from the public hosted zone to the load balancer:
 
    1. Click **Create Record** and select `Simple routing`.
@@ -216,7 +210,6 @@ The following example shows the DNS record with type `A` for the example domain:
 
 ![DNS records for the public hosted zone](https://assets.ubuntu.com/v1/5a4986bd-manage_tls_dns-records.png)
 
-<a name="step5"></a>
 ### 5. Configure the appliance to use the domain name
 
 Finally, configure the Anbox Cloud Appliance to use the domain name that you prepared.

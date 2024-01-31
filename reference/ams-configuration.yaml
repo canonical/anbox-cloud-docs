@@ -15,7 +15,7 @@ all:
       If set to `true`, AMS automatically published new application
       versions when the bootstrap process is finished. `false`
       disables this. See
-      [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions).
+      [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1).
     deprecated: false
   application.auto_update:
     type: "bool"
@@ -24,7 +24,7 @@ all:
       If set to `true`, AMS automatically updates applications
       whenever any dependencies (parent image, addons, global
       configuration) change. `false` disables this. See
-      [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-updates).
+      [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3).
     deprecated: false
   application.default_abi:
     type: "string"

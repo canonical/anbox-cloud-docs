@@ -16,4 +16,4 @@ See [How to view the instance logs](https://discourse.ubuntu.com/t/24329) for in
 
 > When launching an instance for an application, I get an error that mentions "published application version not found". Why?
 
-If you launch an instance by only specifying the application ID and the application has no published version yet, you must explicitly specify the version that you want to launch or publish a version of the application. See [How to launch application instances](https://discourse.ubuntu.com/t/24327#application-instances) and [How to publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions) for more information.
+If you launch an instance by only specifying the application ID and the application has no published version yet, you must explicitly specify the version that you want to launch or publish a version of the application. See [How to launch application instances](https://discourse.ubuntu.com/t/24327#launch-application-instances-1) and [How to publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1) for more information.

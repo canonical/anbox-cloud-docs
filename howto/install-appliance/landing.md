@@ -7,6 +7,7 @@ We strongly recommend that you follow the [Install the Anbox Cloud Appliance on 
 Always check the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) before you start your installation.
 
 ## Supported cloud platforms
+
 The Anbox Cloud Appliance is currently available for the following cloud platforms:
 
 * [AWS](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703)

@@ -127,7 +127,7 @@ When the application for the virtual device is ready, you can launch it and log 
 
 ## 5. Test the virtual device
 
-You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [How to access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#scrcpy) for more detailed instructions.
+You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [How to access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#access-an-instance-with-scrcpy-2) for more detailed instructions.
 
 If you do not have `scrcpy` installed on your local machine, enter the following command to install it:
 

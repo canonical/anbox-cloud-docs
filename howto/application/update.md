@@ -81,7 +81,6 @@ resources:
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.
 
-<a name="publish-application-versions"></a>
 ## Publish application versions
 
 The most important part of an application version is the `published` field. If a version is marked as published, it is available to launch and use. Generally when launching instances by using the AMS REST API, if no specific application version is given, by default, the latest published version of an application is used to create the instance.
@@ -106,7 +105,6 @@ Each version takes up space on the LXD nodes. To free up space and remove old an
 
 The command will ask for your approval before the version is removed as it might affect your users. If you want to bypass the check, you can add the `--yes` flag to the command.
 
-<a name="configure-automatic-updates"></a>
 ## Configure automatic application updates
 
 AMS automatically updates an application whenever any of its dependencies (parent image, addons, global configuration) changes. This produces a new version for the application, which is automatically published if the `application.auto_publish` configuration item is enabled.

@@ -3,7 +3,7 @@ Anbox Cloud provides tools for benchmarking different aspects of your deployment
 See [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) for an overview of results that you can expect for selected hardware configurations.
 
 [note type="information" status="Important"]Benchmarks provide useful information only if you run them with an application and workload that reflects your real-life scenario. For example, if you run the benchmark with an Android app that just sits idle and does not constantly refresh the screen by itself, you will get a low FPS number. This number does not reflect the real scenario though, because in reality, your users actually use the app and thus cause a higher workload.[/note]
-<a name="instance-benchmarks"></a>
+
 ## Run instance benchmarks
 
 The `amc` command line utility provides a `benchmark` subcommand to run benchmarks on an Anbox Cloud deployment. It measures the time instances take to start up and their average FPS (frames per second) rate.

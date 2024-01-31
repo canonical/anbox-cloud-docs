@@ -5,7 +5,6 @@ You can extend an application either by adding [hooks](#application-hooks) direc
 
 For both options, you must create one or more hooks first. The options differ in how you add these hooks to your application.
 
-<a name="create-hook"></a>
 ## Create a hook
 
 A hook is a script file that runs a series of commands at a specific time in the application life cycle. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for detailed information.
@@ -117,7 +116,7 @@ You can add your hooks directly to an application. To do so, complete the follow
    instance-type: a4.3
    ```
 
-1. Prepare one or more hooks as described in [Create a hook](#create-hook).
+1. Prepare one or more hooks as described in [Create a hook](#create-a-hook-1).
 
 1. Move the `hooks` directory and any other files that are required by the hook into the `app` directory. The folder structure should look like this:
 
@@ -144,7 +143,7 @@ By default, the files required for the hooks (for example, APK files) are remove
 
 If you want to use your hooks in multiple applications, you should include them in an addon. To do so, complete the following steps:
 
-1. In a new `my-addon` directory, prepare one or more hooks as described in [Create a hook](#create-hook).
+1. In a new `my-addon` directory, prepare one or more hooks as described in [Create a hook](#create-a-hook-1).
 1. Create a `manifest.yaml` file in the `my-addon` directory with the following content:
 
    ```

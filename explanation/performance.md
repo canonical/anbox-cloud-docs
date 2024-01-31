@@ -72,5 +72,5 @@ Also make sure to optimise the network path from the Anbox Cloud server to the c
 
 ## Related information
 * [Hooks](https://discourse.ubuntu.com/t/28555)
-* [Instance benchmarks](https://discourse.ubuntu.com/t/17770#instance-benchmarks)
+* [Instance benchmarks](https://discourse.ubuntu.com/t/17770#run-instance-benchmarks-1)
 * [Capacity planning](https://discourse.ubuntu.com/t/28717)

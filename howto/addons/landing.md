@@ -4,7 +4,7 @@ If this is your first time creating an addon, follow the [Create an addon](https
 
 You can use addons to, for example:
 - Enable SSH access for automation tools (see [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284))
-- Set up user-specific data when starting an application (see [How to restore data](https://discourse.ubuntu.com/t/example-back-up-data/25289#restore))
+- Set up user-specific data when starting an application (see [How to restore data](https://discourse.ubuntu.com/t/example-back-up-data/25289#restore-data-2))
 - Install additional tools in the instance (see [Example: Install tools](https://discourse.ubuntu.com/t/example-install-tools/25288))
 - Back up data when the instance is stopping (see [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289))
 - Configure the Android system before running the application (see [Example: Customise Android](https://discourse.ubuntu.com/t/example-customise-android/25290))

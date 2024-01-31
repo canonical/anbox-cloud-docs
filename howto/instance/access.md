@@ -2,7 +2,6 @@ In some cases, it might be necessary to access an individual instance for debugg
 
 You can do this on the command line with the `amc` command, or you can use [scrcpy](https://github.com/Genymobile/scrcpy) for graphical access.
 
-<a name="amc"></a>
 ## Access an instance with `amc`
 
 The `amc` command provides simple shell access to any instance managed by AMS. To access a specific instance you only need its ID:
@@ -19,7 +18,6 @@ If you only want to watch the Android log output, use the following command:
 
 `amc shell` and `amc exec` open various possibilities for automation use cases. See the help output of the commands for further details.
 
-<a name="scrcpy"></a>
 ## Access an instance with scrcpy
 
 The AMS services enable connecting remotely over a network to instance via [scrcpy](https://github.com/Genymobile/scrcpy).
@@ -61,7 +59,7 @@ Afterwards you can find the network endpoint of the instance in the output of th
 
 The endpoint of the ADB service exposed from the running instance is available at 10.226.4.200:10000 on the public network.
 
-[note type="caution" status="Warning"]Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#ssh-tunnel) if possible.[/note]
+[note type="caution" status="Warning"]Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#through-ssh-tunnel-6) if possible.[/note]
 
 ### Run scrcpy
 
@@ -79,7 +77,6 @@ INFO: Initial texture: 1280x720
 
 Then you can interact with the running Android container locally.
 
-<a name="ssh-tunnel"></a>
 ### Through SSH tunnel
 
 In the above example, the ADB service is exposed directly over the internet. This is a major security risk as the ADB connection is not secure. To overcome this security issue, you can use the machine where AMS is running as relay server to set up a secure and encrypted SSH tunnel by forwarding the exposed ADB TCP port from the LXD machine to your localhost through the AMS machine.

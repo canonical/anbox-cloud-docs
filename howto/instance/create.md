@@ -4,7 +4,6 @@ By default, the instance will run headless. See [How to access a instance](https
 
 [note type="information" status="Note"] The following examples use `amc launch`, but you can use `amc init` in the same way.[/note]
 
-<a name="application-instances"></a>
 ## Launch application instances
 
 Launching an instance for a registered application can be achieved with the following command:
@@ -28,7 +27,6 @@ If the application for which you want to launch an instance is not yet published
 
     amc launch --application-version=0 bcmap7u5nof07arqa2ag
 
-<a name="raw-instance"></a>
 ## Launch raw instance
 
 The command for launching a raw instance from an image is:

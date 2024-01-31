@@ -1,6 +1,7 @@
 The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
 
 ## Prerequisites
+
 Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to authenticate.
 
 ### Register an Ubuntu One account in Anbox Cloud
@@ -25,7 +26,6 @@ unit-anbox-cloud-dashboard-0:
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
 
-<a name="dashboard-access-appliance"></a>
 ### Register an Ubuntu One account in Anbox Cloud Appliance
 
 If you followed the instructions in the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial or in [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702), you already registered your Ubuntu One account.
@@ -39,6 +39,7 @@ Accessing the resulting link will create the account and ask you to login via Ub
 The generated link is valid for one hour.
 
 ## Using the dashboard
+
 To access the dashboard, go to `https://<your-machine-address>/`. The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
 
 ### Creating applications

@@ -27,6 +27,7 @@ You can see the synchronised images with the `amc image list` command:
 ```
 
 ## Default image
+
 The first image that is synchronised (usually the newest image) is marked as the default image.
 The default image is used when you create an application without the `image` field or launch a raw instance without specifying any ID.
 

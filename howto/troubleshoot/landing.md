@@ -59,7 +59,7 @@ saves it to the local `<target_file>`. This process might take a few seconds.
 
 If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection. 
 
-Use `amc show <instance_id>` command to list the available logs. See [View stored logs](https://discourse.ubuntu.com/t/24329#view-stored-logs) for an example of such a stored log.
+Use `amc show <instance_id>` command to list the available logs. See [View stored logs](https://discourse.ubuntu.com/t/24329#view-stored-logs-2) for an example of such a stored log.
 
 ## Related topics
 

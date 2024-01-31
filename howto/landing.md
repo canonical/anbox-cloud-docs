@@ -1,6 +1,7 @@
 The *How-to* guides in this section give directions on how to achieve your goals when configuring, managing or using Anbox Cloud. These *How-to*  guides are more useful when you are familiar with Anbox Cloud and seek to achieve specific tasks. They help you complete your tasks but may require you to understand and adapt the steps to fit your specific requirements.
 
 ## Installing and configuring Anbox Cloud
+
 Learn how to install, configure and update Anbox Cloud.
 
 * [Install and configure Anbox Cloud](https://discourse.ubuntu.com/t/24336)
@@ -8,6 +9,7 @@ Learn how to install, configure and update Anbox Cloud.
 * [Update your installation](https://discourse.ubuntu.com/t/24331)
 
 ## Using Anbox Cloud
+
 Learn about applications, instances and more in Anbox Cloud and how to use them.
 
 * [Port Android apps](https://discourse.ubuntu.com/t/17776)
@@ -17,6 +19,7 @@ Learn about applications, instances and more in Anbox Cloud and how to use them.
 *  [Implement streaming for your application](https://discourse.ubuntu.com/t/implement-streaming/24332)
 
 ## Managing Anbox Cloud
+
 Learn how to manage the different variants of Anbox Cloud, distribute the load of Anbox Cloud over several machines in a cluster and work with Anbox runtime.
 
 * [Manage Anbox Cloud](https://discourse.ubuntu.com/t/24337)
