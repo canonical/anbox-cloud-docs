@@ -104,7 +104,7 @@ The feature flag will be considered by all newly launched instances once set.
 
 By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
 
-Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5) if reboots are allowed.
+Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
 
 The feature flag will be considered by all newly launched instances once set.
 
