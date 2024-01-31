@@ -5,17 +5,22 @@ available configuration items.
 
 ## Subcommands
 
+The following subcommands are available:
+
 ### `set`
+
 Update a single configuration of the AMS.
 
     amc config set <config_name> <config_value>
 
 ### `show`
+
 Display all configuration of the AMS.
 
     amc config show
 
 ### `trust`
+
 Manage trusted clients that can communicate with AMS. You can add or remove client certificates as needed to allow or block communication with AMS.
 
 The `amc config trust` command can be used with three subcommands - `add`, `list` and `remove`.

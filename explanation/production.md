@@ -70,7 +70,7 @@ Anbox Cloud is optimised to use only as much energy as is necessary for an opera
 * What trade-offs does your requirement allow to improve energy efficiency? For example, is there a way to use a lower streaming resolution? Lowering the resolution will impact the streaming experience but where possible, it could be a trade-off between being energy efficient and the quality of the stream. This needs to be decided based on how you use Anbox Cloud.
 * Does your deployment use GPU encoding or CPU encoding?
 * What is the bandwidth consumption of your deployment and what are the factors that could make it more efficient?
-* Are you using the [appropriate platform](https://discourse.ubuntu.com/t/37322#supported-platforms) for your use case? For example, for automation use cases, `null` requires much less CPU usage than `webrtc` with GPU or CPU rendering.
+* Are you using the [appropriate platform](https://discourse.ubuntu.com/t/37322#supported-platforms-3) for your use case? For example, for automation use cases, `null` requires much less CPU usage than `webrtc` with GPU or CPU rendering.
 
 ## Monitoring and metrics
 

@@ -7,6 +7,7 @@ The API endpoint can be for example accessed via `curl` in the following way
     curl --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0
 
 ## API versioning
+
 When the Android container gets up and running, all REST API endpoints are served under the base path `/1.0/` inside of the Android container.
 
 The details of a version of the API can be retrieved using `GET s/1.0`.
@@ -16,12 +17,14 @@ The reason for a major API bump is if the API breaks backward compatibility.
 Feature additions are done without breaking backward compatibility only result in addition to `api_extensions` which can be used by the client to check if a given feature is supported by the server.
 
 ## Return values
+
 There are two standard return types:
 
  * Standard return value
  * Error
 
 ### Standard return value
+
 For standard synchronous operation, the following dict is returned:
 
 ```json
@@ -36,6 +39,7 @@ For standard synchronous operation, the following dict is returned:
 HTTP code must be 200.
 
 ### Error
+
 There are various situations in which something may immediately go
 wrong, in those cases, the following return value is used:
 
@@ -51,6 +55,7 @@ HTTP code must be one of 400 or 500.
 
 
 ## API structure
+
  * [`/1.0`](#heading--10)
    * [`/1.0/location`](#heading--10location)
    * [`/1.0/camera`](#heading--10camera)
@@ -60,6 +65,7 @@ HTTP code must be one of 400 or 500.
    * [`/1.0/platform`](#heading--10platform)
 
 ## API details
+
 <a name="heading--10"></a>
 ### `/1.0/`
 #### GET
@@ -115,6 +121,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 ```
 
 #### POST
+
  * Description: Activate or deactivate location updates
  * Operation: sync
  * Return: standard return value or standard error
@@ -132,6 +139,7 @@ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
 ```
 <a name="location-patch"></a>
 #### PATCH
+
  * Description: Provide location update to be forwarded to Android
  * Operation: sync
  * Return: standard return value or standard error
@@ -170,6 +178,7 @@ Return value:
 
 <a name="heading--10camera"></a>
 ### `/1.0/camera`
+
 #### GET
 
 * Description: Get camera basic information
@@ -197,6 +206,7 @@ Return value:
 ```
 
 #### POST
+
  * Description: Activate or deactivate camera data updates.
     Whenever uploading a static image or streaming video content to display it in Anbox,  you need to enable the camera support first in Anbox.
  * Operation: sync
@@ -222,6 +232,7 @@ To determine if the camera is enabled, run the following query:
 
 <a name="heading--10cameradata"></a>
 ### `/1.0/camera/data`
+
 #### POST
 
 * Description: Upload a static image to Anbox
@@ -294,6 +305,7 @@ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N
 
 <a name="heading--10sensors"></a>
 ### `/1.0/sensors`
+
 #### GET
 
 * Description: Get sensors’ status and supported sensors by Anbox
@@ -335,6 +347,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 ```
 
 #### POST
+
  * Description: Activate or deactivate sensor updates
  * Operation: sync
  * Return: standard return value or standard error
@@ -352,6 +365,7 @@ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
 ```
 
 #### PATCH
+
  * Description: Update sensor data to be forwarded to Android.
     The API accepts a JSON array-based sensor data to be forwarded to Android
  * Operation: sync
@@ -390,6 +404,7 @@ Issuing GET method to sensor endpoint can check the current active sensors in th
 
 <a name="heading--10tracing"></a>
 ### `/1.0/tracing`
+
 #### GET
 
 * Description: Get tracing status
@@ -410,6 +425,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 ```
 
 #### POST
+
  * Description: Activate or deactivate tracing in Anbox
  * Operation: sync
  * Return: standard return value or standard error
@@ -448,6 +464,7 @@ You can pull that file from the instance and import it to [Perfetto Trace Viewer
 
 <a name="heading--10platform"></a>
 ### `/1.0/platform`
+
 #### GET
 
 * Description: Get information about the current platform that Anbox uses
@@ -471,6 +488,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 ```
 
 #### PATCH
+
  * Description: Update configuration of the platform currently used by Anbox
  * Operation: sync
  * Return: Standard return value or standard error

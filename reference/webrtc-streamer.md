@@ -6,7 +6,7 @@ The configuration file uses the JSON format. It has the following structure:
 
 | Name | Value type | Default | Description |
 |------|------------|---------|-------------|
-| `video.bitrate_limits` | array of objects | `[]` | [Bitrate limits](#video-bitrate-limits) to apply to the video encoder. |
+| `video.bitrate_limits` | array of objects | `[]` | Bitrate limits to apply to the video encoder. |
 | `nvidia_h264.multipass` | bool | `false` | If set to true, multi-pass encoding is enabled. |
 | `nvidia_h264.multipass_quarter_resolution` | bool | `false` | If set to true, multi-pass encoding will be run only for a quarter of a frame's resolution. |
 | `nvidia_h264.aq` | bool | `false` | If set to true, adaptive quantisation is enabled. |
@@ -15,7 +15,6 @@ The configuration file uses the JSON format. It has the following structure:
 
 See the [NVENC Video Encoder API](https://docs.nvidia.com/video-technologies/video-codec-sdk/11.0/nvenc-video-encoder-api-prog-guide/) documentation for more details on the `nvidia_h264` options.
 
-<a name="video-bitrate-limits"/></a>
 ## Video bitrate limits
 
 Bitrate limits allow to fine-tune which minimum and maximum bitrate the WebRTC streamer will use to dynamically decide the target bitrate for the encoded video stream. As network conditions are constantly changing, WebRTC automatically tries to adapt the video bitrate to find a configuration with best throughput, quality and latency. The bitrate limits allow changing the default values that WebRTC will use as the lower and upper bound for its decision.

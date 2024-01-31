@@ -4,7 +4,7 @@ The supported conditions for an application are as follows:
 
 Name            |  Value
 ----------------|------------
-`instance-type` |  Supported instance type. See [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for a list of available instance types. This attribute is deprecated since 1.20 and will be removed in future releases.
+`instance-type` |  Supported instance type. See [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type-1) for a list of available instance types. This attribute is deprecated since 1.20 and will be removed in future releases.
 `addons`        |  Comma-separated list of addons.
 `tag`           |  Application tag name (deprecated, use `tags` instead).
 `tags`          |  Comma-separated list of tags.

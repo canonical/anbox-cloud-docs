@@ -53,7 +53,7 @@ There may be more advanced scenarios while creating an application that cannot b
 
 ### Streaming applications
 
-The dashboard has in-browser streaming capabilities through WebRTC. It uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
+The dashboard has in-browser streaming capabilities through WebRTC. It uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
 
 You can start a streaming session for any of the successfully created applications. An application is ready to be streamed when its *Status* is *Ready*. When you select the *Start a new session* icon for an application, you can specify the desired streaming attributes such as the screen resolution, frame rate, screen orientation before launching the session.
 

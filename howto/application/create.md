@@ -4,7 +4,7 @@ The internal process will prepare an instance based on the currently available i
 
 ## Preparation
 
-To create an application, you need an Android package (APK) with support for the target architecture. If your resource requirements are different from the default resource preset, define them using the [`resources` attribute](https://discourse.ubuntu.com/t/application-manifest/24197#resources) in your application manifest.
+To create an application, you need an Android package (APK) with support for the target architecture. If your resource requirements are different from the default resource preset, define them using the [`resources` attribute](https://discourse.ubuntu.com/t/application-manifest/24197#resources-7) in your application manifest.
 
 To create a new application, you must first create a manifest file to define the various attributes the new application should have. The manifest is a simple [YAML](http://yaml.org/) file and looks like this:
 

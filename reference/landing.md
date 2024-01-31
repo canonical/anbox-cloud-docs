@@ -1,6 +1,7 @@
 The reference guides in this section provide additional information about using Anbox Cloud, release information, available configuration options, performance metrics and benchmarks.
 
 ## Releases and versions
+
 Learn about Anbox Cloud releases, release roadmap, supported product versions and component versions.
 
 | Guides | Description  |
@@ -28,6 +29,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 | [Hooks](https://discourse.ubuntu.com/t/28555)| Documentation of hooks for addons or applications |
 
 ## Configuration
+
 Know the configuration options that can be defined for various components of Anbox Cloud.
 
 | Guides | Description |
@@ -37,6 +39,7 @@ Know the configuration options that can be defined for various components of Anb
 | [WebRTC streamer](https://discourse.ubuntu.com/t/30195)| Configuration details for the WebRTC streamer |
 
 ## Performance
+
 Learn about the available metrics and benchmarks for measuring performance.
 | Guides | Description |
 |--|--|
@@ -44,6 +47,7 @@ Learn about the available metrics and benchmarks for measuring performance.
 | [Performance benchmarks](https://discourse.ubuntu.com/t/24709)| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
 
 ## Other related information
+
 | Guides | Description |
 |--|--|
 | [License information](https://discourse.ubuntu.com/t/36649)| Information on where to find the licenses of components used by Anbox Cloud |

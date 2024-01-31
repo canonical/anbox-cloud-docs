@@ -4,7 +4,10 @@ The `node` command manage LXD nodes of the deployment that run instances with An
 
 ## Subcommands
 
+The following subcommands are available:
+
 ### `add`
+
 Add a node to AMS. You can also use the alias `new`.
 
     amc node add <node_name> <node_ip_address> [options]
@@ -30,6 +33,7 @@ The following options are available:
 
 
 ### `list`
+
 List available nodes. You can also use `ls` as an alias.
 
     amc node list [options]
@@ -55,6 +59,7 @@ where `attribute` can be one of the following:
 
 
 ### `remove`
+
 Removes a node from the Anbox Cloud cluster thereby making it unable to host instances.
 
 [note type="information" status="Note]You cannot delete a node with running instances unless you use the `--force` flag.[/note]
@@ -72,6 +77,7 @@ The following options are available:
 
 
 ### `set`
+
 Set specific configuration for a node. See [AMS configuration](https://discourse.ubuntu.com/t/20872) for a list of available configuration items.
 
     amc node set <node_name> <config_item_name> <config_item_value> [options] --timeout=10m
@@ -79,6 +85,7 @@ Set specific configuration for a node. See [AMS configuration](https://discourse
 where `-t` or --`timeout` is a string value to indicate the maximum wait time for the operation to complete. The default value is `5m`.
 
 ### `show`
+
 Display information about a node.
 
     amc node show <node_name> [options]

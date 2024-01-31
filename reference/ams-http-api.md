@@ -13,6 +13,7 @@ Some endpoints require an additional authentication token to ensure that the req
 
 
 ## API versioning
+
 The details of a version of the API can be retrieved using `GET /<version>`.
 For example `GET /1.0`
 
@@ -21,6 +22,7 @@ The reason for a major API bump is if the API breaks backward compatibility.
 Feature additions done without breaking backward compatibility only result in addition to `api_extensions` which can be used by the client to check if a given feature is supported by the server.
 
 ## Return values
+
 There are three standard return types:
 
  * Standard return value
@@ -28,6 +30,7 @@ There are three standard return types:
  * Error
 
 ### Standard return value
+
 For a standard synchronous operation, the following dict is returned:
 
 ```json
@@ -42,6 +45,7 @@ For a standard synchronous operation, the following dict is returned:
 HTTP code must be 200.
 
 ### Background operation
+
 When a request results in a background operation, the HTTP code is set to 202 (Accepted)
 and the Location HTTP header is set to the operation URL.
 
@@ -81,6 +85,7 @@ The operation metadata structure looks like:
 The body is mostly provided as a user friendly way of seeing what's going on without having to pull the target operation, all information in the body can also be retrieved from the background operation URL.
 
 ### Error
+
 There are various situations in which something may immediately go wrong, in those cases, the following return value is used:
 
 ```json
@@ -95,6 +100,7 @@ There are various situations in which something may immediately go wrong, in tho
 HTTP code must be one of 400, 401, 403, 404, 409, 412 or 500.
 
 ## Status codes
+
 The AMS REST API often has to return status information, be that the reason for an error, the current state of an operation or the state of the various resources it exports.
 
 To make it simple to debug, all of those are always doubled. There is a numeric representation of the state which is guaranteed never to change and can be relied on by API clients. Then there is a text version meant to make it easier for people manually using the API to figure out what's happening.
@@ -129,6 +135,7 @@ Code  | Meaning
 401   | Cancelled
 
 ## Recursion
+
 To optimise queries of large lists, recursion is implemented for collections. A `recursion` argument can be passed to a GET query against a collection.
 
 The default value is 0 which means that collection member URLs are returned. Setting it to 1 will have those URLs be replaced by the object they point to (typically a dict).
@@ -136,16 +143,19 @@ The default value is 0 which means that collection member URLs are returned. Set
 Recursion is implemented by simply replacing any pointer to a job (URL) by the object itself.
 
 ## Async operations
+
 Any operation which may take more than a second to be done must be done in the background, returning a background operation ID to the client.
 
 The client will then be able to either poll for a status update or wait for a notification using the long-poll API.
 
 ## Notifications
+
 A web-socket based API is available for notifications, different notification types exist to limit the traffic going to the client.
 
 It's recommended that the client always subscribes to the operations notification type before triggering remote operations so that it doesn't have to then poll for their status.
 
 ## PUT vs PATCH
+
 The AMS API supports both PUT and PATCH to modify existing objects.
 
 PUT replaces the entire object with a new definition, it's typically called after the current object state was retrieved through GET.
@@ -155,6 +165,7 @@ To avoid race conditions, the ETag header should be read from the GET response a
 PATCH can be used to modify a single field inside an object by only specifying the property that you want to change. To unset a key, setting it to empty will usually do the trick, but there are cases where PATCH won't work and PUT needs to be used instead.
 
 ## Authorisation
+
 Some operation may require a token to be included in the HTTP Authorisation header like this:
 
  * `Authorization: bearer <token>`
@@ -162,12 +173,14 @@ Some operation may require a token to be included in the HTTP Authorisation head
 No matter if the request is already authenticated using a trusted certificate. If the token is not valid, the request is rejected by the server. This ensures that only authorised clients can access those endpoints.
 
 ## File upload
+
 Some operations require uploading a payload. To prevent the difficulties of handling multipart requests, another solution has been taken: A unique file is uploaded and its bytes are included in the body of the request. Some metadata associated with the file is included in extra HTTP headers:
 
  * X-AMS-Fingerprint: fingerprint of the payload being added
  * X-AMS-Request: metadata for the payload. This is a JSON, specific for the operation.
 
 ## API structure
+
  * [`/`](heading--#)
  * [`/1.0`](#heading--10)
  * [`/1.0/addons`](#heading--10addons)

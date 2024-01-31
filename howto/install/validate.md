@@ -89,7 +89,7 @@ As mentioned by the command you have to store the printed configuration to a fil
 
 Depending on your deployment you can further customise the generated configuration. For example may your deployment only support a single architecture for the instances. For that make sure the `suites.ams.supported-architectures` field is set to the right list of architectures.
 
-If you have support for real GPUs set the `suites.ams.gpu-type` item to the right GPU type (supported values are: `nvidia`, `amd`, `intel`, `none`) and add GPU based instance types (see [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for more details) to the `suites.ams.instance-types`.
+If you have support for real GPUs set the `suites.ams.gpu-type` item to the right GPU type (supported values are: `nvidia`, `amd`, `intel`, `none`) and add GPU based instance types (see [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type-1) for more details) to the `suites.ams.instance-types`.
 
 ## Run the Validation Tests
 

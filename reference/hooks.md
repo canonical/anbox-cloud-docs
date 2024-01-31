@@ -18,8 +18,8 @@ The following figure shows when the different hooks are executed in the life cyc
 
 ![Hooks execution in the life cycle of an instance |471x601](https://assets.ubuntu.com/v1/8441e690-addons-reference-hook-order.png)
 
-<a name='env-variables'></a>
 ## Environment variables
+
 When hooks are invoked, several environment variables are set to provide context to the addon.
 
 The following variables are available:
@@ -35,8 +35,8 @@ The following variables are available:
 | `INSTANCE_TYPE`  | Type of instance being run      | `regular` (instance running an application or a raw image)<br/>`base` (instance bootstrapping, thus creating or updating, an application)|
 | `ANBOX_EXIT_CODE`| *`post-stop` hook only:* Exit code of the Anbox process.| `0` if no error occurred, otherwise set to the actual return code.|
 
-<a name='hook-timeouts'></a>
 ## Hook timeouts
+
 By default, all hooks are subject to a 5 minute timeout to avoid blocking an instance for too long. The timeout can be configured through the `hooks.timeout` key in the addon or application manifest. For example:
 
 ```yaml

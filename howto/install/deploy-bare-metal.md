@@ -6,7 +6,7 @@ Alternatively, you can follow the instructions in this document to use the [manu
 
 Before you start the installation, ensure that you have the required prerequisites:
 
-* At least three Ubuntu machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware) for details and recommendations.
+* At least three Ubuntu machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware-11) for details and recommendations.
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 
@@ -18,7 +18,7 @@ You must install a Juju client on the machine that you use to run the deployment
 
     sudo snap install --classic --channel=2.9/stable juju
 
-See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
+See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version-10) for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Add a controller and model
 
@@ -36,7 +36,7 @@ When the controller is set up, create a model to hold the Anbox Cloud deployment
 
 ## Add all machines
 
-Before starting the deployment, you must add all machines to the Juju model. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware) for the list of machines that you need.
+Before starting the deployment, you must add all machines to the Juju model. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware-11) for the list of machines that you need.
 
 When adding the machines, start with the machine that you want to host the management layer of Anbox Cloud. Then add all LXD worker nodes. Run the following command for each machine:
 

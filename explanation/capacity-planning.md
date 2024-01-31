@@ -23,7 +23,7 @@ A default resource preset will be set for every application. A resource preset s
 - The amount of disk space
 - The number of GPU slots
 
-Depending on the resources that your application requires, if the [default resource preset](https://discourse.ubuntu.com/t/24960) does not suit, you can choose suitable [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) that fit your application.
+Depending on the resources that your application requires, if the [default resource preset](https://discourse.ubuntu.com/t/24960) does not suit, you can choose suitable [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources-7) that fit your application.
 
 When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#over-committing-resources-3) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
@@ -45,7 +45,7 @@ To determine the best number of GPU slots for a specific GPU model, consider the
 - The memory that an instance uses
 - The number of parallel encoding pipelines that the GPU offers
 
-When you launch an instance for an application, AMS reserves the number of GPU slots defined for the application on the node where it is launched. These GPU slots are marked as unavailable until the instance is terminated. If no GPU slots are available on the node, instances that require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) `gpu`) will not be launched on it. Instances that don't require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) `software` or `gpu-preferred`) can still be launched.
+When you launch an instance for an application, AMS reserves the number of GPU slots defined for the application on the node where it is launched. These GPU slots are marked as unavailable until the instance is terminated. If no GPU slots are available on the node, instances that require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder-4) `gpu`) will not be launched on it. Instances that don't require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder-4) `software` or `gpu-preferred`) can still be launched.
 
 [note type="information" status="Important"]
 GPU slots are used to share GPUs amongst instances, but they do not impose limits on GPU usage. Therefore, increasing the number of required GPU slots for an application does not guarantee that more GPU resources are allocated to the corresponding application instances. For example, an intensive game that is configured to use one GPU slot might consume more GPU resources than a simple photo gallery app that is configured to use five GPU slots.
@@ -67,7 +67,7 @@ The CPU allocation rate depends on the type of application and the amount of res
 
 To realistically estimate the required capacity for your deployment, you must consider the type of application that you're running and the expected usage behaviour.
 
-You should [run benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770) to test your application performance and fine-tune the best node and application configuration. Also consider whether your instances use a hardware or software [video encoder](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) for video encoding, and the frame rate and resolution they require.
+You should [run benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770) to test your application performance and fine-tune the best node and application configuration. Also consider whether your instances use a hardware or software [video encoder](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder-4) for video encoding, and the frame rate and resolution they require.
 
 Another aspect is, of course, the number of users expected and hence, the number of instances that will be running simultaneously. If you expect the usage to be rather consistent, you might not need to plan for huge peaks in load. On the other hand, you must also consider the impact if your cluster runs out of resources and it is not possible anymore to start more instances.
 

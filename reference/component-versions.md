@@ -2,7 +2,7 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
-[Details=1.20.2]
+## 1.20.2
 
 ### Charms
 
@@ -67,9 +67,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android11:amd64` | 1.20.2 |
 | `jammy:android11:arm64` | 1.20.2 |
 
-[/Details]
+## 1.20.1
 
-[Details=1.20.1]
 ### Charms
 
 #### Ubuntu 22.04
@@ -133,9 +132,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android11:amd64` | 1.20.1 |
 | `jammy:android11:arm64` | 1.20.1 |
 
-[/Details]
+## 1.20.0
 
-[Details=1.20.0]
 ### Charms
 
 #### Ubuntu 22.04
@@ -199,9 +197,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android11:amd64` | 1.20.0 |
 | `jammy:android11:arm64` | 1.20.0 |
 
-[/Details]
+## 1.19.2
 
-[Details=1.19.2]
 ### Charms
 
 #### Ubuntu 22.04
@@ -265,9 +262,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android11:amd64` | 1.19.2 |
 | `jammy:android11:arm64` | 1.19.2 |
 
-[/Details]
+## 1.19.1
 
-[Details=1.19.1]
 ### Charms
 
 #### Ubuntu 22.04
@@ -331,9 +327,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android11:amd64` | 1.19.1 |
 | `jammy:android11:arm64` | 1.19.1 |
 
-[/Details]
+## 1.19.0
 
-[Details=1.19.0]
 ### Charms
 
 #### Ubuntu 22.04
@@ -397,9 +392,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android11:amd64` | 1.19.0 |
 | `jammy:android11:arm64` | 1.19.0 |
 
-[/Details]
+## 1.18.2
 
-[Details=1.18.2]
 ### Charms
 
 #### Ubuntu 22.04
@@ -471,9 +465,7 @@ Not all components are updated with each release. When components are not update
 | `bionic:android10:amd64` | 1.18.2 |
 | `bionic:android10:arm64` | 1.18.2 |
 
-[/Details]
-
-[Details=1.18.1]
+## 1.18.1
 
 ### Charms
 
@@ -545,9 +537,7 @@ Not all components are updated with each release. When components are not update
 | `bionic:android10:amd64` | 1.18.1 |
 | `bionic:android10:arm64` | 1.18.1 |
 
-[/Details]
-
-[Details=1.18.0]
+## 1.18.0
 
 ### Charms
 
@@ -619,4 +609,3 @@ Not all components are updated with each release. When components are not update
 | `bionic:android10:amd64` | 1.18.0 |
 | `bionic:android10:arm64` | 1.18.0 |
 
-[/Details]

@@ -2,7 +2,6 @@ This guide lists various supported GPU vendors, drivers, platforms, APIs and dis
 
 [note type="information" status="Important"]Currently Anbox Cloud does not support GPU for virtual machines.[/note]
 
-<a name="supported-gpus"></a>
 ## Supported GPU vendors and GPU models
 
 Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data centre. We currently support the following GPU vendors:
@@ -31,7 +30,6 @@ For AMD and Intel GPUs, Anbox Cloud uses the [Mesa driver](https://www.mesa3d.or
 
 See [Component versions](https://discourse.ubuntu.com/t/21413) to refer to the actual version supported for any particular Anbox Cloud release.
 
-<a name="supported-platforms"></a>
 ## Supported platforms
 
 Anbox Cloud can make use of different [platforms](https://anbox-cloud.github.io/latest/anbox-platform-sdk/) to customise its behaviour and currently supports 3 platforms.
@@ -55,5 +53,6 @@ The `webrtc` platform is used by Anbox to provide graphical output. It supports 
 For NVIDIA GPUs Anbox Cloud uses [OpenGL ES 3.2](https://www.khronos.org/opengles/) and [EGL 1.5](https://www.khronos.org/egl/) graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses [Vulkan 1.3](https://vulkan.org/).
 
 ## Related information
+
 * [Rendering architecture](https://discourse.ubuntu.com/t/rendering-architecture/35129)
 * [Configuring the Anbox Cloud platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)

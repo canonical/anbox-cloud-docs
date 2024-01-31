@@ -4,7 +4,10 @@ The `gateway` command allows and manages access to the HTTP API of the stream ga
 
 ## Subcommands
 
+The following subcommands are available:
+
 ### `account`
+
 Manages accounts to access the Anbox stream gateway.
 
     anbox-cloud-appliance gateway account <subcommand>
@@ -22,11 +25,13 @@ The `account delete` command deletes the specified account and removes access to
     anbox-cloud-appliance gateway account delete <account-name>
 
 ### `expose`
+
 Enables access to the stream gateway in the load balancer.
 
     anbox-cloud-appliance gateway expose
 
 ### `unexpose`
+
 Disables access to the stream gateway in the load balancer.
 
     anbox-cloud-appliance gateway unexpose

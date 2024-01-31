@@ -24,7 +24,7 @@ The following instructions will walk you through how to set up data channels and
 
 ### Web application
 
-In your web-based client application, import the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
+In your web-based client application, import the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
 
 Create a data channel (named `foo` in the following example) under the `dataChannels` property of an `AnboxStream` object and register event handlers that respond to the events sent from an Android application:
 
@@ -362,7 +362,7 @@ in JavaScript, C or C++ by using the Anbox Streaming SDK.
 #### Web application
 
 For a web-based application, you can use the JavaScript SDK which you can find under
-[Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk). To receive the data sent from the Android application
+[Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8). To receive the data sent from the Android application
 running in the instance, implement the `messageReceived` callback
 of the `AnboxStream` object:
 

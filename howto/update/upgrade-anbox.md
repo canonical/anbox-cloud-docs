@@ -46,7 +46,7 @@ If they are not, run the following command to do so:
 
 ## Check Juju version
 
-Before you upgrade, check the required [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version).
+Before you upgrade, check the required [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version-10).
 
 If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/olm/upgrade-models) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 

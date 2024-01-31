@@ -4,12 +4,16 @@ The `ams` command provides access to the Anbox Management Service (AMS) through 
 
 ## Subcommands
 
+The following subcommands are available:
+
 ### `expose`
+
 Enables access to AMS in the load balancer.
 
     anbox-cloud-appliance ams expose
 
 ### `unexpose`
+
 Disables access to AMS in the load balancer.
 
     anbox-cloud-appliance ams unexpose

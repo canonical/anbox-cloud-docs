@@ -4,17 +4,22 @@ The `dashboard` command allows access to the web dashboard and also allows you t
 
 ## Subcommands
 
+The following subcommands are available:
+
 ### `expose`
+
 Enables access to the web dashboard in the load balancer.
 
     anbox-cloud-appliance dashboard expose
 
 ### `register`
+
 Registers a new user for the web dashboard.
 
     anbox-cloud-appliance dashboard register
 
 ### `unexpose`
+
 Disables access to the web dashboard in the load balancer.
 
     anbox-cloud-appliance dashboard unexpose

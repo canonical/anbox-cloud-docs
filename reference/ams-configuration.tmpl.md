@@ -2,7 +2,6 @@ AMS provides various configuration items to customise its behaviour. The followi
 
 <!-- GENERATED_TABLE all -->
 
-<a name="node-specific"></a>
 ## Node-specific configuration
 
 In a cluster setup, there are configuration items that can be customised for each node. The following table lists the available configuration items and their meaning.
@@ -53,7 +52,7 @@ The feature flag will be considered by all newly launched instances once set.
 
 By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
 
-Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
+Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5) if reboots are allowed.
 
 The feature flag will be considered by all newly launched instances once set.
 

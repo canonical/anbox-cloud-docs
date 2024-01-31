@@ -6,7 +6,7 @@ The entire deployment process will take 20-30 minutes, depending on the selected
 
 ## Check the prerequisites
 
-Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/requirements/17734#appliance).
+Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/requirements/17734#anbox-cloud-appliance-4).
 
 In addition, make sure you have the following prerequisites:
 
@@ -34,7 +34,7 @@ In the Quickstart Center, select **Deploy a virtual machine**. On the resulting 
 On the **Basics** tab of the virtual machine configuration, specify the required information. Several of the options are specific to how and where you want to deploy your virtual machine. In most cases you can keep the default values, but make sure to set the following configurations:
 
 * Select the latest Ubuntu image (Ubuntu Server 22.04 LTS) for the architecture that you want to use. The following instructions and screenshots use the Arm64 architecture.
-* Select a size that matches the [hardware requirements](https://discourse.ubuntu.com/t/requirements/17734#appliance). For example, select `Standard_D16ps_v5`, which has 16 vCPUs and 64 GB of RAM.
+* Select a size that matches the [hardware requirements](https://discourse.ubuntu.com/t/requirements/17734#anbox-cloud-appliance-4). For example, select `Standard_D16ps_v5`, which has 16 vCPUs and 64 GB of RAM.
 * Change the user name of the administrator account to `ubuntu`.
 * Accept the defaults for the inbound port rules for now; these rules will be configured later in the setup process.
 

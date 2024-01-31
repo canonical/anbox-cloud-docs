@@ -7,11 +7,13 @@ See [How to join a machine to the Anbox Cloud Appliance](https://discourse.ubunt
 ## Subcommands
 
 ### `add`
+
 Adds a new member to the cluster
 
     anbox-cloud-appliance cluster add <member-name>
 
 ### `remove`
+
 Removes a member from the cluster
 
     `anbox-cloud-appliance cluster remove <member-name> <options>`

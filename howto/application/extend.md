@@ -58,7 +58,7 @@ Complete the following steps to create a hook that changes the Android system lo
    ```
 
    [note type="information" status="Important"]
-   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#env-variables) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
+   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#environment-variables-1) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
    [/note]
 1. Make all files in the `hooks` directory executable:
 
@@ -99,7 +99,7 @@ Complete the following steps to create a hook that replaces the standard Android
    ```
 
    [note type="information" status="Important"]
-   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#env-variables) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
+   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#environment-variables-1) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
    [/note]
 1. Make all files in the `hooks` directory executable:
 

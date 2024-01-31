@@ -36,7 +36,7 @@ For detailed information about the offering, see the following pages on the AWS 
 
 ### Check the prerequisites
 
-Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/requirements/17734#appliance).
+Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/requirements/17734#anbox-cloud-appliance-4).
 
 In addition, make sure you have the following accounts:
 
@@ -72,7 +72,7 @@ You will be presented with the pricing information. Click **Continue** to confir
 
 AWS offers various instance types. The Anbox Cloud Appliance images are supported for a subset of the available instance types only.
 
-In the **Instance type** section, select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#appliance) for the minimum hardware requirements.
+In the **Instance type** section, select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#anbox-cloud-appliance-4) for the minimum hardware requirements.
 
 ![Choose an instance type](https://assets.ubuntu.com/v1/e967ac16-install_appliance_instance-type.png)
 

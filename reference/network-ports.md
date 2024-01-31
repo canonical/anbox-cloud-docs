@@ -4,7 +4,6 @@ For the regular Anbox Cloud deployment, these ports are used for communication b
 
 For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cloud interface since all components are installed on the same machine.
 
-<a name="anbox-cloud"></a>
 ## Anbox Cloud
 
 | Service               | Port(s)     | Protocol  | Exposed externally | Required                     | Description                           |
@@ -25,8 +24,6 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 | LXD                   | 8443        | TCP       | no                 | yes                          | HTTPS API                             |
 | NATS                  | 4222        | TCP       | no                 | yes                          | NATS API                              |
 
-
-<a name="appliance"></a>
 ## Anbox Cloud Appliance
 
 | Service             | Port(s)     | Protocol  | Required | Description                            |

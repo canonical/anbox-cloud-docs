@@ -37,6 +37,6 @@ Once the configuration is in place, create the application in AMS:
 
     amc application create vdev
 
-After creating the application, you can stream it through the UI of the Anbox Stream Gateway (see [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) for more details) or your own custom client application built with the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
+After creating the application, you can stream it through the UI of the Anbox Stream Gateway (see [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) for more details) or your own custom client application built with the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
 
 ![Virtual device|690x662,100%](https://assets.ubuntu.com/v1/4cc5a115-application_virtual-device.png)

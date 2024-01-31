@@ -1,8 +1,13 @@
 To run Anbox Cloud, you must fulfil a few minimum requirements, which differ depending on the kind of deployment you choose.
 
-The [General requirements](#general) apply to all kinds of deployments. In addition, check the [requirements for the Anbox Cloud Appliance](#appliance) if you run the appliance or the [requirements for Juju-based deployments](#juju-based) if you run Anbox Cloud. See [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1) for an explanation of the differences between both variants.
+This topic provides information about the following requirements:
 
-<a name="general"></a>
+* General requirements that apply to all kinds of deployments.
+* The requirements for the Anbox Cloud Appliance variant.
+* The requirements for Anbox Cloud variant.
+
+See [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1) for an explanation of the differences between both variants.
+
 ## General requirements
 
 The following requirements apply to all variants of Anbox Cloud.
@@ -15,9 +20,8 @@ After registering to Anbox Cloud, you should have received an [Ubuntu Pro](https
 
 Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux-based operating systems are not supported. You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on an Ubuntu Desktop installation is not supported.
 
-See [Ubuntu version for the Anbox Cloud Appliance](#appliance-ubuntu-version) or [Ubuntu version for Juju-based deployments](#ac-ubuntu-version) for information about the supported Ubuntu versions.
+The later sections of this topic provide information about the supported Ubuntu versions.
 
-<a name="appliance"></a>
 ## Anbox Cloud Appliance
 
 The Anbox Cloud Appliance has the following minimum hardware requirements:
@@ -31,9 +35,8 @@ The above defines a minimum of what is necessary to run the Anbox Cloud Applianc
 
 On public clouds, it is always recommended to allocate an additional storage volume for instance storage. If no additional storage volume is available, the appliance creates an on-disk image and uses it for instance storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and instance startup time.
 
-For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](https://discourse.ubuntu.com/t/network-ports/33650#appliance) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
+For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](https://discourse.ubuntu.com/t/network-ports/33650#anbox-cloud-appliance-2) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
 
-<a name="appliance-ubuntu-version"></a>
 ### Ubuntu version
 
 The Anbox Cloud Appliance supports the following Ubuntu versions:
@@ -41,19 +44,16 @@ The Anbox Cloud Appliance supports the following Ubuntu versions:
 * 20.04 (focal)
 * 22.04 (jammy)
 
-<a name="appliance-lxd-version"></a>
 ### LXD version
 
 The Anbox Cloud Appliance currently supports the following LXD versions:
 
 * &gt;= 5.0
 
-<a name="juju-based"></a>
 ## Juju-based deployments
 
 Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
 
-<a name="ac-ubuntu-version"></a>
 ### Ubuntu version
 
 Anbox Cloud supports the following Ubuntu versions:
@@ -67,14 +67,12 @@ For new deployments, Ubuntu 22.04 (jammy) is preferred.
 The HAProxy load balancer currently has no support for Ubuntu 22.04. Therefore, the Juju bundle uses Ubuntu 20.04 for the machine that runs the load balancer.
 [/note]
 
-<a name="juju-lxd-version"></a>
 ### LXD version
 
 Anbox Cloud currently supports the following LXD versions:
 
 * &gt;= 4.0
 
-<a name="juju-version"></a>
 ### Juju version
 
 The regular Anbox Cloud variant requires [Juju 2.9 or later](https://juju.is/) to be installed to manage the different components and their dependencies. You can install Juju with the following command:
@@ -89,7 +87,6 @@ To switch to the 2.9 series, use the following command:
 
 See the [Juju documentation](https://juju.is/docs/installing) for more information.
 
-<a name="minimum-hardware"></a>
 ### Minimum hardware
 
 While you can run Anbox Cloud on a single machine, we strongly recommend using several machines for a production environment.

@@ -4,7 +4,10 @@ The `completion` command allows you to generate the auto completion script for t
 
 ## Subcommands
 
+The following subcommands are available:
+
 ### `bash`
+
 Generate the auto completion script for `bash`. This script depends on and requires the `bash-completion` package to be installed.
 
     amc completion bash --no-descriptions
@@ -26,6 +29,7 @@ For macOS,
     amc completion bash > $(brew --prefix)/etc/bash_completion.d/amc
 
 ### `fish`
+
 Generate the auto completion script for `fish`.
 
     amc completion fish --no-descriptions
@@ -41,6 +45,7 @@ To load completions for every new session, execute the following once and start 
     amc completion fish > ~/.config/fish/completions/amc.fish
 
 ### `powershell`
+
 Generate the auto completion script for `powershell`.
 
     amc completion powershell --no-descriptions
@@ -55,6 +60,7 @@ To load completions for every new session, add the output of the above command
 to your powershell profile.
 
 ### `zsh`
+
 Generate the auto completion script for `zsh`.
 
     amc completion zsh --no-descriptions

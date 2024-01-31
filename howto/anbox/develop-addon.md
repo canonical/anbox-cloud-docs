@@ -24,7 +24,7 @@ Alternatively, you can use `amc exec <instance_id> <command_options>` to directl
 
 Use the instance as a remote environment to develop your addon. To make your addon source available within the instance, either copy the addon manifest and hooks using the [`lxc file push`](https://documentation.ubuntu.com/lxd/en/latest/howto/instances_access_files/#push-files-from-the-local-machine-to-the-instance) command or clone a git repository using SSH.
 
-You can test your addon hooks by running it inside the instance shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works. See [environment variables](https://discourse.ubuntu.com/t/28555#env-variables) for a list of available variables.
+You can test your addon hooks by running it inside the instance shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works. See [environment variables](https://discourse.ubuntu.com/t/28555#environment-variables-1) for a list of available variables.
 
 To troubleshoot issues within the instance, try either of the following options:
 * Run `amc logs <instance_id>` on the host to see the Anbox runtime logs.
