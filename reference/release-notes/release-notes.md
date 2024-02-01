@@ -7,7 +7,6 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-| February 14 2024 | Anbox Cloud 1.21.0 |
 | March 13 2024 | Anbox Cloud 1.21.1 |
 | April 17 2024 | Anbox Cloud 1.21.2 |
 
@@ -15,26 +14,21 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Release date   |  Release notes  |
 |----|----|
+| February 14 2024 | [Anbox Cloud 1.21.0](tbd) |
 | January 17 2024 | [Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686) |
 | December 13 2023| [Anbox Cloud 1.20.1](https://discourse.ubuntu.com/t/40988) |
 | November 16 2023 | [Anbox Cloud 1.20.0](https://discourse.ubuntu.com/t/40281) |
 
-### What's new in 1.20.x?
+### What's new in 1.21.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.20.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.21.x includes:
 
-* Support for creating virtual machine instances
-* Alpha support for Vulkan on NVIDIA GPUs
-* Upgraded Mesa driver and `virglrenderer`
-* Anbox Cloud images download only on first use
-* The Anbox Management Service (AMS) snaps use [core22](https://snapcraft.io/core22)
-* Modernised [NATS charm](https://charmhub.io/nats)
-* Several web dashboard improvements including:
-  - Improvements to session streaming statistics
-  - Ability to select and delete multiple instances
-  - Ability to change the Anbox Cloud configuration using the web dashboard
-  - Simplified app version selection for new sessions
-
+* Android Automotive OS (AAOS) images
+* Alpha support for Vehicle Hardware Abstraction Layer (VHAL)
+* Full support for Vulkan on NVIDIA GPUs
+* Experimental video upscaling on the client side
+* Improvements to Anbox Management Service (AMS) API responses
+* Dashboard improvements
 * Android security updates
 
 ## Older releases
