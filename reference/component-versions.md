@@ -2,6 +2,69 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+## 1.21.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.21/stable` | 259 |
+| `ams-node-controller` | `1.21/stable` | 267 |
+| `coturn` | `1.21/stable` | 261 |
+| `ams` | `1.21/stable` | 272 |
+| `aar` | `1.21/stable` | 266 |
+| `anbox-stream-gateway` | `1.21/stable` | 277 |
+| `ams-load-balancer` | `1.21/stable` | 267 |
+| `ams-lxd` | `1.21/stable` | 264 |
+| `anbox-stream-agent` | `1.21/stable` | 272 |
+| `nats ` | `latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.21/stable` | 258 |
+| `ams-node-controller` | `1.21/stable` | 266 |
+| `coturn` | `1.21/stable` | 260 |
+| `ams` | `1.21/stable` | 271 |
+| `aar` | `1.21/stable` | 265 |
+| `anbox-stream-gateway` | `1.21/stable` | 276 |
+| `ams-load-balancer` | `1.21/stable` | 266 |
+| `ams-lxd` | `1.21/stable` | 263 |
+| `anbox-stream-agent` | `1.21/stable` | 271 |
+| `nats ` | `latest/stable` | 11 |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.21/stable` | 159 |
+| `anbox-cloud-core` | `1.21/stable` | 164 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.21/stable` | 1.21.0 |
+| `aar`    | `1.21/stable` | 1.21.0 |
+| `ams-node-controller` | `1.21/stable` | 1.21.0 |
+| `anbox-cloud-dashboard` | `1.21/stable` | 1.21.0 |
+| `anbox-stream-agent` | `1.21/stable` | 1.21.0 |
+| `anbox-stream-gateway` | `1.21/stable` | 1.21.0 |
+| `anbox-cloud-appliance` | `1.21/stable` | 1.21.0 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.21.0 |
+| `jammy:android13:arm64` | 1.21.0 |
+| `jammy:android12:amd64` | 1.21.0 |
+| `jammy:android12:arm64` | 1.21.0 |
+
 ## 1.20.2
 
 ### Charms
