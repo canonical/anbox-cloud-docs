@@ -58,7 +58,7 @@ The deployed Juju charms need to be upgraded next.
 
 - You can find a list of all charm, snap and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions and channels for each release.
 
-- Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--channel=1.20/stable` argument instructs Juju to switch to the latest [Charmhub](https://charmhub.io) version of the charm and track the right channel.
+- Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--channel=1.21/stable` argument instructs Juju to switch to the latest [Charmhub](https://charmhub.io) version of the charm and track the right channel.
 
 - With the 1.14 release, the name of the `lxd` charm changed to `ams-lxd`. If you run a deployment older than 1.14 and want to upgrade, add `--switch=ams-lxd` to the upgrade command to make Juju switch to the new charm. The charm itself remains identical with the same functionality and features.
 
@@ -93,7 +93,7 @@ The Anbox Application Registry (AAR) can be updated independently of the other s
 
 To upgrade the registry, run
 
-    juju refresh --channel=1.20/stable aar
+    juju refresh --channel=1.21/stable aar
 
 ### Upgrade control plane
 
@@ -105,17 +105,17 @@ If you don't run any of the services in a high availability configuration, upgra
 
 To upgrade all charms, run the following commands:
 
-    juju refresh --channel=1.20/stable anbox-cloud-dashboard
-    juju refresh --channel=1.20/stable anbox-stream-gateway
-    juju refresh --channel=1.20/stable anbox-stream-agent
-    juju refresh --channel=1.20/stable coturn
+    juju refresh --channel=1.21/stable anbox-cloud-dashboard
+    juju refresh --channel=1.21/stable anbox-stream-gateway
+    juju refresh --channel=1.21/stable anbox-stream-agent
+    juju refresh --channel=1.21/stable coturn
     juju refresh nats
 
 ### Upgrade AMS
 
 The AMS service needs to be updated independently of the other service components to ensure minimal down time. The charm can be upgraded by running the following command.
 
-    juju refresh --channel=1.20/stable ams
+    juju refresh --channel=1.21/stable ams
 
 ### Upgrade LXD
 
@@ -123,11 +123,11 @@ As the last step, you have to upgrade the LXD cluster. Upgrading LXD will not re
 
 As the first step, you need to upgrade the AMS node controller by running:
 
-    juju refresh --channel=1.20/stable ams-node-controller
+    juju refresh --channel=1.21/stable ams-node-controller
 
 Once the upgrade is completed, you can continue upgrading LXD:
 
-    juju refresh --channel=1.20/stable lxd
+    juju refresh --channel=1.21/stable lxd
 
 In some cases, specifically when you maintain bigger LXD clusters or want to keep a specific set of LXD nodes active until users have dropped, it makes sense to run the upgrade process manually on a per node basis. To enable this, you can set the following configuration option for the LXD charm before running the refresh command above:
 
