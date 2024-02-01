@@ -27,6 +27,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.21.x includes:
 * Alpha support for Vehicle Hardware Abstraction Layer (VHAL)
 * Full support for Vulkan on NVIDIA GPUs
 * Experimental video upscaling on the client side
+* System tracing for Android
 * Improvements to Anbox Management Service (AMS) API responses
 * Dashboard improvements
 * Android security updates
