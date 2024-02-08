@@ -52,7 +52,18 @@ The `webrtc` platform is used by Anbox to provide graphical output. It supports 
 
 ## Supported APIs
 
-For NVIDIA GPUs Anbox Cloud uses [OpenGL ES 3.2](https://www.khronos.org/opengles/) and [EGL 1.5](https://www.khronos.org/egl/) graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses [Vulkan 1.3](https://vulkan.org/).
+| API        | Version | Supported GPUs     |
+|------------|---------|--------------------|
+| EGL        | 1.5     | AMD, Intel, NVIDIA |
+| OpenGL ES  | 3.2     | AMD, Intel, NVIDIA |
+| Vulkan     | 1.3     | AMD, Intel, NVIDIA |
+
+Support for API extensions on all supported GPUs depends on the availability of such extensions from the used driver.
+
+The following OpenGL ES extensions are known to be unsupported by all used GPU drivers:
+
+*  [`GL_EXT_shader_framebuffer_fetch`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
+* [`GL_EXT_shader_framebuffer_fetch_non_coherent`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 
 ## Related information
 
