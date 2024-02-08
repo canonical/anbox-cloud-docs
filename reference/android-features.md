@@ -20,3 +20,4 @@ Anbox Cloud implements support for various Android features. The following table
 | [Disk encryption](https://source.android.com/security/encryption) | | |
 | [Verified Boot](https://source.android.com/security/verifiedboot) | | |
 | [Trusted Execution Environment (TEE)](https://source.android.com/security/trusty) | | |
+| [64-bit only support](https://developer.android.com/ndk/guides/abis) | | Planned for 1.22 |
