@@ -25,10 +25,10 @@ To upgrade the NVIDIA driver to the 545 driver series run
 This will remove the currently installed driver release and install the 545 driver packages from the Ubuntu archive. With the `--no-server` option we instruct the script to install the UDA driver variant. If not given, the script will attempt to install the ERD variant of the given series. See the [official Ubuntu documentation](https://help.ubuntu.com/community/NvidiaDriversInstallation) for more information.
 
 [note type="caution" status="Warning"]
-NVIDIA does not provide an official qualified relesae of the 545 for data center GPUs. Please consult the NVIDIA documentation for more information on which GPUs are qualified and which not.
+NVIDIA does not provide an official qualified release of the 545 for datacenter GPUs. Please consult the NVIDIA documentation for more information on which GPUs are qualified and which not.
 [/note]
 
-One the driver installation has been completed. You can start any existing instances again, for example by running
+Once the driver installation has been completed. You can start any existing instances again, for example by running
 
     amc start <instance id>
 
