@@ -86,6 +86,7 @@ easyrsa
 Easy-RSA
 EBS
 EFI
+EFS
 EGL
 EINVAL
 EmuGL
@@ -164,6 +165,7 @@ natively
 NATs
 netlink
 NewPipe
+NFS
 NIC
 NMEA
 NRPE
