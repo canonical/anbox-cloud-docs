@@ -1,6 +1,6 @@
 You can either launch an instance with `amc launch` or initialise an instance with the `amc init` command for a registered application or image (see [Application instances vs. raw instances](https://discourse.ubuntu.com/t/17763#application-vs-raw)), by using the `amc` tool or through another service over the REST API that the AMS service provides. The `amc init` command only creates the instance, while the `amc launch` command creates and starts it.
 
-By default, the instance will run headless. See [How to access a instance](https://discourse.ubuntu.com/t/17772) for instructions on how to access it for debugging purposes, and [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for information about the streaming stack.
+By default, the instance will run headless. See [How to access an instance](https://discourse.ubuntu.com/t/17772) for instructions on how to access it for debugging purposes, and [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for information about the streaming stack.
 
 [note type="information" status="Note"] The following examples use `amc launch`, but you can use `amc init` in the same way.[/note]
 

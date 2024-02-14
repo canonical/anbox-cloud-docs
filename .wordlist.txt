@@ -18,6 +18,7 @@ AMS
 analytics
 Anbox
 ANR
+anv
 AOSP
 APIs
 APK
@@ -51,6 +52,7 @@ cgroup
 cgroup-v1
 cgroup-v2
 config
+conformant
 Charmhub
 Charmstore
 CLI
@@ -69,6 +71,7 @@ customisation
 customisations
 CustomLocale
 CVE
+datacenter
 dataset
 deallocate
 deallocated
@@ -113,6 +116,7 @@ Graylog
 gRPC
 gzip
 HAProxy
+HIDL
 hotfix
 HTTPS
 HW
@@ -179,6 +183,7 @@ nvidia
 NVMe
 OAuth
 OBB
+OBD
 observability
 OES
 OOB
@@ -199,8 +204,10 @@ pre
 preselected
 Quadro
 Quickstart
+radv
 Rasterization
 rasterization
+RDNA
 rc
 README
 rebased
@@ -286,6 +293,7 @@ validator
 vCPU
 vCPUs
 VHAL
+VhalPropertyStatus
 viewport
 VirGL
 virglrenderer

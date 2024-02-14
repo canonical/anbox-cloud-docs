@@ -12,7 +12,7 @@ Each component of the stack plays a specific role:
 
 The following illustration shows how the Streaming Stack components interact with each other when creating a new streaming session:
 
-![Streaming stack sequence|2400x1350](https://assets.ubuntu.com/v1/e38476fe-application_streaming-stack.png)
+![Streaming stack sequence|2400x1350](https://assets.ubuntu.com/v1/a14d6ead-application_streaming_stack.png)
 
 ## Streaming an Application
 

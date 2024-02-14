@@ -10,14 +10,15 @@ Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for 
 * Intel
 * AMD
 
-Do not mix GPUs from different vendors in a single deployment.
+Mixing GPUs from different vendors is not supported.
 
 Concrete support for the individual GPU depends on the platform being using for Anbox Cloud. The included `webrtc` platform currently supports the following GPUs:
 
-| Vendor | Model                 | Render | Hardware video encoder |
-|--------|-----------------------|--------|-----------------------|
-| AMD    | WX5100, WX4100        | Yes    | No                    |
-| NVIDIA | Quadro, Tesla, Ampere | Yes    | Yes                   |
+| Vendor | Supported Generations        | Render | Hardware video encode  |
+|--------|------------------------------|--------|------------------------|
+| AMD    | RDNA, RDNA2, RDNA3           | Yes    | No                     |
+| NVIDIA | Turing, Ampere, Ada Lovelace | Yes    | Yes                    |
+| Intel  | Gen9, Gen11, Gen12           | Yes    | No                     |
 
 For GPUs on which Anbox Cloud doesn't support hardware video encoding, a software-based video encoding fallback is available.
 
@@ -26,7 +27,8 @@ Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel a
 ## Supported GPU drivers
 
 For NVIDIA GPUs, Anbox Cloud uses the [Enterprise Ready Driver (ERD) from NVIDIA](https://help.ubuntu.com/community/NvidiaDriversInstallation) for Linux as available in Ubuntu.
-For AMD and Intel GPUs, Anbox Cloud uses the [Mesa driver](https://www.mesa3d.org/).
+
+For AMD GPUs, Anbox Cloud uses the [Mesa radv](https://docs.mesa3d.org/drivers/radv.html) driver and for Intel GPUs, the [Mesa anv](https://docs.mesa3d.org/drivers/anv.html) driver.
 
 See [Component versions](https://discourse.ubuntu.com/t/21413) to refer to the actual version supported for any particular Anbox Cloud release.
 
@@ -38,7 +40,7 @@ Anbox Cloud can make use of different [platforms](https://anbox-cloud.github.io/
 |----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|
 | `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching an instance.                                                                       	|
 | `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVIDIA GPUs as well as LLVMpipe based software rendering if no GPU is detected.  Support audio input/output. |
-| `swrast` 	| (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.    | 
+| `swrast` 	| (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.    |
 
 For rendering, you can use the `swrast` or the `null` platforms depending on your requirements.
 
@@ -50,7 +52,18 @@ The `webrtc` platform is used by Anbox to provide graphical output. It supports 
 
 ## Supported APIs
 
-For NVIDIA GPUs Anbox Cloud uses [OpenGL ES 3.2](https://www.khronos.org/opengles/) and [EGL 1.5](https://www.khronos.org/egl/) graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses [Vulkan 1.3](https://vulkan.org/).
+| API        | Version | Supported GPUs     |
+|------------|---------|--------------------|
+| EGL        | 1.5     | AMD, Intel, NVIDIA |
+| OpenGL ES  | 3.2     | AMD, Intel, NVIDIA |
+| Vulkan     | 1.3     | AMD, Intel, NVIDIA |
+
+Support for API extensions on all supported GPUs depends on the availability of such extensions from the used driver.
+
+The following OpenGL ES extensions are known to be unsupported by all used GPU drivers:
+
+* [`GL_EXT_shader_framebuffer_fetch`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
+* [`GL_EXT_shader_framebuffer_fetch_non_coherent`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 
 ## Related information
 

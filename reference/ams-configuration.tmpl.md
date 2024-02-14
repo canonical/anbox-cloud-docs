@@ -89,9 +89,9 @@ Once set, this feature flag will be considered by all newly launched instances.
 
 #### GL Async Swap Support
 
-*since 1.19.0*
+*since 1.21.0*
 
-GL Async swap support is enabled by default for explicit signals of buffer swaps completion. To disable the GL async object feature, add the feature flag `emugl.disable_async_swap_support` upon application creation. Once the async swap support is disabled, Anbox Cloud will not use the host GL driver fence commands and file descriptors to synchronise the finished frames between the host and guest. Instead, it will fully rely on the host GPU driver to do so. The environment variable `ANBOX_ASYNC_SWAP_DISABLED_PACKAGES` that accepts a comma-separated list of package names can be used to prevent certain packages from using the async object.
+GL Async swap support is disabled by default for explicit signals of buffer swaps completion. To enable the GL async swap feature, add the feature flag `emugl.enable_async_swap_support` upon application creation. Once the async swap support is enabled, Anbox Cloud will use the host GL driver fence commands and file descriptors to synchronise the finished frames between the host and guest instead fully relying on the host GPU driver to do so. The environment variable `ANBOX_ASYNC_SWAP_ENABLED_PACKAGES` that accepts a comma-separated list of package names can be used to allow certain packages to use the GL async swap feature.
 
 Once set, this feature flag will be considered by all newly launched instances.
 

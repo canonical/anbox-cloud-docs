@@ -66,6 +66,8 @@ The deployed Juju charms need to be upgraded next.
 
 - If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
 
+- Starting with the 1.21 release, the NATS charm has been switched from its [older version](https://charmhub.io/nats-charmers-nats) to a [newer version](https://charmhub.io/nats) on Charmhub. This switch does not have any breaking changes from a user's perspective but since the framework of the charm has been overhauled, the upgrade to the new charm would require users to `switch` the charm's source while refreshing/updating the charm.
+
 [/note]
 
 For any of the charm upgrades, you can watch the upgrade status by running:
@@ -109,7 +111,14 @@ To upgrade all charms, run the following commands:
     juju refresh --channel=1.20/stable anbox-stream-gateway
     juju refresh --channel=1.20/stable anbox-stream-agent
     juju refresh --channel=1.20/stable coturn
-    juju refresh nats
+    juju refresh --channel=latest/stable nats
+
+[note type="information" status="Note"]
+Since the NATS charm has been overhauled to use the modern charm framework (Ops Framework), a new charm source is needed to upgrade to its latest version. The charm source can be switched or replaced using the following command:
+
+    juju refresh nats --switch=nats  --channel=stable
+
+[/note]
 
 ### Upgrade AMS
 
@@ -133,7 +142,7 @@ In some cases, specifically when you maintain bigger LXD clusters or want to kee
 
     juju config lxd enable_manual_upgrade=true
 
-This will allow you to run the actual upgrade process for each deployed LXD instance separately. 
+This will allow you to run the actual upgrade process for each deployed LXD instance separately.
 
 If you want to remove any nodes from the LXD cluster as part of the manual upgrade process, follow the instructions in [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/how-to-scale-down-a-lxd-cluster/24323) to prepare a node for removal and then remove it from the cluster.
 

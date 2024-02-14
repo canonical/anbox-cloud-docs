@@ -15,6 +15,6 @@ repos:
         exclude: |
           (?x)^(
             .github/.*
-            |release-notes/.*
+            |reference/release-notes/.*
             |README.md
           )$
