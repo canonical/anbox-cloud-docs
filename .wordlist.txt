@@ -18,6 +18,7 @@ AMS
 analytics
 Anbox
 ANR
+anv
 AOSP
 APIs
 APK
@@ -51,6 +52,7 @@ cgroup
 cgroup-v1
 cgroup-v2
 config
+conformant
 Charmhub
 Charmstore
 CLI
@@ -69,6 +71,7 @@ customisation
 customisations
 CustomLocale
 CVE
+datacenter
 dataset
 deallocate
 deallocated
@@ -86,6 +89,7 @@ easyrsa
 Easy-RSA
 EBS
 EFI
+EFS
 EGL
 EINVAL
 EmuGL
@@ -112,6 +116,7 @@ Graylog
 gRPC
 gzip
 HAProxy
+HIDL
 hotfix
 HTTPS
 HW
@@ -164,6 +169,7 @@ natively
 NATs
 netlink
 NewPipe
+NFS
 NIC
 NMEA
 NRPE
@@ -177,6 +183,7 @@ nvidia
 NVMe
 OAuth
 OBB
+OBD
 observability
 OES
 OOB
@@ -197,11 +204,15 @@ pre
 preselected
 Quadro
 Quickstart
+radv
 Rasterization
 rasterization
+RDNA
 rc
 README
 rebased
+Renderdoc
+renderdoc
 renderer
 RenderThread
 RESTful
@@ -267,6 +278,7 @@ TLS
 Traefik
 TypeError
 UA
+UDA
 UDP
 UI
 unencrypted
@@ -281,6 +293,7 @@ validator
 vCPU
 vCPUs
 VHAL
+VhalPropertyStatus
 viewport
 VirGL
 virglrenderer
@@ -312,7 +325,3 @@ zpool
 Uber
 Unhold
 upscaling
-
-
-
-
