@@ -42,16 +42,6 @@ The generated link is valid for one hour.
 
 To access the dashboard, go to `https://<your-machine-address>/`. The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
 
-### Creating applications
-
-Before creating an application, you need the following:
-* An application manifest. A default application manifest is available based on the *Resource type* you choose for your application. You can customise various attributes of your application including the resource requirements for your application.
-* Optionally, an Android package with support for the target architecture.
-
-To create an application using the dashboard, use the *Add application* button on the *Applications* list screen, enter the required and any optional details that you want to provide and select *Add application*. This screen also provides the option to customise your application manifest.
-
-There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI. See [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more information.
-
 ### Streaming applications
 
 The dashboard has in-browser streaming capabilities through WebRTC. It uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
