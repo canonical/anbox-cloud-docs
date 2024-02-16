@@ -1,20 +1,35 @@
-You can either launch an instance with `amc launch` or initialise an instance with the `amc init` command for a registered application or image (see [Application instances vs. raw instances](https://discourse.ubuntu.com/t/17763#application-vs-raw)), by using the `amc` tool or through another service over the REST API that the AMS service provides. The `amc init` command only creates the instance, while the `amc launch` command creates and starts it.
+To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
-By default, the instance will run headless. See [How to access an instance](https://discourse.ubuntu.com/t/17772) for instructions on how to access it for debugging purposes, and [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for information about the streaming stack.
+## Using the dashboard
 
-[note type="information" status="Note"] The following examples use `amc launch`, but you can use `amc init` in the same way.[/note]
+Select *Create Instance* on the *Instances* view to launch an instance. The information required for launching an instance depends on whether you are creating the instance from an application or an image.
 
-## Launch application instances
+When you create the instance from an application, the attributes you define for the application decide most of the properties of the instance.
 
-Launching an instance for a registered application can be achieved with the following command:
+When you create the instance from an image, you can define the properties of the instance during its creation.
 
-    amc launch <application_id>
+Once you *Create and Start* an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* view.
 
-The `--vm` flag is not required when you specify an application id. The application has the information about whether a container or a virtual machine is to be created.
+There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
 
-As argument, provide the ID of the application that you want to launch.
+## Using the CLI
 
-You can list all available applications with the `amc application ls` command:
+Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
+
+* `amc launch` creates and starts the instance.
+* `amc init` only creates the instance.
+
+By default, the instance will run headless.
+
+The following examples demonstrate different ways of launching instances using `amc launch`, but you can use `amc init` in the same way.
+
+### Launch application instances
+
+Before launching an instance for an application, get the ID of the application that for which you want to launch an instance. To do this, run:
+
+    amc application ls
+
+This command lists the available applications along their IDs and their published status.
 
 ```bash
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
@@ -23,19 +38,24 @@ You can list all available applications with the `amc application ls` command:
 | bdp7kmahmss3p9i8huu0 |      candy     | a4.3          | ssh    | false     | ready  | 2018-08-14 08:44:41 |
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
 ```
-If the application for which you want to launch an instance is not yet published (see [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for more details), the launch command will fail as it only allows launching an instance for a published application. However, you can work around this by specifying a specific version of an application:
+
+To launch an instance for a [published](https://discourse.ubuntu.com/t/how-to-update-an-application/24201#publish-application-versions-1) application, run:
+
+    amc launch <application_id>
+
+[note type="information" Status="Tip"]The `--vm` flag is not required when you specify an application id. The application has the information about whether a container or a virtual machine is to be created.[/note]
+
+The `amc launch` command fails if you provide the ID of an application that is not yet published. However, if you have a specific version of an application that has been published, you can specify it to launch the instance successfully:
 
     amc launch --application-version=0 bcmap7u5nof07arqa2ag
 
-## Launch raw instance
+### Launch a raw instance
 
-The command for launching a raw instance from an image is:
+You can launch a [raw instance](https://discourse.ubuntu.com/t/instances/17763#application-instances-vs-raw-instances-2) from an image. To do so, get the ID of the image by running:
 
-    amc launch --raw <image_id>
+    amc image ls
 
-As argument, provide the ID or name of the image for which you want to launch an instance. See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for a list of images that are available in Anbox Cloud.
-
-You can also list all available images with the `amc image ls` command:
+This command lists the available images along with their IDs and status:
 
 ```bash
 +----------------------+---------+--------+----------+----------------------+
@@ -45,28 +65,42 @@ You can also list all available images with the `amc image ls` command:
 +----------------------+---------+--------+----------+----------------------+
 ```
 
-## Launch an instance on a specific node
+Launch a raw instance by providing the image ID in the following command:
+
+    amc launch --raw <image_id>
+
+See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for a list of images that are available in Anbox Cloud.
+
+### Launch an instance on a specific node
 
 By default, every instance is scheduled by AMS onto a LXD node. Alternatively, you can launch an instance directly on a specific node:
 
-    amc launch --node=lxd0 bcmap7u5nof07arqa2ag
+    amc launch --node=lxd0 <application_id>
 
 [note type="information" status="Note"]AMS will still verify that the selected node has enough resources to host the instance. If not, the instance will fail to launch.[/note]
 
-## Launch an instance with a different Anbox platform
+### Launch an instance with a different Anbox platform
 
-By default, instances start with the `webrtc` platform if `--enable-graphics` is specified and with the `null` platform otherwise (see [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)). To select a different platform, specify it with the `-p` flag. The selected platform cannot be changed at runtime and must be selected when the instance is created. For example, you can launch an instance with the `webrtc` platform like this:
+By default, instances start with the `webrtc` platform if `--enable-graphics` is specified. Otherwise, they start with the `null` platform. To select a different platform, specify it with the `-p` flag. The platform cannot be changed at runtime and must be selected when the instance is created. For example, you can launch an instance with the `webrtc` platform with the following command:
 
-    amc launch -p webrtc <application-id>
+    amc launch -p webrtc <application_id>
 
 If you have built your own platform named `foo` and you built it via an addon into the instance images, you can launch an instance with the platform the same way:
 
-    amc launch -p foo <application-id>
+    amc launch -p foo <application_id>
 
-## Launch an instance with development mode enabled
+For more information, see [supported platforms](https://discourse.ubuntu.com/t/supported-rendering-resources/37322#supported-platforms-3) and [configuration for supported platforms](https://discourse.ubuntu.com/t/configuration-for-supported-platforms/18733).
+
+### Launch an instance with development mode enabled
 
 You can launch instances with additional development features turned on. This development mode must be enabled when an instance is launched, and it cannot be turned off afterwards. You should never enable development mode for instances used in a production environment.
 
 To launch an instance with development mode enabled, add the `--devmode` flag to the launch command:
 
-    amc launch --devmode <application-id>
+    amc launch --devmode <application_id>
+
+## Related information
+
+* [Instances](https://discourse.ubuntu.com/t/instances/17763)
+* [How to access an instance](https://discourse.ubuntu.com/t/17772)
+* [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)
