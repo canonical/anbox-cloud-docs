@@ -2,9 +2,17 @@ Anbox Cloud is secure by design, which means that its architecture, its componen
 
 Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
-This security guide gives more insight into how security is ensured through different aspects of Anbox Cloud.
+Consider the following simple yet impactful measures to ensure that you run a secure Anbox Cloud deployment:
+
+- Always run the latest and supported version of Anbox Cloud. See [roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359).
+- Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. See [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872).
+- Monitor resources used by applications regularly.
+- Do not disable TLS pinning when you are not using a load balancer.
+- Use the [Anbox Cloud dashboard](https://discourse.ubuntu.com/t/anbox-cloud-web-dashboard/41847) as your default stream client. If you want to use a custom client, ensure you have [set it up securely](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328).
 
 To report a security issue, contact the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
+
+This security guide gives more insight into how security is ensured through different aspects of Anbox Cloud.
 
 ## Architecture
 
@@ -31,9 +39,7 @@ The following table shows the authentication methods that are in place for the d
 
 Anbox Cloud uses secure and isolated system instances supplied by [LXD](https://ubuntu.com/lxd). LXD provides a high degree of flexibility when setting up instances, allowing you to run in a fully secure or less secure way, depending on your requirements. See [Security](https://documentation.ubuntu.com/lxd/en/latest/security/) in the LXD documentation for more information about how a LXD setup can be secured.
 
-Using virtual machines to host Android containers provides provides better workload isolation.
-
-Anbox Cloud uses LXD in a way that enforces the highest security level.
+Using virtual machines to host Android containers provides better workload isolation. Thus, Anbox Cloud uses LXD in a way that enforces the highest security level.
 
 ### Unprivileged instances
 
@@ -46,6 +52,8 @@ Anbox Cloud uses unprivileged LXD instances only, which fully isolates the insta
 [note type="caution" status="Warning"]
 While instances are fully isolated, all instances currently use the same GPU resources. As a result, any instance that is launched with GPU support could take all GPU resources in a DDoS-like attack, which would prevent other instances from starting.
 
+Monitoring how the GPU resources are used for different applications and ensuring that you are running trusted workloads can provide insulation against DDoS-like attacks.
+
 See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) for more information.
 [/note]
 
@@ -55,6 +63,7 @@ All communication between Juju units and the Juju controller happens over TLS-en
 
 With this secure channel, Juju charms can communicate with each other using relation data. The data published by one unit is sent to the controller, which then makes it available for all other units on the same relation. The data for each relation is scoped by ID and is only visible to units participating in the specific relation on which it is set.
 
+See [Security with Juju](https://juju.is/docs/juju/juju-security) for more information.
 
 ### Security updates
 
@@ -63,6 +72,8 @@ Anbox Cloud provides images that are frequently updated with the latest security
 In addition, to ensure that the latest Ubuntu security patches are applied outside of image updates as well, Anbox Cloud checks for and installs available security updates every time an application is bootstrapped. So when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to bootstrap the application again, and thus install the latest security patches.
 
 It is possible to turn off this update mechanism by setting [`container.security_updates`](https://discourse.ubuntu.com/t/ams-configuration/20872) to `false`, but it is not recommended to do so.
+
+For security reasons, always keep your systems up-to-date at all times. To ensure this, snaps update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
 ## Android security
 
@@ -90,9 +101,15 @@ Currently, Anbox Cloud disables SELinux in Android. The reason for this is that 
 
 In future releases, it might be possible to run AppArmor and SELinux in parallel. In this case, the decision to disable SELinux will be reconsidered.
 
+## Snap confinement
+
+Since Anbox Cloud uses [snaps](https://snapcraft.io/), [Snap confinement](https://snapcraft.io/docs/snap-confinement) restricts the amount of access the applications have to system resources and provides an additional layer of security when creating applications and addons.
+
 ## Streaming security
 
 The Anbox Cloud Streaming Stack is based on [WebRTC](https://webrtc.org/). WebRTC forbids unencrypted communication, which enforces a certain security level.
+
+For communication with the Anbox stream gateway, token-based authentication is used. This allows components that need to communicate with the stream gateway to verify their identity, and in return receive a unique access token. During the life of the token, it acts as a means to verify the identity of the services that handle communication between the applications and the gateway.
 
 Of course, the overall streaming security relies on a secure client implementation. This is ensured by Anbox Cloud's web dashboard, but other client implementations might have weaknesses. However, since encryption is a mandatory feature of WebRTC, developers are forced to consider security aspects when implementing a client application.
 
