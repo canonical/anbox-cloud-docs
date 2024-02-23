@@ -6,7 +6,7 @@ Consider the following simple yet impactful measures to ensure that you run a se
 
 - Always run the latest and supported version of Anbox Cloud. See [roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359).
 - Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. See [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872).
-- Monitor resources used by applications regularly.
+- Monitor resources used by instances regularly.
 - Do not disable TLS pinning when you are not using a load balancer.
 - Use the [Anbox Cloud dashboard](https://discourse.ubuntu.com/t/anbox-cloud-web-dashboard/41847) as your default stream client. If you want to use a custom client, ensure you have [set it up securely](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328).
 
