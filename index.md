@@ -183,6 +183,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 0 | | |
 | 1 | |[Documentation feedback](https://forms.gle/6yzgLbwN8rVYSdvG9)|
 | 0 | | |
+|   | reference/release-notes/1.21.1 | [Release notes - Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279)|
 |   | reference/release-notes/1.21.0 | [Release notes-Anbox Cloud 1.21.0](https://discourse.ubuntu.com/t/42429)|
 |   | reference/release-notes/1.20.2 | [Release notes-Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686)|
 |   | reference/release-notes/1.20.1 | [Release notes-Anbox Cloud 1.20.1](https://discourse.ubuntu.com/t/40988)|
