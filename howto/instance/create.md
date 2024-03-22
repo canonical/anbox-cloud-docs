@@ -83,6 +83,10 @@ To enable streaming for a new instance simply run
 
 AMS will automatically create a streaming session for the instance. You can find the id of the session as a tag on the instance in the format `session=<id>`.
 
+If you want to to further customize the display settings or frame rate you can use the `--display-size`, `--display-density` and `--fps` arguments. To create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120 you can run
+
+    amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 ...
+
 ### Launch an instance on a specific node
 
 By default, every instance is scheduled by AMS onto a LXD node. Alternatively, you can launch an instance directly on a specific node:
