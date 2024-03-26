@@ -75,15 +75,15 @@ See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for 
 
 *since 1.23.0*
 
-If you want to stream the visual output from an instance you have to specify this at creation time. If not being specified the instance cannot be streamed. In previous versions of Anbox Cloud it was only possible to create such an instance via the [Stream Gateway API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/). The same can now be achieve through the [AMS API](https://canonical.github.io/anbox-cloud.github.com/latest/ams/) or the `amc` CLI.
+If you want to stream the visual output from an instance, specify it at the time of instance creation. Otherwise, the instance cannot be streamed. In previous versions of Anbox Cloud, it was only possible to create an instance that has streaming enabled via the [Stream Gateway API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/). The same can now be achieved through the [AMS API](https://canonical.github.io/anbox-cloud.github.com/latest/ams/) or the `amc` CLI.
 
-To enable streaming for a new instance simply run
+To enable streaming for a new instance, simply run:
 
     amc launch --enable-streaming ...
 
 AMS will automatically create a streaming session for the instance. You can find the id of the session as a tag on the instance in the format `session=<id>`.
 
-If you want to to further customize the display settings or frame rate you can use the `--display-size`, `--display-density` and `--fps` arguments. To create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120 you can run
+If you want to to further customise the streaming configuration such as display settings or frame rate, use the corresponding arguments: `--display-size`, `--display-density` and `--fps`. For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
 
     amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 ...
 
