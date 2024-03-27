@@ -9,6 +9,20 @@ To run on the Anbox Cloud platform, applications must fulfil the following requi
 
 If your application fulfils these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/indore-extern/+filebug).
 
+## Possible application status
+
+The following table lists the different status that an application can have depending on its state and what each status means:
+
+| Application status | Description |
+|--------------------|-------------|
+| `initializing` | The application is being created. Wait until the application reaches the `ready` state. |
+| `ready` | The application is successfully created and ready to be used. |
+| `deleted` | The application is deleted and no longer available for use. |
+| `error` | The application has encountered an error. |
+| `unknown` | A possible error occurred and the real state of the application cannot be determined. |
+
+If you encounter the `error` or the `unknown` status, use [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+
 ## Bootstrap process
 
 When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:

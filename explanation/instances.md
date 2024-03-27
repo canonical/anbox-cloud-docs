@@ -60,15 +60,18 @@ Beyond that, the instance will be removed from AMS either because you deleted it
 
 An instance moves through different stages and correspondingly can have the following status depending on its current state.
 
-Status            |  Description
-----------------|------------
-`created`     | AMS has created an internal database object for the instance and will next schedule the instance onto a suitable LXD node.
-`prepared` | AMS has decided the LXD node on which it will schedule the instance.
-`started` | The instance is started and now booting. During the boot sequence, possible hooks are executed. Only when all hooks have been executed, the instance will switch to `running`.
-`running` | The instance is fully up and running.
-`stopped` | The instance is fully stopped and will be deleted by AMS.
-`deleted` | The instance is deleted and will be removed from the AMS database soon.
-`error` | An error occurred while processing the instance. The instance is stopped. Further information about the error can be viewed with `amc show <instance id>`.
+| Status            |  Description |
+|-------------------|--------------|
+| `created`         | AMS has created an internal database object for the instance and will next schedule the instance onto a suitable LXD node. |
+| `prepared`        | AMS has decided the LXD node on which it will schedule the instance. |
+| `started`         | The instance is started and now booting. During the boot sequence, possible hooks are executed. Only when all hooks have been executed, the instance will switch to `running`. |
+| `running`         | The instance is fully up and running. |
+| `stopped`         | The instance is fully stopped and will be deleted by AMS. |
+| `deleted`         | The instance is deleted and will be removed from the AMS database soon. |
+| `error`           | An error occurred while processing the instance. The instance is stopped. |
+| `unknown`         | A possible error occurred and the real state of the instance cannot be determined. |
+
+If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](https://discourse.ubuntu.com/t/amc-command-reference-show/40793) or [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
 
 <a name="dev-mode"></a>
 ## Development mode
