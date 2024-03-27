@@ -71,6 +71,20 @@ Launch a raw instance by providing the image ID in the following command:
 
 See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for a list of images that are available in Anbox Cloud.
 
+### Launch an instance with a specific name
+
+*since 1.22.0*
+
+To allow identifying and referencing instances easier you can give them a name at creation time. Names must be unique and can be used with all CLI commands.
+
+To create an instance with a name run
+
+    amc launch --name=foo ...
+
+This will create an instance with the name "foo" which can then be used in other CLI commands, for example when opening a shell for interacting with the instance
+
+    amc shell foo
+
 ### Launch an instance on a specific node
 
 By default, every instance is scheduled by AMS onto a LXD node. Alternatively, you can launch an instance directly on a specific node:
