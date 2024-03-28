@@ -25,7 +25,9 @@ Name          | Value type | Description | Status |
 
 ## Instance type
 
-[note type="information" Status="Note"] The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so. [/note]
+[note type="information" Status="Note"] The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so. 
+
+When using the web dashboard to create an application, the field *Instance type* is changed to *Resource type* to maintain backward compatibility. [/note]
 
 Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
 
