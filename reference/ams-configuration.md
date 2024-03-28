@@ -5,6 +5,9 @@ AMS provides various configuration items to customise its behaviour. The followi
 
 | Name | Type | Deprecated |    Default    | Description           |
 |-----|------|------------|---------------|-----------------------|
+| `agent.api.fingerprint` | string | No | - | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
+| `agent.api.token` | string | No | - | Token to be used for API authentication with stream agent. |
+| `agent.api.url`| string | No | - | URL for stream agent API endpoint. |
 | `application.addons` | string | No | - | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
 | `application.auto_publish` | bool | No | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1). |
 | `application.auto_update` | bool | No | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3). |

@@ -71,6 +71,22 @@ Launch a raw instance by providing the image ID in the following command:
 
 See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for a list of images that are available in Anbox Cloud.
 
+### Launch an instance with streaming enabled
+
+*since 1.23.0*
+
+If you want to stream the visual output from an instance, specify it at the time of instance creation. Otherwise, the instance cannot be streamed. In previous versions of Anbox Cloud, it was only possible to create an instance that has streaming enabled via the [Stream Gateway API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/). The same can now be achieved through the [AMS API](https://canonical.github.io/anbox-cloud.github.com/latest/ams/) or the `amc` CLI.
+
+To enable streaming for a new instance, simply run:
+
+    amc launch --enable-streaming ...
+
+AMS will automatically create a streaming session for the instance. You can find the id of the session as a tag on the instance in the format `session=<id>`.
+
+If you want to to further customise the streaming configuration such as display settings or frame rate, use the corresponding arguments: `--display-size`, `--display-density` and `--fps`. For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
+
+    amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 ...
+
 ### Launch an instance on a specific node
 
 By default, every instance is scheduled by AMS onto a LXD node. Alternatively, you can launch an instance directly on a specific node:
