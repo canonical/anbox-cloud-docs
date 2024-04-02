@@ -130,6 +130,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/dashboard-issues | [Troubleshoot dashboard issues](https://discourse.ubuntu.com/t/36105)
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
 | 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
+| 3 | howto/monitor/cos | [Monitor using COS](tbd) |
 | 0 | | |
 | 1 | reference/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
 | 2 | reference/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
