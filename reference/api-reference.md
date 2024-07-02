@@ -1,3 +1,6 @@
+(ref-api)=
+# API reference
+
 All communication between AMS and its clients happen using a RESTful API over HTTP. This API is encapsulated over either TLS (for remote operations) or a Unix socket (for local operations).
 
 ## APIs and their structure
@@ -9,7 +12,7 @@ Anbox Cloud provides the following APIs:
 * Stream Gateway API
 * Anbox Platform SDK API
 
-All these APIs except for the [Anbox Cloud HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819) have an auto-generated specification describing its API endpoints.
+All these APIs except for the {ref}`anbox-https-api` have an auto-generated specification describing its API endpoints.
 
 ## Authentication
 
@@ -186,3 +189,12 @@ Some operations require uploading a payload. To prevent the difficulties of hand
 The documentation shows paths such as `/1.0/instances/...`, which were introduced with Anbox Cloud version 1.20.0. Older releases that supported only containers and not virtual machines supply the exact same API at `/1.0/containers/...`.
 
 Although deprecated, the `1.0/containers/...` API is still available for backward compatibility.
+
+```{toctree}
+:hidden:
+
+AMS HTTP API<https://canonical.github.io/anbox-cloud.github.com/latest/ams/>
+anbox-https-api
+Anbox Platform API<https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/>
+Stream gateway API<https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/>
+```

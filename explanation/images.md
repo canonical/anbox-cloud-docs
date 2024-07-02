@@ -1,3 +1,6 @@
+(exp-images)=
+# Images
+
 An image represents the Anbox Cloud image available in the AMS node. An image is the base for an instance, which contains all necessary components like Anbox or the Android root file system. The image type can be container or virtual machine.
 
 # Possible image statuses

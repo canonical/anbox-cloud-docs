@@ -1,3 +1,6 @@
+(exp-web-dashboard)=
+# Anbox Cloud dashboard
+
 The Anbox Cloud dashboard offers a web interface to create, manage and stream applications. The dashboard is especially helpful for developers new to Anbox Cloud and helps them by offering a simpler and intuitive management interface.
 
 The dashboard comes pre-installed when you deploy the full version of Anbox Cloud (along with the streaming stack) or the Anbox Cloud appliance. It operates from behind a reverse proxy for performance and security reasons. The dashboard relies on OAuth for user authentication. The only OAuth provider supported right now is [Ubuntu One](https://login.ubuntu.com/).
@@ -11,13 +14,13 @@ The dashboard allows multiple views and management of various objects such as ap
 * Instances view - Allows a detailed view of instances and the applications or images that they are created from, along with management options for the instances.
 * Nodes view - Allows a list view of LXD nodes and their configuration details.
 
-Apart from these views, the dashboard also allows you to work with the [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761) and the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/anbox-management-service-ams/24321).
+Apart from these views, the dashboard also allows you to work with the {ref}`exp-aar` and the {ref}`exp-ams`.
 
 * Registry view - Allows a list view of applications uploaded to the registry.
-* Configuration view - Allows you to edit the [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872) attributes from the dashboard.
+* Configuration view - Allows you to edit the {ref}`ref-ams-configuration` attributes from the dashboard.
 
-## Related information
+## Related topics
 
-* [How to use the web dashboard](https://discourse.ubuntu.com/t/20871)
-* [Install Anbox Cloud](https://discourse.ubuntu.com/t/17744)
-* [Install Anbox Cloud Appliance](https://discourse.ubuntu.com/t/22681)
+* {ref}`tut-installing-appliance`
+* {ref}`howto-use-web-dashboard`
+* {ref}`howto-deploy-anbox-juju`

@@ -1,3 +1,6 @@
+(howto-ts-streaming-issues)=
+# Troubleshoot streaming issues
+
 Debugging issues that occur when streaming your application can be tricky. The following instructions give you some pointers on how to start tracking down streaming issues.
 
 First of all, check the error message that occurs. Unfortunately, it is often hard to determine why a connection fails, which is why the error message does not always give a clear indication of the source of the error. Typical errors are covered though, so in these cases, the error message should give you an idea on where to look.
@@ -55,4 +58,4 @@ If streaming starts, but keeps stalling and the quality is bad, the reason is us
 
 In this case, check the WebRTC log to see if there is a high packet loss, and if so, in what situations it occurs. Most likely it is due to a bad network connection between the web dashboard (or your client application) and Anbox Cloud.
 
-See [About performance > Client devices](https://discourse.ubuntu.com/t/about-performance/29416#client-devices) for more information.
+See {ref}`sec-client-devices` for more information.

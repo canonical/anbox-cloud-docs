@@ -1,3 +1,6 @@
+(ref-prometheus-metrics)=
+# Prometheus metrics
+
 Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution. The following sections list all metrics returned to Prometheus by the Anbox Cloud services that support Prometheus metrics.
 
 ## AMS

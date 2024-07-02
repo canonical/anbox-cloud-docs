@@ -1,9 +1,13 @@
+---
+orphan: true
+---
+
 # Customise drawio/diagrams.net
 
 Load custom shapes:
 
 1. Go to **File** > **Open Library**.
-2. Select the `discourse-docs/images/anbox-drawio.xml` file.
+2. Select the `anbox-cloud-docs/images/anbox-drawio.xml` file.
 
 Configure custom styles and colours:
 
@@ -171,13 +175,13 @@ Configure custom styles and colours:
 
 - Use font `ubuntu`.
 - Standard font size: 15pt
-- Use only the provided colours. See the colour palette at https://design.ubuntu.com/brand/colour-palette/ .
+- Use only the provided colours. See the colour palette at [`https://design.ubuntu.com/brand/colour-palette/`](https://design.ubuntu.com/brand/colour-palette/) .
 
 # Upload images to the asset manager
 
-Images should be uploaded to https://manager.assets.ubuntu.com/ .
+Images should be uploaded to [Ubuntu assets](https://assets.ubuntu.com/manager) .
 
-To do this from the command line, get an API token and install https://github.com/canonical/canonicalwebteam.upload-assets
+To do this from the command line, get an API token and install [`https://github.com/canonical/canonicalwebteam.upload-assets`](https://github.com/canonical/canonicalwebteam.upload-assets)
 
 Export the required environment variables:
 

@@ -1,3 +1,6 @@
+(reference)=
+# Reference 
+
 The reference guides in this section provide additional information about using Anbox Cloud, release information, available configuration options, performance metrics and benchmarks.
 
 ## Releases and versions
@@ -6,10 +9,10 @@ Learn about Anbox Cloud releases, release roadmap, supported product versions an
 
 | Guides | Description  |
 |--|--|
-| [Release roadmap](https://discourse.ubuntu.com/t/19359) | Information about general release cycle, currently supported version and future releases |
-| [Release notes](https://discourse.ubuntu.com/t/17842) | Release notes for all versions of Anbox Cloud |
-| [Component versions](https://discourse.ubuntu.com/t/21413) | Version information about different components of Anbox Cloud for each release |
-| [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) | Information about supported Anbox Cloud versions and professional support |
+| {ref}`ref-roadmap` | Information about general release cycle, currently supported version and future releases |
+| {ref}`ref-release-notes` | Release notes for all versions of Anbox Cloud |
+| {ref}`ref-component-versions` | Version information about different components of Anbox Cloud for each release |
+| {ref}`ref-supported-versions` | Information about supported Anbox Cloud versions and professional support |
 
 ## Usage
 
@@ -17,16 +20,16 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 
 | Guides | Description  |
 |--|--|
-| [Requirements](https://discourse.ubuntu.com/t/17734)| Hardware and software requirements to use Anbox Cloud |
-| [Provided images](https://discourse.ubuntu.com/t/24185)| A list of official images that Anbox Cloud provides |
-| [Supported rendering resources](https://discourse.ubuntu.com/t/37322)| A list of supported GPU vendors, drivers, platforms, APIs etc. |
-| [Supported video codecs](https://discourse.ubuntu.com/t/37323)| A list of supported video codecs |
-| [Supported Android features](https://discourse.ubuntu.com/t/28825)| Overview of Android features and which of them are supported by Anbox Cloud |
-| [API reference](https://discourse.ubuntu.com/t/24339)| APIs that Anbox Cloud provides |
-| [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/17844)| Overview of the SDKs that Anbox Cloud provides to facilitate integrating and extending the solution |
-| [Network ports](https://discourse.ubuntu.com/t/33650)| A list of network ports that Anbox Cloud exposes for each service |
-| [Addons](https://discourse.ubuntu.com/t/25293)| Documentation of the addon mechanism |
-| [Hooks](https://discourse.ubuntu.com/t/28555)| Documentation of hooks for addons or applications |
+| {ref}`ref-requirements`| Hardware and software requirements to use Anbox Cloud |
+| {ref}`ref-provided-images`| A list of official images that Anbox Cloud provides |
+| {ref}`ref-rendering-resources`| A list of supported GPU vendors, drivers, platforms, APIs etc. |
+| {ref}`ref-codecs`| A list of supported video codecs |
+| {ref}`ref-android-features`| Overview of Android features and which of them are supported by Anbox Cloud |
+| {ref}`ref-api`| APIs that Anbox Cloud provides |
+| {ref}`ref-sdks`| Overview of the SDKs that Anbox Cloud provides to facilitate integrating and extending the solution |
+| {ref}`ref-network-ports`| A list of network ports that Anbox Cloud exposes for each service |
+| {ref}`ref-addon-manifest`| List of keys in the addon manifest |
+| {ref}`ref-hooks`| Information about hooks for addons or applications and related environment variables |
 
 ## Configuration
 
@@ -34,23 +37,61 @@ Know the configuration options that can be defined for various components of Anb
 
 | Guides | Description |
 |--|--|
-| [AMS configuration](https://discourse.ubuntu.com/t/20872)| Configuration options for Anbox Management Service (AMS) |
-| [Application manifest](https://discourse.ubuntu.com/t/24197)| A list of attributes that can be specified in the application manifest |
-| [WebRTC streamer](https://discourse.ubuntu.com/t/30195)| Configuration details for the WebRTC streamer |
+| {ref}`ref-ams-configuration`| Configuration options for Anbox Management Service (AMS) |
+| {ref}`ref-application-manifest`| A list of attributes that can be specified in the application manifest |
+| {ref}`ref-webrtc`| Configuration details for the WebRTC streamer |
+
+## Command reference
+
+Learn about the commands and their usage for the Anbox Management Client (AMC) and the Anbox Cloud Appliance.
+
+| Guides | Description |
+|--|--|
+| {ref}`ref-amc-commands`| Commands and their usage when using the AMC |
+| {ref}`ref-appliance-commands`| Commands and their usage when using the appliance |
 
 ## Performance
 
 Learn about the available metrics and benchmarks for measuring performance.
 | Guides | Description |
 |--|--|
-| [Prometheus metrics](https://discourse.ubuntu.com/t/19521)| Performance metrics that Anbox Cloud provides |
-| [Performance benchmarks](https://discourse.ubuntu.com/t/24709)| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
+| {ref}`ref-prometheus-metrics`| Performance metrics that Anbox Cloud provides |
+| {ref}`ref-performance-benchmarks`| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
 
-## Other related information
+## Other
 
 | Guides | Description |
 |--|--|
-| [License information](https://discourse.ubuntu.com/t/36649)| Information on where to find the licenses of components used by Anbox Cloud |
-| [Glossary](https://discourse.ubuntu.com/t/glossary/26204)| Useful terminology for working with Anbox Cloud |
+| {ref}`ref-license-information`| Information on where to find the licenses of components used by Anbox Cloud |
+| {ref}`ref-glossary`| Useful terminology for working with Anbox Cloud |
 
-Also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud and the [Explanation](https://discourse.ubuntu.com/t/explanation/28829) section for background information.
+Also check out the {ref}`tutorials` for step-by-step instructions that help you get familiar with Anbox Cloud, the {ref}`how-to-guides` for instructions on how to achieve specific goals when using Anbox Cloud and the {ref}`explanation` section for background information.
+
+```{toctree}
+:hidden:
+
+addon-manifest
+ams-configuration
+sdks
+api-reference
+application-manifest
+cmd-ref/landing.md
+component-versions
+deprecation-notices
+glossary
+hooks
+license-information
+network-ports
+perf-benchmarks
+prometheus
+provided-images
+release-notes/release-notes.md
+requirements
+roadmap
+android-features
+anbox-features
+supported-rendering-resources
+supported-versions
+supported-codecs
+webrtc-streamer
+```

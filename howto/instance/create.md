@@ -1,3 +1,5 @@
+(howto-create-instance)=
+# How to create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
 ## Using the dashboard
@@ -23,6 +25,7 @@ By default, the instance will run headless.
 
 The following examples demonstrate different ways of launching instances using `amc launch`, but you can use `amc init` in the same way.
 
+(sec-launch-application-instances)=
 ### Launch application instances
 
 Before launching an instance for an application, get the ID of the application that for which you want to launch an instance. To do this, run:
@@ -39,11 +42,14 @@ This command lists the available applications along their IDs and their publishe
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
 ```
 
-To launch an instance for a [published](https://discourse.ubuntu.com/t/how-to-update-an-application/24201#publish-application-versions-1) application, run:
+To launch an instance for a published application, run:
 
     amc launch <application_id>
 
-[note type="information" Status="Tip"]The `--vm` flag is not required when you specify an application id. The application has the information about whether a container or a virtual machine is to be created.[/note]
+```{tip}
+- To know about published applications, see {ref}`sec-publish-app-versions`.
+- The `--vm` flag is not required when you specify an application id. The application has the information about whether a container or a virtual machine is to be created.
+```
 
 The `amc launch` command fails if you provide the ID of an application that is not yet published. However, if you have a specific version of an application that has been published, you can specify it to launch the instance successfully:
 
@@ -51,8 +57,11 @@ The `amc launch` command fails if you provide the ID of an application that is n
 
 ### Launch a raw instance
 
-You can launch a [raw instance](https://discourse.ubuntu.com/t/instances/17763#application-instances-vs-raw-instances-2) from an image. To do so, get the ID of the image by running:
+You can launch a raw instance from an image. To do so, get the ID of the image by running:
 
+```{tip}
+If you don't know what a raw instance is, see {ref}`sec-application-raw-instances`.
+```
     amc image ls
 
 This command lists the available images along with their IDs and status:
@@ -69,7 +78,7 @@ Launch a raw instance by providing the image ID in the following command:
 
     amc launch --raw <image_id>
 
-See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for a list of images that are available in Anbox Cloud.
+See {ref}`ref-provided-images` for a list of images that are available in Anbox Cloud.
 
 ### Launch an instance with streaming enabled
 
@@ -107,7 +116,9 @@ By default, every instance is scheduled by AMS onto a LXD node. Alternatively, y
 
     amc launch --node=lxd0 <application_id>
 
-[note type="information" status="Note"]AMS will still verify that the selected node has enough resources to host the instance. If not, the instance will fail to launch.[/note]
+```{note}
+AMS will still verify that the selected node has enough resources to host the instance. If not, the instance will fail to launch.
+```
 
 ### Launch an instance with a different Anbox platform
 
@@ -119,7 +130,7 @@ If you have built your own platform named `foo` and you built it via an addon in
 
     amc launch -p foo <application_id>
 
-For more information, see [supported platforms](https://discourse.ubuntu.com/t/supported-rendering-resources/37322#supported-platforms-3) and [configuration for supported platforms](https://discourse.ubuntu.com/t/configuration-for-supported-platforms/18733).
+For more information, see {ref}`exp-platforms` and {ref}`sec-supported-platforms`.
 
 ### Launch an instance with development mode enabled
 
@@ -129,8 +140,8 @@ To launch an instance with development mode enabled, add the `--devmode` flag to
 
     amc launch --devmode <application_id>
 
-## Related information
+## Related topics
 
-* [Instances](https://discourse.ubuntu.com/t/instances/17763)
-* [How to access an instance](https://discourse.ubuntu.com/t/17772)
-* [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)
+* {ref}`exp-application-streaming`
+* {ref}`exp-instances`
+* {ref}`howto-access-instance`

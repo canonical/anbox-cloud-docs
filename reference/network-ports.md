@@ -1,3 +1,6 @@
+(ref-network-ports)=
+# Network ports
+
 Anbox Cloud exposes certain network ports for access and communication.
 
 For the regular Anbox Cloud deployment, these ports are used for communication between components, and to allow accessing the Anbox Cloud interface. 

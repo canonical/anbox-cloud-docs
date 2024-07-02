@@ -1,3 +1,6 @@
+(howto-delete-instance)=
+# How to delete an instance
+
 An instance can be deleted, which will cause any connected user to be disconnected immediately. The following command deletes a single instance:
 
     amc delete <instance_id>

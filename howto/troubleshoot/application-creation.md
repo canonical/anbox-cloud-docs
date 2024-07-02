@@ -1,3 +1,6 @@
+(howto-ts-application-creation-issues)=
+# Troubleshoot issues with application creation
+
 You might encounter the following issues when creating an application.
 
 ## Application manifest

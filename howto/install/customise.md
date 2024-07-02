@@ -1,3 +1,6 @@
+(howto-customise-installation)=
+# How to customise your installation
+
 There are two main ways to customise the Anbox Cloud deployment:
 
 1. Use overlays in conjunction with the published Anbox Cloud bundle.
@@ -9,7 +12,7 @@ Saving a copy of the bundle file and editing that file means that your customisa
 
 ## Use overlay files
 
-An [overlay bundle](https://juju.is/docs/sdk/bundle-reference#heading--overlay-bundles) is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):
+An [overlay bundle](https://juju.is/docs/juju/bundle) is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):
 
     machines:
       '0':
@@ -77,7 +80,7 @@ This will give the same result as configuring the proxy values through Juju:
 
 Another way to change or customise a deployment is to store the YAML bundle file locally and edit it with a text editor.
 
-The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7) for more details on the available bundles.
+The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See {ref}`sec-juju-bundles` for more details on the available bundles.
 
 Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://juju.is/docs/sdk/bundle-reference).
 

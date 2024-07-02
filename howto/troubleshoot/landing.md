@@ -1,17 +1,28 @@
-The topics in this guide describe some commonly encountered problems with Anbox Cloud and provide instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
+(howto-ts-anbox-cloud)=
+# How to troubleshoot Anbox Cloud
 
-[note type="information" status="Note"] If the deployment is older than 3 months, you must upgrade Anbox Cloud to the latest version and see if the required fixes are already part of the upgrade. See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/how-to-upgrade-anbox-cloud/17750) for upgrade instructions.[/note]
+The following troubleshooting guides describe some commonly encountered problems with Anbox Cloud and provide instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
 
-* [Troubleshoot issues with initial setup](https://discourse.ubuntu.com/t/35704)
-* [Troubleshoot instance failures](https://discourse.ubuntu.com/t/35703)
-* [Troubleshoot issues with application creation](https://discourse.ubuntu.com/t/35702)
-* [Troubleshoot issues with LXD clustering](https://discourse.ubuntu.com/t/35705)
-* [Troubleshoot issues with dashboard](https://discourse.ubuntu.com/t/36105)
-* [Troubleshoot issues with streaming](https://discourse.ubuntu.com/t/31341)
+```{toctree}
+:titlesonly:
+
+Instance failures <instance-failures>
+Issues with application creation <application-creation>
+Issues with clustering <lxd-cluster>
+Issues with initial setup <initial-setup>
+Issues with streaming <streaming-issues>
+Issues with web dashboard <dashboard-issues>
+View logs <logs>
+```
+
+```{note}
+If the deployment is older than 3 months, you must upgrade Anbox Cloud to the latest version and see if the required fixes are already part of the upgrade. See {ref}`howto-upgrade-anbox-cloud` for upgrade instructions.
+```
 
 If you still need help, use any of the following utilities to collect troubleshooting information and report an [issue](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
-[note type="information" status="Note"] The following utilities could be applicable for the regular Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1).[/note]
+
+The following utilities could be applicable for the regular Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see {ref}`sec-variants`.
 
 ## Juju crashdump
 
@@ -59,9 +70,4 @@ saves it to the local `<target_file>`. This process might take a few seconds.
 
 If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection. 
 
-Use `amc show <instance_id>` command to list the available logs. See [View stored logs](https://discourse.ubuntu.com/t/24329#view-stored-logs-2) for an example of such a stored log.
-
-## Related topics
-
-* [View Anbox Cloud logs](https://discourse.ubuntu.com/t/17771)
-* [View instance logs](https://discourse.ubuntu.com/t/24329)
+Use `amc show <instance_id>` command to list the available logs. See {ref}`howto-view-instance-logs` for information on viewing the instance logs.

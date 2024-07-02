@@ -1,4 +1,7 @@
-## Introduction
+---
+orphan: true
+---
+# < Release version >
 
 The Anbox Cloud team is pleased to announce the release of Anbox Cloud < release-version >.
 

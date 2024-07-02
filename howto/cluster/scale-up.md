@@ -1,3 +1,6 @@
+(howto-scale-up-cluster)=
+# How to scale up a LXD cluster
+
 Scaling up a LXD cluster can be achieved via Juju. Juju automates the deployment of the individual units and links them together.
 
 Adding additional LXD units or removing existing ones is not an instant operation. Adding a new node, for example, can take 5-10 minutes and must be planned in advance. The deployment of a single node will include the following steps:

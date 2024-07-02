@@ -1,13 +1,16 @@
+(howto-install-appliance-aws)=
+# How to install the appliance on AWS
+
 You can install the Anbox Cloud Appliance on AWS in one of two ways:
 
 - Install through the AWS Marketplace. This is the recommended way, because this method simplifies the installation and deployment process and allows billing to be handled directly through AWS.
-- Install the Anbox Cloud Appliance snap on an AWS machine. This method is not recommended, but if you want to do it anyway, see the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial for instructions on how to install the snap.
+- Install the Anbox Cloud Appliance snap on an AWS machine. This method is not recommended, but if you want to do it anyway, see the {ref}`tut-installing-appliance` tutorial for instructions on how to install the snap.
 
 The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance from the AWS Marketplace. For additional information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html) about launching an instance.
 
 The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
 
-## Before you start
+## Prerequisites
 
 Deploying the Anbox Cloud Appliance requires some familiarity with AWS. In particular, you should be familiar with:
 
@@ -26,7 +29,9 @@ AWS supports running the Anbox Cloud Appliance both on [AWS Graviton](https://aw
 
 * AWS Graviton (Arm) and x86 offer equal performance for Android applications.
 * GPUs are available for both x86 and AWS Graviton (Arm).
-  [note type="information" status="Note"]To use GPUs with AWS Graviton (Arm), you must select a [G5g instance](https://aws.amazon.com/de/ec2/instance-types/g5g/). This instance type might not be available in all regions.[/note]
+  ```{note}
+  To use GPUs with AWS Graviton (Arm), you must select a [G5g instance](https://aws.amazon.com/de/ec2/instance-types/g5g/). This instance type might not be available in all regions.
+  ```
 * Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
 
 For detailed information about the offering, see the following pages on the AWS Marketplace:
@@ -34,15 +39,19 @@ For detailed information about the offering, see the following pages on the AWS 
 * [Anbox Cloud Appliance for AWS Graviton (Arm)](https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk)
 * [Anbox Cloud Appliance for x86](https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4)
 
-### Check the prerequisites
+### Hardware requirements
 
-Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/requirements/17734#anbox-cloud-appliance-4).
+Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox Cloud Appliance.
 
-In addition, make sure you have the following accounts:
+### Required accounts
 
-* An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
+Make sure you have the following accounts:
+
+* An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
 * An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
-  [note type="information" status="Note"]The quota for your AWS account must be sufficient for the instance types that you plan to use.[/note]
+  ```{note}
+  The quota for your AWS account must be sufficient for the instance types that you plan to use.
+  ```
 
 ## Install the appliance
 
@@ -72,7 +81,7 @@ You will be presented with the pricing information. Click **Continue** to confir
 
 AWS offers various instance types. The Anbox Cloud Appliance images are supported for a subset of the available instance types only.
 
-In the **Instance type** section, select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#anbox-cloud-appliance-4) for the minimum hardware requirements.
+In the **Instance type** section, select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See {ref}`sec-minimum-hardware-requirements`.
 
 ![Choose an instance type](https://assets.ubuntu.com/v1/e967ac16-install_appliance_instance-type.png)
 
@@ -90,7 +99,7 @@ You do not need to customise any of the settings in the **Network settings** sec
 
 To allow external access, several ports in the security group attached to the AWS instance must be open. The AMI already comes with the required configuration, so you don't need to do any changes. However, for security reasons, you might want to limit access to specific source IPs or subnets.
 
-For reference, all required ports are documented [here](https://discourse.ubuntu.com/t/requirements/17734).
+For reference, all required ports are documented in {ref}`ref-requirements`.
 
 ![Configure the security group](https://assets.ubuntu.com/v1/f0af08ae-install_appliance_security-group.png)
 
@@ -138,7 +147,7 @@ Connect to the virtual machine hosting the appliance using SSH. To do so, use th
 
 ## Finish the installation
 
-Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.
+Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.
 
 1. Initialise the appliance
 1. Register your Ubuntu SSO account with the appliance dashboard

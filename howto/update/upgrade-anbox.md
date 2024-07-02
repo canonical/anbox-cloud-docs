@@ -1,4 +1,9 @@
-[note type="information" status="Note"]If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.[/note]
+(howto-upgrade-anbox-cloud)=
+# How to upgrade Anbox Cloud
+
+```{note}
+If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
+```
 
 Anbox Cloud allows upgrades from older versions to newer version. This describes the steps necessary to perform the upgrade.
 
@@ -14,7 +19,7 @@ You should also make sure that:
 * Your Juju client and controller/models are running the latest version.
 * You have read the release notes for the version you are upgrading to, which will alert you to any important changes to the operation of your cluster.
 
-[note type="information" status="Note"]
+```{note}
 
 The following assume you're using Juju >= 3.1. If you're using Juju 2.9, you have to map the following commands:
 
@@ -23,7 +28,7 @@ The following assume you're using Juju >= 3.1. If you're using Juju 2.9, you hav
 | `juju refresh` | `juju upgrade-charm` |
 | `juju exec` | `juju run` |
 
-[/note]
+```
 
 ## Upgrade OS
 
@@ -46,7 +51,7 @@ If they are not, run the following command to do so:
 
 ## Check Juju version
 
-Before you upgrade, check the required [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version-10).
+Before you upgrade, check the required {ref}`sec-juju-version-requirements`.
 
 If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/olm/upgrade-models) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
@@ -54,17 +59,15 @@ If your deployment uses an earlier Juju version, you must upgrade your controlle
 
 The deployed Juju charms need to be upgraded next.
 
-[note type="information" status="Note"]
-
-- You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions and channels for each release.
+```{note}
+- You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
 
 - If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
 
 - Starting with the 1.21 release, the NATS charm has been switched from its [older version](https://charmhub.io/nats-charmers-nats) to a [newer version](https://charmhub.io/nats) on Charmhub. This switch does not have any breaking changes from a user's perspective but since the framework of the charm has been overhauled, the upgrade to the new charm would require users to `switch` the charm's source while refreshing/updating the charm.
 
 - Starting with the 1.22 release, the `anbox-stream-agent` charm has a new relation `client` which can be used to register new clients for the Anbox Stream Agent. This new relation is used by the new AMS charm to create stream-enabled instances using the `--enable-streaming` option. For deployments using the bundles from or after 1.22 release, the relation is created automatically. For users upgrading from older versions of Anbox Cloud, the relation needs to be manually created using `juju relate anbox-stream-agent:client ams:agent` after upgrading both the `ams` and the `anbox-stream-agent` charms to 1.22.
-
-[/note]
+```
 
 For any of the charm upgrades, you can watch the upgrade status by running:
 
@@ -72,9 +75,9 @@ For any of the charm upgrades, you can watch the upgrade status by running:
 
 Continue with the next step only when the current step has completed successfully and all units in the output are marked as **active**.
 
-[note type="information" status="Note"]
+```{note}
 If you don't run Anbox Cloud in a high availability configuration, upgrading the charms will cause a short down time of individual service components during the process.
-[/note]
+```
 
 ### Upgrade infrastructure components
 
@@ -97,9 +100,9 @@ To upgrade the registry, run
 
 If you have the streaming stack deployed, you need to update the charms responsible for the control plane next. If you do not use the streaming stack, you can skip this step.
 
-[note type="information" status="Note"]
+```{note}
 If you don't run any of the services in a high availability configuration, upgrading the charms will cause a short down time of the service.
-[/note]
+```
 
 To upgrade all charms, run the following commands:
 
@@ -109,12 +112,11 @@ To upgrade all charms, run the following commands:
     juju refresh --channel=1.22/stable coturn
     juju refresh --channel=latest/stable nats
 
-[note type="information" status="Note"]
+```{note}
 Since the NATS charm has been overhauled to use the modern charm framework (Ops Framework), a new charm source is needed to upgrade to its latest version. The charm source can be switched or replaced using the following command:
 
     juju refresh nats --switch=nats  --channel=stable
-
-[/note]
+```
 
 ### Upgrade AMS
 
@@ -140,7 +142,7 @@ In some cases, specifically when you maintain bigger LXD clusters or want to kee
 
 This will allow you to run the actual upgrade process for each deployed LXD instance separately.
 
-If you want to remove any nodes from the LXD cluster as part of the manual upgrade process, follow the instructions in [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/how-to-scale-down-a-lxd-cluster/24323) to prepare a node for removal and then remove it from the cluster.
+If you want to remove any nodes from the LXD cluster as part of the manual upgrade process, follow the instructions in {ref}`howto-scale-down-cluster` to prepare a node for removal and then remove it from the cluster.
 
 Once the unnecessary nodes are dropped, the upgrade for a single LXD deployment unit can be triggered by running:
 
@@ -177,4 +179,4 @@ You can check for the status of an existing application by running:
 
     amc application show <application id or name>
 
-In case automatic updates are disabled for applications, AMS cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-application-updates-3) to enable automatic updates or to manually update the applications.
+In case automatic updates are disabled for applications, AMS cannot update the application. See {ref}`sec-configure-automatic-app-updates` to enable automatic updates or to manually update the applications.

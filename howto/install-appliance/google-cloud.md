@@ -1,13 +1,18 @@
+(howto-install-appliance-google-cloud)=
+# How to install the appliance on Google Cloud
+
 The Anbox Cloud Appliance is not yet available from the Google Marketplace. However, you can install the Anbox Cloud Appliance snap on a Google Cloud instance by using this guide.
 
 The entire deployment process will take 20-30 minutes, depending on the selected hardware and the network conditions.
 
-[note type="caution" status="Warning"]Currently, Anbox Cloud requires support for 32-bit architecture. Since T2A ARM instances are not available with 32-bit support, the T2A instance family on Google Cloud cannot be supported by Anbox Cloud. See [Google's documentation on T2A limitations](https://cloud.google.com/compute/docs/general-purpose-machines#t2a_limitations) for more information.[/note]
+```{caution}
+Currently, Anbox Cloud requires support for 32-bit architecture. Since T2A ARM instances are not available with 32-bit support, the T2A instance family on Google Cloud cannot be supported by Anbox Cloud. See [Google's documentation on T2A limitations](https://cloud.google.com/compute/docs/general-purpose-machines#t2a_limitations) for more information.
+```
 
 ## Prerequisites
 
 Before starting the procedure,
-* Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/17734).
+* Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox Cloud Appliance.
 * Make sure that you have a Google Cloud account and a project on Google Cloud to create the virtual machine.
 * If you wish to use your own [Ubuntu Pro subscription](https://ubuntu.com/pro), ensure you have the Ubuntu Pro token for your Ubuntu Pro subscription. If you wish to use the Ubuntu Pro subscription offered by Google Cloud along with the virtual machine, skip this prerequisite.
 
@@ -34,9 +39,11 @@ Configure the boot disk by selecting **Boot disk > Change** to choose the operat
 
 ![Configure boot disk|690x440](https://assets.ubuntu.com/v1/884d0b10-boot-disk-config-2.png)
 
-Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and [attach your subscription](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#h-2-attach-your-machine-to-the-ubuntu-pro-subscription-4) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud.
+Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and attach your subscription(see {ref}`tut-installing-appliance`) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud.
 
-[note type="information" status="Note"]Remember that choosing the Ubuntu Pro option will impact your pricing. Google Cloud provides the resource details and associated costs in the **Pricing summary** section on the **Create an instance** page.[/note]
+```{note}
+Remember that choosing the Ubuntu Pro option will impact your pricing. Google Cloud provides the resource details and associated costs in the **Pricing summary** section on the **Create an instance** page.
+```
 
 Select the latest Ubuntu image for the architecture that you want to use. For example, Ubuntu 22.04 LTS Pro Server for Arm64.
 
@@ -99,11 +106,14 @@ To complete the installation:
 
 1. Install the Anbox Cloud Appliance on the virtual machine.
 
-    [note type="information" status="Note"]If you choose Ubuntu Pro as your operating system, you can ignore the step in the installation instructions that guides you to attach your machine to the Ubuntu Pro subscription as the subscription is included with the Google Cloud resources. You can check the status of the Ubuntu Pro subscription by running `pro status`.[/note]
+    ```{note}
+    If you choose Ubuntu Pro as your operating system, you can ignore the step in the installation instructions that guides you to attach your machine to the Ubuntu Pro subscription as the subscription is included with the Google Cloud resources. You can check the status of the Ubuntu Pro subscription by running `pro status`.
+    ```
 
 1. Initialise the appliance.
 1. Register your Ubuntu SSO account with the appliance dashboard.
 
-[note type="information" status="Note"]If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.[/note]
+```{note}
+If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.```
 
 When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.

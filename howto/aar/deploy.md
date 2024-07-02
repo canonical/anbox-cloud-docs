@@ -1,4 +1,7 @@
-An [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) should be deployed on a single unit. After deploying, continue to [configure it](https://discourse.ubuntu.com/t/configure-an-aar/24319) and connect it with all AMS units that you want to synchronise.
+(howto-deploy-aar)=
+# How to deploy an AAR
+
+An Anbox Application Registry (AAR) should be deployed on a single unit. After deploying, you can continue to configure and connect it with all AMS units that you want to synchronise.
 
 Use the following commands to deploy an AAR:
 
@@ -13,13 +16,13 @@ When using the S3 storage backend, image downloads will be redirected to S3 inst
 
 ### Create and configure an S3 bucket
 
-To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the AWS documentation [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) for instructions on how to do this.
+To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) for instructions on how to do this.
 
-If you don’t plan to use the [CloudFront CDN](#aws-cloudfront-cdn-support-3), you should use a region close to your Anbox Cloud deployment to keep download times low.
+If you don’t plan to use the {ref}`CloudFront CDN <sec-aws-cloudfront-cdn>`, you should use a region close to your Anbox Cloud deployment to keep download times low.
 
 ### Configure bucket access for AAR
 
-To allow the AAR to access the S3 bucket, create an [IAM Policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html):
+To allow the AAR to access the S3 bucket, create an IAM Policy. See [AWS documentation on IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) for more information:
 
 ```json
 {
@@ -55,9 +58,9 @@ Replace `aar0` in the policy with the name of your bucket.
 
 There are two ways to configure the bucket access for AAR using the policy created earlier:
 
-1. Create an IAM user and an access key for this user, which the AAR will use. See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this. Assign the policy created earlier to this user.
+1. Create an IAM user and an access key for this user, which the AAR will use. See the [AWS documentation on managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more information. Assign the policy created earlier to this user.
 
-2. Create an instance profile using the IAM policy created earlier and attach the instance profile to the instance where AAR is deployed. For more information, see the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) for more details on this.
+2. Create an instance profile using the IAM policy created earlier and attach the instance profile to the instance where AAR is deployed. See the [AWS documentation on using instance profiles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) for more information.
 
 ### Configure AAR
 
@@ -81,9 +84,10 @@ Finally, update the AAR configuration via the charm configuration:
 
     juju config aar -f config.yaml
 
+(sec-aws-cloudfront-cdn)=
 ### AWS CloudFront CDN support
 
-The distribution of the images can be highly improved by adding support for the AWS CloudFront CDN, which brings the images closer to your Anbox Cloud deployments in a more world wide context. The [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) describes all necessary setup steps.
+The distribution of the images can be highly improved by adding support for the AWS CloudFront CDN, which brings the images closer to your Anbox Cloud deployments in a more world wide context. See the [Getting Started Guide on Amazon CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) for more information.
 
 Once you have set up a CloudFront distribution for your S3 bucket, you only need the base URL, public key and key pair ID to configure the AAR to use CloudFront to serve image downloads.
 
@@ -114,3 +118,9 @@ aar:
 Then update the AAR configuration via the charm configuration:
 
     juju config aar -f config.yaml
+
+## Related topics
+
+* {ref}`exp-aar`
+* {ref}`howto-configure-aar`
+* {ref}`howto-revoke-aar`

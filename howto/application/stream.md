@@ -1,3 +1,6 @@
+(howto-stream-applications)=
+# How to stream applications
+
 You can stream applications using the Anbox Cloud dashboard or your custom stream client. You can also stream applications by launching an instance with streaming enabled, using the `amc` CLI.
 
 ## Using the CLI
@@ -19,11 +22,11 @@ For example, to create an instance with a 1080p resolution, a frame rate of 60 a
 
 ## Using the dashboard
 
-The dashboard has in-browser streaming capabilities through WebRTC. It uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
+The dashboard has in-browser streaming capabilities through WebRTC. It uses the {ref}`sec-streaming-sdk`.
 
 You can start a streaming session for any of the successfully created applications. An application is ready to be streamed when its *Status* is *Ready*. When you select the *Start a new session* icon for an application, you can specify the desired streaming attributes such as the screen resolution, frame rate, screen orientation before launching the session.
 
-To understand how the streaming stack of Anbox Cloud works, see [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769).
+To understand how the streaming stack of Anbox Cloud works, see {ref}`exp-application-streaming`.
 
 ### Streaming statistics
 
@@ -55,8 +58,7 @@ The downloaded `.csv` file has the following statistics:
 
 Use the **Sharing** button on the session page to share a streaming session with users without an account. The button generates a link using which users without an account can join your session.
 
-## Related information
+## Related topics
 
-* [Application Streaming](https://discourse.ubuntu.com/t/application-streaming/17769)
-* [How to access the stream gateway](https://discourse.ubuntu.com/t/how-to-access-the-stream-gateway/17784)
-* [Set up a stream client](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328)
+* {ref}`tut-set-up-stream-client`
+* {ref}`howto-access-stream-gateway`

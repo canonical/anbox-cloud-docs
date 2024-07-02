@@ -1,29 +1,33 @@
+(howto-exchange-oob-data)=
+# How to exchange out-of-band data
+
 Enabling out-of-band (OOB) data transmission between an Android application and a WebRTC client makes it possible to exchange data and trigger actions between an Android application and a WebRTC client.
 
 Anbox Cloud provides two versions of this OOB data exchange:
 
-* [Version 2](#version-2-1) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
+* [Version 2](#version-2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
   Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
-* [Version 1](#version-1-10) enables Android application developers to trigger an action from an Android application running in an [instance](https://discourse.ubuntu.com/t/26204#instance) and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
+* [Version 1](#version-1) enables Android application developers to trigger an action from an Android application running in an instance and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
 
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
-[note type="caution" status="Warning"]
-The support for [version 1](#version-1-10) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2-1) for full-duplex data transmission and better performance.
-[/note]
+```{caution}
+The support for [version 1](#version-1) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2) for full-duplex data transmission and better performance.
+```
 
 See the instructions for exchanging OOB data using a specific implementation version below:
-* [Version 2](#version-2-1)
-* [Version 1](#version-1-10)
+* [Version 2](#version-2)
+* [Version 1](#version-1)
 
+(sec-oob-data-version-2)=
 ## Version 2
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
 
 ### Web application
 
-In your web-based client application, import the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
+In your web-based client application, import the {ref}`sec-streaming-sdk`.
 
 Create a data channel (named `foo` in the following example) under the `dataChannels` property of an `AnboxStream` object and register event handlers that respond to the events sent from an Android application:
 
@@ -52,9 +56,9 @@ let stream = new AnboxStream({
 });
 ```
 
-[note type="information" status="Note"]
+```{note}
 An `AnboxStream` object can create a maximum of five data channels. If the number of data channels exceeds the allowed maximum, an exception is thrown when instantiating the `AnboxStream` object.
-[/note]
+```
 
 To launch a new WebRTC session, the client must call `stream.connect()`. The `AnboxStream` object then builds up a WebRTC native data channel internally, based on the name declared under its `dataChannels` property for peer-to-peer communication (`foo` in the example).
 
@@ -115,7 +119,9 @@ To build up the communication bridge between an Android application and the Anbo
 
 The `anbox-webrtc-data-proxy` system daemon runs in the instance and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
 
-[note type="information" status="Note"]To interact with the `org.anbox.webrtc.IDataProxyService` system service, the Android application must be [installed as a system app](https://discourse.ubuntu.com/t/how-to-install-an-apk-as-a-system-app/27086). [/note]
+```{note}
+To interact with the `org.anbox.webrtc.IDataProxyService` system service, the Android application must be installed as a system app. See {ref}`howto-install-apk-system-app` for instructions.
+```
 
 #### Get notified about the availability of data channels
 
@@ -268,11 +274,12 @@ try {
 <!-- wokeignore:rule=master -->
 For a complete Android example, see the [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
+(sec-oob-data-version-1)=
 ## Version 1
 
-[note type="caution" status="Warning"]
+```{caution}
 The support for version 1 of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release.
-[/note]
+```
 
 ### Android application
 
@@ -359,9 +366,7 @@ in JavaScript, C or C++ by using the Anbox Streaming SDK.
 
 #### Web application
 
-For a web-based application, you can use the JavaScript SDK which you can find under
-[Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8). To receive the data sent from the Android application
-running in the instance, implement the `messageReceived` callback
+For a web-based application, you can use the JavaScript SDK which you can find under {ref}`sec-streaming-sdk`. To receive the data sent from the Android application running in the instance, implement the `messageReceived` callback
 of the `AnboxStream` object:
 
 ```

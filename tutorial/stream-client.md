@@ -1,4 +1,7 @@
-This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets which enable the real time communications required for streaming. To know more about the WebRTC configuration, see [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195).
+(tut-set-up-stream-client)=
+# Set up a stream client
+
+This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets which enable the real time communications required for streaming. To know more about the WebRTC configuration, see {ref}`ref-webrtc`.
 
 ## Preparation
 
@@ -6,7 +9,7 @@ Complete the following preparatory steps:
 
 ### Install the Anbox Cloud Appliance
 
-We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the [appliance installation tutorial](https://discourse.ubuntu.com/t/22681) until you finish initialising the Appliance.
+We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the {ref}`tut-installing-appliance` tutorial until you finish initialising the Appliance.
 
 ### Create an access token
 
@@ -18,17 +21,17 @@ On the machine where Anbox Cloud Appliance is installed, create the service acco
 
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
 
-See [How to access the stream gateway](https://discourse.ubuntu.com/t/how-to-access-the-stream-gateway/17784) for more information on creating, using and deleting the access token.
+See {ref}`howto-access-stream-gateway` for more information on creating, using and deleting the access token.
 
 ### Download the Anbox Cloud streaming SDK
 
-Download the [Anbox Cloud streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8) from GitHub:
+Download the {ref}`sec-streaming-sdk` from GitHub:
 
     git clone https://github.com/canonical/anbox-streaming-sdk.git
 
 ### Create an application
 
-Follow the instructions in [How to create an application](https://discourse.ubuntu.com/t/24198) and create an application. You can create any application, the application type does not matter.
+Follow the instructions in {ref}`howto-create-application` and create an application. You can create any application, the application type does not matter.
 
 ## Set up the stream client
 
@@ -38,7 +41,9 @@ Create a directory to set up the stream client:
 
 Create a `demo.html` file inside `/srv/stream-client`:
 
-[note type="information" status="Important"]The inline comments in the following code provide pointers to replace certain values with your corresponding values. For example, you will be required to replace the values of `url`, `authToken`, `app` in the following example with your values. [/note]
+```{important}
+The inline comments in the following code provide pointers to replace certain values with your corresponding values. For example, you will be required to replace the values of `url`, `authToken`, `app` in the following example with your values.
+```
 
 ```html
 <!DOCTYPE html>
@@ -100,7 +105,7 @@ If you experience any streaming issues, you can turn on debug information by add
        debug: true,
     }
 
-See [how to troubleshoot streaming issues](https://discourse.ubuntu.com/t/31341) for common issues related to streaming.
+See {ref}`howto-ts-streaming-issues` for common issues related to streaming.
 
 ## Create and enable the stream UI service
 
@@ -182,7 +187,7 @@ With HTTP basic authentication configured, users will be asked to enter the cred
 
 Now you can go to `https://<ip>/demo/`, enter the HTTP basic authentication credentials and view the web-based streaming client.
 
-## Related information
+## Related topics
 
 * [WebRTC](https://webrtc.org/)
 * [Traefik](https://traefik.io/)

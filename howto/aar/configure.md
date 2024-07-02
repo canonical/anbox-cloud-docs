@@ -1,10 +1,13 @@
-The [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and AMS.
+(howto-configure-aar)=
+# How to configure an AAR
+
+The Anbox Application Registry (AAR) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and AMS.
 
 AAR and AMS must exchange certificates to set up a trust relation. The recommended way to do this is with Juju. If you are using the Anbox Cloud Appliance, however, you must register the clients manually.
 
 ## Register an instance using Juju (recommended)
 
-If you are running a full Anbox Cloud deployment, use [Juju relations](https://jaas.ai/docs/relations) to register an instance with the AAR.
+If you are running a full Anbox Cloud deployment, use Juju relations to register an instance with the AAR.
 
 To register an instance as a client, use the following command:
 
@@ -14,11 +17,13 @@ To register an instance as a publisher, use the following command:
 
     juju add-relation aar:publisher ams:registry-publisher
 
-[note type="information" status="Tip"]Run `amc config show` to check that the AAR configuration items were changed.[/note]
+```{tip}
+Run `amc config show` to check that the AAR configuration items were changed.
+```
 
 ### Register units deployed in another model
 
-For `ams` units deployed in another model, you can make use of [Juju cross model relations](https://juju.is/docs/cross-model-relations).
+For `ams` units deployed in another model, you can make use of Juju cross model relations.
 
 Enter the following commands:
 
@@ -108,20 +113,27 @@ Use "aar trust [command] --help" for more information about a command.
 
 Every AMS instance has a registry-specific client certificate that is stored at `/var/snap/ams/common/registry/client.crt`. To manually register an AMS client, you'll need to copy this certificate to the machine hosting AAR and use the CLI to trust it.
 
-To add an AMS client as a trusted [publisher](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761#how-aar-works-1), use the following command:
+To add an AMS client as a trusted publisher, use the following command:
 
     sudo aar trust add client.crt --publisher
 
-To add an AMS client as a trusted [client](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761#how-aar-works-1), use the following command:
+To add an AMS client as a trusted client, use the following command:
 
     sudo aar trust add client.crt
 
-[note type="information" status="Note"]
+```{note}
 Due to Snap strict confinement and the AAR `sudo` requirement, the command requires the certificates to be located in the root user home directory `/root`. To work around this requirement, use the following command:
 
 `cat client.crt | sudo aar trust add [--publisher]`
-[/note]
+```
 
 Finally, reboot the AAR:
 
     snap restart aar
+
+## Related topics
+
+* {ref}`exp-aar`
+* {ref}`howto-revoke-aar`
+* [Juju relations](https://jaas.ai/docs/relations)
+* [Juju cross model relations](https://juju.is/docs/cross-model-relations)

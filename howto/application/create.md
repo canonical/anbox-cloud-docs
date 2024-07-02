@@ -1,10 +1,13 @@
+(howto-create-application)=
+# How to create an application
+
 An application can be created using the Anbox Cloud dashboard or through the CLI.
 
 Any application must be created first to be available on the Anbox Cloud cluster. The internal process will prepare an instance based on the currently available image with the application package installed. This instance is then used for any newly launched instances to support fast boot times.
 
 ## Prerequisites
 
-To create a new application, you need an [application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) and optionally an Android Package (APK) with support for target architecture.
+To create a new application, you need an {ref}`ref-application-manifest` and optionally an Android Package (APK) with support for target architecture.
 
 The application manifest is a `yaml` file and is used to define various attributes of your application.
 
@@ -67,13 +70,15 @@ If you are using a tarball file, compress the file with bzip2 and use the same c
 
     tar cvjf foo.tar.bz2 -C <package-folder-path> app.apk extra-data manifest.yaml
 
-[note type="information" status="Note"]Due to Snap strict confinement, the directory/zip archive/tarball must be located in the home directory.[/note]
+```{note}
+Due to Snap strict confinement, the directory/zip archive/tarball must be located in the home directory.
+```
 
 When you are ready, run:
 
     amc application create <path/to/application_content>
 
-When the `create` command returns, the application package is uploaded to the Anbox Management Service (AMS) which starts the [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2).
+When the `create` command returns, the application package is uploaded to the Anbox Management Service (AMS) which starts the bootstrap process.
 
 Remember that the application is not yet ready to be used. You can watch the status of the application with the following command:
 
@@ -121,4 +126,8 @@ resources:
   disk-size: 8GB
 ```
 
-Once the status of the application switches to `ready`, the application is ready and can be used. See [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
+Once the status of the application switches to `ready`, the application is ready and can be used. See {ref}`howto-wait-for-application` for information about how to monitor the application status.
+
+## Related topics
+
+* {ref}`sec-application-bootstrap`

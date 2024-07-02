@@ -1,3 +1,6 @@
+(exp-clustering)=
+# Clustering
+
 While it is possible to install Anbox Cloud on a single machine, Anbox Cloud Appliance does not support multi-node setups. If you intend to distribute the load across multiple machines in a cluster, it is recommended to use Anbox Cloud for full deployments instead.
 
 ## Clustering for full Anbox Cloud deployments
@@ -8,8 +11,9 @@ Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https:/
 
 ### Cluster capacity
 
-Anbox Cloud is optimised to provide instances at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for more information.
+Anbox Cloud is optimised to provide instances at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See {ref}`exp-capacity-planning` for more information.
 
+(sec-lxd-auto-scaling)=
 ### LXD auto scaling
 
 Different use cases for Anbox Cloud require elasticity of the LXD cluster to deal with dynamic user demand throughout a certain time period. This involves increasing the number of nodes of the LXD cluster when demand increases and reducing the number of nodes when demand decreases. As Anbox Cloud provides fine-grained capacity management to have tight control over how many users/instances are running on a single node, the driving factor for an auto scaling implementation cannot be deduced from CPU, memory or GPU load but from the planned capacity of the currently available nodes in the cluster.
@@ -31,12 +35,12 @@ The following guidelines are both recommended and must-have aspects of an auto s
 
 The decision of when to scale a cluster up or down is not simple and is different for each use case. The traditional approach to measure CPU, memory or GPU load does not apply for Anbox Cloud as capacity is well-planned and the number of instances per node is configured ahead of time. Furthermore, user patterns are hard to predict and will be different in each case. Hence, custom logic is required to take a decision when a cluster should be scaled up or down.
 
-Anbox Cloud provides [various metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521) to help decide when to scale up or down. Based on these metrics, together with data from a production system, you can build a model trying to predict when auto scaling should trigger.
+Anbox Cloud provides various metrics to help decide when to scale up or down. Based on these metrics, together with data from a production system, you can build a model trying to predict when auto scaling should trigger. See {ref}`ref-prometheus-metrics` for more information.
 
 Future versions of Anbox Cloud will provide a framework which will help to implement such a model.
 
-See [How to scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322) and [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323) for instructions on how to add or remove nodes from the cluster.
+See {ref}`howto-scale-up-cluster` and {ref}`howto-scale-down-cluster` for instructions on how to add or remove nodes from the cluster.
 
-## Related information
+## Related topics
 
-* [Manage cluster nodes](https://discourse.ubuntu.com/t/how-to-manage-cluster-nodes/24334)
+* {ref}`howto-manage-cluster`

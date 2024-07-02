@@ -1,10 +1,13 @@
+(exp-rendering-architecture)=
+# Rendering architecture
+
 The rendering pipeline of Anbox Cloud can vary depending on the GPU used. This guide explains in detail, the rendering architecture of Anbox Cloud while discussing the different rendering pipeline models.
 
 ## Overview
 
 For AMD, Intel and NVIDIA GPUs, an OpenGL ES or EGL driver is layered on top of the [Vulkan API](https://www.vulkan.org/). Since Vulkan API provides better GPU management at a lower level than [OpenGL ES](https://www.khronos.org/opengles/) or [EGL](https://www.khronos.org/egl), this approach is beneficial and preferred by many users.
 
-To have a better understanding of the rendering architecture of Anbox Cloud, it is important to understand what the Android framework offers in terms of rendering. In Android, applications interact with the SurfaceFlinger which is the system compositor that is responsible for composing a frame together from all the outputs rendered by different applications. The frame is then submitted to the hardware composer which renders the frames on a screen. For more information on Android graphics components and how they work, see https://source.android.com/docs/core/graphics.
+To have a better understanding of the rendering architecture of Anbox Cloud, it is important to understand what the Android framework offers in terms of rendering. In Android, applications interact with the SurfaceFlinger which is the system compositor that is responsible for composing a frame together from all the outputs rendered by different applications. The frame is then submitted to the hardware composer which renders the frames on a screen. For more information on Android graphics components and how they work, see [Android documentation on Graphics](https://source.android.com/docs/core/graphics).
 
 ## Rendering pipeline
 
@@ -32,9 +35,8 @@ Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs.
 
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use [ANGLE](https://chromium.googlesource.com/angle/angle) on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA.
 
-## Related information
+## Related topics
 
-* [Supported rendering resources](https://discourse.ubuntu.com/t/37322)
+* {ref}`ref-rendering-resources`
 * [SurfaceFlinger](https://source.android.com/docs/core/graphics/surfaceflinger-windowmanager)
 * [Wayland](https://wayland.freedesktop.org/)
-

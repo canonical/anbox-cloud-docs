@@ -1,3 +1,6 @@
+(howto-install-tools-example)=
+# Example: Install tools
+
 Application images are designed to be as lightweight as possible, and as such, common tools you might expect to see in a regular cloud image might not be available.
 
 You can use hooks to install packages that you require for your application. In this example, we'll install `curl` and `python3`.

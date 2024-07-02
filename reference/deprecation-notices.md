@@ -1,3 +1,5 @@
+# Deprecation notices
+
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
 ## Ubuntu 20.04 (focal)

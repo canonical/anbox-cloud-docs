@@ -1,4 +1,7 @@
-Anbox Cloud provides an HTTP API endpoint through a Unix socket at `/run/users/1000/anbox/api.socket` inside every [instance](https://discourse.ubuntu.com/t/26204#instance). The API allows controlling certain aspects of the Anbox runtime and the Android container.
+(anbox-https-api)=
+# Anbox HTTPS API
+
+Anbox Cloud provides an HTTP API endpoint through a Unix socket at `/run/users/1000/anbox/api.socket` inside every instance. The API allows controlling certain aspects of the Anbox runtime and the Android container.
 
 ## Accessing the API endpoint
 
@@ -56,19 +59,19 @@ HTTP code must be one of 400 or 500.
 
 ## API structure
 
- * [`/1.0`](#heading--10)
-   * [`/1.0/location`](#heading--10location)
-   * [`/1.0/camera`](#heading--10camera)
-     * [`/1.0/camera/data`](#heading--10cameradata)
-   * [`/1.0/sensors`](#heading--10sensors)
-   * [`/1.0/tracing`](#heading--10tracing)
-   * [`/1.0/platform`](#heading--10platform)
-   * [`/1.0/vhal`](#heading--10vhal)
-      * [`/1.0/vhal/config`](#heading--10vhalconfig)
+ * {ref}`sec-anbox-https-api-1.0`
+   * {ref}`sec-anbox-https-api-location`
+   * {ref}`sec-anbox-https-api-camera`
+     * {ref}`sec-anbox-https-api-cameradata`
+   * {ref}`sec-anbox-https-api-sensors`
+   * {ref}`sec-anbox-https-api-tracing`
+   * {ref}`sec-anbox-https-api-platform`
+   * {ref}`sec-anbox-https-api-vhal`
+      * {ref}`sec-anbox-https-api-vhalconfig`
 
 ## API details
 
-<a name="heading--10"></a>
+(sec-anbox-https-api-1.0)=
 ### `/1.0/`
 #### GET
 
@@ -100,7 +103,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 }
 ```
 
-<a name="heading--10location"></a>
+(sec-anbox-https-api-location)=
 ### `/1.0/location`
 #### GET
 
@@ -108,7 +111,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
  * Operation: sync
  * Return: Current location status
 
-[note type="information" status="Note"]After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) won't be processed by Anbox until the location endpoint is disabled again.[/note]
+```{note}
+After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) won't be processed by Anbox until the location endpoint is disabled again.
+```
 
  Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/location | jq .`:
 
@@ -129,7 +134,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
  * Operation: sync
  * Return: standard return value or standard error
 
-[note type="information" status="Note"]Location updates must be activated before posting any location data to Anbox via the `PATCH` method.  If location updates are disabled, requests to provide updates to the Anbox HTTP API will fail.[/note]
+```{note}
+Location updates must be activated before posting any location data to Anbox via the `PATCH` method.  If location updates are disabled, requests to provide updates to the Anbox HTTP API will fail.
+```
 
 Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/location --data '{"enable":true}' | jq .`:
 
@@ -140,18 +147,18 @@ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
     "type": "sync"
 }
 ```
-<a name="location-patch"></a>
+
 #### PATCH
 
  * Description: Provide location update to be forwarded to Android
  * Operation: sync
  * Return: standard return value or standard error
 
-[note type="information" status="Note"]
+```{note}
 The latitude or longitude of geographic coordinates can be expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example or in an NMEA-based data format as [`ddmm.mm`](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). Specify the format by setting the `format` field to either `"wgs84"` or `"nmea"`. If the field is omitted, its value defaults to `"wgs84"`. No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.
 
 Both vertical and horizontal accuracy are measured in meters. The default value for GPS accuracy is 20 meters.
-[/note]
+```
 
 Input:
 
@@ -179,7 +186,7 @@ Return value:
 }
 ```
 
-<a name="heading--10camera"></a>
+(sec-anbox-https-api-camera)=
 ### `/1.0/camera`
 
 #### GET
@@ -233,7 +240,7 @@ To determine if the camera is enabled, run the following query:
 
     curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.enabled
 
-<a name="heading--10cameradata"></a>
+(sec-anbox-https-api-cameradata)=
 ### `/1.0/camera/data`
 
 #### POST
@@ -256,7 +263,9 @@ After this, when opening a camera application, the uploaded image should be disp
 
 If a static image already exists in Anbox Cloud, when you issue the above request next time, the existing image will be overridden.
 
-[note type="information" status="Note"]Irrespective of whether the screen orientation is in landscape or portrait, the size of the uploaded JPEG image must match one of the resolutions you got from the response to the camera info request. Anbox Cloud will rotate the image automatically for you based on current screen orientation.[/note]
+```{note}
+Irrespective of whether the screen orientation is in landscape or portrait, the size of the uploaded JPEG image must match one of the resolutions you got from the response to the camera info request. Anbox Cloud will rotate the image automatically for you based on current screen orientation.
+```
 
 #### DELETE
 
@@ -306,7 +315,7 @@ With ffmpeg, you can do:
 ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream
 ```
 
-<a name="heading--10sensors"></a>
+(sec-anbox-https-api-sensors)=
 ### `/1.0/sensors`
 
 #### GET
@@ -355,7 +364,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
  * Operation: sync
  * Return: standard return value or standard error
 
-[note type="information" status="Note"]Sensor updates must be activated before posting any sensor data to Anbox via the `PATCH` method.  If sensor updates are disabled, requests to provide updates to the Anbox HTTP API will fail.[/note]
+```{note}
+Sensor updates must be activated before posting any sensor data to Anbox via the `PATCH` method.  If sensor updates are disabled, requests to provide updates to the Anbox HTTP API will fail.
+```
 
 Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors --data '{"enable":true}' | jq .`:
 
@@ -400,12 +411,13 @@ Sensor Type       | JSON Data structure |
 
 Please check the following [link](https://developer.android.com/guide/topics/sensors/sensors_environment) for the units of measure for the environmental sensors.
 
-[note type="information" status="Note"]If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the error `Sensor 'acceleration' is not active` even if the sensor updates are activated.
+```{note}
+If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the error `Sensor 'acceleration' is not active` even if the sensor updates are activated.
 Issuing GET method to sensor endpoint can check the current active sensors in the Android container.
-[/note]
+```
 
 
-<a name="heading--10tracing"></a>
+(sec-anbox-https-api-tracing)=
 ### `/1.0/tracing`
 
 #### GET
@@ -465,7 +477,7 @@ Return value:
 As a result, a trace file can be found from the given path recorded in the response.
 You can pull that file from the instance and import it to [Perfetto Trace Viewer](https://ui.perfetto.dev/#!/viewer) for further analysis.
 
-<a name="heading--10platform"></a>
+(sec-anbox-https-api-platform)=
 ### `/1.0/platform`
 
 #### GET
@@ -513,7 +525,7 @@ Platform | Field name       | Available since   | JSON type | Access | Descripti
 `webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
 `webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
 
-<a name="heading--10vhal"></a>
+(sec-anbox-https-api-vhal)=
 ### `/1.0/vhal`
 
 This endpoint queries the [Android VHAL](https://source.android.com/docs/automotive/vhal)
@@ -531,7 +543,7 @@ endpoint will fail with a 500 error code on non-automotive Anbox images.
     * `area_id`: Valid area identifier for the property. Can be omitted for global properties. Can be given in decimal, octal, or hexadecimal format.
     * Some properties require additional data for getting their values. See [OBD2_FREEZE_FRAME](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2061-2089) for an example. This additional data must be passed as JSON in the request body. The values must be set in the fields `int32_values`, `int64_values`, `float_values`, `bytes`, or `string_value`.
 
-To get the list of available properties and areas, query first the [`1.0/vhal/config` endpoint](#heading--10vhalconfig).
+To get the list of available properties and areas, query first the [`1.0/vhal/config` endpoint](#10vhalconfig).
 
 Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/0x15600503/0x31 | jq .`:
 
@@ -560,7 +572,7 @@ Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sock
 
 Usually, only one of `bytes`, `float_values`, `int32_values`, `int64_values`,
 `string_value` is set, and the rest is empty or omitted, depending on the
-property type (see [`1.0/vhal/config`](#heading--10vhalconfig)).
+property type (see [`1.0/vhal/config`](#10vhalconfig)).
 `MIXED` property types may have multiple of these values set at the same time, see
 [VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
 
@@ -620,7 +632,7 @@ Return value for the input above:
     "type": "sync"
 }
 ```
-<a name="heading--10vhalconfig"></a>
+(sec-anbox-https-api-vhalconfig)=
 ### `/1.0/vhal/config`
 
 This endpoint queries the [Android VHAL](https://source.android.com/docs/automotive/vhal)

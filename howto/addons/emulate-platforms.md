@@ -1,3 +1,6 @@
+(howto-emulate-platforms-example)=
+# Example: Emulate platforms
+
 To provide support for platforms that are not natively supported by your application (for example, you want to run an x86_64 application on Arm), use a hook.
 
 Create a hook that installs the software for binary translation and add the top-level key `provides` to your addon manifest. List the architectures that the addon supports, in the value for the `provides` key.

@@ -1,3 +1,6 @@
+(howto-ts-initial-setup)=
+# Troubleshoot issues with initial setup
+
 You might encounter the following issues while setting up your system.
 
 ## Juju hook installation failure

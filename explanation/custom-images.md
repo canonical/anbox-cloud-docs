@@ -1,6 +1,11 @@
+(exp-custom-images)=
+# Custom images
+
 Building custom images of Anbox Cloud based on AAOS is possible but is not recommended.
 
-[note type="information" status="Note"]Building custom images is possible only for Android 13 and is currently possible for AAOS images only.[/note]
+```{note}
+Building custom images is possible only for Android 13 and is currently possible for AAOS images only.
+```
 
 Using customised Anbox Cloud images will lead to more maintenance work on your end:
 

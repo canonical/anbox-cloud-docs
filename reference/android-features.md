@@ -1,3 +1,6 @@
+(ref-android-features)=
+# Supported Android features
+
 Anbox Cloud implements support for various Android features. The following table lists certain Android features and if they are supported in Anbox Cloud.
 
 | Feature           | Supported | Notes  |
@@ -7,7 +10,7 @@ Anbox Cloud implements support for various Android features. The following table
 | [Camera](https://source.android.com/devices/camera) |  ✓  |     |
 | [Sensors](https://source.android.com/devices/sensors) |  ✓  |   |
 | Location           |  ✓  |          |
-| [VHAL](https://source.android.com/docs/automotive/vhal) |  ✓  | Only on [AAOS images](https://discourse.ubuntu.com/t/provided-images/24185). |
+| [VHAL](https://source.android.com/docs/automotive/vhal) |  ✓  | Only on AAOS images (See {ref}`ref-provided-images`). |
 | NFC                |      |            |
 | [Bluetooth](https://source.android.com/devices/bluetooth) | | |
 | WiFi               |  ✓  | Only simulated WiFi is provided to the Android instance. |

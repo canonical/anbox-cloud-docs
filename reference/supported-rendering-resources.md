@@ -1,7 +1,13 @@
+(ref-rendering-resources)=
+# Supported rendering resources
+
 This guide lists various supported GPU vendors, drivers, platforms, APIs and discuss the rendering pipelines used for different GPUs.
 
-[note type="information" status="Important"]Currently Anbox Cloud does not support GPU for virtual machines.[/note]
+```{important}
+Currently Anbox Cloud does not support GPU for virtual machines.
+```
 
+(sec-supported-gpus)=
 ## Supported GPU vendors and GPU models
 
 Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data centre. We currently support the following GPU vendors:
@@ -22,7 +28,7 @@ Concrete support for the individual GPU depends on the platform being using for 
 
 For GPUs on which Anbox Cloud doesn't support hardware video encoding, a software-based video encoding fallback is available.
 
-Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice using the [Anbox Platform SDK](https://discourse.ubuntu.com/t/17844).
+Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice using the Anbox Platform SDK. See {ref}`sec-platform-sdk` for more information.
 
 ## Supported GPU drivers
 
@@ -30,8 +36,9 @@ For NVIDIA GPUs, Anbox Cloud uses the [Enterprise Ready Driver (ERD) from NVIDIA
 
 For AMD GPUs, Anbox Cloud uses the [Mesa radv](https://docs.mesa3d.org/drivers/radv.html) driver and for Intel GPUs, the [Mesa anv](https://docs.mesa3d.org/drivers/anv.html) driver.
 
-See [Component versions](https://discourse.ubuntu.com/t/21413) to refer to the actual version supported for any particular Anbox Cloud release.
+See {ref}`ref-component-versions` to refer to the actual version supported for any particular Anbox Cloud release.
 
+(sec-supported-platforms)=
 ## Supported platforms
 
 Anbox Cloud can make use of different [platforms](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) to customise its behaviour and currently supports 3 platforms.
@@ -65,7 +72,7 @@ The following OpenGL ES extensions are known to be unsupported by all used GPU d
 * [`GL_EXT_shader_framebuffer_fetch`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 * [`GL_EXT_shader_framebuffer_fetch_non_coherent`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 
-## Related information
+## Related topics
 
-* [Rendering architecture](https://discourse.ubuntu.com/t/rendering-architecture/35129)
-* [Configuring the Anbox Cloud platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)
+* {ref}`exp-rendering-architecture`
+* {ref}`exp-platforms`

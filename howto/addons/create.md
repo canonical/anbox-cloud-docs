@@ -1,9 +1,12 @@
+(howto-create-addons)=
+# How to create an addon
+
 To create or update an addon, you need a specific file structure for the directory containing your addon files. In the directory where you created your addon files, also create the following:
 
-- A file named `manifest.yaml`. See [Addon manifest](https://discourse.ubuntu.com/t/25293) to learn about valid keys in an addon manifest file.
+- A file named `manifest.yaml`. See {ref}`ref-addon-manifest` to learn about valid keys in an addon manifest file.
 - A directory named `hooks`. This directory must contain at least one executable file with a valid hook name.
 
-Other files in the addon directory are bundled with the addon. They can be accessed in a hook by using the `$ADDON_DIR` [environment variable](https://discourse.ubuntu.com/t/hooks/28555#environment-variables-1).
+Other files in the addon directory are bundled with the addon. They can be accessed in a hook by using the `$ADDON_DIR` environment variable. See {ref}`sec-env-variables` for more information.
 
 For example:
 

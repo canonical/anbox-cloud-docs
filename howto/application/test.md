@@ -1,4 +1,7 @@
-Anbox Cloud enables you to run automated tests for Android applications at scale. In the following example, we make use of [Appium](http://appium.io/) to interact with an [instance](https://discourse.ubuntu.com/t/26204#instance) running on Anbox Cloud and automate UI testing for Android applications.
+(howto-test-application)=
+# How to test your application
+
+Anbox Cloud enables you to run automated tests for Android applications at scale. In the following example, we make use of [Appium](http://appium.io/) to interact with an instance running on Anbox Cloud and automate UI testing for Android applications.
 
 ## Setup Anbox Cloud for Appium
 
@@ -12,13 +15,17 @@ This will create an instance which exposes the TCP port `5559` on its private ad
 
     amc launch -s +adb --enable-graphics -r
 
-[note type="information" status="Tip"]If you're wondering about the syntax of the command used to launch an instance, see [How to launch an instance](https://discourse.ubuntu.com/t/24327).[/note]
+```{tip}
+If you're wondering about the syntax of the command used to launch an instance, see {ref}`howto-create-instance`.
+```
 
-If you want to run the Appium tests against an Android application managed by AMS (see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular instance instead:
+If you want to run the Appium tests against an Android application managed by AMS (see {ref}`howto-create-application`) you can start a regular instance instead:
 
     amc launch -s adb --enable-graphics --disable-watchdog app
 
-[note type="information" status="Important"]The `--disable-watchdog` argument is important because by default, Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this, we need to disable the watchdog.[/note]
+```{important}
+The `--disable-watchdog` argument is important because by default, Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this, we need to disable the watchdog.
+```
 
 Once the instance is up and running, you can get its private IP address and the exposed port for the ADB service endpoint with the `amc ls` command:
 
@@ -55,11 +62,11 @@ You should see output similar to the following:
 connected to localhost:10000
 ```
 
-[note type="caution" status="Warning"]
+```{caution}
 Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first:
 
 `sudo apt purge -y adb`
-[/note]
+```
 
 ## Execute Tests with Appium
 
@@ -87,7 +94,7 @@ For more details about Appium, please refer to the [Appium official documentatio
 
 ### APK managed by AMS
 
-If you want to run test cases without installing the APK every time when starting a new test session in Appium, you can let AMS manage the application for you. See [About applications](https://discourse.ubuntu.com/t/managing-applications/17760) for more details.
+If you want to run test cases without installing the APK every time when starting a new test session in Appium, you can let AMS manage the application for you. See {ref}`exp-applications` for more information.
 
 In this example we use the following application `manifest.yaml`:
 
@@ -103,7 +110,9 @@ Once the application is fully bootstrapped by AMS, you can launch an instance fo
 
     amc launch -s +adb --enable-graphics --disable-watchdog app
 
-[note type="information" status="Note"]Use the `--vm` option to launch a VM instance.[/note]
+```{note}
+Use the `--vm` option to launch a VM instance.
+```
 
 After the instance is up and running, you need to specify the proper `appPackage` and `appActivity` in the Appium preset, the installed Android application will be launched automatically in the instance when a new session is created by Appium.
 

@@ -1,29 +1,34 @@
-This tutorial guides you through the first steps of managing Anbox Cloud from the command line. You will learn how to communicate with [AMS](https://discourse.ubuntu.com/t/about-ams/24321) and how to create and access a virtual Android device or an application.
+(tut-getting-started-cli)=
+# Getting started with Anbox Cloud (CLI)
 
-The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.
+This tutorial guides you through the first steps of managing Anbox Cloud from the command line. You will learn how to communicate with the {ref}`exp-ams` (AMS) and how to create and access a virtual Android device or an application.
+
+The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the web dashboard, which provides a simpler user interface but does not support all functionality.
+
+See the {ref}`tut-getting-started-dashboard` tutorial for an introduction to and {ref}`howto-use-web-dashboard` for detailed instructions on using the web dashboard.
 
 ## Preparation
 
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
-* [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
-* [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)
+* {ref}`howto-install-appliance`
+* {ref}`howto-install-anbox-cloud`
 
-## 1. Run AMC
+## Run AMC
 
-The Anbox Management Client `amc` communicates with the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321). You will use `amc` to manage all aspects of Anbox Cloud that are related to AMS.
+The Anbox Management Client `amc` communicates with the AMS. You will use `amc` to manage all aspects of Anbox Cloud that are related to AMS.
 
 How and where to run `amc` depends on your use case:
 
 - If you are running the Anbox Cloud Appliance on AWS, `amc` is already installed on the machine that runs the appliance. Log on to that machine to run `amc`.
 
   Note that you must use the user name `ubuntu` and provide the path to your private key file when connecting. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
-- If you are running the Anbox Cloud Appliance on a physical or virtual machine, log on to that machine and ensure that you have [enabled the `anbox-cloud` service using the Ubuntu Pro client](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#h-3-enable-the-anbox-cloud-service-using-the-ubuntu-pro-client-5).
+- If you are running the Anbox Cloud Appliance on a physical or virtual machine, log on to that machine and ensure that you have performed the instructions mentioned in {ref}`sec-enable-anbox-pro`.
 - If you are running a full Anbox Cloud deployment, access the `ams/0` machine to run `amc`. You can do this by opening an SSH session with the `juju` command:
 
         juju ssh ams/0
 
-- If you want to run `amc` on your local Ubuntu-based development machine against a remote Anbox Cloud installation, follow the instructions in [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774).
+- If you want to run `amc` on your local Ubuntu-based development machine against a remote Anbox Cloud installation, follow the instructions in {ref}`howto-access-ams-remote`.
 
 To ensure that `amc` is available, run the following command:
 
@@ -33,9 +38,13 @@ To check if `amc` is set up to access the correct AMS, run the following command
 
     amc remote list
 
-## 2. Ensure images are available
+## Ensure images are available
 
-Next, check whether AMS has synchronised all images from the Canonical hosted image server. You can list all synchronised images with the `amc image ls` command:
+The next step is to check whether AMS has synchronised all images from the Canonical hosted image server. To list all the synchronised images, run:
+
+        amc image ls
+
+The output should look similar to:
 
 ```bash
 +----------------------+------------------------+--------+----------+--------------+---------+
@@ -45,19 +54,17 @@ Next, check whether AMS has synchronised all images from the Canonical hosted im
 +----------------------+------------------------+--------+----------+--------------+---------+
 | cgrqjnmk9eqlsruefco0 | jammy:android12:arm64  | active | 1        | aarch64      | false   |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| cgrqk2uk9eqlsruefcog | jammy:android11:arm64  | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
 ```
-
-See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for more information.
 
 If the images are not yet available, wait a few minutes, then try again.
 
-## 3. Create a virtual device
+## Create a virtual device
 
 Let's start exploring what Anbox Cloud can do by launching a virtual device that runs a specific Android version.
 
-[note type="information" status="Note"]With "virtual device" we mean a simulated device that runs a plain Android operating system without any special apps installed. Technically speaking, Anbox Cloud treats such a virtual device as an "empty" application, thus an application that is not running a specific APK.[/note]
+```{note}
+With "virtual device" we mean a simulated device that runs a plain Android operating system without any special apps installed. Technically speaking, Anbox Cloud treats such a virtual device as an "empty" application, thus an application that is not running a specific APK.
+```
 
 Complete the following steps to create a virtual device:
 
@@ -75,7 +82,7 @@ Complete the following steps to create a virtual device:
 
         amc application create /path/to/manifest/directory/
 
-3. The application is now being [bootstrapped](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). Enter the following command to monitor the progress:
+3. The application is now being {ref}`bootstrapped <sec-application-bootstrap>`. Enter the following command to monitor the progress:
 
         watch -n 1 amc application ls
 
@@ -89,7 +96,7 @@ Complete the following steps to create a virtual device:
    +----------------------+--------------------+---------------+--------+------+-----------+--------+---------------------+
    ```
 
-## 4. Log on to the virtual device
+## Log on to the virtual device
 
 When the application for the virtual device is ready, you can launch it and log on to it:
 
@@ -117,7 +124,9 @@ When the application for the virtual device is ready, you can launch it and log 
 
    You can find the container ID of the virtual device in the list of containers.
 
-   [note type="information" status="Tip"]You can use tab completion when entering the container ID.[/note]
+  ```{tip}
+  You can use tab completion when entering the container ID.
+  ```
 4. You are now inside the Linux container that runs the Android container. To access the nested Android container, enter the following command:
 
         anbox-shell
@@ -125,9 +134,9 @@ When the application for the virtual device is ready, you can launch it and log 
 5. Enter some commands. For example, enter `ls` to display the files inside the Android container, or `logcat` to display the logs.
 6. Enter `exit` or press `Ctrl`+`D` once to exit the Android shell, and then again to exit the Linux container.
 
-## 5. Test the virtual device
+## Test the virtual device
 
-You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [How to access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#access-an-instance-with-scrcpy-2) for more detailed instructions.
+You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See {ref}`sec-access-instance-scrcpy` for more detailed instructions.
 
 If you do not have `scrcpy` installed on your local machine, enter the following command to install it:
 
@@ -168,11 +177,13 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
         scrcpy
 
-## 6. Create an application from an APK
+## Create an application from an APK
 
 Creating an application for a specific Android app is very similar to creating a virtual device, except that you provide an APK of the Android app when creating the Anbox Cloud application.
 
-[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [How to port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
+```{important}
+Not all Android apps are compatible with Anbox Cloud. See {ref}`howto-port-android-apps` for more information.
+```
 
 Complete the following steps to create an application from an APK:
 
@@ -180,7 +191,7 @@ Complete the following steps to create an application from an APK:
 
 2. Create a `manifest.yaml` file in that folder. This manifest contains the application name and if necessary, define resources for the application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
 
-If no specific resources are mentioned, the [default resource preset](https://discourse.ubuntu.com/t/24960) is used.
+If no specific resources are mentioned, the {ref}`default resource preset <exp-resources-presets>` is used.
 
    For example, the file could look like this:
 
@@ -192,22 +203,24 @@ If no specific resources are mentioned, the [default resource preset](https://di
      disk-size: 8GB
    ```
 
-   [note type="information" status="Tip"]The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. For more information about the manifest format, see [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) documentation.[/note]
+   ```{tip}
+   The manifest can also contain more advanced configuration like {ref}`exp-addons`, permissions and others. For more information about the manifest format, see {ref}`ref-application-manifest` documentation.
+   ```
 2. Enter the following command to create the application, replacing */path/to/manifest/directory/* with the path to the directory where you created the manifest file:
 
         amc application create /path/to/manifest/directory/
 
-3. The application is now being [bootstrapped](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). Enter the following command to monitor the progress:
+3. The application is now being {ref}`bootstrapped <sec-application-bootstrap>`. Enter the following command to monitor the progress:
 
         watch -n 1 amc application ls
 
    Wait until the status of the application changes to `ready`.
 
-When the application is ready, you can launch it and then test it in the same way as the virtual device by either [logging on to it](#h-4-log-on-to-the-virtual-device-5) or [connecting to it with `scrcpy`](#h-5-test-the-virtual-device-6).
+When the application is ready, you can launch it and then test it in the same way as the virtual device by either [logging on to it](#log-on-to-the-virtual-device) or [connecting to it with `scrcpy`](#test-the-virtual-device).
 
-## 7. Update an application
+## Update an application
 
-You can have several versions of an application. See [How to update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for detailed information.
+You can have several versions of an application. See {ref}`howto-update-application` for detailed information.
 
 Complete the following steps to add a new version to your application:
 
@@ -238,7 +251,7 @@ Complete the following steps to add a new version to your application:
 
 When you launch an application without explicitly specifying a version, AMS uses the latest published version of the application. Therefore, when you now launch the application again, the new version of your application is selected and the ADB service is exposed automatically.
 
-## 8. List and delete applications and containers
+## List and delete applications and containers
 
 While following this tutorial, you created several applications and containers. Let's check them out and delete the ones that aren't needed anymore:
 
@@ -297,6 +310,11 @@ You now know how to use the command line to create, launch and test applications
 
 This tutorial used a container to illustrate how to create and work with applications using Anbox Cloud. Alternatively, you can also use a virtual machine instead of a container by using the `--vm` option with the `amc` commands.
 
-If you are interested in a more easy-to-use interface, check out the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
+If you are interested in a more easy-to-use interface, check out the {ref}`tut-getting-started-dashboard` tutorial to learn how to manage Anbox Cloud using the web dashboard.
 
-Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with instances](https://discourse.ubuntu.com/t/24335) for more in-depth information.
+## Related topics
+
+* {ref}`howto-use-web-dashboard`
+* {ref}`howto-manage-applications`
+* {ref}`howto-instance`
+* {ref}`ref-provided-images`

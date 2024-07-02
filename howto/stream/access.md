@@ -1,3 +1,6 @@
+(howto-access-stream-gateway)=
+# How to access the stream gateway
+
 Similar to the Anbox Management Service (AMS), the stream gateway exposes its API over an HTTP interface. Clients can be anything from the Anbox Cloud web dashboard to any custom client that you develop.
 
 ## Access the stream gateway
@@ -38,10 +41,10 @@ curl -X GET https://20.234.75.29:4000/1.0/sessions \
 curl -X GET https://20.234.75.29:4000/1.0/sessions?api_token=AgEUYW5ib3...QSyzaA_GHLYQ
 ```
 
-[note type="information" status="Note"]
+```{note}
 - The Anbox Stream SDK handles the token automatically for all its requests.
 - The token does not get renewed automatically. If it expires, create a new token.
-[/note]
+```
 
 ### Deleting a token
 
@@ -55,9 +58,9 @@ If you are running the Anbox Cloud Appliance, use the following command:
 
 Type `anbox-stream-gateway --help` to list all commands.
 
-## Related information
+## Related topics
 
-* [About application streaming](https://discourse.ubuntu.com/t/17769)
-* [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/24321)
-* [Anbox Cloud streaming SDK](https://discourse.ubuntu.com/t/17844#anbox-cloud-streaming-sdk-8)
-* [Set up a stream client](https://discourse.ubuntu.com/t/37328)
+* {ref}`exp-application-streaming`
+* {ref}`exp-ams`
+* {ref}`tut-set-up-stream-client`
+* {ref}`sec-streaming-sdk`

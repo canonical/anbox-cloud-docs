@@ -1,5 +1,10 @@
+(howto-view-instance-logs)=
+# How to view the instance logs
+
 You can view the Anbox and the Android system logs while an instance is running, or check the collected logs if an instance fails.
-[note type="information" status="Note"]AMS does not support runtime log collection. Logs are currently only being collected from an instance that failed to start or had an error at runtime.[/note]
+```{note}
+AMS does not support runtime log collection. Logs are currently only being collected from an instance that failed to start or had an error at runtime.
+```
 
 ## View runtime logs
 
@@ -15,6 +20,7 @@ To follow the log and get automatic updates for new entries, add the `-f` argume
 
 This will show the logs and update the output whenever new entries are added.
 
+(sec-view-stored-logs)=
 ## View stored logs
 
 If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection.

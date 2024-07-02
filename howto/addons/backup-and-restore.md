@@ -1,3 +1,5 @@
+(howto-backup-restore-example)=
+# Example: Back up data
 When an instance is stopped, all the data and logs produced during the runtime are lost. To avoid this, you can use hooks to back up and restore any type of data you want.
 
 ## Back up data

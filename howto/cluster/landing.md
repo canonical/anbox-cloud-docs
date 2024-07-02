@@ -1,11 +1,19 @@
+(howto-manage-cluster)=
+# How to manage cluster nodes
+
 The guides in this section describe how to distribute the load of your Anbox Cloud installation over several machines in a cluster.
 
-For full Anbox Cloud deployments:
+See {ref}`exp-clustering` for an introduction to how clustering works in Anbox Cloud.
 
-* [How to configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716)
-* [How to scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)
-* [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)
+```{important}
+Currently, Anbox Cloud Appliance does not support clustering.
+```
+The following how-to guides are available for operations related to clustering in regular Anbox Cloud deployments:
 
-See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction to how clustering works in Anbox Cloud.
+```{toctree}
+:titlesonly:
 
-[note type="information" status="Important"]Currently, Anbox Cloud Appliance does not support clustering.[/note]
+Configure cluster nodes <configure-nodes>
+Scale down a cluster <scale-down>
+Scale up a cluster <scale-up>
+```

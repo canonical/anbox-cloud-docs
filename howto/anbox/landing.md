@@ -1,6 +1,16 @@
-The guides in this section describe how to work with the Anbox runtime, which is responsible for running the Android container, providing access to any hardware and integrating with streaming protocols.
+(howto-manage-anbox)=
+# How to manage Anbox Cloud
 
-The following guides are available:
+The following guides in this section help you to manage and work with your Anbox Cloud or Anbox Cloud Appliance installation.
 
-* [How to develop a platform plugin](https://discourse.ubuntu.com/t/how-to-develop-a-platform-plugin/33099)
-* [How to develop an addon](https://discourse.ubuntu.com/t/develop-and-test-addons-in-development-mode/36914)
+```{toctree}
+:titlesonly:
+
+Control AMS remotely <ams-access>
+Manage images <images>
+Resize LXD storage <resize-storage>
+Run benchmarks <benchmarks>
+Set up TLS <tls-for-appliance>
+```
+
+You can also refer to {ref}`ref-appliance-commands` and {ref}`ref-amc-commands` for commands that you can use with the CLI.

@@ -1,4 +1,7 @@
-Hooks are scripts that automatically trigger actions based on an event performed in the life cycle of an [instance](https://discourse.ubuntu.com/t/26204#instance). A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder.
+(ref-hooks)=
+# Hooks
+
+Hooks are scripts that automatically trigger actions based on an event performed in the life cycle of an instance. A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder.
 
 The hook name **must** be one of the following:
 
@@ -12,12 +15,13 @@ The hook name **must** be one of the following:
 | restore (deprecated) | DEPRECATED: Use `pre-start` instead. Executed before Android starts.                                                 |
 | backup (deprecated)  | DEPRECATED: Use `post-stop` instead. Executed after Android shuts down.                                              |
 
-A failed hook will cause the instance to stop immediately and end up in an error state. In such cases, [view the instance logs](https://discourse.ubuntu.com/t/24329) to further investigate the causes of failure.
+A failed hook will cause the instance to stop immediately and end up in an error state. In such cases, see {ref}`howto-view-instance-logs` to further investigate the causes of failure.
 
 The following figure shows when the different hooks are executed in the life cycle of a base or a regular instance.
 
 ![Hooks execution in the life cycle of an instance |471x601](https://assets.ubuntu.com/v1/8441e690-addons-reference-hook-order.png)
 
+(sec-env-variables)=
 ## Environment variables
 
 When hooks are invoked, several environment variables are set to provide context to the addon.

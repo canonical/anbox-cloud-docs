@@ -1,3 +1,6 @@
+(howto-update-application)=
+# How to update an application
+
 Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be launched at a time.
 
 When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
@@ -82,11 +85,12 @@ resources:
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.
 
+(sec-publish-app-versions)=
 ## Publish application versions
 
 The most important part of an application version is the `published` field. If a version is marked as published, it is available to launch and use. Generally when launching instances by using the AMS REST API, if no specific application version is given, by default, the latest published version of an application is used to create the instance.
 
-If [`application.auto_publish`](https://discourse.ubuntu.com/t/ams-configuration/20872) is set to `true` (the default), new versions are automatically published. Otherwise, you need to publish them manually.
+If `application.auto_publish` (in {ref}`ref-ams-configuration`) is set to `true` (the default), new versions are automatically published. Otherwise, you need to publish them manually.
 
 You can mark an application version as published with the following command:
 
@@ -106,6 +110,7 @@ Each version takes up space on the LXD nodes. To free up space and remove old an
 
 The command will ask for your approval before the version is removed as it might affect your users. If you want to bypass the check, you can add the `--yes` flag to the command.
 
+(sec-configure-automatic-app-updates)=
 ## Configure automatic application updates
 
 AMS automatically updates an application whenever any of its dependencies (parent image, addons, global configuration) changes. This produces a new version for the application, which is automatically published if the `application.auto_publish` configuration item is enabled.

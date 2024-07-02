@@ -1,3 +1,6 @@
+(howto-debug-graphics-renderdoc)=
+# How to debug graphics with Renderdoc
+
 [Renderdoc](https://github.com/baldurk/renderdoc) is a graphics frame debugger which supports Android applications.
 
 Debugging graphics can be challenging and [Renderdoc](https://github.com/baldurk/renderdoc) is a great tool to provide insight into Vulkan and OpenGL command execution. The following describes how you can use Renderdoc with Anbox Cloud.
@@ -10,7 +13,7 @@ For capturing Android applications you need to install the Android SDK as Render
 
 ## Configure Renderdoc
 
-Capturing applications running in Android with Renderdoc is not much different than what is described in [the official documentation](https://renderdoc.org/docs/how/how_android_capture.html). The most important part is to configure the path to the Android SDK in the Renderdoc settings. See [here](https://renderdoc.org/docs/window/settings_window.html#android-options) for more details.
+Capturing applications running in Android with Renderdoc is not much different than what is described in [the official documentation](https://renderdoc.org/docs/how/how_android_capture.html). The most important part is to configure the path to the Android SDK in the Renderdoc settings. See [Android options](https://renderdoc.org/docs/window/settings_window.html#android-options) for more information.
 
 ## Configure Anbox
 
@@ -26,10 +29,10 @@ The device will show up in the output of
 
     adb devices
 
-You can find more information in [Access an instance](https://discourse.ubuntu.com/t/how-to-access-an-instance/17772).
+See {ref}`howto-access-instance` for more information.
 
-Renderdoc can only inject itself into applications which have debug mode turn on. See [here](https://renderdoc.org/docs/how/how_android_capture.html#how-do-i-use-renderdoc-on-android) for more details.
+Renderdoc can only inject itself into applications which have debug mode turn on. See [How do I use RenderDoc on Android?](https://renderdoc.org/docs/how/how_android_capture.html#how-do-i-use-renderdoc-on-android) for more information.
 
 ## Capture a trace
 
-Capturing a trace on Anbox Cloud is no different after the initial setup than on any other Android devices and you can follow the instructions [in the official documentation](https://renderdoc.org/docs/how/how_android_capture.html#).
+Capturing a trace on Anbox Cloud is no different after the initial setup than on any other Android devices and you can follow the instructions [in the official documentation](https://renderdoc.org/docs/how/how_android_capture.html).

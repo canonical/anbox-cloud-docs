@@ -1,3 +1,6 @@
+(howto-backup-restore-application-data)=
+# How to back up and restore application data
+
 Backup and restoration of application data can be achieved easily with the `aam`  (Anbox Application Manager) utility helper installed in the image. The `aam` can bundle any necessary application data together into a tarball file or extract the tarball file to a particular application folder according to the specified package name.
 
 ## Back up application data
@@ -11,9 +14,9 @@ TARBALL_FILE=$(basename $(find ./ -name *.tar.bz2))
  # Upload the tarball to public or private cloud storage service
 curl -i -X POST --data-binary @"${TARBALL_FILE}" <cloud_storage_upload_url>
 ```
-Running this script in an [addon post-stop hook](https://discourse.ubuntu.com/t/example-back-up-data/25289) will back up the user data of a particular application with `aam` and upload the resulting tarball file to the cloud storage service when an instance is stopped.
+Running this script in an addon post-stop hook will back up the user data of a particular application with `aam` and upload the resulting tarball file to the cloud storage service when an instance is stopped.
 
-If [`boot-package`](https://discourse.ubuntu.com/t/application-manifest/24197) is specified in the application manifest file, you can also back up the boot application data simply with the flag `--boot-package`.
+If `boot-package` is specified in the application manifest file, you can also back up the boot application data simply with the flag `--boot-package`.
 
     aam backup --boot-package
 
@@ -22,7 +25,7 @@ If [`boot-package`](https://discourse.ubuntu.com/t/application-manifest/24197) i
 
 ## Restore application data
 
-The application data can be restored with the following [pre-start hook](https://discourse.ubuntu.com/t/example-back-up-data/25289#restore-data-2) when an instance is up and running:
+The application data can be restored with the following pre-start hook when an instance is up and running:
 
 ```bash
 #!/bin/sh -ex
@@ -45,7 +48,7 @@ Sometimes, not every piece of data is useful (for example, cache), and backing u
 `include`    | Include files in resulting tarball with a wildcard
 `exclude`    | Exclude files in resulting tarball with a wildcard
 
-Please refer to the pattern syntax [here](https://golang.org/pkg/path/filepath/#Match).
+Please refer to the pattern syntax [in the Go documentation](https://golang.org/pkg/path/filepath/#Match).
 
 For example, with the following filters:
 
@@ -66,3 +69,7 @@ And exclude the following files:
 
 * Files with `jpeg` suffix below the folder `/sdcard/Android/data/com.canonical.candy/user_data`
 * Files with `cfg` suffix below the folder `/data/data/com.canonical.candy/new_level`
+
+## Related topics
+
+* {ref}`howto-backup-restore-example`

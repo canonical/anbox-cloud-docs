@@ -1,3 +1,6 @@
+(howto-access-instance)=
+# How to access an instance
+
 In some cases, it might be necessary to access an individual instance for debugging reasons.
 
 You can do this on the command line with the `amc` command, or you can use [scrcpy](https://github.com/Genymobile/scrcpy) for graphical access.
@@ -18,6 +21,7 @@ If you only want to watch the Android log output, use the following command:
 
 `amc shell` and `amc exec` open various possibilities for automation use cases. See the help output of the commands for further details.
 
+(sec-access-instance-scrcpy)=
 ## Access an instance with scrcpy
 
 The AMS services enable connecting remotely over a network to instance via [scrcpy](https://github.com/Genymobile/scrcpy).
@@ -35,14 +39,18 @@ Install scrcpy in one of the following ways:
 
         apt install scrcpy
 
+  ```{note}
   <!-- wokeignore:rule=master -->
-  [note type="information" status="Note"]The packaged version from the Ubuntu repositories may not be the latest. It is recommended to follow the instructions mentioned in the [scrcpy documentation](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md#latest-version) to install the latest version of scrcpy.[/note]
+  The packaged version from the Ubuntu repositories may not be the latest. It is recommended to follow the instructions mentioned in the [scrcpy documentation](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md#latest-version) to install the latest version of scrcpy.
+  ```
 
 * Install scrcpy from the [Ubuntu snap store](https://snapcraft.io):
 
         sudo snap install scrcpy
 
-  [note type="information" status="Note"]The scrcpy snap package that is published to snap store is a non-official package. You can use it, but it's at your own risk. Because of this, it's highly recommended to build scrcpy from source by yourself.[/note]
+  ```{note}
+  The scrcpy snap package that is published to snap store is a non-official package. You can use it, but it's at your own risk. Because of this, it's highly recommended to build scrcpy from source by yourself.
+  ```
 
 ### Launch instance
 
@@ -50,7 +58,9 @@ First, launch an instance with graphics enabled:
 
     amc launch -s +adb --enable-graphics -r default
 
-[note type="information" status="Note"]Use the `--vm` flag to launch a virtual machine.[/note]
+```{note}
+Use the `--vm` flag to launch a virtual machine.
+```
 
 The above command will launch a container instance from the default image. Since scrcpy requires ADB to establish the connection between your host and the instance, the ADB service must be enabled by default. With the leading `+` symbol to the `adb` service, it exposes TCP port 5559 on the public address of the node.
 
@@ -66,7 +76,9 @@ Afterwards you can find the network endpoint of the instance in the output of th
 
 The endpoint of the ADB service exposed from the running instance is available at 10.226.4.200:10000 on the public network.
 
-[note type="caution" status="Warning"]Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#through-ssh-tunnel-6) if possible.[/note]
+```{caution}
+Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#through-ssh-tunnel) if possible.
+```
 
 ### Run scrcpy
 
@@ -92,7 +104,9 @@ To set up a secure connection, launch the instance so that it doesn't expose the
 
     amc launch -s adb --enable-graphics -r default
 
-[note type="information" status="Note"]Use the `--vm` flag to launch a virtual machine.[/note]
+```{note}
+Use the `--vm` flag to launch a virtual machine.
+```
 
 As the ADB service is enabled for the launched instance but without the leading `+`, the endpoint `10.226.4.168:10000/tcp` shown via `amc ls` is not exposed to the public network:
 

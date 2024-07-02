@@ -1,9 +1,13 @@
+(ref-sdks)=
+# Anbox Cloud SDKs
+
 Anbox Cloud provides a series of Software Development Kits (SDKs) to facilitate integrating and extending Anbox Cloud for different use cases:
 
 - Anbox Platform SDK
 - AMS SDK
 - Anbox Streaming SDK
 
+(sec-platform-sdk)=
 ## Anbox Platform SDK
 
 The Anbox Platform SDK provides support for developing custom platform plugins, which allows cloud providers to integrate Anbox with their existing infrastructure. The SDK provides several integration points for things like rendering, audio or input processing.
@@ -27,6 +31,7 @@ The Anbox Platform SDK provides a collection of example platform plugins to help
 * `minimal` - A platform plugin that provides a sample implementation of a minimal platform plugin to demonstrate the general plugin layout.
 * `audio_streaming` - A platform plugin that provides a more advanced example of how a platform plugin can process audio and input data.
 
+(sec-ams-sdk)=
 ## AMS SDK
 
 The AMS SDK offers a set of [Go](https://golang.org/) packages and utilities for any external [Go](https://golang.org/) code to be able to connect to the AMS service through the exposed REST API.
@@ -47,8 +52,9 @@ The AMS SDK comes with a set of examples demonstrating the capabilities of the S
 
 ### Authentication setup
 
-Clients must authenticate to AMS before communicating with it. For more information, see [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/canonical/ams-sdk) on GitHub.
+Clients must authenticate to AMS before communicating with it. For more information, see {ref}`howto-access-ams-remote` and the [AMS SDK documentation](https://github.com/canonical/ams-sdk) on GitHub.
 
+(sec-streaming-sdk)=
 ## Anbox Cloud Streaming SDK
 
 The Anbox Cloud streaming SDK allows the development of custom streaming clients using JavaScript. This SDK handles all aspects of streaming, from the WebRTC protocol to handling controls, game pads, speakers and screen resolutions.
@@ -80,7 +86,7 @@ Having these two components makes it easier to plug your own software in the SDK
 
 ### Download and installation
 
-To use the Anbox Cloud streaming SDK, you must have [deployed the Anbox Streaming Stack](https://discourse.ubuntu.com/t/installation-quickstart/17744).
+To use the Anbox Cloud streaming SDK, you must have deployed the Anbox Streaming Stack. See {ref}`howto-deploy-anbox-juju` for more information.
 
 You can download the Anbox Cloud streaming SDK via Git from GitHub:
 

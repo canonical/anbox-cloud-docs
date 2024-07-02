@@ -1,3 +1,6 @@
+(howto-control-updates)=
+# How to control updates
+
 For security reasons, you should keep your systems up-to-date at all times. To ensure this, [snaps](https://snapcraft.io/about) update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
 In a production environment, this update behaviour might cause problems in some cases. For example:

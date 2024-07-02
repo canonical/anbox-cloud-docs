@@ -1,3 +1,6 @@
+(exp-aar)=
+# Anbox Application Registry
+
 The Anbox Application Registry (AAR) provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple regions, in order to keep applications in sync.
 
 ## How AAR works
@@ -18,8 +21,8 @@ AMS can act in two different roles, `publisher` or `client` when working with an
 
     The `client` role allows only read access to the AAR. AMS instances registered as clients consume the applications pushed by the publishers.
 
-## Related information
+## Related topics
 
-* [How to deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)
-* [How to configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)
-* [How to revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)
+* {ref}`howto-deploy-aar`
+* {ref}`howto-configure-aar`
+* {ref}`howto-revoke-aar`

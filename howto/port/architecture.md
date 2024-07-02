@@ -1,3 +1,6 @@
+(howto-choose-apk-architecture)=
+# How to choose APK architecture
+
 In most cases, an Android app is not distributed as a universal APK. If the app contains native libraries, the [ABI split approach](https://developer.android.com/studio/build/configure-apk-splits) is used to produce different APK files for the different architectures. Before creating an application in AMS, you must determine which architecture to use.
 
 There are several ways to detect for what architecture an APK's native libraries are built. Since an APK file is just a zip file, a straight-forward way to determine the available architectures is to unzip the APK file and check the sub-folders in the `libs` folder. Typically, they are:

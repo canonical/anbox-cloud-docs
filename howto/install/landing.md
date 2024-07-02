@@ -1,5 +1,18 @@
-The guides in this section describe how to install Anbox Cloud.
+(howto-install-anbox-cloud)=
+# How to install Anbox Cloud
 
-It is important to remember that there is a difference between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) or the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial.
+It is important to remember that there is a difference between the full Anbox Cloud installation and the Anbox Cloud Appliance (see {ref}`sec-variants`). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`.
 
-Also, check the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) before you start your installation.
+Also, see {ref}`ref-requirements` before you start your installation.
+
+The following guides in this section describe how to install Anbox Cloud.
+
+```{toctree}
+:titlesonly:
+
+Customise your installation <customise>
+Deploy on bare metal <deploy-bare-metal>
+Deploy with Juju <deploy-juju>
+Enable high availability <high-availability>
+Validate deployment <validate>
+```

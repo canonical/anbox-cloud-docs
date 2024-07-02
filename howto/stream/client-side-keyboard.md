@@ -1,3 +1,7 @@
+
+(howto-integrate-virtual-keyboard)=
+# How to integrate a client-side virtual keyboard
+
 The Anbox Streaming SDK enables developers to build a hybrid mobile application that can integrate the features that Anbox Cloud provides. It comes with an [Android library](https://developer.android.com/studio/projects/android-library) that offers easy-to-use native components like Anbox WebView, which extends the AOSP [WebView](https://developer.android.com/reference/android/webkit/WebView). It provides better handling of text input for the hybrid application that loads the Anbox Streaming JavaScript SDK with an embedded WebView for video streaming.
 
 You can use Anbox WebView to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing:
@@ -5,13 +9,13 @@ You can use Anbox WebView to quickly integrate a client-side virtual keyboard fe
 * When the text editor of the application in the instance gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
 * When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
 
-The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See [Customising the virtual keyboard](#customising-the-virtual-keyboard-4) for additional implementation options.
+The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See [Customising the virtual keyboard](#customising-the-virtual-keyboard) for additional implementation options.
 
 For the complete implementation details, refer to the `enhanced_webview_streaming` example in the `example/android` folder.
 
-[note type="information" status="Note"]
+```{note}
 To enable the app running in the Android container to receive the texts sent from the client-side virtual keyboard, you must declare the feature `enable_anbox_ime` in the application manifest file when creating an application.
-[/note]
+```
 
 ## 1. Import the AAR library
 

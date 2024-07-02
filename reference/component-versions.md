@@ -1,6 +1,9 @@
+(ref-component-versions)=
+# Component versions
+
 This documents the versions of the different components for each Anbox Cloud release.
 
-Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
+Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
 ## 1.22.1
 
@@ -193,9 +196,7 @@ N/A
 
 ## 1.21.0
 
-### Charms
-
-#### Ubuntu 22.04
+### Charms for Ubuntu 22.04
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
@@ -209,7 +210,7 @@ N/A
 | `anbox-stream-agent` | `1.21/stable` | 320 |
 | `nats ` | `latest/stable` | 11 |
 
-#### Ubuntu 20.04
+### Charms for Ubuntu 20.04
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|

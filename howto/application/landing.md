@@ -1,15 +1,21 @@
-The guides in this section describe how to create and work with your applications.
+(howto-manage-applications)=
+# How to manage applications
 
-See [Applications](https://discourse.ubuntu.com/t/managing-applications/17760) for an introduction to how applications are used in Anbox Cloud. To check which configuration options are available for applications, see [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197).
+The guides in this section describe how to manage your applications.
+
+See {ref}`exp-applications` for an introduction to how applications are used in Anbox Cloud. To check which configuration options are available for applications, see {ref}`ref-application-manifest`.
 
 The following how-to guides are available for operations on applications:
 
-* [Create an application](https://discourse.ubuntu.com/t/how-to-create-an-application/24198)
-* [Delete an application](https://discourse.ubuntu.com/t/how-to-delete-an-application/24199)
-* [Extend an application](https://discourse.ubuntu.com/t/how-to-extend-an-application/28554)
-* [List applications](https://discourse.ubuntu.com/t/how-to-list-applications/24200)
-* [Stream an application](https://discourse.ubuntu.com/t/how-to-stream-applications/42688)
-* [Test an application](https://discourse.ubuntu.com/t/how-to-test-your-application/17775)
-* [Update an application](https://discourse.ubuntu.com/t/how-to-update-an-application/24201)
-* [Pass custom data to an application](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)
-* [Wait for an application](https://discourse.ubuntu.com/t/how-to-wait-for-an-application/24202)
+```{toctree}
+:titlesonly:
+Create an application <create>
+Delete an application <delete>
+Extend an application <extend>
+List applications <list>
+Stream applications <stream>
+Test an application <test>
+Update an application <update>
+Pass custom data to an application <pass-custom-data>
+Wait for an application <wait>
+```

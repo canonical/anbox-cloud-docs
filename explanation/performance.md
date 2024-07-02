@@ -1,27 +1,26 @@
+(exp-performance)=
+# Performance
+
 The performance of your Anbox Cloud deployment depends on multiple factors. To ensure optimal performance, check and monitor all areas and tune your deployment based on your findings.
 
-To measure the performance based on different parameters, you should [run performance benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770). See the provided [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) as a reference for what performance you can expect with different hardware configurations.
+To measure the performance based on different parameters, you should run performance benchmarks. See {ref}`howto-run-benchmarks` for more information on how to run performance benchmarks. 
 
-The main areas for performance tuning are:
+See the provided {ref}`ref-performance-benchmarks` as a reference for what performance you can expect with different hardware configurations.
 
-- [Instance density](#instance-density)
-- [CPU access for an instance](#instance-cpu-access)
-- [Hardware and network setup](#hardware-setup)
-- [Startup time for an instance](#startup-time)
-- [Client devices](#client-devices)
+The main areas for performance tuning are detailed in this guide.
 
-<a name="instance-density"></a>
+(sec-instance-density)=
 ## Instance density
 
 The most apparent performance aspect is how many instances you can run on each of your machines.
 
-Of course, the instance density depends a lot on the available hardware. See [capacity planning information](https://discourse.ubuntu.com/t/about-capacity-planning/28717) to estimate the necessary capacity and the hardware requirements for your Anbox Cloud deployment.
+Of course, the instance density depends a lot on the available hardware. See {ref}`exp-capacity-planning` to estimate the necessary capacity and the hardware requirements for your Anbox Cloud deployment.
 
 In addition, check your applications and make sure they use the resources in a fair way. Applications should avoid spikes in GPU utilisation, because such spikes require the application to reserve more resources and therefore reduce the instance density.
 
 Generally, applications should use the smallest suitable resource preset. However, if you see an overall bad performance when running the application, using a more powerful resource preset usually helps (even though it reduces the instance density). As an example, consider an application that runs on an Anbox Cloud deployment that does not have any GPUs installed. In this case, the rendering workload is put on the CPU instead of the GPU, and if the resource preset of the application does not have a sufficient number of vCPU cores, the performance of the application is impacted. This can show, for example, in the virtual keyboard being really slow. By switching to a more powerful resource preset, the instance density is reduced, but the performance of each application instance is increased.
 
-<a name="instance-cpu-access"></a>
+(sec-instance-cpu-access)=
 ## CPU access for an instance
 
 AMS has different modes to grant CPU access to an instance. The `cpu.limit_mode` configuration option can be used to change the mode. The possible modes are:
@@ -37,18 +36,18 @@ AMS has different modes to grant CPU access to an instance. The `cpu.limit_mode`
 
 By default, AMS uses the `scheduler` option, because it provides the most generic solution to a large set of use cases that Anbox Cloud supports. However, in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
 
-<a name="hardware-setup"></a>
+(sec-hardware-network-setup)=
 ## Hardware and network setup
 
-See [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) for the minimum hardware requirements for Anbox Cloud. Note that these list the minimum requirements, and using more powerful hardware will increase performance.
+See {ref}`ref-requirements` for the minimum hardware requirements for Anbox Cloud. Note that these list the minimum requirements, and using more powerful hardware will increase performance.
 
-For optimal performance, you should use a dedicated block device for LXD storage. Using a loop file is considerably slower. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage-6) for more information.
+For optimal performance, you should use a dedicated block device for LXD storage. Using a loop file is considerably slower. See {ref}`sec-lxd-storage` for more information.
 
 The overall performance depends not only on the hardware used for the actual Anbox Cloud deployment, but also on the setup used for other components that Anbox Cloud relies on. For example, the etcd database must use a hard disk that is fast enough. See [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/) for detailed information.
 
 Also make sure that there is a stable network connection between the nodes of your cluster, to decrease the latency between nodes.
 
-<a name="startup-time"></a>
+(sec-instance-startup-time)=
 ## Startup time for an instance
 
 A very noticeable performance issue is a long wait time when starting an application.
@@ -59,7 +58,7 @@ Another configuration that affects the instance startup time is [shiftfs_enabled
 
 You should also check the hooks that you use in your application. If you use any startup hooks (`pre-start` or `post-start`) that take a long time or wait for resources to become available, the instance startup is delayed. If you use a `post-stop` hook that prolongs the shutdown of an instance, this might also affect the startup time of new instances (because it might not be possible to start more instances until the existing instances terminate).
 
-<a name="client-devices"></a>
+(sec-client-devices)=
 ## Client devices
 
 In addition to optimising the performance of your Anbox Cloud deployment, you must also make sure that the client devices that access it can fully utilise its capabilities.
@@ -70,7 +69,9 @@ Furthermore, the network connection is crucial. When implementing your applicati
 
 Also make sure to optimise the network path from the Anbox Cloud server to the client devices. This optimisation could be very specific to your use case. For public clouds, it often means choosing the region that is located closest to the end users. When using a bare metal installation, you should deploy servers that are geographically close to the end users. There might also be other solutions depending on the network service route.
 
-## Related information
-* [Hooks](https://discourse.ubuntu.com/t/28555)
-* [Instance benchmarks](https://discourse.ubuntu.com/t/17770#run-instance-benchmarks-1)
-* [Capacity planning](https://discourse.ubuntu.com/t/28717)
+## Related topics
+
+* {ref}`exp-capacity-planning`
+* {ref}`howto-run-benchmarks`
+* {ref}`ref-hooks`
+

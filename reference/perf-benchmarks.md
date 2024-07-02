@@ -1,6 +1,9 @@
+(ref-performance-benchmarks)=
+# Performance benchmarks
+
 The following benchmarks give an overview of the performance that you can achieve with Anbox Cloud.
 
-The benchmarks were performed using the `amc benchmark` utility as described in [How to run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running instances (column **# Containers**) delivering a stable frame rate (column **Avg. FPS**). Running more instances either gives a very high variation in the provided frame rate or is not possible due to other hardware limitations such as system memory, GPU memory etc.
+The benchmarks were performed using the `amc benchmark` utility as described in {ref}`howto-run-benchmarks`. The results describe the maximum number of parallel running instances (column **# Containers**) delivering a stable frame rate (column **Avg. FPS**). Running more instances either gives a very high variation in the provided frame rate or is not possible due to other hardware limitations such as system memory, GPU memory etc.
 
 For most of the benchmarks below, a special version of the [BombSquad](https://www.froemling.net/apps/bombsquad) application was used. This version runs in a demo mode in which the game provides random and automated simulated gameplay. This allowed the benchmark to simulate a real-world scenario where actual users would play the game, instead of deriving from a static game scene without much variation.
 
@@ -11,7 +14,9 @@ All benchmarks were performed with a variation of the following `amc benchmark` 
         --userdata '{"display_width":1280,"display_height":720,"fps":30,"benchmark":{"enabled":true}}' \
         <app name>
 
-[note type="information" status="Note"]All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU. See [software rendering and video encoding](https://discourse.ubuntu.com/t/17768#software-rendering) for more information.[/note]
+```{note}
+All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU. See {ref}`sec-sw-rendering-video-encoding` for more information.
+```
 
 ## Bare metal
 

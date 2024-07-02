@@ -1,6 +1,9 @@
+(ref-webrtc)=
+# WebRTC streamer
+
 Usually you wouldn't need to adjust the default WebRTC streamer configuration because it is optimised to provide a good balance between low latency and high quality. However, you can still fine-tune it to provide better results in certain situations.
 
-Place the WebRTC streamer configuration at `/var/lib/anbox/streamer.json` within the [instance](https://discourse.ubuntu.com/t/26204#instance) before the Anbox runtime starts. The configuration can be shipped as part of an [application](https://discourse.ubuntu.com/t/managing-applications/17760) or an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
+Place the WebRTC streamer configuration at `/var/lib/anbox/streamer.json` within the instance before the Anbox runtime starts. The configuration can be shipped as part of an application or an addon.
 
 The configuration file uses the JSON format. It has the following structure:
 

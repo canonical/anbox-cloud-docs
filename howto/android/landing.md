@@ -1,6 +1,12 @@
-The guides in this section describe how to work with Android in Anbox Cloud.
+(howto-Android)=
+# How to work with Android in Anbox Cloud
 
-The following guides are available:
+The following guides in this section describe how to work with Android in Anbox Cloud:
 
-* [Graphics debugging with Renderdoc](https://discourse.ubuntu.com/t/how-to-debug-graphics-with-renderdoc/42427)
-* [Replace the Anbox VHAL](https://discourse.ubuntu.com/t/replace-the-anbox-vhal/45070)
+```{toctree}
+:titlesonly:
+
+Debug graphics with Renderdoc <graphics-debugging-with-renderdoc>
+Create a virtual Android device <virtual-devices>
+Replace the Anbox VHAL <custom-vhal>
+```

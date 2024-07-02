@@ -1,4 +1,7 @@
-To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744).
+(howto-deploy-anbox-baremetal)=
+# How to deploy Anbox Cloud on bare metal
+
+To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in {ref}`howto-deploy-anbox-juju`.
 
 Alternatively, you can follow the instructions in this document to use the [manual cloud provider](https://jaas.ai/docs/manual-cloud) that Juju offers. This method allows you to deploy Anbox Cloud with Juju on a set of SSH connected machines.
 
@@ -6,9 +9,11 @@ Alternatively, you can follow the instructions in this document to use the [manu
 
 Before you start the installation, ensure that you have the required prerequisites:
 
-* At least three Ubuntu machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware-11) for details and recommendations.
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
-  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
+* At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+  ```{caution}
+  The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
+  ```
 
 ## Install Juju
 
@@ -18,7 +23,7 @@ You must install a Juju client on the machine that you use to run the deployment
 
     sudo snap install --classic --channel=2.9/stable juju
 
-See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version-10) for information about which Juju version is required for your version of Anbox Cloud.
+See {ref}`sec-juju-version-requirements` for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Add a controller and model
 
@@ -36,7 +41,7 @@ When the controller is set up, create a model to hold the Anbox Cloud deployment
 
 ## Add all machines
 
-Before starting the deployment, you must add all machines to the Juju model. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware-11) for the list of machines that you need.
+Before starting the deployment, you must add all machines to the Juju model. See {ref}`sec-minimum-hardware-requirements` for the list of machines that you need.
 
 When adding the machines, start with the machine that you want to host the management layer of Anbox Cloud. Then add all LXD worker nodes. Run the following command for each machine:
 
@@ -44,7 +49,9 @@ When adding the machines, start with the machine that you want to host the manag
 
 The user (for example, `ubuntu`) must have administrator rights on the machine and have permission to SSH to the machine.
 
-[note type="caution" status="Warning"]Make sure to add the machines by their IP addresses rather than their DNS names. Adding a machine by DNS name does currently not work.[/note]
+```{caution}
+Make sure to add the machines by their IP addresses rather than their DNS names. Adding a machine by DNS name does currently not work.
+```
 
 Juju will add the machines to its list of usable machines, which you can display with the `juju list-machines` command. Make sure that all machines are in the `started` state before you proceed. If any of the machines are still in `down` state, wait until they switch to `started`:
 
@@ -54,13 +61,13 @@ Juju will add the machines to its list of usable machines, which you can display
 
 ## Attach your Ubuntu Pro subscription
 
-Create an `ua.yaml` overlay file as described in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744#ua-overlay).
+Create an `ua.yaml` overlay file as described in {ref}`sec-attach-pro-subscription`.
 
 You must provide this file when deploying Anbox Cloud.
 
 ## Determine the machine mapping
 
-When running the deployment command, you must map the machines to the ones described in the [Juju bundle](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7) that you are deploying.
+When running the deployment command, you must map the machines to the ones described in {ref}`sec-juju-bundles` that you are deploying.
 
 Run `juju list-machines` to display the available machines:
 
@@ -74,18 +81,17 @@ The `anbox-cloud` bundle requires two additional machines to host the load balan
 
 The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
 
-<a name="customise-storage"></a>
+(sec-customise-storage-bare-metal)=
 ## Customise storage
 
-By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage-6) for more information.
+By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See {ref}`sec-lxd-storage` for more information.
 
 There are different ways of configuring a dedicated block storage device:
 
-- Use an existing LXD storage pool (recommended - see [Existing storage pool](#existing-storage-pool) below)
-- Use a dedicated storage device (see [Dedicated storage device](#dedicated-storage-device) below)
-- Use a storage device defined by Juju (see the *Customise storage* section in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744#customise-storage) for instructions)
+- Use an [existing LXD storage pool](#existing-storage-pool) (recommended)
+- Use a [dedicated storage device](#dedicated-storage-device)
+- Use a storage device defined by Juju (see {ref}`sec-customise-storage-juju` for instructions)
 
-<a name="existing-storage-pool"></a>
 ### Existing storage pool
 
 To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configure#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
@@ -99,11 +105,10 @@ applications:
       storage_pool: my-zfs-pool
 ```
 
-[note type="information" status="Important"]
+```{important}
 The LXD storage pool must use the ZFS storage driver. Other storage drivers are not supported by Anbox Cloud.
-[/note]
+```
 
-<a name="dedicated-storage-device"></a>
 ### Dedicated storage device
 
 To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configure#storage_device) configuration on the AMS charm to the path of the storage device.
@@ -117,9 +122,9 @@ applications:
       storage_device: /dev/sdb
 ```
 
-[note type="information" status="Important"]
+```{important}
 The path to the dedicated storage device must be identical for all machines that are part of the cluster.
-[/note]
+```
 
 You do not need to prepare the storage device in any way. AMS takes care of creating the LXD storage pool on the device.
 
@@ -127,7 +132,7 @@ You do not need to prepare the storage device in any way. AMS takes care of crea
 
 Now you can deploy Anbox Cloud. The deployment is entirely handled by Juju and does not need any manual involvement other than running the actual deploy command.
 
-Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7):
+Choose between the available Juju bundles (see {ref}`sec-juju-bundles`):
 
 * For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 

@@ -1,12 +1,17 @@
+(exp-platforms)=
+# Supported platforms
+
 Anbox Cloud currently supports the `swrast`, `null`, `webrtc` platforms. This guide covers the display settings configuration for these platforms.
 
-To instruct an [instance](https://discourse.ubuntu.com/t/26204#instance) to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
+To instruct an instance to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
 
     amc launch -p webrtc <application>
 
 ## Configuration for `swrast` platform
 
-[note type="caution" status="Warning"]The `swrast` platform is deprecated and has been replaced with the `webrtc` platform starting with Anbox Cloud 1.13. You can still explicitly specify `swrast` as platform name, but internally, it is mapped to the `webrtc` platform. The `webrtc` platform provides backward compatibility with the display settings described below.[/note]
+```{caution}
+The `swrast` platform is deprecated and has been replaced with the `webrtc` platform starting with Anbox Cloud 1.13. You can still explicitly specify `swrast` as platform name, but internally, it is mapped to the `webrtc` platform. The `webrtc` platform provides backward compatibility with the display settings described below.
+```
 
 Anbox Cloud provides a way of add user data to the Android container upon its launch which can configure the display settings for `swrast` platform.
 
@@ -29,6 +34,7 @@ The first two fields which imply display width and display height respectively a
 
 Then the specified display setting will be applied after the instance gets started.
 
+(sec-null-platform)=
 ## Configuration for `null` platform
 
 Display settings for the `null` platform can be configured in the same way as for the `swrast` platform.
@@ -50,6 +56,6 @@ For example, to configure the platform for a display height of 1080p and 60 FPS,
 
     amc launch -p webrtc --userdata '{"display_width":1920, "display_height":1080, "fps": 60}'
 
-## Related information
+## Related topics
 
-* [Supported platforms](https://discourse.ubuntu.com/t/37322#supported-platforms-3)
+* {ref}`exp-platforms`

@@ -1,3 +1,6 @@
+(tut-aaos)=
+# Get started with an AAOS application
+
 This tutorial guides you through basic operations that you can do with an application based on an Android Automotive OS (AAOS) image. 
 
 In this tutorial, we will be focusing on the following tasks:
@@ -8,7 +11,7 @@ In this tutorial, we will be focusing on the following tasks:
 ## Prerequisites
 We will use the appliance dashboard to perform the tasks for this tutorial. So if you haven’t installed the Anbox Cloud Appliance yet, you must do that first.
 
-Follow the installation instructions available at [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/22681) to install and initialise the appliance. Proceed with the tutorial when you can access the appliance dashboard.
+Follow the installation instructions available at {ref}`tut-installing-appliance` to install and initialise the appliance. Proceed with the tutorial when you can access the appliance dashboard.
 
 ## Create an AAOS-based application
 
@@ -23,7 +26,7 @@ Now, let's enter the values required for creating the application:
 - *Application name*: `my-app`
 - *Resource-type*: `a4.3`
 
-    The default value of a4.3 is sufficient for this tutorial. Resource type indicates a [pre-defined set of resources](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type-1) that will be made available for your application.
+    The default value of a4.3 is sufficient for this tutorial. Resource type indicates a {ref}`pre-defined set of resources <sec-application-manifest-instance-type>` that will be made available for your application.
 - *Create the image in a*: `Container`
 
     Your choice of whether to create the associated image in a container or a virtual machine.
@@ -75,4 +78,4 @@ Now, let's try setting the temperature of the automotive:
 
 Learn about the various [supported system properties in the VHAL](https://source.android.com/docs/automotive/vhal/system-properties).
 
-You can also use the [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819#heading--10vhal) to adjust the properties using the CLI.
+You can also use the {ref}`Anbox HTTP API <sec-anbox-https-api-vhal>` to adjust the properties using the CLI.

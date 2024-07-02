@@ -1,3 +1,6 @@
+(howto-list-instances)=
+# How to list instances
+
 To get an overview of the running status of instances on an Anbox Cloud deployment, run the `amc ls` command:
 
 ```bash

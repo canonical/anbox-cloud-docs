@@ -1,24 +1,27 @@
+(exp-instances)=
+# Instances
+
 Instances are the centre piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
 
-All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through [addons](https://discourse.ubuntu.com/t/addons/25293). See [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289) for information on how to do this.
+All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through addons. See {ref}`howto-backup-restore-example` for information on how to do this.
 
-<a name="regular-vs-base"></a>
+(sec-regular-base-instances)=
 ## Regular instances vs. base instances
 
 Anbox Cloud differentiates between two types of instances: regular and base. The instance type is visible in the output of the `amc ls` command.
 
 Regular instances are containers or virtual machines that are launched from either an application or an image. They exist until they are deleted.
 
-Base instances are temporary containers or virtual machines that are used when [bootstrapping an application](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2). They are automatically deleted when the application bootstrap is completed.
+Base instances are temporary containers or virtual machines that are used when bootstrapping an application. They are automatically deleted when the application bootstrap is completed. See {ref}`sec-application-bootstrap` for more information on the bootstrapping process.
 
 When we refer to instances in this documentation without specifying the instance type, we mean regular instances.
 
-<a name="application-vs-raw"></a>
+(sec-application-raw-instances)=
 ## Application instances vs. raw instances
 
-Instances are based on either [applications](https://discourse.ubuntu.com/t/managing-applications/17760) or [images](https://discourse.ubuntu.com/t/provided-images/24185). So if you launch an application or an image, Anbox Management Service (AMS) automatically creates an instance for it.
+Instances are based on either {ref}`exp-applications` or {ref}`Images <ref-provided-images>`. So if you launch an application or an image, Anbox Management Service (AMS) automatically creates an instance for it.
 
-Application instances are containers or virtual machines created when launching an application and run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5). With the default configuration, you will see only the app and not the Android launcher.
+Application instances are containers or virtual machines created when launching an application and run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the {ref}`sec-application-manifest-watchdog`. With the default configuration, you will see only the app and not the Android launcher.
 
 Raw instances are containers or virtual machines created when launching an image. They run the full Android system, without any additional apps installed.
 
@@ -26,7 +29,7 @@ Raw instances are containers or virtual machines created when launching an image
 
 ### Creating an instance
 
-When you [create an instance](https://discourse.ubuntu.com/t/24327) by either launching or initialising an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
+When you create an instance by either launching or initialising an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
 
 1. Configure the network interface and gateway.
 1. (Only for raw instances) Install addons that are specified with `--addons`.
@@ -37,7 +40,7 @@ When you [create an instance](https://discourse.ubuntu.com/t/24327) by either la
 
 ![Instance start|584x646](https://assets.ubuntu.com/v1/45389cab-instance_start.png)
 
-Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can [view the available logs](https://discourse.ubuntu.com/t/24329) from the instance for further troubleshooting.
+Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can view the available logs from the instance for further troubleshooting. See {ref}`howto-view-instance-logs`.
 
 ### Stopping an instance
 
@@ -71,27 +74,29 @@ An instance moves through different stages and correspondingly can have the foll
 | `error`           | An error occurred while processing the instance. The instance is stopped. |
 | `unknown`         | A possible error occurred and the real state of the instance cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](https://discourse.ubuntu.com/t/amc-command-reference-show/40793) or [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](/reference/cmd-ref/amc-command-reference/show.md) or [`amc-showlog`](/reference/cmd-ref/amc-command-reference/show-log.md) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <sec-view-stored-logs>`.
 
-<a name="dev-mode"></a>
+(sec-dev-mode)=
 ## Development mode
 
 AMS allows to start an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
 
-When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or develop a [platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/).
+When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test addons or develop a platform plugin.
 
 To check whether development mode is enabled, run `amc show <instance_ID>` or look at the `/var/lib/anbox/session.yaml` file in the instance. If the `devmode` field in the configuration file is set to `true`, development mode is active.
 
-## Related information
+## Related topics
 
- * [How to create an instance](https://discourse.ubuntu.com/t/24327)
- * [How to start an instance](https://discourse.ubuntu.com/t/33924)
- * [How to wait for an instance](https://discourse.ubuntu.com/t/24330)
- * [How to access an instance](https://discourse.ubuntu.com/t/17772)
- * [How to expose services on an instance](https://discourse.ubuntu.com/t/24326)
- * [How to view the instance logs](https://discourse.ubuntu.com/t/24329)
- * [How to stop an instance](https://discourse.ubuntu.com/t/33925)
- * [How to delete an instance](https://discourse.ubuntu.com/t/24325)
- * [How to list instances](https://discourse.ubuntu.com/t/24328)
- * [How to configure geographic location](https://discourse.ubuntu.com/t/17782)
- * [How to back up and restore application data](https://discourse.ubuntu.com/t/24183)
+* {ref}`exp-addons`
+* [Platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+* {ref}`howto-access-instance`
+* {ref}`howto-backup-restore-application-data`
+* {ref}`howto-create-instance`
+* {ref}`howto-configure-geographic-location`
+* {ref}`howto-delete-instance`
+* {ref}`howto-expose-services`
+* {ref}`howto-list-instances`
+* {ref}`howto-start-instance`
+* {ref}`howto-stop-instance`
+* {ref}`howto-view-instance-logs`
+* {ref}`howto-wait-for-application`

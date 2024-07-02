@@ -1,3 +1,8 @@
+(howto-ts-web-dashboard)=
+# Troubleshoot issues while using the web dashboard
+
+You might encounter the following issues when using the dashboard.
+
 ## Session with an Error status
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
@@ -7,8 +12,8 @@ On the **Sessions** page, you could see a session with an **Error** status when 
 ![Session with an Error status|690x440](https://assets.ubuntu.com/v1/43e5fac7-session-error.png)
 
 Try the following actions:
-* Verify if you have [sufficient resources](https://discourse.ubuntu.com/t/capacity-planning/28717) for instance/application creation.
-* Check if all the nodes are in [`unschedulable`](https://discourse.ubuntu.com/t/ams-configuration/20872) mode.
+* Verify if you have sufficient resources for instance/application creation. See {ref}`exp-capacity-planning` for more information.
+* Check if all the nodes are in `unschedulable` mode. See {ref}`sec-node-configuration` for more information.
 
 ## Session does not start
 
@@ -18,7 +23,7 @@ A session does not start and the session details page displays the following err
 
 ![Session does not start|690x440](https://assets.ubuntu.com/v1/4658bad5-session-does-not-start.png)
 
-[Check the instance logs](https://discourse.ubuntu.com/t/24329) to find reasons for the session failure.
+See {ref}`howto-view-instance-logs` to find reasons for the session failure.
 
 
 ## Instances(s) in Error status
@@ -36,8 +41,8 @@ Click on the corresponding **INSTANCE ID** and check the instance details page f
 ![Instance details page|690x440](https://assets.ubuntu.com/v1/590c9eea-instance-details-error.png)
 
 The **Error Message field** can give you a starting point for identifying the issue. Some reasons for an instance to go into error status could be:
-* Insufficient resources. Refer [Capacity planning](https://discourse.ubuntu.com/t/capacity-planning/28717).
-* Occasionally, access to Ubuntu archives could be a problem when creating an application. As an immediate workaround, you could disable the security update by running `amc config set instance.security_updates false` or explicitly set `amc config set instance.api_mirror <mirror_address>` to configure an instance to use a different APT mirror. See [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872) for more details.
+* Insufficient resources. Refer to {ref}`exp-capacity-planning`.
+* Occasionally, access to Ubuntu archives could be a problem when creating an application. As an immediate workaround, you could disable the security update by running `amc config set instance.security_updates false` or explicitly set `amc config set instance.api_mirror <mirror_address>` to configure an instance to use a different APT mirror. See {ref}`ref-ams-configuration` for more details.
  
 If the reason for the instance failure is not obvious from the **Error Message**, check the **Logs** tab for more information.
 
@@ -51,7 +56,7 @@ Logs are unavailable for an instance when:
 * The instance is not in error status.
 * Occasionally, the instance could have ended up with an error status due to insufficient resources but there are no log files because the application bootstrap process succeeded.
 
-Normally, the logs are available if the instance is in an error state. If the instance is in the error state and yet there are no logs available, [check if you have enough resources](https://discourse.ubuntu.com/t/capacity-planning/28717).
+Normally, the logs are available if the instance is in an error state. If the instance is in the error state and yet there are no logs available, check if you have enough resources. See {ref}`exp-capacity-planning` for more information.
 
 ## Terminal is unavailable for an instance
 

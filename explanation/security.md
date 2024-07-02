@@ -1,14 +1,17 @@
+(exp-security)=
+# Security
+
 Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components are designed to be fundamentally secure.
 
 Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
 Consider the following simple yet impactful measures to ensure that you run a secure Anbox Cloud deployment:
 
-- Always run the latest and supported version of Anbox Cloud. See [roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359).
-- Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. See [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872).
+- Always run the latest and supported version of Anbox Cloud. See {ref}`ref-roadmap`.
+- Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. See {ref}`ref-ams-configuration`.
 - Monitor resources used by instances regularly.
 - Do not disable TLS pinning when you are not using a load balancer.
-- Use the [Anbox Cloud dashboard](https://discourse.ubuntu.com/t/anbox-cloud-web-dashboard/41847) as your default stream client. If you want to use a custom client, ensure you have [set it up securely](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328).
+- Use the {ref}`exp-web-dashboard` as your default stream client. If you want to use a custom client, ensure you have set it up securely as described in the {ref}`tut-set-up-stream-client` tutorial.
 
 To report a security issue, contact the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
 
@@ -43,19 +46,21 @@ Using virtual machines to host Android containers provides better workload isola
 
 ### Unprivileged instances
 
-[note type="information" status="Note"]This section is particularly applicable for container based instances because a virtual machine is unprivileged by nature.[/note]
+```{note}
+This section is particularly applicable for container based instances because a virtual machine is unprivileged by nature.
+```
 
 Many instance managers use privileged instances, which means that the instances have root privileges on the host system, including access to all devices. This is a security risk, because attackers could gain control over the host system.
 
 Anbox Cloud uses unprivileged LXD instances only, which fully isolates the instances and ensures that they cannot gain root privileges. In addition, the Android container that runs inside the LXD instance also runs as an unprivileged instance. This method isolates the Android container twice, with the result that if the encapsulation of either the LXD instance or the Android container should fail, the system would still be protected.
 
-[note type="caution" status="Warning"]
+```{caution}
 While instances are fully isolated, all instances currently use the same GPU resources. As a result, any instance that is launched with GPU support could take all GPU resources in a DDoS-like attack, which would prevent other instances from starting.
 
 Monitoring how the GPU resources are used for different applications and ensuring that you are running trusted workloads can provide insulation against DDoS-like attacks.
 
-See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) for more information.
-[/note]
+See {ref}`sec-gpu-slots` for more information.
+```
 
 ### Secure communication with the Juju controller
 
@@ -67,17 +72,17 @@ See [Security with Juju](https://juju.is/docs/juju/juju-security) for more infor
 
 ### Security updates
 
-Anbox Cloud provides images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with [`application.auto_update`](https://discourse.ubuntu.com/t/ams-configuration/20872)).
+Anbox Cloud provides images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with `application.auto_update`,See {ref}`ref-ams-configuration`).
 
 In addition, to ensure that the latest Ubuntu security patches are applied outside of image updates as well, Anbox Cloud checks for and installs available security updates every time an application is bootstrapped. So when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to bootstrap the application again, and thus install the latest security patches.
 
-It is possible to turn off this update mechanism by setting [`container.security_updates`](https://discourse.ubuntu.com/t/ams-configuration/20872) to `false`, but it is not recommended to do so.
+It is possible to turn off this update mechanism by setting `container.security_updates` to `false`, but it is not recommended to do so. See {ref}`ref-ams-configuration`.
 
 For security reasons, always keep your systems up-to-date at all times. To ensure this, snaps update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
 ## Android security
 
-The images that Anbox Cloud provides are based on different Android versions. They are updated with security patches monthly, based on the upstream security tags. You can find detailed information on the security patches that have been included (or considered to be included but found unrelated) in the [Android Security Bulletins](https://source.android.com/docs/security/bulletin). The relevant security bulletin for each Anbox Cloud release is linked in the [Release notes](https://discourse.ubuntu.com/t/release-notes/17842).
+The images that Anbox Cloud provides are based on different Android versions. They are updated with security patches monthly, based on the upstream security tags. You can find detailed information on the security patches that have been included (or considered to be included but found unrelated) in the [Android Security Bulletins](https://source.android.com/docs/security/bulletin). The relevant security bulletin for each Anbox Cloud release is linked in the {ref}`ref-release-notes`.
 
 See [Android Security Features](https://source.android.com/docs/security/features) in the Android documentation for an overview of security-related features that Android provides. Anbox Cloud supports some of these features, but not all of them. Some of the features rely on hardware that is not available in a virtual system, and others interfere with the Ubuntu security features.
 

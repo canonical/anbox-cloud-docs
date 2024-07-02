@@ -1,3 +1,6 @@
+(howto-port-apk-oob)=
+# How to port APKs with OBB files
+
 Google Play has a limit on how big an APK file can be (see [APK Expansion Files](https://developer.android.com/google/play/expansion-files.html)). Larger Android apps must be split up into the main part as an APK file and the expansion part as an OBB file:
 
 - APK: Contains the executables and native libraries (`*.so` files), plugins, basic assets and data required by the application to load for the first time.
@@ -39,7 +42,7 @@ Let's assume that you have an application that consists of an APK file and an OB
 
    The target location of the OBB file varies depending on the app. Some apps load the OBB file from the SD card (`/sdcard/Android/obb/`), while others load it from the device's internal storage (`/data/media/obb`).
 
-   If an OBB file is not properly installed in the instance, the app might not function as expected. Some apps exit immediately if the required OBB file is not found, which triggers the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5) and causes the instance to end up in an error state.
+   If an OBB file is not properly installed in the instance, the app might not function as expected. Some apps exit immediately if the required OBB file is not found, which triggers the watchdog (see {ref}`sec-application-manifest-watchdog`) and causes the instance to end up in an error state.
 
 1. Create the application:
 
