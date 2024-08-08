@@ -3,7 +3,7 @@
 
 Anbox Cloud exposes certain network ports for access and communication.
 
-For the regular Anbox Cloud deployment, these ports are used for communication between components, and to allow accessing the Anbox Cloud interface. 
+For the regular Anbox Cloud deployment, these ports are used for communication between components, and to allow accessing the Anbox Cloud interface.
 
 For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cloud interface since all components are installed on the same machine.
 
@@ -34,5 +34,4 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 | AMS node controller | 10000-11000 | UDP & TCP | no       | Instance service ports                 |
 | Coturn              | 5349        | UDP       | yes      | STUN/TURN                              |
 | Coturn              | 60000-60100 | UDP       | yes      | TURN relay ports                       |
-| Traefik             | 80          | TCP       | yes      | HTTP (redirects to HTTPS on port 443)  |
-| Traefik             | 443         | TCP       | yes      | Redirects to the Anbox Cloud dashboard |
+| UI and API          | 443         | TCP       | yes      | Redirects to the Anbox Cloud dashboard |

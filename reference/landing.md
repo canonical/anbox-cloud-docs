@@ -1,5 +1,5 @@
 (reference)=
-# Reference 
+# Reference
 
 The reference guides in this section provide additional information about using Anbox Cloud, release information, available configuration options, performance metrics and benchmarks.
 
@@ -37,6 +37,7 @@ Know the configuration options that can be defined for various components of Anb
 
 | Guides | Description |
 |--|--|
+| {ref}`ref-appliance-preseed-config`| The Anbox Cloud Appliance preseed configuration format |
 | {ref}`ref-ams-configuration`| Configuration options for Anbox Management Service (AMS) |
 | {ref}`ref-application-manifest`| A list of attributes that can be specified in the application manifest |
 | {ref}`ref-webrtc`| Configuration details for the WebRTC streamer |
@@ -73,6 +74,7 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 addon-manifest
 ams-configuration
 Anbox Cloud images <provided-images>
+appliance-preseed
 sdks
 api-reference
 application-manifest

@@ -9,7 +9,6 @@ The following tutorials help you install the Anbox cloud Appliance and start usi
 1. {ref}`tut-getting-started-cli`
 
 The following tutorials are optional and help you further explore features of Anbox Cloud:
-1. {ref}`tut-set-up-stream-client`
 1. {ref}`tut-aaos`
 1. {ref}`tut-create-addon`
 
@@ -22,6 +21,5 @@ Install Anbox Cloud Appliance <installing-appliance>
 Get started (AAOS) <getting-started-aaos>
 Get started (dashboard) <getting-started-dashboard>
 Get started (CLI) <getting-started>
-set-up-stream-client
 creating-addon
 ```

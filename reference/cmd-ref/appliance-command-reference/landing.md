@@ -9,13 +9,9 @@ The following commands are available for the `anbox-cloud-appliance` tool:
 
 | Command | Description|
 |---------|------------|
-|[`ams`](ams.md)    | Manage access to the Anbox Management Service (AMS)|
-|[`dashboard`](dashboard.md)| Manage the web dashboard of appliance|
-|[`destroy`](destroy.md) | Destroy the appliance|
-|[`gateway`](gateway.md) | Manage the appliance stream gateway|
 |[`help`](help.md) | Help about the `anbox-cloud-appliance` tool|
-|[`init`](init.md)| Initialise the appliance|
+|[`init`](init.md)| Initialise the Anbox Cloud Appliance|
 |[`status`](status.md) | Display the current status and version of the appliance|
-|[`upgrade`](upgrade.md) | Upgrade the appliance to a newer version|
+|[`prepare-node-script`](prepare-node-script.md)| Generate a shell script to prepare a machine for the Anbox Cloud Appliance|
 
 If you encounter an issue and want to collect debugging information from the appliance, use `anbox-cloud-appliance.buginfo`.

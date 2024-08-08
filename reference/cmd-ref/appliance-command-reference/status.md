@@ -6,8 +6,6 @@ orphan: true
 The `status` command displays the following information about the Anbox Cloud Appliance:
 
 * Status of the appliance
-* If a newer version is available
-* If a reboot is required
 * The current version of the appliance
 
         anbox-cloud-appliance status

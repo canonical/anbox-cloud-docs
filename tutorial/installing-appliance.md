@@ -57,7 +57,6 @@ Running this command does the following:
 
 1. Installs the following tools and dependencies, if they are not installed already:
     * [snapd](https://snapcraft.io/snapd)
-    * [Anbox Management Client (AMC)](https://snapcraft.io/amc)
     * [LXD](https://snapcraft.io/lxd)
 
         ```{important}
@@ -67,16 +66,26 @@ Running this command does the following:
 1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
 1. Configures the `apt` repositories for Anbox Cloud.
 
+### Prepare the machine
+
+In order to prepare the machine and install additional required packages, run the following command to review the generated preparation script:
+
+    anbox-cloud-appliance prepare-node-script
+
+The generated bash script will perform the following operations:
+
+1. Install `linux-modules-extra` packages to ensure that the binder kernel driver is available.
+2. Install additional Anbox Cloud specific kernel modules.
+3. (If GPU is available) Install GPU driver packages from the Ubuntu archive and apply tuning settings for the driver.
+
+To apply the script after reviewing it, you can run:
+
+    anbox-cloud-appliance prepare-node-script | sudo bash -ex
+
 (sec-initialise-appliance)=
 ## Initialise the appliance
 
-After the installation, access the appliance in your web browser by entering the IP of your machine (in the following steps referred to as `https://your-machine-address`). This web page provides status information for the following initialisation process.
-
-```{note}
-By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.
-```
-
-![Appliance welcome screen|690x343, 100%](https://assets.ubuntu.com/v1/f35744dc-install_appliance_initialise.png)
+After preparation of the machine has been completed, you can now initialise the Anbox Cloud Appliance itself.
 
 ### Run the `init` command
 
@@ -84,24 +93,8 @@ On your machine, enter the following command to invoke the initialisation proces
 
     sudo anbox-cloud-appliance init
 
-You will be asked a few questions. If you don't want to make any specific changes, you can safely stay with the offered default answers. When the command returns, the initialisation process will run fully automatically in the background. 
+You will be asked a few questions. If you don't want to make any specific changes, you can safely stay with the offered default answers. When the command returns, the initialisation process has been completed.
 
-### Monitor the progress
-
-You can watch the status web page at `https://your-machine-address` for progress information.
-
-![Anbox Cloud deployment|690x442](https://assets.ubuntu.com/v1/279e12e3-install_appliance_status.png)
-
-Alternatively, you can also use the `anbox-cloud-appliance status` command to monitor the progress information on the command line.
-
-```bash
-status: initializing
-progress: 80
-update-available: false
-reboot-needed: false
-version: 1.22.0
-```
-(sec-register-dashboard)=
 ## Register with the dashboard
 
 Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.
@@ -112,7 +105,7 @@ Once the initialisation process has finished, you are presented with a welcome p
 
 Enter the following command to register your Ubuntu SSO account with the appliance dashboard:
 
-    anbox-cloud-appliance dashboard register <your Ubuntu SSO email address>
+    sudo anbox-cloud-appliance dashboard register <your Ubuntu SSO email address>
 
 The output provides a link that you must open in your web browser to finish the account creation. By default, the registration link expires after one hour. After registering, you can log into the appliance dashboard with your Ubuntu SSO account.
 

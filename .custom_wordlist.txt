@@ -182,7 +182,7 @@ null
 NUMA
 numpad
 NvEnc
-NVIDIA  
+NVIDIA
 NVMe
 OAuth
 OBB
@@ -203,6 +203,7 @@ Plex
 PLI
 powershell
 pre
+preseed
 preselected
 Quickstart
 quickstart

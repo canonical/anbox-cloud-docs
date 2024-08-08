@@ -21,14 +21,42 @@ To generate and install a certificate yourself, complete the following steps:
 
 Setting up DNS redirection depends on your DNS provider. Refer to the documentation of your provider to create a DNS record pointing to the IP/DNS of the AWS instance where the Anbox Cloud Appliance is running.
 
-### Configure the location
-
-Configure the location for the appliance using the created DNS name:
-
-    sudo snap set anbox-cloud-appliance experimental.location=<your DNS name>
-
 ```{note}
 This option is experimental. It will be removed in a future release when a better replacement exists.
+```
+
+(ref-appliance-tls-location)=
+### Configure the location
+
+Configure the location for the appliance using the created DNS name. For the following configuration files need to be updated:
+
+#### `/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
+
+The configuration file needs to be changed to look as follows
+
+```yaml
+...
+endpoint:
+  address: 192.168.11.195:9031
+  public-address: 192.168.11.195
+  # Add the location element here if it doesn't exist and set it to your
+  # DNS name.
+  location: your.dns.name
+...
+```
+
+#### `/var/snap/anbox-cloud-appliance/common/config.yaml`
+
+The configuration file needs to be changed to look as follows
+
+```yaml
+log-level: error
+listen-address: 192.168.11.195
+location: your.dns.name
+...
+tls:
+  # Drop or comment the following line
+  # ca: /var/snap/anbox-cloud-appliance/common/tls/ca.crt
 ```
 
 ### Generate an SSL certificate
@@ -39,9 +67,9 @@ First, connect and SSH into your appliance instance, and install the `certbot` s
 
     sudo snap install --classic certbot
 
-Before generating your certificate using `certbot`, stop the Traefik service from listening on port 80 for the certificate creation:
+Before generating your certificate using `certbot`, stop the appliance service from listening on port 80 for the certificate creation:
 
-    sudo snap stop anbox-cloud-appliance.traefik
+    sudo snap stop anbox-cloud-appliance.daemon
 
 Then run the following command to generate your certificate:
 
@@ -60,14 +88,14 @@ Certbot has set up a scheduled task to automatically renew this certificate in t
 
 ### Install the SSL certificate
 
-Copy the generated certificate to the `/var/snap/anbox-cloud-appliance/common/traefik/tls` directory:
+Copy the generated certificate to the `/var/snap/anbox-cloud-appliance/common/daemon` directory:
 
-    sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/traefik/tls/cert.pem
-    sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem   /var/snap/anbox-cloud-appliance/common/traefik/tls/key.pem
+    sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/daemon/server.crt
+    sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem /var/snap/anbox-cloud-appliance/common/daemon/server.key
 
-Then start the Traefik service:
+Then start the appliance service:
 
-    sudo snap start anbox-cloud-appliance.traefik
+    sudo snap start anbox-cloud-appliance.daemon
 
 With the certificate installed on the appliance, you now can access the appliance using the created domain name.
 
@@ -75,26 +103,26 @@ With the certificate installed on the appliance, you now can access the applianc
 
 The `certbot` snap packages installed on your machine already set up a systemd timer that will automatically renew your certificates before they expire. However, in order to get the certificate renewed successfully for the appliance, you must complete the following steps:
 
-1. Stop the Traefik service to release port 80 right before the certificate is going to be renewed. This can be done through the `pre-hook`:
+1. Stop the appliance service to release port 80 right before the certificate is going to be renewed. This can be done through the `pre-hook`:
 
    ```bash
-   cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/pre/001-stop-traefik.sh
+   cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/pre/001-stop-appliance.sh
    #!/bin/bash
-   sudo snap stop anbox-cloud-appliance.traefik
+   sudo snap stop anbox-cloud-appliance.daemon
    EOF
-   sudo chmod +x /etc/letsencrypt/renewal-hooks/pre/001-stop-traefik.sh
+   sudo chmod +x /etc/letsencrypt/renewal-hooks/pre/001-stop-appliance.sh
    ```
 
-2. Install the certificate right after it has been renewed and start the Traefik service through the `post-hook`:
+2. Install the certificate right after it has been renewed and start the appliance service through the `post-hook`:
 
    ```bash
-   cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/post/001-start-traefik.sh
+   cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/post/001-start-appliance.sh
    #!/bin/bash
-   sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/traefik/tls/cert.pem
-   sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem   /var/snap/anbox-cloud-appliance/common/traefik/tls/key.pem
-   sudo snap start anbox-cloud-appliance.traefik
+   sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/daemon/server.crt
+   sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem /var/snap/anbox-cloud-appliance/common/daemon/server.key
+   sudo snap start anbox-cloud-appliance.daemon
    EOF
-   sudo chmod +x /etc/letsencrypt/renewal-hooks/post/001-start-traefik.sh
+   sudo chmod +x /etc/letsencrypt/renewal-hooks/post/001-start-appliance.sh
    ```
 
 In this way, the SSL certificate auto-renewal is in place.
@@ -222,16 +250,7 @@ The following example shows the DNS record with type `A` for the example domain:
 Finally, configure the Anbox Cloud Appliance to use the domain name that you prepared.
 
 1. Use SSH to connect to the AWS instance where the Anbox Cloud Appliance is running.
-1. Run the following command to configure the location of the appliance:
-
-   ```
-   sudo snap set anbox-cloud-appliance experimental.location=<domain_name>
-   ```
-1. Start the `reboot-checker` service to let the core services (for example, the stream gateway) use the new domain name:
-
-   ```
-   sudo systemctl start snap.anbox-cloud-appliance.reboot-checker.service
-   ```
+1. Configure the location of the appliance as described in {ref}`ref-appliance-tls-location`
 
 You can now use the new domain name to access the Anbox Cloud Appliance.
 
