@@ -10,31 +10,29 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-| August 14 2024 | Anbox Cloud 1.23.0 |
 | September 18 2024 | Anbox Cloud 1.23.1 |
 | October 16 2024 | Anbox Cloud 1.23.2 |
+| November 14 2024 | Anbox Cloud 1.24.0 |
 
 ## Recent releases
 
 | Release date   |  Release notes  |
 |----|----|
-| July 18 2024 | [Anbox Cloud 1.22.2](https://discourse.ubuntu.com/t/46495) |
+| August 14 2024 | [Anbox Cloud 1.23.0](1.23.0.md) |
+| July 18 2024 | [Anbox Cloud 1.22.2](1.22.2.md) |
 | June 13 2024 | [Anbox Cloud 1.22.1](1.22.1.md) |
 | May 15 2024 | [Anbox Cloud 1.22.0](1.22.0.md) |
 
-### What's new in 1.22.x?
+### What's new in 1.23.x?
 
 Along with bug fixes and general improvements, Anbox Cloud 1.22.x includes:
 
-* Support for 64-bit only systems
-* Support for custom images
-* Support for Vulkan 1.3 for Android 13 images
-* VirGL as the default renderer
-* Stream-enabled instance creation
-* Upgrade to NVIDIA 550 driver series
-* Support for pointer lock
-* VHAL enhancements
+* Improved Anbox Cloud Appliance
+* Seamless ADB connections to remote Android instances
 * Dashboard improvements
+* Improved documentation delivery
+* Android 14 based vendor images
+* Reworked charms that install snaps from the snap store
 * Android security updates
 
 ## Older releases

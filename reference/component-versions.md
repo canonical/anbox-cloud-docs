@@ -5,6 +5,70 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.23.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.23/stable` | 449 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 457 |
+| `coturn` | `1.23/stable` | 451 |
+| `ams` | `1.23/stable` | 481 |
+| `anbox-stream-gateway` | `1.23/stable` | 467 |
+| `ams-lxd` | `1.23/stable` | 454 |
+| `anbox-stream-agent` | `1.23/stable` | 462 |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+
+#### Ubuntu 20.04 (Deprecated)
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.23/stable` | 448 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 456 |
+| `coturn` | `1.23/stable` | 450 |
+| `ams` | `1.23/stable` | 480 |
+| `anbox-stream-gateway` | `1.23/stable` | 466 |
+| `ams-lxd` | `1.23/stable` | 454 |
+| `anbox-stream-agent` | `1.23/stable` | 461 |
+| `nats` | `latest/stable` | 10 (AMD64), 12 (ARM64) |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.23/stable` | 240 |
+| `anbox-cloud-core` | `1.23/stable` | 249 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.23/stable` | 1.23.0 |
+| `aar`    | `1.23/stable` | 1.23.0 |
+| `amc`    | `latest/stable` | 1.23.0 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 1.23.0 |
+| `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
+| `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
+| `anbox-stream-gateway` | `1.23/stable` | 1.23.0 |
+| `anbox-connect` | `latest/stable` | 1.23.0 |
+| `anbox-cloud-appliance` | `1.23/stable` | 1.23.0 |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.23.0 |
+| `jammy:android13:arm64` | 1.23.0 |
+| `jammy:android12:amd64` | 1.23.0 |
+| `jammy:android12:arm64` | 1.23.0 |
+| `jammy:aaos13:amd64`    | 1.23.0 |
+| `jammy:aaos13:arm64`    | 1.23.0 |
+
 ## 1.22.2
 
 ### Charms
@@ -25,6 +89,7 @@ N/A
 | `anbox-cloud-dashboard` | `1.22/stable` | 1.22.2 |
 | `anbox-stream-agent` | `1.22/stable` | 1.22.2 |
 | `anbox-stream-gateway` | `1.22/stable` | 1.22.2 |
+| `anbox-cloud-appliance` | `1.22/stable` | 1.22.2 |
 
 
 ### Anbox images
