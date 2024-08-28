@@ -37,7 +37,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 * Reworked charms that install snaps from the snap store
 * Android security updates
 
-## Older releases
+<details>
+<summary><h2>Older releases</h2></summary>
 
 ## 2024
 |  Release date  |  Release notes  |
@@ -131,6 +132,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |January 2020|[Anbox Cloud 1.3.3](1.3.3.md)|
 
 ### 2019
+|  Release date  |  Release notes  |
+|----|----|
 |October 2019|[Anbox Cloud 1.3.2](1.3.2.md)|
 |September 2019|[Anbox Cloud 1.3.1](1.3.1.md)|
 |August 2019|[Anbox Cloud 1.3.0](1.3.0.md)|
@@ -140,5 +143,10 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |January 2019|[Anbox Cloud 1.1.0](1.1.0.md)|
 
 ### 2018
+|  Release date  |  Release notes  |
+|----|----|
 |December 2018|[Anbox Cloud 1.0.1](1.0.1.md)|
 |November 2018|[Anbox Cloud 1.0.0](1.0.0.md)|
+
+</details>
+
