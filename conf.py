@@ -133,3 +133,7 @@ html_js_files = ['header-nav.js']
 if 'github_issues' in html_context and html_context['github_issues'] and not disable_feedback_button:
     html_js_files.append('github_issue_links.js')
 html_js_files.extend(custom_html_js_files)
+
+# Anbox specific function to generate dynamic AMS configuration
+# Add this change to conf.py every time the starter pack is upgraded to a later version.
+generate_ams_configuration()
