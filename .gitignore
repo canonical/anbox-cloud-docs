@@ -14,3 +14,5 @@ __pycache__
 .vscode/
 .sphinx/styles/*
 .sphinx/vale.ini
+.sphinx/deps/
+.sphinx/_static/swagger-ui/

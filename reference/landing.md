@@ -78,7 +78,7 @@ ams-configuration
 Anbox Cloud images <provided-images>
 appliance-preseed
 sdks
-api-reference
+api-reference/landing.md
 application-manifest
 cmd-ref/landing.md
 component-versions

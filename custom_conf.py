@@ -1,4 +1,7 @@
 import datetime
+import os
+import subprocess
+
 
 # Custom configuration for the Sphinx documentation builder.
 # All configuration specific to your project should be done in this file.
@@ -213,6 +216,7 @@ custom_tags = []
 rst_prolog = """
 .. role:: center
    :class: align-center
+
 """
 
 
@@ -227,3 +231,26 @@ def generate_ams_configuration():
             custom_required_modules.append(req)
     ams_configuration_file = "reference/ams-configuration.md"
     parse_swagger(get_swagger_from_url(), ams_configuration_file)
+
+## The following code is to automatically load the API from swagger into documentation.
+
+# Path to copy the YAML files during build
+html_extra_path = ['.sphinx/_extra']
+
+# The swagger-ui repository is required to be able to render the swagger YAML
+# file as browseable API documentation. The below variable specifies which
+# git repository to fetch it from.
+swagger_ui_repository = "https://github.com/swagger-api/swagger-ui"
+
+# Download and link swagger-ui files
+if not os.path.isdir('.sphinx/deps/swagger-ui'):
+    subprocess.check_call(["git", "clone", "--depth=1", swagger_ui_repository, ".sphinx/deps/swagger-ui"])
+
+os.makedirs('.sphinx/_static/swagger-ui/', exist_ok=True)
+
+if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui-bundle.js'):
+    os.symlink('../../deps/swagger-ui/dist/swagger-ui-bundle.js', '.sphinx/_static/swagger-ui/swagger-ui-bundle.js')
+if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui-standalone-preset.js'):
+    os.symlink('../../deps/swagger-ui/dist/swagger-ui-standalone-preset.js', '.sphinx/_static/swagger-ui/swagger-ui-standalone-preset.js')
+if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui.css'):
+    os.symlink('../../deps/swagger-ui/dist/swagger-ui.css', '.sphinx/_static/swagger-ui/swagger-ui.css')
