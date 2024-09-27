@@ -3,22 +3,47 @@ on:
   push:
   workflow_dispatch:
 
+env:
+  AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc"
+  APPLIANCE_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/appliance-command-reference"
+
 jobs:
   run-tests:
     runs-on: ubuntu-24.04
     steps:
+    - name: Determine base version
+      id: base_version
+      run: |
+        echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
     - name: Setup Anbox Cloud
-      uses: canonical/anbox-cloud-github-action@main
+      uses: canonical/anbox-cloud-github-action@39490d442cc0921fe614f7044b9f3dc8bd89725c
       with:
-        ubuntu-pro-token: ${{ secrets.UBUNTU_PRO_TOKEN }}
+        channel: ${{ steps.base_version.outputs.value }}/stable
     - name: Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+    - name: Delete existing files - amc reference
+      run: rm -rf $AMC_COMMAND_REFERENCE_DIR/*
     - name: Generate AMC command reference documentation
-      run: amc generate documentation -f markdown -d ./reference/cmd-ref/amc-command-reference
+      run: amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
+    - name: Set $AMC_COMMAND_REFERENCE_DIR as an output
+      run: echo "value=$AMC_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
+      id: amc_command_reference_dir
     - name: Commit changes
-      if: ${{ github.ref == 'refs/heads/main' }}
-      uses: EndBug/add-and-commit@v9
+      uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
         message: 'Generate AMC command reference documentation'
-        add: './reference/cmd-ref/amc-command-reference'
+        add: ${{ steps.amc_command_reference_dir.outputs.value }}
+    - name: Delete existing files - appliance reference
+      run: rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/*
+    - name: Generate appliance command reference documentation
+      run: sudo anbox-cloud-appliance generate documentation -f markdown -d $APPLIANCE_COMMAND_REFERENCE_DIR
+    - name: Set $APPLIANCE_COMMAND_REFERENCE_DIR as an output
+      run: echo "value=$APPLIANCE_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
+      id: appliance_command_reference_dir
+    - name: Commit changes
+      uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+      with:
+        default_author: github_actions
+        message: 'Generate appliance command reference documentation'
+        add: ${{ steps.appliance_command_reference_dir.outputs.value }}
