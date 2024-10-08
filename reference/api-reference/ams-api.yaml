@@ -3465,7 +3465,7 @@ paths:
                                                 type: boolean
                                             load_balancer.url:
                                                 default: ""
-                                                description: Set host URL for AMS to loadbalancer's URL
+                                                description: Set host URL for AMS to load balancer's URL
                                                 example: https://load-balanced-ams.com
                                                 type: string
                                             node.queue_size:
@@ -3487,7 +3487,7 @@ paths:
                                                 type: string
                                             registry.fingerprint:
                                                 default: ""
-                                                description: Fingerprint used to verify the ceritifcate of the application registry
+                                                description: Fingerprint used to verify the certificate of the application registry
                                                 example: my-registry-fingerprint
                                                 type: string
                                             registry.mode:
@@ -3511,7 +3511,7 @@ paths:
                                                 type: string
                                             scheduler.strategy:
                                                 default: spread
-                                                description: Container scheduling startegy
+                                                description: Container scheduling strategy
                                                 enum:
                                                     - spread
                                                     - binpack
