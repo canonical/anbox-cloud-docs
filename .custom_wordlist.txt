@@ -130,7 +130,7 @@ HIDL
 HMAC
 Honkai
 hotfix
-HTTPS
+https
 HW
 HWE
 HVAC
@@ -146,6 +146,7 @@ IPs
 iptables
 init
 interprocess
+io
 iOS
 Javascript
 Jira

@@ -1312,7 +1312,7 @@ paths:
                         type: boolean
                         default: true
                       load_balancer.url:
-                        description: Set host URL for AMS to loadbalancer's URL
+                        description: Set host URL for AMS to load balancer's URL
                         type: string
                         default: ''
                         example: https://load-balanced-ams.com
@@ -1335,7 +1335,7 @@ paths:
                         default: ''
                         example: foo,bar
                       registry.fingerprint:
-                        description: Fingerprint used to verify the ceritifcate of
+                        description: Fingerprint used to verify the certificate of
                           the application registry
                         type: string
                         default: ''
@@ -1360,7 +1360,7 @@ paths:
                         default: ''
                         example: https://foo.bar/
                       scheduler.strategy:
-                        description: Container scheduling startegy
+                        description: Container scheduling strategy
                         type: string
                         default: spread
                         enum:
