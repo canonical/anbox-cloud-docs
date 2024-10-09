@@ -30,7 +30,9 @@ On a WebView where the `HTMLVideoElement.requestVideoFrameCallback` function is 
 
 ### Use custom fragment shader
 
-The option `options.experimental.upscaling.fragmentShader` allows the use of a custom fragment shader-based upscaling algorithm for video streaming. By providing the fragment shader source code in this option, the canvas can use the custom fragment shader for video upscaling instead of the default FSR 1.0 shader. Currently, the implementation supports only single-pass rendering, which uses a single fragment shader to perform the upscaling.
+The option `options.experimental.upscaling.fragmentShaders` allows the use of custom fragment shader-based upscaling algorithms for video streaming. By providing an array of fragment shader source codes, you can apply multiple shaders sequentially to perform multi-pass upscaling. This replaces the default [AMD FidelityFX Super Resolution 1.0](https://gpuopen.com/fidelityfx-superresolution/) shader.
+
+Each shader in the array is applied in order, with the frame buffer from the output of the previous shader being used as the input texture for the next shader. Therefore, the order of shaders in the list is critical to achieving the desired post-processing effects. This provides greater flexibility for advanced video upscaling workflows by combining multiple shaders in a single rendering pipeline.
 
 When using a custom fragment shader in WebGL, you need to manage the following pre-defined variables to interact with textures and control rendering:
 
