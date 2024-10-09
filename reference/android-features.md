@@ -24,3 +24,4 @@ Anbox Cloud implements support for various Android features. The following table
 | [Verified Boot](https://source.android.com/security/verifiedboot) | | |
 | [Trusted Execution Environment (TEE)](https://source.android.com/security/trusty) | | |
 | [64-bit only support](https://developer.android.com/ndk/guides/abis) |  ✓  | 64-bit only systems/kernels are automatically detected and Android support adjust accordingly |
+| [Secure lock screen](https://source.android.com/docs/core/display/multi_display/lock-screen) | ✓                 | The secure lock screen is not configured by default and requires manual setup through the Android Settings app when needed. |
