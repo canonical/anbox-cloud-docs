@@ -224,13 +224,18 @@ rst_prolog = """
 # Inject AMS configuration valuues and Node configuration values from the swagger
 # specification hosted on Github.
 def generate_ams_configuration():
-    from scripts.ams_configuration import get_swagger_from_url, parse_swagger
+    from scripts.ams_configuration import parse_swagger
 
     with open("scripts/requirements.txt", "r") as f:
         for req in f.readlines():
             custom_required_modules.append(req)
     ams_configuration_file = "reference/ams-configuration.md"
-    parse_swagger(get_swagger_from_url(), ams_configuration_file)
+    import yaml
+
+    with open("reference/api-reference/ams-api.yaml", "r") as f:
+        swagger = yaml.safe_load(f)
+    parse_swagger(swagger, ams_configuration_file)
+
 
 ## The following code is to automatically load the API from swagger into documentation.
 
