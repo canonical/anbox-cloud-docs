@@ -16,16 +16,18 @@ they have configured as the primary email address of their Ubuntu SSO account.
 With that you can run the following command to generate a registration URL:
 
 $ sudo anbox-cloud-appliance dashboard register foo@bar.com
-Visit https://10.2.9.2/?register=xxx to finish your registration
+Visit `https://10.2.9.2/?register=xxx` to finish your registration
 
 The registration link will by default expire after one hour.
 
 If you run the command on a non-interactive shell only the URL will
 be printed as output. This allows you to do
 
+```
 $ url=$(sudo anbox-cloud-appliance dashboard register foo@bar.com)
 $ echo "$url"
 https://10.2.9.2/?register=xxx
+```
 
 
 ```
