@@ -16,3 +16,4 @@ __pycache__
 .sphinx/vale.ini
 .sphinx/deps/
 .sphinx/_static/swagger-ui/
+reference/ams-configuration.md
