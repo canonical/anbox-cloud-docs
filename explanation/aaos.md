@@ -13,7 +13,7 @@ Until the 1.24.0 release, if you created your own VHAL implementation by followi
 
 However, if a third-party VHAL implementation is loaded during Android runtime, on the Anbox Cloud Dashboard, some vehicle property values may still not be accessible while others may not be editable on the Anbox Cloud dashboard, due to [permission controls](https://source.android.com/docs/automotive/vhal/previous/properties#vehicle-props) that categorise vehicle properties as read-only, write-only, or read-write.
 
-In the 1.24.1 release, Anbox Cloud will introduce an `IVehicle` HIDL interface that third-party VHAL implementations can use to modify non-writable vehicle property values or access non-readable vehicle property values. This will enable the Anbox VHAL adapter to communicate directly with the VHAL implementation that implements the `IVehicle` HIDL interface and manage those vehicle properties without facing permission issues.
+Anbox Cloud offers an [Anbox-specific VHAL HIDL interface](https://github.com/canonical/vendor_canonical_interfaces). By using this HIDL, the VHAL implementation allows the Anbox VHAL adapter to modify non-writable and access non-readable vehicle property values without encountering permission issues. See the {ref}`how-to guide <howto-integrate-hidl>` on instructions for setting this up with your VHAL implementation.
 
 ## Related topics
 

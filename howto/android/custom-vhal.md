@@ -1,5 +1,5 @@
 (howto-replace-anbox-vhal)=
-# Customise the Anbox VHAL
+# How to replace the Anbox VHAL with your custom implementation
 
 *since 1.22.0*
 
@@ -135,6 +135,8 @@ name: my-app
 addons:
   - custom-vhal
 ```
+
+If you would like to further your custom implementation and integrate the Anbox HIDL interface with your custom VHAL implementation, follow the instructions in {ref}`howto-integrate-hidl`.
 
 ## Related topics
 
