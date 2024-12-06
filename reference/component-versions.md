@@ -5,6 +5,51 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.24.1
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| | | |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| | | |
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.24/stable` | `1.24.1-f58845a77`  |
+| `aar`    | `1.24/stable` | `1.24.1-f58845a77`  |
+| `anbox-cloud-dashboard` | `1.24/stable` | `1.24.1-f58845a77`  |
+| `anbox-stream-agent` | `1.24/stable` | `1.24.1-f58845a77`  |
+| `anbox-stream-gateway` | `1.24/stable` |  `1.24.1-f58845a77` |
+| `anbox-cloud-appliance` | `1.24/stable` | `1.24.1-f58845a77`  |
+| `nats` | `latest/stable` | `1.24.1-f58845a77` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android14:amd64` |  |
+| `jammy:android14:arm64` |  |
+| `jammy:android13:amd64` |  |
+| `jammy:android13:arm64` |  |
+| `jammy:android12:amd64` |  |
+| `jammy:android12:arm64` |  |
+| `jammy:aaos13:amd64`    |  |
+| `jammy:aaos13:arm64`    |  |
+| `jammy:aaos14:amd64`    |  |
+| `jammy:aaos14:arm64`    |  |
+
+
 ## 1.23.3
 
 The following Anbox images are the only artefacts released for this patch.
