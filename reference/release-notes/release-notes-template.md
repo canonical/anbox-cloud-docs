@@ -5,13 +5,13 @@ orphan: true
 
 These release notes cover new features and changes in Anbox Cloud < version >.
 
-Anbox Cloud < version > is a < minor/patch > release. To understand minor and patch releases, see {ref}`ref-release-notes`.
+Anbox Cloud < version > is a < minor/patch > release. To understand minor and patch releases, see [Release notes](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/release-notes/release-notes).
 
-Please see {ref}`ref-component-versions` for a list of updated components.
+Please see [Component versions](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/component-versions/) for a list of updated components.
 
 ## Requirements
 
-See the {ref}`ref-requirements` for details on general and deployment specific requirements to run Anbox Cloud.
+See [Requirements](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/requirements/) for details on general and deployment specific requirements to run Anbox Cloud.
 
 ## New features & improvements
 
@@ -40,4 +40,4 @@ See the {ref}`ref-requirements` for details on general and deployment specific r
 
 ## Upgrade instructions
 
-See {ref}`howto-upgrade-anbox-cloud` and {ref}`howto-upgrade-appliance` for instructions on how to update your Anbox Cloud deployment to the < release-version > release.
+See [How to upgrade Anbox Cloud](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/update/upgrade-anbox/#howto-upgrade-anbox-cloud) and [How to upgrade the Anbox Cloud Appliance](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/update/upgrade-appliance/#howto-upgrade-appliance) for instructions on how to update your Anbox Cloud deployment to the < release-version > release.
