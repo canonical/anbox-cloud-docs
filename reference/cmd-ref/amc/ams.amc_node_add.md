@@ -19,7 +19,7 @@ ams.amc node add <name> <address> [flags]
 ### Examples
 
 ```
-$ amc node new lxd0 10.48.61.89
+$ amc node add lxd0 10.48.61.89
 nodes:
   - lxd0
 
