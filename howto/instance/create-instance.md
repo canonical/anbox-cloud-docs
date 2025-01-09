@@ -143,6 +143,8 @@ Once you create an instance by providing the necessary attributes, you can view 
 
 There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
 
+Instances can also be created from the *Images* and *Applications* pages using the *Create an Instance* button ( ![create instance icon](/images/icons/create-instance-icon.png) ). Similarly, you can create instances from the details page of an image and an application.
+
 ```
 
 `````
