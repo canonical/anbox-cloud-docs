@@ -15,6 +15,7 @@ Learn how to install, configure and upgrade Anbox Cloud.
 
 Learn about applications, instances and more in Anbox Cloud and how to use them.
 
+* {ref}`howto-manage-images`
 * {ref}`howto-manage-applications`
 * {ref}`howto-instance`
 * {ref}`howto-addons`
@@ -55,6 +56,7 @@ Install Anbox Cloud <install/landing>
 Manage AAR <aar/landing>
 Manage Addons <addons/landing>
 Manage Anbox Cloud <anbox/landing>
+Manage Images <images/landing>
 Manage Applications <application/landing>
 Manage cluster nodes <cluster/landing>
 Manage Instances <instance/landing>
