@@ -6,10 +6,10 @@ Scaling up a LXD cluster can be achieved via Juju. Juju automates the deployment
 Adding additional LXD units or removing existing ones is not an instant operation. Adding a new node, for example, can take 5-10 minutes and must be planned in advance. The deployment of a single node will include the following steps:
 
 1. Allocation of a new machine from the underlying cloud provider
-2. Machine startup and first time initialisation
+2. Machine startup and first time initialization
 3. LXD installation
 4. Registration of the LXD node with the existing cluster and AMS
-5. Synchronisation of necessary artefacts from other nodes in the LXD cluster (for example, images)
+5. Synchronization of necessary artifacts from other nodes in the LXD cluster (for example, images)
 
 To add additional LXD nodes, run the following commands:
 

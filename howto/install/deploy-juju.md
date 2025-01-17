@@ -39,7 +39,7 @@ Juju has baked in knowledge of many public clouds, such as AWS, Azure and Google
 
     juju clouds
 
-Most clouds require credentials so that the cloud knows which operations are authorised, so you will need to supply these for Juju. If you choose to use AWS, for example, you would run:
+Most clouds require credentials so that the cloud knows which operations are authorized, so you will need to supply these for Juju. If you choose to use AWS, for example, you would run:
 
     juju add-credential aws
 
@@ -62,7 +62,7 @@ You can have multiple models on each controller, which means that you can deploy
 (sec-attach-pro-subscription)=
 ## Attach your Ubuntu Pro subscription
 
-Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licences you're granted as part of your licence agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
+Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licenses you're granted as part of your license agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
 
 You can retrieve your Ubuntu Pro token at [`https://ubuntu.com/pro`](https://ubuntu.com/pro) after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
 
@@ -70,7 +70,7 @@ You can retrieve your Ubuntu Pro token at [`https://ubuntu.com/pro`](https://ubu
 The *Ubuntu Pro (Infra-only)* token will result in a failed deployment. You need an *Ubuntu Pro* subscription.
 ```
 
-To provide your token when deploying with Juju, you need an overlay file (see {ref}`howto-customise-installation`) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
+To provide your token when deploying with Juju, you need an overlay file (see {ref}`howto-customize-installation`) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
 ```yaml
 applications:
@@ -115,7 +115,7 @@ You will use the overlay file during the deployment.
 ## Deploy Anbox Cloud
 
 ```{note}
-This section explains how to start the Anbox Cloud deployment without any customisation. However, in most cases you will want to include a custom configuration when you start the deployment.
+This section explains how to start the Anbox Cloud deployment without any customization. However, in most cases you will want to include a custom configuration when you start the deployment.
 
 Therefore, make sure to check the following sections before you run the deploy command.
 ```
@@ -124,7 +124,7 @@ To install Anbox Cloud, deploy the suitable Anbox Cloud bundle to the Juju model
 
 Choose between the available {ref}`sec-juju-bundles`:
 
-* For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
+* For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
         juju deploy anbox-cloud-core --overlay ua.yaml
 
@@ -132,9 +132,9 @@ Choose between the available {ref}`sec-juju-bundles`:
 
         juju deploy anbox-cloud --overlay ua.yaml
 
-## Customise the hardware configuration
+## Customize the hardware configuration
 
-To customise the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/juju/constraint#heading--list-of-constraints) in the Juju documentation for details.
+To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/juju/constraint#heading--list-of-constraints) in the Juju documentation for details.
 
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 
@@ -170,8 +170,8 @@ To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
     juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
-(sec-customise-storage-juju)=
-### Customise storage
+(sec-customize-storage-juju)=
+### Customize storage
 
 By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See {ref}`sec-lxd-storage` for more information.
 
@@ -181,7 +181,7 @@ The easiest way to do this is to use a storage device defined by Juju:
 
    See [View the available storage pools](https://juju.is/docs/juju/manage-storage-pools#heading--view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
 
-   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/juju/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimised for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html) that are optimised for different purposes.
+   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/juju/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html) that are optimized for different purposes.
 
    If you decide to create a pool, make sure to do so before you start the deployment.
 1. Configure the `ams-lxd` charm to use the Juju storage pool.
@@ -201,7 +201,7 @@ The easiest way to do this is to use a storage device defined by Juju:
    You can add only one storage pool.
    ```
 
-When you deploy Anbox Cloud with this configuration, Juju allocates the requested storage and attaches it to LXD. During initialisation, AMS then configures LXD to create a ZFS storage pool on the configured storage.
+When you deploy Anbox Cloud with this configuration, Juju allocates the requested storage and attaches it to LXD. During initialization, AMS then configures LXD to create a ZFS storage pool on the configured storage.
 
 ### Add GPU support
 

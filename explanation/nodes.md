@@ -11,7 +11,7 @@ The following table lists the different statuses that a node can have depending 
 |--------------------|-------------|
 | `created` | The node is successfully created and ready to be used. |
 | `initializing` | The status of the node when its corresponding LXD instance is currently being configured. |
-| `initialized` | The status of the node after its corresponding LXD instance is initialised. |
+| `initialized` | The status of the node after its corresponding LXD instance is initialized. |
 | `online` | The node is available and can be used by the AMS. |
 | `offline` | The node is not available and cannot be used by the AMS. |
 | `deleted` | The node has been deleted and no longer available for use. |

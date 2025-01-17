@@ -5,11 +5,11 @@ This guide covers the usage of the streaming stack and assumes that you know how
 
 ## Streaming stack overview
 
-The streaming stack is based on [WebRTC](https://webrtc.org/) and integrates with GPUs from different vendors to enable low latency video encoding mandatory for any real time streaming use case. It is highly customisable but requires some functional understanding.
+The streaming stack is based on [WebRTC](https://webrtc.org/) and integrates with GPUs from different vendors to enable low latency video encoding mandatory for any real time streaming use case. It can be highly customized but requires some functional understanding.
 
 WebRTC is a peer to peer protocol, but clients must first find each other through a central server. The server does not need to know about the content of the messages between the clients, it only has to forward the messages from one peer to another.
 
-The stream gateway exists to enable clients find each other through sessions. Sessions contain user data, application information and more, but most importantly, they provide an entry point for both the client and the instance to start a communication process called signalling. Signalling is a process by which both peers exchange messages and establish optimal codecs, network routes and content types.
+The stream gateway exists to enable clients find each other through sessions. Sessions contain user data, application information and more, but most importantly, they provide an entry point for both the client and the instance to start a communication process called signaling. Signaling is a process by which both peers exchange messages and establish optimal codecs, network routes and content types.
 
 Each component of the stack plays a specific role:
 
@@ -43,11 +43,11 @@ While streaming an application, session creation can happen in two ways as illus
 
 ### Session creation
 
-A session is created by calling the gateway API at `POST /1.0/sessions`. The returned object contains information about the created session as well as a web socket `url` that is necessary to start the signalling process.
+A session is created by calling the gateway API at `POST /1.0/sessions`. The returned object contains information about the created session as well as a web socket `url` that is necessary to start the signaling process.
 
-### Signalling process
+### Signaling process
 
-Using the session information, the signalling process between the client and the instance starts:
+Using the session information, the signaling process between the client and the instance starts:
 
  1. The instance creates an offer containing the desired streams (video, audio, binary) as well as codec information.
  2. The client replies to that offer by accepting or refusing it.
@@ -77,5 +77,5 @@ If you do not enable streaming when launching the instance, you cannot enable it
 ## Related topics
 
 * {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
-* [Signalling](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
+* [Signaling](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
 * {ref}`ref-codecs`

@@ -10,7 +10,7 @@ Currently Anbox Cloud does not support GPU for virtual machines.
 (sec-supported-gpus)=
 ## Supported GPU vendors and models
 
-Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data centre. We currently support the following GPU vendors:
+Being a cloud solution, Anbox Cloud is optimized for GPUs that are designed for a data center. We currently support the following GPU vendors:
 
 * NVIDIA
 * Intel
@@ -28,7 +28,7 @@ Concrete support for the individual GPU depends on the platform being using for 
 
 For GPUs on which Anbox Cloud doesn't support hardware video encoding, a software-based video encoding fallback is available.
 
-Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice using the Anbox Platform SDK. See {ref}`sec-platform-sdk` for more information.
+Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customize and configure Anbox Cloud for the GPU vendor of your choice using the Anbox Platform SDK. See {ref}`sec-platform-sdk` for more information.
 
 ## Supported GPU drivers
 
@@ -41,9 +41,9 @@ See {ref}`ref-component-versions` to refer to the actual version supported for a
 (sec-supported-platforms)=
 ## Supported platforms
 
-Anbox Cloud can make use of different [platforms](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) to customise its behaviour and currently supports 3 platforms.
+Anbox Cloud can make use of different [platforms](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) to customize its behavior and currently supports 3 platforms.
 
-| Name     	| Behaviour                                                                                                                                            	|
+| Name     	| Behavior                                                                                                                                            	|
 |----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|
 | `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching an instance.                                                                       	|
 | `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVIDIA GPUs as well as LLVMpipe based software rendering if no GPU is detected.  Support audio input/output. |
@@ -51,7 +51,7 @@ Anbox Cloud can make use of different [platforms](https://canonical.github.io/an
 
 For rendering, you can use the `swrast` or the `null` platforms depending on your requirements.
 
-`swrast` is a software rasterization platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilised for use cases that require a visual output without a GPU. The rendering pipe for the `swrast` or `null` platform is not different than the one for the `webrtc` platform with NVIDIA GPU support except that it is irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
+`swrast` is a software rasterization platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilized for use cases that require a visual output without a GPU. The rendering pipe for the `swrast` or `null` platform is not different than the one for the `webrtc` platform with NVIDIA GPU support except that it is irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
 
 `null` is an OpenGL headless platform that makes use of the rendering backend of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing. It does not perform software rendering and does not produce any graphic output. Hence, the overhead on the CPU when using `null` platform is significantly low which makes it a good candidate for all use cases where a graphic output is not necessary.
 

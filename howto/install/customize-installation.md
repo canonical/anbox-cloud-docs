@@ -1,14 +1,14 @@
-(howto-customise-installation)=
-# How to customise your installation
+(howto-customize-installation)=
+# How to customize your installation
 
-There are two main ways to customise the Anbox Cloud deployment:
+There are two main ways to customize the Anbox Cloud deployment:
 
 1. Use overlays in conjunction with the published Anbox Cloud bundle.
 2. Edit the bundle file.
 
-Using an overlay means that you can easily apply your customisation to different versions of the bundle, with the possible downside that changes in the structure of new versions of Anbox Cloud might render your overlay obsolete or non-functional (depending on what exactly your overlay does).
+Using an overlay means that you can easily apply your customization to different versions of the bundle, with the possible downside that changes in the structure of new versions of Anbox Cloud might render your overlay obsolete or non-functional (depending on what exactly your overlay does).
 
-Saving a copy of the bundle file and editing that file means that your customisation will always work, but of course, this method requires that you create a new file for each version of Anbox Cloud.
+Saving a copy of the bundle file and editing that file means that your customization will always work, but of course, this method requires that you create a new file for each version of Anbox Cloud.
 
 ## Use overlay files
 
@@ -78,7 +78,7 @@ This will give the same result as configuring the proxy values through Juju:
 
 ## Edit a bundle file
 
-Another way to change or customise a deployment is to store the YAML bundle file locally and edit it with a text editor.
+Another way to change or customize a deployment is to store the YAML bundle file locally and edit it with a text editor.
 
 The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See {ref}`sec-juju-bundles` for more details on the available bundles.
 
@@ -100,6 +100,6 @@ You can also view, edit and export bundles from the Juju GUI:
 
 Running this command will output login information and a URL for the GUI interface (the GUI actually runs on the Juju controller instance). When you visit the given URL and log in, you will see a graphical representation of the current model. To export the model as a YAML bundle, click on the **Export** button near the top left of the screen.
 
-![Anbox Cloud - Juju GUI|690x444](/images/install_customise_juju-model.png)
+![Anbox Cloud - Juju GUI|690x444](/images/install_customize_juju_model.png)
 
 For more information on the Juju GUI, see the [Juju documentation](https://juju.is/docs/olm/accessing-the-dashboard).

@@ -1,7 +1,7 @@
 (ref-webrtc)=
 # WebRTC streamer
 
-Usually you wouldn't need to adjust the default WebRTC streamer configuration because it is optimised to provide a good balance between low latency and high quality. However, you can still fine-tune it to provide better results in certain situations.
+Usually you wouldn't need to adjust the default WebRTC streamer configuration because it is optimized to provide a good balance between low latency and high quality. However, you can still fine-tune it to provide better results in certain situations.
 
 Place the WebRTC streamer configuration at `/var/lib/anbox/streamer.json` within the instance before the Anbox runtime starts. The configuration can be shipped as part of an application or an addon.
 
@@ -12,8 +12,8 @@ The configuration file uses the JSON format. It has the following structure:
 | `video.bitrate_limits` | array of objects | `[]` | Bitrate limits to apply to the video encoder. |
 | `nvidia_h264.multipass`<br>`nvidia_av1.multipass` | bool | `false` | If set to true, multi-pass encoding is enabled. |
 | `nvidia_h264.multipass_quarter_resolution`<br>`nvidia_av1.multipass_quarter_resolution` | bool | `false` | If set to true, multi-pass encoding will be run only for a quarter of a frame's resolution. |
-| `nvidia_h264.aq`<br>`nvidia_av1.aq` | bool | `false` | If set to true, adaptive quantisation is enabled. |
-| `nvidia_h264.aq_strength`<br>`nvidia_av1.aq_strength` | integer | `0` | Strength of adaptive quantisation: a value from `1` (least aggressive) to `15` (most aggressive). `0` means the encoder will automatically decide. |
+| `nvidia_h264.aq`<br>`nvidia_av1.aq` | bool | `false` | If set to true, adaptive quantization is enabled. |
+| `nvidia_h264.aq_strength`<br>`nvidia_av1.aq_strength` | integer | `0` | Strength of adaptive quantization: a value from `1` (least aggressive) to `15` (most aggressive). `0` means the encoder will automatically decide. |
 | `nvidia_h264.preset`<br>`nvidia_av1.preset` | integer | `0` | Preset to use (a value from `1` to `7`). `0` means Anbox will automatically decide. |
 
 See the [NVENC Video Encoder API](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/nvenc-video-encoder-api-prog-guide/) documentation for more details on the NVIDIA video encoder options.

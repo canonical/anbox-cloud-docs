@@ -95,7 +95,7 @@ In the **Key pair (login)** section, choose an existing key pair or create one i
 
 ### Configure the network
 
-You do not need to customise any of the settings in the **Network settings** section, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
+You do not need to customize any of the settings in the **Network settings** section, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
 
 To allow external access, several ports in the security group attached to the AWS instance must be open. The AMI already comes with the required configuration, so you don't need to do any changes. However, for security reasons, you might want to limit access to specific source IPs or subnets.
 
@@ -134,7 +134,7 @@ AWS will verify your configuration, subscribe you to the product and launch the 
 
 ## Access the appliance
 
-When the instance is successfully launched, you can find its public IP address in the instance details page. Use this IP address or the corresponding DNS name to access the instance over SSH to start the initialisation process.
+When the instance is successfully launched, you can find its public IP address in the instance details page. Use this IP address or the corresponding DNS name to access the instance over SSH to start the initialization process.
 
 ## Connect to the VM
 
@@ -160,9 +160,9 @@ Some preparation is required for using Anbox Cloud that involves installing addi
 
 This command applies a script that installs required kernel modules and any necessary GPU driver packages. See {ref}`sec-prepare-machine` for more information.
 
-## Initialise the installation
+## Initialize the installation
 
-To initialise the appliance, run:
+To initialize the appliance, run:
 
     sudo anbox-cloud-appliance init
 
@@ -170,7 +170,7 @@ You will be asked a few questions when you run the `init` command. Accept the de
 
 ## Register with the dashboard
 
-After initialisation, you must register your user account with the Anbox Cloud dashboard to access it. Run:
+After initialization, you must register your user account with the Anbox Cloud dashboard to access it. Run:
 
     sudo anbox-cloud-appliance dashboard register <your Ubuntu SSO email address>
 

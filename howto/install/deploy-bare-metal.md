@@ -81,8 +81,8 @@ The `anbox-cloud` bundle requires two additional machines to host the load balan
 
 The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
 
-(sec-customise-storage-bare-metal)=
-## Customise storage
+(sec-customize-storage-bare-metal)=
+## Customize storage
 
 By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See {ref}`sec-lxd-storage` for more information.
 
@@ -90,7 +90,7 @@ There are different ways of configuring a dedicated block storage device:
 
 - Use an [existing LXD storage pool](#existing-storage-pool) (recommended)
 - Use a [dedicated storage device](#dedicated-storage-device)
-- Use a storage device defined by Juju (see {ref}`sec-customise-storage-juju` for instructions)
+- Use a storage device defined by Juju (see {ref}`sec-customize-storage-juju` for instructions)
 
 ### Existing storage pool
 
@@ -134,7 +134,7 @@ Now you can deploy Anbox Cloud. The deployment is entirely handled by Juju and d
 
 Choose between the available Juju bundles (see {ref}`sec-juju-bundles`):
 
-* For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
+* For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
         juju deploy anbox-cloud-core --overlay ua.yaml --map-machines 0=0,1=1
 

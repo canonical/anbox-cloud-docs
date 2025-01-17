@@ -9,7 +9,7 @@ An [Azure quickstart template](https://github.com/Azure/azure-quickstart-templat
 <!-- wokeignore:rule=master -->
 Once you have completed the [deployment steps](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/canonical/anbox#deployment-steps), finish the installation by performing the following steps:
 
-1. {ref}`Initialise the appliance <sec-initialise-appliance>`
+1. {ref}`Initialize the appliance <sec-initialize-appliance>`
 1. {ref}`Register your Ubuntu SSO account with the appliance dashboard <sec-register-dashboard>`.
 
     ```{Tip}
@@ -84,7 +84,7 @@ For networking, the Anbox Cloud Appliance requires the following change to the d
 
 ![Network security group configuration](/images/appliance-on-azure/azure_config-secgroup-co.png)
 
-### Finalise the configuration
+### Finalize the configuration
 
 Check the configuration settings on the remaining tabs and make sure they are suitable for your deployment. The Anbox Cloud Appliance does not require any changes to the default configuration for these areas.
 

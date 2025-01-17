@@ -7,15 +7,15 @@ See {ref}`ref-provided-images` for information about which images Anbox Cloud pr
 
 ## Configure image server
 
-The Canonical image server provides different Anbox Cloud images that are updated regularly. AMS automatically synchronises new image versions in regular intervals and updates your applications to use these new versions. The images on the image server are updated for important security updates or bug fixes, and with every release of Anbox Cloud.
+The Canonical image server provides different Anbox Cloud images that are updated regularly. AMS automatically synchronizes new image versions in regular intervals and updates your applications to use these new versions. The images on the image server are updated for important security updates or bug fixes, and with every release of Anbox Cloud.
 
 Access to the image server is automatically configured as part of your Ubuntu Pro subscription during the charm deployment. No further manual steps are necessary.
 
-AMS will automatically start importing the images available on the image server. The `images.update_interval` configuration option allows to customise how often AMS looks for new images. You can set it to a desired interval with the following command:
+AMS will automatically start importing the images available on the image server. The `images.update_interval` configuration option allows to customize how often AMS looks for new images. You can set it to a desired interval with the following command:
 
     amc config set images.update_interval 5m
 
-You can see the synchronised images with the `amc image list` command:
+You can see the synchronized images with the `amc image list` command:
 
 ```bash
 +----------------------+------------------------+--------+----------+--------------+---------+
@@ -31,7 +31,7 @@ You can see the synchronised images with the `amc image list` command:
 
 ## Set default image
 
-The first image that is synchronised (usually the newest image) is marked as the default image.
+The first image that is synchronized (usually the newest image) is marked as the default image.
 The default image is used when you create an application without the `image` field or launch a raw instance without specifying any ID.
 
 You can set any image as your default with the following command:
@@ -48,7 +48,7 @@ Deleting a specific image can be achieved with the following command, where `ima
 
     amc image delete image-name
 
-Images that are synchronised from the image server are marked as immutable. To delete such images, add the `--force` flag:
+Images that are synchronized from the image server are marked as immutable. To delete such images, add the `--force` flag:
 
     amc image delete --force io.anbox-cloud:nougat:amd64
 
@@ -79,5 +79,5 @@ For instance, to fetch the arm64 Android 13 image of the 1.18.0 release:
 You can then use the `foobar` image as you would any other image.
 
 ```{important}
-Image updates contain important security patches and optimisations. Use older images only when strictly necessary.
+Image updates contain important security patches and optimizations. Use older images only when strictly necessary.
 ```

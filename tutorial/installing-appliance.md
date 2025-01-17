@@ -6,12 +6,12 @@ The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machi
 There are differences between the Anbox Cloud Appliance and the charmed Anbox Cloud installation (see {ref}`sec-variants`). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.
 
 ```{caution}
-Remember that installing the Anbox Cloud Appliance will take over the entire instance, install packages and override existing components to configure them as required. If you have existing components, for example, LXD containers, installing and initialising the appliance could override any existing configuration. Hence, it is important to try this tutorial on a machine dedicated for Anbox Cloud.
+Remember that installing the Anbox Cloud Appliance will take over the entire instance, install packages and override existing components to configure them as required. If you have existing components, for example, LXD containers, installing and initializing the appliance could override any existing configuration. Hence, it is important to try this tutorial on a machine dedicated for Anbox Cloud.
 ```
 
 If you want to install **Anbox Cloud** instead, see {ref}`howto-install-anbox-cloud` or if you want to install the appliance on a cloud platform, see {ref}`howto-install-appliance`.
 
-This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance).
+This tutorial guides you through the steps that are required to install and initialize the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance).
 
 ## Preparation
 
@@ -87,23 +87,23 @@ To apply the script after reviewing it, you can run:
 
     anbox-cloud-appliance prepare-node-script | sudo bash -ex
 
-(sec-initialise-appliance)=
-## Initialise the appliance
+(sec-initialize-appliance)=
+## Initialize the appliance
 
-After preparation of the machine has been completed, you can now initialise the Anbox Cloud Appliance itself.
+After preparation of the machine has been completed, you can now initialize the Anbox Cloud Appliance itself.
 
 ### Run the `init` command
 
-On your machine, enter the following command to invoke the initialisation process of the Anbox Cloud Appliance:
+On your machine, enter the following command to invoke the initialization process of the Anbox Cloud Appliance:
 
     sudo anbox-cloud-appliance init
 
-You will be asked a few questions. If you don't want to make any specific changes, you can safely stay with the offered default answers. When the command returns, the initialisation process has been completed.
+You will be asked a few questions. If you don't want to make any specific changes, you can safely stay with the offered default answers. When the command returns, the initialization process has been completed.
 
 (sec-register-dashboard)=
 ## Register with the dashboard
 
-Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.
+Once the initialization process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.
 
 ![Instructions for registering Ubuntu SSO account|690x442](/images/install_appliance_register.png)
 
@@ -121,6 +121,6 @@ After registering, you can log into the appliance dashboard at `https://your-mac
 
 ## Done!
 
-Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the {ref}`tut-getting-started-dashboard` or the {ref}`tut-getting-started-cli` tutorial to familiarise yourself with how to use Anbox Cloud.
+Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the {ref}`tut-getting-started-dashboard` or the {ref}`tut-getting-started-cli` tutorial to learn how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.

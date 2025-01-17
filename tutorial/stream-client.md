@@ -12,7 +12,7 @@ Complete the following preparatory steps:
 
 ### Install the Anbox Cloud Appliance
 
-We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the {ref}`tut-installing-appliance` until initialising the appliance. When you have installed and initialised the appliance, let's proceed to the next step.
+We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the {ref}`tut-installing-appliance` until initializing the appliance. When you have installed and initialized the appliance, let's proceed to the next step.
 
 (sec-create-access-token)=
 ### Create an access token
@@ -253,7 +253,7 @@ Next, let's create and activate the virtual environment and use `pip` to install
 
 To run the stream client service application, we need to set the necessary environment variables and execute the service via flask.
 
-When installing and initialising the appliance, we would have configured the private IP address of the machine running the appliance. The gateway API is accessible on the local listen address of the appliance on port `9031/tcp`. So that's the IP address and port we use in the GATEWAY_URL.
+When installing and initializing the appliance, we would have configured the private IP address of the machine running the appliance. The gateway API is accessible on the local listen address of the appliance on port `9031/tcp`. So that's the IP address and port we use in the GATEWAY_URL.
 
 For the `GATEWAY_API_TOKEN`, use the access token you noted earlier in {ref}`sec-create-access-token`.
 

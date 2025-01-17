@@ -90,7 +90,7 @@ suites:
 
 As mentioned by the command you have to store the printed configuration to a file so it can be used by the tests later on. Also you need to register the generated TLS certificate for the AMS tests with AMS. See {ref}`howto-access-ams-remote` for more details on how to do that.
 
-Depending on your deployment you can further customise the generated configuration. For example may your deployment only support a single architecture for the instances. For that make sure the `suites.ams.supported-architectures` field is set to the right list of architectures.
+Depending on your deployment you can further customize the generated configuration. For example may your deployment only support a single architecture for the instances. For that make sure the `suites.ams.supported-architectures` field is set to the right list of architectures.
 
 If you have support for real GPUs, set the `suites.ams.gpu-type` item to the right GPU type (supported values are: `nvidia`, `amd`, `intel`, `none`) and add GPU based instance types (see {ref}`sec-application-manifest-instance-type` for more details) to the `suites.ams.instance-types`.
 

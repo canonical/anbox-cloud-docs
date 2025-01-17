@@ -9,7 +9,7 @@ Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https:/
 
 ## Cluster capacity
 
-Anbox Cloud is optimised to provide instances at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See {ref}`exp-capacity-planning` for more information.
+Anbox Cloud is optimized to provide instances at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See {ref}`exp-capacity-planning` for more information.
 
 (sec-lxd-auto-scaling)=
 ## LXD auto scaling

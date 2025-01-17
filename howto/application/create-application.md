@@ -11,7 +11,7 @@ To create a new application, you need an {ref}`ref-application-manifest` and opt
 
 The application manifest is a `yaml` file and is used to define various attributes of your application.
 
-A default application manifest is created based on the *Resource type* you choose for your application. You can further customise various attributes of your application including the resource requirements for your application.
+A default application manifest is created based on the *Resource type* you choose for your application. You can further customize various attributes of your application including the resource requirements for your application.
 
 An example manifest file:
 
@@ -49,7 +49,7 @@ resources:
 `````{tabs}
 ````{group-tab} CLI
 
-An application can be created from a directory, a zip archive or a tarball file. If you cannot use a directory, the second best option is to use a zip archive that provides better optimisation when compared to a tarball.
+An application can be created from a directory, a zip archive or a tarball file. If you cannot use a directory, the second best option is to use a zip archive that provides better optimization when compared to a tarball.
 
 If you are using a directory or a zip archive, ensure that the directory/zip contains the `manifest.yaml` file. You can also optionally include `app.apk` and `extra-data`.
 
@@ -123,7 +123,13 @@ resources:
 
 ```{group-tab} Dashboard
 
-Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again. The *Create application* form also provides an option to customise your application manifest.
+Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again.
+
+An application can be created either in a VM or a container. Selecting one of these options will update the image field to only show images of the chosen type. The default image for the selected type is automatically populated in the image field.
+
+The advanced fields allows you to define a {ref}`version <ref-application-manifest>`, specify a {ref}`boot package <ref-application-manifest>`, add multiple {ref}`tags <ref-application-manifest>`, and disable {ref}`sec-application-manifest-watchdog`.
+
+The *Create application* form also provides an option to customize your application manifest.
 
 There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI.
 ```

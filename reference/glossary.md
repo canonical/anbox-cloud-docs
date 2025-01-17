@@ -4,7 +4,7 @@
 ```{glossary}
 
 Addons
-    A piece of code that can be used to extend and customise images in Anbox Cloud.
+    A piece of code that can be used to extend and customize images in Anbox Cloud.
 
     See {ref}`ref-addon-manifest` for more information.
 
@@ -119,7 +119,7 @@ Boot package
     The package to launch in an application instance once the system has booted.
 
 Bootstrap process
-    The process that builds the application and optimises it to run on Anbox Cloud.
+    The process that builds the application and optimizes it to run on Anbox Cloud.
 
     See {ref}`sec-application-bootstrap` for more information.
 
@@ -143,7 +143,7 @@ Coturn
     See [the Coturn project on GitHub](https://github.com/coturn/coturn) for more information.
 
 Graphics Processing Unit (GPU)
-    A specialised processor that is designed to accelerate image processing and graphics rendering for output to a display device.
+    A specialized processor that is designed to accelerate image processing and graphics rendering for output to a display device.
 
 High availability (HA)
     The characteristic of a system to continuously be available without failing for a higher-than-normal period of time. Anbox Cloud ensures high availability by keeping replicas of every service, which avoids having a single point of failure.
@@ -223,7 +223,7 @@ Scrcpy
     See [the scrcpy project on GitHub](https://github.com/Genymobile/scrcpy) for more information.
 
 Session
-    The interaction between a streaming client and the application instance during streaming. A session contains, among other information, user data and application information and provides an entry point for both the client and the instance to start the signalling process.
+    The interaction between a streaming client and the application instance during streaming. A session contains, among other information, user data and application information and provides an entry point for both the client and the instance to start the signaling process.
 
     See {ref}`exp-application-streaming` for more information.
 

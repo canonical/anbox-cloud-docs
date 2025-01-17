@@ -1,7 +1,7 @@
 (exp-rendering-graphics)=
 # Rendering graphical output
 
-Anbox Cloud can adapt to your rendering needs by adjusting its behaviour depending on the availability of a GPU and the presence of the `--enable-graphics` flag when you launch an instance.
+Anbox Cloud can adapt to your rendering needs by adjusting its behavior depending on the availability of a GPU and the presence of the `--enable-graphics` flag when you launch an instance.
 
     amc launch --enable-graphics my-application
 
@@ -19,7 +19,7 @@ Anbox Cloud currently does not support GPU provisioning for instances that are v
 
 To use container instances with a GPU,
 
-- Configure the number of available GPU slots on the node. This decides how many instances can run on a given node because GPUs have limited sharing capacity amongst multiple instances. See {ref}`sec-gpu-slots` for detailed information.
+- Configure the number of available GPU slots on the node. This decides how many instances can run on a given node because GPUs have limited sharing capacity among multiple instances. See {ref}`sec-gpu-slots` for detailed information.
 - Check the list of supported GPUs ({ref}`sec-supported-gpus`) to see if Anbox Cloud has support for a driver for your GPU device. If a GPU driver is available inside the instance, there are no further differences in how to use it in comparison to a regular environment. If no GPU driver is available, you must provide it through an {ref}`addon <exp-addons>`.
 - Launch your instance with the `--enable-graphics` flag.
 

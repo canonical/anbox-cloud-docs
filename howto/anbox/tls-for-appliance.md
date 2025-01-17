@@ -9,7 +9,7 @@ If you run the appliance on AWS, you can choose to use the AWS Certificate Manag
 
 Before you start, make sure the following requirements are met:
 
-- The Anbox Cloud Appliance is installed and initialised. See {ref}`howto-install-appliance-aws` and {ref}`sec-initialise-appliance` for instructions.
+- The Anbox Cloud Appliance is installed and initialized. See {ref}`howto-install-appliance-aws` and {ref}`sec-initialize-appliance` for instructions.
 
 - A DNS name you can use to point to the machine hosting the Anbox Cloud Appliance
 

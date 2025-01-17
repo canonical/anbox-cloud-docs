@@ -1,7 +1,7 @@
 (exp-instances)=
 # Instances
 
-Instances are the centre piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
+Instances are the center piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
 
 All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through addons. See {ref}`howto-backup-restore-example` for information on how to do this.
 
@@ -29,7 +29,7 @@ Raw instances are containers or virtual machines created when launching an image
 
 ### Creating an instance
 
-When you create an instance by either launching or initialising an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
+When you create an instance by either launching or initializing an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
 
 1. Configure the network interface and gateway.
 1. (Only for raw instances) Install addons that are specified with `--addons`.

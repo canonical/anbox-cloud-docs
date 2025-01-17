@@ -94,8 +94,7 @@ spelling: html
 	. $(VENV) ; python3 -m pyspelling -c $(SPHINXDIR)/spellingcheck.yaml -j $(shell nproc)
 
 linkcheck: install
-	echo "Link check is disabled temporarily"
-#	. $(VENV) ; $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	. $(VENV) ; $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
 woke: woke-install
 	woke *.rst **/*.rst --exit-1-on-failure \

@@ -34,7 +34,7 @@ Click *Create application* again to complete the process. You are redirected to 
 
 ## Test the virtual device
 
-When the application has been initialised and its status changes to `ready`, complete the following steps to launch and test the virtual device:
+When the application has been initialized and its status changes to `ready`, complete the following steps to launch and test the virtual device:
 
 1. In the list of applications, Click *Create an instance* ( ![create an instance icon](/images/icons/create-instance-icon.png) ).
 

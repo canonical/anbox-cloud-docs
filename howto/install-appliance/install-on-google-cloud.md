@@ -27,11 +27,11 @@ Log in to [Google Cloud](https://console.cloud.google.com) and select the projec
 ### Configure basic settings
 
 * *Name* - Name of the virtual machine instance
-* *Labels* - Organisational labels to keep track of your resources on Google Cloud
+* *Labels* - Organizational labels to keep track of your resources on Google Cloud
 * *Region* and *Zone* - The geographic location where your resources are run and your data is stored
-* *Machine configuration*, *Series*, *Machine type* and *Display device* - Select a machine configuration that matches the hardware requirements. If your requirement includes GPUs, select the GPU-optimised machine configuration. For example, an NVIDIA L4 GPU. You can select the recommended preset machine type or define a custom type with additional cores and memory for an added cost.
+* *Machine configuration*, *Series*, *Machine type* and *Display device* - Select a machine configuration that matches the hardware requirements. If your requirement includes GPUs, select the GPU-optimized machine configuration. For example, an NVIDIA L4 GPU. You can select the recommended preset machine type or define a custom type with additional cores and memory for an added cost.
 
-Most of the configuration depends on your deployment and its location. For the settings that are not mentioned in this guide, you can choose to proceed with the default options or see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance) to customise your virtual machine on Google Cloud.
+Most of the configuration depends on your deployment and its location. For the settings that are not mentioned in this guide, you can choose to proceed with the default options or see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance) to customize your virtual machine on Google Cloud.
 
 ### Configure disks
 

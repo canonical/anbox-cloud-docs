@@ -3,9 +3,9 @@
 
 The Anbox Cloud Appliance has support for custom identity providers for authentication through the use of [OpenID Connect](https://openid.net/developers/discover-openid-and-openid-connect/).
 
-Support for a custom identity provider has to be enabled at initialisation by using a preseed configuration. See {ref}`ref-appliance-preseed-config` for more details.
+Support for a custom identity provider has to be enabled at initialization by using a preseed configuration. See {ref}`ref-appliance-preseed-config` for more details.
 
-Anbox Cloud uses the [authorisation code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) to obtain an identity token. No access token is requested in this flow because authorisation is handled within the Anbox Cloud services.
+Anbox Cloud uses the [authorization code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) to obtain an identity token. No access token is requested in this flow because authorization is handled within the Anbox Cloud services.
 
 In order to allow discovery of the necessary endpoints on the identity provider, it must support the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) protocol.
 
@@ -25,7 +25,7 @@ Your identity provider must have `https://<appliance address or <DNS name>/oidc/
 
 ## Configure OpenID Connect
 
-It is only possible to configure support for OpenID Connect only when the Anbox Cloud Appliance is being initialised with a preseed (see {ref}`ref-appliance-preseed-config`). The other steps to install the Anbox Cloud Appliance as described in {ref}`tut-installing-appliance` remain the same.
+It is only possible to configure support for OpenID Connect only when the Anbox Cloud Appliance is being initialized with a preseed (see {ref}`ref-appliance-preseed-config`). The other steps to install the Anbox Cloud Appliance as described in {ref}`tut-installing-appliance` remain the same.
 
 The issuer URL, client ID and optional audience URL are set in the preseed configuration as follows:
 
@@ -39,11 +39,11 @@ oidc:
   audience: https://my.auth.com/api/v2
 ```
 
-With the preseed configuration you can initiate the initialisation process by running:
+With the preseed configuration you can initiate the initialization process by running:
 
     sudo anbox-cloud-appliance init --preseed < preseed.yaml
 
-Once the initialisation has been completed, you can register a new user by running:
+Once the initialization has been completed, you can register a new user by running:
 
     sudo anbox-cloud-appliance dashboard register <email address>
 

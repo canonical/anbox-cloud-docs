@@ -23,7 +23,7 @@ For NVIDIA GPUs, we cannot use the NVIDIA driver inside Android because of compa
 
 As the Venus Vulkan driver only provides Vulkan API support for Android, we use [ANGLE](https://chromium.googlesource.com/angle/angle) to layer OpenGL ES and EGL on top.
 
-In terms of performance, this could be perceived to have some transmission overhead when compared to the rendering on Intel and AMD GPUs. However, Anbox Cloud is optimised to keep this overhead minimal and the additional overhead due to the transmission of Vulkan API calls from the Android space to the Ubuntu side renderer is not significant enough to affect most use cases.
+In terms of performance, this could be perceived to have some transmission overhead when compared to the rendering on Intel and AMD GPUs. However, Anbox Cloud is optimized to keep this overhead minimal and the additional overhead due to the transmission of Vulkan API calls from the Android space to the Ubuntu side renderer is not significant enough to affect most use cases.
 
 In older versions, Anbox Cloud used a similar rendering pipeline for NVIDIA GPUs which only supports OpenGL ES and EGL but could not provide Vulkan API support. Since the 1.21.0 release, VirGL was also available as a rendering option but had to be enabled explicitly.
 

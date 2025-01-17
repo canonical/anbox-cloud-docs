@@ -1,7 +1,7 @@
 (ref-release-notes)=
 # Release notes
 
-This page outlines the release notes of all versions of Anbox Cloud. If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
+This page outlines the release notes of all versions of Anbox Cloud. If you're interested in getting notified for the latest Anbox Cloud releases, subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on the Ubuntu discourse.
 
 For instructions on how to update your Anbox Cloud deployment to later versions, see {ref}`howto-upgrade-anbox-cloud` or {ref}`howto-upgrade-appliance`.
 
@@ -9,6 +9,7 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| January 15, 2025 | [Anbox Cloud 1.24.2](1.24.2.md) |
 | December 11, 2024 | [Anbox Cloud 1.24.1](1.24.1.md) |
 | December 4, 2024 | [Anbox Cloud 1.23.3](1.23.3.md) |
 | November 13 2024 | [Anbox Cloud 1.24.0](1.24.0.md) |
@@ -25,9 +26,9 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| December 11 2024 | Anbox Cloud 1.24.1 | * Android security updates for December 2024<br/> * Bug fixes |
-| January 15 2025 | Anbox Cloud 1.24.2 | * Android security updates for January 2025<br/> * Bug fixes |
 | February 12 2025 | Anbox Cloud 1.25.0 | * Integration with the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack)<br/> * Backup and restore support for the Anbox Cloud dashboard charm<br/> * Support for Ubuntu 24.04 (Noble Numbat) for all charms<br/> * (Alpha release) Terraform plan replacing the Anbox Cloud bundles<br/> * Improvements to the Anbox Management Service (AMS)<br/> * Reworked charms<br/> * Upgrade to LXD 5.21<br/> * Android security updates for February 2025<br/> * Bug fixes |
+| March 12 2025 | Anbox Cloud 1.25.1 | * Android security updates for March 2025<br/> * Bug fixes |
+| April 16 2025 | Anbox Cloud 1.25.2 | * Android security updates for April 2025<br/> * Bug fixes |
 
 ## Release and support policy
 

@@ -1,7 +1,7 @@
 (ref-appliance-configuration)=
 # Anbox Cloud Appliance configuration
 
-The Anbox Cloud Appliance provides various configuration items to customise its behaviour. Currently set configuration can be seen by running
+The Anbox Cloud Appliance provides various configuration items to customize its behavior. Currently set configuration can be seen by running
 
     sudo anbox-cloud-appliance config show
 

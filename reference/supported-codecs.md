@@ -1,7 +1,7 @@
 (ref-codecs)=
 # Supported video codecs
 
-Anbox Cloud combines both software and hardware video encoding in order to utilise available resources in the best possible way. Hardware video encoders usually have limited capacity of how many simultaneous video streams they can encode for low latency scenarios. For example, the NVIDIA T4 can encode 37 video streams at 720p and 30 frames per second (see "[Turing H.264 Video Encoding Speed and Quality](https://devblogs.nvidia.com/turing-h264-video-encoding-speed-and-quality/)" for more details). Depending on the CPU platform used, additional compute capacity might be available to support additional sessions via software encoding.
+Anbox Cloud combines both software and hardware video encoding in order to utilize available resources in the best possible way. Hardware video encoders usually have limited capacity of how many simultaneous video streams they can encode for low latency scenarios. For example, the NVIDIA T4 can encode 37 video streams at 720p and 30 frames per second (see "[Turing H.264 Video Encoding Speed and Quality](https://devblogs.nvidia.com/turing-h264-video-encoding-speed-and-quality/)" for more details). Depending on the CPU platform used, additional compute capacity might be available to support additional sessions via software encoding.
 
 Not all codecs are supported by one or more of the supported GPU models, neither are they performing suitably for low latency. Hence, the list of supported video codecs is limited.
 

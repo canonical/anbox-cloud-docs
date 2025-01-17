@@ -34,6 +34,7 @@ Know the configuration options that can be defined for various components of Anb
 * {ref}`ref-ams-configuration`
 * {ref}`Appliance configuration <ref-appliance-configuration>`
 * {ref}`ref-application-manifest`
+* {ref}`ref-feature-flags`
 * {ref}`ref-webrtc`
 
 ## API reference
@@ -89,6 +90,7 @@ application-manifest
 cmd-ref/landing.md
 component-versions
 deprecation-notices
+feature-flags
 glossary
 hooks
 license-information

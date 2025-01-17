@@ -102,7 +102,7 @@ The following table shows which Android security features are supported in Anbox
 
 ### Security-Enhanced Linux (SELinux)
 
-Currently, Anbox Cloud disables SELinux in Android. The reason for this is that SELinux conflicts with AppArmor, which is by default enabled in LXD. Anbox Cloud utilises the security features provided by LXD and therefore relies on AppArmor instead of SELinux.
+Currently, Anbox Cloud disables SELinux in Android. The reason for this is that SELinux conflicts with AppArmor, which is by default enabled in LXD. Anbox Cloud utilizes the security features provided by LXD and therefore relies on AppArmor instead of SELinux.
 
 In future releases, it might be possible to run AppArmor and SELinux in parallel. In this case, the decision to disable SELinux will be reconsidered.
 

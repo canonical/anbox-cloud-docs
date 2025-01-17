@@ -34,7 +34,7 @@ Learn how to manage the different variants of Anbox Cloud, distribute the load o
 
 ## Monitoring Anbox Cloud
 
-Understand monitoring options for Anbox Cloud to further optimise your deployment.
+Understand monitoring options for Anbox Cloud to further optimize your deployment.
 
 * {ref}`howto-monitor-anbox`
 
@@ -62,7 +62,7 @@ Monitor Anbox Cloud <monitor/landing>
 Port Android apps <port/landing>
 Stream <stream/landing>
 Troubleshoot Anbox Cloud <troubleshoot/landing>
-Update Anbox Cloud <update/landing>
+Upgrade Anbox Cloud <upgrade/landing>
 Use web dashboard <dashboard/landing>
 Work with Anbox runtime <anbox-runtime/landing>
 Work with Android <android/landing>

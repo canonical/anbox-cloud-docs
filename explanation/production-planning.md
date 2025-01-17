@@ -1,7 +1,7 @@
 (exp-production-planning)=
 # Production planning
 
-When you are planning a production deployment, you should consider the aspects that you want to customise for best results. This topic covers the most common and important requirements when you are planning to move your Anbox Cloud deployment to production. While there could be other specifically tailored needs, this topic helps you identify your basic requirements and deployment strategy.
+When you are planning a production deployment, you should consider the aspects that you want to customize for best results. This topic covers the most common and important requirements when you are planning to move your Anbox Cloud deployment to production. While there could be other specifically tailored needs, this topic helps you identify your basic requirements and deployment strategy.
 
 ## Compute resource requirements 
 
@@ -47,7 +47,7 @@ Consider the following security aspects when you are planning for a production d
 
 ### Protection against DDoS attacks
 
-DDoS attacks can severely impact the availability of critical services. It is important to assess your threat model and decide on protection mechanisms to safeguard your public endpoints and critical services. While deploying Anbox Cloud, consider addressing potential threats, such as overwhelming the signalling WebSocket or other public-facing resources to ensure service availability and resilience.
+DDoS attacks can severely impact the availability of critical services. It is important to assess your threat model and decide on protection mechanisms to safeguard your public endpoints and critical services. While deploying Anbox Cloud, consider addressing potential threats, such as overwhelming the signaling WebSocket or other public-facing resources to ensure service availability and resilience.
 
 ### Secure communication
 
@@ -71,7 +71,7 @@ Load balancing solutions can differ based on your deployment model. You should a
 
 ## Energy Efficiency
 
-Anbox Cloud is optimised to use only as much energy as is necessary for an operation to complete. When planning for a production deployment, think through the following questions about energy efficiency to choose the most optimum way possible for your specific requirements:
+Anbox Cloud is optimized to use only as much energy as is necessary for an operation to complete. When planning for a production deployment, think through the following questions about energy efficiency to choose the most optimum way possible for your specific requirements:
 
 * Does your hardware match the requirements for your use case?
 * What trade-offs does your requirement allow to improve energy efficiency? For example, is there a way to use a lower streaming resolution? Lowering the resolution will impact the streaming experience but where possible, it could be a trade-off between being energy efficient and the quality of the stream. This needs to be decided based on how you use Anbox Cloud.
@@ -83,7 +83,7 @@ Anbox Cloud is optimised to use only as much energy as is necessary for an opera
 
 Although Anbox Cloud does not offer its own observability solution, Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution.
 
-To create a customised monitoring solution, see {ref}`ref-prometheus-metrics` for a detailed understanding of available metrics to assess your monitoring needs for the production deployment. See {ref}`exp-performance` to learn about the factors that could influence the performance of your deployment.
+To create a customized monitoring solution, see {ref}`ref-prometheus-metrics` for a detailed understanding of available metrics to assess your monitoring needs for the production deployment. See {ref}`exp-performance` to learn about the factors that could influence the performance of your deployment.
 
 ## Licensing and Support
 
@@ -93,4 +93,4 @@ You need the Ubuntu Pro subscription to use Anbox Cloud. Depending on the type o
 
 When you consider a production deployment, it is important to assess your upgrade roadmap. For more information about upgrading Anbox Cloud and the prerequisites required for the upgrade process, see {ref}`howto-upgrade-anbox-cloud`. 
 
-You can also choose to subscribe to the [announcements about Anbox Cloud releases](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on discourse. For insights into the Anbox Cloud release roadmap, see {ref}`ref-release-notes`.
+You can also choose to subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on discourse. For insights into the Anbox Cloud release roadmap, see {ref}`ref-release-notes`.

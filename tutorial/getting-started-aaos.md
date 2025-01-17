@@ -14,7 +14,7 @@ You can also choose to watch a [video of this tutorial on YouTube](https://www.y
 
 We will use the appliance dashboard to perform the tasks for this tutorial. So if you haven’t installed the Anbox Cloud Appliance yet, you must do that first.
 
-Follow the installation instructions available at {ref}`tut-installing-appliance` to install and initialise the appliance. Proceed with the tutorial when you can access the appliance dashboard.
+Follow the installation instructions available at {ref}`tut-installing-appliance` to install and initialize the appliance. Proceed with the tutorial when you can access the appliance dashboard.
 
 ## Create an AAOS-based application
 
@@ -43,7 +43,7 @@ Confirm with *Add application* and wait till the *Applications* list screen show
 
 Go to the *Instances* screen and wait until you see an instance for the created application with a *running* status.
 
-Click *Stream* ( ![stream icon](/images/join-session-icon.png) ) to stream the application.
+Click *Stream* ( ![stream icon](/images/icons/stream-icon.png) ) to stream the application.
 
 If you want to stream with specific capabilities and display options, create your custom instance from the *Instances* screen and specify the desired *Capabilities* and *Virtual display* options.
 

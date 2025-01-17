@@ -1,7 +1,7 @@
 (ref-requirements)=
 # Requirements
 
-To run Anbox Cloud, you must fulfil a few minimum requirements, which differ depending on the kind of deployment you choose.
+To run Anbox Cloud, you must fulfill a few minimum requirements, which differ depending on the kind of deployment you choose.
 
 This topic provides information about the following requirements:
 

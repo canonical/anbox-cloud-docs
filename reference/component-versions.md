@@ -5,6 +5,47 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.24.2
+
+### Charms
+
+N/A
+
+### Bundles
+
+N/A
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.24/stable` | `1.24.2-c816e2633` |
+| `aar`    | `1.24/stable` | `1.24.2-c816e2633` |
+| `amc`    | `latest/stable` | `1.24.2-c816e2633` |
+| `ams-node-controller` (Deprecated) | `1.24/stable` | `1.24.2-c816e2633` |
+| `anbox-cloud-dashboard` | `1.24/stable` | `1.24.2-c816e2633` |
+| `anbox-stream-agent` | `1.24/stable` | `1.24.2-c816e2633` |
+| `anbox-stream-gateway` | `1.24/stable` | `1.24.2-c816e2633` |
+| `anbox-connect` | `latest/stable` | `1.24.2-c816e2633` |
+| `anbox-cloud-appliance` | `1.24/stable` | `1.24.2-c816e2633` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android14:amd64` | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:android14:arm64` | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:android13:amd64` | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:android13:arm64` | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:android12:amd64` | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:android12:arm64` | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:aaos13:amd64`    | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:aaos13:arm64`    | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:aaos14:amd64`    | `1.24.2-20250111063402.gitace2bfc25` |
+| `jammy:aaos14:arm64`    | `1.24.2-20250111063402.gitace2bfc25` |
+
 ## 1.24.1
 
 ### Charms
@@ -40,7 +81,6 @@ Not all components are updated with each release. When components are not update
 | `anbox-stream-agent` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
 | `anbox-stream-gateway` | `1.24/stable` |  `1.24.1-fcc9cd96b` |
 | `anbox-cloud-appliance` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
-| `nats` | `latest/stable` | `1.24.1-fcc9cd96b` |
 
 ### Anbox images
 
@@ -62,7 +102,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ## 1.23.3
 
-The following Anbox images are the only artefacts released for this patch.
+The following Anbox images are the only artifacts released for this patch.
 
 ```{note}
 There are no VM images for ARM64.
@@ -114,7 +154,6 @@ There are no VM images for ARM64.
 | `anbox-stream-agent` | `1.24/stable` | `1.24.0-599f42a84`  |
 | `anbox-stream-gateway` | `1.24/stable` |  `1.24.0-599f42a84` |
 | `anbox-cloud-appliance` | `1.24/stable` | `1.24.0-599f42a84`  |
-| `nats` | `latest/stable` | `1.24.0-599f42a84` |
 
 ### Anbox images
 

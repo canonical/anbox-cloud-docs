@@ -33,7 +33,7 @@ We welcome your engagement with the Anbox Cloud community and appreciate all con
 
 ### Style and language
 
-Anbox Cloud documentation follows [Diátaxis](https://diataxis.fr/) principles. Before starting to contribute, we encourage you to familiarise yourself with Diátaxis.
+Anbox Cloud documentation follows [Diátaxis](https://diataxis.fr/) principles. Before starting to contribute, we encourage you to get familiar with Diátaxis.
 
 To accommodate different kinds of audience, try to:
 

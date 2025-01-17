@@ -19,7 +19,7 @@ Upgrade Anbox Cloud <upgrade-anbox>
 
 For security reasons, you should keep your systems up-to-date at all times. To ensure this, [snaps](https://snapcraft.io/about) update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
-In a production environment, this update behaviour might cause problems in some cases. For example:
+In a production environment, this update behavior might cause problems in some cases. For example:
 
 - snapd might automatically update the Anbox Cloud Appliance to a version that is not backward compatible.
 - snapd might automatically update the snap of a prerequisite that is not compatible with the current version of Anbox Cloud.

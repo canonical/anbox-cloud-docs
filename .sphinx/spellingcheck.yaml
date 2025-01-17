@@ -2,14 +2,14 @@ matrix:
 - name: rST files
   aspell:
     lang: en
-    d: en_GB
+    d: en_US
   dictionary:
     wordlists:
     - .wordlist.txt
     - .custom_wordlist.txt
     output: .sphinx/.wordlist.dic
   sources:
-  - _build/**/*.html|!_build/venv/**/*.html|!_build/reference/cmd-ref/appliance/**/*.html|!_build/reference/cmd-ref/amc/**/*.html
+  - _build/**/*.html|!_build/venv/**/*.html|!_build/reference/cmd-ref/appliance/**/*.html|!_build/reference/cmd-ref/amc/**/*.html|!_build/reference/api-reference/**/*.html|!_build/reference/ams-configuration/index.html
   pipeline:
   - pyspelling.filters.html:
       comments: false

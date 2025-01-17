@@ -89,7 +89,7 @@ To use and integrate the [Anbox VHAL interface](https://github.com/canonical/ven
         }
     ```
 
-   Note that you must implement your own access control methods to vehicle properties to ensure secure access. When implementing, this translates to each function having a security mechanism that disallows access to vehicle properties for anything except the authorised `AID_VEHICLE_NETWORK` process.
+   Note that you must implement your own access control methods to vehicle properties to ensure secure access. When implementing, this translates to each function having a security mechanism that disallows access to vehicle properties for anything except the authorized `AID_VEHICLE_NETWORK` process.
 
 1. Instantiate the VHAL service that implements the interface and register it as a binder service in the VHAL implementation.
 

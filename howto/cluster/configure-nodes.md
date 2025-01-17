@@ -59,7 +59,7 @@ Use the following command to prevent the node from accepting new instances:
 (sec-config-gpu-slots)=
 ## Configure GPU slots and GPU encoder slots
 
-GPU slots are used to share GPUs amongst instances. Each GPU-equipped cluster node is configured with a number of GPU slots and a number of GPU encoder slots. See {ref}`sec-node-configuration` for the default values that are used. Nodes without GPU are configured with 0 GPU slots and 0 GPU encoder slots.
+GPU slots are used to share GPUs among instances. Each GPU-equipped cluster node is configured with a number of GPU slots and a number of GPU encoder slots. See {ref}`sec-node-configuration` for the default values that are used. Nodes without GPU are configured with 0 GPU slots and 0 GPU encoder slots.
 
 Use the following commands to change the number of GPU slots and GPU encoder slots for a node:
 

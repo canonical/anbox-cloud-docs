@@ -1,7 +1,7 @@
 (howto-enable-client-side-video-upscaling)=
 # How to enable client-side video upscaling
 
-The [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk) offers experimental video upscaling features for client side streaming, leveraging [AMD FidelityFX Super Resolution 1.0](https://gpuopen.com/fidelityfx-superresolution/). This feature allows video to be transmitted at lower resolutions, saving bandwidth without losing too much detail. The SDK sets up a [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) context and utilises a fragment shader based on the FSR 1.0 algorithm for post-processing, producing clearer and sharper video frames before they are displayed on the screen.
+The [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk) offers experimental video upscaling features for client side streaming, leveraging [AMD FidelityFX Super Resolution 1.0](https://gpuopen.com/fidelityfx-superresolution/). This feature allows video to be transmitted at lower resolutions, saving bandwidth without losing too much detail. The SDK sets up a [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) context and utilizes a fragment shader based on the FSR 1.0 algorithm for post-processing, producing clearer and sharper video frames before they are displayed on the screen.
 
 ## Initiate the `AnboxStream` object
 
@@ -47,7 +47,7 @@ When using a custom fragment shader in WebGL, you need to manage the following p
 
 - **uResolution**
   Type: vec2
-  Description: This uniform contains the dimensions of the rendering canvas, typically set to the width and height of the canvas in pixels. It helps in normalising texture coordinates for effects like scaling and post-processing.
+  Description: This uniform contains the dimensions of the rendering canvas, typically set to the width and height of the canvas in pixels. It helps in normalizing texture coordinates for effects like scaling and post-processing.
 
 ## Related topics
 

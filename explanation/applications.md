@@ -5,12 +5,12 @@ Applications are one of the main objects managed by Anbox Management Service (AM
 
 ## Application requirements
 
-To run on the Anbox Cloud platform, applications must fulfil the following requirements:
+To run on the Anbox Cloud platform, applications must fulfill the following requirements:
 
 * The application *should not* download any additional resources on regular startup to contribute to short startup times. If additional resources need to be downloaded, this can be done during the application bootstrap phase.
 * The application *must not* require the *Google Play services* to be available as Anbox Cloud does not include them.
 
-If your application fulfils these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/anbox-cloud/+filebug).
+If your application fulfills these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
 (sec-application-status)=
 ## Possible application statuses
@@ -31,12 +31,12 @@ If you encounter the `error` or the `unknown` status, see if you can identify th
 (sec-application-bootstrap)=
 ## Bootstrap process
 
-When creating an application from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
+When creating an application from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronizes it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
 
   * It enables AMS to launch an instance for an application without installing the APK every time.
   * It dramatically speeds up the startup time of a regular instance.
 
-Furthermore, an application is synchronised within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through scaling down or lost from the cluster unexpectedly.
+Furthermore, an application is synchronized within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through scaling down or lost from the cluster unexpectedly.
 
 A temporary base instance is created and used for bootstrapping during the application creation. For example, you might see the following output for `amc ls` right after creating an application:
 

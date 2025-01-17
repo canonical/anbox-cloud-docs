@@ -132,16 +132,16 @@ For LXD storage, Anbox Cloud uses a ZFS storage pool, which it creates automatic
 
 While a loop file is easy to set up, it is much slower than a block device. Therefore, we recommend using a block device that is dedicated to LXD storage only.
 
-If you are doing a full deployment, configure the storage before starting the deployment. See {ref}`customise storage when deploying with Juju <sec-customise-storage-juju>` or {ref}`customise storage when deploying on bare metal <sec-customise-storage-bare-metal>` for instructions. If you skip the configuration, Anbox Cloud sets up a loop-file with an automatically calculated size, which is not recommended.
+If you are doing a full deployment, configure the storage before starting the deployment. See {ref}`customize storage when deploying with Juju <sec-customize-storage-juju>` or {ref}`customize storage when deploying on bare metal <sec-customize-storage-bare-metal>` for instructions. If you skip the configuration, Anbox Cloud sets up a loop-file with an automatically calculated size, which is not recommended.
 
-If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, including the instances created by Juju.
+If you are using the Anbox Cloud Appliance, you are prompted during the initialization process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, including the instances created by Juju.
 
 (sec-juju-bundles)=
 ## Juju bundles
 
 The charmed Anbox Cloud variant provides two different Juju bundles:
 
-* The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
+* The `anbox-cloud-core` bundle provides a minimized version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
 
   For more information, see the [charm page](https://charmhub.io/anbox-cloud-core).
 

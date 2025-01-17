@@ -40,7 +40,7 @@ To check if `amc` is set up to access the correct AMS, run the following command
 
 ## Ensure images are available
 
-The next step is to check whether AMS has synchronised all images from the Canonical hosted image server. To list all the synchronised images, run:
+The next step is to check whether AMS has synchronized all images from the Canonical hosted image server. To list all the synchronized images, run:
 
         amc image ls
 

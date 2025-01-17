@@ -12,7 +12,7 @@ If the error message does not help, check the WebRTC debug information. You can 
 
 You can create a dump of the debug information by expanding the **Create Dump** section (in Chrome) or clicking **Save Page** (in Firefox).
 
-Analyse the dump to find the source of the error, or provide it to Anbox Cloud's support team for help.
+Analyze the dump to find the source of the error, or provide it to Anbox Cloud's support team for help.
 
 ## Streaming does not start
 

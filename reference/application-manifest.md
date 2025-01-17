@@ -226,7 +226,7 @@ Name                  | Value type | Description
 ----------------------|------------|-------------------------
 `keep`                |  array     | Contents under the APP_DIR directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported.  See {ref}`sec-env-variables` and [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more information.
 
-To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular instance runtime, you must include them in the application image.
+To minimize the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular instance runtime, you must include them in the application image.
 
 ```yaml
 name: my-application

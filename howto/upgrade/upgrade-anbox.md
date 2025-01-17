@@ -2,7 +2,7 @@
 # How to upgrade the charmed deployment
 
 ```{note}
-If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
+If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on the Ubuntu discourse.
 ```
 
 Anbox Cloud allows upgrades from older versions to newer version. This describes the steps necessary to perform the upgrade.

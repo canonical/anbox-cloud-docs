@@ -1,7 +1,7 @@
 (exp-addons)=
 # Addons
 
-Addons provide a way to extend and customise images in Anbox Cloud. Once you have created addons, you can create hooks for them that are triggered based on events in the life cycle of an instance. You can create addons independently and later attach it to individual applications.
+Addons provide a way to extend and customize images in Anbox Cloud. Once you have created addons, you can create hooks for them that are triggered based on events in the life cycle of an instance. You can create addons independently and later attach it to individual applications.
 
 ## Best practices while using addons
 

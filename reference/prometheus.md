@@ -185,7 +185,7 @@ These metrics are available since Anbox Cloud 1.7.2.
 
 | Name                                  | Description                                     |
 |---------------------------------------|-------------------------------------------------|
-| `anbox_stream_gateway_sessions_total` | Total number of sessions, categorised by status |
+| `anbox_stream_gateway_sessions_total` | Total number of sessions, categorized by status |
 | `anbox_stream_gateway_accounts_total` | Total number of accounts                        |
 | `anbox_stream_gateway_agents_total`   | Number of active and unresponsive agents        |
 
@@ -282,7 +282,7 @@ These metrics are available since Anbox Cloud 1.8.0.
 | `webrtc_retransmitted_packets_sent` | Total number of packets that were re-transmitted for a specific SSRC                                       |
 | `webrtc_total_packet_send_delay`    | Total number of seconds that packets have spent buffered locally before being transmitted onto the network |
 | `webrtc_packets_sent`               | Total number of RTP packets sent for this SSRC (includes re-transmissions)                                 |
-| `webrtc_nack_count`                 | Total number of Negative Acknowledgement (NACK) packets received by this sender                            |
+| `webrtc_nack_count`                 | Total number of Negative Acknowledgment (NACK) packets received by this sender                            |
 | `webrtc_fir_count`                  | Total number of Full Intra Request (FIR) packets received by this sender (video only)                      |
 | `webrtc_pli_count`                  | Total number of Picture Loss Indication (PLI) packets received by this sender (video only)                 |
 | `webrtc_sli_count`                  | Total number of Slice Loss Indication (SLI) packets received by this sender (video only)                   |
