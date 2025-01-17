@@ -11,7 +11,7 @@ Deleting a specific image can be achieved with the following command, where `ima
 
     amc image delete image-name
 
-Images that are synchronised from the image server are marked as immutable. To delete such images, add the `--force` flag:
+Images that are synchronized from the image server are marked as immutable. To delete such images, add the `--force` flag:
 
     amc image delete --force io.anbox-cloud:nougat:amd64
 

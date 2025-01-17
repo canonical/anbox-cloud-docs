@@ -12,5 +12,5 @@ For instance, to fetch the arm64 Android 13 image of the 1.18.0 release:
 You can then use the `foobar` image as you would any other image.
 
 ```{important}
-Image updates contain important security patches and optimisations. Use older images only when strictly necessary.
+Image updates contain important security patches and optimizations. Use older images only when strictly necessary.
 ```

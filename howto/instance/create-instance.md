@@ -137,7 +137,7 @@ Create an instance on the *Instances* page to launch an instance. The informatio
 
 When you create the instance from an application, the attributes you define for the application decide most of the properties of the instance.
 
-When you create the instance from an image, you can define the properties of the instance during its creation.
+You can create an instance from a selected image using the Create an Instance button on the Images page or the specific image’s details page. When you do this, you will find that several fields are already set based on the image base and type.
 
 There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
 
