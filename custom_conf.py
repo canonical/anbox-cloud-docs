@@ -131,6 +131,7 @@ redirects = {
     'howto/update/control-updates': '../../upgrade/landing',
     'howto/addons/customise-android-example': '../customize-android-example',
     'howto/install/customise-installation': '../customize-installation',
+    'howto/anbox/manage-images': '../../images/landing',
 }
 
 ############################################################
