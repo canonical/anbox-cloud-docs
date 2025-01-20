@@ -284,7 +284,6 @@ sgsr
 SurfaceFlinger
 swiftshader
 swrast
-synchronization
 syscall
 syscalls
 syslog

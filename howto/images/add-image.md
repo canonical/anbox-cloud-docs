@@ -9,7 +9,7 @@ An image can be added with the following command:
 
     amc image add <name> <image_path>
 
-The first image that you add is marked as the default image.The default image is used when you create an application without the `image` field or launch a raw instance without specifying any ID.
+The first image that you add is marked as the default image. The default image is used when you create an application without the `image` field or launch a raw instance without specifying any ID.
 
 You can set any image as your default with the following command:
 
