@@ -80,6 +80,21 @@ It is possible to turn off this update mechanism by setting `container.security_
 
 For security reasons, always keep your systems up-to-date at all times. To ensure this, snaps update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
+## Data security
+
+We avoid storing user data as much as possible and don't provide any data encryption. The following table helps you understand how data related to you or provided by you is used within Anbox Cloud by various components.
+
+| Component | Databases | Data stored|
+|-----------|-----------|------------|
+| LXD instances | Dqlite and SQLite | Information about instances, their management, authentication and certificates |
+| AMS | etcd | Information about instance management and configuration, {ref}`custom user data <howto-pass-custom-data-application>` when explicitly provided |
+| Anbox Stream Gateway | Dqlite | Session and management metadata, service account IDs that identify the web client |
+| Anbox Cloud dashboard | SQLite | User email that are used for authentication |
+
+Services used by Anbox Cloud have configuration files that contain secrets. For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
+
+The data that you provide to your applications in Android is stored within the instance, for the duration of the instance.
+
 ## Android security
 
 The images that Anbox Cloud provides are based on different Android versions. They are updated with security patches monthly, based on the upstream security tags. You can find detailed information on the security patches that have been included (or considered to be included but found unrelated) in the [Android Security Bulletins](https://source.android.com/docs/security/bulletin). The relevant security bulletin for each Anbox Cloud release is linked in the {ref}`ref-release-notes`.
