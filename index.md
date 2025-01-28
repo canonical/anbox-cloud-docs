@@ -2,9 +2,9 @@
 
 Anbox Cloud enables running Android apps on any cloud platform at scale. It uses system containers or virtual machines to run the nested Android containers and [Juju](https://juju.is/) for deployment in a cloud environment.
 
-Anbox Cloud supports x86 and Arm64 hardware, providing the same set of features for both architectures.
+Anbox Cloud supports x86 and ARM64 hardware, providing the same set of features for both architectures.
 
-Since Anbox Cloud uses system containers or virtual machines to emulate Android systems, you can achieve the isolation and security level of a virtual machine without the associated overhead. Therefore, compared to other Android emulation solutions, Anbox Cloud can provide at least twice the density and can serve up to 100 Android instances per server.
+By using system containers or virtual machines to emulate Android systems, Anbox Cloud achieves the isolation and security levels of a virtual machine without the associated overhead. Compared to other Android emulation solutions, Anbox Cloud can provide at least twice the density and can serve up to 100 Android instances per server.
 
 Due to its highly scalable nature and performance optimization, delivering device-agnostic mobile applications is very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
 

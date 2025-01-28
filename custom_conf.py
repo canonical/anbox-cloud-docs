@@ -145,7 +145,8 @@ linkcheck_ignore = [
     'https://assets.ubuntu.com/manager',
     'https://images.anbox-cloud.io/stable/',
     'https://10.2.9.2/',
-    'http://Add-SECURITY.md'
+    'http://Add-SECURITY.md',
+    'https://jwt.io/'
     ]
 
 # This setting will check the links but not the anchors
