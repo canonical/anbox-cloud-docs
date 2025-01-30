@@ -1,10 +1,36 @@
 (howto-monitor-anbox)=
 # How to monitor Anbox Cloud
 
-Anbox Cloud gathers various performance metrics and makes them accessible through API endpoints. While Anbox Cloud does not provide its own observability solution, it supports implementing and integrating custom solutions for monitoring performance.
+Anbox Cloud collects various metrics and makes them accessible through API endpoints. While Anbox Cloud does not provide its own observability solution, it supports integrating with external solutions.
 
-See {ref}`ref-prometheus-metrics` for a list of available metrics and how to access them. [LXD Metric exporter for instances](https://discuss.linuxcontainers.org/t/lxd-metric-exporter-for-instances/11735) has a list of metrics available through LXD.
+You can find a list of available metrics at {ref}`ref-prometheus-metrics`.
 
-The implementation of a monitoring or observability solution depends on your specific use case and the tools that you want to use. See [Open source observability for enterprises](https://ubuntu.com/observability) for an overview of observability tools and stacks that are recommended and supported by Canonical. In particular, see the [Canonical Observability Stack (LMA2)](https://juju.is/docs/lma2).
+## Access metrics with the appliance
 
-There are plans in the Anbox Cloud roadmap to provide better monitoring abilities by using the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack).
+The Anbox Cloud Appliance provides a central metrics endpoint which aggregates metrics from all internal services and Anbox instances.
+
+If you haven't enabled collecting metrics when initializing the appliance, run:
+
+    sudo anbox-cloud-appliance enable metrics
+
+If you want to disable collecting metrics, run:
+
+    sudo anbox-cloud-appliance disable metrics
+
+To retrieve the metrics in the [Prometheus data format](https://prometheus.io/docs/concepts/data_model/), run:
+
+    sudo anbox-cloud-appliance config show
+
+The output will list a `metrics.url` along with the TLS certificate of the endpoint referred by the URL. This certificate should be used to establish a secure and authenticated connection.
+
+You can either configure a Prometheus instance to scrape the endpoint or manually retrieve the metrics via `curl`, for example
+
+    # We need yq in order to parse and process the YAML output
+    sudo apt install  -y yq jq
+
+    metrics_url="$(sudo anbox-cloud-appliance config show | yq .metrics.url)"
+    sudo anbox-cloud-appliance config show | yq .metrics.tls.certificate > metrics.pem
+    curl --cacert ./metrics.pem "$metrics_url"
+
+
+You will see all available metrics as output, including metrics for the individual Anbox instances.

@@ -1,33 +1,15 @@
 (ref-prometheus-metrics)=
 # Prometheus metrics
 
-Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution. The following sections list all metrics returned to Prometheus by the Anbox Cloud services that support Prometheus metrics.
+Anbox Cloud gathers various performance metrics that you can access through API endpoints.
+
+The following sections list all metrics for each service endpoint.
 
 ## AMS
 
 The Anbox Management Service provides metrics about the Anbox Cloud cluster (or the Anbox Cloud Application server) and the AMS API access.
 
-### AMS metrics endpoint
-
-You can access the AMS metrics from any machine that is on the same network as your Anbox Cloud installation. Use the following endpoint:
-
-    http://<AMS_server>:<AMS_port>/internal/1.0/metrics
-
-Replace `<AMS_server>` with the IP address of your AMS server, which you can determine by running one of the following commands:
-
-* For the charmed Anbox Cloud deployment: `juju run --wait=5m --unit ams/0 -- unit-get private-address`
-* For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit ams/0 -- unit-get private-address`
-
-Replace `<AMS_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
-
-* For the charmed Anbox Cloud deployment: `juju config ams prometheus_target_port`
-* For the Anbox Cloud Appliance: `juju config -m appliance:anbox-cloud ams prometheus_target_port`
-
-You can then access the endpoint with `curl`, for example:
-
-    curl http://192.0.2.55:20002/internal/1.0/metrics
-
-### AMS cluster metrics
+### Objects
 
 Metrics prefixed with `ams_cluster_` keep you informed about the status of your Anbox Cloud cluster.
 
@@ -42,21 +24,22 @@ Metrics prefixed with `ams_cluster_` keep you informed about the status of your 
 | `ams_cluster_containers_per_application_total`   | Number of containers per application  | Deprecated since 1.20.0, use `ams_cluster_instances_per_application_total` instead. |
 | `ams_cluster_containers_per_status_total`        | Number of containers per container status |  Deprecated since 1.20.0, use `ams_cluster_instances_per_status_total` instead. |
 | `ams_cluster_containers_per_node_total`          | Number of containers per worker node |  Deprecated since 1.20.0, use `ams_cluster_instances_per_node_total` instead. |
-| `ams_cluster_instances_total`                   | Number of instances currently in the cluster | Available since 1.20.0 |
-| `ams_cluster_instance_boot_time_seconds_count`  | Number of instance boot time measured        | Available since 1.20.0 |
-| `ams_cluster_instance_boot_time_seconds_sum`    | Sum of all instance boot times (can be used to compute the average boot time) |  Available since 1.20.0 |
-| `ams_cluster_instance_boot_time_seconds_bucket` | Instance boot times bucket (can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information) |  Available since 1.20.0 |
-| `ams_cluster_instances_per_application_total`   | Number of instances per application          |  Available since 1.20.0 |
-| `ams_cluster_instances_per_status_total`        | Number of instances per instance status     | Available since 1.20.0 |
-| `ams_cluster_instances_per_node_total`          | Number of instances per worker node         |  Available since 1.20.0 |
+| `ams_cluster_instances_total`                    | Number of instances currently in the cluster | Available since 1.20.0 |
+| `ams_cluster_instance_boot_time_seconds_count`   | Number of instance boot time measured        | Available since 1.20.0 |
+| `ams_cluster_instance_boot_time_seconds_sum`     | Sum of all instance boot times (can be used to compute the average boot time) |  Available since 1.20.0 |
+| `ams_cluster_instance_boot_time_seconds_bucket`  | Instance boot times bucket (can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information) |  Available since 1.20.0 |
+| `ams_cluster_instances_per_application_total`    | Number of instances per application          |  Available since 1.20.0 |
+| `ams_cluster_instances_per_status_total`         | Number of instances per instance status     | Available since 1.20.0 |
+| `ams_cluster_instances_per_node_total`           | Number of instances per worker node         |  Available since 1.20.0 |
 | `ams_cluster_available_cpu_total`                | Total CPUs available in each worker node      | Available since 1.0.0 |
 | `ams_cluster_used_cpu_total`                     | Used CPUs in each worker node                 | Available since 1.0.0 |
 | `ams_cluster_available_memory_total`             | Total memory available in each worker node    | Available since 1.0.0 |
 | `ams_cluster_used_memory_total`                  | Used memory in each worker node               | Available since 1.0.0 |
 
-### AMS API metrics
+### API usage
 
 Metrics prefixed with `ams_http_` allow to track access to the API.
+
 These metrics are available since Anbox Cloud 1.10.0.
 
 | Name                                       | Description                                           |
@@ -142,56 +125,23 @@ The following table contains all routes and their corresponding labels (ignoring
 
 The Anbox Stream Gateway provides metrics about the streaming activities of your cluster or server and the Anbox Stream Gateway API access.
 
-### Access endpoint
-
-You can access the Anbox Stream Gateway metrics from any machine that is on the same network as your Anbox Cloud installation. Use the following endpoint:
-
-    https://<gateway_server>:<gateway_port>/internal/1.0/metrics
-
-Replace `<gateway_server>` with the IP address of your Anbox Stream Gateway server, which you can determine by running one of the following commands:
-
-* For the charmed Anbox Cloud deployment: `juju run --unit anbox-stream-gateway/0 --wait=5m -- unit-get private-address`
-* For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit anbox-stream-gateway/0 -- unit-get private-address`
-
-Replace `<gateway_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
-
-* For the charmed Anbox Cloud deployment: `juju config anbox-stream-gateway prometheus_port`
-* For the Anbox Cloud Appliance: `juju config -m appliance:anbox-cloud anbox-stream-gateway prometheus_port`
-
-The Anbox Stream Gateway endpoint is on HTTPS, and therefore you must authenticate to access it. You can retrieve the credentials from the `/var/snap/anbox-stream-gateway/common/service/config.yaml` file on the gateway server:
-
-* For the charmed Anbox Cloud deployment:
-
-  ```
-  juju ssh anbox-stream-gateway/0
-  sudo cat /var/snap/anbox-stream-gateway/common/service/config.yaml
-  ```
-
-* For the Anbox Cloud Appliance:
-
-  ```
-  juju ssh -m appliance:anbox-cloud anbox-stream-gateway/0
-  sudo cat /var/snap/anbox-stream-gateway/common/service/config.yaml
-  ```
-
-You can then access the endpoint with `curl`, for example:
-
-    curl -k -u prometheusadmin:thepassword https://192.0.2.55:9105/internal/1.0/metrics
-
-### Metrics
+### Objects
 
 Metrics prefixed with `anbox_stream_gateway_` give information about your cluster related to streaming, for example, the number of sessions and agents.
+
 These metrics are available since Anbox Cloud 1.7.2.
 
-| Name                                  | Description                                     |
-|---------------------------------------|-------------------------------------------------|
-| `anbox_stream_gateway_sessions_total` | Total number of sessions, categorized by status |
-| `anbox_stream_gateway_accounts_total` | Total number of accounts                        |
-| `anbox_stream_gateway_agents_total`   | Number of active and unresponsive agents        |
+| Name                                       | Description                                     |
+|--------------------------------------------|-------------------------------------------------|
+| `anbox_stream_gateway_sessions_total`      | Total number of sessions, categorized by status |
+| `anbox_stream_gateway_accounts_total`      | Total number of accounts                        |
+| `anbox_stream_gateway_agents_total`        | Number of active agents                         |
+| `anbox_stream_gateway_agents_unresponsive` | Number of unresponsive agents                   |
 
-### API metrics
+### API usage
 
 Metrics prefixed with `anbox_stream_gateway_http_` allow to track access to the streaming API.
+
 These metrics are available since Anbox Cloud 1.9.0.
 
 | Name                                                        | Description                                           |
@@ -227,48 +177,25 @@ The following table contains all routes and their corresponding labels.
 | `GET`    | `/1.0/regions`                      | `get_regions`                |
 
 
-## LXD
+## Anbox Runtime metrics
 
-LXD provides metrics about the LXD cluster that Anbox Cloud uses.
+For every instance running inside Anbox Cloud, the Anbox runtime provides a set of metrics.
 
-LXD metrics have been available since LXD version 4.19. You cannot access LXD metrics if you are running an older version of LXD.
+### Graphics
 
-### LXD metrics endpoint
+| Name                                                        | Type      | Description                               |
+|-------------------------------------------------------------|-----------|-------------------------------------------|
+| `anbox_gralloc_buffer_allocations_total`                    | Counter   | Total number of buffer allocations |
+| `anbox_vulkan_buffer_memory_size_total`                     | Counter   | Total memory in bytes allocated for graphics buffers through Vulkan |
+| `anbox_system_buffer_memory_size_total`                     | Counter   | Total memory in bytes allocated for graphics buffers from system memory |
+| `anbox_webrtc_frame_renderer_latency`                       | Histogram | Latency in ms of frames processed by the frame renderer since were submitted |
+| `anbox_webrtc_nvidia_packets_per_encoded_frame`             | Histogram | Number of packets per encoded frame |
+| `anbox_webrtc_nvidia_bytes_per_encoded_frame`               | Histogram | Number of bytes per encoded frame |
 
-You can access the LXD metrics through the following endpoint:
-
-     https://<LXD_server>:8443/1.0/metrics
-
-Replace `<LXD_server>` with the IP address of your LXD server, which you can determine by running one of the following commands:
-
-* For the charmed Cloud deployment: `juju run --wait=5m --unit lxd/0 -- unit-get private-address`
-* For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit lxd/0 -- unit-get private-address`
-
-The LXD metrics endpoint is on HTTPS, and therefore you must authenticate to access it. See [Create metrics certificate](https://documentation.ubuntu.com/lxd/en/latest/metrics/#add-a-metrics-certificate-to-lxd) in the LXD documentation for instructions on how to create a certificate.
-
-Alternatively, if you are using the Anbox Cloud Appliance, you can also access the LXD metrics through the local Unix socket. In this case, you don't need authentication. To use this method, enter the following command:
-
-    curl --unix-socket /var/snap/lxd/common/lxd/unix.socket s/1.0/metrics
-
-### LXD metrics
-
-You can find the list of metrics that LXD provides in the [LXD documentation](https://documentation.ubuntu.com/lxd/en/latest/reference/provided_metrics/).
-
-## WebRTC
-
-The WebRTC metrics are collected by Telegraf on every cluster member.
-
-### WebRTC metrics endpoint
-
-You can access the WebRTC metrics as part of the metrics that Telegraf collects and provides to Prometheus. You can access them from any machine that is on the same network as your Anbox Cloud installation. To find the endpoint, check the `/var/snap/anbox-cloud-appliance/common/telegraf/main.conf` file on each cluster member and look for the `listen` address and the `path` in the `[[outputs.prometheus_client]]` section.
-
-You can then access the endpoint with `curl`, for example:
-
-    curl http://192.0.2.1:9001/metrics
-
-### WebRTC metrics
+### WebRTC
 
 Metrics prefixed with `webrtc_` give you detailed insight about the WebRTC protocol for every streaming instance. See the [official W3C reference](https://www.w3.org/TR/webrtc-stats) for more information.
+
 These metrics are available since Anbox Cloud 1.8.0.
 
 | Name                                | Description                                                                                                |
