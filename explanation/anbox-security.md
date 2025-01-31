@@ -91,7 +91,7 @@ The following table helps you understand how data related to you or provided by 
 | Anbox Stream Gateway | Dqlite | Session and management metadata, service account IDs that identify the web client |
 | Anbox Cloud dashboard | SQLite | User emails that are used for authentication |
 
-Services used by Anbox Cloud have configuration files that contain secrets. The secrets are automatically generated and managed by the respective charms or the appliance. The authentication methods used are futher defined in {ref}`exp-security-landing` for managing secrets.
+Services used by Anbox Cloud have configuration files that contain secrets. The secrets are automatically generated and managed by the respective charms or the appliance. The authentication methods used are further defined in {ref}`exp-security-landing` for managing secrets.
 
 A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
 
