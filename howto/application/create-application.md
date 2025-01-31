@@ -133,7 +133,9 @@ The *Create application* form also provides an option to customize your applicat
 
 There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI.
 
-After you create an application, the *Applications* page lists all the available applications. Clicking an application name opens the *Application details* page that displays information about the application, its configuration, and deployment features in the *Overview* section. The *Versions* section lists all created versions of the application. Use the *Actions* menu to either upload to the registry, unpublish, or delete a specific version.
+After you create an application, the *Applications* page lists all the available applications. Clicking an application name opens the *Application details* page that displays information about the application, its configuration, and deployment features in the *Overview* section.
+
+The *Versions* section lists all created versions of the application. Use the *Actions* menu to either upload to the registry, unpublish, or delete a specific version. Click a specific version to open the version side panel, which provides detailed information about the version related to the parent image and watchdog.
 ```
 `````
 
