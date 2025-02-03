@@ -179,7 +179,7 @@ The following table contains all routes and their corresponding labels.
 
 ## Anbox Runtime metrics
 
-For every instance running inside Anbox Cloud the Anbox runtime provides a set of metrics.
+For every instance running inside Anbox Cloud, the Anbox runtime provides a set of metrics.
 
 ### Graphics
 

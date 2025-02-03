@@ -755,7 +755,7 @@ See the [VHAL property configuration](https://source.android.com/docs/automotive
  Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/metrics`:
 
 ```
-# HELP anbox_gralloc_buffer_allocations_total Total numer of gralloc buffer allocations
+# HELP anbox_gralloc_buffer_allocations_total Total number of gralloc buffer allocations
 # TYPE anbox_gralloc_buffer_allocations_total counter
 anbox_gralloc_buffer_allocations_total 121
 # HELP anbox_vulkan_buffer_memory_size_total Total memory in bytes allocated for graphics buffers through Vulkan
