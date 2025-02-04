@@ -31,7 +31,7 @@ Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs.
 
 ### For Intel and AMD
 
-![Anbox Cloud Intel and AMD pipeline|690x440](/images/rendering-pipelines/Intel_AMD_pipeline.png.png)
+![Anbox Cloud Intel and AMD pipeline|690x440](/images/rendering-pipelines/Intel_AMD_pipeline.png)
 
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use [ANGLE](https://chromium.googlesource.com/angle/angle) on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA.
 

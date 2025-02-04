@@ -80,6 +80,46 @@ It is possible to turn off this update mechanism by setting `container.security_
 
 For security reasons, always keep your systems up-to-date at all times. To ensure this, snaps update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
+## Data security
+
+The following table helps you understand how data related to you or provided by you is used within Anbox Cloud by various components.
+
+| Component | Databases | Data stored|
+|-----------|-----------|------------|
+| LXD instances | Dqlite and SQLite | Information about instances, their management, authentication and certificates |
+| AMS | etcd | Information about instance management and configuration, {ref}`custom user data <howto-pass-custom-data-application>` when explicitly provided |
+| Anbox Stream Gateway | Dqlite | Session and management metadata, service account IDs that identify the web client |
+| Anbox Cloud dashboard | SQLite | User emails that are used for authentication |
+
+Services used by Anbox Cloud have configuration files that contain secrets. The secrets are automatically generated and managed by the respective charms or the appliance. The authentication methods used are further defined in {ref}`exp-security-landing` for managing secrets.
+
+A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
+
+`/var/snap/ams/common/server/settings.yaml`
+`/var/snap/aar/common/conf/main.yaml`
+`/var/snap/anbox-cloud-dashboard/common/service/config.yaml`
+`/var/snap/anbox-stream-agent/common/agent/config.yaml`
+`/var/snap/anbox-stream-gateway/common/service/config.yaml`
+`/etc/turnserver.conf`
+`/etc/coturn/auth_secret`
+`/var/snap/nats/common/server/nats.cfg`
+
+An Anbox Cloud Appliance deployment contains the following configuration files that contain secrets:
+
+`/var/snap/anbox-cloud-appliance/common/daemon/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/telegraf/main.conf`
+`/var/snap/anbox-cloud-appliance/common/agent/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/coturn/turnserver.conf`
+`/var/snap/anbox-cloud-appliance/common/ams/server/settings.yaml`
+`/var/snap/anbox-cloud-appliance/common/dashboard/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/nats/nats.cfg`
+`/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/config.yaml`
+
+For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
+
+The data that you provide to your applications in Android is stored within the instance, for the duration of the instance.
+
 ## Android security
 
 The images that Anbox Cloud provides are based on different Android versions. They are updated with security patches monthly, based on the upstream security tags. You can find detailed information on the security patches that have been included (or considered to be included but found unrelated) in the [Android Security Bulletins](https://source.android.com/docs/security/bulletin). The relevant security bulletin for each Anbox Cloud release is linked in the {ref}`ref-release-notes`.
