@@ -68,6 +68,7 @@ HTTP code must be one of 400 or 500.
    * {ref}`sec-anbox-https-api-platform`
    * {ref}`sec-anbox-https-api-vhal`
       * {ref}`sec-anbox-https-api-vhalconfig`
+   * {ref}`sec-anbox-https-api-metrics`
 
 ## API details
 
@@ -742,3 +743,23 @@ Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sock
 See the [VHAL property configuration](https://source.android.com/docs/automotive/vhal/property-configuration) for more information on these fields.
 
 `value_type` is added as a convenience in the Anbox API and maps to the [VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
+
+(sec-anbox-https-api-metrics)=
+### `/1.0/metrics`
+#### GET
+
+ * Description: Get metrics in Prometheus output data format
+ * Operation: sync
+ * Return: Current metrics in Prometheus output data format
+
+ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/metrics`:
+
+```
+# HELP anbox_gralloc_buffer_allocations_total Total number of gralloc buffer allocations
+# TYPE anbox_gralloc_buffer_allocations_total counter
+anbox_gralloc_buffer_allocations_total 121
+# HELP anbox_vulkan_buffer_memory_size_total Total memory in bytes allocated for graphics buffers through Vulkan
+# TYPE anbox_vulkan_buffer_memory_size_total counter
+anbox_vulkan_buffer_memory_size_total 78370816
+...
+```
