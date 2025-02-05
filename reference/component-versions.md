@@ -34,15 +34,15 @@ Not all components are updated with each release. When components are not update
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.25/stable` |  |
-| `aar`    | `1.25/stable` | |
-| `amc`    | `latest/stable` |  |
-| `ams-node-controller` (Deprecated) | `1.25/stable` |  |
-| `anbox-cloud-dashboard` | `1.25/stable` | |
-| `anbox-stream-agent` | `1.25/stable` |  |
-| `anbox-stream-gateway` | `1.25/stable` |  |
-| `anbox-connect` | `latest/stable` |  |
-| `anbox-cloud-appliance` | `1.25/stable` |  |
+| `ams`    | `1.25/stable` | 1.25.0-52a674b66 |
+| `aar`    | `1.25/stable` | 1.25.0-52a674b66 |
+| `amc`    | `latest/stable` | 1.25.0-52a674b66 |
+| `ams-node-controller` (Deprecated) | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-cloud-dashboard` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-stream-agent` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-stream-gateway` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-connect` | `latest/stable` | 1.25.0-52a674b66 |
+| `anbox-cloud-appliance` | `1.25/stable` | 1.25.0-52a674b66 |
 
 ### Anbox images
 

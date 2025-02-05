@@ -63,6 +63,8 @@ To share your stream with users without an account, click *Set up sharing* ( ![s
 
 Set your stream title and expiration details and generate a link that can be shared with others.
 
+See {ref}`howto-access-instance` for details of how to share a session and also revoke a particular share using the CLI.
+
 ### Developer Tools
 
 Toggle the *Developer Tools* panel on the *Stream* page to interact with your Android stream and monitor its performance. It helps you to track resource usage, view logs, and perform various actions while interacting with your Android stream in real-time to enhance your workflow. This panel is resizable, allowing you to customize your layout as needed, and can also be undocked into a separate window.
