@@ -34,3 +34,60 @@ You can either configure a Prometheus instance to scrape the endpoint or manuall
 
 
 You will see all available metrics as output, including metrics for the individual Anbox instances.
+
+## Access metrics with a charmed Anbox Cloud
+
+In order to collect and access metrics with a charmed deployment of Anbox Cloud you need to have the [Canonical Observability Stack (COS)](https://charmhub.io/topics/canonical-observability-stack) installed.
+
+The following will only describe a sample setup of COS, please consult [the official documentation](https://charmhub.io/topics/canonical-observability-stack/tutorials/install-microk8s) for details and recommendations.
+
+In a first step we have to deploy [microk8s](https://microk8s.io/) into a separate model on an existing Juju controller:
+
+    juju add-model k8s
+    juju deploy microk8s --base=ubuntu@22.04 --channel=edge --constraints="virt-type=virtual-machine cores=4 mem=6G root-disk=80G"
+
+Once the deployment has settled we can configure microk8s to host COS:
+
+    juju ssh microk8s/0 -- sudo microk8s enable dns hostpath-storage
+    juju ssh microk8s/0 -- sudo apt install -y jq
+    IPADDR=$(juju ssh microk8s/0 -- ip -4 -j route get 2.2.2.2 | jq -r '.[] | .prefsrc')
+    juju ssh microk8s/0 -- sudo microk8s enable metallb:$IPADDR-$IPADDR
+
+Now that microk8s is ready we can register it with the Juju controller
+
+    juju ssh microk8s/0 -- sudo microk8s config | juju add-k8s devk8s --controller dev
+
+Finally we can now deploy COS itself
+
+    juju add-model cos devk8s
+    curl -o offers.yaml -L https://raw.githubusercontent.com/canonical/cos-lite-bundle/refs/heads/main/overlays/offers-overlay.yaml
+    curl -o storage.yaml -L https://raw.githubusercontent.com/canonical/cos-lite-bundle/refs/heads/main/overlays/storage-small-overlay.yaml
+    juju deploy cos-lite --trust --overlay ./offers.yaml --overlay ./storage.yaml
+
+In order to have an Anbox Cloud specific dashboard and alert rules you can also deploy the relevant configuration charm
+
+    juju deploy anbox-cloud-cos-configuration:grafana-dashboard grafana:grafana-dashboard
+
+The deployment will take a while and you can use `juju status` to monitor the current status.
+
+After the deployment has finished, you will find the Grafana endpoint and password for the `admin` user by running
+
+    juju run grafana/leader get-admin-password --model cos
+
+Next you need to hook up COS with Anbox Cloud. For that we have to deploy the [Grafana Agent charm](https://charmhub.io/grafana-agent) to the model Anbox Cloud is deployed in. In the following we assume that the model is named `anbox-cloud`.
+
+    juju switch anbox-cloud
+    juju depoy grafana-agent
+    juju relate ams:cos-agent grafana-agent:cos-agent
+    juju relate anbox-stream-gateway:cos-agent grafana-agent:cos-agent
+
+In order to connect grafana-agent with COS, we need to establish necessary relations:
+
+    juju consume admin/cos.prometheus-receive-remote-write
+    juju relate grafana-agent prometheus-receive-remote-write
+    juju consume admin/cos.loki-logging
+    juju relate grafana-agent loki-logging
+    juju consume admin/cos.grafana-dashboards
+    juju relate grafana-agent grafana-dashboards
+
+Once all relations are established, you can find the Anbox Cloud dashboard within Grafana and have access to all metrics, including logs from the machines Grafana Agent is deployed on
