@@ -17,3 +17,4 @@ __pycache__
 .sphinx/deps/
 .sphinx/_static/swagger-ui/
 reference/ams-configuration.md
+*.swp
