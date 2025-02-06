@@ -61,6 +61,15 @@ Lastly, follow the prompt in the command line output and run the following comma
 ```{note}
 The `anbox-connect` command sets up a secure ADB channel and routes traffic between your local machine and the remote Anbox instance. Therefore, it must be kept running to maintain the ADB connection. Do not abort the command once the connection is established.
 ```
+### Revoke the connection
+
+To prevent misuse of the pre-signed ADB connection URL before it expires, adminstrators can revoke access to a session by running:
+
+    anbox_stream_gateway session share delete <session_id>
+
+To view which share to revoke, you could list all the shares for a session by running:
+
+    anbox_stream_gateway session share list <session_id>
 
 (sec-expose-adb-service)=
 ## Expose ADB service upon Anbox instance creation

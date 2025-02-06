@@ -5,6 +5,63 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.25.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.25/stable` |  |
+| `ams-node-controller` (Deprecated) | `1.25/stable` |  |
+| `coturn` | `1.25/stable` |  |
+| `ams` | `1.25/stable` |  |
+| `anbox-stream-gateway`  | `1.25/stable` |   |
+| `ams-lxd` | `1.25/stable` |   |
+| `anbox-stream-agent` | `1.25/stable` |  |
+| `aar` | `1.25/stable` |   |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.25/stable` |  |
+| `anbox-cloud-core` | `1.25/stable` |  |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.25/stable` | 1.25.0-52a674b66 |
+| `aar`    | `1.25/stable` | 1.25.0-52a674b66 |
+| `amc`    | `latest/stable` | 1.25.0-52a674b66 |
+| `ams-node-controller` (Deprecated) | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-cloud-dashboard` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-stream-agent` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-stream-gateway` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-connect` | `latest/stable` | 1.25.0-52a674b66 |
+| `anbox-cloud-appliance` | `1.25/stable` | 1.25.0-52a674b66 |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android14:amd64` |  |
+| `jammy:android14:arm64` |  |
+| `jammy:android13:amd64` |  |
+| `jammy:android13:arm64` |  |
+| `jammy:android12:amd64` |  |
+| `jammy:android12:arm64` |  |
+| `jammy:aaos13:amd64`    |  |
+| `jammy:aaos13:arm64`    |  |
+| `jammy:aaos14:amd64`    |  |
+| `jammy:aaos14:arm64`    |  |
+
+
 ## 1.24.2
 
 ### Charms
