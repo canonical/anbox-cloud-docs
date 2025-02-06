@@ -1,7 +1,7 @@
 (ref-charm-configuration)=
 # Charm Configuration
 
-Since the release of Anbox Cloud 1.25.0, Anbox Cloud Charms have been updated to support the latest Ops Framework used by Juju.
+Since the release of Anbox Cloud 1.25.0, Anbox Cloud Charms have been updated to support the latest [Operator Framework](https://github.com/canonical/operator) used by Juju.
 This document lists all the resulting changes to the configuration and actions of various Anbox Cloud charms.
 
 ## [AMS](https://charmhub.io/ams)
