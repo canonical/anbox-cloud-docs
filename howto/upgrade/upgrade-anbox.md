@@ -106,10 +106,10 @@ If you don't run any of the services in a high availability configuration, upgra
 
 To upgrade all charms, run the following commands:
 
-    juju refresh --channel=1.25/stable anbox-cloud-dashboard
-    juju refresh --channel=1.25/stable anbox-stream-gateway
-    juju refresh --channel=1.25/stable anbox-stream-agent
-    juju refresh --channel=1.25/stable coturn
+    juju refresh --channel=1.24/stable anbox-cloud-dashboard
+    juju refresh --channel=1.24/stable anbox-stream-gateway
+    juju refresh --channel=1.24/stable anbox-stream-agent
+    juju refresh --channel=1.24/stable coturn
     juju refresh --channel=latest/stable nats
 
 ```{note}
@@ -122,13 +122,13 @@ Since the NATS charm has been overhauled to use the modern charm framework (Ops 
 
 The AMS service needs to be updated independently of the other service components to ensure minimal down time. The charm can be upgraded by running the following command.
 
-    juju refresh --channel=1.25/stable ams
+    juju refresh --channel=1.24/stable ams
 
 ### Upgrade LXD
 
 As the last step, you have to upgrade the LXD cluster. Upgrading LXD will not restart running instances but it's recommended to take a backup before continuing.
 
-    juju refresh --channel=1.25/stable lxd
+    juju refresh --channel=1.24/stable lxd
 
 In some cases, specifically when you maintain bigger LXD clusters or want to keep a specific set of LXD nodes active until users have dropped, it makes sense to run the upgrade process manually on a per node basis. To enable this, you can set the following configuration option for the LXD charm before running the refresh command above:
 
