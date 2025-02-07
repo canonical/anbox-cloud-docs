@@ -63,7 +63,7 @@ The `anbox-connect` command sets up a secure ADB channel and routes traffic betw
 ```
 ### Revoke the connection
 
-To prevent misuse of the pre-signed ADB connection URL before it expires, adminstrators can revoke access to a session by running:
+To prevent misuse of the pre-signed ADB connection URL before it expires, administrators can revoke access to a session by running:
 
     anbox_stream_gateway session share delete <session_id>
 

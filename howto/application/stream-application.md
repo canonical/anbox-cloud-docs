@@ -30,6 +30,8 @@ When creating an instance, make sure you select the *Enable Streaming* capabilit
 You can start a streaming session for any of the successfully created applications. Once the associated instance is created and ready, click *Stream* ( ![stream icon](/images/icons/stream-icon.png) ) to start the stream.
 
 To understand how the streaming stack of Anbox Cloud works, see {ref}`exp-application-streaming`.
+```
+````
 
 ## Streaming statistics
 
@@ -59,11 +61,31 @@ The downloaded `.csv` file has the following statistics:
 
 ### Sharing a streaming session
 
+
+````{tabs}
+
+```{group-tab} CLI
+
+You can share an authenticated session with another user by running:
+
+    anbox-stream-gateway session share <session_id>
+
+Running this command generates a presigned URL for the session, that is valid for a specified duration.
+
+You can later update the expiration date, description and the timeout values of a shared session:
+
+    anbox-stream-gateway session share update --timeout=1m --expiry=30m --description=new_description
+
+```
+
+```{group-tab} Dashboard
+
 To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/icons/share-stream-icon.png) ) on the *Instances* page.
 
 Set your stream title and expiration details and generate a link that can be shared with others.
+```
 
-See {ref}`howto-access-instance` for details of how to share a session and also revoke a particular share using the CLI.
+````
 
 ### Developer Tools
 
