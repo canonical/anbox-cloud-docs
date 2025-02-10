@@ -135,5 +135,5 @@ Finally, reboot the AAR:
 
 * {ref}`exp-aar`
 * {ref}`howto-revoke-aar`
-* [Juju relations](https://jaas.ai/docs/relations)
-* [Juju cross model relations](https://juju.is/docs/cross-model-relations)
+* [Juju relations](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/relation/)
+* [Juju cross model relations](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/relation/#cross-model/)

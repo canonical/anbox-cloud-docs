@@ -55,7 +55,7 @@ The Anbox Cloud Appliance currently supports the following LXD versions:
 
 ## Juju-based deployments
 
-Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
+Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/cloud/) as well as manually provided machines as long as they follow the required minimums.
 
 ### Ubuntu version
 
@@ -88,7 +88,7 @@ To switch to the 2.9 series, use the following command:
 
     snap refresh --channel=2.9/stable juju
 
-See the [Juju documentation](https://juju.is/docs/installing) for more information.
+See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-juju/#install-juju) for more information.
 
 (sec-minimum-hardware-requirements)=
 ### Minimum hardware requirements

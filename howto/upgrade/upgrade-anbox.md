@@ -53,7 +53,7 @@ If they are not, run the following command to do so:
 
 Before you upgrade, check the required {ref}`sec-juju-version-requirements`.
 
-If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/olm/upgrade-models) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
+If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-models/#upgrade-a-model) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
 ## Upgrade all charms
 

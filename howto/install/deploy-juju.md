@@ -47,7 +47,7 @@ For a different cloud, just substitute the cloud name (use the name returned by 
 
 ## Add a controller and model
 
-The [Juju controller](https://juju.is/docs/olm/controllers) is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as [models](https://juju.is/docs/olm/models).
+The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
 
 For example, run the following command to bootstrap the controller for AWS:
 
