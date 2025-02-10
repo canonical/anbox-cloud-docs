@@ -9,26 +9,11 @@ Not all components are updated with each release. When components are not update
 
 ### Charms
 
-#### Ubuntu 22.04
-
-| Name | Channel | Revision |
-|----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.25/stable` |  |
-| `ams-node-controller` (Deprecated) | `1.25/stable` |  |
-| `coturn` | `1.25/stable` |  |
-| `ams` | `1.25/stable` |  |
-| `anbox-stream-gateway`  | `1.25/stable` |   |
-| `ams-lxd` | `1.25/stable` |   |
-| `anbox-stream-agent` | `1.25/stable` |  |
-| `aar` | `1.25/stable` |   |
-| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+The 1.25.0 release contains new versions of the Anbox Cloud snaps and images. There are no charms released for 1.25.0, they are instead planned to be released in 1.25.1.
 
 ### Bundles
 
-| Name | Channel | Revision |
-|----------|--------------|--------------|
-| `anbox-cloud` | `1.25/stable` |  |
-| `anbox-cloud-core` | `1.25/stable` |  |
+n/a
 
 ### Snaps
 

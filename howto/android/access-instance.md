@@ -20,23 +20,28 @@ First, install the `anbox-connect` snap from the snap store:
 
 Generate a presigned connection URL in either of the following ways:
 
-**From the Dashboard**
+````{tabs}
+```{group-tab} CLI
+
+For the charmed Anbox Cloud deployment, run the following command with your share description:
+
+    anbox-stream-gateway session share --description="Grant access to xxx"
+
+For the Anbox Cloud Appliance, run:
+
+    anbox-cloud-appliance.gateway session share --description="Grant access to xxx"
+
+This command will return a presigned URL that you can use to connect to the remote Android instance.
+
+```
+```{group-tab} dashboard
 
 On the *Instances* page, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](/images/icons/adb-connect-icon.png) ).
 
 *Authorise* the connection and copy the command provided.
 
-**From the Command Line**:
-
-For the charmed Anbox Cloud deployment, run:
-
-    anbox-stream-gateway session share <session_id>
-
-For the Anbox Cloud Appliance, run:
-
-    anbox-cloud-appliance.gateway session share <session_id>
-
-This command will return a presigned URL that you can use to connect to the remote Android instance.
+```
+````
 
 ```{note}
 Each presigned URL can only be used to establish a single ADB connection. If multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted to allow the new request to succeed.
@@ -61,15 +66,23 @@ Lastly, follow the prompt in the command line output and run the following comma
 ```{note}
 The `anbox-connect` command sets up a secure ADB channel and routes traffic between your local machine and the remote Anbox instance. Therefore, it must be kept running to maintain the ADB connection. Do not abort the command once the connection is established.
 ```
+
+### Extend connection expiry
+
+To extend the expiration time of a connection in case it has expired or is too short:
+
+    anbox-stream-gateway share update <share_id> --expiry=24h
+
+
 ### Revoke the connection
-
-To prevent misuse of the pre-signed ADB connection URL before it expires, administrators can revoke access to a session by running:
-
-    anbox_stream_gateway session share delete <session_id>
 
 To view which share to revoke, you could list all the shares for a session by running:
 
-    anbox_stream_gateway session share list <session_id>
+    anbox-stream-gateway share list <share_id>
+
+To prevent misuse of the pre-signed ADB connection URL before it expires, administrators can revoke access to a session by running:
+
+    anbox-stream-gateway share delete -y <share_id>
 
 (sec-expose-adb-service)=
 ## Expose ADB service upon Anbox instance creation

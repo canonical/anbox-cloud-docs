@@ -25,7 +25,7 @@ The following target dates for upcoming releases are not final and could vary de
 |----|----|----|
 | March 12, 2025 | Anbox Cloud 1.25.1 | * Android security updates for March 2025<br/> * Bug fixes |
 | April 16, 2025 | Anbox Cloud 1.25.2 | * Android security updates for April 2025<br/> * Bug fixes |
-| May 14, 2025 | Anbox Cloud 1.26.0 | * Terraform plan replacing Anbox Cloud bundles<br/> * Support Ubuntu 24.04 for all charms<br/> * Initial work for secret management via Juju secrets<br/> * Enhancements to the Anbox Management Service<br/> * `anbox-modules` package will no longer be required for GPU and software rendering<br/> * Anbox Cloud images with Android 15<br/> * Instances with EXT4 file system by default |
+| May 14, 2025 | Anbox Cloud 1.26.0 | * Terraform plan replacing Anbox Cloud bundles<br/> * Support Ubuntu 24.04 for all charms<br/> * Initial work for secret management via Juju secrets<br/> * Enhancements to the Anbox Management Service<br/> * `anbox-modules` package will no longer be required for GPU and software rendering<br/> * Anbox Cloud images with Android 15 |
 
 ## Release and support policy
 
