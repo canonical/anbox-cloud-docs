@@ -35,16 +35,16 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:android14:amd64` |  |
-| `jammy:android14:arm64` |  |
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
-| `jammy:aaos14:amd64`    |  |
-| `jammy:aaos14:arm64`    |  |
+| `jammy:android14:amd64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android14:arm64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android13:amd64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android13:arm64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android12:amd64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android12:arm64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos13:amd64`    | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos13:arm64`    | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos14:amd64`    | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos14:arm64`    | `1.25.0-20250206152014.git19dfacfa5` |
 
 
 ## 1.24.2
