@@ -68,13 +68,17 @@ The downloaded `.csv` file has the following statistics:
 
 You can share an authenticated session with another user by running:
 
-    anbox-stream-gateway share --description="Grant access to xxx"
+    anbox-stream-gateway share <session_id> --description="Grant access to xxx"
 
 Running this command generates a presigned URL for the session, that is valid for a specified duration.
 
-You can later update the expiration date, description and the timeout values of a shared session:
+You can later update the expiration date and description of a shared session:
 
     anbox-stream-gateway share update <share_id> --expiry=30m --description=new_description
+
+```{note}
+Replace `anbox-stream-gateway` with `anbox-cloud-appliance.gateway` if you are running this on the appliance.
+```
 
 ```
 

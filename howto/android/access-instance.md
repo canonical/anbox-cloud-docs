@@ -25,11 +25,11 @@ Generate a presigned connection URL in either of the following ways:
 
 For the charmed Anbox Cloud deployment, run the following command with your share description:
 
-    anbox-stream-gateway session share --description="Grant access to xxx"
+    anbox-stream-gateway session share <session_id> --description="Grant access to xxx"
 
 For the Anbox Cloud Appliance, run:
 
-    anbox-cloud-appliance.gateway session share --description="Grant access to xxx"
+    anbox-cloud-appliance.gateway session share <session_id> --description="Grant access to xxx"
 
 This command will return a presigned URL that you can use to connect to the remote Android instance.
 
@@ -73,12 +73,18 @@ To extend the expiration time of a connection in case it has expired or is too s
 
     anbox-stream-gateway share update <share_id> --expiry=24h
 
+The `--expiry` flag accepts values in these formats:
+
+* A relative duration such as `24h` or `30m`, calculated from the current time
+* A date-only string in the format `YYYY-MM-DD`
+* A date-time string in the format `YYYY-MM-DD HH:MM:SS`
+
 
 ### Revoke the connection
 
 To view which share to revoke, you could list all the shares for a session by running:
 
-    anbox-stream-gateway share list <share_id>
+    anbox-stream-gateway share list --session-id=<share_id>
 
 To prevent misuse of the pre-signed ADB connection URL before it expires, administrators can revoke access to a session by running:
 
