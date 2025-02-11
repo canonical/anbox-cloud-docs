@@ -133,13 +133,15 @@ To launch an instance with development mode enabled, add the `--devmode` flag to
 
 ```{group-tab} Dashboard
 
-Create an instance on the *Instances* page to launch an instance. The information required for launching an instance depends on whether you are creating the instance from an application or an image.
+You can create instances from the *Images* and *Applications* pages using the *Create an Instance* button ( ![create instance icon](/images/icons/create-instance-icon.png) ). You can also create instances from the details page of an image and an application.
 
-When you create the instance from an application, the attributes you define for the application decide most of the properties of the instance.
+The information required for creating an instance depends on whether you are creating it from an application or an image.
 
-When you create the instance from an image, you can define the properties of the instance during its creation.
+When you create the instance from an application, the attributes you define for the application decide most of the properties of the instance. When you create an instance from a selected image, you will find that several fields are already set based on the image base and type.
 
+```{note}
 There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
+```
 
 Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
 

@@ -123,7 +123,7 @@ resources:
 
 ```{group-tab} Dashboard
 
-Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again.
+Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create*.
 
 An application can be created either in a VM or a container. Selecting one of these options will update the image field to only show images of the chosen type. The default image for the selected type is automatically populated in the image field.
 

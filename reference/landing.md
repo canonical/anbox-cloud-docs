@@ -44,7 +44,7 @@ Learn about the APIs provided by Anbox cloud.
 * {ref}`ref-api`
   - [AMS HTTP API](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/api-reference/ams-api/)
   - [Anbox HTTPS API](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/api-reference/anbox-https-api/)
-  - [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) 
+  - [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
   - [Stream Gateway API](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/api-reference/gateway-api/)
 
 
@@ -89,6 +89,7 @@ api-reference/landing.md
 application-manifest
 cmd-ref/landing.md
 component-versions
+charm-configuration
 deprecation-notices
 feature-flags
 glossary
