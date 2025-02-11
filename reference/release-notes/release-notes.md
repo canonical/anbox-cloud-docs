@@ -52,7 +52,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.25.x includes:
 
 * Integration with the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack)
 * Enhancements to the Anbox Management Service (AMS)
-* Reworked charms using `ops` framework
 * Enhancements to Anbox Cloud dashboard
 * Upgrade to LXD 5.21
 * Android security updates for February 2025
