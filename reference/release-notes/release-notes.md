@@ -9,26 +9,23 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| February 12, 2025 | [Anbox Cloud 1.25.0](1.25.0.md) |
 | January 15, 2025 | [Anbox Cloud 1.24.2](1.24.2.md) |
 | December 11, 2024 | [Anbox Cloud 1.24.1](1.24.1.md) |
 | December 4, 2024 | [Anbox Cloud 1.23.3](1.23.3.md) |
 | November 13 2024 | [Anbox Cloud 1.24.0](1.24.0.md) |
-| October 23 2024 | [Anbox Cloud 1.23.2 hotfix 1](1.23.2-hotfix1.md) |
-| October 16 2024 | [Anbox Cloud 1.23.2](1.23.2.md) |
-| September 18 2024 | [Anbox Cloud 1.23.1](1.23.1.md) |
-| August 14 2024 | [Anbox Cloud 1.23.0](1.23.0.md) |
 
 ## Upcoming release roadmap
 
-The current minor release is **1.24.0** and the next one will be **1.25.0**.
+The current minor release is **1.25.0** and the next one will be **1.26.0**.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| February 12 2025 | Anbox Cloud 1.25.0 | * Integration with the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack)<br/> * Backup and restore support for the Anbox Cloud dashboard charm<br/> * Support for Ubuntu 24.04 (Noble Numbat) for all charms<br/> * (Alpha release) Terraform plan replacing the Anbox Cloud bundles<br/> * Improvements to the Anbox Management Service (AMS)<br/> * Reworked charms<br/> * Upgrade to LXD 5.21<br/> * Android security updates for February 2025<br/> * Bug fixes |
-| March 12 2025 | Anbox Cloud 1.25.1 | * Android security updates for March 2025<br/> * Bug fixes |
-| April 16 2025 | Anbox Cloud 1.25.2 | * Android security updates for April 2025<br/> * Bug fixes |
+| March 12, 2025 | Anbox Cloud 1.25.1 | * Reworked charms with Operator framework<br/>* Android security updates for March 2025<br/> * Bug fixes |
+| April 16, 2025 | Anbox Cloud 1.25.2 | * Android security updates for April 2025<br/> * Bug fixes |
+| May 14, 2025 | Anbox Cloud 1.26.0 | * Terraform plan replacing Anbox Cloud bundles<br/> * Support Ubuntu 24.04 for all charms<br/> * Initial work for secret management via Juju secrets<br/> * Enhancements to the Anbox Management Service<br/> * `anbox-modules` package will no longer be required for GPU and software rendering<br/> * Anbox Cloud images with Android 15 |
 
 ## Release and support policy
 
@@ -49,20 +46,25 @@ To ensure you receive latest security updates and bug fixes, you should upgrade 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
 
-### What's new in 1.24.x?
+### What's new in 1.25.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.24.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.25.x includes:
 
-* VHAL improvements
-* Android 14 images
-* Support for additional upscaling algorithms in the streaming SDK
-* Support for communication between dashboard and multiple AMS instances
-* Android security updates
+* Integration with the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack)
+* Enhancements to the Anbox Management Service (AMS)
+* Enhancements to Anbox Cloud dashboard
+* Upgrade to LXD 5.21
+* Android security updates for February 2025
+* Bug fixes
 
 <details><summary>Click to view earlier releases' notes</summary>
 
 |  Release date  |  Release notes  |
 |----|----|
+| October 23 2024 | [Anbox Cloud 1.23.2 hotfix 1](1.23.2-hotfix1.md) |
+| October 16 2024 | [Anbox Cloud 1.23.2](1.23.2.md) |
+| September 18 2024 | [Anbox Cloud 1.23.1](1.23.1.md) |
+| August 14 2024 | [Anbox Cloud 1.23.0](1.23.0.md) |
 | July 18 2024 | [Anbox Cloud 1.22.2](1.22.2.md) |
 | June 13 2024 | [Anbox Cloud 1.22.1](1.22.1.md) |
 | May 15 2024 | [Anbox Cloud 1.22.0](1.22.0.md) |

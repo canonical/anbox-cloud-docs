@@ -3,6 +3,16 @@
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
+## Kernel 6.8 and earlier
+*Deprecated in 1.25.0* ; *Removal in 1.27.0*
+
+The support for kernel 6.8 and earlier is deprecated as of 1.25.0. Starting from 1.27.0, Anbox Cloud will only be supported on kernels with version later than 6.8.
+
+## LXD 5.0
+*Deprecated in 1.25.0* ; *Removal in 1.28.0*
+
+The support for LXD 5.0 snap is deprecated as of 1.25.0. Upgrade your deployment to use LXD 5.21 instead.
+
 ## Node controller
 *Deprecated in 1.23.0* ; *Removal in 1.26.0*
 

@@ -10,39 +10,54 @@ For certain scenarios, accessing an individual instance for debugging or develop
 
 Since the 1.23.0 release, Anbox Cloud allows users to create a secure ADB connection through the `anbox-connect` command without exposing the [ADB service](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/expose-services/). This method is highly recommended for securely connecting to remote Android instances, offering a safe and efficient means of managing ADB connections.
 
+```{tip}
+If you are running the appliance, use `anbox-cloud-appliance.gateway` for all gateway commands instead of `anbox-stream-gateway`
+```
+
 ### Install `anbox-connect` snap
 
 First, install the `anbox-connect` snap from the snap store:
 
     snap install anbox-connect
 
-### Generate a presigned connection URL
+### Identify the session
 
-Generate a presigned connection URL in either of the following ways:
+To identify a session that you would like to share with others, run:
 
-**From the Dashboard**
+    anbox-stream-gateway session list
+
+Note down the `ID` of the session.
+
+```{tip}
+If you are using the dashboard, you can also find the session ID in the *Instance details* page.
+```
+
+### Create a share for the session
+
+````{tabs}
+```{group-tab} CLI
+
+Using the session's ID, share it the session:
+
+    anbox-stream-gateway session share <session_id> --description="Grant access to xxx"
+
+Providing a description helps you identify a share later on, if you are sharing a session multiple times.
+
+The output returns a presigned URL that you can use to connect to the remote Android instance.
+
+```
+```{group-tab} Dashboard
 
 On the *Instances* page, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](/images/icons/adb-connect-icon.png) ).
 
-*Authorise* the connection and copy the command provided.
+After you authorize the connection, copy the `anbox-connect <connection_url>` provided.
 
-**From the Command Line**:
-
-For the charmed Anbox Cloud deployment, run:
-
-    anbox-stream-gateway session share <session_id>
-
-For the Anbox Cloud Appliance, run:
-
-    anbox-cloud-appliance.gateway session share <session_id>
-
-This command will return a presigned URL that you can use to connect to the remote Android instance.
-
-```{note}
-Each presigned URL can only be used to establish a single ADB connection. If multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted to allow the new request to succeed.
 ```
+````
 
-### Connect to the Instance
+Each presigned URL can only be used to establish a single ADB connection. If multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted, to allow the new request to succeed.
+
+### Connect to the instance
 
 Open a terminal and use the `anbox-connect` command to establish a secure ADB connection to the remote Android instance:
 
@@ -58,9 +73,35 @@ Lastly, follow the prompt in the command line output and run the following comma
 
     adb connect 127.0.0.1:32985
 
-```{note}
+```{important}
 The `anbox-connect` command sets up a secure ADB channel and routes traffic between your local machine and the remote Anbox instance. Therefore, it must be kept running to maintain the ADB connection. Do not abort the command once the connection is established.
 ```
+
+### Update share details
+
+At times, you may want to extend the expiration time of a particular share. If you have multiple shares of the same session, identify the ID of the share that you want to extend:
+
+    anbox-stream-gateway share list --session-id=<session_id> --description="Grant access to xxx"
+
+The description helps to identify the share from the list. Update the expiry of the share:
+
+    anbox-stream-gateway share update <share_id> --expiry=24h
+
+The `--expiry` flag accepts values in these formats:
+
+* A relative duration such as `24h` or `30m`, calculated from the current time
+* A date-only string in the format `YYYY-MM-DD`
+* A date-time string in the format `YYYY-MM-DD HH:MM:SS`
+
+You can also update the description of a share:
+
+    anbox-stream-gateway share update <share_id> --description=new_description
+
+### Revoke a share
+ 
+To revoke a particular share, run:
+
+    anbox-stream-gateway share delete -y <share_id>
 
 (sec-expose-adb-service)=
 ## Expose ADB service upon Anbox instance creation
@@ -95,7 +136,7 @@ Afterwards you can find the network endpoint of the instance in the output of th
 
 The endpoint of the ADB service exposed from the running instance is available at 10.226.4.200:10000 on the public network.
 
-### Connect to the Instance
+### Connect to the instance
 
 Connect the running instance remotely, establish the connection between your host and the instance through the exposed ADB service via TCP/IP:
 

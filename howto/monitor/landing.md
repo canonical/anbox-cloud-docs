@@ -42,7 +42,7 @@ To collect and access metrics with a charmed deployment of Anbox Cloud, you need
 
 The following steps describe a sample setup of COS, you should adjust it for your setup. For further information and recommendation, see the [official COS documentation](https://charmhub.io/topics/canonical-observability-stack/tutorials/install-microk8s).
 
-First, deploy [Microk8s](https://microk8s.io/) into a separate model on an existing Juju controller:
+First, deploy [MicroK8s](https://microk8s.io/) into a separate model on an existing Juju controller:
 
     juju add-model k8s
     juju deploy microk8s --base=ubuntu@22.04 --channel=edge --constraints="virt-type=virtual-machine cores=4 mem=6G root-disk=80G"
@@ -54,7 +54,7 @@ Once the deployment has completed, configure MicroK8s to host COS:
     IPADDR=$(juju ssh microk8s/0 -- ip -4 -j route get 2.2.2.2 | jq -r '.[] | .prefsrc')
     juju ssh microk8s/0 -- sudo microk8s enable metallb:$IPADDR-$IPADDR
 
-Now that Microk8s is ready, register it with the Juju controller:
+Now that MicroK8s is ready, register it with the Juju controller:
 
     juju ssh microk8s/0 -- sudo microk8s config | juju add-k8s devk8s --controller dev
 

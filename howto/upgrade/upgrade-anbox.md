@@ -57,13 +57,18 @@ If your deployment uses an earlier Juju version, you must upgrade your controlle
 
 ## Upgrade all charms
 
+```{important}
+
+The latest 1.25.0 release does not include charms. So the latest channel of charms that you can currently use is `1.24/stable` for all charms and `latest/stable` for the `nats` charm.
+```
+
 The deployed Juju charms need to be upgraded next.
 
+You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
+
+If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
+
 ```{note}
-- You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
-
-- If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
-
 - Starting with the 1.21 release, the NATS charm has been switched from its [older version](https://charmhub.io/nats-charmers-nats) to a [newer version](https://charmhub.io/nats) on Charmhub. This switch does not have any breaking changes from a user's perspective but since the framework of the charm has been overhauled, the upgrade to the new charm would require users to `switch` the charm's source while refreshing/updating the charm.
 
 - Starting with the 1.22 release, the `anbox-stream-agent` charm has a new relation `client` which can be used to register new clients for the Anbox Stream Agent. This new relation is used by the new AMS charm to create stream-enabled instances using the `--enable-streaming` option. For deployments using the bundles from or after 1.22 release, the relation is created automatically. For users upgrading from older versions of Anbox Cloud, the relation needs to be manually created using `juju relate anbox-stream-agent:client ams:agent` after upgrading both the `ams` and the `anbox-stream-agent` charms to 1.22.
@@ -94,7 +99,7 @@ The Anbox Application Registry (AAR) can be updated independently of the other s
 
 To upgrade the registry, run
 
-    juju refresh --channel=1.23/stable aar
+    juju refresh --channel=1.24/stable aar
 
 ### Upgrade control plane
 

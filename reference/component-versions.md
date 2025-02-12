@@ -5,6 +5,48 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.25.0
+
+### Charms
+
+The 1.25.0 release contains new versions of the Anbox Cloud snaps and images. There are no charms released for 1.25.0, they are instead planned to be released in 1.25.1.
+
+### Bundles
+
+n/a
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.25/stable` | 1.25.0-52a674b66 |
+| `aar`    | `1.25/stable` | 1.25.0-52a674b66 |
+| `amc`    | `latest/stable` | 1.25.0-52a674b66 |
+| `ams-node-controller` (Deprecated) | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-cloud-dashboard` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-stream-agent` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-stream-gateway` | `1.25/stable` | 1.25.0-52a674b66 |
+| `anbox-connect` | `latest/stable` | 1.25.0-52a674b66 |
+| `anbox-cloud-appliance` | `1.25/stable` | 1.25.0-52a674b66 |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android14:amd64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android14:arm64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android13:amd64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android13:arm64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android12:amd64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:android12:arm64` | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos13:amd64`    | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos13:arm64`    | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos14:amd64`    | `1.25.0-20250206152014.git19dfacfa5` |
+| `jammy:aaos14:arm64`    | `1.25.0-20250206152014.git19dfacfa5` |
+
+
 ## 1.24.2
 
 ### Charms
