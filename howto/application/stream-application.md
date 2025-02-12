@@ -63,8 +63,10 @@ The downloaded `.csv` file has the following statistics:
 
 
 ````{tabs}
-
 ```{group-tab} CLI
+```{tip}
+If you are running the appliance, use `anbox-cloud-appliance.gateway` for all gateway commands instead of `anbox-stream-gateway`
+```
 
 You can share an authenticated session with another user by running:
 
@@ -72,13 +74,7 @@ You can share an authenticated session with another user by running:
 
 Running this command generates a presigned URL for the session, that is valid for a specified duration.
 
-You can later update the expiration date and description of a shared session:
-
-    anbox-stream-gateway share update <share_id> --expiry=30m --description=new_description
-
-```{note}
-Replace `anbox-stream-gateway` with `anbox-cloud-appliance.gateway` if you are running this on the appliance.
-```
+You can later update the expiration date and description of a shared session. See {ref}`howto-access-instance` for detailed steps.
 
 ```
 
@@ -88,7 +84,6 @@ To share your stream with users without an account, click *Set up sharing* ( ![s
 
 Set your stream title and expiration details and generate a link that can be shared with others.
 ```
-
 ````
 
 ### Developer Tools
