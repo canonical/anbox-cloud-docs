@@ -3,6 +3,9 @@
 
 Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be launched at a time.
 
+`````{tabs}
+````{group-tab} CLI
+
 When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
 
 From a path:
@@ -81,6 +84,21 @@ resources:
   memory: 4GB
   disk-size: 8GB
 ```
+
+````
+
+```{group-tab} Dashboard
+
+To update an application with Anbox Cloud dashboard, visit the *Applications* page and find the application you want to edit in the table. Click the *Edit* button (🖉) in the actions column to open the *Update application* page.
+
+In the guided form, you can customize most of the fields that are available during {ref}`application creation <howto-create-application>`. Some of the fields, like the application name, or the container/VM option, cannot be modified and are disabled. When a field is disabled, hovering over it will display a tooltip explaining the reason.
+
+Similar to the application creation process, you can unlock advanced customization capabilities by toggling the *Customize manifest.yaml* switch at the bottom of the page. Note that both manifest.yaml customization, upload of a new APK as well as the update of some fields under *Configuration (optional)* will trigger the creation of a new application version. When such fields are modified, a warning message will appear under the field.
+
+After updating the fields, click the *Update* button at the bottom of the page. You will be redirected either to the *Overview* tab of the application detail page - if the fields changed did not trigger a new version creation - or to the *Versions* tab of that page, when a new version of the application was created.
+
+```
+`````
 
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.
