@@ -43,7 +43,7 @@ Then build and sign the application alongside with other Android applications wh
 
 To install the signed APK as a system app in the Android container, create an addon and invoke the `aam install-system-app` command in a `pre-start` hook.
 
-Follow the {ref}`tut-create-addon` tutorial to create the basic layout of an addon, with a `manifest.yaml` file and a `hooks` folder. Place the APK into the addon folder and create a `pre-start` hook with the following content (assuming that the APK file is named `app.apk`):
+Follow the steps in {ref}`howto-create-addon` to create the basic layout of an addon, with a `manifest.yaml` file and a `hooks` folder. Place the APK into the addon folder and create a `pre-start` hook with the following content (assuming that the APK file is named `app.apk`):
 
 ```bash
 #!/bin/bash -ex

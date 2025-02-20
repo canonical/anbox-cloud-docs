@@ -366,3 +366,5 @@ Authorise
 onboarding
 prometheus
 MicroK
+Multipass
+uid
