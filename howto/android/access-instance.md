@@ -52,6 +52,8 @@ On the *Instances* page, locate a running instance and click *Connect ADB* ( ![C
 
 After you authorize the connection, copy the `anbox-connect <connection_url>` provided.
 
+For a detailed demonstration of how to use Connect ADB, refer to the [Connect ADB tutorial](<link>).
+
 ```
 ````
 
