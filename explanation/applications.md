@@ -100,7 +100,7 @@ When the application bootstrap succeeds, the base instance is automatically remo
 
 * {ref}`exp-addons`
 * {ref}`exp-resources-presets`
-* {ref}`howto-create-virtual-device`
+* {ref}`tut-create-virtual-device`
 * {ref}`howto-create-application`
 * {ref}`howto-delete-application`
 * {ref}`howto-list-applications`

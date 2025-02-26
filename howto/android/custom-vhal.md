@@ -140,6 +140,6 @@ If you would like to further your custom implementation and integrate the Anbox 
 
 ## Related topics
 
-- {ref}`howto-create-addons`
+- {ref}`howto-create-addon`
 - {ref}`howto-addons`
 - {ref}`howto-extend-application`
