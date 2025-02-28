@@ -67,7 +67,8 @@ Finally, deploy COS:
 
 To have an Anbox Cloud specific dashboard and alert rules, deploy the relevant configuration charm:
 
-    juju deploy anbox-cloud-cos-configuration:grafana-dashboard grafana:grafana-dashboard
+    juju deploy anbox-cloud-cos-configuration
+    juju relate anbox-cloud-cos-configuration:grafana-dashboard grafana:grafana-dashboard
 
 The deployment will take a while and you can use `juju status` to monitor the current status.
 

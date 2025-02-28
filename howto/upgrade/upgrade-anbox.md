@@ -111,10 +111,10 @@ If you don't run any of the services in a high availability configuration, upgra
 
 To upgrade all charms, run the following commands:
 
-    juju refresh --channel=1.24/stable anbox-cloud-dashboard
-    juju refresh --channel=1.24/stable anbox-stream-gateway
-    juju refresh --channel=1.24/stable anbox-stream-agent
-    juju refresh --channel=1.24/stable coturn
+    juju refresh --channel=1.25/stable anbox-cloud-dashboard
+    juju refresh --channel=1.25/stable anbox-stream-gateway
+    juju refresh --channel=1.25/stable anbox-stream-agent
+    juju refresh --channel=1.25/stable coturn
     juju refresh --channel=latest/stable nats
 
 ```{note}
@@ -127,14 +127,18 @@ Since the NATS charm has been overhauled to use the modern charm framework (Ops 
 
 The AMS service needs to be updated independently of the other service components to ensure minimal down time. The charm can be upgraded by running the following command.
 
-    juju refresh --channel=1.24/stable ams
+    juju refresh --channel=1.25/stable ams
 
 ### Upgrade LXD
 
 As the last step, you have to upgrade the LXD cluster. Upgrading LXD will not restart running instances but it's recommended to take a backup before continuing.
 
-    juju refresh --channel=1.24/stable lxd
+```{note}
+In Anbox Cloud's 1.25.0 release, the LXD charm has been reworked and hence there are changes in the upgrade instructions for the charm.
+```
 
+<details>
+<summary>Click here for upgrade instructions for Anbox Cloud versions < 1.25.0 </summary>
 In some cases, specifically when you maintain bigger LXD clusters or want to keep a specific set of LXD nodes active until users have dropped, it makes sense to run the upgrade process manually on a per node basis. To enable this, you can set the following configuration option for the LXD charm before running the refresh command above:
 
     juju config lxd enable_manual_upgrade=true
@@ -156,8 +160,53 @@ In case a reboot of the machine is required, a status message will be shown. Whe
     juju run --wait=1m lxd/0 clear-notification
 
 If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by default, the NVIDIA drivers are held from being upgraded in case of downtime for all running instances due to either a manual upgrade or an [unattended-upgrade](https://wiki.debian.org/UnattendedUpgrades). The downside to this is that the machine may miss security updates for the NVIDIA drivers. To manually upgrade the NVIDIA drivers, you need to run the following Juju action:
-    
+
     juju run --wait=30m lxd/0 upgrade-gpu-drivers
+
+</details>
+
+```{important}
+For users running LXD clusters with the LXD snap tracking a channel which is different than 5.21/stable, it is important that you set the charm configuration item `channel` *explicitly* to the currently running channel before running the `upgrade-cluster` command, e.g. if the current LXD cluster consists of the LXD snap tracking the 5.0/stable channel, you should run:
+
+    juju config lxd channel=5.0/stable
+
+Not doing this might lead to a broken LXD cluster.
+```
+
+The first step to upgrade LXD is to update the corresponding charm to the latest revision using:
+
+    juju refresh --channel=1.25/stable lxd
+
+Updating the charm does not update the LXD snap or any of the internal packages on the LXD node. After updating the charm, check which nodes have package updates available using:
+
+    juju run lxd/0 upgrade-info
+
+If you have multiple Juju units for LXD nodes, make a note of all the Juju units having available updates.
+
+Before proceeding make sure that there are no more active instances on the nodes. Then mark the LXD node as unschedulable within AMS which would make sure that no new instances are spawned on the LXD node. This can be done using:
+
+    juju run ams/leader node-start-maintenance node=”<node_name>”
+
+where `<node_name>` refers to the LXD node name stored within AMS, e.g. `lxd0` if the Juju unit is `lxd/0`.
+
+After the node is successfully marked as unschedulable, we can safely upgrade the machine. To do this run:
+
+    juju run lxd/<unit_number> --wait=30m upgrade-machine reboot=<true_or_false>
+
+where `<unit_number>` refers to the Juju unit number on each node having available updates.
+
+This action will update the GPU drivers as well as installed kernel modules which might result in a reboot being required to successfully load the new modules and drivers. This can be done automatically by setting `reboot=true` or manually at a later point in time by setting `reboot=false` and then running `juju exec lxd/<unit_number> -- sudo reboot` when required.
+
+After the updates to all the nodes have finished, update the LXD snap on the node using:
+
+    juju run lxd/<unit_number> --wait=30m upgrade-cluster
+
+Finally after all the upgrades finish and the nodes are healthy, run:
+
+    juju run ams/leader node-end-maintenance node=”<node_name>”
+
+where `<node_name>` refers to the LXD node name stored within AMS.
+
 
 ## Upgrade Debian packages
 

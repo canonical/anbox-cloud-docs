@@ -136,7 +136,7 @@ When the application for the virtual device is ready, you can launch it and log 
 
 ## Test the virtual device
 
-You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See {ref}`sec-access-instance-scrcpy` for more detailed instructions.
+You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool.
 
 If you do not have `scrcpy` installed on your local machine, enter the following command to install it:
 
