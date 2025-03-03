@@ -66,7 +66,7 @@ Create an SSH key in your addon directory and move the private key to a location
         ssh-keygen -f ssh-addon-key -t ecdsa -b 521
         mv ssh-addon-key ~/
 
-Alternatively, you can use an existing key and move the public key into the addon directory.
+Alternatively, you can use an existing key and move the public key into the addon directory and rename it as `ssh-addon-key.pub`.
 
 ## Create the addon
 

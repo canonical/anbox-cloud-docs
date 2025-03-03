@@ -12,7 +12,7 @@ This tutorial has two paths - you can use the CLI or the dashboard, depending on
 `````{tabs}
 ````{group-tab} CLI
 
-We will use the {term}`Anbox Management Client (AMC)` in this tutorial to work with applications and instances. AMC communicates with the {term}`Anbox Management Service (AMS)`, the management module of Anbox Cloud.
+We will use the {term}`Anbox Management Client (AMC)` in this tutorial to work with applications and instances. AMC communicates with the {term}`Anbox Management Service (AMS)`, the instance management module of Anbox Cloud.
 
 ## Create the device
 
@@ -22,9 +22,11 @@ In the home directory, let's first create a directory for the application conten
 
       mkdir my-app
 
-This directory is the location where the application manifest file and any relevant APK must reside.
+This directory is the location where the application manifest file and any relevant application artifacts must reside.
 
-For this tutorial, we are going to create a device with a basic application without an APK that will start directly with the Android system launcher. Let's create the `manifest.yaml` inside the `my-app` directory with the following contents:
+For this tutorial, we are going to create a device with a basic application without an APK that will start directly with the Android system launcher. Such an example will use the default image.
+
+Let's first create the `manifest.yaml` inside the `my-app` directory with the following contents:
 
 ```yaml
 name: my-first-app
@@ -52,15 +54,13 @@ Watch the output of this command till the application becomes *ready*.
 
 When the application is *ready*, let's launch an instance:
 
-      amc launch my-first-app --vm --enable-streaming
+      amc launch my-first-app --enable-streaming
 
 This command creates and starts an instance for the application.
 
 `my-first-app` is the application name, you can also use the application ID to launch an instance for it.
 
 The `--enable-streaming` flag indicates that we want to stream this instance.
-
-The `--vm` flag indicates that we want to create the application inside a virtual machine instance instead of the default container instance.
 
 To see the instance details and its status, run:
 
