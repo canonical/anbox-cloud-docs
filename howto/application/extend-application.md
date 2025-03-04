@@ -182,4 +182,4 @@ The application will now execute the hook and you should see that, for example, 
 
 ## Related topics
 * {ref}`exp-addons`
-* {ref}`howto-create-addons`.
+* {ref}`howto-create-addon`.

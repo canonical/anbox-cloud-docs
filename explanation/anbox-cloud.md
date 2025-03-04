@@ -14,7 +14,7 @@ Anbox Cloud comes in two variants that serve different purposes:
 
 **Anbox Cloud Appliance**
 
-The Anbox Cloud Appliance is a self-contained deployment variant of Anbox Cloud. It combines all elements of Anbox Cloud in a single snap package for installation and management on a single machine. In this way, the Anbox Cloud Appliance allows simple and fast development and prototyping.
+The Anbox Cloud Appliance, generally referred as the appliance, is a self-contained deployment variant of Anbox Cloud. It combines all elements of Anbox Cloud in a single snap package for installation and management on a single, dedicated machine. It is suitable for small scale deployments and environments for development and prototyping.
 
 **Anbox Cloud**
 

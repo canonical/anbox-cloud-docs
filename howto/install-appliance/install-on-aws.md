@@ -158,7 +158,7 @@ Some preparation is required for using Anbox Cloud that involves installing addi
 
     anbox-cloud-appliance prepare-node-script | sudo bash -ex
 
-This command applies a script that installs required kernel modules and any necessary GPU driver packages. See {ref}`sec-prepare-machine` for more information.
+This command applies a script that installs required kernel modules and any necessary GPU driver packages. See {ref}`sec-install-additional-packages` for more information.
 
 ## Initialize the installation
 

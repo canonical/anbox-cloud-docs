@@ -132,6 +132,10 @@ redirects = {
     'howto/addons/customise-android-example': '../customize-android-example',
     'howto/install/customise-installation': '../customize-installation',
     'howto/anbox/manage-images': '../../images/landing',
+    'tutorial/getting-started-aaos': '../../howto/android/set-automotive-properties',
+    'tutorial/getting-started-dashboard': '../create-test-virtual-device',
+    'tutorial/getting-started': '../create-test-virtual-device',
+    'tutorial/creating-addon': '../../howto/addons/create-addon',
 }
 
 ############################################################

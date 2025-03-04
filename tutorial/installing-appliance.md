@@ -1,126 +1,117 @@
 (tut-installing-appliance)=
-# Install the appliance on a dedicated machine
+# Install the appliance
 
-The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
+In this tutorial, we will install the [Anbox Cloud Appliance snap](https://snapcraft.io/anbox-cloud-appliance), initialize the appliance within a [Multipass](https://canonical.com/multipass) virtual machine. By the end of this tutorial, we should be able to interact with the appliance using the Anbox Cloud dashboard.
 
-There are differences between the Anbox Cloud Appliance and the charmed Anbox Cloud installation (see {ref}`sec-variants`). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.
+Before beginning the tutorial, it is important to understand that:
 
-```{caution}
-Remember that installing the Anbox Cloud Appliance will take over the entire instance, install packages and override existing components to configure them as required. If you have existing components, for example, LXD containers, installing and initializing the appliance could override any existing configuration. Hence, it is important to try this tutorial on a machine dedicated for Anbox Cloud.
-```
+- There are differences between the appliance and the charmed Anbox Cloud installation (see {ref}`sec-variants`). If you want to install the charmed version instead, see {ref}`howto-install-anbox-cloud`.
 
-If you want to install **Anbox Cloud** instead, see {ref}`howto-install-anbox-cloud` or if you want to install the appliance on a cloud platform, see {ref}`howto-install-appliance`.
+- Remember that installing the appliance will take over the entire instance, install packages and override existing components. For example, if you have existing LXD containers, installing and initializing the appliance could override any existing configuration.
 
-This tutorial guides you through the steps that are required to install and initialize the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance).
+> A [video version](https://youtu.be/D9iEd88IYBs) of this tutorial is also available.
 
-## Preparation
+## Prerequisites
 
-Make sure you have the following prerequisites:
+To proceed with the tutorial, we need:
 
-* An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
-* A virtual or bare metal machine running Ubuntu 22.04. See the detailed {ref}`ref-requirements`.
-```{caution}
-It is not recommended to run Anbox Cloud on an Ubuntu desktop appliance. Always use the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant.
-```
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
-```{caution}
+- An Ubuntu SSO account. If you don't have one yet, [create one now](https://login.ubuntu.com).
+- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+```{note}
 The *Ubuntu Pro (Infra-only)* token does not work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
 ```
+- A virtual or a bare metal machine running Ubuntu 22.04. We will be using a Multipass virtual machine.
 
-## Install the appliance
+## Prepare a Multipass instance
 
-The following instructions guide you through all relevant steps to install the Anbox Cloud Appliance from the [snap](https://snapcraft.io/anbox-cloud-appliance).
+1. Install Multipass:
 
-### Update your system
+        snap install multipass
 
-On your machine, run the following commands to ensure that all installed packages on your system are up-to-date:
+2. Create a virtual machine:
 
-    sudo apt update
-    sudo apt upgrade
+        multipass launch --name=anbox --cpus 8 --disk 50G --memory 8G
+    
+Make sure to allocate sufficient disk space, memory and CPUs as shown in the example. Otherwise, the VM will run out of space while creating the application. See {ref}`ref-requirements` for information on minimum resource requirements.
 
-```{caution}
-Please reboot your system after the upgrade (if required) before proceeding with the other steps.
-```
+3. Shell into the virtual machine:
 
-### Attach your machine to Ubuntu Pro
+        multipass shell anbox
 
-The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
+## Attach the machine to Ubuntu Pro
 
-Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<pro_token>* with your Ubuntu Pro token:
+Run the following command by replacing `$token` with your Ubuntu Pro token:
 
-    sudo pro attach <pro_token>
+    sudo pro attach $token
+
+The machine is now successfully attached to Ubuntu Pro.
 
 (sec-enable-anbox-pro)=
-### Enable the `anbox-cloud` service
+## Enable the `anbox-cloud` service
 
-On your machine, run the following command to install the Anbox Cloud Appliance and additional dependencies.
+The `anbox-cloud` service is disabled by default. Run:
 
     sudo pro enable anbox-cloud
 
-Running this command does the following:
+Running this command first installs necessary tools and dependencies such as [snapd](https://snapcraft.io/snapd) and [LXD](https://snapcraft.io/lxd), if they are not already installed.
 
-1. Installs the following tools and dependencies, if they are not installed already:
-    * [snapd](https://snapcraft.io/snapd)
-    * [LXD](https://snapcraft.io/lxd)
+Then, it installs the `anbox-cloud-appliance` snap from the `latest/stable` track and configures the necessary `apt` repositories.
 
-        ```{important}
-        The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `5.0/stable` track by default. If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.0/stable lxd` to update it. However, if LXD version is later than 5.0, [do not downgrade it as it may render LXD unusable](https://documentation.ubuntu.com/lxd/en/latest/installing/#upgrade-lxd).
-        ```
+(sec-install-additional-packages)=
+## Install additional packages
 
-1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
-1. Configures the `apt` repositories for Anbox Cloud.
+After enabling the `anbox-cloud` service, we still need some additional packages, kernel modules and optionally GPU driver packages
 
-(sec-prepare-machine)=
-### Prepare the machine
-
-In order to prepare the machine and install additional required packages, run the following command to review the generated preparation script:
+To do all this, we offer a script that helps prepare machines. Let's first review the script:
 
     anbox-cloud-appliance prepare-node-script
 
-The generated bash script will perform the following operations:
+The generated bash script will do the following:
 
 1. Install `linux-modules-extra` packages to ensure that the binder kernel driver is available.
 2. Install additional Anbox Cloud specific kernel modules.
 3. (If GPU is available) Install GPU driver packages from the Ubuntu archive and apply tuning settings for the driver.
 
-To apply the script after reviewing it, you can run:
+To apply the script after reviewing it, run:
 
     anbox-cloud-appliance prepare-node-script | sudo bash -ex
+
+When this script is applied, we have completed the installation part successfully.
 
 (sec-initialize-appliance)=
 ## Initialize the appliance
 
-After preparation of the machine has been completed, you can now initialize the Anbox Cloud Appliance itself.
-
-### Run the `init` command
-
-On your machine, enter the following command to invoke the initialization process of the Anbox Cloud Appliance:
+After installation, we need to initialize the appliance to use it. Run:
 
     sudo anbox-cloud-appliance init
 
-You will be asked a few questions. If you don't want to make any specific changes, you can safely stay with the offered default answers. When the command returns, the initialization process has been completed.
+Here, the initialization process asks a few questions regarding the configuration of networking options and LXD storage pools.
+
+For the purpose of this tutorial, let's leave the default answers for all questions except the one about providing access to the AMS API:
+
+*Do you want to setup access to the AMS API for your current user (ubuntu, uid=1000)?*
+
+The reason we switch from the default answer *No* to *Yes* for this question is that the snap strict confinement policy requires the application manifest and other necessary files such as the APK to be located in the home directory of the user executing the commands. If this answer is not set, you will still be able to use the dashboard path of the {ref}`tut-create-virtual-device` tutorial but you will not be able to use the command line path.
+
+For everything else, accept the defaults for everything else until the bootstrap process starts.
 
 (sec-register-dashboard)=
 ## Register with the dashboard
 
-Once the initialization process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.
+When the initialization process has finished, we can see the welcome page on the local host. Try accessing `https://multipass-machine-address` using a browser.
 
-![Instructions for registering Ubuntu SSO account|690x442](/images/install_appliance_register.png)
+To start using Anbox Cloud, there is still one last command we need to run to register a user account. Run the following command with your Ubuntu SSO account email address:
 
-### Register your Ubuntu SSO account
+    sudo anbox-cloud-appliance dashboard register your_email@email.com
 
-Enter the following command to register your Ubuntu SSO account with the appliance dashboard:
+The command outputs a link to finish the registration. By default, this registration link expires after one hour.
 
-    sudo anbox-cloud-appliance dashboard register <your Ubuntu SSO email address>
+When the registration is complete, you can use Ubuntu SSO to sign in to the dashboard.
 
-The output provides a link that you must open in your web browser to finish the account creation. By default, the registration link expires after one hour. After registering, you can log into the appliance dashboard with your Ubuntu SSO account.
+## Success!
 
-### Log into the appliance dashboard
+After registering, you can log into the appliance dashboard at `https://multipass-machine-address` with your Ubuntu SSO account.
 
-After registering, you can log into the appliance dashboard at `https://your-machine-address` with your Ubuntu SSO account.
+The appliance is now fully set up and ready to be used!
 
-## Done!
-
-Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the {ref}`tut-getting-started-dashboard` or the {ref}`tut-getting-started-cli` tutorial to learn how to use Anbox Cloud.
-
-You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
+> Next: {ref}`tut-create-virtual-device`
