@@ -41,7 +41,7 @@ Using the session's ID, share it the session:
 
     anbox-stream-gateway session share <session_id> --description="Grant access to xxx"
 
-Providing a description helps you identify a share later on, if you are sharing a session multiple times.
+Providing a description helps you identify a share later on, if you are sharing a session multiple times. Each session can be shared up to a maximum of 5 times.
 
 The output returns a presigned URL that you can use to connect to the remote Android instance.
 
