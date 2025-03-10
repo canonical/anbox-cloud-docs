@@ -5,6 +5,64 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.25.1
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.25/stable` | 807 |
+| `ams-node-controller` | `1.25/stable` | 799 |
+| `coturn` | `1.25/stable` | 780 |
+| `ams` | `1.25/stable` | 968 |
+| `anbox-stream-gateway`  | `1.25/stable` | 899  |
+| `ams-lxd` | `1.25/stable` | 859  |
+| `anbox-stream-agent` | `1.25/stable` | 892 |
+| `aar` | `1.25/stable` | 952 |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | 86 |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.25/stable` | 695 |
+| `anbox-cloud-core` | `1.25/stable` | 706 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.25/stable` | `1.25.1-0fe3104ea` |
+| `aar`    | `1.25/stable` | `1.25.1-0fe3104ea` |
+| `amc`    | `latest/stable` | `1.25.1-0fe3104ea` |
+| `ams-node-controller` | `1.25/stable` | `1.25.1-0fe3104ea` |
+| `anbox-cloud-dashboard` | `1.25/stable` | `1.25.1-0fe3104ea` |
+| `anbox-stream-agent` | `1.25/stable` | `1.25.1-0fe3104ea` |
+| `anbox-stream-gateway` | `1.25/stable` | `1.25.1-0fe3104ea` |
+| `anbox-connect` | `latest/stable` | `1.25.1-0fe3104ea` |
+| `anbox-cloud-appliance` | `1.25/stable` | `1.25.1-0fe3104ea` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android14:amd64` | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:android14:arm64` | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:android13:amd64` | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:android13:arm64` | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:android12:amd64` | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:android12:arm64` | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:aaos13:amd64`    | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:aaos13:arm64`    | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:aaos14:amd64`    | `1.25.1-20250306204510.git260803cc1` |
+| `jammy:aaos14:arm64`    | `1.25.1-20250306204510.git260803cc1` |
+
+
 ## 1.25.0
 
 ### Charms
