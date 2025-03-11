@@ -65,7 +65,7 @@ This command lists the available images along with their IDs and status:
 
 Launch a raw instance by providing the image ID in the following command:
 
-    amc launch --raw <image_id>
+    amc launch <image_id>
 
 See {ref}`ref-provided-images` for a list of images that are available in Anbox Cloud.
 

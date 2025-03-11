@@ -78,7 +78,7 @@ Launch a stream-enabled instance for web client to join
 
 ```
 amc launch --name test-app \
-  --raw jammy:android13:arm64 \
+  jammy:android13:arm64 \
   --enable-streaming
 ```
 
@@ -346,7 +346,7 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
 
       ```
       amc launch --name test-oobv2 \
-        --raw jammy:android13:arm64 \
+        jammy:android13:arm64 \
         --enable-streaming \
         --features allow_custom_system_signatures \
         --addons install-out-of-band-app

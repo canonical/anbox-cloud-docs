@@ -32,7 +32,7 @@ See {ref}`howto-access-stream-gateway` for more information on creating, using a
 Create a streaming enabled Android instance:
 
     arch="$(dpkg-architecture -q DEB_HOST_ARCH)"
-    amc launch --enable-streaming --raw --name a13 jammy:android13:"$arch"
+    amc launch --enable-streaming --name a13 jammy:android13:"$arch"
 
 ### Determine session ID of the Android instance
 

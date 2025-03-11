@@ -10,12 +10,12 @@ This guide explains how to use an instance in development mode to develop and te
 Start a raw instance with `--devmode` enabled:
 
 ```
-amc launch --devmode --raw
+amc launch --devmode
 ```
 or
 
 ```
-amc launch --vm --devmode --raw
+amc launch --vm --devmode
 ```
 The command prints out the ID of the instance. Note down the instance ID for next steps.
 
@@ -40,7 +40,7 @@ This example uses a container for demonstration, you can create an SSH-enabled V
 
 ```bash
 # Launch and obtain the container id
-id="$(amc launch --devmode -s ssh --raw)"
+id="$(amc launch --devmode -s ssh)"
 # Install the ssh-import-id package
 amc exec $id -- apt install -y ssh-import-id
 # Import SSH keys from GitHub; Use lp:<username> for Launchpad

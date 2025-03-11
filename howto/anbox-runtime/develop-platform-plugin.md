@@ -32,7 +32,7 @@ The build process creates a `platform_minimal.so` module in the `build` director
 
 ## Install the example platform
 
-The Anbox Management Service (AMS) allows launching instances in a special development mode, which is helpful when developing addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems. 
+The Anbox Management Service (AMS) allows launching instances in a special development mode, which is helpful when developing addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems.
 
 We will be using this development mode to install the platform. See {ref}`sec-dev-mode` for more information.
 
@@ -40,11 +40,11 @@ To try out the `minimal` platform, complete the following steps:
 
 1. Start a raw instance with development mode turned on:
 
-        amc launch --raw --devmode --cpus 4 --memory 3GB
+        amc launch --devmode --cpus 4 --memory 3GB
 
    If you chose the `nvidia` example, you must select an instance type that supports GPUs (See {ref}`sec-application-manifest-instance-type` if you need more information on the different instance types):
 
-        amc launch --raw --devmode --cpus 4 --memory 3GB --gpu-slots 1
+        amc launch --devmode --cpus 4 --memory 3GB --gpu-slots 1
 
     ```{note}
     Use the `--vm` option to launch a VM instance.
@@ -121,7 +121,7 @@ Load this addon into AMS so that it can be used by applications and instances:
 
 When launching an instance, you must explicitly specify the platform that the Anbox runtime inside the instance should use with the `--platform` argument. If not specified, Anbox will use its default. To launch an instance with the `minimal` platform, run the following command:
 
-    amc launch --raw --addon minimal --platform minimal
+    amc launch --addon minimal --platform minimal
 
 Use the `--vm` option to launch a VM instance.
 
