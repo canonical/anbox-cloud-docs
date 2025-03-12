@@ -258,6 +258,7 @@ sendfile
 SensorManager
 SHA
 shader
+shaders
 shiftfs
 SIGBUS
 signaling
