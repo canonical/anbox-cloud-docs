@@ -6,11 +6,11 @@ Enabling out-of-band (OOB) data transmission between an Android application and 
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
 
-### Prepare your web application
+## Prepare your web application
 
 This guide builds upon the [streaming client setup tutorial](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/) for Anbox Cloud. Ensure you have completed the setup of a web-based streaming client as described in the tutorial till the [step where you set up stream client](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/#implement-the-stream-client).
 
-#### Extend `AnboxStream` Configuration
+### Extend `AnboxStream` Configuration
 
 Now, to extend an `AnboxStream` object, add the `dataChannels` property to define a new data channel. For example:
 
@@ -72,7 +72,7 @@ When joining an existing stream-enabled instance, the data channel can be create
 An `AnboxStream` object can create a maximum of five data channels. If the number of data channels exceeds the allowed maximum, an exception is thrown when instantiating the `AnboxStream` object.
 ```
 
-### Data exchange between Anbox runtime and web client
+## Data exchange between Anbox runtime and web client
 
 Launch a stream-enabled instance for web client to join
 
@@ -129,7 +129,7 @@ To simulate data transmission between the Anbox runtime and the web client, you 
 This enables data exchange between a service running on the Anbox instance and the web client. However, it does not yet facilitate data exchange between an Android application running inside the Android container and the web client.
 
 
-### Data exchange between Android application and web client
+## Data exchange between Android application and web client
 
 In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project. You can either:
 - compile and modify the example application to meet your needs.
@@ -144,7 +144,7 @@ To build up the communication bridge between an Android application and the web 
 
 This allows developers to easily make use of the Android system service for data communication between an Android application and the Anbox runtime through a file descriptor, enabling further data exchange with the web client.
 
-#### Get notified about the availability of data channels
+### Get notified about the availability of data channels
 
 To receive notifications about the availability of data channels, your Android application should register the following broadcast receiver in the `AndroidManifest.xml` file:
 
@@ -183,10 +183,10 @@ public class DataChannelEventReceiver extends BroadcastReceiver {
 ```
 
 ```{note}
-If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue]((https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14)),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
+If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue](https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
 ```
 
-#### Access the data proxy service
+### Access the data proxy service
 
 There are two ways to access the `org.anbox.webrtc.IDataProxyService` binder service from an Android application:
 
@@ -219,7 +219,7 @@ There are two ways to access the `org.anbox.webrtc.IDataProxyService` binder ser
     }
     ```
 
-#### Connect the data channel
+### Connect the data channel
 
 To fetch the file descriptor that refers to one data channel, send a request to the data proxy service through a binder transaction:
 
@@ -247,7 +247,7 @@ try {
 }
 ```
 
-#### Receive data from the Anbox runtime
+### Receive data from the Anbox runtime
 
 Once the valid file descriptor is returned, launch an asynchronous task to read data from the Anbox runtime:
 
@@ -283,7 +283,7 @@ public class DataReadTask extends AsyncTask<Void, Void, Void> {
 }
 ```
 
-#### Send data to the Anbox runtime
+### Send data to the Anbox runtime
 
 To send data to the Anbox runtime platform through the file descriptor:
 
@@ -297,7 +297,7 @@ try {
 }
 ```
 
-#### Install the APK as system app
+### Install the APK as system app
 
 To connect the data channel to the Anbox WebRTC data proxy service within an Android container, the Android app must be installed and running as a system app. To do so, proceed with the following steps:
 1. Add the attribute `android:sharedUserId="android.uid.system"` to the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app, then build your application.
@@ -340,7 +340,7 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
 
    See [How to install an APK as a system app](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/port/install-apk-system-app/#howto-install-apk-system-app) for details.
 
-#### Run end-to-end test
+### Run end-to-end test
 
   1. To launch a stream-enabled instance with the addon you created above, run:
 

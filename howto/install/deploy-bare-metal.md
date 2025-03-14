@@ -88,10 +88,11 @@ By default, Anbox Cloud uses a loop file with an automatically calculated size f
 
 There are different ways of configuring a dedicated block storage device:
 
-- Use an [existing LXD storage pool](#existing-storage-pool) (recommended)
-- Use a [dedicated storage device](#dedicated-storage-device)
+- Use an {ref}`existing LXD storage pool <sec-existing-storage-pool>` (recommended)
+- Use a {ref}`dedicated storage device <sec-dedicated-storage-device>`
 - Use a storage device defined by Juju (see {ref}`sec-customize-storage-juju` for instructions)
 
+(sec-existing-storage-pool)=
 ### Existing storage pool
 
 To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configuration#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
@@ -108,7 +109,7 @@ applications:
 ```{important}
 The LXD storage pool must use the ZFS storage driver. Other storage drivers are not supported by Anbox Cloud.
 ```
-
+(sec-dedicated-storage-device)=
 ### Dedicated storage device
 
 To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configuration#storage_device) configuration on the AMS charm to the path of the storage device.

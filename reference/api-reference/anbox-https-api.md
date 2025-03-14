@@ -32,14 +32,17 @@ For standard synchronous operation, the following dict is returned:
 
 ```json
 {
-    "type": "sync",        # Standard operation type ("sync" or "async")
-    "status": "Success",   # Response status
-    "status_code": 200,    # Response status code
-    "metadata": {}         # Extra resource/action specific metadata
+    "type": "sync",
+    "status": "Success",
+    "status_code": 200,
+    "metadata": {}
 }
 ```
 
-HTTP code must be 200.
+The "type" denotes standard operation type and can have values "sync" or "async".
+The "status" indicates the response status.
+The "status_code" indicates the response status code. HTTP code must be 200.
+The "metadata" indicates any resource or action specific metadata.
 
 ### Error
 
@@ -165,17 +168,24 @@ Input:
 
 ```json
 {
-    "latitude": 52.4538982,          # Latitude of geographic coordinates
-    "longitude": 13.3857982,         # Longitude of geographic coordinates
-    "altitude": 10.0,                # Altitude in meters
-    "time": 1597237057,              # Current time in millisecond since 1970-01-01 00:00:00 UTC
-    "speed": 0.0,                    # Speed in meters per second
-    "bearing": 0.0,                  # Magnetic heading in degrees
-    "format": "wgs84",               # (optional) Location format
-    "horizontal_accuracy": 20,       # (optional) Horizontal accuracy in meters
-    "vertical_accuracy": 20          # (optional) Vertical accuracy in meters
+    "latitude": 52.4538982,
+    "longitude": 13.3857982,
+    "altitude": 10.0,
+    "time": 1597237057,
+    "speed": 0.0,
+    "bearing": 0.0,
+    "format": "wgs84",
+    "horizontal_accuracy": 20,
+    "vertical_accuracy": 20
 }
 ```
+- "latitude" and "longitude" indicate the Latitude and Longitude of geographic coordinates.
+- "altitude" indicates Altitude in meters.
+- "time" indicates the current time in millisecond since 1970-01-01 00:00:00 UTC.
+- "speed" indicates speed in meters per second.
+- "bearing" indicates magnetic heading in degrees.
+- "format" indicates the location format and is an optional value.
+- "horizontal_accuracy" and "vertical_accuracy" indicate the horizontal and vertical accuracy in meters and are optional.
 
 Return value:
 
@@ -544,7 +554,7 @@ endpoint will fail with a 500 error code on non-automotive Anbox images.
     * `area_id`: Valid area identifier for the property. Can be omitted for global properties. Can be given in decimal, octal, or hexadecimal format.
     * Some properties require additional data for getting their values. See [OBD2_FREEZE_FRAME](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2061-2089) for an example. This additional data must be passed as JSON in the request body. The values must be set in the fields `int32_values`, `int64_values`, `float_values`, `bytes`, or `string_value`.
 
-To get the list of available properties and areas, query first the [`1.0/vhal/config` endpoint](#10vhalconfig).
+To get the list of available properties and areas, query first the {ref}`sec-anbox-https-api-vhalconfig`.
 
 Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/0x15600503/0x31 | jq .`:
 
@@ -573,7 +583,7 @@ Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sock
 
 Usually, only one of `bytes`, `float_values`, `int32_values`, `int64_values`,
 `string_value` is set, and the rest is empty or omitted, depending on the
-property type (see [`1.0/vhal/config`](#10vhalconfig)).
+property type (see {ref}`sec-anbox-https-api-vhalconfig`).
 `MIXED` property types may have multiple of these values set at the same time, see
 [VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
 

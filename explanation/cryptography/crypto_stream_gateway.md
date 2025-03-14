@@ -22,4 +22,4 @@ Users can generate API tokens to authenticate with the HTTP API provided by the 
 ## Packages used
 
 * [Go standard library](https://pkg.go.dev/std)
-* [`gopkg.in/macaroon.v2`](gopkg.in/macaroon.v2)
+* [`gopkg.in/macaroon.v2`](https://gopkg.in/macaroon.v2)

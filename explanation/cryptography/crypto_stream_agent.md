@@ -26,4 +26,4 @@ For authentication purposes with the [Coturn TURN server](https://github.com/cot
 ## Packages used
 
 * [Go standard library](https://pkg.go.dev/std)
-* [`gopkg.in/macaroon.v2`](gopkg.in/macaroon.v2)
+* [`gopkg.in/macaroon.v2`](https://gopkg.in/macaroon.v2)

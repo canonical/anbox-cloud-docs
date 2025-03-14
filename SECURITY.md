@@ -1,3 +1,6 @@
+---
+orphan: true
+---
 # Anbox Cloud security policy
 
 Learn about our [release and support policy](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/release-notes/release-notes/#release-and-support-policy) for the nature of our releases and versions.
