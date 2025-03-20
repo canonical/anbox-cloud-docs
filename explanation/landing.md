@@ -43,7 +43,6 @@ Understand deployment configurations to plan your deployment.
 Understand how you can deploy Anbox Cloud secure, the cryptography information used by various Anbox Cloud components.
 
 * {ref}`Security <exp-security>`
-* {ref}`exp-security-landing`
 
 
 Also check out the {ref}`tutorials` for step-by-step instructions that help you get familiar with Anbox Cloud, the {ref}`how-to-guides` for instructions on how to achieve specific goals when using Anbox Cloud and the {ref}`reference` section for reference material.
@@ -61,7 +60,7 @@ applications
 application-streaming
 capacity-planning
 clustering
-cryptography/landing
+security/landing
 custom-images
 images
 instances
@@ -71,6 +70,5 @@ production-planning
 rendering-architecture
 rendering-graphics
 resources
-anbox-security
 platforms
 ```

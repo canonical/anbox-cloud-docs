@@ -1,23 +1,13 @@
 (exp-security)=
-# Security in Anbox Cloud
+# Security
 
-Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components are designed to be fundamentally secure.
+Anbox Cloud is designed using secure development practices - its architecture, components and all communication between components are designed to be fundamentally secure.
 
-Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
-
-Consider the following simple yet impactful measures to ensure that you run a secure Anbox Cloud deployment:
-
-- Always run the latest and supported version of Anbox Cloud. See {ref}`ref-release-notes`.
-- Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. See {ref}`ref-ams-configuration`.
-- Monitor resources used by instances regularly.
-- Do not disable TLS pinning when you are not using a load balancer.
-- Use the {ref}`exp-web-dashboard` as your default stream client. If you want to use a custom client, ensure you have set it up securely as described in the {ref}`tut-set-up-stream-client` tutorial.
-
-To report a security issue, contact the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
+Anbox Cloud uses [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
 This security guide gives more insight into how security is ensured through different aspects of Anbox Cloud.
 
-## Architecture
+## Secure communication between components
 
 The architecture of Anbox Cloud has been designed in a way that ensures secure communication between all components.
 
@@ -37,6 +27,24 @@ The following table shows the authentication methods that are in place for the d
 | Stream agent <-> NATS | TLS and token authentication |
 | Coturn with STUN      | No authentication needed     |
 | Coturn with TURN      | Temporary user and password  |
+
+(sec-cryptography)=
+## Cryptography
+
+This section provides details about the cryptographic technology used by Anbox Cloud and why they are used.
+
+This information is currently available for the following components:
+
+```{toctree}
+:titlesonly:
+
+crypto_ams
+crypto_anbox_runtime
+crypto_charms
+crypto_dashboard
+crypto_stream_agent
+crypto_stream_gateway
+```
 
 ## Instance security
 
@@ -91,7 +99,7 @@ The following table helps you understand how data related to you or provided by 
 | Anbox Stream Gateway | Dqlite | Session and management metadata, service account IDs that identify the web client |
 | Anbox Cloud dashboard | SQLite | User emails that are used for authentication |
 
-Services used by Anbox Cloud have configuration files that contain secrets. The secrets are automatically generated and managed by the respective charms or the appliance. The authentication methods used are further defined in {ref}`exp-security-landing` for managing secrets.
+Services used by Anbox Cloud have configuration files that contain secrets. The secrets are automatically generated and managed by the respective charms or the appliance. The authentication methods used are further defined in {ref}`sec-cryptography` for managing secrets.
 
 A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
 
@@ -174,3 +182,8 @@ For communication with the Anbox stream gateway, token-based authentication is u
 Of course, the overall streaming security relies on a secure client implementation. This is ensured by Anbox Cloud's web dashboard, but other client implementations might have weaknesses. However, since encryption is a mandatory feature of WebRTC, developers are forced to consider security aspects when implementing a client application.
 
 See [A Study of WebRTC Security](https://webrtc-security.github.io/) for a detailed discussion of security features in WebRTC.
+
+
+## Related topics
+
+- {ref}`howto-harden`
