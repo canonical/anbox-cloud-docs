@@ -51,6 +51,7 @@ CDN
 Center
 Centered
 CFS
+CIS
 cgroup
 cgroup-v1
 cgroup-v2
@@ -368,3 +369,4 @@ prometheus
 MicroK
 Multipass
 uid
+USG

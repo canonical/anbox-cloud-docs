@@ -21,7 +21,7 @@ The threat points are:
 
 ### 1 - Web client
 
-- Make sure you have `CIS/USG` and `livepatch` enabled on Ubuntu Pro. See {ref}`livepatch <https://documentation.ubuntu.com/pro/pro-client/enable_livepatch/>` and {ref}`enable CIS or USG <https://documentation.ubuntu.com/pro/pro-client/enable_cis/>` for more information.
+- Make sure you have `CIS/USG` and Livepatch enabled on Ubuntu Pro. See {ref}`enable Livepatch <https://documentation.ubuntu.com/pro/pro-client/enable_livepatch/>` and {ref}`enable CIS or USG <https://documentation.ubuntu.com/pro/pro-client/enable_cis/>` for more information.
 
 - Use the {ref}`exp-web-dashboard` as your default stream client. If you want to use a custom client, ensure you have set it up securely as described in the {ref}`tut-set-up-stream-client` tutorial.
 
