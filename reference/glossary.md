@@ -48,7 +48,7 @@ Anbox Cloud cluster
     A deployment of the Anbox Cloud, either just the core stack or the core stack along with the streaming stack.
 
 Anbox Cloud subcluster
-    The group of components that is made up of LXD, AMS node controller, and the [control node](#control-node) hosting the AMS, AMC, and etcd.
+    The group of components that is made up of LXD, AMS node controller, and the {term}`Control node` hosting the AMS, AMC, and etcd.
 
 Anbox Management Client (AMC)
     The command line interface that is used to manage the Anbox Management Service (AMS).
@@ -190,7 +190,7 @@ LXD cluster
     A set of LXD nodes that share the same distributed database that holds the configuration for the cluster members and their instances.
 
 LXD worker node
-    In a clustering setup for a charmed Anbox Cloud deployment, all nodes other than the [control node](#control-node) are worker nodes. If you have a streaming stack, all nodes other than the control node and the two nodes that are dedicated to host the streaming services are worker nodes. Each worker node runs LXD in clustering mode, and this LXD cluster is used to host the Android containers.
+    In a clustering setup for a charmed Anbox Cloud deployment, all nodes other than the {term}`Control node` are worker nodes. If you have a streaming stack, all nodes other than the control node and the two nodes that are dedicated to host the streaming services are worker nodes. Each worker node runs LXD in clustering mode, and this LXD cluster is used to host the Android containers.
 
 Neural Autonomic Transport System (NATS)
     An open-source messaging system that the components of the streaming stack use to communicate.

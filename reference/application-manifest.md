@@ -30,7 +30,7 @@ Name          | Value type | Description | Status |
 ## Instance type
 
 ```{note}
-The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so.
+The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the {ref}`sec-application-manifest-resources` attribute to do so.
 
 When using the web dashboard to create an application, the field *Instance type* is changed to *Resource type* to maintain backward compatibility.
 ```

@@ -16,7 +16,8 @@ To configure a feature for one application in the manifest, use a syntax similar
       disk-size: 3GB
     features: ["foo", "bar"]
 
-### `enable_system_ui`
+(sec-system-ui)=
+## `enable_system_ui`
 
 *since 1.10.2, supported on AOSP images only*
 
@@ -26,7 +27,8 @@ The feature flag will be considered by all new launched instances once set.
 
 On AAOS, the Android Car system UI is always enabled and cannot be disabled.
 
-### `enable_virtual_keyboard`
+(sec-virtual-keyboard)=
+## `enable_virtual_keyboard`
 
 *since 1.9.0, supported on AOSP images only*
 
@@ -36,7 +38,8 @@ For the feature to be considered, applications must be manually updated, because
 
 On AAOS, the Android virtual keyboard is always enabled and cannot be disabled.
 
-### `enable_anbox_ime`
+(sec-client-side-virtual-keyboard)=
+## `enable_anbox_ime`
 
 *since 1.11.0, supported on AOSP images only*
 
@@ -44,7 +47,7 @@ The client-side virtual keyboard is disabled by default but can be enabled with 
 
 For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the application {ref}`bootstrap process <sec-application-bootstrap>`.
 
-### `disable_wifi`
+## `disable_wifi`
 
 *since 1.13.0*
 
@@ -52,7 +55,7 @@ By default, Anbox sets up a virtual WiFi device, which sits on top of an Etherne
 
 The feature flag will be considered by all newly launched instances once set.
 
-### `allow_android_reboot`
+## `allow_android_reboot`
 
 *since 1.12.0*
 
@@ -62,7 +65,7 @@ Note that you must disable the {ref}`sec-application-manifest-watchdog` if reboo
 
 The feature flag will be considered by all newly launched instances once set.
 
-### `disable_development_settings`
+## `disable_development_settings`
 
 *since 1.18.0*
 
@@ -70,7 +73,8 @@ The Android development settings (which include an ADB connection) are enabled b
 
 Once set, this feature flag will be considered by all newly launched instances.
 
-### `android.allow_custom_android_id`
+(sec-custom-android-id)=
+## `android.allow_custom_android_id`
 
 *since 1.18.0, supported on AOSP images only*
 
@@ -86,7 +90,7 @@ To enable the Android container to use a custom Android ID, add the feature flag
 Once set, this feature flag will be considered by all newly launched instances.
 
 (sec-gl-async-swap)=
-### `emugl.enable_async_swap_support`
+## `emugl.enable_async_swap_support`
 
 *since 1.21.0*
 
@@ -94,7 +98,7 @@ GL Async swap support is disabled by default for explicit signals of buffer swap
 
 Once set, this feature flag will be considered by all newly launched instances.
 
-### `webrtc.enable_ice_logging`
+## `webrtc.enable_ice_logging`
 
 *since 1.20.2*
 

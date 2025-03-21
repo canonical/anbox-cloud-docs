@@ -1,19 +1,4 @@
-# DO NOT MODIFY THIS FILE DIRECTLY!
-#
-# This file is generated automatically.
-# Add custom requirements to the custom_required_modules
-# array in the custom_conf.py file and run:
-# make clean && make install
-canonical-sphinx-extensions
-furo
-linkify-it-py
-myst-parser
-pyspelling
-sphinx
+canonical-sphinx[full]==0.4.0
 sphinx-autobuild
-sphinx-copybutton
-sphinx-design
-sphinx-reredirects
-sphinx-tabs
-sphinxcontrib-jquery
-sphinxext-opengraph
+sphinxcontrib-svg2pdfconverter[CairoSVG]
+sphinx-last-updated-by-git
