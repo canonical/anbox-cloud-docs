@@ -7,17 +7,16 @@ Anbox Cloud is designed with secure development practices but there are certain 
 
 Consider the following simple yet impactful measures to ensure that you run a secure Anbox Cloud deployment:
 
-- Always run the latest and supported version of Anbox Cloud. See {ref}`ref-release-notes`.
+- Always run the latest supported version of Anbox Cloud and keep your deployment up to date. See {ref}`ref-release-notes`.
 - Make sure your deployment uses machines running a supported Ubuntu version. See {ref}`ref-requirements`.
 - Do not disable TLS pinning when you are not using a load balancer.
+- If you find a security issue, report it to the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
 
 ## Reduce attack surface
 
 The following diagram illustrates the attack surface and potential points of threat.
 
 ![Anbox Cloud attack surface|690x398](/images/anbox_attack_surface.svg)
-
-The threat points are:
 
 ### 1 - Web client
 
@@ -47,6 +46,9 @@ Secure and back up the following folders on the Anbox Management Client (AMC) be
 ### 4 - Stream gateway
 
 - Expose endpoints only when required. When doing so, limit [API exposure](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/gateway-api/) by using a reverse proxy or a web application firewall.
+The appliance has a built-in reverse proxy but if you are using the charmed deployment, remember to set up one for the deployment.
+
+These are the endpoints that you may require to expose for specific purposes:
   - `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` - This endpoint is required for streaming
   - `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` - This endpoint is required for seamless ADB support
 
@@ -54,6 +56,7 @@ Secure and back up the following folders on the Anbox Management Client (AMC) be
 
 - You can [adjust how strict the API rate limiting](https://charmhub.io/anbox-stream-gateway/configurations#max_http_requests_per_second) must be configured for the gateway API endpoint.
 - Rotate authentication tokens used for the gateway API on a regular basis.
+- When you share a session with others, do not create ephemeral shares. Instead, create a share with a limited validity and then extend the expiration period, if required.
 
 ### 5- TURN/STUN
 
@@ -62,10 +65,6 @@ Disable TURN support if it is not needed. TURN is only needed to handle clients 
 Keep in mind that irrespective of whether you are using STUN/TURN, using a public, externally hosted serve expands the attack surface. Hence consider using the built-in TURN/STUN server provided with the Anbox Cloud deployment for better security.
 
 Alternatively you can also use an externally hosted STUN server and configure it as part of the [Anbox Stream Agent charm configuration](https://charmhub.io/anbox-stream-agent/configurations#extra_stun_servers). TURN is currently not supported to be externally hosted.
-
-
-To report a security issue, contact the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
-
 
 ## Related topics
 
