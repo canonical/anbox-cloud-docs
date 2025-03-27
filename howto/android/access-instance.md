@@ -41,7 +41,7 @@ Using the session's ID, share it the session:
 
     anbox-stream-gateway session share <session_id> --description="Grant access to xxx"
 
-Providing a description helps you identify a share later on, if you are sharing a session multiple times. Each session can be shared up to a maximum of 5 times.
+Providing a description helps you identify a share later on, if you are sharing a session multiple times. Each session can be shared up to a maximum of 5 times. By default, each share will expire after 12 hours. See {ref}`update-share-details` for information on extending the expiration time of a share.
 
 The output returns a presigned URL that you can use to connect to the remote Android instance.
 
@@ -79,6 +79,7 @@ Lastly, follow the prompt in the command line output and run the following comma
 The `anbox-connect` command sets up a secure ADB channel and routes traffic between your local machine and the remote Anbox instance. Therefore, it must be kept running to maintain the ADB connection. Do not abort the command once the connection is established.
 ```
 
+(update-share-details)=
 ### Update share details
 
 At times, you may want to extend the expiration time of a particular share. If you have multiple shares of the same session, identify the ID of the share that you want to extend:
