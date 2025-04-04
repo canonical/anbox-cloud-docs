@@ -1,8 +1,6 @@
 (tut-create-virtual-device)=
 # Create and test a virtual device
 
-> Before you start, complete: {ref}`tut-installing-appliance` but when initializing, remember to answer *Yes* to the question: *Do you want to setup access to the AMS API for your current user (ubuntu, uid=1000)?*
-
 In this tutorial, we will go through the first steps of using Anbox Cloud to create a virtual Android device. By *virtual device*, we mean a simulated device that runs a plain Android operating system without any special apps installed. Anbox Cloud treats such a virtual device as an *empty* application, meaning an application that is not running a specific APK.
 
 By the end of this tutorial, we will be familiar with an {term}`Application` and an {term}`Instance` in Anbox Cloud that are used to create and stream the virtual Android device.
@@ -13,6 +11,24 @@ This tutorial has two paths - you can use the CLI or the dashboard, depending on
 ````{group-tab} CLI
 
 We will use the {term}`Anbox Management Client (AMC)` in this tutorial to work with applications and instances. AMC communicates with the {term}`Anbox Management Service (AMS)`, the instance management module of Anbox Cloud.
+
+## Preparation: Set up your authorization
+
+When you {ref}`installed and initialized the appliance <tut-installing-appliance>`, you should have provided *Yes* to the question:
+
+*Do you want to setup access to the AMS API for your current user (ubuntu, uid=1000)?*
+
+If you had done so, skip this section and proceed to create the device.
+
+If you hadn't set up the authorization then, you should first authorize the relevant user now:
+
+For a `sudo` user trying to authorize themselves:
+
+      sudo anbox-cloud-appliance ams authorize
+
+For a `sudo` user trying to authorize another user:
+
+      sudo anbox-cloud-appliance ams authorize <UID>
 
 ## Create the device
 
