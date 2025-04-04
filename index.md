@@ -10,30 +10,74 @@ Due to its highly scalable nature and performance optimization, delivering devic
 
 ## In this documentation
 
-| | |
-|--|--|
-|  [Tutorials](/tutorial/landing.md)</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides](/howto/landing.md) </br> Step-by-step guides covering key operations and common tasks |
-|  [Explanation](/explanation/landing.md) </br> Concepts - discussion and clarification of key topics, architecture  | [Reference](/reference/landing.md) </br> Technical information - specifications, APIs |
+
+````{grid} 1 1 2 2
+```{grid-item-card} [Tutorial](/tutorial/landing.md)
+**Start here** - a hands-on introduction to Anbox Cloud, guiding you through your first steps. You can choose a CLI or a web UI path.
+- [Install Anbox Cloud Appliance](/tutorial/installing-appliance.md)
+- [Create a virtual device](/tutorial/create-test-virtual-device.md)
+```
+
+```{grid-item-card} [How-to guides](/howto/landing.md)
+**Step-by-step guides** covering key operations and common tasks
+- [Install the appliance on cloud](/howto/install-appliance/landing.md)
+- [Install charmed Anbox Cloud](/howto/install/landing.md)
+- [Manage applications](/howto/application/landing.md)
+- [Manage instances](/howto/instance/landing.md)
+- [Harden your deployment](/howto/anbox/harden.md)
+```
+````
+````{grid} 1 1 2 2
+:reverse:
+```{grid-item-card} [Reference](/reference/landing.md)
+**Technical information**
+- [AMS configuration](/reference/ams-configuration.md)
+- [Application manifest](/reference/application-manifest.md)
+- [CLI commands](/reference/cmd-ref/landing.md)
+- [API](/reference/api-reference/landing.md)
+- [Release notes](/reference/release-notes/release-notes.md)
+```
+
+```{grid-item-card} [Explanation](/explanation/landing.md)
+**Discussion and clarification** of key topics
+- [Architecture](/explanation/anbox-cloud.md)
+- [Security](/explanation/security/landing.md)
+- [Capacity planning](/explanation/capacity-planning.md)
+- [Production deployment](/explanation/production-planning.md)
+```
+````
 
 ## Project and community
 
-Anbox Cloud is a Canonical product. It originally grew out of the [Anbox open-source project](https://github.com/anbox), but its code base is now completely independent.
+Anbox Cloud is a product developed by Canonical. While it was initially based on the open-source Anbox project (archived in [GitHub](https://github.com/anbox)), its codebase has since become entirely independent.
 
 We welcome community involvement through suggestions, fixes and constructive feedback both on the product and its documentation. You can engage with the Anbox Cloud team and the community using the following channels:
 
-- Engage with the Anbox Cloud team and community:
-  - [Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148)
-  - [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com)
-- {ref}`Troubleshoot Anbox Cloud <howto-ts-anbox-cloud>`
-- [Report a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) with the product or documentation
-- {ref}`contribute`
+````{grid}
+```{grid-item-card} Engage
+[Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com) |
+[Contact us](https://anbox-cloud.io/contact-us)
 
-The {ref}`ref-release-notes` helps you get familiar with Anbox Cloud, its releases and roadmap.
+```
 
-For official support requirements, you can get support through [Ubuntu Pro](https://ubuntu.com/support).
+```{grid-item-card} Solve
+{ref}`Troubleshoot <howto-ts-anbox-cloud>` | {ref}`View logs <howto-ts-view-logs>`
 
+```
+````
 
-Thinking about using Anbox Cloud for your next project? [Get in touch!](https://anbox-cloud.io/contact-us)
+````{grid}
+:reverse:
+```{grid-item-card} Get help
+[File a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) | [Get support via Ubuntu Pro](https://ubuntu.com/support)
+
+```
+
+```{grid-item-card} Contribute
+[Contribution guide](/contribute/landing.md) | [Style guide](/contribute/anbox-style-guide.md)
+
+```
+````
 
 ```{toctree}
 :hidden:
