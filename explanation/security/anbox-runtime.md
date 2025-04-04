@@ -1,4 +1,4 @@
-(exp-security-crypto-anbox-runtime)=
+(exp-security-anbox-runtime)=
 # Anbox runtime
 
 The Anbox runtime (see {ref}`howto-anbox-runtime`) is using cryptographic technology for:
@@ -15,9 +15,9 @@ When communicating with the HTTPS API of the Anbox Stream Agent, Anbox will eith
 
 ## Token based authentication
 
-Anbox accesses a limited set of API endpoints of the Anbox Management Service (AMS) to submit status information during runtime. Access is authenticated by a scope-limited [JWT](https://jwt.io/) based token. See {ref}`exp-security-crypto-ams` for more details.
+Anbox accesses a limited set of API endpoints of the Anbox Management Service (AMS) to submit status information during runtime. Access is authenticated by a scope-limited [JWT](https://jwt.io/) based token. See {ref}`exp-security-ams` for more details.
 
-As part of the WebRTC connection process, Anbox communicates with the HTTP API endpoints provided by the Anbox Stream Agent. Anbox authenticates itself to the agent by presenting a token (see {ref}`exp-security-crypto-stream-agent`) and validates the TLS certificate of the agent by checking its fingerprint. The fingerprint Anbox uses for the validation check is the SHA-256 hash of the complete ASN.1 DER content (certificate, signature algorithm and signature) of the TLS certificate that the agent uses.
+As part of the WebRTC connection process, Anbox communicates with the HTTP API endpoints provided by the Anbox Stream Agent. Anbox authenticates itself to the agent by presenting a token (see {ref}`sec-security-crypto-stream-agent`) and validates the TLS certificate of the agent by checking its fingerprint. The fingerprint Anbox uses for the validation check is the SHA-256 hash of the complete ASN.1 DER content (certificate, signature algorithm and signature) of the TLS certificate that the agent uses.
 
 ## WebRTC
 

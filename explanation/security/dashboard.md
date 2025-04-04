@@ -1,4 +1,4 @@
-(exp-security-crypto-dashboard)=
+(exp-security-dashboard)=
 # Dashboard
 
 The Anbox Cloud Dashboard (dashboard) is using cryptographic technology for:
