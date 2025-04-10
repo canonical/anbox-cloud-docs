@@ -40,34 +40,42 @@ You will see all available metrics as output, including metrics for the individu
 ### Prerequisites
 To collect and access metrics with a charmed deployment of Anbox Cloud, you need to have the [Canonical Observability Stack (COS)](https://charmhub.io/topics/canonical-observability-stack) installed.
 
-The following steps describe a sample setup of COS, you should adjust it for your setup. For further information and recommendation, see the [official COS documentation](https://charmhub.io/topics/canonical-observability-stack/tutorials/install-microk8s).
+The following steps describe a sample setup of COS, you should adjust it for your setup. For further information and recommendation, see the [official COS documentation](https://charmhub.io/topics/canonical-observability-stack/tutorials/install-microk8s). Also have a look at the [documentation for Canonical K8s](https://documentation.ubuntu.com/canonical-kubernetes/latest/) to find more details on how to deploy the underlying k8s setup.
 
-First, deploy [MicroK8s](https://microk8s.io/) into a separate model on an existing Juju controller:
+First, deploy [Canonical K8s](https://ubuntu.com/kubernetes) into a separate model on an existing Juju controller:
 
     juju add-model k8s
-    juju deploy microk8s --base=ubuntu@22.04 --channel=edge --constraints="virt-type=virtual-machine cores=4 mem=6G root-disk=80G"
+    juju deploy k8s --channel 1.32/stable --base "ubuntu@24.04" \
+        --constraints="virt-type=virtual-machine cores=4 mem=6G root-disk=80G" \
+        --config load-balancer-enabled=true
 
-Once the deployment has completed, configure MicroK8s to host COS:
+Customize constraints as needed to match your underlying cloud and requirements.
 
-    juju ssh microk8s/0 -- sudo microk8s enable dns hostpath-storage
-    juju ssh microk8s/0 -- sudo apt install -y jq
-    IPADDR=$(juju ssh microk8s/0 -- ip -4 -j route get 2.2.2.2 | jq -r '.[] | .prefsrc')
-    juju ssh microk8s/0 -- sudo microk8s enable metallb:$IPADDR-$IPADDR
+You can check the status of the deployment by running
 
-Now that MicroK8s is ready, register it with the Juju controller:
+    juju status --watch 1s
 
-    juju ssh microk8s/0 -- sudo microk8s config | juju add-k8s devk8s --controller dev
+Once the charm unit is reported active we have to customize its load balancer setup
+
+    sudo apt install -y jq
+    addr="$(juju show-machine 0 --format json | jq -r '.machines[]."network-interfaces"[]."ip-addresses"[0]' | tail -n 1)"
+    juju config k8s load-balancer-cidrs="$addr/32"
+
+Now that k8s is ready, register it with the Juju controller:
+
+    juju run k8s/leader get-kubeconfig --format=json | jq -r '.[].results.kubeconfig' > kubeconfig
+    KUBECONFIG=./kubeconfig juju add-k8s k8s-cloud
 
 Finally, deploy COS:
 
-    juju add-model cos devk8s
+    juju add-model cos k8s-cloud
     curl -o offers.yaml -L https://raw.githubusercontent.com/canonical/cos-lite-bundle/refs/heads/main/overlays/offers-overlay.yaml
     curl -o storage.yaml -L https://raw.githubusercontent.com/canonical/cos-lite-bundle/refs/heads/main/overlays/storage-small-overlay.yaml
     juju deploy cos-lite --trust --overlay ./offers.yaml --overlay ./storage.yaml
 
 To have an Anbox Cloud specific dashboard and alert rules, deploy the relevant configuration charm:
 
-    juju deploy anbox-cloud-cos-configuration
+    juju deploy --channel=1.25/stable anbox-cloud-cos-configuration
     juju relate anbox-cloud-cos-configuration:grafana-dashboard grafana:grafana-dashboard
 
 The deployment will take a while and you can use `juju status` to monitor the current status.
@@ -79,7 +87,7 @@ After the deployment has finished, you will need the Grafana endpoint and passwo
 The next step is to integrate COS with Anbox Cloud by deploying the [Grafana Agent charm](https://charmhub.io/grafana-agent) to the model in which Anbox Cloud is deployed. In the following steps, we assume that the model is named `anbox-cloud`.
 
     juju switch anbox-cloud
-    juju depoy grafana-agent
+    juju deploy grafana-agent --base ubuntu@22.04
     juju relate ams:cos-agent grafana-agent:cos-agent
     juju relate anbox-stream-gateway:cos-agent grafana-agent:cos-agent
 
