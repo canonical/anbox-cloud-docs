@@ -13,7 +13,6 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 |-----------------------|-------------|-----------|--------------------|------------------------------|---------------------------------------|
 | AMS                   | 8444        | TCP       | no                 | yes                          | HTTPS API                             |
 | AMS                   | 20002       | TCP       | no                 | no                           | HTTPS Prometheus endpoint             |
-| AMS node controller   | 10000-11000 | UDP & TCP | yes                | no                           | Instance service ports                |
 | Anbox Cloud Dashboard | 5000        | TCP       | no                 | no                           | HTTPS website                         |
 | Anbox Stream Agent    | 443         | TCP       | no                 | yes                          | HTTPS API                             |
 | Anbox Stream Gateway  | 4000        | TCP       | no                 | yes                          | HTTPS API                             |
@@ -25,6 +24,7 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 | HAProxy               | 80          | TCP       | yes                | no                           | HTTP (redirects to HTTPS on port 443) |
 | HAProxy               | 443         | TCP       | yes                | no                           | Redirects to HTTPS website            |
 | LXD                   | 8443        | TCP       | no                 | yes                          | HTTPS API                             |
+| LXD                   | 10000-11000 | UDP & TCP | yes                | no                           | Instance service ports                |
 | NATS                  | 4222        | TCP       | no                 | yes                          | NATS API                              |
 
 ## Anbox Cloud Appliance

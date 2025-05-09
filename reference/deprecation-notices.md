@@ -39,3 +39,8 @@ Support for Ubuntu 20.04 (Focal Fossa) is deprecated in 1.22.0 and is planned to
 *Deprecated in 1.22.0* ; *Unsupported in 1.23.0*
 
 Support for the EmuGL renderer is deprecated in 1.22.0 and planned to be removed in Anbox Cloud 1.23.0. Starting with 1.22.0, VirGL will be the default renderer for NVIDIA GPUs with driver version 545 and later.
+
+## Node Controller charm
+*Deprecated in 1.26.0* ; *Removal in 1.28.0*
+
+Use of node controller charm to manage the port forwarding from an instance to expose a service is deprecated in 1.26.0. Instead, the Anbox Management Service (AMS) will use a LXD proxy device to manage the port forwarding.

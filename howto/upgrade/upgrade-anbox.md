@@ -192,6 +192,21 @@ Finally after all the upgrades finish and the nodes are healthy, run:
 
 where `<node_name>` refers to the LXD node name stored within AMS.
 
+As a subordinate charm deployed alongside the LXD charm, and following the [deprecation of the node controller charm](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#node-controller-charm) in the Anbox Cloud 1.26.0 release, the node controller will no longer manage port forwarding for service exposure on Anbox instances.
+
+For security reasons, any ports previously exposed by the node controller will be closed after upgrading it via:
+
+       juju refresh --channel=1.26/stable ams-node-controller
+
+If there is no need to expose services from Anbox instances, revokes the application's exposure to the public network:
+
+       juju unexpose ams-node-controller
+
+If you do need to allow external access to services running inside LXD nodes, run:
+
+       juju expose lxd
+       juju config lxd exposed_instance_ports=10000-11000
+
 
 ## Upgrade Debian packages
 

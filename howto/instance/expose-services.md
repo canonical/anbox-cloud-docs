@@ -42,6 +42,15 @@ If we want to expose the service on the public endpoint of a LXD node, we must s
 
     amc launch -s +tcp:22 bdp7kmahmss3p9i8huu0
 
+
+```{note}
+By default, for security reasons, the LXD charm restricts external access to each instance. To allow external access, you must explicitly expose the LXD charm and configure the allowed port range:
+
+    juju expose lxd
+    juju config lxd exposed_instance_ports=10000-11000
+
+```
+
 Notice the `+` in front of the port definition. This tells AMS to expose the service on the public endpoint of the LXD node on which the instance is scheduled. The instance list shows the public address of the node on which the instance is running, in the list of endpoints:
 
 ```bash
