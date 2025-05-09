@@ -181,10 +181,10 @@ To integrate COS with your Anbox Cloud Appliance, you can use the [prometheus-sc
    ```
 
    You would extract:
-   - scheme: `http`
-   - target: `10.1.0.10:9273` (hostname:port)
-   - metrics_path: `/1.0/metrics`
-   - basic_auth: `user:pass`
+   - `scheme`: `http`
+   - `target`: `10.1.0.10:9273` (`hostname:port`)
+   - `metrics_path`: `/1.0/metrics`
+   - `basic_auth`: `user:pass`
 
 3. Deploy the prometheus-scrape-target-k8s charm with the extracted values:
 

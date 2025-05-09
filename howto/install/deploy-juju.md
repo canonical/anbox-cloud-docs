@@ -13,7 +13,7 @@ There are differences between the charmed Anbox Cloud installation and the Anbox
 
 Before you start the installation, ensure that you have the required credentials and prerequisites:
 
-* An Ubuntu 22.04 LTS or Ubuntu noble 24.04 to run the commands (or another operating system that supports snaps - see the [Snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
+* A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)

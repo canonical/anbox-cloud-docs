@@ -20,7 +20,7 @@ To proceed with the tutorial, we need:
 ```{note}
 The *Ubuntu Pro (Infra-only)* token does not work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
 ```
-- A virtual or a bare metal machine running Ubuntu 22.04. We will be using a Multipass virtual machine.
+- A virtual or a bare metal machine running a {ref}`supported Ubuntu version <ref-requirements>`. We will be using a Multipass virtual machine.
 
 ## Prepare a Multipass instance
 

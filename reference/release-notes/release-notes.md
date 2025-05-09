@@ -9,21 +9,22 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| May 14, 2025 | [Anbox Cloud 1.26.0](1.26.0.md) |
 | April 16, 2025 | [Anbox Cloud 1.25.2](1.25.2.md) |
 | March 12, 2025 | [Anbox Cloud 1.25.1](1.25.1.md) |
 | February 12, 2025 | [Anbox Cloud 1.25.0](1.25.0.md) |
 
 ## Upcoming release roadmap
 
-The current minor release is **1.25.0** and the next one will be **1.26.0**.
+The current minor release is **1.26.0** and the next one will be **1.27.0**.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| May 14, 2025 | Anbox Cloud 1.26.0 | * Terraform plan replacing Anbox Cloud bundles<br/> * Support Ubuntu 24.04 for all charms<br/> * Initial work for secret management via Juju secrets<br/> * Enhancements to the Anbox Management Service<br/> * `anbox-modules` package will no longer be required for GPU and software rendering<br/> * Anbox Cloud images with Android 15 |
-| June 12, 2025 | Anbox Cloud 1.26.1 | * Android security updates for June 2025<br/> * Bug fixes |
-| July 16, 2025 | Anbox Cloud 1.26.2 | * Android security updates for July 2025<br/> * Bug fixes |
+| June 12, 2025 | Anbox Cloud 1.26.1 | * Android security updates<br/> * Bug fixes |
+| July 16, 2025 | Anbox Cloud 1.26.2 | * Android security updates<br/> * Bug fixes |
+| August 13, 2025 | Anbox Cloud 1.27.0 | * Improvements to the Terraform plan<br/> * User authentication and authorization<br/> * Secret management via Juju secretes<br/> * Android security updates<br/> * Bug fixes |
 
 ## Release and support policy
 
@@ -44,14 +45,16 @@ To ensure you receive latest security updates and bug fixes, you should upgrade 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
 
-### What's new in 1.25.x?
+### What's new in 1.26.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.25.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.26.x includes:
 
-* Integration with the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack)
+* Alpha release of a reference plan to deploy Anbox Cloud using Terraform
+* Ubuntu 24.04 (Noble Numbat) images
+* Android 15 images
 * Enhancements to the Anbox Management Service (AMS)
 * Enhancements to Anbox Cloud dashboard
-* Upgrade to LXD 5.21
+* Improvements to the user experience when launching an instance
 * Android security updates
 * Bug fixes
 

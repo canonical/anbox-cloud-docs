@@ -10,7 +10,7 @@ which is also in active development. There may be breaking changes in the future
 
 ## Prerequisites
 
-* An Ubuntu 22.04 LTS or another operating system that supports snaps. The [Snap documentation](https://snapcraft.io/docs/installing-snapd) provides further information about snaps and snapd.
+* A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.

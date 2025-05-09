@@ -134,6 +134,7 @@ HW
 HWE
 HVAC
 IAM
+IaC
 idmapped
 io
 IDR
@@ -152,7 +153,7 @@ Jira
 jitter
 JS
 JSON
-Juju
+juju
 Juju's
 JWKS
 JWT
@@ -173,8 +174,8 @@ LMA
 localhost
 logcat
 LTS
-LXC
-LXD
+lxc
+lxd
 MAAS
 macOS
 micromatch
