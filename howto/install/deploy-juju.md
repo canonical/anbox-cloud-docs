@@ -272,7 +272,7 @@ Check the output of the `juju status` command to see whether you need to reboot:
 ```sh
 ...
 Unit       Workload  Agent  Machine  Public address  Ports      Message
-lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required, Role: Database-leader
+lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required
 ...
 ```
 To reboot the machine hosting LXD, run the following command:
