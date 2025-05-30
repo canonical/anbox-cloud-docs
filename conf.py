@@ -301,6 +301,8 @@ exclude_patterns = [
     'README.md',
     'SECURITY.md',
     '.github/pull_request_template.md',
+    'venv/**',
+    '**/*.dist-info/**',
 ]
 
 # Adds custom CSS files, located under 'html_static_path'

@@ -8,9 +8,8 @@ When an application is no longer needed, it can be fully removed from Anbox Clou
 Once you're sure you want to remove the application, you can delete it via the dashboard or the CLI.
 
 ::::{tab-set}
-
 :::{tab-item} CLI
-:sync:cli
+:sync: cli
 
 Run:
 

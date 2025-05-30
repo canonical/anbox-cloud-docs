@@ -3,7 +3,7 @@
 
 Scaling up a LXD cluster can be achieved via Juju. Juju automates the deployment of the individual units and links them together.
 
-### Prerequisites
+## Prerequisites
 
 The following are important requirements when scaling up:
 - If the LXD leader unit is in the process of rebooting due to a kernel module or GPU driver update, do not scale up the LXD cluster until the leader has fully rebooted or Juju elects a new LXD unit as the leader.
@@ -14,6 +14,7 @@ For users running LXD clusters with the LXD snap tracking a channel which is dif
 
 Bypassing any of these requirements could lead to a broken LXD cluster.
 
+## Scaling up
 
 Adding additional LXD units or removing existing ones is not an instant operation. Adding a new node, for example, can take 5-10 minutes and must be planned in advance. The deployment of a single node will include the following steps:
 

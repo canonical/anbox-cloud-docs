@@ -3,7 +3,7 @@
 
 Scaling down a LXD cluster involves more checks than scaling up.
 
-### Prerequisites
+## Prerequisites
 
 The following are important requirements when scaling down:
  - The node you remove must not have any instances left.

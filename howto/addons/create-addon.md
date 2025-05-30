@@ -72,7 +72,7 @@ Alternatively, you can use an existing key and move the public key into the addo
 
 Your addon structure currently looks like this:
 
-```terminal
+```console
 ssh-addon
 ├── hooks
 │   └── pre-start
