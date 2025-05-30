@@ -5,6 +5,81 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.26.1
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) |
+|----------|--------------|--------------|-------------|
+| `anbox-cloud-dashboard` | `1.26/stable` |  |  |
+| `ams-node-controller` (Deprecated) | `1.26/stable` |  |  |
+| `coturn` | `1.26/stable` |  |  |
+| `ams` | `1.26/stable` |  |  |
+| `anbox-stream-gateway`  | `1.26/stable` |  |  |
+| `ams-lxd` | `1.26/stable` |   |  |
+| `anbox-stream-agent` | `1.26/stable` |  |  |
+| `aar` | `1.26/stable` |  |  |
+| `anbox-cloud-cos-configuration` | `1.26/stable` |  |  |
+| `nats` | `latest/stable` | 9 | 11 |
+
+#### Ubuntu 24.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) |
+|----------|--------------|--------------|-------------|
+| `anbox-cloud-dashboard` | `1.26/stable` |  |  |
+| `ams-node-controller` | `1.26/stable` |   |  |
+| `coturn` | `1.26/stable` |  |  |
+| `ams` | `1.26/stable` |  |  |
+| `anbox-stream-gateway`  | `1.26/stable` |  |  |
+| `ams-lxd` | `1.26/stable` |   |  |
+| `anbox-stream-agent` | `1.26/stable` |  |  |
+| `aar` | `1.26/stable` |  |  |
+| `anbox-cloud-cos-configuration` | `1.26/stable` |  |  |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.26/stable` |  |
+| `anbox-cloud-core` | `1.26/stable` |  |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.26/stable` |  |
+| `aar`    | `1.26/stable` |  |
+| `amc`    | `latest/stable` |  |
+| `ams-node-controller` | `1.26/stable` |  |
+| `anbox-cloud-dashboard` | `1.26/stable` |  |
+| `anbox-stream-agent` | `1.26/stable` |  |
+| `anbox-stream-gateway` | `1.26/stable` |  |
+| `anbox-connect` | `latest/stable` |  |
+| `anbox-cloud-appliance` | `1.26/stable` |  |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    |  |
+| `jammy:aaos15:arm64`    |  |
+| `jammy:android15:amd64` |  |
+| `jammy:android15:arm64` |  |
+| `jammy:aaos14:amd64`    |  |
+| `jammy:aaos14:arm64`    |  |
+| `jammy:android14:amd64` |  |
+| `jammy:android14:arm64` |  |
+| `jammy:aaos13:amd64`    |  |
+| `jammy:aaos13:arm64`    |  |
+| `jammy:android13:amd64` |  |
+| `jammy:android13:arm64` |  |
+| `jammy:android12:amd64` |  |
+| `jammy:android12:arm64` |  |
+
 ## 1.26.0
 
 ### Charms
