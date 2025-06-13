@@ -17,7 +17,7 @@ In a cluster setup, there are configuration items that can be customized for eac
 | Name<br/>*(Type, Default)* |  Description            |
 |--------------------------|-------------------------|
 {%- for key, node in nodes.items() %}
-| `{{ key }}`<br/>*({{ node.type }}, {{ node.default or "N/A"}})*{% if node.x_deprecated_since %}<br/>*(Deprecated in {{ node.x_deprecated_since }})*{% endif %}   | {{ node.description }} {% if node.x_docs_ref %} See {ref}`{{ node.x_docs_ref }}`. {% endif %}|
+| `{{ key }}`<br/>*({{ node.type }})*{% if node.x_deprecated_since %}<br/>*(Deprecated in {{ node.x_deprecated_since }})*{% endif %}   | {{ node.description }} {% if node.x_docs_ref %} See {ref}`{{ node.x_docs_ref }}`. {% endif %}|
 {%- endfor %}
 
 See {ref}`howto-configure-cluster-nodes` for instructions on how to set these configuration items.

@@ -56,7 +56,7 @@ When you launch an instance for an application, AMS reserves the number of GPU s
 ```{important}
 GPU slots are used to share GPUs among instances, but they do not impose limits on GPU usage. Therefore, increasing the number of required GPU slots for an application does not guarantee that more GPU resources are allocated to the corresponding application instances. For example, an intensive game that is configured to use one GPU slot might consume more GPU resources than a simple photo gallery app that is configured to use five GPU slots.
 
-The main purpose of GPU slots is to control the number of instances that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
+A [default number](https://documentation.ubuntu.com/anbox-cloud/reference/ams-configuration/#node-specific-configuration) of GPU slots and GPU encoder slots are configured depending on the GPU used but this value can be changed. The main purpose of GPU slots is to control the number of instances that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
 ```
 (sec-over-committing)=
 ## Over-committing resources
