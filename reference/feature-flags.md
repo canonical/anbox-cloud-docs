@@ -109,3 +109,17 @@ Enabling this will print IP addresses of WebRTC clients connecting to the Anbox 
 For debugging purposes, Anbox Cloud can log ICE candidates from the server and client inside the system log of an instance. This is disabled by default and needs to be explicitly turned on with the feature flag `webrtc.enable_ice_logging`.
 
 Once set, this feature flag will be considered by all newly launched instances.
+
+## `android.disable_adbd_access_protection**
+
+*since 1.27.0*
+
+```{caution}
+Enabling this will allow any Android user unlimited and uncontrolled access to the ADB daemon.
+```
+
+In Anbox instances, the ADB daemon listens on port 5555. Access is only allowed to a specific Anbox service which is responsible for bridging ADB connections to Android. All other connections will fail by default through iptables rules.
+
+If set, this feature flag will disable the iptables rules responsible for limiting access to the ADB daemon.
+
+Once set, this feature flag will be considered by all newly launched instances.
