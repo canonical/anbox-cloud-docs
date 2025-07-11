@@ -9,6 +9,7 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| July 16, 2025 | [Anbox Cloud 1.26.2](1.26.2.md) |
 | June 18, 2025 | [Anbox Cloud 1.26.1](1.26.1.md) |
 | May 14, 2025 | [Anbox Cloud 1.26.0](1.26.0.md) |
 
@@ -20,7 +21,6 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| July 16, 2025 | Anbox Cloud 1.26.2 | * Android security updates<br/> * Bug fixes |
 | August 13, 2025 | Anbox Cloud 1.27.0 | * Improvements to the Terraform plan<br/> * User authentication and authorization<br/> * Secret management via Juju secretes<br/> * Android security updates<br/> * Bug fixes |
 | September 17, 2025 | Anbox Cloud 1.27.1 | * Android security updates<br/> * Bug fixes |
 | October 15, 2025 | Anbox Cloud 1.27.2| * Android security updates<br/> * Bug fixes |
