@@ -1,5 +1,5 @@
 canonical-sphinx[full]==0.4.1
-canonical-sphinx-extensions==0.0.27
+canonical-sphinx-extensions==0.0.28
 sphinxcontrib-svg2pdfconverter[CairoSVG]
 sphinx-last-updated-by-git
 sphinx-sitemap
