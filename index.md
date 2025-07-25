@@ -1,12 +1,17 @@
 # Anbox Cloud documentation
 
-Anbox Cloud enables running Android apps on any cloud platform at scale. It uses system containers or virtual machines to run the nested Android containers and [Juju](https://juju.is/) for deployment in a cloud environment.
 
-Anbox Cloud supports x86 and ARM64 hardware, providing the same set of features for both architectures.
+Anbox Cloud runs Android in the cloud using lightweight LXD containers, offering VM-level isolation without the associated overhead. Built on Ubuntu, it provides a scalable platform to deploy, manage, and stream Android workloads across public or private infrastructure. Compared to other Android emulation solutions, Anbox Cloud can provide at least twice the density and can serve up to **100 Android instances per server**.
 
-By using system containers or virtual machines to emulate Android systems, Anbox Cloud achieves the isolation and security levels of a virtual machine without the associated overhead. Compared to other Android emulation solutions, Anbox Cloud can provide at least twice the density and can serve up to 100 Android instances per server.
+Due to its high scalability, Anbox Cloud enables users to deliver Android experiences with consistent performance and responsiveness.
 
-Due to its highly scalable nature and performance optimization, delivering device-agnostic mobile applications is very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
+**Automotive OEMs** can develop and test user-friendly infotainment systems, without having to rely on hardware availability and configuration. **Android application developers** can preview and interact with UI changes instantly, reducing turnaround time for application development. Enterprises offering remote access to Android instances with a customized set of applications, as a service. **Cloud gaming service providers** can deliver Android-based gaming experiences at scale with high performance and low latency.
+
+Anbox Cloud comes in two variants:
+
+The **appliance** is available as a **snap** package that combines all components of Anbox Cloud for deploying on a single, dedicated machine. It is suitable for small scale deployments and development environments. If you are evaluating how well Anbox Cloud fits your need, [try out the appliance](https://documentation.ubuntu.com/anbox-cloud/tutorial/installing-appliance/).
+
+The **charmed deployment** is a full deployment of all Anbox Cloud charms using Juju. It is more suitable for large scale environments and production deployments. If you have tried out the appliance and looking to expand more into a multi cluster deployment, [install Anbox Cloud charms using Juju](https://documentation.ubuntu.com/anbox-cloud/howto/install/).
 
 ## In this documentation
 
