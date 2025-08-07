@@ -187,8 +187,16 @@ sitemap_url_scheme = "{link}"
 
 # Template and asset locations
 
-html_static_path = [".sphinx/_static"]
-templates_path = [".sphinx/_templates"]
+html_static_path = [
+    ".sphinx/_static",
+    # This is required for Google Analytics to work till we unify
+    # all the static files into one well-known directory.
+    "_static",
+]
+templates_path = [
+    # This is required for Google Analytics to work.
+    "_templates",
+]
 
 # Exclude unnecessary URLs for better indexing
 
@@ -356,12 +364,16 @@ exclude_patterns = [
 
 # Adds custom CSS files, located under 'html_static_path'
 
-# html_css_files = []
+html_css_files = [
+    "css/cookie-banner.css"
+]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
 
-# html_js_files = []
+html_js_files = [
+    "js/bundle.js"
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file
