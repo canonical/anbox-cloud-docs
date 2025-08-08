@@ -1,4 +1,4 @@
-(howto-stop-instance)=
+(howto-restart-instance)=
 # Restart an instance
 
 A running instance can be restarted using the `amc restart` command:

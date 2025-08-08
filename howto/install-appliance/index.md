@@ -29,7 +29,6 @@ The Anbox Cloud Appliance is currently available on the following CI/CD platform
 ```{toctree}
 :hidden:
 
-Enable custom IdP <setup-oidc/index>
 install-on-aws
 install-on-azure
 install-on-google-cloud

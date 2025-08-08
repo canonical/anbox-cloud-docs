@@ -1,5 +1,5 @@
 (howto-configure-oidc)=
-# Configure OpenID Connect
+# Configure OIDC for the appliance
 
 It is possible to configure OpenID Connect only when the appliance is initialized with a preseed (see {ref}`ref-appliance-preseed-config`) after the installation.
 

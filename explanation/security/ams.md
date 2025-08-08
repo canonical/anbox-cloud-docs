@@ -23,9 +23,12 @@ Communication with LXD is using mutual TLS based authentication too. More detail
 
 ## Token based authentication
 
+AMS supports authenticating its clients through OpenID Connect compatible identity providers. AMS uses an access token issued by the identity provider to validate the incoming connection request. The token type supported by AMS is a JWT token for authenticating its clients. This token is validated using a JWKS key issued from the identity provider.
+
 Individual Anbox instances have access to a limited set of API endpoints exposed by the AMS server to submit status information during runtime. Access is authenticated by a scope-limited JWT based token. The token is valid for one year and is signed with a [HMAC](https://www.okta.com/identity-101/hmac/) using SHA-256 (HS256) and a 64 byte secret key. The [`jwt.New`](https://pkg.go.dev/github.com/golang-jwt/jwt/v5#Token) method is used internally to generate the JWT token.
 
 ## Packages used
 
 * [Go standard library](https://pkg.go.dev/std)
 * [`github.com/golang-jwt/jwt`](https://github.com/golang-jwt/jwt)
+* [OIDC](https://github.com/zitadel/oidc)
