@@ -5,6 +5,81 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.27.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) |
+|----------|--------------|--------------|-------------|
+| `anbox-cloud-dashboard` | `1.27/stable` | 1014 | 1015 |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1010 | 1011 |
+| `coturn` | `1.27/stable` | 987 | 988 |
+| `ams` | `1.27/stable` | 1179 | 1180 |
+| `anbox-stream-gateway` | `1.27/stable` | 1106 | 1107 |
+| `ams-lxd` | `1.27/stable` | 1066 | 1067 |
+| `anbox-stream-agent` | `1.27/stable` | 1099 | 1100 |
+| `aar` | `1.27/stable` | 1166 | 1167 |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 297 | 298 |
+| `nats` | `latest/stable` | 9 | 11 |
+
+#### Ubuntu 24.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) |
+|----------|--------------|--------------|-------------|
+| `anbox-cloud-dashboard` | `1.27/stable` | 1016 | 1017 |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1012 | 1013 |
+| `coturn` | `1.27/stable` | 989 | 990 |
+| `ams` | `1.27/stable` | 1181 | 1182 |
+| `anbox-stream-gateway` | `1.27/stable` | 1108 | 1109 |
+| `ams-lxd` | `1.27/stable` | 1068 | 1069 |
+| `anbox-stream-agent` | `1.27/stable` | 1101 | 1102 |
+| `aar` | `1.27/stable` | 1168 | 1169 |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 299 | 300 |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.27/stable` | 832 |
+| `anbox-cloud-core` | `1.27/stable` | 844 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.27/stable` | `1.27.0-32d5b207e` |
+| `aar`    | `1.27/stable` | `1.27.0-32d5b207e` |
+| `amc`    | `latest/stable` | `1.27.0-32d5b207e` |
+| `ams-node-controller` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `anbox-cloud-dashboard` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `anbox-stream-agent` | `1.27/stable` | `1.27.0-32d5b207e`  |
+| `anbox-stream-gateway` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `anbox-connect` | `latest/stable` | `1.27.0-32d5b207e` |
+| `anbox-cloud-appliance` | `1.27/stable` | `1.27.0-32d5b207e` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos15:arm64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android15:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android15:arm64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos14:amd64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos14:arm64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android14:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android14:arm64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos13:amd64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos13:arm64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android13:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android13:arm64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android12:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android12:arm64` | `1.27.0-20250729162123.git6575d89` |
+
 ## 1.26.2
 
 ### Charms

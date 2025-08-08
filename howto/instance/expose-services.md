@@ -16,7 +16,7 @@ For appliance deployments on public clouds, external access is controlled by the
 
 For AWS, [configure the associated security group](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-security-group-rules.html) to allow inbound traffic on ports 10000-11000.
 
-For GCP, [adjust the firewall rules](https://documentation.ubuntu.com/anbox-cloud/howto/install-appliance/install-on-google-cloud/#firewall-setup) to open the port range 10000-11000.
+For Google Cloud, [adjust the firewall rules](https://documentation.ubuntu.com/anbox-cloud/howto/install-appliance/install-on-google-cloud/#firewall-setup) to open the port range 10000-11000.
 
 For Azure, perform the following action depending on whether you are doing this for a fresh deployment or an existing deployment:
 - If you are using the [template](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/canonical/anbox) for a fresh deployment, set `exposeAnboxContainerServices` to `true`.

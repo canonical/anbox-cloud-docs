@@ -5,6 +5,7 @@ aar
 AArch
 ABI
 ABIs
+abis
 ACLs
 adb
 addon
@@ -95,7 +96,7 @@ DrArm
 drawio
 DRM
 easyrsa
-Easy-RSA
+EasyRSA
 EBS
 EFI
 EFS
@@ -116,7 +117,7 @@ frontend
 fullscreen
 gamepad
 gameplay
-GL
+gl
 Golang
 GPG
 GPUs
@@ -135,6 +136,7 @@ HWE
 HVAC
 IAM
 IaC
+IdP
 idmapped
 io
 IDR
@@ -188,6 +190,7 @@ NACK
 namespace
 natively
 NATs
+ndk
 netlink
 NewPipe
 NFS
@@ -209,6 +212,7 @@ observability
 oidc
 ODM
 OES
+OEMs
 OOB
 OOM
 OpenAPI
@@ -244,6 +248,7 @@ RenderThread
 resizable
 RESTful
 RFE
+RGB
 RGBA
 roadmap
 RootFS
@@ -378,3 +383,4 @@ MicroK
 Multipass
 uid
 USG
+YUV
