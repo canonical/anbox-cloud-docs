@@ -37,9 +37,6 @@ juju list-secrets
 ```
 
 Currently, all Juju secrets are managed by the charms themselves, not by the model. This means you can view them, but you cannot rotate or remove them.
-```{note}
-Juju secrets are disabled in Anbox Cloud deployments based on Juju 2.9, as the secret feature is only available starting from Juju 3.0.
-```
 
 ### Use Juju secrets across model
 

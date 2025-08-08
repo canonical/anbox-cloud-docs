@@ -11,7 +11,7 @@ The [AMS node controller charm](https://charmhub.io/ams-node-controller) is depr
 ## Juju 2.9
 *Deprecated in 1.25.1* ; *Unsupported in 1.27.0*
 
-Juju 2.9 is deprecated as of 1.25.1. Upgrade to Juju 3.0 instead. See [Juju upgrade documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-your-deployment/upgrade-your-deployment/) for detailed instructions.
+Juju 2.9 is deprecated as of 1.25.1. Upgrade to Juju 3.6 instead. See [Juju upgrade documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-your-deployment/upgrade-your-deployment/) for detailed instructions.
 
 For all new deployments, use the Juju snap from 3/stable or the latest/stable channel.
 

@@ -24,17 +24,6 @@ Read the release notes for your target version to learn about important changes 
 Check the [required Juju version](https://documentation.ubuntu.com/anbox-cloud/reference/requirements/#juju).
 If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-models/#upgrade-a-model) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
-```{note}
-
-The following instructions assume that you're using Juju >= 3.1. If you're using Juju 2.9, you have to map the following commands:
-
-| Juju 3.x | Juju 2.9 |
-|----------|----------|
-| `juju refresh` | `juju upgrade-charm` |
-| `juju exec` | `juju run` |
-
-```
-
 ### Upgrade OS
 
 Before you run the upgrade of the charms, you should make sure all packages on the machines that are part of the deployment are up-to-date. To do so, run the following commands on each machine:
