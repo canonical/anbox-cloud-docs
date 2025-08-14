@@ -1,13 +1,11 @@
 (howto-configure-aar)=
 # Configure
 
-The Anbox Application Registry (AAR) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and the Anbox Management Service (AMS).
+The {term}`Anbox Application Registry (AAR)` uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and the {term}`Anbox Management Service (AMS)`.
 
-AAR and AMS must exchange certificates to set up a trust relation. The recommended way to do this is with Juju. If you are using the Anbox Cloud Appliance, however, you must register the clients manually.
+## Configuring AAR for the charmed deployment
 
-## Register an instance using Juju (recommended)
-
-If you are running a charmed Anbox Cloud deployment, use Juju relations to register an instance with the AAR.
+Use Juju relations to register an instance with the AAR if your deployment uses Anbox Cloud charms.
 
 To register an instance as a client, use the following command:
 
@@ -35,101 +33,116 @@ The second command returns the name of the generated offer, for example, `my-con
     juju switch <model containing ams>
     juju relate ams <offer name>
 
-## Register clients manually
+## Configuring AAR for the Appliance
 
-If you are running the Anbox Cloud Appliance, you must register the clients manually.
+If you are using the appliance, you must register the clients manually. Adding clients manually requires access to the machines hosting AMS and the AAR.
 
-Adding clients manually requires access to the machines hosting AMS and the AAR.
+Install the snap:
 
-### Import AAR certificate
+    sudo snap install --channel= <channel> aar
 
-The first step is to import the AAR certificate into every AMS instance that should have access to the AAR. You can find the AAR certificate at `/var/snap/aar/common/certs/server.crt` on the machine hosting the AAR. Copy the certificate to the AMS machine and import it with the following command:
+Add the suitable snap version instead of `<channel>`. For example, it could be `1.27/stable`. For a list of all snap versions available, you can run `snap info aar`.
 
-    amc config trust add server.crt
+### Establish trust for AAR with AMS
 
-Use the following command to verify that the new certificate is listed in the AMS trust store:
+If you have AAR installed on the same machine as the appliance, make the AAR certificate available in the location `/var/snap/anbox-cloud-appliance/common/certs/` so that AMS has access to the AAR.
+
+If you have AAR and the appliance on separate machines, import the AAR certificate into the machine where appliance is installed.
+
+On the machine hosting the AAR, copy the certificate and import it to the appliance machine:
+
+    sudo cp /var/snap/aar/common/certs/server.crt /var/snap/anbox-cloud-appliance/common/certs/aar.crt
+
+Once the certificate is in place, add trust for the AAR:
+
+    sudo amc config trust add /var/snap/anbox-cloud-appliance/common/certs/aar.crt
+
+Verify that the new certificate is listed in the AMS trust store:
 
     amc config trust list
 
-### Configure AMS-AAR sync
+### Establish trust for AMS with AAR
 
-To configure AMS to sync applications and new application versions with the AAR, you must tell AMS about the registry endpoint first:
+If you have AAR installed on the same machine as the appliance, make the AMS registry-specific certificate available in the location `/var/snap/anbox-cloud-appliance/common/certs/` so that the AAR can use it to establish trust with AMS.
 
-    amc config set registry.url https://192.168.178.45:3000
+If you have AAR and the appliance on separate machines, import the AMS registry-specific certificate into the machine where AAR is installed.
 
-Next, you must tell the AAR client in AMS which certificate it should expect from the AAR to ensure trust between both. For this, we need the fingerprint of the certificate you imported into AMS before. You can find it with the following command:
+Copy the certificate to the machine where AAR is installed:
+
+    sudo cp /var/snap/anbox-cloud-appliance/common/ams/registry/client.crt /var/snap/aar/common/certs/aar.crt
+
+Now, you need to establish the trust for the AMS client with the AAR. Depending on the kind of access required, AMS can act in two different roles, when working with the AAR: a publisher or a client. See {ref}`exp-aar`.
+
+To add AMS as a trusted publisher, run:
+
+    sudo aar trust add client.crt --publisher
+
+To add AMS as a trusted client, run:
+
+    sudo aar trust add client.crt
+
+```{note}
+Due to Snap strict confinement and the AAR `sudo` requirement, the command requires the certificates to be located in the root user home directory `/root`. To bypass this requirement, use the following command:
+
+`cat client.crt | sudo aar trust add [--publisher]`
+```
+
+### Configure registry endpoint in AMS
+
+Configure the registry endpoint so that AMS can sync applications and new application versions with the AAR:
+
+    amc config set registry.url https://<aar-machine-ip-address>:3000
+
+For AMS to know which certificate to expect from the AAR, find and set the certificate fingerprint:
 
     amc config trust list
-
-Set the certificate fingerprint with the following command:
-
     amc config set registry.fingerprint <fingerprint>
 
-Finally, set the interval in which AMS will check for new applications to sync with the AAR. By default, the interval is set to one hour. You can set it to a smaller interval of five minutes with the following command:
+### Configure sync interval in AMS
+
+Set the interval in which AMS checks for new applications to sync with the AAR. By default, the interval is set to one hour. You can change this to a lesser interval.
+
+For example, to configure AMS to check for updates to be synced with the AAR, every five minutes, run:
 
     amc config set registry.update_interval 5m
 
-AMS will now check every five minutes if any updates need to be synced with the AAR.
+### Configure registry mode in AMS
 
-### Configure AMS to push
+There are three registry modes that you can configure: push, pull and manual.
 
 To configure AMS to push any local applications to the AAR, set the `registry.mode` configuration item to `push`:
 
     amc config set registry.mode push
 
-All existing and future applications and updates are now automatically pushed to the AAR.
+The AMS is now configured to push all existing applications and any future applications as well as updates to the AAR.
 
-Keep in mind that only published application versions are pushed to the AAR. If you don't publish a version, it will not be pushed.
+```{note}
+Only published application versions are pushed to the AAR.
+```
 
-### Configure AMS to pull
-
-To configure AMS to pull applications from the AAR, set the `registry.mode` configuration item to `pull`:
+To configure AMS to pull applications from the AAR, set `registry.mode` to `pull`:
 
     amc config set registry.mode pull
 
-All existing and future applications and updates are now automatically pulled from the AAR.
+All existing and future applications are automatically pulled from the AAR.
 
-### Configure the AAR
+If you prefer to sync the applications manually, set the registry mode to manual:
 
-The AAR provides a CLI called `aar`. You can manage client trust with the `aar trust` subcommand:
+    amc config set registry.mode manual
 
-```bash
-Manage trusted clients
+Then, push or pull application updates when needed:
 
-Usage:
-  aar trust [command]
+    amc registry push app_name
 
-Available Commands:
-  add         Register a client certificate
-  list        List currently trusted clients
-  remove      Remove a trusted certificate
-  revoke      Revoke a certificate
+or
 
-Flags:
-  -h, --help   help for trust
+    amc registry pull app_name
 
-Use "aar trust [command] --help" for more information about a command.
-```
-
-Every AMS instance has a registry-specific client certificate that is stored at `/var/snap/ams/common/registry/client.crt`. To manually register an AMS client, you'll need to copy this certificate to the machine hosting AAR and use the CLI to trust it.
-
-To add an AMS client as a trusted publisher, use the following command:
-
-    sudo aar trust add client.crt --publisher
-
-To add an AMS client as a trusted client, use the following command:
-
-    sudo aar trust add client.crt
-
-```{note}
-Due to Snap strict confinement and the AAR `sudo` requirement, the command requires the certificates to be located in the root user home directory `/root`. To work around this requirement, use the following command:
-
-`cat client.crt | sudo aar trust add [--publisher]`
-```
+### Reboot AAR snap
 
 Finally, reboot the AAR:
 
-    snap restart aar
+    sudo snap restart aar
 
 ## Related topics
 
