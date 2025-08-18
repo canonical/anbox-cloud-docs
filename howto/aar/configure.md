@@ -39,9 +39,9 @@ If you are using the appliance, you must register the clients manually. Adding c
 
 Install the snap:
 
-    sudo snap install --channel= <channel> aar
+    sudo snap install --channel=<channel> aar
 
-Add the suitable snap version instead of `<channel>`. For example, it could be `1.27/stable`. For a list of all snap versions available, you can run `snap info aar`.
+Replace <channel> with a suitable snap version. For example, it could be `1.27/stable`. For a list of all snap versions available, you can run `snap info aar`.
 
 ### Establish trust for AAR with AMS
 
