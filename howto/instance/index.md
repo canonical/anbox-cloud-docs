@@ -8,6 +8,7 @@ The following guides in this section describe how to work with instances in Anbo
 
 create-instance
 list-instances
+configure-instance
 access-instance
 start-instance
 wait-for-instance
