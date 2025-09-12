@@ -9,10 +9,8 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| September 17, 2025 | [Anbox Cloud 1.27.1](1.27.1.md) |
 | August 13, 2025 | [Anbox Cloud 1.27.0](1.27.0.md) |
-| July 16, 2025 | [Anbox Cloud 1.26.2](1.26.2.md) |
-| June 18, 2025 | [Anbox Cloud 1.26.1](1.26.1.md) |
-| May 14, 2025 | [Anbox Cloud 1.26.0](1.26.0.md) |
 
 ## Upcoming release roadmap
 
@@ -22,9 +20,9 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| September 17, 2025 | Anbox Cloud 1.27.1 | * Android security updates<br/> * Bug fixes |
 | October 15, 2025 | Anbox Cloud 1.27.2 | * Android security updates<br/> * Bug fixes |
 | November 12, 2025 | Anbox Cloud 1.28.0 | * Telephony support for all Android versions<br/> * Ability to protect instances from destructive operations<br/> * Extended support for authentication and authorization<br/> * Enhancements to management of session shares<br/> * Conversion from YUV to RGB in Android containers using GPUs<br/> * WebRTC diagnostics to troubleshoot connection issues<br/> * Remove support for node controller charm<br/> * Android security updates<br/> * Bug fixes |
+| December 10, 2025 | Anbox Cloud 1.28.1 | * Android security updates<br/> * Bug fixes |
 
 ## Release and support policy
 
@@ -57,6 +55,9 @@ Along with bug fixes and general improvements, Anbox Cloud 1.27.x includes:
 
 |  Release date  |  Release notes  |
 |----|----|
+| July 16, 2025 | [Anbox Cloud 1.26.2](1.26.2.md) |
+| June 18, 2025 | [Anbox Cloud 1.26.1](1.26.1.md) |
+| May 14, 2025 | [Anbox Cloud 1.26.0](1.26.0.md) |
 | April 16, 2025 | [Anbox Cloud 1.25.2](1.25.2.md) |
 | March 12, 2025 | [Anbox Cloud 1.25.1](1.25.1.md) |
 | February 12, 2025 | [Anbox Cloud 1.25.0](1.25.0.md) |

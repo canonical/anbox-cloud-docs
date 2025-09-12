@@ -33,7 +33,7 @@ Locate the `$HOME/snap/amc/current/client/client.crt` certificate on the client 
 
 Log on to the machine that runs AMS and configure AMS to trust the new client by adding the client certificate:
 
-   amc config trust add client.crt
+    amc config trust add client.crt
 
 
 ### Certificate Authority (CA)
