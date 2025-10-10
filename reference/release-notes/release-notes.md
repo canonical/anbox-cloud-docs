@@ -9,6 +9,7 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| October 15, 2025 | [Anbox Cloud 1.27.2](1.27.2.md) |
 | September 17, 2025 | [Anbox Cloud 1.27.1](1.27.1.md) |
 | August 13, 2025 | [Anbox Cloud 1.27.0](1.27.0.md) |
 
@@ -20,7 +21,6 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| October 15, 2025 | Anbox Cloud 1.27.2 | * Android security updates<br/> * Bug fixes |
 | November 12, 2025 | Anbox Cloud 1.28.0 | * Telephony support for all Android versions<br/> * Ability to protect instances from destructive operations<br/> * Extended support for authentication and authorization<br/> * Enhancements to management of session shares<br/> * Conversion from YUV to RGB in Android containers using GPUs<br/> * WebRTC diagnostics to troubleshoot connection issues<br/> * Remove support for node controller charm<br/> * Android security updates<br/> * Bug fixes |
 | December 10, 2025 | Anbox Cloud 1.28.1 | * Android security updates<br/> * Bug fixes |
 
@@ -48,7 +48,7 @@ If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/s
 Along with bug fixes and general improvements, Anbox Cloud 1.27.x includes:
 
 * CLI client authentication using OIDC compatible identity providers (alpha release)
-* Enhancements to the dashboard to show Notifications and asynchronous operations
+* Enhancements to the dashboard to show notifications and asynchronous operations
 * Bug fixes
 
 <details><summary>Click to view earlier releases' notes</summary>

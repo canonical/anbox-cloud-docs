@@ -5,6 +5,86 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.27.2
+
+### Charms
+
+#### Ubuntu 22.04
+
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|----------|--------------|--------------|-------------|---------|
+| `anbox-cloud-dashboard` | `1.27/stable` | 1058 | 1059 | `1.27.2-fc85e76` |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1054 | 1055 | `1.27.2-fc85e76` |
+| `coturn` | `1.27/stable` | 1031 | 1032 | `1.27.2-fc85e76` |
+| `ams` | `1.27/stable` | 1223 | 1224 | `1.27.2-fc85e76` |
+| `anbox-stream-gateway` | `1.27/stable` | 1150 | 1151 | `1.27.2-fc85e76` |
+| `ams-lxd` | `1.27/stable` | 1110 | 1111 | `1.27.2-fc85e76` |
+| `anbox-stream-agent` | `1.27/stable` | 1143 | 1144 | `1.27.2-fc85e76` |
+| `aar` | `1.27/stable` | 1210 | 1211 | `1.27.2-fc85e76` |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 341 | 342 | `1.27.2-fc85e76` |
+| `nats` | `latest/stable` | 9 | 11 | `1.27.2-fc85e76` |
+
+
+#### Ubuntu 24.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|----------|--------------|--------------|-------------|---------|
+| `anbox-cloud-dashboard` | `1.27/stable` | 1060 | 1061 | `1.27.2-fc85e76` |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1056 | 1057 | `1.27.2-fc85e76` |
+| `coturn` | `1.27/stable` | 1033 | 1034 | `1.27.2-fc85e76` |
+| `ams` | `1.27/stable` | 1225 | 1226 | `1.27.2-fc85e76` |
+| `anbox-stream-gateway` | `1.27/stable` | 1152 | 1153 | `1.27.2-fc85e76` |
+| `ams-lxd` | `1.27/stable` | 1112 | 1113 | `1.27.2-fc85e76` |
+| `anbox-stream-agent` | `1.27/stable` | 1145 | 1146 | `1.27.2-fc85e76` |
+| `aar` | `1.27/stable` | 1212 | 1213 | `1.27.2-fc85e76` |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 299 | 300 | `1.27.2-fc85e76` |
+
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.27/stable` | 857 |
+| `anbox-cloud-core` | `1.27/stable` | 869 |
+
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| `ams` | 1.27/stable | 2467 | 2468 | `1.27.2-e373298aa` |
+| `ams-node-controller` | 1.27/stable | 2046 | 2047 | `1.27.2-e373298aa` |
+| `amc` | latest/stable | 2265 | 2266 | `1.27.2-e373298aa` |
+| `aar` | 1.27/stable | 2419 | 2420 | `1.27.2-e373298aa` |
+| `anbox-stream-agent` | 1.27/stable | 2689 | 2690 | `1.27.2-e373298aa` |
+| `anbox-stream-gateway` | 1.27/stable | 2655 | 2656 | `1.27.2-e373298aa` |
+| `anbox-cloud-appliance` | 1.27/stable | 2330 | 2331 | `1.27.2-e373298aa` |
+| `anbox-cloud-dashboard` | 1.27/stable | 4158 | 4159 | `1.27.2-e373298aa` |
+| `anbox-connect` | latest/stable | 1484 | 1485 | `1.27.2-e373298aa` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos15:arm64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android15:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android15:arm64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos14:amd64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos14:arm64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android14:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android14:arm64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos13:amd64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos13:arm64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android13:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android13:arm64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android12:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android12:arm64` | `1.27.2-20251008173258.gite5e138f` |
+
+
 ## 1.27.1
 
 No new versions of charms are released with 1.27.1.
