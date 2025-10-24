@@ -27,6 +27,12 @@ Understand the different objects used in the product stack and how to use them t
 * {ref}`exp-platforms`
 * {ref}`exp-clustering`
 
+## Authentication and authorization
+
+Learn concepts of identities, groups and permissions in Anbox Cloud.
+
+* {ref}`exp-auth`
+
 ## Deploying Anbox Cloud
 
 Understand deployment configurations to plan your deployment.
@@ -58,6 +64,7 @@ ams
 AAOS <aaos>
 applications
 application-streaming
+auth
 capacity-planning
 clustering
 security/index

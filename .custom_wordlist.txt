@@ -216,6 +216,7 @@ OEMs
 OOB
 OOM
 OpenAPI
+OpenFGA
 OpenGL
 OpenID
 OpenSSL
