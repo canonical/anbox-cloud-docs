@@ -7,6 +7,7 @@ The following guides in this section help you to manage and work with your Anbox
 :titlesonly:
 
 control-ams-remotely
+auth
 harden
 resize-storage
 benchmarks

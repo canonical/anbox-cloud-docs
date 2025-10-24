@@ -14,7 +14,6 @@ You need the AMC snap to connect to AMS:
 
     snap install amc
 
-
 ## Use trusted client certificates
 
 If you have installed AMC on a different machine than the AMS, controlling AMS remotely requires trusted security certificates, as a default. To establish trusted security certificates, you can generate self-signed certificates or use certificates signed by a Certificate Authority. See {ref}`sec-security-cert-remote-clients` for more information.
@@ -33,8 +32,7 @@ Locate the `$HOME/snap/amc/current/client/client.crt` certificate on the client 
 
 Log on to the machine that runs AMS and configure AMS to trust the new client by adding the client certificate:
 
-    amc config trust add client.crt
-
+    amc auth identity create tls/test-user client.crt
 
 ### Certificate Authority (CA)
 
@@ -42,9 +40,9 @@ There are different ways to generate a CA certificate and key. For example, use 
 
 Copy the generated CA certificate to the machine that runs AMS.
 
-Log on to the machine that runs AMS and configure AMS to trust the CA certificate and all certificates that are based on it
+Log on to the machine that runs AMS and configure AMS to trust the CA certificate and all certificates that are based on it:
 
-    amc config trust add ca.crt
+    amc auth identity create tls/test-user ca.crt
 
 Using the same method that you used to generate the CA certificate, generate a client key and certificate for each client.
 
