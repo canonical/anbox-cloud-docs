@@ -72,6 +72,7 @@ HTTP code must be one of 400 or 500.
    * {ref}`sec-anbox-https-api-vhal`
       * {ref}`sec-anbox-https-api-vhalconfig`
    * {ref}`sec-anbox-https-api-metrics`
+   * {ref}`sec-anbox-https-api-telephony`
 
 ## API details
 
@@ -772,4 +773,43 @@ anbox_gralloc_buffer_allocations_total 121
 # TYPE anbox_vulkan_buffer_memory_size_total counter
 anbox_vulkan_buffer_memory_size_total 78370816
 ...
+```
+
+(sec-anbox-https-api-telephony)=
+### `/1.0/telephony`
+#### GET
+
+* Description: Get telephony status
+ * Operation: sync
+ * Return: Current telephony status
+
+Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/telephony  | jq .`:
+
+```bash
+{
+ "metadata": {
+   "status": "inactive"
+ },
+ "status": "Success",
+ "status_code": 200,
+ "type": "sync"
+}
+```
+
+### `/1.0/telephony/sms`
+
+#### POST
+
+ * Description: Simulate an incoming SMS message Android will process.
+ * Operation: sync
+ * Return: standard return value or standard error
+
+Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/telephony/sms --data '{"number": "+1234567", "message": "Hello world!"}' | jq .`:
+
+```bash
+{
+    "status": "Success",
+    "status_code": 200,
+    "type": "sync"
+}
 ```

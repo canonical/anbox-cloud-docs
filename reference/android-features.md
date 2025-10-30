@@ -16,7 +16,7 @@ Anbox Cloud implements support for various Android features. The following table
 | WiFi               |  ✓  | Only simulated WiFi is provided to the Android instance. |
 | [Multi-Display](https://source.android.com/devices/tech/display/multi_display) | | |
 | [Data use](https://source.android.com/devices/tech/datausage)| | |
-| Telephony / mobile connectivity | | |
+| Telephony / mobile connectivity | ✓ | |
 | Hardware-accelerated video decoding (H.264) | ✓ | |
 | Hardware-accelerated video encoding (H.264) | | |
 | [`fs-verity`](https://www.kernel.org/doc/html/latest/filesystems/fsverity.html) | | |

@@ -11,4 +11,5 @@ debug-graphics-renderdoc
 integrate-hidl
 custom-vhal
 set-automotive-properties
+simulate-incoming-sms
 ```
