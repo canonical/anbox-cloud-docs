@@ -9,7 +9,7 @@ To view the current set configuration options for an instance, you can run
 
     amc show <instance id or name>
 
-## Set confguration option
+## Set configuration option
 
 Use the `amc set` command to configure instance level options:
 

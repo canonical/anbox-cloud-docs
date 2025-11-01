@@ -24,6 +24,19 @@ If you still need help, use any of the following utilities to collect troublesho
 
 The following utilities could be applicable for the charmed Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see {ref}`sec-variants`.
 
+(sec-bug-report)=
+## Bug report diagnostic facility
+
+*Applies to: Anbox Cloud, Anbox Cloud Appliance*
+
+Since 1.28.0, you can download a bug report bundle that contains files necessary to troubleshoot issues you may be facing.
+
+This diagnostic facility is available in the Anbox Cloud dashboard from the streaming and the instance details pages. Depending on where you download the bug report from, the files in the download bundle will vary.
+
+When you download the bug report from the *Stream page > Actions > Bug Report* menu, the report gives you logs from the Anbox and Android instances, metrics data from Anbox, the event logs from the WebRTC connection, WebRTC statistics, metadata from the dashboard. These help you diagnose any issues with the stream or your connection.
+
+When you download from the *Instance details page > Bug Report*, the report gives you all the files except the ones related to the WebRTC statistics and connection event logs. This is the bug report you need to download when your instance is in an error state.
+
 ## Juju crashdump
 
 *Applies to: Anbox Cloud*

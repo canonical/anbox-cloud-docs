@@ -186,6 +186,7 @@ Minetest
 monospaced
 mutex
 myst
+mTLS
 NACK
 namespace
 natively
@@ -225,6 +226,7 @@ ory
 PCI
 Perfetto
 PKI
+PKCE
 playout
 Plex
 PLI
@@ -254,6 +256,7 @@ RGBA
 roadmap
 RootFS
 RSA
+RUSTSEC
 rsa
 RTC
 RTP
@@ -265,6 +268,7 @@ schedulable
 scrcpy
 SDK
 SDKs
+SIGSEGV
 SEGV
 SELinux
 sendfile
@@ -278,6 +282,7 @@ signaling
 simplestreams
 SkiaPipeline
 SLI
+SMS
 Snapcraft
 snapd
 spammy
