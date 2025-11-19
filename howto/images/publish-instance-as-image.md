@@ -13,6 +13,11 @@ Consider these best practices before publishing instances as images:
 
 To publish an instance as an image, follow these steps:
 
+::::{tab-set}
+
+:::{tab-item} CLI
+:sync: cli
+
 ### Create and prepare an instance
 
 First, create a new instance from an existing image:
@@ -77,6 +82,21 @@ List Android devices within Anbox instance with adb:
     List of devices attached
     emulator-5558   device
 
+:::
+
+:::{tab-item} Dashboard
+:sync: dashboard
+
+Navigate to the *Instances* page. Create and start an instance from an existing image.
+Alternatively, you can also navigate to the *Images* page, find the image you want to use as a base, and create an instance ( ![create instance icon](/images/icons/create-instance-icon.png) ).
+
+Wait until the instance starts *running*, then click on the instance name. In *Instance details > *Terminal*, make any modifications you want to include in the new image (e.g. install a package, create a file).
+
+When you're done, publish ( ![publish instance icon](/images/icons/publish-instance-icon.png) ) the instance from the *Instances* page. When publishing, you will be able to customize the image name.
+
+To verify if your publish was successful, check if it appears in the list of images. You should also be able to create and start an instance from the published image.
+
+Once the instance is running, visit the *Terminal* tab from its *Instance details* page to confirm that your modifications are present.
 
 ## Related topics
 
