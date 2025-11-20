@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
     - name: Check out repository
-      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
     - name: Set up Anbox Cloud
       uses: canonical/anbox-cloud-github-action@ef0690184b1c8fd11e3385669726297bc2e3d368
       with:
@@ -31,7 +31,7 @@ jobs:
           --unix-socket /var/snap/anbox-cloud-appliance/common/gateway/internal.sock \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/gateway-api.yaml
     - name: Create pull request
-      uses: canonical/create-pull-request@4b2faf2aee8fe03d96fcc6e098ce54dbbce30fb2
+      uses: canonical/create-pull-request@be0b77dc59b9c91bd5c593df81306a52700aa508
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
