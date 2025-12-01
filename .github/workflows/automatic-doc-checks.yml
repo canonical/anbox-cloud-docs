@@ -1,16 +1,13 @@
 #
-name: Automatic doc checks
+name: Automated documentation checks
 
 on:
   push:
     branches: [ main ]
   pull_request:
-    paths:
-      - '/**'   # Removed docs as everything is in the root directory
 
   workflow_dispatch:
     # Manual trigger
-
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -20,5 +17,5 @@ jobs:
   documentation-checks:
     uses: canonical/documentation-workflows/.github/workflows/documentation-checks.yaml@6f9c05eae99ca9fff05250810bba2a71a380ebd1
     with:
-      working-directory: "/"
+      working-directory: "."
       fetch-depth: 0
