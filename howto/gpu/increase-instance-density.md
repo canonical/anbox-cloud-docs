@@ -1,7 +1,7 @@
 (howto-increase-instance-density)=
 # Increase instance density
 
-In an Anbox Cloud deployment with NVIDIA GPUs, launching multiple GPU-based Anbox instances or performing {ref}`howto-run-benchmarks` may reveal a limit on the number of running instances. Although [nvidia-smi](https://developer.nvidia.com/system-management-interface) shows low GPU memory usage and utilization, launching additional instances can result in the following errors when [viewing instance logs](/howto/troubleshoot/view-logs.md):
+In an Anbox Cloud deployment with NVIDIA GPUs, launching multiple GPU-based Anbox instances or performing {ref}`howto-run-benchmarks` may reveal a limit on the number of running instances. Although [NVIDIA-SMI](https://developer.nvidia.com/system-management-interface) shows low GPU memory usage and utilization, launching additional instances can result in the following errors when [viewing instance logs](/howto/troubleshoot/view-logs.md):
 
 
     anbox-starter[698]: I0826 00:57:18.131316 787 vk_context.cpp:267] Using Vulkan device: NVIDIA T4G (driver 570.632.64 api 1.4.303)
@@ -24,12 +24,12 @@ The optimal value for `RMIncreaseRsvdMemorySizeMB` depends on the GPU model and 
 
 1. Unload NVIDIA Kernel Modules
 
-    sudo rmmod nvidia_drm nvidia_modeset nvidia_uvm nvidia
+        sudo rmmod nvidia_drm nvidia_modeset nvidia_uvm nvidia
 
 1. Update NVIDIA kernel module parameter
 
-    sudo sed -i 's/RMIncreaseRsvdMemorySizeMB=256/RMIncreaseRsvdMemorySizeMB=1024/' /etc/modprobe.d/anbox-nvidia.conf
+        sudo sed -i 's/RMIncreaseRsvdMemorySizeMB=256/RMIncreaseRsvdMemorySizeMB=1024/' /etc/modprobe.d/anbox-nvidia.conf
 
 1. Reload NVIDIA Modules
 
-    sudo modprobe nvidia_drm nvidia_modeset nvidia_uvm nvidia
+        sudo modprobe nvidia_drm nvidia_modeset nvidia_uvm nvidia
