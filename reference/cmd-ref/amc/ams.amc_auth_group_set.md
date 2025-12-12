@@ -7,7 +7,7 @@ Update fields for an authorization group
 Update fields for an authorization group.
 
 Update specific fields for an existing auth group.
-The following fields can be updated: image, instance-type, addons, tags, inhibit-auto-updates, resources.cpus, resources.memory, resources.disk-size, resources.gpu-slots, resources.vpu-slots, boot-activity, features, hooks.timeout, bootstrap.keep, node-selector, watchdog.disabled, watchdog.allowed-packages
+The following fields can be updated: description
 
 ```
 ams.amc auth group set <name> <field> <value> [flags]

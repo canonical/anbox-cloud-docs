@@ -9,10 +9,8 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| December 10, 2025 | [Anbox Cloud 1.28.1](1.28.1.md) |
 | November 12, 2025 | [Anbox Cloud 1.28.0](1.28.0.md) |
-| October 15, 2025 | [Anbox Cloud 1.27.2](1.27.2.md) |
-| September 17, 2025 | [Anbox Cloud 1.27.1](1.27.1.md) |
-| August 13, 2025 | [Anbox Cloud 1.27.0](1.27.0.md) |
 
 ## Upcoming release roadmap
 
@@ -22,8 +20,10 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| December 10, 2025 | Anbox Cloud 1.28.1 | * Android security updates<br/> * Bug fixes |
 | January 21, 2026 | Anbox Cloud 1.28.2 | * Android security updated<br/> * Bug fixes |
+| February 18, 2026 | Anbox Cloud 1.29.0 | * Support new etcd charm with AMS<br/> * Enhancements to authentication and authorization<br/> * Android security updated<br/> * Bug fixes |
+| March 18, 2026 | Anbox Cloud 1.29.1 | * Android security updated<br/> * Bug fixes |
+| April 15, 2026 | Anbox Cloud 1.29.2 | * Android security updated<br/> * Bug fixes |
 
 ## Release and support policy
 
@@ -60,6 +60,9 @@ Along with bug fixes and general improvements, Anbox Cloud 1.28.x includes:
 
 |  Release date  |  Release notes  |
 |----|----|
+| October 15, 2025 | [Anbox Cloud 1.27.2](1.27.2.md) |
+| September 17, 2025 | [Anbox Cloud 1.27.1](1.27.1.md) |
+| August 13, 2025 | [Anbox Cloud 1.27.0](1.27.0.md) |
 | July 16, 2025 | [Anbox Cloud 1.26.2](1.26.2.md) |
 | June 18, 2025 | [Anbox Cloud 1.26.1](1.26.1.md) |
 | May 14, 2025 | [Anbox Cloud 1.26.0](1.26.0.md) |

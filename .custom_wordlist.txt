@@ -7,6 +7,7 @@ ABI
 ABIs
 abis
 ACLs
+accelerometer
 adb
 addon
 addons
@@ -51,6 +52,7 @@ bzip
 CDN
 Center
 Centered
+ceph
 CFS
 CIS
 cgroup
@@ -204,7 +206,7 @@ NUMA
 numpad
 nvd
 NvEnc
-NVIDIA
+nvidia
 NVMe
 OAuth
 OBB
@@ -282,6 +284,7 @@ signaling
 simplestreams
 SkiaPipeline
 SLI
+smi
 SMS
 Snapcraft
 snapd
@@ -375,6 +378,7 @@ FidelityFX
 ubuntu
 uSampler
 vTextureCoord
+VRAM
 vec
 uResolution
 presigned

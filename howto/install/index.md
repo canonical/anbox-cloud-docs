@@ -15,5 +15,6 @@ deploy-bare-metal
 deploy-juju
 deploy-terraform
 enable-high-availability
+use-ceph-storage
 validate-deployment
 ```

@@ -57,7 +57,7 @@ $ amc launch foo --service tcp:8080 --service tcp,udp:9000-9100 --addons bar --r
   -i, --instance-type string      Instance type to use for the instance when creating a raw instance
   -m, --memory string             Memory to be assigned for the instance (for example, 3GB). If not specified, the memory specified by the instance type will be used.
       --metrics-server string     Metrics server to which the instance sends its data
-      --name string               Name of the instance. Must be unique
+      --name string               Name of the instance. Must be unique, 3–63 characters, alphanumeric or hyphens, cannot start or end with a hyphen.
       --no-wait                   Don't wait for the instance to start before returning (default: disabled)
   -n, --node string               LXD node to use for creating the instance
   -p, --platform string           Anbox platform to use

@@ -138,9 +138,13 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 (sec-lxd-storage)=
 ### LXD storage
 
-For LXD storage, Anbox Cloud uses a ZFS storage pool, which it creates automatically. This storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/en/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
+For LXD storage, Anbox Cloud can automatically create and use a ZFS storage pool that's local to the machine or can use storage provided by [Ceph](https://ceph.io).
+
+A local storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/en/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
 
 While a loop file is easy to set up, it is much slower than a block device. Therefore, we recommend using a block device that is dedicated to LXD storage only.
+
+If you want to provide storage through [Ceph](https://ceph.io), you need to deploy the Ceph cluster separately. See {ref}`howto-use-ceph-storage` for more details.
 
 If you are doing a full deployment, configure the storage before starting the deployment. See {ref}`customize storage when deploying with Juju <sec-customize-storage-juju>` or {ref}`customize storage when deploying on bare metal <sec-customize-storage-bare-metal>` for instructions. If you skip the configuration, Anbox Cloud sets up a loop-file with an automatically calculated size, which is not recommended.
 

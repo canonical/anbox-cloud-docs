@@ -24,12 +24,12 @@ The optimal value for `RMIncreaseRsvdMemorySizeMB` depends on the GPU model and 
 
 1. Unload NVIDIA Kernel Modules
 
-    sudo rmmod nvidia_drm nvidia_modeset nvidia_uvm nvidia
+        sudo rmmod nvidia_drm nvidia_modeset nvidia_uvm nvidia
 
 1. Update NVIDIA kernel module parameter
 
-    sudo sed -i 's/RMIncreaseRsvdMemorySizeMB=256/RMIncreaseRsvdMemorySizeMB=1024/' /etc/modprobe.d/anbox-nvidia.conf
+        sudo sed -i 's/RMIncreaseRsvdMemorySizeMB=256/RMIncreaseRsvdMemorySizeMB=1024/' /etc/modprobe.d/anbox-nvidia.conf
 
 1. Reload NVIDIA Modules
 
-    sudo modprobe nvidia_drm nvidia_modeset nvidia_uvm nvidia
+        sudo modprobe nvidia_drm nvidia_modeset nvidia_uvm nvidia
