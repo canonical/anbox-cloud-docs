@@ -15,7 +15,7 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 ## Upcoming release roadmap
 
-The current, supported minor release is **1.28.0** and the next one will be **1.29.0** in February 2026.
+The current, supported minor release is **1.28.0** and the next one will be **1.29.0** expected in February 2026.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
