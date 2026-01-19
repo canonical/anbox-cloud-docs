@@ -42,7 +42,7 @@ jobs:
         sudo anbox-cloud-appliance generate documentation -f markdown -d "${SNAP_DOCS_DIR}"
         cp -r "${SNAP_DOCS_DIR}"/* "${APPLIANCE_COMMAND_REFERENCE_DIR}"
     - name: Create pull request
-      uses: canonical/create-pull-request@7aea8cba30d3bba9134162ae985c84045fdbbc93
+      uses: canonical/create-pull-request@0ee9b1fc55a3c92138317cdc21744ce23b32dec8
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update command reference documentation from ${{ steps.snap_version.outputs.value }}"
