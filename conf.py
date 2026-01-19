@@ -71,7 +71,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://documentation.ubuntu.com/anbox-cloud/"
+ogp_site_url = "https://canonical.com/anbox-cloud/docs/"
 
 
 # Preview name of the documentation website
@@ -170,7 +170,7 @@ html_context = {
 # If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-slug = 'anbox-cloud'
+slug = 'anbox-cloud/docs'
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
@@ -377,7 +377,8 @@ html_css_files = [
 # Adds custom JavaScript files, located under 'html_static_path'
 
 html_js_files = [
-    "js/cookie-banner-bundle.js"
+    "js/cookie-banner-bundle.js",
+    "js/url_overwrite.js",
 ]
 
 
