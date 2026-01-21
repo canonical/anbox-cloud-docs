@@ -61,20 +61,20 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:aaos15:amd64`    | `1.28.1-20251204213551.gita2743df` |
-| `jammy:aaos15:arm64`    | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android15:amd64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android15:arm64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:aaos14:amd64`    | `1.28.1-20251204213551.gita2743df` |
-| `jammy:aaos14:arm64`    | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android14:amd64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android14:arm64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:aaos13:amd64`    | `1.28.1-20251204213551.gita2743df` |
-| `jammy:aaos13:arm64`    | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android13:amd64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android13:arm64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android12:amd64` | `1.28.1-20251204213551.gita2743df` |
-| `jammy:android12:arm64` | `1.28.1-20251204213551.gita2743df` |
+| `jammy:aaos15:amd64`    | `1.28.2-20260115190519.git568cb98` |
+| `jammy:aaos15:arm64`    | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android15:amd64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android15:arm64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:aaos14:amd64`    | `1.28.2-20260115190519.git568cb98` |
+| `jammy:aaos14:arm64`    | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android14:amd64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android14:arm64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:aaos13:amd64`    | `1.28.2-20260115190519.git568cb98` |
+| `jammy:aaos13:arm64`    | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android13:amd64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android13:arm64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android12:amd64` | `1.28.2-20260115190519.git568cb98` |
+| `jammy:android12:arm64` | `1.28.2-20260115190519.git568cb98` |
 
 ## 1.28.1
 
