@@ -516,7 +516,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### PATCH
 
- * Description: Update configuration of the platform currently used by Anbox
+ * Description: Update one or more configuration items of the platform currently used by Anbox
  * Operation: sync
  * Return: Standard return value or standard error
 
@@ -530,12 +530,21 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 }
 ```
 
-The available configuration items depend on the platform being used by Anbox and are dynamically registered. The following table shows a list of items available with the platforms shipping with Anbox Cloud.
+The available configuration items depend on the platform being used by Anbox and are dynamically registered. The following table shows a list of items available with the platforms shipping with Anbox Cloud. Multiple configuration items can be updated in a single request. This is particularly useful for related settings (like stream video bitrate settings) to ensure they are validated and applied as an atomic expected final state.
 
 Platform | Field name       | Available since   | JSON type | Access | Description        |
 ---------|------------------|-------------------|-----------|--------|--------------------|
 `webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
 `webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
+`webrtc` | `stream_video_bitrate_min_kbps`   | 1.29 | unsigned 32-bit integer | read/write | Defines the minimum bitrate for WebRTC streaming sessions. |
+`webrtc` | `stream_video_bitrate_max_kbps`   | 1.29 | unsigned 32-bit integer | read/write | Defines the maximum bitrate for WebRTC streaming sessions. |
+
+```{note}
+**Stream bitrate configuration items:**
+- If there is no active WebRTC session, these settings are cached and will be automatically applied when a new WebRTC session starts.
+- For an active WebRTC session, changes take effect immediately on the current session.
+- It is recommended to update both `stream_video_bitrate_min_kbps` and `stream_video_bitrate_max_kbps` in a single `PATCH` request. This avoids validation errors that may occur when updating fields individually (e.g., attempting to set a minimum bitrate higher than the existing maximum).
+```
 
 (sec-anbox-https-api-vhal)=
 ### `/1.0/vhal`
