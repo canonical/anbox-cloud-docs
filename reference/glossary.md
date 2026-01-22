@@ -134,7 +134,8 @@ Core stack
     - etcd
     - At least 1 LXD worker
     - 1 AMS Node Controller per LXD worker
-    - Easy-RSA
+    - EasyRSA (deprecated)
+    - Self-signed-certificates (CA)
 
     See {ref}`exp-anbox-cloud` for more information.
 

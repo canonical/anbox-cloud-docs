@@ -64,10 +64,24 @@ Before you run the `juju refresh` command to upgrade the charms, there are a few
 
 As a first step, upgrade all infrastructure components. This includes deployed internal certificate authorities and etcd.
 
-Upgrade easyrsa:
+Upgrade [self-signed-certificates](https://charmhub.io/self-signed-certificates) charm:
+
+    juju refresh internal-ca --channel=1/stable --revision=317
+    juju refresh etcd-ca --channel=1/stable --revision=317
+
+Upgrade [charmed-etcd](https://charmhub.io/charmed-etcd) operator:
+
+    juju refresh etcd --channel=3.6/stable --revision=144
+
+```{note}
+For version Anbox Cloud 1.28.2 and earlier, deployments still use legacy charms. If you are upgrading from these older Anbox Cloud versions, use the following legacy revisions:
 
     juju refresh internal-ca --channel=1.33/stable --revision=74
     juju refresh etcd-ca --channel=1.33/stable --revision=74
+    juju refresh etcd --channel=stable --revision=781
+
+See [deprecation notices for legacy charms](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#etcd-and-easyrsa-charms) for more information. You should transition to modernized charms as soon as possible for new deployments.
+```
 
 ### Upgrade application registry
 

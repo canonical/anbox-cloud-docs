@@ -25,7 +25,7 @@ When Anbox Cloud is deployed without the use of an external CA, the charms will 
 
 ### Certificate separation
 
-When using a TLS charm (e.g. [Easy-RSA](https://charmhub.io/easyrsa)) as the CA to issue certificates for etcd, it is essential to keep etcd certificates isolated. Granting leaf certificates from this CA effectively allows direct access to etcd data, and such access must be restricted strictly to AMS. Since Easy-RSA charm also serves as the base for mTLS, maintaining this separation enforces clear trust boundaries between AMS and other components such as Anbox-stream-gateway, Anbox-stream-agent, and other related services.
+When using a TLS charm (e.g. [self-signed-certificates](https://charmhub.io/self-signed-certificates)) as the CA to issue certificates for etcd, it is essential to keep etcd certificates isolated. Granting leaf certificates from this CA effectively allows direct access to etcd data, and such access must be restricted strictly to AMS. Since Self-Signed-Certificates charm also serves as the base for mTLS, maintaining this separation enforces clear trust boundaries between AMS and other components such as Anbox-stream-gateway, Anbox-stream-agent, and other related services.
 
 
 ### Packages used
