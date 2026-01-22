@@ -532,12 +532,12 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 
 The available configuration items depend on the platform being used by Anbox and are dynamically registered. The following table shows a list of items available with the platforms shipping with Anbox Cloud. Multiple configuration items can be updated in a single request. This is particularly useful for related settings (like stream video bitrate settings) to ensure they are validated and applied as an atomic expected final state.
 
-Platform | Field name       | Available since   | JSON type | Access | Description        |
----------|------------------|-------------------|-----------|--------|--------------------|
-`webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
-`webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
-`webrtc` | `stream_video_bitrate_min_kbps`   | 1.29 | unsigned 32-bit integer | read/write | Defines the minimum bitrate for WebRTC streaming sessions. |
-`webrtc` | `stream_video_bitrate_max_kbps`   | 1.29 | unsigned 32-bit integer | read/write | Defines the maximum bitrate for WebRTC streaming sessions. |
+Platform | Field name       | Available since   | JSON type | Access | Default value | Description        |
+---------|------------------|-------------------|-----------|--------|------ |--------------------|
+`webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | False | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
+`webrtc` | `stream_active`   | 1.15 | Boolean   | read | - | `true` if a client is actively streaming, `false` if no client is connected. |
+`webrtc` | `stream_video_bitrate_min_kbps`   | 1.29 | unsigned 32-bit integer | read/write | WebRTC session dependent | Defines the minimum bitrate in kilobits per second for WebRTC streaming sessions. |
+`webrtc` | `stream_video_bitrate_max_kbps`   | 1.29 | unsigned 32-bit integer | read/write | WebRTC session dependent | Defines the maximum bitrate in kilobits per second for WebRTC streaming sessions. |
 
 ```{note}
 **Stream bitrate configuration items:**
@@ -545,6 +545,25 @@ Platform | Field name       | Available since   | JSON type | Access | Descripti
 - For an active WebRTC session, changes take effect immediately on the current session.
 - It is recommended to update both `stream_video_bitrate_min_kbps` and `stream_video_bitrate_max_kbps` in a single `PATCH` request. This avoids validation errors that may occur when updating fields individually (e.g., attempting to set a minimum bitrate higher than the existing maximum).
 ```
+
+#### DELETE
+
+ * Description: Reset one or more configuration items of the platform to their default values
+ * Operation: sync
+ * Return: Standard return value or standard error
+
+Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/platform --data '{"configs":["stream_video_bitrate_min_kbps"]}' | jq .`:
+
+```bash
+{
+ "status": "Success",
+ "status_code": 200,
+ "type": "sync"
+}
+```
+
+The `DELETE` method resets specific platform configuration items with `read/write` access to their default values. The request body must contain a configs array specifying the names of the items to be reset. For certain items, such as `stream_video_bitrate_min_kbps` or `stream_video_bitrate_max_kbps`, the default values are determined based on the display resolution and FPS of the current WebRTC session.
+
 
 (sec-anbox-https-api-vhal)=
 ### `/1.0/vhal`
