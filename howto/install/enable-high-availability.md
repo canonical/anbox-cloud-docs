@@ -80,7 +80,7 @@ anbox-stream-gateway/2      active    idle   4       10.212.218.136  4000/tcp,70
 
 ## Scaling down
 
-Scaling down can be done by removing units via Juju (see [Juju documentation](https://juju.is/docs/olm/manage-applications#heading--scale-an-application)). You have to specifically target the unit that you want to remove:
+Scaling down can be done by removing units via Juju (see [Juju documentation](https://documentation.ubuntu.com/terraform-provider-juju/latest/howto/manage-applications/#scale-an-application)). You have to specifically target the unit that you want to remove:
 
     juju remove-unit anbox-stream-agent/2
 
