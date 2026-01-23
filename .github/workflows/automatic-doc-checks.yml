@@ -17,5 +17,5 @@ jobs:
   documentation-checks:
     uses: canonical/documentation-workflows/.github/workflows/documentation-checks.yaml@6f9c05eae99ca9fff05250810bba2a71a380ebd1
     with:
-      working-directory: "/"
+      working-directory: "."
       fetch-depth: 0
