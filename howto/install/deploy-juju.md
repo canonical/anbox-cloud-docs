@@ -184,7 +184,7 @@ The easiest way to do this is to use a storage device defined by Juju:
    If you decide to create a pool, make sure to do so before you start the deployment.
 1. Configure the `ams-lxd` charm to use the Juju storage pool.
 
-   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://juju.is/docs/olm/storage-constraint) for it.
+   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://documentation.ubuntu.com/juju/3.6/reference/storage/#storage-pool) for it.
 
    For example, to use the AWS `ebs-ssd` Juju storage pool for LXD storage, use an overlay file with the following storage constraint:
 
