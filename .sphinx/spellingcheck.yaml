@@ -11,6 +11,12 @@ matrix:
     sources:
       - _build/**/*.html|!_build/venv/**/*.html|!_build/reference/cmd-ref/appliance/**/*.html|!_build/reference/cmd-ref/amc/**/*.html|!_build/reference/api-reference/**/*.html|!_build/reference/ams-configuration/index.html|!_build/reference/cmd-ref/aar/**/*.html
     pipeline:
+      - pyspelling.filters.context:
+          context_visible_first: true
+          delimiters:
+          # Ignore possessive endings
+          - open: '(?<=\w)’s(?!\w)'
+            close: '\b'
       - pyspelling.filters.html:
           comments: false
           attributes:
