@@ -4,9 +4,6 @@ name: Automatic doc checks
 on:
   push:
     branches: [ main ]
-  pull_request:
-    paths:
-      - '/**'   # Removed docs as everything is in the root directory
 
   workflow_dispatch:
     # Manual trigger
