@@ -12,7 +12,7 @@ To be able to configure user permissions in Anbox Cloud, you need to first confi
 ```{important}
 In the Anbox Cloud Appliance, OpenFGA is pre-configured and the steps in this section can be skipped.
 ```
-Anbox Management Service(AMS) requires a store ID in OpenFGA to manage authorization data. To generate a store ID in OpenFGA, follow the steps in the [OpenFGA documentation](https://openfga.dev/docs/getting-started/create-store) and create a store. 
+Anbox Management Service (AMS) requires a store ID in OpenFGA to manage authorization data. To generate a store ID in OpenFGA, follow the steps in the [OpenFGA documentation](https://openfga.dev/docs/getting-started/create-store) and create a store.
 
 When you have a store ID, run these commands to configure AMS:
 
@@ -121,9 +121,46 @@ To revoke the global admin permission, run:
 :::{tab-item} Dashboard
 :sync: dashboard
 
-If you are using the web dashboard, the *Permissions* section help you to view and manage your identities, groups and their associated permissions.
+Anbox Cloud Dashboard allows you to manage identities and their access through groups and permissions.
 
-Note that the authorization actions that can be performed through the dashboard are currently limited as compared to that of the CLI. Subsequent releases will bring feature parity between dashboard and the CLI.
+## Identities
 
+The dashboard does not support creating identities. Instead, it displays the identities that the currently logged-in user is authorized to view on the **Permissions > Identities** page.
+
+To manage an identity’s group memberships, click *Groups count* or *Manage groups* ( ![manage groups icon](/images/icons/manage-groups-icon.png) ). This opens the *Change groups* panel, which lists all groups that the logged-in user is authorized to view. Select or deselect groups as needed, then confirm with *Save changes*.
+
+Authorized users can delete other identities. However, logged-in users cannot delete their own identity.
+
+## Groups
+
+On the **Permissions > Groups** page, follow these steps to create a group:
+
+1. Click *Create group* to open the *Create group* panel.
+2. Enter a group name and, optionally, a description.
+3. (Optional) Add identities:
+   - Click *Add identities*. The *Add identities* panel displays all identities that the logged-in user is authorized to view. Identities that the user is not authorized to edit are disabled.
+   - Select from the available identities to add them to the group.
+4. (Optional) Add permissions:
+   - Click *Add permissions*.
+   - Select a *Resource type*.
+   - Select a *Resource* (only resources you are authorized to view are listed).
+   - Select the *Entitlement* for that resource type.
+   - Click *Add* to add the permission.
+   - Added permissions are listed in the table and are not applied to the group yet. You can remove them or add more permissions as needed.
+5. When you are finished configuring the group, confirm with *Create group*.
+
+```{note}
+The *Server* resource type does not have an associated resource. When creating permissions for the *Server* resource type, no resource selection is required and the field remains disabled.
+```
+
+To manage group membership, click *Identities count* or *Edit* to add or remove identities from the group.
+
+To manage group permissions, click *Permissions count* or *Edit* to add or remove permissions assigned to the group.
+
+Authorized users can also delete groups. The admin group is immutable and cannot be deleted or have its permissions changed. However, the identities of the admin group can be edited.
+
+```{important}
+Permission changes to groups the logged-in user belongs to take effect immediately in the dashboard.
+```
 :::
 ::::
