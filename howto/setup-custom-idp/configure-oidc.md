@@ -3,7 +3,7 @@
 
 It is possible to configure OpenID Connect only when the appliance is initialized with a preseed (see {ref}`ref-appliance-preseed-config`) after the installation.
 
-When you have the issuer URL and client ID, set the values in the preseed configuration:
+When you have the client ID, set the value in the preseed configuration:
 
 ```{note}
 Auth0 additionally requires the audience value.
@@ -13,9 +13,7 @@ Auth0 additionally requires the audience value.
 $ cat preseed.yaml
 ....
 oidc:
-  issuer: https://my.auth.com
   client_id: example_client_id
-  audience: https://example.auth0.com/api/v2/ # for Auth0 only
 ```
 
 To start the initialization process with the preseed configuration, run:
