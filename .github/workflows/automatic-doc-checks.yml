@@ -1,5 +1,5 @@
 #
-name: Automatic doc checks
+name: Automated documentation checks
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
   workflow_dispatch:
     # Manual trigger
-
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
