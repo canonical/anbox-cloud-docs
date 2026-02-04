@@ -27,6 +27,10 @@ Optionally, you can also configure the API token if your deployment setup will r
 
 When the API URL and store ID are set, AMS starts synchronizing the data with OpenFGA. You might see some authorization failures initially till the synchronization completes.
 
+```{important}
+For fine-grained permissions to work in Anbox Cloud Dashboard, OpenFGA must be used in conjunction with a configured OIDC provider. Follow the instructions in {ref}`howto-set-up-idp` to configure Auth0, Keycloak, or Ory Hydra.
+```
+(sec-create-identity)=
 ## Create identities
 
 To create an OIDC identity, run:
