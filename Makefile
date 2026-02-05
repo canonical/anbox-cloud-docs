@@ -120,9 +120,7 @@ spellcheck: spellcheck-install
 spelling: html spellcheck
 
 linkcheck: install
-#	. $(VENV) ; $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) || { grep --color -F "[broken]" "$(BUILDDIR)/output.txt"; exit 1; }
-#	exit 0
-	echo "Link check is disabled temporarily"
+	. $(VENV) ; $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) || { grep --color -F "[broken]" "$(BUILDDIR)/output.txt"; exit 1; }
 
 pa11y: pa11y-install html
 	find $(BUILDDIR) -name *.html -print0 | xargs -n 1 -0 $(PA11Y)
