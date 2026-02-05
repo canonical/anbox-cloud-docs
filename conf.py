@@ -318,6 +318,15 @@ linkcheck_exclude_documents = [
 linkcheck_timeout = 30
 linkcheck_retries = 3
 
+# Specific headers for link checking
+# ceph.io fails with 500 if the Accept-Language is unset, so set it to something
+# to let it pass
+linkcheck_request_headers = {
+    "https://ceph.io/": {
+        "Accept-Language": "en-US",
+    }
+}
+
 ########################
 # Configuration extras #
 ########################
