@@ -62,7 +62,7 @@ These are the endpoints that you may require to expose for specific purposes:
 
 ### 5- TURN/STUN
 
-Disable TURN support if it is not needed. TURN is only needed to handle clients with complicated firewall or NAT configurations. If your users don't require TURN, disable support for it in the [coturn charm configuration](https://github.com/canonical/anbox-cloud-charms/blob/main/charms/coturn/templates/turnserver.conf) by setting both `enable_udp_relay` and `enable_tcp_relay` to `false`.
+Disable TURN support if it is not needed. TURN is only needed to handle clients with complicated firewall or NAT configurations. If your users don't require TURN, disable support for it in the coturn charm configuration by setting both [`enable_udp_relay`](https://charmhub.io/coturn/configurations#enable_udp_relay) and [`enable_tcp_relay`](https://charmhub.io/coturn/configurations#enable_tcp_relay) to `false`.
 
 Keep in mind that irrespective of whether you are using STUN/TURN, using a public, externally hosted serve expands the attack surface. Hence consider using the built-in TURN/STUN server provided with the Anbox Cloud deployment for better security.
 
