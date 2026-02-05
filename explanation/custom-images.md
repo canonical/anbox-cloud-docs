@@ -11,4 +11,4 @@ Building custom images is currently possible only for Android 13 and AAOS images
 
 By default, Anbox Cloud is regularly updated with security updates provided by the Android team to keep systems secure for consumers of generic AAOS images. Anbox Cloud users using a custom AAOS image are expected to maintain their systems secure by integrating these security updates, along with the updated version of Anbox Cloud. This might require manual deployment steps.
 
-If you are using or have a need for an Anbox Cloud image built on customized AAOS, please [contact us](https://canonical.com/contact-us).
+If you are using or have a need for an Anbox Cloud image built on customized AAOS, please [contact us](https://canonical.com/anbox-cloud#get-in-touch).
