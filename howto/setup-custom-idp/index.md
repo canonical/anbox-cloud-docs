@@ -52,7 +52,7 @@ Anbox Cloud needs the issuer URL, the client ID and the API audience values to a
 This guide assumes that Keycloak is available over HTTPS.
 ```
 ## 1. Initial setup
-Configure Keycloak for production by following their [documentation](https://www.keycloak.org/server/configuration-production). If you are fine using the development version, download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open *http://localhost:8080/* and create an admin user. Sign in to Keycloak with the admin account.
+Configure Keycloak for production by following their [documentation](https://www.keycloak.org/server/configuration-production). If you are fine using the development version, download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open `http://localhost:8080/` and create an admin user. Sign in to Keycloak with the admin account.
 
 ## 2. Create a realm and a client
 
