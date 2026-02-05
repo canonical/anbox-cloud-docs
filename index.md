@@ -70,7 +70,7 @@ We welcome community involvement through suggestions, fixes and constructive fee
 ```
 ```{grid-item-card} Engage
 [Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com) |
-[Contact us](https://canonical.com/contact-us)
+[Contact us](https://canonical.com/anbox-cloud#get-in-touch)
 
 ```
 ````
