@@ -320,6 +320,9 @@ linkcheck_exclude_documents = [
 linkcheck_timeout = 30
 linkcheck_retries = 5
 
+# decrease parallelism to avoid rate-limiting at the cost of longer runs
+linkcheck_workers = 3
+
 # Specific headers for link checking
 # ceph.io fails with 500 if the Accept-Language is unset, so set it to something
 # to let it pass
