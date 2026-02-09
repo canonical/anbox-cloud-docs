@@ -93,6 +93,10 @@ If you wish to install a different version, replace `3` in the command with the 
 
 See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-juju/#install-juju) for more information.
 
+### NVIDIA driver series 580
+* Starting with this 1.29.0, NVIDIA driver series 580 is required for Anbox Cloud deployments that include NVIDIA GPUs.
+
+
 (sec-minimum-hardware-requirements)=
 ### Hardware requirements
 
