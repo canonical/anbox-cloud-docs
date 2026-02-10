@@ -98,15 +98,48 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
           "sensor_support",
           "tracing_support",
           "vhal_support"
+          "pprof",
+          "metrics",
+          "log_level",
+          "telephony"
         ],
         "api_status": "stable",       # API implementation status (one of, development, stable or deprecated)
-        "api_version": "1.0"          # The API version as a string
+        "api_version": "1.0",         # The API version as a string
+        "log_level": "info"
     },
     "status": "Success",
     "status_code": 200,
     "type": "sync"
 }
 ```
+
+#### PATCH
+
+ * Description: Update the server configuration
+ * Operation: sync
+ * Return: standard return value or standard error
+
+Input:
+
+```json
+{
+    "log_level": "warning"
+}
+```
+
+- Possible values for `log_level` are: `trace`, `debug`, `info`, `warning`, `error`, `fatal`
+
+Return value:
+
+```json
+{
+    "status": "Success",
+    "status_code": 200,
+    "type": "sync"
+}
+```
+
+Example: `curl -X PATCH --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 --data '{"log_level":"warning"}'`:
 
 (sec-anbox-https-api-location)=
 ### `/1.0/location`
