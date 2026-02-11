@@ -7,7 +7,7 @@ Usually, Anbox Cloud installs APKs as user apps in the Android container. It is 
 Installing apps as system apps is not supported on AAOS images.
 ```
 
-A user app is normally signed by the developer and has restricted permissions at runtime. A system app, on the other hand, is usually [signed with the platform key](https://source.android.com/devices/tech/ota/sign_builds) when building an Android image. It is pre-installed under the system partition and runs a process with some ["signature" protection level permissions](https://developer.android.com/guide/topics/manifest/permission-element.html#plevel) in the Android container.
+A user app is normally signed by the developer and has restricted permissions at runtime. A system app, on the other hand, is usually [signed with the platform key](https://source.android.com/docs/core/ota/sign_builds) when building an Android image. It is pre-installed under the system partition and runs a process with some ["signature" protection level permissions](https://developer.android.com/guide/topics/manifest/permission-element.html#plevel) in the Android container.
 
 An application must be running as a system app if:
 

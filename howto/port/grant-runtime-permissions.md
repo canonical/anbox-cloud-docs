@@ -3,7 +3,7 @@
 
 An Anbox Cloud application cannot automatically grant runtime permissions to the app it runs upon creation. Therefore, you must specify the permissions that are required to run the Android app in the application manifest of the Anbox Cloud application. When creating the application in AMS, Anbox Cloud will then grant the specified permissions.
 
-To list all required runtime permissions of an Android app, use [AAPT2](https://developer.android.com/studio/command-line/aapt2):
+To list all required runtime permissions of an Android app, use [AAPT2](https://developer.android.com/tools/aapt2):
 
     aapt2 dump permissions <path_to_APK>
 

@@ -100,7 +100,7 @@ Azure will prompt you to download your private key before it starts creating the
 
 When deployment is complete, you can log on to the machine and install the Anbox Cloud Appliance.
 
-For additional information, see the [Microsoft documentation](https://docs.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
+For additional information, see the [Microsoft documentation](https://learn.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
 
 ### Connect to the VM
 

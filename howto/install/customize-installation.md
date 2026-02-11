@@ -28,7 +28,7 @@ An [overlay bundle](https://juju.is/docs/juju/bundle) is a fragment of valid YAM
         series: noble
         constraints: "instance-type=m5.xlarge root-disk=100G"
 
-See the [Juju bundle documentation](https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/bundle-yaml-file/ ) for more information about Juju's bundle format and valid YAML.
+See the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/ ) for more information about Juju's bundle format and valid YAML.
 
 To use one or more overlay files with the Anbox Cloud bundle, specify them during the deployment:
 
@@ -105,4 +105,4 @@ Running this command will output login information and a URL for the GUI interfa
 
 ![Anbox Cloud - Juju GUI|690x444](/images/install_customize_juju_model.png)
 
-For more information on the Juju GUI, see the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-the-juju-dashboard/#manage-the-juju-dashboard).
+For more information on the Juju GUI, see the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-the-juju-dashboard/#manage-the-juju-dashboard).

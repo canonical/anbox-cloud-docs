@@ -38,7 +38,7 @@ The appliance supports LXD >= 5.0.
 
 By default, LXD is installed from the `5.21/stable` track.
 
-If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.21/stable lxd` to update it. If you are already on LXD version 5.21, [do not downgrade it as it may render LXD unusable](https://documentation.ubuntu.com/lxd/en/latest/installing/#upgrade-lxd).
+If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.21/stable lxd` to update it. If you are already on LXD version 5.21, [do not downgrade it as it may render LXD unusable](https://documentation.ubuntu.com/lxd/latest/installing/#upgrade-lxd).
 
 ### Hardware requirements
 
@@ -57,7 +57,7 @@ For external access, you must expose a couple of network ports on the machine wh
 
 ## Requirements for charmed Anbox Cloud
 
-Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/cloud/) as well as manually provided machines as long as the minimum requirements are met.
+Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://documentation.ubuntu.com/juju/latest/user/reference/cloud/) as well as manually provided machines as long as the minimum requirements are met.
 
 ### Ubuntu
 
@@ -91,7 +91,7 @@ You can install Juju with the following command:
 
 If you wish to install a different version, replace `3` in the command with the desired version.
 
-See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-juju/#install-juju) for more information.
+See the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-juju/#install-juju) for more information.
 
 (sec-minimum-hardware-requirements)=
 ### Hardware requirements
