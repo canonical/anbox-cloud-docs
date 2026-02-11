@@ -1,7 +1,7 @@
 (howto-deploy-anbox-baremetal)=
 # Deploy on bare metal
 
-This document guides you through the steps to install Anbox Cloud on a [manual cloud](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/cloud/list-of-supported-clouds/the-manual-cloud-and-juju/) that Juju offers i.e., you can deploy Anbox Cloud with Juju on a set of SSH connected machines.
+This document guides you through the steps to install Anbox Cloud on a [manual cloud](https://documentation.ubuntu.com/juju/latest/user/reference/cloud/list-of-supported-clouds/the-manual-cloud-and-juju/) that Juju offers i.e., you can deploy Anbox Cloud with Juju on a set of SSH connected machines.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ See {ref}`sec-juju-version-requirements` for information about which Juju versio
 
 ## Add a controller and model
 
-The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
+The [Juju controller](https://documentation.ubuntu.com/juju/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://documentation.ubuntu.com/juju/latest/user/reference/model/).
 
 You should dedicate one machine as the Juju controller. Run the following command to bootstrap the controller onto that machine:
 
@@ -77,7 +77,7 @@ The `anbox-cloud-core` deployment bundle requires two machines: `0` and `1`. `0`
 
 The `anbox-cloud` bundle requires two additional machines to host the load balancer (`0`) and the extra services required for streaming (`1`). For this bundle, the AMS machine is `2` and the LXD machine is `3`. Check the `bundle.yaml` file in the bundle for details.
 
-The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/bundle/) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
+The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/reference/bundle/) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
 
 (sec-customize-storage-bare-metal)=
 ## Customize storage

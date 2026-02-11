@@ -140,7 +140,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 
 For LXD storage, Anbox Cloud can automatically create and use a ZFS storage pool that's local to the machine or can use storage provided by [Ceph](https://ceph.io).
 
-A local storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/en/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
+A local storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
 
 While a loop file is easy to set up, it is much slower than a block device. Therefore, we recommend using a block device that is dedicated to LXD storage only.
 

@@ -19,7 +19,7 @@ AMS uses an RSA key with a length of 4096 bits for its server. The standard AMS 
 
 Authenticated clients can add additional certificates to the trust store AMS manages. The trust stored keeps a copy of all registered certificates and stores them in an [etcd database](https://etcd.io/).
 
-Communication with LXD is using mutual TLS based authentication too. More details on this can be found in the [LXD documentation](https://documentation.ubuntu.com/lxd/en/latest/authentication/).
+Communication with LXD is using mutual TLS based authentication too. More details on this can be found in the [LXD documentation](https://documentation.ubuntu.com/lxd/latest/authentication/).
 
 ## Token based authentication
 

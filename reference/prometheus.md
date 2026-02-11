@@ -204,7 +204,7 @@ These metrics are available since Anbox Cloud 1.8.0.
 | `webrtc_key_frames_encoded`         | Total number of key frames, such as key frames in VP8 or IDR-frames in H.264 (`webrtc_key_frames_encoded - webrtc_frames_encoded` gives the number of delta frames) |
 | `webrtc_total_encode_time`          | Total number of seconds that has been spent encoding the `webrtc_frames_encoded` frames (the average encode time can be calculated by dividing this value with `webrtc_frames_encoded`) |
 | `webrtc_target_bitrate`             | The current encoder target in bits per second                                                              |
-| `webrtc_bytes_sent`                 | Total number of bytes sent for a specific [SSRC](https://tools.ietf.org/html/rfc3550#section-3) (a SSRC represents one resource - video, audio or binary data - sent over a WebRTC track) |
+| `webrtc_bytes_sent`                 | Total number of bytes sent for a specific [SSRC](https://datatracker.ietf.org/doc/html/rfc3550#section-3) (a SSRC represents one resource - video, audio or binary data - sent over a WebRTC track) |
 | `webrtc_retransmitted_bytes_sent`   | Total number of bytes that were re-transmitted for a specific SSRC, only including payload bytes           |
 | `webrtc_retransmitted_packets_sent` | Total number of packets that were re-transmitted for a specific SSRC                                       |
 | `webrtc_total_packet_send_delay`    | Total number of seconds that packets have spent buffered locally before being transmitted onto the network |

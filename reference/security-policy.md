@@ -1,7 +1,7 @@
 (ref-security-policy)=
 # Security policy
 
-Learn about our [release and support policy](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/release-notes/release-notes/#release-and-support-policy) for the nature of our releases and versions.
+Learn about our [release and support policy](https://documentation.ubuntu.com/anbox-cloud/reference/release-notes/release-notes/#release-and-support-policy) for the nature of our releases and versions.
 
 All our public repositories have a `SECURITY.md` file that details our security policy. However, Anbox Cloud has components for which the source is not publicly available. The same policy as listed below applies for a security vulnerability for any component of Anbox Cloud.
 

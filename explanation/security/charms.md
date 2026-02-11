@@ -7,7 +7,7 @@ All communication between Juju units and the Juju controller happens over TLS-en
 
 With this secure channel, Juju charms can communicate with each other using relation data. The data published by one unit is sent to the controller, which then makes it available for all other units on the same relation. The data for each relation is scoped by ID and is only visible to units participating in the specific relation on which it is set.
 
-See [Security with Juju](https://canonical-juju.readthedocs-hosted.com/en/latest/user/explanation/juju-security/) for more information.
+See [Security with Juju](https://documentation.ubuntu.com/juju/latest/user/explanation/juju-security/) for more information.
 
 
 ## Cryptography

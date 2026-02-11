@@ -7,7 +7,7 @@ However, if you run into a situation where you need to grow the LXD storage pool
 
 - **Loop-backed storage pool**
 
-  If you use a loop file for your LXD storage, follow the instructions for ZFS in [Resize a storage pool](https://documentation.ubuntu.com/lxd/en/latest/howto/storage_pools/#resize-a-storage-pool) in the LXD documentation.
+  If you use a loop file for your LXD storage, follow the instructions for ZFS in [Resize a storage pool](https://documentation.ubuntu.com/lxd/latest/howto/storage_pools/#resize-a-storage-pool) in the LXD documentation.
 
   After resizing the storage pool, you must restart AMS.
 - **Dedicated block device**
@@ -15,4 +15,4 @@ However, if you run into a situation where you need to grow the LXD storage pool
   You cannot resize a dedicated block device. Instead, replace the block device with a bigger one. Once you replace the block device, you must redeploy the cluster node.
 - **EBS volume**
 
-  While it is generally [possible to resize an EBS volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/requesting-ebs-volume-modifications.html), it is usually easier to replace the cluster node with a new one that has a bigger EBS volume.
+  While it is generally [possible to resize an EBS volume](https://docs.aws.amazon.com/ebs/latest/userguide/requesting-ebs-volume-modifications.html), it is usually easier to replace the cluster node with a new one that has a bigger EBS volume.

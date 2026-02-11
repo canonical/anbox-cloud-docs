@@ -454,7 +454,7 @@ Sensor Type       | JSON Data structure |
 `proximity`       | {"type": "proximity", "value": \<data\>}  |
 `temperature`     | {"type": "temperature", "value": \<data\>}  |
 
-Please check the following [link](https://developer.android.com/guide/topics/sensors/sensors_environment) for the units of measure for the environmental sensors.
+Please check the following [link](https://developer.android.com/develop/sensors-and-location/sensors/sensors_environment) for the units of measure for the environmental sensors.
 
 ```{note}
 If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the error `Sensor 'acceleration' is not active` even if the sensor updates are activated.
