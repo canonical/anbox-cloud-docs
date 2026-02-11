@@ -5,7 +5,7 @@ While it is possible to install Anbox Cloud on a single machine, Anbox Cloud App
 
 In a clustering setup for a charmed Anbox Cloud deployment, one node is dedicated as the management node to host the Anbox Management Service (AMS). If you use the Streaming Stack, two additional nodes are dedicated to host the extra services required for streaming. All other nodes are used as worker nodes.
 
-Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https://documentation.ubuntu.com/lxd/en/latest/clustering/), and this LXD cluster is used to host the Android containers.
+Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https://documentation.ubuntu.com/lxd/latest/clustering/), and this LXD cluster is used to host the Android containers.
 
 ## Cluster capacity
 
@@ -22,7 +22,7 @@ The current release of Anbox Cloud has no built-in auto scaling implementation b
 
 The following guidelines are both recommended and must-have aspects of an auto scaling implementation. Make sure that your auto scaling implementation follows these to stay within a supported and tested scope.
 
-1. Don't scale the LXD cluster to less than three nodes. You should keep three active nodes at all times to ensure the database that LXD uses can achieve a quorum and is highly available. If you scale down to less than three nodes, your cluster is very likely to get into a non-functional state or be lost completely. In case this happens, see [LXD documentation](https://documentation.ubuntu.com/lxd/en/latest/howto/cluster_recover/) on how to recover a cluster.
+1. Don't scale the LXD cluster to less than three nodes. You should keep three active nodes at all times to ensure the database that LXD uses can achieve a quorum and is highly available. If you scale down to less than three nodes, your cluster is very likely to get into a non-functional state or be lost completely. In case this happens, see [LXD documentation](https://documentation.ubuntu.com/lxd/latest/howto/cluster_recover/) on how to recover a cluster.
 1. A single LXD cluster should take no more than 40 nodes.
 1. If you need more than 40 nodes, you should create a separate cluster in a separate Juju model with its own AMS.
 1. Scaling a cluster up with multiple new nodes in parallel is fine and recommended if you need to quickly increase your cluster capacity.

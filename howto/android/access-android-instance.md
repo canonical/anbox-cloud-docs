@@ -60,7 +60,7 @@ Install anbox-connect on your host machine:
 
     snap install anbox-connect
 
-[Install ADB](https://developer.android.com/studio/releases/platform-tools) on your host machine. You can [install Android Studio](https://developer.android.com/studio) which also installs the Android SDK (which includes ADB as part of the platform tools). You can choose to use another IDE of your choice and install ADB independently.
+[Install ADB](https://developer.android.com/tools/releases/platform-tools) on your host machine. You can [install Android Studio](https://developer.android.com/studio) which also installs the Android SDK (which includes ADB as part of the platform tools). You can choose to use another IDE of your choice and install ADB independently.
 
 On the machine where appliance is installed, create an instance with streaming enabled:
 

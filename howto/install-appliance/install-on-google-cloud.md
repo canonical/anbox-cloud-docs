@@ -6,7 +6,7 @@ The Anbox Cloud Appliance is not yet available from the Google Marketplace. Howe
 The entire deployment process will take 20-30 minutes, depending on the selected hardware and the network conditions.
 
 ```{caution}
-Currently, Anbox Cloud requires support for 32-bit architecture. Since T2A ARM instances are not available with 32-bit support, the T2A instance family on Google Cloud cannot be supported by Anbox Cloud. See [Google's documentation on T2A limitations](https://cloud.google.com/compute/docs/general-purpose-machines#t2a_limitations) for more information.
+Currently, Anbox Cloud requires support for 32-bit architecture. Since T2A ARM instances are not available with 32-bit support, the T2A instance family on Google Cloud cannot be supported by Anbox Cloud. See [Google's documentation on T2A limitations](https://docs.cloud.google.com/compute/docs/general-purpose-machines#t2a_limitations) for more information.
 ```
 
 ## Prerequisites
@@ -31,7 +31,7 @@ Log in to [Google Cloud](https://console.cloud.google.com) and select the projec
 * *Region* and *Zone* - The geographic location where your resources are run and your data is stored
 * *Machine configuration*, *Series*, *Machine type* and *Display device* - Select a machine configuration that matches the hardware requirements. If your requirement includes GPUs, select the GPU-optimized machine configuration. For example, an NVIDIA L4 GPU. You can select the recommended preset machine type or define a custom type with additional cores and memory for an added cost.
 
-Most of the configuration depends on your deployment and its location. For the settings that are not mentioned in this guide, you can choose to proceed with the default options or see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance) to customize your virtual machine on Google Cloud.
+Most of the configuration depends on your deployment and its location. For the settings that are not mentioned in this guide, you can choose to proceed with the default options or see [Google's documentation](https://docs.cloud.google.com/compute/docs/instances/create-start-instance) to customize your virtual machine on Google Cloud.
 
 ### Configure disks
 
@@ -61,7 +61,7 @@ There are two ways to map the firewall rules to the virtual machine in Google Cl
 
 **Specified target tags** - If you want to use specified target tags to map your firewall rules to the virtual machine, assign a unique network tag under **Advanced options > Networking > Network tags**. This network tag will later be used while creating a firewall rule.
 
-For more information, see [Google's documentation](https://cloud.google.com/firewall/docs/using-firewalls).
+For more information, see [Google's documentation](https://docs.cloud.google.com/firewall/docs/using-firewalls).
 
 ### Launch the VM
 
@@ -98,7 +98,7 @@ Select **Create** to create the firewall rule.
 
 ## Connect to the VM
 
-On the virtual machine instance page, connect to the instance using SSH. See [Google's documentation](https://cloud.google.com/compute/docs/ssh-in-browser) for more information.
+On the virtual machine instance page, connect to the instance using SSH. See [Google's documentation](https://docs.cloud.google.com/compute/docs/ssh-in-browser) for more information.
 
 ## Finish the installation
 

@@ -6,7 +6,7 @@ You can install the Anbox Cloud Appliance on AWS in one of two ways:
 - Install through the AWS Marketplace. This is the recommended way, because this method simplifies the installation and deployment process and allows billing to be handled directly through AWS.
 - Install the Anbox Cloud Appliance snap on an AWS machine. This method is not recommended, but if you want to do it anyway, see the {ref}`tut-installing-appliance` tutorial for instructions on how to install the snap.
 
-The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance from the AWS Marketplace. For additional information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html) about launching an instance.
+The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance from the AWS Marketplace. For additional information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html) about launching an instance.
 
 The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
 
@@ -138,7 +138,7 @@ When the instance is successfully launched, you can find its public IP address i
 
 ## Connect to the VM
 
-Connect to the virtual machine hosting the appliance using SSH. To do so, use the user name `ubuntu` and provide the path to your private key file. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
+Connect to the virtual machine hosting the appliance using SSH. To do so, use the user name `ubuntu` and provide the path to your private key file. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html) for instructions on how to connect.
 
 ## Enable the service
 
