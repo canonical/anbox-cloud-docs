@@ -44,7 +44,7 @@ The support for LXD 5.0 snap is deprecated as of 1.25.0. Upgrade your deployment
 ## Anbox Cloud Appliance `epoch=0` snap
 *Deprecated in 1.22.0* ; *Unsupported in 1.25.0*
 
-The Anbox Cloud Appliance is being reworked. We will provide the new Anbox Cloud Appliance implementation using [Snap epochs](https://snapcraft.io/docs/snap-epochs). 
+The Anbox Cloud Appliance is being reworked. We will provide the new Anbox Cloud Appliance implementation using [Snap epochs](https://documentation.ubuntu.com/snapcraft/stable/how-to/crafting/manage-data-compatibility/).
 
 The snap with `epoch=0` is the existing implementation that was deprecated in 1.22.0. Existing installations of the appliance will receive updates until Anbox Cloud 1.24.2.
 
