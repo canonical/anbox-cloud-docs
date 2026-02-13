@@ -71,7 +71,7 @@ Upgrade [self-signed-certificates](https://charmhub.io/self-signed-certificates)
 
 Upgrade [charmed-etcd](https://charmhub.io/charmed-etcd) operator:
 
-    juju refresh etcd --channel=3.6/stable --revision=144
+    juju refresh etcd --channel=3.6/stable --revision=149
 
 ```{note}
 For version Anbox Cloud 1.28.2 and earlier, deployments still use legacy charms. If you are upgrading from these older Anbox Cloud versions, use the following legacy revisions:
