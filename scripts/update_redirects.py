@@ -20,6 +20,13 @@ IGNORED_DIRECTORIES = [
     "reference/cmd-ref/appliance/",
 ]
 
+IGNORED_URLS = [
+    # Wants to redirect to localized versions (e.g.
+    # https://azure.microsoft.com/en-us), but we want to keep the original URL
+    # to let it redirect to the correct localized version based on user location
+    "https://azure.microsoft.com/",
+]
+
 
 def parse_arguments() -> argparse.Namespace:
     """Parse command line arguments."""
@@ -73,6 +80,11 @@ def is_permanent_redirect(result: dict) -> bool:
 def should_ignore_file(filename: str) -> bool:
     """Check if a file should be ignored based on IGNORED_DIRECTORIES."""
     return any(filename.startswith(ignored_dir) for ignored_dir in IGNORED_DIRECTORIES)
+
+
+def should_ignore_url(url: str) -> bool:
+    """Check if a URL should be ignored based on IGNORED_URLS (exact match)."""
+    return url in IGNORED_URLS
 
 
 def preserve_url_fragment(old_uri: str, new_uri: str) -> str:
@@ -201,17 +213,28 @@ def main() -> int:
     redirects = [
         r
         for r in all_results
-        if is_permanent_redirect(r) and not should_ignore_file(r["filename"])
+        if is_permanent_redirect(r)
+        and not should_ignore_file(r["filename"])
+        and not should_ignore_url(r["uri"])
     ]
 
     # Log ignored redirects if any
-    ignored_count = sum(
+    ignored_file_count = sum(
         1
         for r in all_results
         if is_permanent_redirect(r) and should_ignore_file(r["filename"])
     )
-    if ignored_count > 0:
-        logging.info("Ignored %d redirect(s) in excluded directories", ignored_count)
+    ignored_url_count = sum(
+        1
+        for r in all_results
+        if is_permanent_redirect(r) and should_ignore_url(r["uri"])
+    )
+    if ignored_file_count > 0:
+        logging.info(
+            "Ignored %d redirect(s) in excluded directories", ignored_file_count
+        )
+    if ignored_url_count > 0:
+        logging.info("Ignored %d redirect(s) for excluded URLs", ignored_url_count)
 
     if not redirects:
         logging.info("No permanent redirects found.")
