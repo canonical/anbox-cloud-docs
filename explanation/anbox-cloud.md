@@ -38,7 +38,7 @@ See the following table for a comparison of features for the different variants:
 | {ref}`exp-web-dashboard` | ✓ | ✓ |
 | {ref}`Android versions <ref-provided-images>` | 12, 13, 14, 15 | 12, 13, 14, 15 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
-| [Community support](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | ✓ | ✓ |
+| [Community support](https://discourse.ubuntu.com/c/project/anbox-user/148) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
 | {ref}`exp-clustering`| - | ✓ |
 | {ref}`exp-custom-images`| ✓ | ✓ |

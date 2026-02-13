@@ -30,7 +30,7 @@ AMS has different modes to grant CPU access to an instance. The `cpu.limit_mode`
     This mode uses the LXD [`limits.cpu.allowance`](https://documentation.ubuntu.com/lxd/latest/reference/instance_options/#cpu-limits) configuration option to grant an instance a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
 * `pinning` :
 
-   This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to an instance. LXD is responsible for allocating a specific number of cores to an instance and load-balancing all running instances on all available cores.
+   This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to an instance. LXD is responsible for allocating a specific number of cores to an instance and load-balancing all running instances on all available cores.
 
    Using `pinning` requires a system with [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) enabled. Otherwise, limitations of [cgroup-v1](https://docs.kernel.org/admin-guide/cgroup-v1/index.html) might cause the load distribution over available CPU cores to not be optimal. [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) is enabled by default.
 

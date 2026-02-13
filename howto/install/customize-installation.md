@@ -85,7 +85,7 @@ Another way to change or customize a deployment is to store the YAML bundle file
 
 The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See {ref}`sec-juju-bundles` for more details on the available bundles.
 
-Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/bundle-yaml-file/ ).
+Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/ ).
 
 ### Retrieve a bundle from a running model
 
