@@ -37,7 +37,7 @@ jobs:
                   make linkcheck
             - name: Create pull request
               if: steps.update.outputs.no_changes != 'true'
-              uses: canonical/create-pull-request@4b17638f76a975ad3e38eff088dff552b49e571e
+              uses: canonical/create-pull-request@fdc6a8d4844a2c56566be64e90c536f1ae1bd6c3
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: "feat: update links to permanent redirects"
