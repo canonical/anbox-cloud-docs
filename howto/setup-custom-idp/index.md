@@ -94,7 +94,7 @@ Ory Hydra currently does not support authenticating clients using [device code f
 
 ## 1. Create a client
 
-Create a free account on [Ory Hydra](https://www.ory.sh/hydra/). After logging into the Ory Console, navigate to *OAuth 2 > OAuth2 Clients > Create OAuth2 Client*.
+Create a free account on [Ory Hydra](https://www.ory.com/hydra). After logging into the Ory Console, navigate to *OAuth 2 > OAuth2 Clients > Create OAuth2 Client*.
 
 Create the client with:
    - *Type*: *Mobile / SPA*
@@ -110,7 +110,7 @@ On the *OAuth2 Clients* list, find and copy the *ID* for the client you created.
 In the Ory Console, navigate to *OAuth 2* > *Overview*. Find and copy the value of the *Issuer URL*.
 
 ```{important}
-No users exist within ORY by default. New users can use the sign-up link during login. Alternatively, configure Google, Facebook, Microsoft, GitHub, Apple, or another social sign-in provider as described in the [ORY documentation](https://www.ory.sh/docs/kratos/social-signin/overview).
+No users exist within ORY by default. New users can use the sign-up link during login. Alternatively, configure Google, Facebook, Microsoft, GitHub, Apple, or another social sign-in provider as described in the [ORY documentation](https://www.ory.com/docs/kratos/social-signin/overview).
 ```
 :::
 ::::

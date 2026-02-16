@@ -22,7 +22,7 @@ Read the release notes for your target version to learn about important changes 
 ### Upgrade Juju
 
 Check the [required Juju version](https://documentation.ubuntu.com/anbox-cloud/reference/requirements/#juju).
-If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-models/#upgrade-a-model) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
+If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-models/) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
 ### Upgrade OS
 
