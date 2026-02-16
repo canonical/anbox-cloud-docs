@@ -2,7 +2,7 @@
 # Upgrade charmed deployment
 
 ```{note}
-If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on the Ubuntu discourse.
+If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/project/anbox-cloud/49) on the Ubuntu discourse.
 ```
 
 Anbox Cloud supports only the latest release. This means that we support upgrades from n-1 to nth minor version, where n is the most recent minor version released.
