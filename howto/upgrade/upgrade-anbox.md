@@ -195,7 +195,7 @@ Finally after all the upgrades finish and the nodes are healthy, run:
 
 where `<node_name>` refers to the LXD node name stored within AMS.
 
-As a subordinate charm deployed alongside the LXD charm, and following the [deprecation of the node controller charm](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#node-controller-charm) in the Anbox Cloud 1.28.0 release is no longer supported, and has been removed from the release. Therefore, it should be removed from the deployment:
+As a subordinate charm deployed alongside the LXD charm, the AMS node controller charm  is no longer supported as of Anbox Cloud 1.28.0, following the [deprecation of the node controller charm](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#node-controller-charm). It has been removed from this release and must be removed from any existing deployment. To do so, run:
 
        juju remove-relation ams-node-controller lxd
        juju remove-application ams-node-controller --no-prompt

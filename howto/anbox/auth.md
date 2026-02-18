@@ -115,6 +115,12 @@ You can set permissions at the object level too. For example, to provide read an
 
     amc auth group permissions add developer node lxd0 --permissions "can_view,can_edit"
 
+### View permissions
+
+Users can now view their current permissions in the system using the following command:
+
+    amc auth permission ls
+
 ### Remove permissions
 
 To revoke the global admin permission, run:
