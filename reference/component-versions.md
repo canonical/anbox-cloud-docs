@@ -69,12 +69,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `jammy:aaos14:arm64`    | `1.29.0-20260216162518.gita1230e8` |
 | `jammy:android14:amd64` | `1.29.0-20260216162518.gita1230e8` |
 | `jammy:android14:arm64` | `1.29.0-20260216162518.gita1230e8` |
-| `jammy:aaos13:amd64`    | `1.29.0-20260216162518.gita1230e8` |
-| `jammy:aaos13:arm64`    | `1.29.0-20260216162518.gita1230e8` |
-| `jammy:android13:amd64` | `1.29.0-20260216162518.gita1230e8` |
-| `jammy:android13:arm64` | `1.29.0-20260216162518.gita1230e8` |
-| `jammy:android12:amd64` | `1.29.0-20260216162518.gita1230e8` |
-| `jammy:android12:arm64` | `1.29.0-20260216162518.gita1230e8` |
 
 ## 1.28.2
 
