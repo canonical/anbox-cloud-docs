@@ -12,48 +12,48 @@ Not all components are updated with each release. When components are not update
 #### Ubuntu 22.04
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| ams | 1.29/candidate | 1390 | 1391 | 1.29.0-fdb4954 |
-| ams-lxd | 1.29/candidate | 1262 | 1263 | 1.29.0-fdb4954 |
-| coturn | 1.29/candidate | 1179 | 1180 | 1.29.0-fdb4954 |
-| anbox-stream-gateway | 1.29/candidate | 1302 | 1303 | 1.29.0-fdb4954 |
-| anbox-stream-agent | 1.29/candidate | 1295 | 1296 | 1.29.0-fdb4954 |
-| anbox-cloud-dashboard | 1.29/candidate | 1216 | 1217 | 1.29.0-fdb4954 |
-| aar | 1.29/candidate | 1385 | 1386 | 1.29.0-fdb4954 |
-| lxd-integrator | 1.29/candidate | 654 | 655 | 1.29.0-fdb4954 |
-| anbox-cloud-cos-configuration | 1.29/candidate | 502 | 503 | 1.29.0-fdb4954 |
+| ams | 1.29/stable | 1390 | 1391 | `1.29.0-fdb4954` |
+| ams-lxd | 1.29/stable | 1262 | 1263 | `1.29.0-fdb4954` |
+| coturn | 1.29/stable | 1179 | 1180 | `1.29.0-fdb4954` |
+| anbox-stream-gateway | 1.29/stable | 1302 | 1303 | `1.29.0-fdb4954` |
+| anbox-stream-agent | 1.29/stable | 1295 | 1296 | `1.29.0-fdb4954` |
+| anbox-cloud-dashboard | 1.29/stable | 1216 | 1217 | `1.29.0-fdb4954` |
+| aar | 1.29/stable | 1385 | 1386 | `1.29.0-fdb4954` |
+| lxd-integrator | 1.29/stable | 654 | 655 | `1.29.0-fdb4954` |
+| anbox-cloud-cos-configuration | 1.29/stable | 502 | 503 | `1.29.0-fdb4954` |
 
 #### Ubuntu 24.04
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| ams | 1.29/candidate | 1392 | 1393 | 1.29.0-fdb4954 |
-| ams-lxd | 1.29/candidate | 1264 | 1265 | 1.29.0-fdb4954 |
-| coturn | 1.29/candidate | 1181 | 1182 | 1.29.0-fdb4954 |
-| anbox-stream-gateway | 1.29/candidate | 1304 | 1305 | 1.29.0-fdb4954 |
-| anbox-stream-agent | 1.29/candidate | 1297 | 1298 | 1.29.0-fdb4954 |
-| anbox-cloud-dashboard | 1.29/candidate | 1218 | 1219 | 1.29.0-fdb4954 |
-| aar | 1.29/candidate | 1387 | 1388 | 1.29.0-fdb4954 |
-| lxd-integrator | 1.29/candidate | 656 | 657 | 1.29.0-fdb4954 |
-| anbox-cloud-cos-configuration | 1.29/candidate | 504 | 505 | 1.29.0-fdb4954 |
+| ams | 1.29/stable | 1392 | 1393 | `1.29.0-fdb4954` |
+| ams-lxd | 1.29/stable | 1264 | 1265 | `1.29.0-fdb4954` |
+| coturn | 1.29/stable | 1181 | 1182 | `1.29.0-fdb4954` |
+| anbox-stream-gateway | 1.29/stable | 1304 | 1305 | `1.29.0-fdb4954` |
+| anbox-stream-agent | 1.29/stable | 1297 | 1298 | `1.29.0-fdb4954` |
+| anbox-cloud-dashboard | 1.29/stable | 1218 | 1219 | `1.29.0-fdb4954` |
+| aar | 1.29/stable | 1387 | 1388 | `1.29.0-fdb4954` |
+| lxd-integrator | 1.29/stable | 656 | 657 | `1.29.0-fdb4954` |
+| anbox-cloud-cos-configuration | 1.29/stable | 504 | 505 | `1.29.0-fdb4954` |
 
 ### Bundles
 | Name | Channel | Revision |
 |------|---------|----------|
-| anbox-cloud | 1.29/candidate | 938 |
-| anbox-cloud-core | 1.29/candidate | 948 |
+| anbox-cloud | 1.29/stable | 939 |
+| anbox-cloud-core | 1.29/stable | 949 |
 
 ### Snaps
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| ams | 1.29/candidate | 2825 | 2826 | 1.29.0-74431f0c4 |
-| ams-node-controller | 1.29/candidate | 2400 | 2401 | 1.29.0-74431f0c4 |
-| amc | latest/candidate | 2619 | 2620 | 1.29.0-74431f0c4 |
-| aar | 1.29/candidate | 2772 | 2773 | 1.29.0-74431f0c4 |
-| anbox-stream-agent | 1.29/candidate | 3042 | 3043 | 1.29.0-74431f0c4 |
-| anbox-stream-gateway | 1.29/candidate | 3007 | 3008 | 1.29.0-74431f0c4 |
-| anbox-cloud-appliance | 1.29/candidate | 2683 | 2684 | 1.29.0-74431f0c4 |
-| anbox-cloud-dashboard | 1.29/candidate | 4510 | 4511 | 1.29.0-74431f0c4 |
-| anbox-connect | latest/candidate | 1835 | 1836 | 1.29.0-74431f0c4 |
+| ams | 1.29/stable | 2825 | 2826 | 1.29.0-74431f0c4 |
+| ams-node-controller | 1.29/stable | 2400 | 2401 | 1.29.0-74431f0c4 |
+| amc | latest/stable | 2619 | 2620 | 1.29.0-74431f0c4 |
+| aar | 1.29/stable | 2772 | 2773 | 1.29.0-74431f0c4 |
+| anbox-stream-agent | 1.29/stable | 3042 | 3043 | 1.29.0-74431f0c4 |
+| anbox-stream-gateway | 1.29/stable | 3007 | 3008 | 1.29.0-74431f0c4 |
+| anbox-cloud-appliance | 1.29/stable | 2683 | 2684 | 1.29.0-74431f0c4 |
+| anbox-cloud-dashboard | 1.29/stable | 4510 | 4511 | 1.29.0-74431f0c4 |
+| anbox-connect | latest/stable | 1835 | 1836 | 1.29.0-74431f0c4 |
 
 ### Anbox images
 
