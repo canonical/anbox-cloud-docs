@@ -110,6 +110,10 @@ For everything else, accept the defaults for everything else until the bootstrap
 
 When the initialization process has finished, we can see the welcome page on the local host. Try accessing `https://multipass-machine-address` using a browser.
 
+```{important}
+Version 1.29.0 onward: If an OIDC provider is configured, dashboard user registration is not required and the steps in this section can be skipped. {ref}`sec-create-identity` in AMS instead.
+```
+
 To start using Anbox Cloud, there is still one last command we need to run to register a user account. Run the following command with your Ubuntu SSO account email address:
 
     sudo anbox-cloud-appliance dashboard register your_email@email.com
