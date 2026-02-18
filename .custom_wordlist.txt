@@ -70,6 +70,7 @@ CloudFront
 codec
 codecs
 Coturn
+CoW
 CPUs
 crashdump
 Crashpad
@@ -120,6 +121,7 @@ fullscreen
 gamepad
 gameplay
 gl
+GiB
 Golang
 GPG
 GPUs
@@ -225,6 +227,7 @@ OpenID
 OpenSSL
 OpenStack
 ory
+overcommitting
 PCI
 Perfetto
 PKI
