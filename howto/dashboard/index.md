@@ -4,6 +4,10 @@ The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage 
 
 ## Prerequisites
 
+```{important}
+Version 1.29.0 onward: If an OIDC provider is configured, dashboard user registration is not required and the steps in this section can be skipped. {ref}`sec-create-identity` in AMS instead.
+```
+
 Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to authenticate.
 
 ### Register in Anbox Cloud

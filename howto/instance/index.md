@@ -15,6 +15,7 @@ wait-for-instance
 share-session
 stop-instance
 restart-instance
+copy-instance
 view-instance-logs
 delete-instance
 backup-restore-application-data
