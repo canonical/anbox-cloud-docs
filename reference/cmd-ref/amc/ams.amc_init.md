@@ -39,6 +39,7 @@ $ amc init foo
   -m, --memory string             Memory to be assigned for the instance (for example, 3GB). If not specified, the memory specified by the instance type will be used.
       --metrics-server string     Metrics server to which the instance sends its data
       --name string               Name of the instance. Must be unique, 3–63 characters, alphanumeric or hyphens, cannot start or end with a hyphen.
+      --no-disk-reserve           Create the instance with a non-reserved disk space (default: disabled)
       --no-wait                   Don't wait for the instance to start before returning (default: disabled)
   -n, --node string               LXD node to use for creating the instance
   -p, --platform string           Anbox platform to use
