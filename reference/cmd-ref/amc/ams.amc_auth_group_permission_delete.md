@@ -17,7 +17,7 @@ ams.amc auth group permission delete <group_name> <resource_type> <resource_id> 
 ### Examples
 
 ```
-$ amc auth group permission delete test-group-1 application foo can_view
+$ amc auth group permission delete test-group-1 application foo --permissions can_view
 ```
 
 ### Options
