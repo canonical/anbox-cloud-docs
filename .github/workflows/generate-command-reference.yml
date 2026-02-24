@@ -41,6 +41,12 @@ jobs:
         sudo mkdir -p "${SNAP_DOCS_DIR}"
         sudo anbox-cloud-appliance generate documentation -f markdown -d "${SNAP_DOCS_DIR}"
         cp -r "${SNAP_DOCS_DIR}"/* "${APPLIANCE_COMMAND_REFERENCE_DIR}"
+    - name: Demote markdown headers
+      run: |
+        # Cobra generates headers starting at H2 (##), but we want them at H1 (#)
+        python3 scripts/demote_headers.py \
+          "${AMC_COMMAND_REFERENCE_DIR}" \
+          "${APPLIANCE_COMMAND_REFERENCE_DIR}"
     - name: Create pull request
       uses: canonical/create-pull-request@fdc6a8d4844a2c56566be64e90c536f1ae1bd6c3
       with:
