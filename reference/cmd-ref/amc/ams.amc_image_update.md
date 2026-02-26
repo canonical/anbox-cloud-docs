@@ -1,8 +1,8 @@
-## ams.amc image update
+# ams.amc image update
 
 Update an existing image
 
-### Synopsis
+## Synopsis
 
 Update an existing image.
 
@@ -13,13 +13,13 @@ This command replaces the specified image with the new image and bumps its versi
 ams.amc image update ( <id> | <name> ) <image_path> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image update foo foo-v2.tar.xz
 ```
 
-### Options
+## Options
 
 ```
   -d, --default          Mark image as the default image
@@ -27,7 +27,7 @@ $ amc image update foo foo-v2.tar.xz
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

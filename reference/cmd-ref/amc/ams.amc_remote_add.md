@@ -1,8 +1,8 @@
-## ams.amc remote add
+# ams.amc remote add
 
 Add a remote
 
-### Synopsis
+## Synopsis
 
 Add a remote.
 
@@ -15,13 +15,13 @@ If you set up a trust password on the daemon, you must provide it when running t
 ams.amc remote add <name> <url> [trust_password] [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc remote add local unix://
 ```
 
-### Options
+## Options
 
 ```
       --accept-certificate   Implicitly accept remote server certificate
@@ -29,7 +29,7 @@ $ amc remote add local unix://
   -h, --help                 help for add
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 

@@ -1,8 +1,8 @@
-## ams.amc application show
+# ams.amc application show
 
 Show information about a specific application
 
-### Synopsis
+## Synopsis
 
 Show information about a specific application.
 
@@ -13,7 +13,7 @@ Valid formats are 'json' and 'yaml'.
 ams.amc application show <id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc application show foo
@@ -40,14 +40,14 @@ versions:
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
   -h, --help            help for show
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 

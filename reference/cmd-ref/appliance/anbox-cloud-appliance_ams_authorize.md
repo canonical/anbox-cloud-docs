@@ -1,8 +1,8 @@
-## anbox-cloud-appliance ams authorize
+# anbox-cloud-appliance ams authorize
 
 Authorize a new user on the system to access the AMS service.
 
-### Synopsis
+## Synopsis
 
 Authorize a new user on the system to access the AMS service.
 
@@ -33,13 +33,13 @@ service.
 anbox-cloud-appliance ams authorize [<uid>] [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ sudo anbox-cloud-appliance ams authorize
 ```
 
-### Options
+## Options
 
 ```
       --force        Force deauthorizing specified UID
@@ -47,7 +47,7 @@ $ sudo anbox-cloud-appliance ams authorize
       --no-restart   Do not restart AMS after applying the change
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance ams](anbox-cloud-appliance_ams.md)	 - Manage the AMS service of the Anbox Cloud Appliance
 

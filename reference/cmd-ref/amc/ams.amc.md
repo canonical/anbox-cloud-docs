@@ -1,8 +1,8 @@
-## ams.amc
+# ams.amc
 
 Anbox Management Client
 
-### Synopsis
+## Synopsis
 
 Anbox Management Client.
 
@@ -12,13 +12,13 @@ You can use it to create, launch and manage applications on any machine.
 See https://documentation.ubuntu.com/anbox-cloud/ for more information on how to work
 with Anbox Cloud.
 
-### Options
+## Options
 
 ```
   -h, --help   help for ams.amc
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 * [ams.amc application](ams.amc_application.md)	 - Manage applications

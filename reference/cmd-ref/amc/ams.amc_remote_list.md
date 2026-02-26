@@ -1,8 +1,8 @@
-## ams.amc remote list
+# ams.amc remote list
 
 List registered remotes
 
-### Synopsis
+## Synopsis
 
 List registered remotes.
 
@@ -13,7 +13,7 @@ Valid formats are 'table' (see example), 'json' and 'csv'.
 ams.amc remote list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc remote list
@@ -25,14 +25,14 @@ $ amc remote list
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'table', 'json' or 'csv' (default "table")
   -h, --help            help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 

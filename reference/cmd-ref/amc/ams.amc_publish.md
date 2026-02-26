@@ -1,8 +1,8 @@
-## ams.amc publish
+# ams.amc publish
 
 Publish an instance as an image
 
-### Synopsis
+## Synopsis
 
 Publish an instance as an image.
 
@@ -18,7 +18,7 @@ by that ID in subsequent commands.
 ams.amc publish <instance_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
   Publish a stopped instance:
@@ -34,7 +34,7 @@ ams.amc publish <instance_id> [flags]
   $ amc publish bcnh5b2j1q001q954e70 --name my-base-image --default
 ```
 
-### Options
+## Options
 
 ```
       --default          Make the new image the default image
@@ -44,7 +44,7 @@ ams.amc publish <instance_id> [flags]
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

@@ -1,8 +1,8 @@
-## ams.amc image add
+# ams.amc image add
 
 Add an image
 
-### Synopsis
+## Synopsis
 
 Add an image.
 
@@ -15,13 +15,13 @@ After that, you can mark a new image as the default by adding the '--default' fl
 ams.amc image add <name> <image_path> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image add base path/to/image
 ```
 
-### Options
+## Options
 
 ```
   -d, --default          Mark image as the default image
@@ -30,7 +30,7 @@ $ amc image add base path/to/image
       --type string      Type of image to import. Only used when a remote image is added. Valid values are: any, container, vm (default "any")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

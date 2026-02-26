@@ -1,8 +1,8 @@
-## ams.amc completion fish
+# ams.amc completion fish
 
 Generate the autocompletion script for fish
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for the fish shell.
 
@@ -21,14 +21,14 @@ You will need to start a new shell for this setup to take effect.
 ams.amc completion fish [flags]
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for fish
       --no-descriptions   disable completion descriptions
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc completion](ams.amc_completion.md)	 - Generate the autocompletion script for the specified shell
 

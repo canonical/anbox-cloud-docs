@@ -1,18 +1,18 @@
-## ams.amc auth identity group
+# ams.amc auth identity group
 
 Manage groups for an identity
 
-### Synopsis
+## Synopsis
 
 Manage groups for an identity.
 
-### Options
+## Options
 
 ```
   -h, --help   help for group
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentiation & authorization
 * [ams.amc auth identity group add](ams.amc_auth_identity_group_add.md)	 - Add an identity to authorization groups.

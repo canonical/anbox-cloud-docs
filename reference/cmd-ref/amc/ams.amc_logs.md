@@ -1,8 +1,8 @@
-## ams.amc logs
+# ams.amc logs
 
 Show runtime logs of a running instance
 
-### Synopsis
+## Synopsis
 
 Show runtime logs of a running instance.
 
@@ -16,7 +16,7 @@ NOTE: The specified instance must be in the 'started' or 'running' state for thi
 ams.amc logs <instance_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 Show the runtime logs of the Ubuntu instance:
@@ -33,7 +33,7 @@ $ amc logs -f burp70p3p7j1icvtebig
 
 ```
 
-### Options
+## Options
 
 ```
   -f, --follow        Show only the most recent log entries and continuously print new entries as they are appended to the log
@@ -41,7 +41,7 @@ $ amc logs -f burp70p3p7j1icvtebig
   -t, --type string   Type of logs to show: anbox, android, console, container (default "anbox")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

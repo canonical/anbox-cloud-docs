@@ -1,8 +1,8 @@
-## anbox-cloud-appliance ams deauthorize
+# anbox-cloud-appliance ams deauthorize
 
 Deauthorize a user on the system from accessing the AMS service.
 
-### Synopsis
+## Synopsis
 
 Deauthorize a user on the system from accessing the AMS service.
 
@@ -27,13 +27,13 @@ will no longer have access to the AMS service over its UNIX domain socket.
 anbox-cloud-appliance ams deauthorize [<uid>] [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ sudo anbox-cloud-appliance ams deauthorize 1000
 ```
 
-### Options
+## Options
 
 ```
       --force        Force deauthorizing specified UID
@@ -41,7 +41,7 @@ $ sudo anbox-cloud-appliance ams deauthorize 1000
       --no-restart   Do not restart AMS after applying the change
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance ams](anbox-cloud-appliance_ams.md)	 - Manage the AMS service of the Anbox Cloud Appliance
 

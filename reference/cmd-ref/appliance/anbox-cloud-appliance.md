@@ -1,8 +1,8 @@
-## anbox-cloud-appliance
+# anbox-cloud-appliance
 
 Anbox Cloud Appliance, bringing Android at scale to any cloud
 
-### Synopsis
+## Synopsis
 
 Command-Line client for the Anbox Cloud Appliance
 
@@ -20,13 +20,13 @@ and stream graphical output in real time to any web or mobile client. Unleash yo
 creativity to invent new mobile user experiences with Anbox Cloud Appliance.
 
 
-### Options
+## Options
 
 ```
   -h, --help   help for anbox-cloud-appliance
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance ams](anbox-cloud-appliance_ams.md)	 - Manage the AMS service of the Anbox Cloud Appliance
 * [anbox-cloud-appliance buginfo](anbox-cloud-appliance_buginfo.md)	 - Collection information for effective bug reports
