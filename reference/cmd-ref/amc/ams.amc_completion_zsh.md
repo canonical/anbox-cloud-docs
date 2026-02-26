@@ -1,8 +1,8 @@
-## ams.amc completion zsh
+# ams.amc completion zsh
 
 Generate the autocompletion script for zsh
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for the zsh shell.
 
@@ -17,11 +17,11 @@ To load completions in your current shell session:
 
 To load completions for every new session, execute once:
 
-#### Linux:
+### Linux:
 
 	ams.amc completion zsh > "${fpath[1]}/_ams.amc"
 
-#### macOS:
+### macOS:
 
 	ams.amc completion zsh > $(brew --prefix)/share/zsh/site-functions/_ams.amc
 
@@ -32,14 +32,14 @@ You will need to start a new shell for this setup to take effect.
 ams.amc completion zsh [flags]
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for zsh
       --no-descriptions   disable completion descriptions
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc completion](ams.amc_completion.md)	 - Generate the autocompletion script for the specified shell
 

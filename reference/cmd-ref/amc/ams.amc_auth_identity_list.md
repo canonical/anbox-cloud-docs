@@ -1,8 +1,8 @@
-## ams.amc auth identity list
+# ams.amc auth identity list
 
 List identities
 
-### Synopsis
+## Synopsis
 
 List identities.
 
@@ -27,7 +27,7 @@ They are of the following form:
 ams.amc auth identity list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth identity ls
@@ -44,7 +44,7 @@ $ amc auth identity ls
 $ amc auth identity list --filter auth_type=oidc
 ```
 
-### Options
+## Options
 
 ```
   -f, --filter stringArray   Filter the output based on conditions (for example, 'auth_type=oidc')
@@ -52,7 +52,7 @@ $ amc auth identity list --filter auth_type=oidc
   -h, --help                 help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentiation & authorization
 

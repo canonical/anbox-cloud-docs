@@ -1,8 +1,8 @@
-## ams.amc image switch
+# ams.amc image switch
 
 Set the default image
 
-### Synopsis
+## Synopsis
 
 Set the default image.
 
@@ -14,19 +14,19 @@ specified in the application manifest, or when launching a raw container without
 ams.amc image switch <id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image switch foo
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for switch
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

@@ -1,8 +1,8 @@
-## anbox-cloud-appliance completion zsh
+# anbox-cloud-appliance completion zsh
 
 Generate the autocompletion script for zsh
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for the zsh shell.
 
@@ -17,11 +17,11 @@ To load completions in your current shell session:
 
 To load completions for every new session, execute once:
 
-#### Linux:
+### Linux:
 
 	anbox-cloud-appliance completion zsh > "${fpath[1]}/_anbox-cloud-appliance"
 
-#### macOS:
+### macOS:
 
 	anbox-cloud-appliance completion zsh > $(brew --prefix)/share/zsh/site-functions/_anbox-cloud-appliance
 
@@ -32,14 +32,14 @@ You will need to start a new shell for this setup to take effect.
 anbox-cloud-appliance completion zsh [flags]
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for zsh
       --no-descriptions   disable completion descriptions
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance completion](anbox-cloud-appliance_completion.md)	 - Generate the autocompletion script for the specified shell
 

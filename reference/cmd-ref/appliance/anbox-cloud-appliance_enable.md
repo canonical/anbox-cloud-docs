@@ -1,8 +1,8 @@
-## anbox-cloud-appliance enable
+# anbox-cloud-appliance enable
 
 Enable individual features of the Anbox Cloud Appliance
 
-### Synopsis
+## Synopsis
 
 Enable individual features of the Anbox Cloud Appliance
 
@@ -30,19 +30,19 @@ operations to be interrupted until they are back running.
 anbox-cloud-appliance enable [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ sudo anbox-cloud-appliance enable metrics
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for enable
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 

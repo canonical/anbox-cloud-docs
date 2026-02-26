@@ -1,8 +1,8 @@
-## ams.amc application list
+# ams.amc application list
 
 List created applications
 
-### Synopsis
+## Synopsis
 
 List created applications.
 
@@ -36,7 +36,7 @@ They are of the following form:
 ams.amc application list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc application list
@@ -50,7 +50,7 @@ $ amc application list --filter published=true
 
 ```
 
-### Options
+## Options
 
 ```
   -f, --filter stringArray   Filter the output based on conditions (for example, 'published=true')
@@ -58,7 +58,7 @@ $ amc application list --filter published=true
   -h, --help                 help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 

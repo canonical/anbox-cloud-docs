@@ -1,8 +1,8 @@
-## ams.amc exec
+# ams.amc exec
 
 Execute a command inside an instance
 
-### Synopsis
+## Synopsis
 
 Execute a command inside an instance.
 
@@ -19,20 +19,20 @@ pass the actual command as an argument (see the example below).
 ams.amc exec <instance_id> [--] <command> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc exec <instance_id> -- sh -c "cd /tmp && pwd"
 ```
 
-### Options
+## Options
 
 ```
   -T, --force-noninteractive   Disable pseudo-terminal allocation
   -h, --help                   help for exec
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

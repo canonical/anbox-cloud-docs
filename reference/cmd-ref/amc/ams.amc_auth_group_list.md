@@ -1,8 +1,8 @@
-## ams.amc auth group list
+# ams.amc auth group list
 
 List authorization groups in AMS
 
-### Synopsis
+## Synopsis
 
 List authorization groups in AMS.
 
@@ -26,7 +26,7 @@ They are of the following form:
 ams.amc auth group list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth group ls
@@ -40,7 +40,7 @@ $ amc auth group ls
 $ amc auth group list --filter name=test-group
 ```
 
-### Options
+## Options
 
 ```
   -f, --filter stringArray   Filter the output based on conditions (for example, 'name=test-group')
@@ -48,7 +48,7 @@ $ amc auth group list --filter name=test-group
   -h, --help                 help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth group](ams.amc_auth_group.md)	 - Manage authorization groups in AMS
 

@@ -1,4 +1,4 @@
-## ams.amc remote remove
+# ams.amc remote remove
 
 Remove a registered remote
 
@@ -6,19 +6,19 @@ Remove a registered remote
 ams.amc remote remove <name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc remote remove foo
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for remove
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 

@@ -1,8 +1,8 @@
-## ams.amc image sync
+# ams.amc image sync
 
 Synchronizes the image with the remote image server
 
-### Synopsis
+## Synopsis
 
 Synchronizes the image with the remote image server.
 
@@ -15,19 +15,19 @@ downloaded to the cluster from the remote server.
 ams.amc image sync <id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image sync foo
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for sync
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

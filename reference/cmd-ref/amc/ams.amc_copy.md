@@ -1,8 +1,8 @@
-## ams.amc copy
+# ams.amc copy
 
 Copy an instance
 
-### Synopsis
+## Synopsis
 
 Copy an existing instance to a new one.
 
@@ -18,7 +18,7 @@ and will not include the logs from the source instance.
 ams.amc copy <instance_id_or_name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 
@@ -35,7 +35,7 @@ ams.amc copy <instance_id_or_name> [flags]
   $ amc copy bcnh5b2j1q001q954e70 --name my-clone --node lxd2
 ```
 
-### Options
+## Options
 
 ```
       --config stringArray      Instance configuration, e.g., security.delete_protected=true (can be used multiple times)
@@ -70,7 +70,7 @@ ams.amc copy <instance_id_or_name> [flags]
   -v, --vpu-slots int           Number of VPU slots to be assigned for the instance (for example, 1). If not specified, the number of VPU slots specified by the instance type will be used. (default -1)
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

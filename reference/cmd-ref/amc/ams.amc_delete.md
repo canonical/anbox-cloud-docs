@@ -1,4 +1,4 @@
-## ams.amc delete
+# ams.amc delete
 
 Delete an instance
 
@@ -6,7 +6,7 @@ Delete an instance
 ams.amc delete <instance_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc delete bkm6mj1hpuo01q954fl0
@@ -16,7 +16,7 @@ Do you want to continue? [Y/n]:
 
 ```
 
-### Options
+## Options
 
 ```
   -a, --all              Delete all existing instances
@@ -28,7 +28,7 @@ Do you want to continue? [Y/n]:
   -y, --yes              Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

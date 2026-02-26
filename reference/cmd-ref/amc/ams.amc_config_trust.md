@@ -1,21 +1,21 @@
-## ams.amc config trust
+# ams.amc config trust
 
 Manage trusted clients
 
-### Synopsis
+## Synopsis
 
 Manage trusted clients.
 
 Clients must be trusted to communicate with AMS.
 Add or remove client certificates to allow or prevent communication with AMS.
 
-### Options
+## Options
 
 ```
   -h, --help   help for trust
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc config](ams.amc_config.md)	 - Manage AMS configuration
 * [ams.amc config trust add](ams.amc_config_trust_add.md)	 - Add a trusted client

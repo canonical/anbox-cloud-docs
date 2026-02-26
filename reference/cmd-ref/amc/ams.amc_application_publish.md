@@ -1,8 +1,8 @@
-## ams.amc application publish
+# ams.amc application publish
 
 Mark an application version as published
 
-### Synopsis
+## Synopsis
 
 Mark an application version as published.
 
@@ -18,20 +18,20 @@ If you publish a wrong version, you can revert it with the 'application revoke' 
 ams.amc application publish <id> <version> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc application publish foo 0
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for publish
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 

@@ -1,8 +1,8 @@
-## ams.amc addon list
+# ams.amc addon list
 
 List available addons
 
-### Synopsis
+## Synopsis
 
 List available addons.
 
@@ -14,7 +14,7 @@ Valid formats are 'table' (see example), 'json' and 'csv'.
 ams.amc addon list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc addon list
@@ -26,14 +26,14 @@ $ amc addon list
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'table', 'json' or 'csv' (default "table")
   -h, --help            help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 
