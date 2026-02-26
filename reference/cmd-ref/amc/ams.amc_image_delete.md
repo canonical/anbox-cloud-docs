@@ -1,8 +1,8 @@
-## ams.amc image delete
+# ams.amc image delete
 
 Delete an image
 
-### Synopsis
+## Synopsis
 
 Delete an image.
 
@@ -17,7 +17,7 @@ the '--force'|'-f' flag.
 ams.amc image delete ( <id> | <name> ) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image delete foo
@@ -27,7 +27,7 @@ Do you want to continue? [Y/n]:
 
 ```
 
-### Options
+## Options
 
 ```
   -f, --force            Force the deletion of immutable images
@@ -38,7 +38,7 @@ Do you want to continue? [Y/n]:
   -y, --yes              Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

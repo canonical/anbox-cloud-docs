@@ -1,8 +1,8 @@
-## ams.amc config
+# ams.amc config
 
 Manage AMS configuration
 
-### Synopsis
+## Synopsis
 
 Manage AMS configuration.
 
@@ -12,13 +12,13 @@ Get and set global configuration items for the Anbox Management Service
 See https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/ams-configuration/ for a list of
 available configuration items.
 
-### Options
+## Options
 
 ```
   -h, --help   help for config
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 * [ams.amc config set](ams.amc_config_set.md)	 - Set a single configuration item

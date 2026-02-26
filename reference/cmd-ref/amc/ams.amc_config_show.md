@@ -1,4 +1,4 @@
-## ams.amc config show
+# ams.amc config show
 
 Show all configuration items
 
@@ -6,7 +6,7 @@ Show all configuration items
 ams.amc config show [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc config show
@@ -30,13 +30,13 @@ config:
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for show
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc config](ams.amc_config.md)	 - Manage AMS configuration
 

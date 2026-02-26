@@ -1,8 +1,8 @@
-## ams.amc launch
+# ams.amc launch
 
 Launch an instance
 
-### Synopsis
+## Synopsis
 
 Launch an instance.
 
@@ -23,7 +23,7 @@ information about instances.
 ams.amc launch ( <app_id> | <image_id> ) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc launch foo --enable-graphics
@@ -35,7 +35,7 @@ $ amc launch foo --enable-graphics --userdata '{"display_width":1920, "display_h
 $ amc launch foo --service tcp:8080 --service tcp,udp:9000-9100 --addons bar --raw
 ```
 
-### Options
+## Options
 
 ```
   -a, --addons string             Comma-separated list of addons to install in the instance (raw instances only)
@@ -73,7 +73,7 @@ $ amc launch foo --service tcp:8080 --service tcp,udp:9000-9100 --addons bar --r
   -v, --vpu-slots int             Number of VPU slots to be assigned for the instance (for example, 1). If not specified, the number of VPU slots specified by the instance type will be used. (default -1)
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

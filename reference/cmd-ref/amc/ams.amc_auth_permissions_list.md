@@ -1,8 +1,8 @@
-## ams.amc auth permissions list
+# ams.amc auth permissions list
 
 List permissions for the current identity
 
-### Synopsis
+## Synopsis
 
 List permissions for the current identity.
 
@@ -16,7 +16,7 @@ Valid formats are 'table' (default), 'json' and 'csv'.
 ams.amc auth permissions list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth permissions list
@@ -32,14 +32,14 @@ $ amc auth permissions list --format json
 $ amc auth permissions list --format csv
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'table', 'json' or 'csv' (default "table")
   -h, --help            help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth permissions](ams.amc_auth_permissions.md)	 - Manage permissions
 

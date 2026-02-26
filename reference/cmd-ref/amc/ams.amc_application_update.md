@@ -1,8 +1,8 @@
-## ams.amc application update
+# ams.amc application update
 
 Update an existing application
 
-### Synopsis
+## Synopsis
 
 Update an existing application.
 
@@ -21,7 +21,7 @@ to update specific fields of the application without updating the application.
 ams.amc application update <id> [<package_path>] [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ tree foo-app
@@ -33,14 +33,14 @@ $ amc application update foo foo-app/
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for update
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 

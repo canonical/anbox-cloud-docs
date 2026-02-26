@@ -1,8 +1,8 @@
-## ams.amc addon delete
+# ams.amc addon delete
 
 Delete an existing addon
 
-### Synopsis
+## Synopsis
 
 Delete an existing addon.
 
@@ -13,7 +13,7 @@ Non-interactive deletion can be achieved with the '--yes'/'-y' flag.
 ams.amc addon delete <name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc addon delete foo
@@ -23,7 +23,7 @@ Do you want to continue? [Y/n]: Y
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for delete
@@ -32,7 +32,7 @@ Do you want to continue? [Y/n]: Y
   -y, --yes              Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 

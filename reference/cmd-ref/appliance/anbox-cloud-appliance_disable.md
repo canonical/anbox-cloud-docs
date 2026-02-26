@@ -1,8 +1,8 @@
-## anbox-cloud-appliance disable
+# anbox-cloud-appliance disable
 
 Disable individual features of the Anbox Cloud Appliance
 
-### Synopsis
+## Synopsis
 
 Disable individual features of the Anbox Cloud Appliance
 
@@ -29,19 +29,19 @@ operations to be interrupted until they are back running.
 anbox-cloud-appliance disable [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ sudo anbox-cloud-appliance disable metrics
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for disable
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 

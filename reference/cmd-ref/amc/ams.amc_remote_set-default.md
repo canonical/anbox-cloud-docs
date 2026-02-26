@@ -1,8 +1,8 @@
-## ams.amc remote set-default
+# ams.amc remote set-default
 
 Set default remote
 
-### Synopsis
+## Synopsis
 
 Set default remote.
 
@@ -13,19 +13,19 @@ The default remote is the primary remote used for requests via AMC.
 ams.amc remote set-default <name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc remote set-default foo
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for set-default
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 

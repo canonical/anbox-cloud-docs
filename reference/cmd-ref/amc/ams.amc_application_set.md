@@ -1,8 +1,8 @@
-## ams.amc application set
+# ams.amc application set
 
 Update fields for an application
 
-### Synopsis
+## Synopsis
 
 Update fields for an application.
 
@@ -15,19 +15,19 @@ The following fields can be updated: image, instance-type, addons, tags, inhibit
 ams.amc application set <id> <field> <value> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc application set foo instance-type a4.3
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for set
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 
