@@ -25,6 +25,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 * {ref}`ref-network-ports`
 * {ref}`ref-addon-manifest`
 * {ref}`ref-hooks`
+* {ref}`ref-stream-page-actions`
 
 ## Authorization
 
@@ -111,6 +112,7 @@ release-notes/release-notes.md
 requirements
 security-notices
 security-policy
+stream-page-actions
 android-features
 Supported features <anbox-features>
 supported-rendering-resources
