@@ -33,7 +33,7 @@ Since 1.28.0, you can download a bug report bundle that contains files necessary
 
 This diagnostic facility is available in the Anbox Cloud dashboard from the streaming and the instance details pages. Depending on where you download the bug report from, the files in the download bundle will vary.
 
-When you download the bug report from the *Stream page > Actions > Bug Report* menu, the report gives you logs from the Anbox and Android instances, metrics data from Anbox, the event logs from the WebRTC connection, WebRTC statistics, metadata from the dashboard. These help you diagnose any issues with the stream or your connection.
+When you download the bug report from the *Stream page > Right sidebar > Bug Report* menu, the report gives you logs from the Anbox and Android instances, metrics data from Anbox, the event logs from the WebRTC connection, WebRTC statistics, metadata from the dashboard. These help you diagnose any issues with the stream or your connection.
 
 When you download from the *Instance details page > Bug Report*, the report gives you all the files except the ones related to the WebRTC statistics and connection event logs. This is the bug report you need to download when your instance is in an error state.
 

@@ -14,6 +14,7 @@ delete-application
 extend-application
 list-applications
 stream-application
+stream-page-actions
 test-application
 update-application
 Pass custom data <pass-custom-data>

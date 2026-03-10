@@ -337,7 +337,7 @@ Before the stream starts, there may be a warning from your browser to accept the
 
  Now, you should be able to interact with the Android virtual device. If we had used an APK, the application interface would be visible directly.
 
-On the stream page, we can see options for:
+On the stream page, inside the right sidebar, we can see options for:
 
 - Sharing the stream with others
 - Setting up an authenticated connection using the Android Debug Bridge (ADB)
