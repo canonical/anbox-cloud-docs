@@ -15,7 +15,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Set up Anbox Cloud
-      uses: canonical/anbox-cloud-github-action@ac73782f4b581a69aa12650bda5eccc865cd038d
+      uses: canonical/anbox-cloud-github-action@ded37ace13709f90281baa9db7379c76ecef7cf1
       with:
         channel: latest/stable
     - name: Determine appliance version
@@ -48,7 +48,7 @@ jobs:
           "${AMC_COMMAND_REFERENCE_DIR}" \
           "${APPLIANCE_COMMAND_REFERENCE_DIR}"
     - name: Create pull request
-      uses: canonical/create-pull-request@fdc6a8d4844a2c56566be64e90c536f1ae1bd6c3
+      uses: canonical/create-pull-request@d15321247d5ba386a080726e62fe730ce10e9ef9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update command reference documentation from ${{ steps.snap_version.outputs.value }}"
