@@ -5,6 +5,39 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.29.1
+
+No new versions of charms are released with 1.29.1.
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/stable | 2872 | 2871 | `1.29.1-52bc9243f` |
+| ams-node-controller | 1.29/stable | 2447 | 2446 | `1.29.1-52bc9243f` |
+| amc | latest/stable | 2666 | 2665 | `1.29.1-52bc9243f` |
+| aar | 1.29/stable | 2819 | 2818 | `1.29.1-52bc9243f` |
+| anbox-stream-agent | 1.29/stable | 3089 | 3088 | `1.29.1-52bc9243f` |
+| anbox-stream-gateway | 1.29/stable | 3054 | 3053 | `1.29.1-52bc9243f` |
+| anbox-cloud-appliance | 1.29/stable | 2730 | 2729 | `1.29.1-52bc9243f` |
+| anbox-cloud-dashboard | 1.29/stable | 4557 | 4556 | `1.29.1-52bc9243f` |
+| anbox-connect | latest/stable | 1882 | 1881 | `1.29.1-52bc9243f` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:aaos15:arm64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android15:amd64` | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android15:arm64` | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:aaos14:amd64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:aaos14:arm64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android14:amd64` | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android14:arm64` | `1.29.1-20260309214816.git3a659fb` |
+
 ## 1.29.0
 
 ### Charms
