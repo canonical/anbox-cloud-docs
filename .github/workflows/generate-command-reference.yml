@@ -48,7 +48,7 @@ jobs:
           "${AMC_COMMAND_REFERENCE_DIR}" \
           "${APPLIANCE_COMMAND_REFERENCE_DIR}"
     - name: Create pull request
-      uses: canonical/create-pull-request@d15321247d5ba386a080726e62fe730ce10e9ef9
+      uses: canonical/create-pull-request@214a47c7e33f3066cc650834a052377912cdccf2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update command reference documentation from ${{ steps.snap_version.outputs.value }}"
