@@ -45,7 +45,7 @@ Create a `deploy.tfvars` file and provide necessary configuration values to the 
 
     ubuntu_pro_token = "<your_ubuntu_pro_token>"
     constraints      = ["arch=amd64"]
-    anbox_channel    = "1.27/stable" // Channel to use for deploying Anbox Cloud
+    anbox_channel    = "1.29/stable" // Channel to use for deploying Anbox Cloud
     subclusters = [
       {
         name           = "a" // Suffix for the Juju model designated to an Anbox Subcluster
@@ -89,7 +89,7 @@ To add another subcluster, modify the `deploy.tfvars` file:
 
     ubuntu_pro_token = "<your_ubuntu_pro_token>"
     constraints      = ["arch=amd64"]
-    anbox_channel    = "1.27/stable" // Channel to use for deploying Anbox Cloud
+    anbox_channel    = "1.29/stable" // Channel to use for deploying Anbox Cloud
     subclusters = [
       {
         name           = "a" // Suffix for the Juju model designated to an Anbox Subcluster
@@ -120,7 +120,7 @@ To deploy the AAR alongside Anbox Cloud, set the `registry_config` and `deploy_r
 
     ubuntu_pro_token = "<your_ubuntu_pro_token>"
     constraints      = ["arch=amd64"]
-    anbox_channel    = "1.27/stable" // Channel to use for deploying Anbox Cloud
+    anbox_channel    = "1.29/stable" // Channel to use for deploying Anbox Cloud
     subclusters = [
       {
         name           = "a"
