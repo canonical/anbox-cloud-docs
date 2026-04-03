@@ -70,3 +70,10 @@ Starting from 1.29.0, all new Anbox Cloud deployments must use modernized operat
 * [self-signed-certificates](https://charmhub.io/self-signed-certificates) to replace `easy-rsa`
 
 This transition provides a two-year migration window before legacy charms become completely unsupported. Anbox Cloud 1.34.2 will be the last release that supports deployments using legacy charms. Starting from Anbox Cloud 1.35.0, Anbox Cloud deployments will exclusively support modernized charms.
+
+## Applications, Addons and Registry in AMS
+*Deprecated in 1.31.0* ; *Unsupported in 1.32.0*
+
+Support for [applications](/howto/application/index.md), [addons](/howto/addons/index.md), and Anbox Application Registry [AAR](/howto/aar/index.md) is deprecated as of version 1.31.0.
+- In 1.31.0: Creating applications and registry management via the Anbox Cloud dashboard is disabled. However, applications, addons, and registry management remains functional through the CLI for transition purposes.
+- In 1.32.0: All support for applications, addons and registry will be officially removed. Users will no longer be able to create, manage, or utilize these features via the CLI or dashboard.
