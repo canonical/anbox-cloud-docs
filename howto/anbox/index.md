@@ -12,6 +12,7 @@ harden
 resize-storage
 benchmarks
 tls-for-appliance
+scx
 ```
 
 You can also refer to {ref}`ref-cmd-ref` for commands that you can use with the CLI.

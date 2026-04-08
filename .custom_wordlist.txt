@@ -76,6 +76,7 @@ Crashpad
 cryptographic
 CSV
 CTS
+Ctrl
 CUDA
 CustomLocale
 CVE
@@ -100,6 +101,7 @@ DRM
 easyrsa
 EasyRSA
 EBS
+EEVDF
 EFI
 EFS
 EGL
