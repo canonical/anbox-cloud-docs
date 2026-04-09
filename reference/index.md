@@ -20,6 +20,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 * {ref}`ref-rendering-resources`
 * {ref}`ref-codecs`
 * {ref}`ref-android-features`
+* {ref}`ref-compatibility-considerations`
 * {ref}`AOSP vs AAOS images <ref-aosp-aaos>`
 * {ref}`ref-sdks`
 * {ref}`ref-network-ports`
@@ -112,6 +113,7 @@ requirements
 security-notices
 security-policy
 android-features
+compatibility-considerations
 Supported features <anbox-features>
 supported-rendering-resources
 supported-codecs
