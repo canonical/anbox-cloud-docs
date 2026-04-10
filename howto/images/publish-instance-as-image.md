@@ -90,7 +90,7 @@ List Android devices within Anbox instance with adb:
 Navigate to the *Instances* page. Create and start an instance from an existing image.
 Alternatively, you can also navigate to the *Images* page, find the image you want to use as a base, and create an instance ( ![create instance icon](/images/icons/create-instance-icon.png) ).
 
-Wait until the instance starts *running*, then click on the instance name. In *Instance details > *Terminal*, make any modifications you want to include in the new image (e.g. install a package, create a file).
+Wait until the instance starts *running*, then click on the instance name. In *Instance details* > *Terminal*, make any modifications you want to include in the new image (e.g. install a package, create a file).
 
 When you're done, publish ( ![publish instance icon](/images/icons/publish-instance-icon.png) ) the instance from the *Instances* page. When publishing, you will be able to customize the image name.
 
