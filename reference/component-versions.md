@@ -43,17 +43,17 @@ Not all components are updated with each release. When components are not update
 
 ### Snaps
 
-| Name | Channel | Version |
-|------|---------|---------|
-| ams | 1.29/stable | `1.29.2-2a7994069` |
-| ams-node-controller | 1.29/stable | `1.29.2-2a7994069` |
-| amc | latest/stable    | `1.29.2-2a7994069` |
-| aar | 1.29/stable | `1.29.2-2a7994069` |
-| anbox-stream-agent | 1.29/stable | `1.29.2-2a7994069` |
-| anbox-stream-gateway | 1.29/stable | `1.29.2-2a7994069` |
-| anbox-cloud-appliance | 1.29/stable | `1.29.2-2a7994069` |
-| anbox-cloud-dashboard | 1.29/stable | `1.29.2-2a7994069` |
-| anbox-connect | latest/stable | `1.29.2-2a7994069` |
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/stable | 2918 | 2917 | 1.29.2-2a7994069 |
+| ams-node-controller | 1.29/stable | 2493 | 2492 | 1.29.2-2a7994069 |
+| amc | latest/stable | 2712 | 2711 | 1.29.2-2a7994069 |
+| aar | 1.29/stable | 2865 | 2864 | 1.29.2-2a7994069 |
+| anbox-stream-agent | 1.29/stable | 3135 | 3134 | 1.29.2-2a7994069 |
+| anbox-stream-gateway | 1.29/stable | 3100 | 3099 | 1.29.2-2a7994069 |
+| anbox-cloud-appliance | 1.29/stable | 2776 | 2775 | 1.29.2-2a7994069 |
+| anbox-cloud-dashboard | 1.29/stable | 4603 | 4602 | 1.29.2-2a7994069 |
+| anbox-connect | latest/stable | 1928 | 1927 | 1.29.2-2a7994069 |
 
 ### Anbox images
 
