@@ -1,8 +1,8 @@
-## ams.amc auth group create
+# ams.amc auth group create
 
 Create a new group in AMS
 
-### Synopsis
+## Synopsis
 
 Create a new group to manage access in AMS.
 
@@ -14,20 +14,20 @@ for a collection of identities in AMS.
 ams.amc auth group create <group_name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth group create test --description 'this is a new group'
 ```
 
-### Options
+## Options
 
 ```
   -d, --description string   A description for the authorization group
   -h, --help                 help for create
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth group](ams.amc_auth_group.md)	 - Manage authorization groups in AMS
 

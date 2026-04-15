@@ -8,7 +8,7 @@ The following instructions will walk you through how to set up data channels and
 
 ## Prepare your web application
 
-This guide builds upon the [streaming client setup tutorial](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/) for Anbox Cloud. Ensure you have completed the setup of a web-based streaming client as described in the tutorial till the [step where you set up stream client](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/#implement-the-stream-client).
+This guide builds upon the [streaming client setup tutorial](https://documentation.ubuntu.com/anbox-cloud/tutorial/stream-client/) for Anbox Cloud. Ensure you have completed the setup of a web-based streaming client as described in the tutorial till the [step where you set up stream client](https://documentation.ubuntu.com/anbox-cloud/tutorial/stream-client/#implement-the-stream-client).
 
 ### Extend `AnboxStream` Configuration
 
@@ -133,7 +133,7 @@ This enables data exchange between a service running on the Anbox instance and t
 
 In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project. You can either:
 - compile and modify the example application to meet your needs.
-- use the pre-built out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/stream/exchange-oob-data/#run-end-to-end-test).
+- use the pre-built out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/howto/stream/exchange-oob-data/#run-end-to-end-test).
 
 To build up the communication bridge between an Android application and the web client, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`.  This daemon is responsible for:
 
@@ -166,7 +166,7 @@ Whenever the availability of data channels changes, a broadcast is sent out to t
 | `event`                  | string                                          | Can be `created` (which means the data channels are created and open for Android applications to use) or `destroyed` (which means that the data channels are closed and destroyed) |
 | `data-channel-names`     | string array                                    | Comma-separated list of data channel names that identify the changed data channels
 
-Your Android application is required to implement a subclass of the [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#effects-process-state), which responds to the above events that are sent by the Android system.
+Your Android application is required to implement a subclass of the [`BroadcastReceiver`](https://developer.android.com/develop/background-work/background-tasks/broadcasts#effects-process-state), which responds to the above events that are sent by the Android system.
 
 ```
 public class DataChannelEventReceiver extends BroadcastReceiver {
@@ -361,7 +361,7 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
 
          amc ls --filter name=test-oobv2 --format=csv | awk -F',' '{split($6, r, "="); print r[2]}'
 
-  1. Launch the stream client that extends to [create the `foo` data channel](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/stream/exchange-oob-data/#prepare-your-web-application) by opening `https://<appliance_private_ip>:8080/<session_id>` in your browser. Please replace `<session_id>` with the session ID retrieved above.
+  1. Launch the stream client that extends to [create the `foo` data channel](https://documentation.ubuntu.com/anbox-cloud/howto/stream/exchange-oob-data/#prepare-your-web-application) by opening `https://<appliance_private_ip>:8080/<session_id>` in your browser. Please replace `<session_id>` with the session ID retrieved above.
   1. Once the WebRTC connection is established, open the Out of Band v2 application in the Android container. enter 'foo' as the channel name in the line edit widget, then click the *CONNECT* button. Check if a toast message saying 'Channel "foo" is connected' appears.
   1. Next, in the edit text widget, enter 'hello' as the text and click *SEND*. In the web client console, verify if the message is printed.
   1. In the web client, type 'world' in the text box and click *Send*, Then, check the Android application to see if the message appears in the *Received Data* edit box.

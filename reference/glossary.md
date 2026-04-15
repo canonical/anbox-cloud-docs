@@ -86,7 +86,7 @@ Android Archive (AAR)
 Android Debug Bridge (ADB)
     A command-line tool that is included in the Android SDK Platform-Tools package and that allows to connect to and communicate with an Android device from your computer.
 
-    See [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) in the Android developer documentation.
+    See [Android Debug Bridge (ADB)](https://developer.android.com/tools/adb) in the Android developer documentation.
 
 Android Package Kit (APK)
     The file format used to package apps for the Android operating system.

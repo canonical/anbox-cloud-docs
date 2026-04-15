@@ -1,21 +1,21 @@
-## anbox-cloud-appliance dashboard
+# anbox-cloud-appliance dashboard
 
 Manage the dashboard of the Anbox Cloud Appliance
 
-### Synopsis
+## Synopsis
 
 Manage the dashboard of the Anbox Cloud Appliance
 
 Provides subcommands used to manage the dasboard of the Anbox Cloud Appliance.
 This includes management of users allowed to access the dashboard.
 
-### Options
+## Options
 
 ```
   -h, --help   help for dashboard
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 * [anbox-cloud-appliance dashboard export-identities](anbox-cloud-appliance_dashboard_export-identities.md)	 - Export user identities from the Anbox Cloud dashboard

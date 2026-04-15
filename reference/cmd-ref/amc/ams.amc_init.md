@@ -1,8 +1,8 @@
-## ams.amc init
+# ams.amc init
 
 Create an instance but do not start it immediately
 
-### Synopsis
+## Synopsis
 
 Create an instance but do not start it immediately. To start such an instance, run 'amc start <instance_id>'.
 
@@ -10,13 +10,13 @@ Create an instance but do not start it immediately. To start such an instance, r
 ams.amc init ( <app_id> | <image_id> ) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc init foo
 ```
 
-### Options
+## Options
 
 ```
   -a, --addons string             Comma-separated list of addons to install in the instance (raw instances only)
@@ -39,6 +39,7 @@ $ amc init foo
   -m, --memory string             Memory to be assigned for the instance (for example, 3GB). If not specified, the memory specified by the instance type will be used.
       --metrics-server string     Metrics server to which the instance sends its data
       --name string               Name of the instance. Must be unique, 3–63 characters, alphanumeric or hyphens, cannot start or end with a hyphen.
+      --no-disk-reserve           Create the instance with a non-reserved disk space (default: disabled)
       --no-wait                   Don't wait for the instance to start before returning (default: disabled)
   -n, --node string               LXD node to use for creating the instance
   -p, --platform string           Anbox platform to use
@@ -53,7 +54,7 @@ $ amc init foo
   -v, --vpu-slots int             Number of VPU slots to be assigned for the instance (for example, 1). If not specified, the number of VPU slots specified by the instance type will be used. (default -1)
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

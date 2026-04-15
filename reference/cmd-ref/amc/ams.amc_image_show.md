@@ -1,8 +1,8 @@
-## ams.amc image show
+# ams.amc image show
 
 Show information about an image
 
-### Synopsis
+## Synopsis
 
 Show information about an image.
 
@@ -13,7 +13,7 @@ Valid formats are 'json' and 'yaml'.
 ams.amc image show ( <id> | <name> ) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image show foo
@@ -34,7 +34,7 @@ variant: android
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
@@ -42,7 +42,7 @@ variant: android
       --vm              Show the virtual machine image instead of a container image
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

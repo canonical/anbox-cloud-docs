@@ -2,7 +2,7 @@
 # Upgrade charmed deployment
 
 ```{note}
-If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on the Ubuntu discourse.
+If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/project/anbox-cloud/49) on the Ubuntu discourse.
 ```
 
 Anbox Cloud supports only the latest release. This means that we support upgrades from n-1 to nth minor version, where n is the most recent minor version released.
@@ -22,7 +22,7 @@ Read the release notes for your target version to learn about important changes 
 ### Upgrade Juju
 
 Check the [required Juju version](https://documentation.ubuntu.com/anbox-cloud/reference/requirements/#juju).
-If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-models/#upgrade-a-model) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
+If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-models/) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
 ### Upgrade OS
 

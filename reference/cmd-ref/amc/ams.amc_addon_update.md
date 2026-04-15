@@ -1,4 +1,4 @@
-## ams.amc addon update
+# ams.amc addon update
 
 Update an existing addon
 
@@ -6,7 +6,7 @@ Update an existing addon
 ams.amc addon update <name> <addon_path> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ tree addon
@@ -19,14 +19,14 @@ $ amc addon update foo addon/
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for update
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 

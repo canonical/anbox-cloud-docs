@@ -28,7 +28,7 @@ An [overlay bundle](https://juju.is/docs/juju/bundle) is a fragment of valid YAM
         series: noble
         constraints: "instance-type=m5.xlarge root-disk=100G"
 
-See the [Juju bundle documentation](https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/bundle-yaml-file/ ) for more information about Juju's bundle format and valid YAML.
+See the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/ ) for more information about Juju's bundle format and valid YAML.
 
 To use one or more overlay files with the Anbox Cloud bundle, specify them during the deployment:
 
@@ -85,7 +85,7 @@ Another way to change or customize a deployment is to store the YAML bundle file
 
 The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See {ref}`sec-juju-bundles` for more details on the available bundles.
 
-Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/bundle-yaml-file/ ).
+Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/ ).
 
 ### Retrieve a bundle from a running model
 
@@ -105,4 +105,4 @@ Running this command will output login information and a URL for the GUI interfa
 
 ![Anbox Cloud - Juju GUI|690x444](/images/install_customize_juju_model.png)
 
-For more information on the Juju GUI, see the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-the-juju-dashboard/#manage-the-juju-dashboard).
+For more information on the Juju GUI, see the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-the-juju-dashboard/#manage-the-juju-dashboard).

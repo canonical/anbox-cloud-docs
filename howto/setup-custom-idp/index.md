@@ -52,7 +52,7 @@ Anbox Cloud needs the issuer URL, the client ID and the API audience values to a
 This guide assumes that Keycloak is available over HTTPS.
 ```
 ## 1. Initial setup
-Configure Keycloak for production by following their [documentation](https://www.keycloak.org/server/configuration-production). If you are fine using the development version, download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open *http://localhost:8080/* and create an admin user. Sign in to Keycloak with the admin account.
+Configure Keycloak for production by following their [documentation](https://www.keycloak.org/server/configuration-production). If you are fine using the development version, download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open `http://localhost:8080/` and create an admin user. Sign in to Keycloak with the admin account.
 
 ## 2. Create a realm and a client
 
@@ -94,7 +94,7 @@ Ory Hydra currently does not support authenticating clients using [device code f
 
 ## 1. Create a client
 
-Create a free account on [Ory Hydra](https://www.ory.sh/hydra/). After logging into the Ory Console, navigate to *OAuth 2 > OAuth2 Clients > Create OAuth2 Client*.
+Create a free account on [Ory Hydra](https://www.ory.com/hydra). After logging into the Ory Console, navigate to *OAuth 2 > OAuth2 Clients > Create OAuth2 Client*.
 
 Create the client with:
    - *Type*: *Mobile / SPA*
@@ -110,7 +110,7 @@ On the *OAuth2 Clients* list, find and copy the *ID* for the client you created.
 In the Ory Console, navigate to *OAuth 2* > *Overview*. Find and copy the value of the *Issuer URL*.
 
 ```{important}
-No users exist within ORY by default. New users can use the sign-up link during login. Alternatively, configure Google, Facebook, Microsoft, GitHub, Apple, or another social sign-in provider as described in the [ORY documentation](https://www.ory.sh/docs/kratos/social-signin/overview).
+No users exist within ORY by default. New users can use the sign-up link during login. Alternatively, configure Google, Facebook, Microsoft, GitHub, Apple, or another social sign-in provider as described in the [ORY documentation](https://www.ory.com/docs/kratos/social-signin/overview).
 ```
 :::
 ::::

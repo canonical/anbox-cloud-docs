@@ -1,4 +1,4 @@
-## aar trust add
+# aar trust add
 
 Register a client certificate.
 

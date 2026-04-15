@@ -1,8 +1,8 @@
-## ams.amc node set
+# ams.amc node set
 
 Set a configuration item for a node
 
-### Synopsis
+## Synopsis
 
 Set a configuration item for a node.
 
@@ -13,20 +13,20 @@ available configuration items.
 ams.amc node set <name> <key> <value> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc node set lxd0 cpus 8
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for set
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 

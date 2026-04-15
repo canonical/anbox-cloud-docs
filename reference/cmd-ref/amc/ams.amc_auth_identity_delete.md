@@ -1,8 +1,8 @@
-## ams.amc auth identity delete
+# ams.amc auth identity delete
 
 Delete an identity
 
-### Synopsis
+## Synopsis
 
 Deletes an identity from AMS.
 
@@ -14,13 +14,13 @@ can be re-registered to provide access to AMS again.
 ams.amc auth identity delete <identity_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth identity delete bknj0n9hpuo01q954fq0
 ```
 
-### Options
+## Options
 
 ```
   -f, --force            force deletion of identity
@@ -30,7 +30,7 @@ $ amc auth identity delete bknj0n9hpuo01q954fq0
   -y, --yes              Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentiation & authorization
 

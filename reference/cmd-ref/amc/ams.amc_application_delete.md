@@ -1,8 +1,8 @@
-## ams.amc application delete
+# ams.amc application delete
 
 Delete an application
 
-### Synopsis
+## Synopsis
 
 Delete an application.
 
@@ -17,7 +17,7 @@ you specify the '--force'|'-f' flag.
 ams.amc application delete ( <id> | <name> ) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc application delete foo
@@ -27,7 +27,7 @@ Do you want to continue? [Y/n]:
 
 ```
 
-### Options
+## Options
 
 ```
   -a, --all              Delete all existing applications
@@ -39,7 +39,7 @@ Do you want to continue? [Y/n]:
   -y, --yes              Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 
