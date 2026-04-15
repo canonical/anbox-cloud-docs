@@ -1,4 +1,4 @@
-## ams.amc remote set-url
+# ams.amc remote set-url
 
 Set the URL of an existing remote
 
@@ -6,19 +6,19 @@ Set the URL of an existing remote
 ams.amc remote set-url <name> <URL> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc remote add foo https://192.0.2.10:8444
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for set-url
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 

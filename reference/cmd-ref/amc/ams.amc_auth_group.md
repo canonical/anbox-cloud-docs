@@ -1,21 +1,21 @@
-## ams.amc auth group
+# ams.amc auth group
 
 Manage authorization groups in AMS
 
-### Synopsis
+## Synopsis
 
 Manage groups in AMS.
 
 Create, Show and list authorization groups in Anbox Management Service (AMS).
 	
 
-### Options
+## Options
 
 ```
   -h, --help   help for group
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth](ams.amc_auth.md)	 - Manage authentication & authorization
 * [ams.amc auth group create](ams.amc_auth_group_create.md)	 - Create a new group in AMS

@@ -148,7 +148,7 @@ The following steps describe a sample setup of COS. Adjust it for your environme
 6. Deploy the Anbox Cloud configuration charm for COS-specific dashboards and alerts:
 
    ```bash
-   juju deploy --channel=1.27/stable anbox-cloud-cos-configuration
+   juju deploy --channel=1.29/stable anbox-cloud-cos-configuration
    juju relate anbox-cloud-cos-configuration:grafana-dashboard grafana:grafana-dashboard
    ```
 

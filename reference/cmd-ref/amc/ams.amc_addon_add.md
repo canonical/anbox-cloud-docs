@@ -1,8 +1,8 @@
-## ams.amc addon add
+# ams.amc addon add
 
 Add an addon
 
-### Synopsis
+## Synopsis
 
 Add an addon.
 
@@ -18,7 +18,7 @@ Alternatively, you can enable them globally by setting the configuration item
 ams.amc addon add <name> (<directory> | <.tar.bz2 tarball> | <.zip zip archive>) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ tree my-addon
@@ -31,14 +31,14 @@ $ amc addon add foo my-addon/
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for add
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 

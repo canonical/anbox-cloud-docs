@@ -5,6 +5,104 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.29.1
+
+No new versions of charms are released with 1.29.1.
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/stable | 2872 | 2871 | `1.29.1-52bc9243f` |
+| ams-node-controller | 1.29/stable | 2447 | 2446 | `1.29.1-52bc9243f` |
+| amc | latest/stable | 2666 | 2665 | `1.29.1-52bc9243f` |
+| aar | 1.29/stable | 2819 | 2818 | `1.29.1-52bc9243f` |
+| anbox-stream-agent | 1.29/stable | 3089 | 3088 | `1.29.1-52bc9243f` |
+| anbox-stream-gateway | 1.29/stable | 3054 | 3053 | `1.29.1-52bc9243f` |
+| anbox-cloud-appliance | 1.29/stable | 2730 | 2729 | `1.29.1-52bc9243f` |
+| anbox-cloud-dashboard | 1.29/stable | 4557 | 4556 | `1.29.1-52bc9243f` |
+| anbox-connect | latest/stable | 1882 | 1881 | `1.29.1-52bc9243f` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:aaos15:arm64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android15:amd64` | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android15:arm64` | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:aaos14:amd64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:aaos14:arm64`    | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android14:amd64` | `1.29.1-20260309214816.git3a659fb` |
+| `jammy:android14:arm64` | `1.29.1-20260309214816.git3a659fb` |
+
+## 1.29.0
+
+### Charms
+
+#### Ubuntu 22.04
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/stable | 1390 | 1391 | `1.29.0-fdb4954` |
+| ams-lxd | 1.29/stable | 1262 | 1263 | `1.29.0-fdb4954` |
+| coturn | 1.29/stable | 1179 | 1180 | `1.29.0-fdb4954` |
+| anbox-stream-gateway | 1.29/stable | 1302 | 1303 | `1.29.0-fdb4954` |
+| anbox-stream-agent | 1.29/stable | 1295 | 1296 | `1.29.0-fdb4954` |
+| anbox-cloud-dashboard | 1.29/stable | 1216 | 1217 | `1.29.0-fdb4954` |
+| aar | 1.29/stable | 1385 | 1386 | `1.29.0-fdb4954` |
+| lxd-integrator | 1.29/stable | 654 | 655 | `1.29.0-fdb4954` |
+| anbox-cloud-cos-configuration | 1.29/stable | 502 | 503 | `1.29.0-fdb4954` |
+
+#### Ubuntu 24.04
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/stable | 1392 | 1393 | `1.29.0-fdb4954` |
+| ams-lxd | 1.29/stable | 1264 | 1265 | `1.29.0-fdb4954` |
+| coturn | 1.29/stable | 1181 | 1182 | `1.29.0-fdb4954` |
+| anbox-stream-gateway | 1.29/stable | 1304 | 1305 | `1.29.0-fdb4954` |
+| anbox-stream-agent | 1.29/stable | 1297 | 1298 | `1.29.0-fdb4954` |
+| anbox-cloud-dashboard | 1.29/stable | 1218 | 1219 | `1.29.0-fdb4954` |
+| aar | 1.29/stable | 1387 | 1388 | `1.29.0-fdb4954` |
+| lxd-integrator | 1.29/stable | 656 | 657 | `1.29.0-fdb4954` |
+| anbox-cloud-cos-configuration | 1.29/stable | 504 | 505 | `1.29.0-fdb4954` |
+
+### Bundles
+| Name | Channel | Revision |
+|------|---------|----------|
+| anbox-cloud | 1.29/stable | 939 |
+| anbox-cloud-core | 1.29/stable | 949 |
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/stable | 2825 | 2826 | 1.29.0-74431f0c4 |
+| ams-node-controller | 1.29/stable | 2400 | 2401 | 1.29.0-74431f0c4 |
+| amc | latest/stable | 2619 | 2620 | 1.29.0-74431f0c4 |
+| aar | 1.29/stable | 2772 | 2773 | 1.29.0-74431f0c4 |
+| anbox-stream-agent | 1.29/stable | 3042 | 3043 | 1.29.0-74431f0c4 |
+| anbox-stream-gateway | 1.29/stable | 3007 | 3008 | 1.29.0-74431f0c4 |
+| anbox-cloud-appliance | 1.29/stable | 2683 | 2684 | 1.29.0-74431f0c4 |
+| anbox-cloud-dashboard | 1.29/stable | 4510 | 4511 | 1.29.0-74431f0c4 |
+| anbox-connect | latest/stable | 1835 | 1836 | 1.29.0-74431f0c4 |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:aaos15:arm64`    | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:android15:amd64` | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:android15:arm64` | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:aaos14:amd64`    | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:aaos14:arm64`    | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:android14:amd64` | `1.29.0-20260216162518.gita1230e8` |
+| `jammy:android14:arm64` | `1.29.0-20260216162518.gita1230e8` |
+
 ## 1.28.2
 
 ### Charms

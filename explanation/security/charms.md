@@ -7,7 +7,7 @@ All communication between Juju units and the Juju controller happens over TLS-en
 
 With this secure channel, Juju charms can communicate with each other using relation data. The data published by one unit is sent to the controller, which then makes it available for all other units on the same relation. The data for each relation is scoped by ID and is only visible to units participating in the specific relation on which it is set.
 
-See [Security with Juju](https://canonical-juju.readthedocs-hosted.com/en/latest/user/explanation/juju-security/) for more information.
+See [Security with Juju](https://documentation.ubuntu.com/juju/latest/user/explanation/juju-security/) for more information.
 
 
 ## Cryptography
@@ -25,7 +25,7 @@ When Anbox Cloud is deployed without the use of an external CA, the charms will 
 
 ### Certificate separation
 
-When using a TLS charm (e.g. [Easy-RSA](https://charmhub.io/easyrsa)) as the CA to issue certificates for etcd, it is essential to keep etcd certificates isolated. Granting leaf certificates from this CA effectively allows direct access to etcd data, and such access must be restricted strictly to AMS. Since Easy-RSA charm also serves as the base for mTLS, maintaining this separation enforces clear trust boundaries between AMS and other components such as Anbox-stream-gateway, Anbox-stream-agent, and other related services.
+When using a TLS charm (e.g. [self-signed-certificates](https://charmhub.io/self-signed-certificates)) as the CA to issue certificates for etcd, it is essential to keep etcd certificates isolated. Granting leaf certificates from this CA effectively allows direct access to etcd data, and such access must be restricted strictly to AMS. Since Self-Signed-Certificates charm also serves as the base for mTLS, maintaining this separation enforces clear trust boundaries between AMS and other components such as Anbox-stream-gateway, Anbox-stream-agent, and other related services.
 
 
 ### Packages used

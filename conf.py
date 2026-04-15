@@ -287,6 +287,7 @@ redirects = {
 #
 # Remove or adjust the ACME entry after you update the contributing guide
 
+# We're getting a 403 for vulkan.org in CI for some reason
 linkcheck_ignore = [
     'http://127.0.0.1:8000',
     'https://support.canonical.com/',
@@ -294,7 +295,8 @@ linkcheck_ignore = [
     'https://images.anbox-cloud.io/stable/',
     'https://10.2.9.2/',
     'http://Add-SECURITY.md',
-    'https://jwt.io/'
+    'https://jwt.io/',
+    'https://www.vulkan.org/'
     ]
 
 # This setting will check the links but not the anchors
@@ -316,7 +318,19 @@ linkcheck_exclude_documents = [
 
 # give linkcheck multiple tries on failure
 linkcheck_timeout = 30
-linkcheck_retries = 3
+linkcheck_retries = 5
+
+# decrease parallelism to avoid rate-limiting at the cost of longer runs
+linkcheck_workers = 3
+
+# Specific headers for link checking
+# ceph.io fails with 500 if the Accept-Language is unset, so set it to something
+# to let it pass
+linkcheck_request_headers = {
+    "https://ceph.io/": {
+        "Accept-Language": "en-US",
+    }
+}
 
 ########################
 # Configuration extras #

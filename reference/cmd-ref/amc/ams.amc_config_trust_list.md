@@ -1,8 +1,8 @@
-## ams.amc config trust list
+# ams.amc config trust list
 
 List trusted client certificates
 
-### Synopsis
+## Synopsis
 
 List trusted client certificates.
 
@@ -13,7 +13,7 @@ Valid formats are 'table' (see example), 'json' and 'csv'.
 ams.amc config trust list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc config trust list
@@ -27,14 +27,14 @@ $ amc config trust list
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'table', 'json' or 'yaml' (default "table")
   -h, --help            help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc config trust](ams.amc_config_trust.md)	 - Manage trusted clients
 

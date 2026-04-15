@@ -1,18 +1,18 @@
-## anbox-cloud-appliance config
+# anbox-cloud-appliance config
 
 Managed the Anbox Cloud Appliance configuration
 
-### Synopsis
+## Synopsis
 
 Get and set global configuration items for the Anbox Cloud Appliance.
 
-### Options
+## Options
 
 ```
   -h, --help   help for config
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 * [anbox-cloud-appliance config set](anbox-cloud-appliance_config_set.md)	 - Set specific configuration items for the Anbox Cloud Appliance

@@ -16,7 +16,7 @@ When using the S3 storage backend, image downloads will be redirected to S3 inst
 
 ### Create and configure an S3 bucket
 
-To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) for instructions on how to do this.
+To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket) for instructions on how to do this.
 
 If you don’t plan to use the {ref}`CloudFront CDN <sec-aws-cloudfront-cdn>`, you should use a region close to your Anbox Cloud deployment to keep download times low.
 

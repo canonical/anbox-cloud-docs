@@ -17,7 +17,7 @@ The configuration file uses the JSON format. It has the following structure:
 | `nvidia_h264.aq_strength`<br>`nvidia_av1.aq_strength` | integer | `0` | Strength of adaptive quantization: a value from `1` (least aggressive) to `15` (most aggressive). `0` means the encoder will automatically decide. |
 | `nvidia_h264.preset`<br>`nvidia_av1.preset` | integer | `0` | Preset to use (a value from `1` to `7`). `0` means Anbox will automatically decide. |
 
-See the [NVENC Video Encoder API](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/nvenc-video-encoder-api-prog-guide/) documentation for more details on the NVIDIA video encoder options.
+See the [NVENC Video Encoder API](https://docs.nvidia.com/video-technologies/video-codec-sdk/13.0/nvenc-video-encoder-api-prog-guide/index.html) documentation for more details on the NVIDIA video encoder options.
 
 ## Video bitrate limits
 

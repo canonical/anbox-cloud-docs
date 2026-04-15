@@ -1,8 +1,8 @@
-## ams.amc image list
+# ams.amc image list
 
 List available images
 
-### Synopsis
+## Synopsis
 
 List available images.
 
@@ -14,7 +14,7 @@ Valid formats are 'table' (see example), 'yaml', 'json' and 'csv'.
 ams.amc image list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc image list
@@ -26,14 +26,14 @@ $ amc image list
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'table', 'json' or 'csv' (default "table")
   -h, --help            help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc image](ams.amc_image.md)	 - Manage images
 

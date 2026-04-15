@@ -1,8 +1,8 @@
-## ams.amc show-log
+# ams.amc show-log
 
 Show an instance log file
 
-### Synopsis
+## Synopsis
 
 Show an instance log file.
 
@@ -16,19 +16,19 @@ command to get the names of the available log files:
 ams.amc show-log <instance_id> <log_name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc show-log bknj0n9hpuo01q954fq0 system.log
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for show-log
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

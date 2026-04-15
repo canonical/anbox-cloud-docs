@@ -1,8 +1,8 @@
-## ams.amc
+# ams.amc
 
 Anbox Management Client
 
-### Synopsis
+## Synopsis
 
 Anbox Management Client.
 
@@ -12,13 +12,13 @@ You can use it to create, launch and manage applications on any machine.
 See https://documentation.ubuntu.com/anbox-cloud/ for more information on how to work
 with Anbox Cloud.
 
-### Options
+## Options
 
 ```
   -h, --help   help for ams.amc
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
@@ -27,6 +27,7 @@ with Anbox Cloud.
 * [ams.amc completion](ams.amc_completion.md)	 - Generate the autocompletion script for the specified shell
 * [ams.amc config](ams.amc_config.md)	 - Manage AMS configuration
 * [ams.amc connect](ams.amc_connect.md)	 - Connect to an instance via ADB
+* [ams.amc copy](ams.amc_copy.md)	 - Copy an instance
 * [ams.amc delete](ams.amc_delete.md)	 - Delete an instance
 * [ams.amc exec](ams.amc_exec.md)	 - Execute a command inside an instance
 * [ams.amc image](ams.amc_image.md)	 - Manage images
@@ -37,6 +38,7 @@ with Anbox Cloud.
 * [ams.amc logs](ams.amc_logs.md)	 - Show runtime logs of a running instance
 * [ams.amc monitor](ams.amc_monitor.md)	 - Listen for events generated in AMS
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
+* [ams.amc publish](ams.amc_publish.md)	 - Publish an instance as an image
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 * [ams.amc restart](ams.amc_restart.md)	 - Restart a running instance
 * [ams.amc set](ams.amc_set.md)	 - Set a configuration value for an existing instance

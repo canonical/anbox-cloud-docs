@@ -1,8 +1,8 @@
-## ams.amc remote
+# ams.amc remote
 
 Interact with remote AMS daemons
 
-### Synopsis
+## Synopsis
 
 Interact with remote AMS daemons.
 
@@ -11,13 +11,13 @@ AMC is a client talking to a daemon (AMS). You can configure the connection to d
 See https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/anbox/control-ams-remotely/ for more information.
 
 
-### Options
+## Options
 
 ```
   -h, --help   help for remote
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 * [ams.amc remote add](ams.amc_remote_add.md)	 - Add a remote
