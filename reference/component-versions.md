@@ -12,28 +12,28 @@ Not all components are updated with each release. When components are not update
 #### Ubuntu 22.04
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| ams | 1.29/candidate | 1475 | 1476 | `1.29.2-a624c30` |
-| ams-lxd | 1.29/candidate | 1346 | 1347 | `1.29.2-a624c30` |
-| coturn | 1.29/candidate | 1263 | 1264 | `1.29.2-a624c30` |
-| anbox-stream-gateway | 1.29/candidate | 1386 | 1387 | `1.29.2-a624c30` |
-| anbox-stream-agent | 1.29/candidate | 1379 | 1380 | `1.29.2-a624c30` |
-| anbox-cloud-dashboard | 1.29/candidate | 1300 | 1301 | `1.29.2-a624c30` |
-| aar | 1.29/candidate | 1475 | 1476 | `1.29.2-a624c30` |
-| lxd-integrator | 1.29/candidate | 738 | 739 | `1.29.2-a624c30` |
-| anbox-cloud-cos-configuration | 1.29/candidate | 586 | 587 | `1.29.2-a624c30` |
+| ams | 1.29/stable | 1475 | 1476 | 1.29.2-a624c30 |
+| ams-lxd | 1.29/stable | 1346 | 1347 | 1.29.2-a624c30 |
+| coturn | 1.29/stable | 1263 | 1264 | 1.29.2-a624c30 |
+| anbox-stream-gateway | 1.29/stable | 1386 | 1387 | 1.29.2-a624c30 |
+| anbox-stream-agent | 1.29/stable | 1379 | 1380 | 1.29.2-a624c30 |
+| anbox-cloud-dashboard | 1.29/stable | 1300 | 1301 | 1.29.2-a624c30 |
+| aar | 1.29/stable | 1475 | 1476 | 1.29.2-a624c30 |
+| lxd-integrator | 1.29/stable | 738 | 739 | 1.29.2-a624c30 |
+| anbox-cloud-cos-configuration | 1.29/stable | 586 | 587 | 1.29.2-a624c30 |
 
 #### Ubuntu 24.04
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| ams | 1.29/candidate | 1477 | 1478 | `1.29.2-a624c30` |
-| ams-lxd | 1.29/candidate | 1348 | 1349 | `1.29.2-a624c30` |
-| coturn | 1.29/candidate | 1265 | 1266 | `1.29.2-a624c30` |
-| anbox-stream-gateway | 1.29/candidate | 1388 | 1389 | `1.29.2-a624c30` |
-| anbox-stream-agent | 1.29/candidate | 1381 | 1382 | `1.29.2-a624c30` |
-| anbox-cloud-dashboard | 1.29/candidate | 1302 | 1303 | `1.29.2-a624c30` |
-| aar | 1.29/candidate | 1477 | 1478 | `1.29.2-a624c30` |
-| lxd-integrator | 1.29/candidate | 740 | 741 | `1.29.2-a624c30` |
-| anbox-cloud-cos-configuration | 1.29/candidate | 588 | 589 | `1.29.2-a624c30` |
+| ams | 1.29/stable | 1477 | 1478 | 1.29.2-a624c30 |
+| ams-lxd | 1.29/stable | 1348 | 1349 | 1.29.2-a624c30 |
+| coturn | 1.29/stable | 1265 | 1266 | 1.29.2-a624c30 |
+| anbox-stream-gateway | 1.29/stable | 1388 | 1389 | 1.29.2-a624c30 |
+| anbox-stream-agent | 1.29/stable | 1381 | 1382 | 1.29.2-a624c30 |
+| anbox-cloud-dashboard | 1.29/stable | 1302 | 1303 | 1.29.2-a624c30 |
+| aar | 1.29/stable | 1477 | 1478 | 1.29.2-a624c30 |
+| lxd-integrator | 1.29/stable | 740 | 741 | 1.29.2-a624c30 |
+| anbox-cloud-cos-configuration | 1.29/stable | 588 | 589 | 1.29.2-a624c30 |
 
 ### Bundles
 | Name | Channel | Revision |
@@ -47,7 +47,7 @@ Not all components are updated with each release. When components are not update
 |------|---------|---------|
 | ams | 1.29/stable | `1.29.2-2a7994069` |
 | ams-node-controller | 1.29/stable | `1.29.2-2a7994069` |
-| amc | latest/stable | `1.29.2-2a7994069` |
+| amc | latest/stable    | `1.29.2-2a7994069` |
 | aar | 1.29/stable | `1.29.2-2a7994069` |
 | anbox-stream-agent | 1.29/stable | `1.29.2-2a7994069` |
 | anbox-stream-gateway | 1.29/stable | `1.29.2-2a7994069` |
