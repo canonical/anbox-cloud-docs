@@ -9,19 +9,21 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| April 15, 2026 | [Anbox Cloud 1.29.2](1.29.2.md) |
 | March 18, 2026 | [Anbox Cloud 1.29.1](1.29.1.md) |
 | February 18, 2026 | [Anbox Cloud 1.29.0](1.29.0.md) |
-| January 21, 2026 | [Anbox Cloud 1.28.2](1.28.2.md) |
 
 ## Upcoming release roadmap
 
-The current, supported minor release is **1.29.0** and the next one will be **1.30.0**.
+The current, supported minor release is **1.29.0** and the next one will be **1.30.0** expected in May 2026.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| April 15, 2026 | Anbox Cloud 1.29.2 | * Android security updated<br/> * Bug fixes |
+| May 20, 2026 | Anbox Cloud 1.30.0 | * New features<br/> * Android security updated<br/> * Bug fixes |
+| June 17, 2026 | Anbox Cloud 1.30.1 | * Android security updated<br/> * Bug fixes |
+| July 15, 2026 | Anbox Cloud 1.30.2 | * Android security updated<br/> * Bug fixes |
 
 ## Release and support policy
 
