@@ -7,6 +7,9 @@
     ":ignoreUnstable",
     "group:allNonMajor"
   ],
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "prCreation": "not-pending",
   "packageRules": [
     {
       "description": "Schedule canonical/create-pull-request updates on the first day of each week to decrease noise.",

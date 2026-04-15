@@ -1,8 +1,8 @@
-## ams.amc auth group delete
+# ams.amc auth group delete
 
 Delete an authorization group
 
-### Synopsis
+## Synopsis
 
 Deletes an authorization group from AMS.
 
@@ -15,13 +15,13 @@ flag. This will remove the memberships of all the identities from the group befo
 ams.amc auth group delete <group_name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth group delete test-group
 ```
 
-### Options
+## Options
 
 ```
   -f, --force            Force deletion of groups
@@ -31,7 +31,7 @@ $ amc auth group delete test-group
   -y, --yes              Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth group](ams.amc_auth_group.md)	 - Manage authorization groups in AMS
 

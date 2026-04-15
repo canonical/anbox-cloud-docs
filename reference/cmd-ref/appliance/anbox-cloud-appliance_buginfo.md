@@ -1,8 +1,8 @@
-## anbox-cloud-appliance buginfo
+# anbox-cloud-appliance buginfo
 
 Collection information for effective bug reports
 
-### Synopsis
+## Synopsis
 
 Collection information for effective bug reports
 
@@ -17,13 +17,13 @@ Please report bugs on https://bugs.launchpad.net/anbox-cloud
 anbox-cloud-appliance buginfo [flags]
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for buginfo
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 

@@ -1,8 +1,8 @@
-## ams.amc auth identity group delete
+# ams.amc auth identity group delete
 
 Remove an identity from authorization groups.
 
-### Synopsis
+## Synopsis
 
 Remove an identity from authorization groups.
 
@@ -15,20 +15,20 @@ be used to manage access for the identities in AMS.
 ams.amc auth identity group delete <identity_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth identity groups delete bknj0n9hpuo01q954fq0 --groups test,test-1
 ```
 
-### Options
+## Options
 
 ```
   -g, --groups strings   Comma separated list of groups
   -h, --help             help for delete
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth identity group](ams.amc_auth_identity_group.md)	 - Manage groups for an identity
 

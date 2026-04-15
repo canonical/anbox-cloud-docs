@@ -1,8 +1,8 @@
-## ams.amc restart
+# ams.amc restart
 
 Restart a running instance
 
-### Synopsis
+## Synopsis
 
 Restart a running instance.
 
@@ -14,21 +14,21 @@ stopped, it will not be started.
 ams.amc restart <instance_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
   Restart a running instance:
   $ amc restart ceg2ukbhc8ic3ftkc990
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for restart
   -t, --timeout string   Maximum time to wait for each operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

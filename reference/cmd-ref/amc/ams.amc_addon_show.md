@@ -1,8 +1,8 @@
-## ams.amc addon show
+# ams.amc addon show
 
 Show more information about a specific addon
 
-### Synopsis
+## Synopsis
 
 Show more information about a specific addon.
 
@@ -13,7 +13,7 @@ Valid formats are 'json' and 'yaml'.
 ams.amc addon show <name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc addon show foo
@@ -26,14 +26,14 @@ used_by: []
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
   -h, --help            help for show
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 

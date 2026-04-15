@@ -1,8 +1,8 @@
-## ams.amc application create
+# ams.amc application create
 
 Create an application
 
-### Synopsis
+## Synopsis
 
 Create an application.
 
@@ -15,7 +15,7 @@ application properties.
 ams.amc application create (<directory> | <.tar.bz2 tarball> | <.zip archive>) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ tree my-app
@@ -27,7 +27,7 @@ $ amc application create my-app
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for create
@@ -35,7 +35,7 @@ $ amc application create my-app
       --vm               Create an application using VMs instead of containers
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 

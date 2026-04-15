@@ -1,4 +1,4 @@
-## anbox-cloud-appliance init
+# anbox-cloud-appliance init
 
 Initialize and configure the Anbox Cloud Appliance
 
@@ -6,13 +6,13 @@ Initialize and configure the Anbox Cloud Appliance
 anbox-cloud-appliance init [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ anbox-cloud-appliance init
 ```
 
-### Options
+## Options
 
 ```
       --auto      Automatic (non-interactive) mode
@@ -21,7 +21,7 @@ $ anbox-cloud-appliance init
       --preseed   Pre-seed mode, expects YAML config from stdin
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 

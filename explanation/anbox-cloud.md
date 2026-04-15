@@ -36,9 +36,9 @@ See the following table for a comparison of features for the different variants:
 |---------|-----------------------|-------------|
 | {ref}`exp-application-streaming` | ✓ | ✓ |
 | {ref}`exp-web-dashboard` | ✓ | ✓ |
-| {ref}`Android versions <ref-provided-images>` | 12, 13, 14, 15 | 12, 13, 14, 15 |
+| {ref}`Android versions <ref-provided-images>` | 14, 15 | 14, 15 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
-| [Community support](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | ✓ | ✓ |
+| [Community support](https://discourse.ubuntu.com/c/project/anbox-user/148) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
 | {ref}`exp-clustering`| - | ✓ |
 | {ref}`exp-custom-images`| ✓ | ✓ |
@@ -140,7 +140,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 
 For LXD storage, Anbox Cloud can automatically create and use a ZFS storage pool that's local to the machine or can use storage provided by [Ceph](https://ceph.io).
 
-A local storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/en/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
+A local storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://documentation.ubuntu.com/lxd/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
 
 While a loop file is easy to set up, it is much slower than a block device. Therefore, we recommend using a block device that is dedicated to LXD storage only.
 

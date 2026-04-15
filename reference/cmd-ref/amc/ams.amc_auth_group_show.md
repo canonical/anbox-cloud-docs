@@ -1,8 +1,8 @@
-## ams.amc auth group show
+# ams.amc auth group show
 
 Show information about an authorization group in AMS.
 
-### Synopsis
+## Synopsis
 
 Show information about an authorization group in AMS.
 
@@ -13,7 +13,7 @@ Valid formats are 'json' and 'yaml'.
 ams.amc auth group show <group_name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth group show test
@@ -26,14 +26,14 @@ immutable: false
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
   -h, --help            help for show
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth group](ams.amc_auth_group.md)	 - Manage authorization groups in AMS
 
