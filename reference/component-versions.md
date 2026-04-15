@@ -5,6 +5,71 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.29.2
+
+### Charms
+
+#### Ubuntu 22.04
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/candidate | 1475 | 1476 | `1.29.2-a624c30` |
+| ams-lxd | 1.29/candidate | 1346 | 1347 | `1.29.2-a624c30` |
+| coturn | 1.29/candidate | 1263 | 1264 | `1.29.2-a624c30` |
+| anbox-stream-gateway | 1.29/candidate | 1386 | 1387 | `1.29.2-a624c30` |
+| anbox-stream-agent | 1.29/candidate | 1379 | 1380 | `1.29.2-a624c30` |
+| anbox-cloud-dashboard | 1.29/candidate | 1300 | 1301 | `1.29.2-a624c30` |
+| aar | 1.29/candidate | 1475 | 1476 | `1.29.2-a624c30` |
+| lxd-integrator | 1.29/candidate | 738 | 739 | `1.29.2-a624c30` |
+| anbox-cloud-cos-configuration | 1.29/candidate | 586 | 587 | `1.29.2-a624c30` |
+
+#### Ubuntu 24.04
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.29/candidate | 1477 | 1478 | `1.29.2-a624c30` |
+| ams-lxd | 1.29/candidate | 1348 | 1349 | `1.29.2-a624c30` |
+| coturn | 1.29/candidate | 1265 | 1266 | `1.29.2-a624c30` |
+| anbox-stream-gateway | 1.29/candidate | 1388 | 1389 | `1.29.2-a624c30` |
+| anbox-stream-agent | 1.29/candidate | 1381 | 1382 | `1.29.2-a624c30` |
+| anbox-cloud-dashboard | 1.29/candidate | 1302 | 1303 | `1.29.2-a624c30` |
+| aar | 1.29/candidate | 1477 | 1478 | `1.29.2-a624c30` |
+| lxd-integrator | 1.29/candidate | 740 | 741 | `1.29.2-a624c30` |
+| anbox-cloud-cos-configuration | 1.29/candidate | 588 | 589 | `1.29.2-a624c30` |
+
+### Bundles
+| Name | Channel | Revision |
+|------|---------|----------|
+| anbox-cloud | 1.29/candidate | 983 |
+| anbox-cloud-core | 1.29/candidate | 993 |
+
+### Snaps
+
+| Name | Channel | Version |
+|------|---------|---------|
+| ams | 1.29/candidate | `1.29.2-2a7994069` |
+| ams-node-controller | 1.29/candidate | `1.29.2-2a7994069` |
+| amc | latest/candidate | `1.29.2-2a7994069` |
+| aar | 1.29/candidate | `1.29.2-2a7994069` |
+| anbox-stream-agent | 1.29/candidate | `1.29.2-2a7994069` |
+| anbox-stream-gateway | 1.29/candidate | `1.29.2-2a7994069` |
+| anbox-cloud-appliance | 1.29/candidate | `1.29.2-2a7994069` |
+| anbox-cloud-dashboard | 1.29/candidate | `1.29.2-2a7994069` |
+| anbox-connect | latest/candidate | `1.29.2-2a7994069` |
+
+### Anbox images
+
+Only container images are released with 1.29.2. VM images are not included in this release.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:aaos15:arm64`    | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:android15:amd64` | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:android15:arm64` | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:aaos14:amd64`    | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:aaos14:arm64`    | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:android14:amd64` | `1.29.2-20260406091659.git0a7107c` |
+| `jammy:android14:arm64` | `1.29.2-20260406091659.git0a7107c` |
+
 ## 1.29.1
 
 No new versions of charms are released with 1.29.1.
