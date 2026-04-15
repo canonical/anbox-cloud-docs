@@ -93,4 +93,4 @@ You need the Ubuntu Pro subscription to use Anbox Cloud. Depending on the type o
 
 When you consider a production deployment, it is important to assess your upgrade roadmap. For more information about upgrading Anbox Cloud and the prerequisites required for the upgrade process, see {ref}`howto-upgrade-anbox-cloud`. 
 
-You can also choose to subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on discourse. For insights into the Anbox Cloud release roadmap, see {ref}`ref-release-notes`.
+You can also choose to subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/project/anbox-cloud/49) on discourse. For insights into the Anbox Cloud release roadmap, see {ref}`ref-release-notes`.

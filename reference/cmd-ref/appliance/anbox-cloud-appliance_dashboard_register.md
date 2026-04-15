@@ -1,8 +1,8 @@
-## anbox-cloud-appliance dashboard register
+# anbox-cloud-appliance dashboard register
 
 Register a new user for access to the Anbox Cloud dashboard
 
-### Synopsis
+## Synopsis
 
 Register a new user for access to the Anbox Cloud dashboard
 
@@ -32,20 +32,20 @@ https://10.2.9.2/?register=xxx
 anbox-cloud-appliance dashboard register <email> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ anbox-cloud-appliance dashboard register foo@bar.com
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for register
   -e, --validity string   Time for which the registration URL will be valid (valid time units are 'm' (minutes) or 'h' (hours)) (default "1h")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance dashboard](anbox-cloud-appliance_dashboard.md)	 - Manage the dashboard of the Anbox Cloud Appliance
 

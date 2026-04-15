@@ -1,20 +1,20 @@
-## anbox-cloud-appliance completion
+# anbox-cloud-appliance completion
 
 Generate the autocompletion script for the specified shell
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for anbox-cloud-appliance for the specified shell.
 See each sub-command's help for details on how to use the generated script.
 
 
-### Options
+## Options
 
 ```
   -h, --help   help for completion
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
 * [anbox-cloud-appliance completion bash](anbox-cloud-appliance_completion_bash.md)	 - Generate the autocompletion script for bash

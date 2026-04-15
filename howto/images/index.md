@@ -11,6 +11,7 @@ The following how-to guides are available for operations on images:
 :titlesonly:
 configure-image-server
 add-image
+publish-instance-as-image
 delete-image
 use-specific-release
 ```

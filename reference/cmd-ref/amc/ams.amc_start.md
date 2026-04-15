@@ -1,8 +1,8 @@
-## ams.amc start
+# ams.amc start
 
 Start an existing instance
 
-### Synopsis
+## Synopsis
 
 Start an existing instance that has an status 'prepared', 'stopped'.
 
@@ -16,7 +16,7 @@ When an Anbox instance ends up with the 'error' status, you can start it again w
 ams.amc start <instance_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
   Initialise an instance:
@@ -27,7 +27,7 @@ ams.amc start <instance_id> [flags]
   $ amc start ceg2ukbhc8ic3ftkc990
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for start
@@ -36,7 +36,7 @@ ams.amc start <instance_id> [flags]
   -y, --yes error        Force start the instance from error state
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

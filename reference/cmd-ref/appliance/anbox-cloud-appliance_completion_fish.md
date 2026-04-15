@@ -1,8 +1,8 @@
-## anbox-cloud-appliance completion fish
+# anbox-cloud-appliance completion fish
 
 Generate the autocompletion script for fish
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for the fish shell.
 
@@ -21,14 +21,14 @@ You will need to start a new shell for this setup to take effect.
 anbox-cloud-appliance completion fish [flags]
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for fish
       --no-descriptions   disable completion descriptions
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance completion](anbox-cloud-appliance_completion.md)	 - Generate the autocompletion script for the specified shell
 

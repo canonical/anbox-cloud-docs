@@ -1,8 +1,8 @@
-## ams.amc auth identity show
+# ams.amc auth identity show
 
 Show information about an identity
 
-### Synopsis
+## Synopsis
 
 Show information about an identity.
 
@@ -13,7 +13,7 @@ Valid formats are 'json' and 'yaml'.
 ams.amc auth identity show <identity_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc auth identity show bknj0n9hpuo01q954fq0
@@ -27,14 +27,14 @@ name: test-user
 
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
   -h, --help            help for show
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentiation & authorization
 

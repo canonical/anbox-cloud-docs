@@ -1,8 +1,8 @@
-## ams.amc monitor
+# ams.amc monitor
 
 Listen for events generated in AMS
 
-### Synopsis
+## Synopsis
 
 Monitor AMS for events
 
@@ -12,7 +12,7 @@ By default the monitor will listen to all message types.
 ams.amc monitor [flags]
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
@@ -20,7 +20,7 @@ ams.amc monitor [flags]
   -t, --type string     Comma-separated filters for events types - 'lifecycle', 'logging', 'operations' or 'all' (default "all")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

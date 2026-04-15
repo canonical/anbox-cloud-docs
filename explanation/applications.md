@@ -25,6 +25,8 @@ The following table lists the different statuses that an application can have de
 | `error` | The application has encountered an error. |
 | `unknown` | A possible error occurred and the real state of the application cannot be determined. |
 
+The application status reflects the status of its latest application version.
+
 If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See {ref}`howto-view-instance-logs`). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <howto-view-instance-logs>`.
 
 

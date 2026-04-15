@@ -1,8 +1,8 @@
-## anbox-cloud-appliance completion bash
+# anbox-cloud-appliance completion bash
 
 Generate the autocompletion script for bash
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for the bash shell.
 
@@ -15,11 +15,11 @@ To load completions in your current shell session:
 
 To load completions for every new session, execute once:
 
-#### Linux:
+### Linux:
 
 	anbox-cloud-appliance completion bash > /etc/bash_completion.d/anbox-cloud-appliance
 
-#### macOS:
+### macOS:
 
 	anbox-cloud-appliance completion bash > $(brew --prefix)/etc/bash_completion.d/anbox-cloud-appliance
 
@@ -30,14 +30,14 @@ You will need to start a new shell for this setup to take effect.
 anbox-cloud-appliance completion bash
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for bash
       --no-descriptions   disable completion descriptions
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance completion](anbox-cloud-appliance_completion.md)	 - Generate the autocompletion script for the specified shell
 

@@ -1,8 +1,8 @@
-## ams.amc node add
+# ams.amc node add
 
 Add a node to AMS
 
-### Synopsis
+## Synopsis
 
 Add a node to AMS.
 
@@ -16,7 +16,7 @@ AMS takes care of the initialisation and configuration.
 ams.amc node add <name> <address> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc node add lxd0 10.48.61.89
@@ -25,7 +25,7 @@ nodes:
 
 ```
 
-### Options
+## Options
 
 ```
   -h, --help                     help for add
@@ -41,7 +41,7 @@ nodes:
       --unmanaged                Expect the node to already be clustered
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 

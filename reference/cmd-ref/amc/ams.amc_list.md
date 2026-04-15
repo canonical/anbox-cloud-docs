@@ -1,8 +1,8 @@
-## ams.amc list
+# ams.amc list
 
 List instances
 
-### Synopsis
+## Synopsis
 
 List instances.
 
@@ -32,7 +32,7 @@ They are of the following form:
 ams.amc list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc list
@@ -46,7 +46,7 @@ $ amc list --filter status=error
 
 ```
 
-### Options
+## Options
 
 ```
   -f, --filter stringArray   Filter the output based on conditions (for example, 'status=running')
@@ -54,7 +54,7 @@ $ amc list --filter status=error
   -h, --help                 help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

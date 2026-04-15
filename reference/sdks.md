@@ -34,7 +34,7 @@ The Anbox Platform SDK provides a collection of example platform plugins to help
 (sec-ams-sdk)=
 ## AMS SDK
 
-The AMS SDK offers a set of [Go](https://golang.org/) packages and utilities for any external [Go](https://golang.org/) code to be able to connect to the AMS service through the exposed REST API.
+The AMS SDK offers a set of [Go](https://go.dev/) packages and utilities for any external [Go](https://go.dev/) code to be able to connect to the AMS service through the exposed REST API.
 
 See the [AMS SDK documentation](https://github.com/canonical/ams-sdk) on GitHub for more information.
 

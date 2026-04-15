@@ -1,8 +1,8 @@
-## ams.amc node remove
+# ams.amc node remove
 
 Remove a node
 
-### Synopsis
+## Synopsis
 
 Remove a node.
 
@@ -15,13 +15,13 @@ You cannot delete a node with running containers unless you specify the '--force
 ams.amc node remove <name> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc node remove lxd2
 ```
 
-### Options
+## Options
 
 ```
   -f, --force             Force the removal of the node
@@ -31,7 +31,7 @@ $ amc node remove lxd2
   -y, --yes               Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 

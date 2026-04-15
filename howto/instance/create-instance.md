@@ -145,6 +145,16 @@ You can launch instances with additional development features turned on. This de
 To launch an instance with development mode enabled, add the `--devmode` flag to the launch command:
 
     amc launch --devmode <application_id>
+
+## Launch an instance without disk reservation
+
+By default, AMS reserves the full logical disk quota to ensure guaranteed disk space availability on the target node. In deployments backed by the ZFS storage driver, which provides Copy-on-Write(CoW) capabilities, you can use the `--no-disk-reserve` flag to achieve higher instance density by skipping strict logical quota checks:
+
+    amc launch --no-disk-reserve <application_id>
+
+```{note}
+Using this flag makes "out of disk" scenarios possible on the node. To better handle such cases, future AMS releases will introduce additional storage-level safety mechanisms to prevent new instances from being scheduled when physical disk space is critically low. In the meantime, you should closely monitor LXD node's physical disk usage via the monitor system. See {ref}`howto-monitor-anbox` for more details.
+```
 :::
 
 :::{tab-item} Dashboard

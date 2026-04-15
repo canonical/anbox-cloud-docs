@@ -1,8 +1,8 @@
-## anbox-cloud-appliance completion powershell
+# anbox-cloud-appliance completion powershell
 
 Generate the autocompletion script for powershell
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for powershell.
 
@@ -18,14 +18,14 @@ to your powershell profile.
 anbox-cloud-appliance completion powershell [flags]
 ```
 
-### Options
+## Options
 
 ```
   -h, --help              help for powershell
       --no-descriptions   disable completion descriptions
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance completion](anbox-cloud-appliance_completion.md)	 - Generate the autocompletion script for the specified shell
 

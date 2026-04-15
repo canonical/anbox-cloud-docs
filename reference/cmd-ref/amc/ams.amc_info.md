@@ -1,8 +1,8 @@
-## ams.amc info
+# ams.amc info
 
 Provide general information about the connected AMS service
 
-### Synopsis
+## Synopsis
 
 Provide general information about the connected AMS service.
 
@@ -13,7 +13,7 @@ Valid formats are 'json' and 'yaml'.
 ams.amc info [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc info
@@ -33,14 +33,14 @@ scheduler.strategy: spread
 service_version: 1.14.0
 ```
 
-### Options
+## Options
 
 ```
       --format string   Output format - 'json' or 'yaml' (default "yaml")
   -h, --help            help for info
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 
