@@ -1,20 +1,20 @@
-## ams.amc completion
+# ams.amc completion
 
 Generate the autocompletion script for the specified shell
 
-### Synopsis
+## Synopsis
 
 Generate the autocompletion script for ams.amc for the specified shell.
 See each sub-command's help for details on how to use the generated script.
 
 
-### Options
+## Options
 
 ```
   -h, --help   help for completion
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 * [ams.amc completion bash](ams.amc_completion_bash.md)	 - Generate the autocompletion script for bash

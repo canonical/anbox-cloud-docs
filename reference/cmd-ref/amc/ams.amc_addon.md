@@ -1,8 +1,8 @@
-## ams.amc addon
+# ams.amc addon
 
 Manage addons
 
-### Synopsis
+## Synopsis
 
 Manage addons.
 
@@ -14,13 +14,13 @@ provide access from the outside for any kind of automation of the container.
 
 See https://documentation.ubuntu.com/anbox-cloud/en/latest/explanation/addons/ for more information.
 
-### Options
+## Options
 
 ```
   -h, --help   help for addon
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 * [ams.amc addon add](ams.amc_addon_add.md)	 - Add an addon

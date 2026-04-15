@@ -23,7 +23,7 @@ This table lists the entitlements that can be assigned at a global level.
 | `can_create_nodes` | Allows requests to `POST /1.0/nodes`  |
 | `can_create_images` | Allows requests to `POST /1.0/images` |
 | `can_register_identities` | Allows requests to `POST /1.0/auth/identities` |
-| `can_view_operations` | Allows requests to:<br/> `GET /1.0/operations`<br/>`GET /1.0/operations/<id>`<br/>`GET /1.0/operations/<id>/wait`<br/>`DELETE /1.0/operations/<id>`  |
+| `can_view_operations` (deprecated) | Deprecated since 1.29.0, operation visibility is now limited to resources the user can access  |
 
 ## Resource level entitlements
 

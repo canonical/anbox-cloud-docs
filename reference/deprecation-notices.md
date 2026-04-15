@@ -26,7 +26,7 @@ The [AMS node controller charm](https://charmhub.io/ams-node-controller) is depr
 ## Juju 2.9
 *Deprecated in 1.25.1* ; *Unsupported in 1.27.0*
 
-Juju 2.9 is deprecated as of 1.25.1. Upgrade to Juju 3.6 instead. See [Juju upgrade documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-your-deployment/upgrade-your-deployment/) for detailed instructions.
+Juju 2.9 is deprecated as of 1.25.1. Upgrade to Juju 3.6 instead. See [Juju upgrade documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-your-deployment/upgrade-your-deployment/) for detailed instructions.
 
 For all new deployments, use the Juju snap from 3/stable or the latest/stable channel.
 
@@ -44,7 +44,7 @@ The support for LXD 5.0 snap is deprecated as of 1.25.0. Upgrade your deployment
 ## Anbox Cloud Appliance `epoch=0` snap
 *Deprecated in 1.22.0* ; *Unsupported in 1.25.0*
 
-The Anbox Cloud Appliance is being reworked. We will provide the new Anbox Cloud Appliance implementation using [Snap epochs](https://snapcraft.io/docs/snap-epochs). 
+The Anbox Cloud Appliance is being reworked. We will provide the new Anbox Cloud Appliance implementation using [Snap epochs](https://documentation.ubuntu.com/snapcraft/stable/how-to/crafting/manage-data-compatibility/).
 
 The snap with `epoch=0` is the existing implementation that was deprecated in 1.22.0. Existing installations of the appliance will receive updates until Anbox Cloud 1.24.2.
 
@@ -59,3 +59,14 @@ Support for Ubuntu 20.04 (Focal Fossa) is deprecated in 1.22.0 and is planned to
 *Deprecated in 1.22.0* ; *Unsupported in 1.23.0*
 
 Support for the EmuGL renderer is deprecated in 1.22.0 and planned to be removed in Anbox Cloud 1.23.0. Starting with 1.22.0, VirGL will be the default renderer for NVIDIA GPUs with driver version 545 and later.
+
+## Etcd and EasyRSA charms
+*Deprecated in 1.29.0* ; *Unsupported in 1.35.0*
+
+Legacy charms, specifically the [`etcd`](https://charmhub.io/etcd) and the [`easy-rsa`](https://charmhub.io/easyrsa) charms, are deprecated as of Anbox Cloud 1.29.0 release. This aligns with the transition toward modernized, operator-based Anbox Cloud deployment.
+
+Starting from 1.29.0, all new Anbox Cloud deployments must use modernized operator charms to replace their legacy counterparts. Specifically:
+* [charmed-etcd](https://charmhub.io/charmed-etcd) to replace `etcd`
+* [self-signed-certificates](https://charmhub.io/self-signed-certificates) to replace `easy-rsa`
+
+This transition provides a two-year migration window before legacy charms become completely unsupported. Anbox Cloud 1.34.2 will be the last release that supports deployments using legacy charms. Starting from Anbox Cloud 1.35.0, Anbox Cloud deployments will exclusively support modernized charms.

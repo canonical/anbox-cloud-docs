@@ -27,7 +27,7 @@ In terms of performance, this could be perceived to have some transmission overh
 
 In older versions, Anbox Cloud used a similar rendering pipeline for NVIDIA GPUs which only supports OpenGL ES and EGL but could not provide Vulkan API support. Since the 1.21.0 release, VirGL was also available as a rendering option but had to be enabled explicitly.
 
-Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs. If VirGL is not compatible for your use case (and you require the older implementation), [contact us](https://anbox-cloud.io/contact-us).
+Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs. If VirGL is not compatible for your use case (and you require the older implementation), [contact us](https://canonical.com/contact-us).
 
 ### For Intel and AMD
 

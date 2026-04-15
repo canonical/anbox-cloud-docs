@@ -1,8 +1,8 @@
-## ams.amc benchmark
+# ams.amc benchmark
 
 Benchmark your Anbox Cloud deployment
 
-### Synopsis
+## Synopsis
 
 Benchmark your Anbox Cloud deployment.
 
@@ -13,7 +13,7 @@ The results can be used to evaluate the performance of Anbox Cloud for a well-de
 ams.amc benchmark ( <app_id> | <image_id> ) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
  $ amc benchmark --fps --network-address=172.31.4.11 --num-instances=15 --instances-per-second=0.1 bh2q90vo3v1lt1ft4mlg
@@ -40,7 +40,7 @@ ams.amc benchmark ( <app_id> | <image_id> ) [flags]
 
 ```
 
-### Options
+## Options
 
 ```
       --containers-per-second float   Number of containers to launch per second (default 0.1)
@@ -63,7 +63,7 @@ ams.amc benchmark ( <app_id> | <image_id> ) [flags]
       --userdata string               Additional user data to be pushed into the created instance
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

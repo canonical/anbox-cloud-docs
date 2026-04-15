@@ -1,8 +1,8 @@
-## ams.amc config set
+# ams.amc config set
 
 Set a single configuration item
 
-### Synopsis
+## Synopsis
 
 Set a single configuration item.
 
@@ -13,19 +13,19 @@ available configuration items.
 ams.amc config set <name> <value> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc config set container.features enable_virtual_keyboard
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for set
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc config](ams.amc_config.md)	 - Manage AMS configuration
 

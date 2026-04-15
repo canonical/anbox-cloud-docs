@@ -18,7 +18,7 @@ Before you start the installation, ensure that you have the required credentials
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)
   * [Microsoft Azure](https://azure.microsoft.com/)
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
   ```
@@ -48,7 +48,7 @@ For a different cloud, just substitute the cloud name with the name returned by 
 (sec-setup-juju-controller)=
 ## Add a controller and model
 
-The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
+The [Juju controller](https://documentation.ubuntu.com/juju/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://documentation.ubuntu.com/juju/latest/user/reference/model/).
 
 For example, run the following command to bootstrap the controller for AWS:
 
@@ -179,12 +179,12 @@ The easiest way to do this is to use a storage device defined by Juju:
 
    See [View the available storage pools](https://juju.is/docs/juju/manage-storage-pools#heading--view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
 
-   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/juju/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html) that are optimized for different purposes.
+   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/juju/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
 
    If you decide to create a pool, make sure to do so before you start the deployment.
 1. Configure the `ams-lxd` charm to use the Juju storage pool.
 
-   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://juju.is/docs/olm/storage-constraint) for it.
+   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://documentation.ubuntu.com/juju/3.6/reference/storage/#storage-pool) for it.
 
    For example, to use the AWS `ebs-ssd` Juju storage pool for LXD storage, use an overlay file with the following storage constraint:
 

@@ -1,8 +1,8 @@
-## ams.amc application unset
+# ams.amc application unset
 
 Reset an application field
 
-### Synopsis
+## Synopsis
 
 Reset an application field.
 
@@ -18,19 +18,19 @@ value.
 ams.amc application unset <id> <field> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc application unset foo tags
 ```
 
-### Options
+## Options
 
 ```
   -h, --help   help for unset
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
 

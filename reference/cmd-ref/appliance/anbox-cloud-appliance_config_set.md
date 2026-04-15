@@ -1,8 +1,8 @@
-## anbox-cloud-appliance config set
+# anbox-cloud-appliance config set
 
 Set specific configuration items for the Anbox Cloud Appliance
 
-### Synopsis
+## Synopsis
 
 Set configuration items for the Anbox Cloud Appliance
 
@@ -29,20 +29,20 @@ unless the --no-restart option is set.
 anbox-cloud-appliance config set [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ sudo anbox-cloud-appliance config set network.public_address=1.2.3.4
 ```
 
-### Options
+## Options
 
 ```
   -h, --help         help for set
       --no-restart   Do not restart the Anbox Cloud Appliance
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [anbox-cloud-appliance config](anbox-cloud-appliance_config.md)	 - Managed the Anbox Cloud Appliance configuration
 

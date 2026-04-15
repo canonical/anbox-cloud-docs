@@ -1,8 +1,8 @@
-## ams.amc connect
+# ams.amc connect
 
 Connect to an instance via ADB
 
-### Synopsis
+## Synopsis
 
 Connect to a running instance using an Android Debug Bridge (ADB) connection.
 
@@ -15,14 +15,14 @@ The instance must be running and have an active session to be connected to.
 ams.amc connect <instance-id or URL> [flags]
 ```
 
-### Options
+## Options
 
 ```
   -k, --accept-remote-cert   Accept remote certificate when running in non-interactive mode
   -h, --help                 help for connect
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

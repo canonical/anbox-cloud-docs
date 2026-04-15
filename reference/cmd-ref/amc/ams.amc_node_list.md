@@ -1,8 +1,8 @@
-## ams.amc node list
+# ams.amc node list
 
 List available nodes
 
-### Synopsis
+## Synopsis
 
 List available nodes.
 
@@ -29,7 +29,7 @@ They are of the following form:
 ams.amc node list [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 $ amc node list
@@ -42,7 +42,7 @@ $ amc node list
 $ amc node list --filter status=online
 ```
 
-### Options
+## Options
 
 ```
   -f, --filter stringArray   Filter the output based on conditions (for example, 'master=true')
@@ -50,7 +50,7 @@ $ amc node list --filter status=online
   -h, --help                 help for list
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 

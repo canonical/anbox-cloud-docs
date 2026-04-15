@@ -1,8 +1,8 @@
-## ams.amc wait
+# ams.amc wait
 
 Wait for an instance to reach a specific condition
 
-### Synopsis
+## Synopsis
 
 Wait for an instance to reach a specific condition.
 
@@ -22,7 +22,7 @@ Use '--selector version=<version number>' to wait on an application version.
 ams.amc wait (<app_id> | <instance_id>) [flags]
 ```
 
-### Examples
+## Examples
 
 ```
 Wait for the application to be either ready or in an error state:
@@ -31,7 +31,7 @@ $ amc wait bkhk491hpuo2c84rai9g -c status=ready -c status=error
 
 ```
 
-### Options
+## Options
 
 ```
   -c, --condition stringArray   Condition of the application or instance to wait for
@@ -40,7 +40,7 @@ $ amc wait bkhk491hpuo2c84rai9g -c status=ready -c status=error
   -t, --timeout string          Maximum time to wait for the condition (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

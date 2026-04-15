@@ -41,7 +41,7 @@ Install the snap:
 
     sudo snap install --channel=<channel> aar
 
-Replace <channel> with a suitable snap version. For example, it could be `1.27/stable`. For a list of all snap versions available, you can run `snap info aar`.
+Replace <channel> with a suitable snap version. For example, it could be `1.29/stable`. For a list of all snap versions available, you can run `snap info aar`.
 
 ### Establish trust for AAR with AMS
 
@@ -148,5 +148,5 @@ Finally, reboot the AAR:
 
 * {ref}`exp-aar`
 * {ref}`howto-revoke-aar`
-* [Juju relations](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/relation/)
-* [Juju cross model relations](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/relation/#cross-model/)
+* [Juju relations](https://documentation.ubuntu.com/juju/latest/user/reference/relation/)
+* [Juju cross model relations](https://documentation.ubuntu.com/juju/latest/user/reference/relation/#cross-model/)

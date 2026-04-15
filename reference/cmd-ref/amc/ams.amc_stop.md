@@ -1,8 +1,8 @@
-## ams.amc stop
+# ams.amc stop
 
 Stop a running instance
 
-### Synopsis
+## Synopsis
 
 Stop a running instance.
 
@@ -13,7 +13,7 @@ If the instance is in 'running' status, you can stop it with the 'amc stop' comm
 ams.amc stop <instance_id> [flags]
 ```
 
-### Examples
+## Examples
 
 ```
   Launch an instance:
@@ -24,7 +24,7 @@ ams.amc stop <instance_id> [flags]
   $ amc stop ceg2ukbhc8ic3ftkc990
 ```
 
-### Options
+## Options
 
 ```
   -h, --help             help for stop
@@ -32,7 +32,7 @@ ams.amc stop <instance_id> [flags]
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 

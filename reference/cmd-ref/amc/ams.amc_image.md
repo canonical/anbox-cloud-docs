@@ -1,8 +1,8 @@
-## ams.amc image
+# ams.amc image
 
 Manage images
 
-### Synopsis
+## Synopsis
 
 Manage images.
 
@@ -16,13 +16,13 @@ See https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/provided-im
 https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/anbox/manage-images/ for more information.
 
 
-### Options
+## Options
 
 ```
   -h, --help   help for image
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 * [ams.amc image add](ams.amc_image_add.md)	 - Add an image

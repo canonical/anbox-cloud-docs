@@ -159,6 +159,15 @@ paths:
           description: Expand the returned resource definition
           name: recursion
           in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Include entitlements for the addons (only works if recursion
+            is 1)
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -232,6 +241,14 @@ paths:
           name: name
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Include entitlements for the addon
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -368,6 +385,15 @@ paths:
           default: 0
           description: Expand the returned resource definition
           name: recursion
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Include entitlements for the addons (only works if recursion
+            is 1)
+          name: entitlements
           in: query
       responses:
         '200':
@@ -585,6 +611,14 @@ paths:
           name: id
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for this application.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -1032,6 +1066,15 @@ paths:
           description: Filter applications by tags.
           name: tags
           in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per application. This
+            only works when `recursion=1` is also passed.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -1072,6 +1115,15 @@ paths:
           default: 0
           description: Expand the returned resource definition
           name: recursion
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per group. This only
+            works when `recursion=1` is also passed.
+          name: entitlements
           in: query
         - type: string
           example: test-group
@@ -1128,6 +1180,14 @@ paths:
           name: name
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Auth Group details
@@ -1233,6 +1293,14 @@ paths:
           name: id
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Identity details
@@ -1274,6 +1342,15 @@ paths:
           default: 0
           description: Expand the returned resource definition
           name: recursion
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per resource. This only
+            works when `recursion=1` is also passed.
+          name: entitlements
           in: query
         - type: string
           example: cilsreunfpfec9b1ktg0
@@ -1416,6 +1493,32 @@ paths:
               metadata:
                 $ref: '#/definitions/OIDCResponse'
         default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/auth/permissions:
+    get:
+      description: This endpoint returns a list of permissions based on the identity's
+        entitlements.
+      produces:
+        - application/json
+      tags:
+        - permissions
+      summary: Get a list of permissions possessed by the current identity.
+      operationId: auth_permissions
+      responses:
+        '200':
+          description: List of permissions
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                $ref: '#/definitions/Permission'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
           $ref: '#/responses/InternalServerError'
   /1.0/certificates:
     get:
@@ -2098,6 +2201,14 @@ paths:
       summary: Get a list of containers
       operationId: containers_get
       parameters:
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
         - type: integer
           description: Maximum number of containers to provide
           name: limit
@@ -2285,6 +2396,14 @@ paths:
           name: id
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Container instance details
@@ -2502,6 +2621,14 @@ paths:
       summary: Get a list of containers
       operationId: containers_get_recursion1
       parameters:
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
         - type: integer
           description: Maximum number of containers to provide
           name: limit
@@ -2675,6 +2802,14 @@ paths:
           description: Expand the returned resource definition
           name: recursion
           in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Include entitlements for each image (requires recursion=1)
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -2782,6 +2917,14 @@ paths:
           default: container
           description: Type of the image variant to return could be `vm` or `container`
           name: type
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Include entitlements for the image
+          name: entitlements
           in: query
       responses:
         '200':
@@ -2976,6 +3119,14 @@ paths:
           description: Expand the returned resource definition
           name: recursion
           in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Include entitlements for each image (requires recursion=1)
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -3000,6 +3151,14 @@ paths:
       summary: Get a list of instances
       operationId: instances_get
       parameters:
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
         - type: integer
           description: Maximum number of instances to provide
           name: limit
@@ -3193,6 +3352,14 @@ paths:
           name: id_or_name
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Instance instance details
@@ -3387,7 +3554,6 @@ paths:
           in: path
           required: true
         - type: string
-          description: Name of the log to retrieve
           name: name
           in: path
           required: true
@@ -3508,6 +3674,14 @@ paths:
       summary: Get a list of instances
       operationId: instances_get_recursion1
       parameters:
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for the resource.
+          name: entitlements
+          in: query
         - type: integer
           description: Maximum number of instances to provide
           name: limit
@@ -3654,6 +3828,15 @@ paths:
           description: Expand the returned resource definition
           name: recursion
           in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per node. This only
+            works when `recursion=1` is also passed.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -3720,6 +3903,14 @@ paths:
           name: name
           in: path
           required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for this node.
+          name: entitlements
+          in: query
       responses:
         '200':
           description: Success response of the service
@@ -3832,6 +4023,15 @@ paths:
           default: 0
           description: Expand the returned resource definition
           name: recursion
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per node. This only
+            works when `recursion=1` is also passed.
+          name: entitlements
           in: query
       responses:
         '200':
@@ -4230,6 +4430,14 @@ definitions:
       to containers
     type: object
     properties:
+      entitlements:
+        description: List of entitlements the user has for this addon
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_delete
       name:
         description: Name of the addon
         type: string
@@ -4306,6 +4514,15 @@ definitions:
         type: integer
         format: int64
         example: 1532150640
+      entitlements:
+        description: Entitlements available to the user for this application
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
+          - can_delete
       id:
         description: ID of the application
         type: string
@@ -4546,6 +4763,10 @@ definitions:
         description: Memory to be assigned to the application
         type: string
         example: 3GB
+      no_disk_reserve:
+        description: NoDiskReserve defines whether to skip reserving the full disk
+          quota upfront
+        type: boolean
       vpu-slots:
         description: Number of VPU slots required by the application
         type: integer
@@ -4582,6 +4803,10 @@ definitions:
         description: Memory to be assigned to the application
         type: string
         example: 3GB
+      no_disk_reserve:
+        description: NoDiskReserve defines whether to skip reserving the full disk
+          quota upfront
+        type: boolean
       vpu-slots:
         description: Number of VPU slots required by the application
         type: integer
@@ -4748,6 +4973,15 @@ definitions:
         description: Description is a short description of the group.
         type: string
         example: Developers of application foo.
+      entitlements:
+        description: Entitlements lists the current identity's entitlements on this
+          group
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
       identities:
         description: Identities is a list of authentication method to slice of group
           identifiers.
@@ -4948,6 +5182,15 @@ definitions:
         type: integer
         format: int64
         example: 1689604498
+      entitlements:
+        description: Entitlements lists the current identity's entitlements on this
+          container
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
       error_message:
         description: ErrorMessage provides an error message when the container status
           is set to error.
@@ -5376,6 +5619,14 @@ definitions:
         description: Email of the new user for OIDC based identities
         type: string
         example: john.doe@example.com
+      entitlements:
+        description: Current identity's entitlements on the object
+        type: array
+        items:
+          type: string
+        example:
+          - can_edit
+          - can_view
       fingerprint:
         description: The certificate fingerprint for TLS based identities
         type: string
@@ -5455,6 +5706,14 @@ definitions:
           name is provided
         type: boolean
         example: false
+      entitlements:
+        description: List of entitlements the user has for this image
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
       id:
         description: ID of the image
         type: string
@@ -5593,8 +5852,27 @@ definitions:
         description: Path to store the image
         type: string
         example: /save/image
+      source:
+        $ref: '#/definitions/ImagesPostSource'
       type:
         $ref: '#/definitions/ImageType'
+  ImagesPostSource:
+    description: ImagesPostSource specifies the source for creating an image
+    type: object
+    properties:
+      force:
+        description: Force specifies whether to stop a running instance before publishing
+        type: boolean
+        example: false
+      instance:
+        description: Instance specifies the instance to create an image from (when
+          Type="instance")
+        type: string
+        example: btavtegj1qm58qg7ru50
+      type:
+        description: 'Type of source: "instance", "import", "upload"'
+        type: string
+        example: instance
   Instance:
     description: Instance represents a single instance
     type: object
@@ -5697,6 +5975,15 @@ definitions:
         type: integer
         format: int64
         example: 1689604498
+      entitlements:
+        description: Entitlements lists the current identity's entitlements on this
+          instance
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
       error_message:
         description: ErrorMessage provides an error message when the instance status
           is set to error.
@@ -5882,6 +6169,10 @@ definitions:
         type: integer
         format: int64
         example: 3221225472
+      no_disk_reserve:
+        description: NoDiskReserve defines whether to skip reserving the full disk
+          quota upfront
+        type: boolean
       vpu-slots:
         description: VPUSlots specifies the number of VPU slots the instance
         type: integer
@@ -5977,6 +6268,16 @@ definitions:
       url:
         description: URL is the endpoint to reach to start the WebRTC signaling process
         type: string
+  InstanceSource:
+    type: object
+    title: InstanceSource represents the source for creating a new instance.
+    properties:
+      id:
+        description: ID of the source resource.
+        type: string
+        example: cilsreunfpfec9b1ktg0
+      type:
+        $ref: '#/definitions/SourceType'
   InstanceStatus:
     description: InstanceStatus represents the status a instance can be in
     type: integer
@@ -6149,6 +6450,11 @@ definitions:
             type: integer
             format: int64
             example: 3221225472
+          no_disk_reserve:
+            description: If set to true, prevents the AMS from reserving the full
+              disk quota upfront.
+            type: boolean
+            example: false
           vpu-slots:
             description: Number of VPU slots the instance should get assigned
             type: integer
@@ -6159,6 +6465,8 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/NetworkServiceSpec'
+      source:
+        $ref: '#/definitions/InstanceSource'
       tags:
         description: Tags which will be assigned to the instance
         type: array
@@ -6270,6 +6578,15 @@ definitions:
         description: Disk size for the node
         type: string
         example: 'true'
+      entitlements:
+        description: Entitlements available to the user for this node
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
+          - can_delete
       gpu_encoder_slots:
         description: Number of GPU encoder slots present on the node
         type: integer
@@ -6862,6 +7179,19 @@ definitions:
         items:
           type: string
         example: 2waySSL
+      auth_permissions:
+        description: Lists the valid entitlements per resource type in AMS.
+        type: object
+        additionalProperties:
+          type: array
+          items:
+            type: object
+            additionalProperties:
+              type: string
+        example:
+          server:
+            - description: Grants access to view server config
+              entitlement_name: can_view_config
       cluster_id:
         description: ID of the subcluster the AMS instance is part of
         type: string
@@ -6870,6 +7200,9 @@ definitions:
         description: Name of the subcluster the AMS instance is part of
         type: string
         example: prod0
+  SourceType:
+    description: SourceType describes the source type of an instance
+    type: string
   StatusCode:
     description: StatusCode represents a valid REST operation
     type: integer

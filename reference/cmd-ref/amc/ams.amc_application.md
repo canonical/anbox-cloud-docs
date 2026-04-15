@@ -1,8 +1,8 @@
-## ams.amc application
+# ams.amc application
 
 Manage applications
 
-### Synopsis
+## Synopsis
 
 Manage applications.
 
@@ -27,13 +27,13 @@ Once ready for use, you can publish a specific version. It will then be used
 for any container launched for the application.
 
 
-### Options
+## Options
 
 ```
   -h, --help   help for application
 ```
 
-### SEE ALSO
+## SEE ALSO
 
 * [ams.amc](ams.amc.md)	 - Anbox Management Client
 * [ams.amc application create](ams.amc_application_create.md)	 - Create an application

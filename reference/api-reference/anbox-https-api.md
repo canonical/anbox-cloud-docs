@@ -98,15 +98,48 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
           "sensor_support",
           "tracing_support",
           "vhal_support"
+          "pprof",
+          "metrics",
+          "log_level",
+          "telephony"
         ],
         "api_status": "stable",       # API implementation status (one of, development, stable or deprecated)
-        "api_version": "1.0"          # The API version as a string
+        "api_version": "1.0",         # The API version as a string
+        "log_level": "info"
     },
     "status": "Success",
     "status_code": 200,
     "type": "sync"
 }
 ```
+
+#### PATCH
+
+ * Description: Update the server configuration
+ * Operation: sync
+ * Return: standard return value or standard error
+
+Input:
+
+```json
+{
+    "log_level": "warning"
+}
+```
+
+- Possible values for `log_level` are: `trace`, `debug`, `info`, `warning`, `error`, `fatal`
+
+Return value:
+
+```json
+{
+    "status": "Success",
+    "status_code": 200,
+    "type": "sync"
+}
+```
+
+Example: `curl -X PATCH --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 --data '{"log_level":"warning"}'`:
 
 (sec-anbox-https-api-location)=
 ### `/1.0/location`
@@ -421,7 +454,7 @@ Sensor Type       | JSON Data structure |
 `proximity`       | {"type": "proximity", "value": \<data\>}  |
 `temperature`     | {"type": "temperature", "value": \<data\>}  |
 
-Please check the following [link](https://developer.android.com/guide/topics/sensors/sensors_environment) for the units of measure for the environmental sensors.
+Please check the following [link](https://developer.android.com/develop/sensors-and-location/sensors/sensors_environment) for the units of measure for the environmental sensors.
 
 ```{note}
 If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the error `Sensor 'acceleration' is not active` even if the sensor updates are activated.
@@ -516,7 +549,7 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### PATCH
 
- * Description: Update configuration of the platform currently used by Anbox
+ * Description: Update one or more configuration items of the platform currently used by Anbox
  * Operation: sync
  * Return: Standard return value or standard error
 
@@ -530,12 +563,40 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 }
 ```
 
-The available configuration items depend on the platform being used by Anbox and are dynamically registered. The following table shows a list of items available with the platforms shipping with Anbox Cloud.
+The available configuration items depend on the platform being used by Anbox and are dynamically registered. The following table shows a list of items available with the platforms shipping with Anbox Cloud. Multiple configuration items can be updated in a single request. This is particularly useful for related settings (like stream video bitrate settings) to ensure they are validated and applied as an atomic expected final state.
 
-Platform | Field name       | Available since   | JSON type | Access | Description        |
----------|------------------|-------------------|-----------|--------|--------------------|
-`webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
-`webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
+Platform | Field name       | Available since   | JSON type | Access | Default value | Description        |
+---------|------------------|-------------------|-----------|--------|------ |--------------------|
+`webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | False | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
+`webrtc` | `stream_active`   | 1.15 | Boolean   | read | - | `true` if a client is actively streaming, `false` if no client is connected. |
+`webrtc` | `stream_video_bitrate_min_kbps`   | 1.29 | unsigned 32-bit integer | read/write | WebRTC session dependent | Defines the minimum bitrate in kilobits per second for WebRTC streaming sessions. |
+`webrtc` | `stream_video_bitrate_max_kbps`   | 1.29 | unsigned 32-bit integer | read/write | WebRTC session dependent | Defines the maximum bitrate in kilobits per second for WebRTC streaming sessions. |
+
+```{note}
+**Stream bitrate configuration items:**
+- If there is no active WebRTC session, these settings are cached and will be automatically applied when a new WebRTC session starts.
+- For an active WebRTC session, changes take effect immediately on the current session.
+- It is recommended to update both `stream_video_bitrate_min_kbps` and `stream_video_bitrate_max_kbps` in a single `PATCH` request. This avoids validation errors that may occur when updating fields individually (e.g., attempting to set a minimum bitrate higher than the existing maximum).
+```
+
+#### DELETE
+
+ * Description: Reset one or more configuration items of the platform to their default values
+ * Operation: sync
+ * Return: Standard return value or standard error
+
+Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/platform --data '{"configs":["stream_video_bitrate_min_kbps"]}' | jq .`:
+
+```bash
+{
+ "status": "Success",
+ "status_code": 200,
+ "type": "sync"
+}
+```
+
+The `DELETE` method resets specific platform configuration items with `read/write` access to their default values. The request body must contain a configs array specifying the names of the items to be reset. For certain items, such as `stream_video_bitrate_min_kbps` or `stream_video_bitrate_max_kbps`, the default values are determined based on the display resolution and FPS of the current WebRTC session.
+
 
 (sec-anbox-https-api-vhal)=
 ### `/1.0/vhal`
