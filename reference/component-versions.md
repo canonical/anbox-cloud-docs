@@ -38,22 +38,22 @@ Not all components are updated with each release. When components are not update
 ### Bundles
 | Name | Channel | Revision |
 |------|---------|----------|
-| anbox-cloud | 1.29/candidate | 983 |
-| anbox-cloud-core | 1.29/candidate | 993 |
+| anbox-cloud | 1.29/stable | 984 |
+| anbox-cloud-core | 1.29/stable | 994 |
 
 ### Snaps
 
 | Name | Channel | Version |
 |------|---------|---------|
-| ams | 1.29/candidate | `1.29.2-2a7994069` |
-| ams-node-controller | 1.29/candidate | `1.29.2-2a7994069` |
-| amc | latest/candidate | `1.29.2-2a7994069` |
-| aar | 1.29/candidate | `1.29.2-2a7994069` |
-| anbox-stream-agent | 1.29/candidate | `1.29.2-2a7994069` |
-| anbox-stream-gateway | 1.29/candidate | `1.29.2-2a7994069` |
-| anbox-cloud-appliance | 1.29/candidate | `1.29.2-2a7994069` |
-| anbox-cloud-dashboard | 1.29/candidate | `1.29.2-2a7994069` |
-| anbox-connect | latest/candidate | `1.29.2-2a7994069` |
+| ams | 1.29/stable | `1.29.2-2a7994069` |
+| ams-node-controller | 1.29/stable | `1.29.2-2a7994069` |
+| amc | latest/stable | `1.29.2-2a7994069` |
+| aar | 1.29/stable | `1.29.2-2a7994069` |
+| anbox-stream-agent | 1.29/stable | `1.29.2-2a7994069` |
+| anbox-stream-gateway | 1.29/stable | `1.29.2-2a7994069` |
+| anbox-cloud-appliance | 1.29/stable | `1.29.2-2a7994069` |
+| anbox-cloud-dashboard | 1.29/stable | `1.29.2-2a7994069` |
+| anbox-connect | latest/stable | `1.29.2-2a7994069` |
 
 ### Anbox images
 
