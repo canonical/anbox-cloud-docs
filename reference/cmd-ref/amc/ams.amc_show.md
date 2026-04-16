@@ -24,6 +24,7 @@ node: lxd0
 created_at: 2019-07-17T14:27:41Z
 image:
   id: bkkbiaphpuo3mh78ain0
+  name: my-image
 network:
   address: 192.168.100.2
   public_address: 10.48.61.89
