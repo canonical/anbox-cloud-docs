@@ -4,7 +4,10 @@ Anbox Cloud runs Android in the cloud using lightweight LXD system containers or
 
 Due to its high scalability, Anbox Cloud enables users to deliver Android experiences with consistent performance and responsiveness.
 
-**Automotive OEMs** can develop and test user-friendly infotainment systems, without having to rely on hardware availability and configuration. **Android application developers** can preview and interact with UI changes instantly, reducing turnaround time for application development. Enterprises offering remote access to Android instances with a customized set of applications, as a service. **Cloud gaming service providers** can deliver Android-based gaming experiences at scale with high performance and low latency.
+**Automotive OEMs** can develop and test user-friendly infotainment systems, without having to rely on hardware availability and configuration.
+**Android application developers** can preview and interact with UI changes instantly, reducing turnaround time for application development.
+**Enterprises** can offer remote access to Android instances with a customized set of applications, as a service.
+**Cloud gaming service providers** can deliver Android-based gaming experiences at scale with high performance and low latency.
 
 Anbox Cloud comes in two variants:
 
