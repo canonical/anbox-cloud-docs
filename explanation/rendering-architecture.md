@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Rendering architecture. The rendering pipeline of Anbox Cloud can vary
+    depending on the GPU used. This guide explains in detail, the rendering architecture
+    of.
+---
 (exp-rendering-architecture)=
 # Rendering architecture
 

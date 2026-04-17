@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Application streaming. This guide covers the usage of the streaming
+    stack and assumes that you know how to access the stream gateway. If you are not
+    familiar.
+---
 (exp-application-streaming)=
 # Application streaming
 

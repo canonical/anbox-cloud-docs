@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Expose services on an instance. AMS allows an instance to expose a
+    service to the outer network using instance services. You can do this by defining
+    a port to.
+---
 (howto-expose-services)=
 # Expose services on an instance
 

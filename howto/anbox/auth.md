@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Configure user permissions. To be able to configure user permissions
+    in Anbox Cloud, you need to first configure OpenFGA. CLI :sync: cli In the Anbox
+    Cloud.'
+---
 (howto-auth)=
 # Configure user permissions
 

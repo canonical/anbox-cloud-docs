@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Configure the watchdog. The monitors the app installed by the boot
+    package. By default, it terminates the instance if the app crashes or is moved
+    to the.
+---
 (howto-configure-watchdog)=
 # Configure the watchdog
 

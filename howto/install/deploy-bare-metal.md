@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Deploy on bare metal. This document guides you through the steps to
+    install Anbox Cloud on a manual cloud that Juju offers i.e., you can deploy Anbox
+    Cloud.
+---
 (howto-deploy-anbox-baremetal)=
 # Deploy on bare metal
 

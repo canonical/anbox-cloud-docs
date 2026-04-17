@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Install on GitHub. For use within a GitHub Action workflow, a simple
+    action named is available. This action can be easily integrated into existing
+    workflows.
+---
 (howto-install-appliance-github)=
 # Install on GitHub
 

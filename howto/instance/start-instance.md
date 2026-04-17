@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Start an instance. When an instance is either initialized with the
+    command or stopped with the command, you must start it explicitly with the command:
+    is the.'
+---
 (howto-start-instance)=
 # Start an instance
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Delete an application. When an application is no longer needed, it
+    can be fully removed from Anbox Cloud. However, be mindful of the consequences
+    that come.
+---
 (howto-delete-application)=
 # Delete an application
 

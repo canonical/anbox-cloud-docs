@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Rendering graphical output. Anbox Cloud can adapt to your rendering
+    needs by adjusting its behavior depending on the availability of a GPU and the
+    presence of.
+---
 (exp-rendering-graphics)=
 # Rendering graphical output
 

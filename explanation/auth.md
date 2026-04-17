@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Authentication and authorization. An identity in Anbox Cloud represents
+    a user requiring access to resources in the Anbox Management Service (AMS) through
+    its.
+---
 (exp-auth)=
 # Authentication and authorization
 

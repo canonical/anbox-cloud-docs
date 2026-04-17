@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Develop addons in. Developing and testing addons using the Anbox Management
+    Service (AMS) may be time-consuming. Instead, an instance with enabled can provide.
+---
 (howto-develop-addons-devmode)=
 # Develop addons in `--devmode`
 

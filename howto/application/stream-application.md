@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Stream applications. You can stream applications using the Anbox Cloud
+    dashboard or your custom stream client. You can also stream applications by launching
+    an.
+---
 (howto-stream-applications)=
 # Stream applications
 

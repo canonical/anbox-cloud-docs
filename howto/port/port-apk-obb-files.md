@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Port APKs with OBB files. Google Play has a limit on how big an APK
+    file can be (see APK Expansion Files). Larger Android apps must be split up into
+    the main.
+---
 (howto-port-apk-oob)=
 # Port APKs with OBB files
 

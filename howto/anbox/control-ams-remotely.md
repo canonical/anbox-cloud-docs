@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Access AMS remotely. By default, the runs on the same machine as the
+    and connects to it through a UNIX socket. You can also choose to install AMC on
+    a.
+---
 (howto-access-ams-remote)=
 # Access AMS remotely
 

@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Publish an instance as an image. Publishing an instance as an image
+    allows you to capture the current state of an instance, including any file system.
+---
 (howto-publish-instance-as-image)=
 # Publish an instance as an image
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Delete an instance. An instance can be deleted, which will cause any
+    connected user to be disconnected immediately. CLI :sync: cli Provide the ID of
+    the.'
+---
 (howto-delete-instance)=
 # Delete an instance
 

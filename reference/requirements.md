@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Requirements. To run Anbox Cloud, you must fulfill a few minimum requirements,
+    which differ depending on whether you plan to use charmed Anbox Cloud or the.
+---
 (ref-requirements)=
 # Requirements
 

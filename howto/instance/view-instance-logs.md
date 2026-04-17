@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: View instance logs. You can view the Anbox and the Android system logs
+    while an instance is running, or check the collected logs if an instance fails.
+    AMS does.
+---
 (howto-view-instance-logs)=
 # View instance logs
 

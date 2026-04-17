@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Addons. In Anbox Cloud, addons can be used to customize images that
+    are used for instances. See and to learn about addons in detail. You can use addons
+    to, for.
+---
 (howto-addons)=
 # Addons
 

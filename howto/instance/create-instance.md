@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Create an instance. To launch an application or an image, Anbox Cloud
+    creates an instance for it. To create and launch an instance, you can use the
+    Anbox Cloud.
+---
 (howto-create-instance)=
 # Create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.

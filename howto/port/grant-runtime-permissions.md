@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Grant runtime permissions. An Anbox Cloud application cannot automatically
+    grant runtime permissions to the app it runs upon creation. Therefore, you must.
+---
 (howto-grant-runtime-permissions)=
 # Grant runtime permissions
 

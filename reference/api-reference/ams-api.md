@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: AMS HTTP API. window.onload = function() { // Begin Swagger UI call
+    region const ui = SwaggerUIBundle({ }) // End Swagger UI call region window.ui
+    = ui }.
+---
 # AMS HTTP API
 
 <link rel="stylesheet" type="text/css" href="../../../_static/swagger-ui/swagger-ui.css" ></link>

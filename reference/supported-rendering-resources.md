@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Supported rendering resources. This guide lists various supported GPU
+    vendors, drivers, platforms, APIs and discuss the rendering pipelines used for
+    different.
+---
 (ref-rendering-resources)=
 # Supported rendering resources
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Enable an addon globally. To enable an addon for an application, you
+    must add it to the application manifest. However, if you want to use the same
+    addon or.
+---
 (howto-enable-addons-globally)=
 # Enable an addon globally
 

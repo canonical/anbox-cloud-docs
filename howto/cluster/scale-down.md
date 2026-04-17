@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Scale down a LXD cluster. Scaling down a LXD cluster involves more
+    checks than scaling up. The following are important requirements when scaling
+    down: The node.'
+---
 (howto-scale-down-cluster)=
 # Scale down a LXD cluster
 

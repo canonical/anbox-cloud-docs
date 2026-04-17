@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: License information. The copyright and license information of Anbox
+    Cloud can be found within the container or the virtual machine at . Anbox Cloud
+    is built.
+---
 (ref-license-information)=
 # License information
 The copyright and license information of Anbox Cloud can be found within the container or the virtual machine at `/usr/share/doc/anbox/copyright`.

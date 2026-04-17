@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Authentication and authorization. This table lists the entitlements
+    that can be assigned at a global level. This table lists the resource types and
+    their.
+---
 (ref-auth)=
 # Authentication and authorization
 

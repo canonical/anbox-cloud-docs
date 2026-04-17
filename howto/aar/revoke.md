@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Revoke a client. If a client gets compromised, it's important to block
+    its access to the Anbox Application Registry (AAR) by revoking its certificate.
+    Revoked.
+---
 (howto-revoke-aar)=
 
 # Revoke a client

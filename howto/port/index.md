@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Port Android apps. When porting an Android app to Anbox Cloud (usually
+    in the form of an APK), there are a few issues that might cause your app to not
+    function.
+---
 (howto-port-android-apps)=
 # Port Android apps
 

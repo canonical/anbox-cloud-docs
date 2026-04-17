@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Prometheus metrics. Anbox Cloud gathers various performance metrics
+    that you can access through API endpoints. The following sections list all metrics
+    for each.
+---
 (ref-prometheus-metrics)=
 # Prometheus metrics
 

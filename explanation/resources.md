@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Resources and resource presets. Resource presets denote the resources
+    available to an instance. Anbox Cloud uses some default resource presets if there
+    are no.
+---
 (exp-resources-presets)=
 # Resources and resource presets
 

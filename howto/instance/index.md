@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Manage instances. The following guides in this section describe how
+    to work with instances in Anbox Cloud. See for an introduction to how instances
+    are used in.
+---
 (howto-instance)=
 # Manage instances
 

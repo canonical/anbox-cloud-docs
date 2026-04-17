@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox Application Registry. The Anbox Application Registry (AAR) provides
+    a central repository for applications created on Anbox Cloud. Using an AAR is
+    very.
+---
 (exp-aar)=
 # Anbox Application Registry
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Implement streaming. The following guides in this section describe
+    how to use the Streaming Stack to implement specific streaming features in your
+    application.
+---
 (howto-streaming)=
 # Implement streaming
 

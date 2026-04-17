@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox HTTPS API. Anbox Cloud provides an HTTP API endpoint through
+    a Unix socket at inside every instance. The API allows controlling certain aspects
+    of the.
+---
 (anbox-https-api)=
 # Anbox HTTPS API
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Access an Android instance. As an Android application developer, you
+    need access to the Android instance when developing and debugging applications.
+    Depending.
+---
 (howto-access-android-instance)=
 # Access an Android instance
 

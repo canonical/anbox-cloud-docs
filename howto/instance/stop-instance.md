@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Stop an instance. A running instance can be stopped using the command:
+    is the ID of the instance that you want to stop. Do not use the command to manage
+    an.'
+---
 (howto-stop-instance)=
 # Stop an instance
 

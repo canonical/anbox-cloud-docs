@@ -1,5 +1,9 @@
 ---
 orphan: true
+html_meta:
+  description: Markdown/MyST cheat sheet. This file contains the syntax for commonly
+    used Markdown and MyST markup. The best way to use it is to open it in your text
+    editor.
 ---
 (cheat-sheet-myst)=
 # Markdown/MyST cheat sheet

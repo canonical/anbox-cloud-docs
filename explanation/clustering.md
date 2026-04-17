@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Clustering. While it is possible to install Anbox Cloud on a single
+    machine, Anbox Cloud Appliance does not support multi-node setups. If you intend
+    to.
+---
 (exp-clustering)=
 # Clustering
 

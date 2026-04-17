@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Install Anbox Cloud. It is important to remember that there is a difference
+    between the charmed Anbox Cloud installation and the Anbox Cloud Appliance (see
+    ).
+---
 (howto-install-anbox-cloud)=
 # Install Anbox Cloud
 

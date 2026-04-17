@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Choose APK architecture. In most cases, an Android app is not distributed
+    as a universal APK. If the app contains native libraries, the ABI split approach
+    is.
+---
 (howto-choose-apk-architecture)=
 # Choose APK architecture
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Performance. The performance of your Anbox Cloud deployment depends
+    on multiple factors. To ensure optimal performance, check and monitor all areas
+    and tune.
+---
 (exp-performance)=
 # Performance
 

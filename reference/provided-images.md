@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Provided Anbox Cloud images. Anbox Cloud provides images based on different
+    Android versions and different architectures (amd64, arm64). Anbox Management.
+---
 (ref-provided-images)=
 # Provided Anbox Cloud images
 

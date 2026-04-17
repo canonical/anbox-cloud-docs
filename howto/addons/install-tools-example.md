@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: 'Example: Install tools. Application images are designed to be as lightweight
+    as possible, and as such, common tools you might expect to see in a regular cloud.'
+---
 (howto-install-tools-example)=
 # Example: Install tools
 

@@ -1,5 +1,9 @@
 ---
 orphan: true
+html_meta:
+  description: 'Anbox Cloud documentation. This repository hosts the product documentation
+    for Anbox Cloud. Important: The concepts of the Anbox component in Anbox Cloud
+    are.'
 ---
 
 # Anbox Cloud documentation

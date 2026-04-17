@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Troubleshoot streaming issues. Debugging issues that occur when streaming
+    your application can be tricky. The following instructions give you some pointers
+    on.
+---
 (howto-ts-streaming-issues)=
 # Troubleshoot streaming issues
 

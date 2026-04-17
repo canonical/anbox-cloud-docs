@@ -38,6 +38,10 @@ help:
 	@echo "* check style guide compliance:              make vale"
 	@echo "* check style guide compliance on target:    make vale TARGET=*"
 	@echo "* check metrics for documentation:           make allmetrics"
+	@echo "* list documentation source files:           make list-docs"
+	@echo "* add meta descriptions to docs:             make descriptions"
+	@echo "* validate meta descriptions:                make check-descriptions"
+	@echo "* run description unit tests:                make test-descriptions"
 	@echo "* other possible targets:                    make <TAB twice>"
 	@echo "-------------------------------------------------------------"
 	@echo
@@ -45,7 +49,7 @@ help:
 .PHONY: full-help spellcheck-install pa11y-install install run html \
         epub serve clean clean-doc spelling spellcheck linkcheck woke \
         allmetrics pa11y pdf-prep-force pdf-prep pdf vale-install vale \
-		update
+		update list-docs descriptions check-descriptions test-descriptions
 
 full-help: $(VENVDIR)
 	@. $(VENV); $(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -189,6 +193,57 @@ allmetrics: html
 
 update: install
 	@. $(VENV); .sphinx/update_sp.py
+
+# Generate a release note.
+# Usage: make release-note VERSION=1.29.0
+#   Add OVERWRITE=1 to replace an existing file.
+#   Add DRY_RUN=1  to preview without writing.
+#   Add NO_LP=1    to skip Launchpad bug fetching.
+VERSION  ?=
+OVERWRITE ?=
+DRY_RUN  ?=
+NO_LP    ?=
+
+release-note:
+	@test -n "$(VERSION)" || (echo "ERROR: VERSION is required. Usage: make release-note VERSION=1.29.0" && exit 1)
+	@. $(VENV); python3 scripts/generate_release_note.py \
+		--version "$(VERSION)" \
+		$(if $(OVERWRITE),--overwrite) \
+		$(if $(DRY_RUN),--dry-run) \
+		$(if $(NO_LP),--no-launchpad)
+
+.PHONY: release-note
+
+# ---------------------------------------------------------------------------
+# Documentation meta descriptions
+# ---------------------------------------------------------------------------
+
+# One-liner: list all documentation source files
+#   make list-docs
+list-docs: install
+	@. $(VENV); python3 scripts/add_descriptions.py --list
+
+# Add html_meta.description to every docs file that lacks one.
+#   make descriptions           (add only)
+#   make descriptions OVERWRITE=1  (also refresh existing)
+descriptions: install
+	@. $(VENV); python3 scripts/add_descriptions.py --write $(if $(OVERWRITE),--overwrite)
+
+# Validate that every file has a correctly-formed description.
+# Exits with status 1 on failures (CI-friendly).
+check-descriptions: install
+	@. $(VENV); python3 scripts/add_descriptions.py --check
+
+# Run the description unit + file-level + HTML tests.
+#   make test-descriptions          (unit tests only; fast)
+#   make test-descriptions SLOW=1   (all tests including HTML; requires make html first)
+test-descriptions: install
+	@. $(VENV); pip install pytest --quiet
+	@. $(VENV); python3 -m pytest scripts/test_descriptions.py -v \
+		$(if $(SLOW),,--ignore-glob='*slow*' -m 'not slow') \
+		--tb=short
+
+.PHONY: list-docs descriptions check-descriptions test-descriptions
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

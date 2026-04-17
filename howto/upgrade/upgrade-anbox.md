@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Upgrade charmed deployment. If you're interested in getting notified
+    for the latest Anbox Cloud releases, make sure you subscribe to the Anbox Cloud
+    category.
+---
 (howto-upgrade-anbox-cloud)=
 # Upgrade charmed deployment
 

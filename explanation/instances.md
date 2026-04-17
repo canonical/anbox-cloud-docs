@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Instances. Instances are the center piece of the Anbox Cloud stack.
+    Every time you launch an application or an image, Anbox Cloud creates an instance
+    for it.
+---
 (exp-instances)=
 # Instances
 

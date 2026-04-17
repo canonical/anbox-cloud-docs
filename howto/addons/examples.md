@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Examples. Here are some examples to illustrate how to use addons and
+    hooks.
+---
 # Examples
 
 Here are some examples to illustrate how to use addons and hooks:

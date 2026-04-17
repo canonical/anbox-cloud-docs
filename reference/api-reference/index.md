@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: API reference. Anbox Cloud includes various APIs to help you build
+    solutions with it. This page provides an overview of the available APIs and their
+    uses. All.
+---
 (ref-api)=
 # API reference
 

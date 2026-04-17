@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Develop a platform plugin. Anbox Cloud provides a platform SDK that
+    allows the development of custom platform plugins for the Anbox runtime, for use
+    cases.
+---
 (howto-develop-platform-plugin)=
 # Develop a platform plugin
 

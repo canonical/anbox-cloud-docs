@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Production planning. When you are planning a production deployment,
+    you should consider the aspects that you want to customize for best results. This
+    topic.
+---
 (exp-production-planning)=
 # Production planning
 

@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Anbox Cloud. Anbox Cloud provides a rich software stack that enables
+    you to run Android applications in the cloud for different use cases, including.
+---
 (exp-anbox-cloud)=
 # Anbox Cloud
 

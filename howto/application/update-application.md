@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Update an application. Updating an existing application works similar
+    to creating a new one. Each time an existing application is updated, it is extended
+    with.
+---
 (howto-update-application)=
 # Update an application
 

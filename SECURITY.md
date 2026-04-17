@@ -1,5 +1,8 @@
 ---
 orphan: true
+html_meta:
+  description: Anbox Cloud security policy. Learn about our release and support policy
+    for the nature of our releases and versions. If you discover a security vulnerability.
 ---
 # Anbox Cloud security policy
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Increase instance density. In an Anbox Cloud deployment with NVIDIA
+    GPUs, launching multiple GPU-based Anbox instances or performing may reveal a
+    limit on the.
+---
 (howto-increase-instance-density)=
 # Increase instance density
 

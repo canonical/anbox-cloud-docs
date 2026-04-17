@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Back up and restore application data. Backup and restoration of application
+    data can be achieved easily with the (Anbox Application Manager) utility helper.
+---
 (howto-backup-restore-application-data)=
 # Back up and restore application data
 

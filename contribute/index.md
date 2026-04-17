@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Contribute to Anbox Cloud documentation. Although Anbox Cloud is a
+    closed-source product, the documentation for Anbox Cloud is open and is available
+    at the.
+---
 (contribute)=
 # Contribute to Anbox Cloud documentation
 

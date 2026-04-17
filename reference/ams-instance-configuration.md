@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: AMS instance configuration. The Anbox Management Service (AMS) provides
+    various configuration items for individual instances.
+---
 (ref-ams-instance-configuration)=
 # AMS instance configuration
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Install an APK as a system app. Usually, Anbox Cloud installs APKs
+    as user apps in the Android container. It is possible to install apps as system
+    apps though.
+---
 (howto-install-apk-system-app)=
 # Install an APK as a system app
 

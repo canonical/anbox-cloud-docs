@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Run benchmarks. Anbox Cloud provides tools for benchmarking different
+    aspects of your deployment. These tools enable you to put Anbox Cloud under load
+    and use.
+---
 (howto-run-benchmarks)=
 # Run benchmarks
 

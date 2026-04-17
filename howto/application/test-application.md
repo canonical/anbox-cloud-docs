@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Test your application. Anbox Cloud enables you to run automated tests
+    for Android applications at scale. In the following example, we make use of Appium
+    to.
+---
 (howto-test-application)=
 # Test your application
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Enable client-side video upscaling. The Anbox Streaming SDK offers
+    experimental video upscaling features for client side streaming, leveraging AMD
+    FidelityFX.
+---
 (howto-enable-client-side-video-upscaling)=
 # Enable client-side video upscaling
 

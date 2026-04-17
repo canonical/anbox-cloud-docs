@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Pass custom data to an application. You can pass custom data to your
+    application, which you can then use in addons or hooks. For example, you might
+    want to.
+---
 (howto-pass-custom-data-application)=
 # Pass custom data to an application
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Access the stream gateway. Similar to the Anbox Management Service
+    (AMS), the stream gateway exposes its API over an HTTP interface. Clients can
+    be anything.
+---
 (howto-access-stream-gateway)=
 # Access the stream gateway
 

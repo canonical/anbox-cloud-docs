@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Wait for an instance. When launching an instance, the instance should
+    not be considered started until it reaches the running state. Sometimes if you
+    want to.
+---
 (howto-wait-for-instance)=
 # Wait for an instance
 

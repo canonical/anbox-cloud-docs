@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Troubleshoot issues with initial setup. You might encounter the following
+    issues while setting up your system. Applies to: Anbox Cloud > Several Juju units
+    of.'
+---
 (howto-ts-initial-setup)=
 # Troubleshoot issues with initial setup
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Charms. All communication between Juju units and the Juju controller
+    happens over TLS-encrypted websockets. The certificate for the TLS connection
+    to the.
+---
 (exp-security-charms)=
 # Charms
 

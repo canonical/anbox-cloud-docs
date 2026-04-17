@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Example: Emulate platforms. To provide support for platforms that
+    are not natively supported by your application (for example, you want to run an
+    x86_64.'
+---
 (howto-emulate-platforms-example)=
 # Example: Emulate platforms
 

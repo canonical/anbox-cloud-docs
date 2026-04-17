@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox Cloud dashboard. The Anbox Cloud dashboard offers a web interface
+    to create, manage and stream applications. The dashboard is especially helpful
+    for.
+---
 (exp-web-dashboard)=
 # Anbox Cloud dashboard
 

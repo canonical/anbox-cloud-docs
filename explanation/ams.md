@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox Management Service. The Anbox Management Service (AMS) sits at
+    the heart of Anbox Cloud and handles all aspects of the application and instance
+    life.
+---
 (exp-ams)=
 # Anbox Management Service
 

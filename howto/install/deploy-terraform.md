@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Deploy with Terraform. To deploy Anbox Cloud using Terraform, you need
+    the Juju provider for it. The terraform plan is a work in progress and makes use
+    of.
+---
 (howto-deploy-anbox-terraform)=
 # Deploy with Terraform
 

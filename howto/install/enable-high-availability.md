@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Enable High Availability. Anbox Cloud comes with support for High Availability
+    (HA) for both Core and the Streaming Stack. In addition to Juju's support for.
+---
 (howto-enable-ha)=
 # Enable High Availability
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox Cloud Documentation Style Guide. Anbox Cloud documentation’s
+    navigational structure, style, and content follows the Diátaxis systematic framework
+    for.
+---
 
 (style-guide)=
 # Anbox Cloud Documentation Style Guide

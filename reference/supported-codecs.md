@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Supported video codecs. Anbox Cloud combines both software and hardware
+    video encoding in order to utilize available resources in the best possible way.
+---
 (ref-codecs)=
 # Supported video codecs
 

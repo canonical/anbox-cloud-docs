@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Configure. The uses a certificate-based authentication system that
+    uses TLS server and client certificates to establish a trusted connection between
+    the AAR.
+---
 (howto-configure-aar)=
 # Configure
 

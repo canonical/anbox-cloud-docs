@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Configure geographic location. Anbox Cloud allows specifying a geographic
+    location for an Android container. This location can either be specified statically.
+---
 (howto-configure-geographic-location)=
 # Configure geographic location
 

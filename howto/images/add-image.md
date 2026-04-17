@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Add an image. CLI :sync: cli An image can be added with the following
+    command: The first image that you add is marked as the default image. The default
+    image.'
+---
 (howto-add-image)=
 # Add an image
 

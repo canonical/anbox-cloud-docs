@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Troubleshoot issues while using the web dashboard. You might encounter
+    the following issues when using the dashboard. Applies to: Anbox Cloud, Anbox
+    Cloud.'
+---
 (howto-ts-web-dashboard)=
 # Troubleshoot issues while using the web dashboard
 

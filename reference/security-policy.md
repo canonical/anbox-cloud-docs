@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Security policy. Learn about our release and support policy for the
+    nature of our releases and versions. All our public repositories have a file that
+    details.
+---
 (ref-security-policy)=
 # Security policy
 

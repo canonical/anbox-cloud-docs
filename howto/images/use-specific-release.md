@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Use a specific release. With every new Anbox Cloud release, updated
+    images are published. By default, the latest image release is pulled by AMS, but
+    you can.
+---
 (howto-use-specific-release)=
 # Use a specific release
 

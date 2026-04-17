@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Glossary. Addons Amazon Web Services (AWS) AMS Node Controller AMS
+    SDK Anbox Application Manager (AAM).
+---
 (ref-glossary)=
 # Glossary
 

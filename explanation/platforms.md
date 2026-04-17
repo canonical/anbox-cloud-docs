@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Supported platforms. Anbox Cloud currently supports the , , platforms.
+    This guide covers the display settings configuration for these platforms. To instruct
+    an.
+---
 (exp-platforms)=
 # Supported platforms
 

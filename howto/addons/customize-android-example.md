@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Example: Customize Android. To do any customization to the Android
+    system that runs your application, use the tool within a hook. This tool is useful
+    to.'
+---
 (howto-customize-android-example)=
 # Example: Customize Android
 

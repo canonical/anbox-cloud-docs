@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: WebRTC streamer. Usually you wouldn't need to adjust the default WebRTC
+    streamer configuration because it is optimized to provide a good balance between
+    low.
+---
 (ref-webrtc)=
 # WebRTC streamer
 

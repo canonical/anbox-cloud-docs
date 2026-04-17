@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Install on Azure. The Anbox Cloud Appliance is not yet available from
+    the Azure Marketplace. However, you can install the Anbox Cloud Appliance snap
+    on an.
+---
 (howto-install-appliance-azure)=
 # Install on Azure
 

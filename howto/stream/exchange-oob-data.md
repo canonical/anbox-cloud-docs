@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Exchange out-of-band data. Enabling out-of-band (OOB) data transmission
+    between an Android application and a WebRTC client makes it possible to exchange
+    data.
+---
 
 (howto-exchange-oob-data)=
 # Exchange out-of-band data

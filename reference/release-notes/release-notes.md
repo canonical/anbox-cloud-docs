@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Release notes. This page outlines the release notes of all versions
+    of Anbox Cloud. If you're interested in getting notified for the latest Anbox
+    Cloud.
+---
 (ref-release-notes)=
 # Release notes
 

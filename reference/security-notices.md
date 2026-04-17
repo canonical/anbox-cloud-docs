@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Security notices. This page contains information about security vulnerabilities
+    found and fixed in Anbox Cloud. For information about our security policy, see.
+---
 (ref-security-notices)=
 # Security notices
 

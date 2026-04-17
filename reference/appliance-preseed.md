@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox Cloud Appliance preseed configuration format. The Anbox Cloud
+    Appliance supports a command line flag for its command that makes it possible
+    to fully.
+---
 (ref-appliance-preseed-config)=
 # Anbox Cloud Appliance preseed configuration format
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Create an application. An application can be created using the Anbox
+    Cloud dashboard or through the CLI. Any application must be created first to be
+    available.
+---
 (howto-create-application)=
 # Create an application
 

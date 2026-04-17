@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Manage applications. The guides in this section describe how to manage
+    your applications. See for an introduction to how applications are used in Anbox
+    Cloud.
+---
 (howto-manage-applications)=
 # Manage applications
 

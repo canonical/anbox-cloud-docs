@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Manage cluster nodes. The guides in this section describe how to distribute
+    the load of your Anbox Cloud installation over several machines in a cluster.
+    See.
+---
 (howto-manage-cluster)=
 # Manage cluster nodes
 

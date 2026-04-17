@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Install the appliance. In this tutorial, we will install the Anbox
+    Cloud Appliance snap, initialize the appliance within a Multipass virtual machine.
+    By the.
+---
 (tut-installing-appliance)=
 # Install the appliance
 

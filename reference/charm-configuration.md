@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Charm Configuration. Since the release of Anbox Cloud 1.25.0, Anbox
+    Cloud Charms have been updated to support the latest Operator Framework used by
+    Juju. This.
+---
 (ref-charm-configuration)=
 # Charm Configuration
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Install on AWS. You can install the Anbox Cloud Appliance on AWS in
+    one of two ways: Install through the AWS Marketplace. This is the recommended
+    way, because.'
+---
 (howto-install-appliance-aws)=
 # Install on AWS
 

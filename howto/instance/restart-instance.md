@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Restart an instance. A running instance can be restarted using the
+    command: is the ID of the instance that you want to restart. Do not use the command
+    to.'
+---
 (howto-restart-instance)=
 # Restart an instance
 

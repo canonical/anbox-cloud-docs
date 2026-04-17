@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Android Automotive OS(AAOS). Since the 1.21.0 release, in addition
+    to providing images based on the Android Open Source Project (AOSP), Anbox Cloud
+    also offers.
+---
 (exp-aaos)=
 # Android Automotive OS(AAOS)
 

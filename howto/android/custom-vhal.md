@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Replace Anbox VHAL. since 1.22.0 Replacing the Anbox VHAL is only supported
+    on . The Anbox Cloud dashboard does not support custom VHAL implementations. This.
+---
 (howto-replace-anbox-vhal)=
 # Replace Anbox VHAL
 

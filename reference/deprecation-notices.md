@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Deprecation notices. This document contains a list of deprecation notices
+    for Anbox Cloud and its components. Deprecated in 1.28.0 ; Unsupported in 1.30.0
+    The.
+---
 (ref-deprecation-notes)=
 # Deprecation notices
 

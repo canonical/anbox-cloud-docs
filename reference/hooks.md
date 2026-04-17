@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Hooks. Hooks are scripts that automatically trigger actions based on
+    an event performed in the life cycle of an instance. A hook can be any executable
+    file.
+---
 (ref-hooks)=
 # Hooks
 

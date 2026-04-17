@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Integrate Anbox HIDL interface. The Anbox HIDL interface is used in
+    the default Anbox VHAL implementation. This document guides you through the steps
+    for.
+---
 (howto-integrate-hidl)=
 # Integrate Anbox HIDL interface
 

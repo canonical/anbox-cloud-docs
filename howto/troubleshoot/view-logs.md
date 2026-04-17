@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'View logs. There are two types of logs that help you understand what
+    is happening in your Anbox Cloud installation: Logs for the applications that
+    you are.'
+---
 (howto-ts-view-logs)=
 # View logs
 

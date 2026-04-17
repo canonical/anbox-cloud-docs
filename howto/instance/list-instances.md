@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'List instances. To get an overview of the running status of instances
+    on an Anbox Cloud deployment, run the command: This will list all instances with
+    their.'
+---
 (howto-list-instances)=
 # List instances
 

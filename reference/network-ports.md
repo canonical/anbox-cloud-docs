@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Network ports. Anbox Cloud exposes certain network ports for access
+    and communication. For the charmed Anbox Cloud deployment, these ports are used
+    for.
+---
 (ref-network-ports)=
 # Network ports
 

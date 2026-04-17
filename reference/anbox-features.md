@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Supported features for AOSP vs AAOS images. Anbox Cloud provides images
+    based on the Android Open Source Project (AOSP), an operating system typically
+    used in.
+---
 (ref-aosp-aaos)=
 # Supported features for AOSP vs AAOS images
 

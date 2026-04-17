@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Use Ceph storage. By default, the LXD charm in Anbox Cloud uses local
+    storage (ZFS or directory-based) on each node. For production deployments requiring.
+---
 (howto-use-ceph-storage)=
 # Use Ceph storage
 

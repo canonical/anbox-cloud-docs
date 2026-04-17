@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Custom images. Android Automotive OS(AAOS) includes reference designs
+    that can be customized. Car makers will typically adapt these reference designs
+    to fit.
+---
 (exp-custom-images)=
 # Custom images
 

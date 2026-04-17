@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Troubleshoot Anbox Cloud. The following troubleshooting guides describe
+    some commonly encountered problems with Anbox Cloud and provide instructions for.
+---
 (howto-ts-anbox-cloud)=
 # Troubleshoot Anbox Cloud
 

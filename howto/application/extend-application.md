@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Extend an application. You can extend an application either by adding
+    hooks directly to the application or by creating an addon that includes one or
+    more hooks.
+---
 (howto-extend-application)=
 # Extend an application
 

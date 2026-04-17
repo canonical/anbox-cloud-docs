@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Copy an instance. Copying an instance allows you to create a copy of
+    an existing instance. This is particularly good for scaling environments, replicating
+    same.
+---
 (howto-copy-instance)=
 
 # Copy an instance

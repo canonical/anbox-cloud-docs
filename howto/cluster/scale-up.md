@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Scale up a LXD cluster. Scaling up a LXD cluster can be achieved via
+    Juju. Juju automates the deployment of the individual units and links them together.
+    The.
+---
 (howto-scale-up-cluster)=
 # Scale up a LXD cluster
 

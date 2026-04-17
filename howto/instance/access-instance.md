@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Access an instance. In some cases, it might be necessary to access
+    an individual instance for debugging reasons. You can do this on the command line
+    with the.
+---
 (howto-access-instance)=
 # Access an instance
 

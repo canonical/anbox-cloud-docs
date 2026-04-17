@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Integrate a client-side virtual keyboard. The Anbox Streaming SDK enables
+    developers to build a hybrid mobile application that can integrate the features
+    that.
+---
 
 (howto-integrate-virtual-keyboard)=
 # Integrate a client-side virtual keyboard

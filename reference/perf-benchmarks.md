@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Performance benchmarks. The following benchmarks give an overview of
+    the performance that you can achieve with Anbox Cloud. The benchmarks were performed
+    using.
+---
 (ref-performance-benchmarks)=
 # Performance benchmarks
 

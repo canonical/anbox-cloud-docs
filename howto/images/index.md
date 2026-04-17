@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Manage images. An image is the base for an instance running in the
+    Anbox Cloud. It contains all necessary components, like Anbox or the Android root
+    file.
+---
 (howto-manage-images)=
 # Manage images
 

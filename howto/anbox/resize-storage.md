@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Resize LXD storage. Resizing the LXD storage pool that Anbox Cloud
+    uses is not recommended. Before you deploy Anbox Cloud, you should analyze and
+    plan the.
+---
 (howto-resize-lxd-storage)=
 # Resize LXD storage
 

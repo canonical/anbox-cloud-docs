@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Debug graphics with Renderdoc. Renderdoc is a graphics frame debugger
+    which supports Android applications. Debugging graphics can be challenging and
+    Renderdoc.
+---
 (howto-debug-graphics-renderdoc)=
 # Debug graphics with Renderdoc
 

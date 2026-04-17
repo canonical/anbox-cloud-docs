@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Upgrade appliance. The upgrade process for the Anbox Cloud Appliance
+    is as simple as updating the snap package to the appropriate channel. Before upgrading
+    the.
+---
 (howto-upgrade-appliance)=
 # Upgrade appliance
 

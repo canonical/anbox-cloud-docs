@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Monitor Anbox Cloud. Anbox Cloud collects various metrics and makes
+    them accessible through API endpoints. While Anbox Cloud does not provide its
+    own.
+---
 (howto-monitor-anbox)=
 # Monitor Anbox Cloud
 

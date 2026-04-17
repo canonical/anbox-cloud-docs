@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Customize installation. There are two main ways to customize the Anbox
+    Cloud deployment: 1. Use overlays in conjunction with the published Anbox Cloud
+    bundle.'
+---
 (howto-customize-installation)=
 # Customize installation
 

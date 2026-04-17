@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Set automotive properties using VHAL. This guide demonstrates how automotive
+    application developers can test their features in automotive infotainment systems.
+---
 (howto-set-automotive-properties)=
 # Set automotive properties using VHAL
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Deploy on a public cloud. Anbox Cloud supports various public clouds,
+    such as AWS, Azure and Google. To deploy Anbox Cloud in a cloud environment, you
+    use.
+---
 (howto-deploy-anbox-juju)=
 # Deploy on a public cloud
 

@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Upgrade Anbox Cloud. The following guides in this section describe
+    how to upgrade your charmed or appliance installation. When possible, Anbox Cloud.
+---
 (howto-upgrade)=
 # Upgrade Anbox Cloud
 

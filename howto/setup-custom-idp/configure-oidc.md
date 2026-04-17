@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Configure OIDC for the appliance. It is possible to configure OpenID
+    Connect only when the appliance is initialized with a preseed (see ) after the.
+---
 (howto-configure-oidc)=
 # Configure OIDC for the appliance
 

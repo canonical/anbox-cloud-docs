@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Share a session. A session in Anbox Cloud denotes the streaming session
+    of an Anbox instance. Each session of an instance can be shared up to a maximum
+    of 5.
+---
 (howto-share-session)=
 # Share a session
 

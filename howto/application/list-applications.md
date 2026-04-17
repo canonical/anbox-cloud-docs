@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'List applications. When using the CLI, to list all available applications,
+    run: By default, shows all applications. If you want to search for specific types
+    of.'
+---
 (howto-list-applications)=
 # List applications
 

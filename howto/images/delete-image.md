@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: 'Delete an image. CLI :sync: cli Deleting an image will make it unavailable
+    to Anbox Cloud. However, it will not affect any application based on the image.'
+---
 (howto-delete-image)=
 # Delete an image
 

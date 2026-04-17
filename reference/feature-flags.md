@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Feature flags. Some features are not enabled by default but can be
+    conditionally enabled. Such features are enabled by flags which are configured
+    through the.
+---
 (ref-feature-flags)=
 # Feature flags
 

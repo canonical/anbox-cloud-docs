@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Reference. The reference guides in this section provide additional
+    information about using Anbox Cloud, release information, available configuration
+    options.
+---
 (reference)=
 # Reference
 

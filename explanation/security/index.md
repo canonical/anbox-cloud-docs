@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Security. Anbox Cloud is designed using secure development practices
+    - its architecture, components and all communication between components are designed
+    to be.
+---
 (exp-security)=
 # Security
 

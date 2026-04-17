@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Install the appliance. The Anbox Cloud Appliance provides a deployment
+    of Anbox Cloud to a single machine. This offering is well suited for initial prototype.
+---
 (howto-install-appliance)=
 # Install the appliance
 

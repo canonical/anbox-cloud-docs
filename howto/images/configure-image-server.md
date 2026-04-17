@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Configure an image server. The Canonical image server provides different
+    Anbox Cloud images that are updated regularly. AMS automatically synchronizes
+    new.
+---
 (howto-configure-image-server)=
 # Configure an image server
 

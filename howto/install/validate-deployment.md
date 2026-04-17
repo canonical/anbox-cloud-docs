@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Validate your deployment. Anbox Cloud includes a test suite which allows
+    the validation of an Anbox Cloud deployment. It comes with various tests covering.
+---
 (howto-validate-deployment)=
 # Validate your deployment
 

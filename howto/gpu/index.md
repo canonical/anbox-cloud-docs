@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: GPU. This guide provides instructions for tuning GPU configuration
+    for Anbox Cloud deployment, helping you benchmark GPU workloads, improve instance
+    density.
+---
 (howto-gpu)=
 # GPU
 

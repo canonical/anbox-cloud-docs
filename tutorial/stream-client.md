@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Set up a stream client. This tutorial guides you through the process
+    of setting up a web-based streaming client using the Anbox Cloud streaming stack.
+    The.
+---
 (tut-set-up-stream-client)=
 
 # Set up a stream client

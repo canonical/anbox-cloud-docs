@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Wait for an application. The command instructs AMS to wait for an application
+    to reach a specific condition. If the condition is not satisfied within the.
+---
 (howto-wait-for-application)=
 # Wait for an application
 

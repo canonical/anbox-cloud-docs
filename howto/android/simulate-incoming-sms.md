@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Simulate incoming SMS messages. This guide demonstrates how to simulate
+    incoming SMS messages for Android. Android processes the messages and displays
+    them.
+---
 (howto-simulate-incoming-sms)=
 # Simulate incoming SMS messages
 

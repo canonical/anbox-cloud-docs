@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Create and test a virtual device. In this tutorial, we will go through
+    the first steps of using Anbox Cloud to create a virtual Android device. By virtual.
+---
 (tut-create-virtual-device)=
 # Create and test a virtual device
 

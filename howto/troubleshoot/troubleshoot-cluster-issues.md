@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Troubleshoot issues with LXD clustering. The following issues might
+    occur if you use clustering. Applies to: Anbox Cloud > I see an error message
+    like the.'
+---
 (howto-ts-lxd-clustering)=
 # Troubleshoot issues with LXD clustering
 

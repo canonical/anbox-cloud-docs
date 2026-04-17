@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Harden your deployment. Anbox Cloud is designed with secure development
+    practices but there are certain aspects to consider on your side to make sure
+    the.
+---
 (howto-harden)=
 # Harden your deployment
 

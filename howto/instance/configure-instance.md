@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Configure an instance. AMS allows some configuration options of an
+    instance to be changed. A full list of configuration options is available at To
+    view the.
+---
 (howto-configure-instance)=
 # Configure an instance
 

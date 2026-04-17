@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Manage Anbox Cloud. The following guides in this section help you to
+    manage and work with your Anbox Cloud or Anbox Cloud Appliance installation. You
+    can also.
+---
 (howto-manage-anbox)=
 # Manage Anbox Cloud
 

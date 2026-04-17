@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Anbox Cloud Appliance configuration. The Anbox Cloud Appliance provides
+    various configuration items to customize its behavior. Currently set configuration
+    can.
+---
 (ref-appliance-configuration)=
 # Anbox Cloud Appliance configuration
 

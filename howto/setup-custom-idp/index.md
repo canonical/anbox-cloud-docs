@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Set up a custom identity provider. Anbox Cloud has support for custom
+    identity providers for authentication through OpenID Connect. To allow discovery
+    of.
+---
 (howto-set-up-idp)=
 # Set up a custom identity provider
 

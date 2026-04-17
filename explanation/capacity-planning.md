@@ -1,3 +1,8 @@
+---
+html_meta:
+  description: Capacity planning. When planning your Anbox Cloud deployment, you should
+    start by estimating how much capacity you need, to be able to provide your application.
+---
 (exp-capacity-planning)=
 # Capacity planning
 

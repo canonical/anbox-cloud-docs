@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: Nodes. A node is a machine in the LXD cluster. Depending on whether
+    it is running the management components of Anbox Cloud or streaming services,
+    the node can.
+---
 (exp-nodes)=
 # Nodes
 

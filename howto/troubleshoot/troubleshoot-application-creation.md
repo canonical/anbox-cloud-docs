@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Troubleshoot issues with application creation. You might encounter
+    the following issues when creating an application. Applies to: Anbox Cloud, Anbox
+    Cloud.'
+---
 (howto-ts-application-creation-issues)=
 # Troubleshoot issues with application creation
 

@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Dashboard. The Anbox Cloud Dashboard (dashboard) is using cryptographic
+    technology for: All network endpoints exposed by the dashboard are secured with
+    TLS.'
+---
 (exp-security-dashboard)=
 # Dashboard
 

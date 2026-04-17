@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Update addons. You can update an existing addon with a new version
+    by using the following command: Due to Snap strict confinement, the addon must
+    be located in.'
+---
 (howto-update-addons)=
 # Update addons
 

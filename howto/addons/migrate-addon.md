@@ -1,3 +1,9 @@
+---
+html_meta:
+  description: 'Migrate from previous versions. Starting with Anbox Cloud 1.12, use
+    the following new hooks instead of the deprecated ones: The new hooks run for
+    all types of.'
+---
 (howto-migrate-addons)=
 # Migrate from previous versions
 
