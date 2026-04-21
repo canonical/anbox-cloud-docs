@@ -3,7 +3,7 @@
 
 Anbox Cloud is designed using secure development practices - its architecture, components and all communication between components are designed to be fundamentally secure.
 
-Anbox Cloud uses [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
+Anbox Cloud uses [LXD](https://canonical.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
 The following security guides provide you information about each component's security and the cryptographic technology that they use:
 

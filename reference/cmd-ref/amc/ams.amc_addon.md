@@ -12,7 +12,7 @@ Basically, an addon is a tarball that provides several hooks and additional meta
 An example for an addon is one that enables the SSH service inside a container, to
 provide access from the outside for any kind of automation of the container.
 
-See https://documentation.ubuntu.com/anbox-cloud/en/latest/explanation/addons/ for more information.
+See https://documentation.ubuntu.com/anbox-cloud/explanation/addons/ for more information.
 
 ## Options
 

@@ -142,7 +142,7 @@ Connect to the virtual machine hosting the appliance using SSH. To do so, use th
 
 ## Enable the service
 
-The Anbox Cloud service must be enabled using the [Ubuntu Pro Client (`pro`)](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/) to be ready for use.
+The Anbox Cloud service must be enabled using the [Ubuntu Pro Client (`pro`)](https://documentation.ubuntu.com/pro-client/en/latest/) to be ready for use.
 
 ```{tip}
 You can check the status of services using `pro status`.

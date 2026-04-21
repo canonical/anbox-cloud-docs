@@ -48,7 +48,7 @@ Sometimes, not every piece of data is useful (for example, cache), and backing u
 `include`    | Include files in resulting tarball with a wildcard
 `exclude`    | Exclude files in resulting tarball with a wildcard
 
-Please refer to the pattern syntax [in the Go documentation](https://golang.org/pkg/path/filepath/#Match).
+Please refer to the pattern syntax [in the Go documentation](https://pkg.go.dev/path/filepath#Match).
 
 For example, with the following filters:
 

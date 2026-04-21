@@ -61,7 +61,7 @@ A Juju model holds a specific deployment. It is a good idea to create a new one 
 (sec-attach-pro-subscription)=
 ## Attach your Ubuntu Pro subscription
 
-Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licenses you're granted as part of your license agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
+Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licenses you're granted as part of your license agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/security/livepatch).
 
 You can retrieve your Ubuntu Pro token at [`https://ubuntu.com/pro`](https://ubuntu.com/pro) after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
 
@@ -127,7 +127,7 @@ Choose between the available {ref}`sec-juju-bundles`:
 
 ## Customize the hardware configuration
 
-To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/juju/constraint#heading--list-of-constraints) in the Juju documentation for details.
+To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://documentation.ubuntu.com/juju/3.6/reference/constraint/#list-of-constraints) in the Juju documentation for details.
 
 
 ```{note}
@@ -177,9 +177,9 @@ The easiest way to do this is to use a storage device defined by Juju:
 
 1. Decide which Juju storage pool you want to use.
 
-   See [View the available storage pools](https://juju.is/docs/juju/manage-storage-pools#heading--view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
+   See [View the available storage pools](https://documentation.ubuntu.com/juju/3.6/howto/manage-storage-pools/#view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
 
-   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/juju/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
+   If you want to use a new pool, see [Create a storage pool](https://documentation.ubuntu.com/juju/3.6/howto/manage-storage-pools#create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
 
    If you decide to create a pool, make sure to do so before you start the deployment.
 1. Configure the `ams-lxd` charm to use the Juju storage pool.

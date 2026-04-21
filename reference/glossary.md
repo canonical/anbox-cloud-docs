@@ -181,12 +181,12 @@ Instance type
 Juju
     A charmed operator framework that helps you deploy, integrate and manage applications across multiple environments. Anbox Cloud is installed using Juju. The Anbox Cloud Appliance uses Juju under the hood.
 
-    See [the Juju website](https://juju.is/) for more information.
+    See [the Juju website](https://canonical.com/juju) for more information.
 
 LXD
     A system container and virtual machine manager that offers a unified user experience around full Linux systems running inside containers or virtual machines. Anbox Cloud is based on LXD.
 
-    See [the LXD website](https://ubuntu.com/lxd) for more information.
+    See [the LXD website](https://canonical.com/lxd) for more information.
 
 LXD cluster
     A set of LXD nodes that share the same distributed database that holds the configuration for the cluster members and their instances.

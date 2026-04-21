@@ -9,7 +9,7 @@ Manage AMS configuration.
 Get and set global configuration items for the Anbox Management Service
 (AMS).
 
-See https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/ams-configuration/ for a list of
+See https://documentation.ubuntu.com/anbox-cloud/reference/ams-configuration/ for a list of
 available configuration items.
 
 ## Options
