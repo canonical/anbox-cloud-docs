@@ -15,8 +15,8 @@ When you launch an instance, you can:
 - Pass user date to the instance with the '--userdata' or '--userdata-path'
 	flags.
 
-See https://documentation.ubuntu.com/anbox-cloud/explanation/instances/ and
-https://documentation.ubuntu.com/anbox-cloud/howto/instance/create-instance/ for detailed
+See https://documentation.ubuntu.com/anbox-cloud/en/latest/explanation/instances/ and
+https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/create-instance/ for detailed
 information about instances.
 
 ```

@@ -12,7 +12,7 @@ An application usually encapsulates one Android application and manages it
 within the cluster.
 The application installs the supplied APK to make it available to users.
 Applications can be updated, pushed to a central registry and more.
-See https://documentation.ubuntu.com/anbox-cloud/explanation/applications/ for more information.
+See https://documentation.ubuntu.com/anbox-cloud/en/latest/explanation/applications/ for more information.
 
 Android applications must go through a bootstrap process before they can
 run on Anbox Cloud. This bootstrap process helps to improve the performance
