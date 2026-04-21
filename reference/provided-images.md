@@ -19,12 +19,6 @@ The following table lists supported images available on the official image serve
 | `jammy:aaos14:arm64`        | AAOS     | 14              | 22.04          | 1.24.0 |
 | `jammy:android14:amd64`     | AOSP     | 14              | 22.04          | 1.24.0 |
 | `jammy:android14:arm64`     | AOSP     | 14              | 22.04          | 1.24.0 |
-| `jammy:aaos13:amd64`        | AAOS     | 13              | 22.04          | 1.21.0 |
-| `jammy:aaos13:arm64`        | AAOS     | 13              | 22.04          | 1.21.0 |
-| `jammy:android13:amd64`     | AOSP     | 13              | 22.04          | 1.16.0 |
-| `jammy:android13:arm64`     | AOSP     | 13              | 22.04          | 1.16.0 |
-| `jammy:android12:amd64`     | AOSP     | 12              | 22.04          | 1.14.0 |
-| `jammy:android12:arm64`     | AOSP     | 12              | 22.04          | 1.14.0 |
 
 ## Support for Anbox Cloud images
 
