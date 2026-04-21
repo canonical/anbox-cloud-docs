@@ -19,7 +19,7 @@ The following diagram illustrates the attack surface and potential points of thr
 
 ### 1 - Web client
 
-- Consider the security measures, guidelines and benchmarks offered by Ubuntu Pro such as CIS, USG and Livepatch. For more information, see the Ubuntu Pro Client documentation for enabling [CIS/USG](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/howtoguides/enable_cis/) and [Livepatch](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/howtoguides/enable_livepatch/).
+- Consider the security measures, guidelines and benchmarks offered by Ubuntu Pro such as CIS, USG and Livepatch. For more information, see the Ubuntu Pro Client documentation for enabling [CIS/USG](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_cis/) and [Livepatch](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_livepatch/).
 
 - Use the {ref}`exp-web-dashboard` as your default stream client. If you want to use a custom client, ensure you have set it up securely as described in the {ref}`tut-set-up-stream-client` tutorial.
 

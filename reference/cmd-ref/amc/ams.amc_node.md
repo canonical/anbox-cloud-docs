@@ -8,7 +8,7 @@ Manage nodes.
 
 Nodes are LXD machines that run Anbox containers and are managed by AMS.
 
-See https://documentation.ubuntu.com/anbox-cloud/en/latest/explanation/clustering/ for more information.
+See https://documentation.ubuntu.com/anbox-cloud/explanation/clustering/ for more information.
 
 
 ## Options

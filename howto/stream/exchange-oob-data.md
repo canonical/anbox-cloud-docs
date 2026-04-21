@@ -131,7 +131,7 @@ This enables data exchange between a service running on the Anbox instance and t
 
 ## Data exchange between Android application and web client
 
-In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project. You can either:
+In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/main/examples/android/out_of_band_v2) project. You can either:
 - compile and modify the example application to meet your needs.
 - use the pre-built out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/howto/stream/exchange-oob-data/#run-end-to-end-test).
 

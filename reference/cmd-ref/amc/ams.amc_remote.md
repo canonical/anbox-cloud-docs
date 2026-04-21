@@ -8,7 +8,7 @@ Interact with remote AMS daemons.
 
 AMC is a client talking to a daemon (AMS). You can configure the connection to different remote daemons.
 
-See https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/anbox/control-ams-remotely/ for more information.
+See https://documentation.ubuntu.com/anbox-cloud/howto/anbox/control-ams-remotely/ for more information.
 
 
 ## Options
