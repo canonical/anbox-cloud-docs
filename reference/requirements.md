@@ -102,7 +102,7 @@ To run an Anbox Cloud deployment including the streaming stack, we recommend the
 
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
-| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/3.6/reference/controller/)  |
+| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/latest/reference/controller/)  |
 | 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the load balancer, streaming stack control plane |
 | 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
 | 2  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
@@ -111,7 +111,7 @@ To run the core version of Anbox Cloud without the streaming stack, we recommend
 
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
-| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/3.6/reference/controller/)  |
+| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/latest/reference/controller/)  |
 | 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS)  |
 | 1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
 

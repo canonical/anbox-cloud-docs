@@ -43,7 +43,7 @@ Most clouds require credentials so that the cloud knows which operations are aut
 
     juju add-credential aws
 
-For a different cloud, just substitute the cloud name with the name returned by the `juju clouds` command. The data you need to supply varies depending on the cloud. See [Juju documentation](https://documentation.ubuntu.com/juju/3.6/reference/juju-cli/list-of-juju-cli-commands/add-credential/) for details on the command.
+For a different cloud, just substitute the cloud name with the name returned by the `juju clouds` command. The data you need to supply varies depending on the cloud. See [Juju documentation](https://documentation.ubuntu.com/juju/latest/reference/juju-cli/list-of-juju-cli-commands/add-credential/) for details on the command.
 
 (sec-setup-juju-controller)=
 ## Add a controller and model
@@ -127,7 +127,7 @@ Choose between the available {ref}`sec-juju-bundles`:
 
 ## Customize the hardware configuration
 
-To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://documentation.ubuntu.com/juju/3.6/reference/constraint/#list-of-constraints) in the Juju documentation for details.
+To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://documentation.ubuntu.com/juju/latest/reference/constraint/#list-of-constraints) in the Juju documentation for details.
 
 
 ```{note}
@@ -177,14 +177,14 @@ The easiest way to do this is to use a storage device defined by Juju:
 
 1. Decide which Juju storage pool you want to use.
 
-   See [View the available storage pools](https://documentation.ubuntu.com/juju/3.6/howto/manage-storage-pools/#view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
+   See [View the available storage pools](https://documentation.ubuntu.com/juju/latest/howto/manage-storage-pools/#view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
 
-   If you want to use a new pool, see [Create a storage pool](https://documentation.ubuntu.com/juju/3.6/howto/manage-storage-pools#create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
+   If you want to use a new pool, see [Create a storage pool](https://documentation.ubuntu.com/juju/latest/howto/manage-storage-pools#create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
 
    If you decide to create a pool, make sure to do so before you start the deployment.
 1. Configure the `ams-lxd` charm to use the Juju storage pool.
 
-   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://documentation.ubuntu.com/juju/3.6/reference/storage/#storage-pool) for it.
+   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://documentation.ubuntu.com/juju/latest/reference/storage/#storage-pool) for it.
 
    For example, to use the AWS `ebs-ssd` Juju storage pool for LXD storage, use an overlay file with the following storage constraint:
 
