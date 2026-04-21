@@ -34,7 +34,7 @@ When using a TLS charm (e.g. [self-signed-certificates](https://charmhub.io/self
 
 ## Juju secrets
 
-Confidential data such as private keys, API tokens, or credentials managed by the charm or passed through relations between charms is securely handled using [Juju secrets](https://documentation.ubuntu.com/juju/3.6/reference/secret/) if you deploy Anbox Cloud with Juju 3.0 or later. You can use the following command to view the secrets used by charms:
+Confidential data such as private keys, API tokens, or credentials managed by the charm or passed through relations between charms is securely handled using [Juju secrets](https://documentation.ubuntu.com/juju/latest/reference/secret/) if you deploy Anbox Cloud with Juju 3.0 or later. You can use the following command to view the secrets used by charms:
 
 ```
 juju list-secrets
