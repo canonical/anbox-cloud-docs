@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Images. An image represents the Anbox Cloud image available in the
-    AMS node. An image is the base for an instance, which contains all necessary components
-    like.
+  description: An image in Anbox Cloud is the base for an instance, containing all
+    necessary components. Images are available through the AMS node and are the
+    foundation for running instances.
 ---
 (exp-images)=
 # Images

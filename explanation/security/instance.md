@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Instances. Anbox Cloud uses secure and isolated system instances supplied
-    by LXD. LXD provides a high degree of flexibility when setting up instances -
-    you get.
+  description: Instance security in Anbox Cloud. Anbox Cloud uses secure and isolated
+    system instances supplied by LXD, which provides a high degree of flexibility
+    when configuring instances.
 ---
 # Instances
 

@@ -1,7 +1,7 @@
 ---
 html_meta:
-  description: Addon manifest. The following table lists the valid keys in an addon
-    manifest.
+  description: Reference for the Anbox Cloud addon manifest. The following table lists
+    the valid keys in an addon manifest.
 ---
 (ref-addon-manifest)=
 # Addon manifest

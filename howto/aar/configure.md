@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Configure. The uses a certificate-based authentication system that
-    uses TLS server and client certificates to establish a trusted connection between
-    the AAR.
+  description: Configure the Anbox Application Registry (AAR). The AAR uses a certificate-based
+    authentication system with TLS server and client certificates to establish a trusted
+    connection between the AAR and AMS.
 ---
 (howto-configure-aar)=
 # Configure

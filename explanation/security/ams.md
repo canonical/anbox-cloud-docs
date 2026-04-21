@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: 'AMS. Anbox Management Service (AMS) is using cryptographic technology
-    for: All network endpoints exposed by the AMS server are secured with TLS using
-    an 4096.'
+  description: AMS security in Anbox Cloud. The Anbox Management Service (AMS) uses
+    cryptographic technology. All network endpoints are secured with TLS using 4096-bit
+    RSA keys.
 ---
 (exp-security-ams)=
 # AMS

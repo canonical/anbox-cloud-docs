@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Android. The images that Anbox Cloud provides are based on different
-    Android versions. They are updated with security patches monthly, based on the
-    upstream.
+  description: Android security in Anbox Cloud. The images that Anbox Cloud provides
+    are based on different Android versions and are updated monthly with security
+    patches from upstream Android Security Bulletins.
 ---
 # Android
 

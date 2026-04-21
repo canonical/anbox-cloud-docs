@@ -1,7 +1,8 @@
 ---
 html_meta:
-  description: 'Anbox runtime. The Anbox runtime (see ) is using cryptographic technology
-    for: All HTTP communication Anbox performs over IP connections to external services.'
+  description: Anbox runtime security in Anbox Cloud. The Anbox runtime uses cryptographic
+    technology for all HTTP communication over IP connections and for securing data
+    exchanged with external services.
 ---
 (exp-security-anbox-runtime)=
 # Anbox runtime

@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Stream Gateway API. window.onload = function() { // Begin Swagger UI
-    call region const ui = SwaggerUIBundle({ }) // End Swagger UI call region window.ui
-    = ui }.
+  description: Stream Gateway API reference for Anbox Cloud. The Stream Gateway API
+    provides endpoints to manage streaming sessions and control access to the Anbox
+    Cloud streaming infrastructure.
 ---
 # Stream Gateway API
 

@@ -1,7 +1,7 @@
 ---
 html_meta:
-  description: Examples. Here are some examples to illustrate how to use addons and
-    hooks.
+  description: Addon examples for Anbox Cloud. These examples illustrate how to use
+    addons and hooks to extend and customize your Anbox Cloud deployment.
 ---
 # Examples
 

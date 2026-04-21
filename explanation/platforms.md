@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Supported platforms. Anbox Cloud currently supports the , , platforms.
-    This guide covers the display settings configuration for these platforms. To instruct
-    an.
+  description: Supported platforms in Anbox Cloud. Anbox Cloud supports the swrast,
+    null, and webrtc platforms. This guide covers display settings configuration for
+    each platform and how to instruct instances to use a specific platform.
 ---
 (exp-platforms)=
 # Supported platforms

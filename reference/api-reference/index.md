@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: API reference. Anbox Cloud includes various APIs to help you build
-    solutions with it. This page provides an overview of the available APIs and their
-    uses. All.
+  description: API reference for Anbox Cloud. Anbox Cloud includes various APIs to
+    help you build solutions. This page provides an overview of the available APIs,
+    including the AMS API, Stream Gateway API, and Anbox HTTPS API.
 ---
 (ref-api)=
 # API reference

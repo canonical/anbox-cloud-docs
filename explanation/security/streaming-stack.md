@@ -1,7 +1,8 @@
 ---
 html_meta:
-  description: Streaming. The Anbox Cloud Streaming Stack is based on WebRTC. WebRTC
-    forbids unencrypted communication, which enforces a certain security level. For.
+  description: Streaming stack security in Anbox Cloud. The Streaming Stack is based
+    on WebRTC, which forbids unencrypted communication and enforces a strong security
+    level for all streaming sessions.
 ---
 (exp-security-streaming)=
 # Streaming

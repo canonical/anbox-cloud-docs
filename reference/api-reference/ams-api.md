@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: AMS HTTP API. window.onload = function() { // Begin Swagger UI call
-    region const ui = SwaggerUIBundle({ }) // End Swagger UI call region window.ui
-    = ui }.
+  description: AMS HTTP API reference for Anbox Cloud. The Anbox Management Service
+    (AMS) HTTP API provides endpoints to manage applications, instances, nodes, and
+    other Anbox Cloud resources programmatically.
 ---
 # AMS HTTP API
 

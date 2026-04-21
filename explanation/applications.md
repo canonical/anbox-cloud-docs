@@ -1,7 +1,8 @@
 ---
 html_meta:
-  description: Applications. Applications are one of the main objects managed by Anbox
-    Management Service (AMS). A single application encapsulates one Android APK (Android.
+  description: Applications are one of the main objects managed by the Anbox Management
+    Service (AMS). A single application encapsulates one Android APK and all related
+    resources.
 ---
 (exp-applications)=
 # Applications

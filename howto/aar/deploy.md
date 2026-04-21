@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Deploy. An Anbox Application Registry (AAR) should be deployed on a
-    single unit. After deploying, you can continue to configure and connect it with
-    all AMS.
+  description: Deploy the Anbox Application Registry (AAR). An AAR should be deployed
+    on a single unit. After deploying, configure and connect it with all AMS units
+    you want to synchronize.
 ---
 (howto-deploy-aar)=
 # Deploy

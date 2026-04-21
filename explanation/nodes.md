@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Nodes. A node is a machine in the LXD cluster. Depending on whether
-    it is running the management components of Anbox Cloud or streaming services,
-    the node can.
+  description: A node in Anbox Cloud is a machine in the LXD cluster. Depending on
+    whether it runs management components or streaming services, a node can have
+    different roles and configurations.
 ---
 (exp-nodes)=
 # Nodes

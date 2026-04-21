@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Charms. All communication between Juju units and the Juju controller
-    happens over TLS-encrypted websockets. The certificate for the TLS connection
-    to the.
+  description: Charms security in Anbox Cloud. All communication between Juju units
+    and the Juju controller happens over TLS-encrypted websockets to ensure secure
+    operations.
 ---
 (exp-security-charms)=
 # Charms

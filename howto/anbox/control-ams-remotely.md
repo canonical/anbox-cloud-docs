@@ -1,8 +1,8 @@
 ---
 html_meta:
-  description: Access AMS remotely. By default, the runs on the same machine as the
-    and connects to it through a UNIX socket. You can also choose to install AMC on
-    a.
+  description: Access AMS remotely. By default, the Anbox Management Client (AMC)
+    runs on the same machine as AMS and connects through a UNIX socket. You can also
+    install AMC on a separate machine to manage AMS remotely.
 ---
 (howto-access-ams-remote)=
 # Access AMS remotely

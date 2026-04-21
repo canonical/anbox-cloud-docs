@@ -1,7 +1,8 @@
 ---
 html_meta:
-  description: Addons. Addons provide a way to extend and customize images in Anbox
-    Cloud. Once you have created addons, you can create hooks for them that are triggered.
+  description: Addons in Anbox Cloud provide a way to extend and customize images.
+    Once you have created addons, you can create hooks that are triggered on specific
+    instance lifecycle events.
 ---
 (exp-addons)=
 # Addons

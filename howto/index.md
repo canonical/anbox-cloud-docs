@@ -1,8 +1,7 @@
 ---
 html_meta:
-  description: How-to guides. The How-to guides in this section give directions on
-    how to achieve your goals when configuring, managing or using Anbox Cloud. These
-    How-to.
+  description: Anbox Cloud how-to guides give step-by-step directions for configuring,
+    managing, and using Anbox Cloud. Choose a guide based on your goal.
 ---
 (how-to-guides)=
 # How-to guides
