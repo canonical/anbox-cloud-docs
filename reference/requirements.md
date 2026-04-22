@@ -79,7 +79,7 @@ Charmed Anbox Cloud requires LXD version >= 5.0.
 (sec-juju-version-requirements)=
 ### Juju
 
-The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://juju.is/) to manage the different components and their dependencies.
+The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://canonical.com/juju) to manage the different components and their dependencies.
 
 Anbox Cloud charms support user secrets and if you would like to use that feature, use Juju 3.3 or later.
 
@@ -102,7 +102,7 @@ To run an Anbox Cloud deployment including the streaming stack, we recommend the
 
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
-| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://juju.is/docs/juju/controller)  |
+| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/latest/reference/controller/)  |
 | 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the load balancer, streaming stack control plane |
 | 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
 | 2  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
@@ -111,7 +111,7 @@ To run the core version of Anbox Cloud without the streaming stack, we recommend
 
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
-| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://juju.is/docs/juju/controller)  |
+| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/latest/reference/controller/)  |
 | 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS)  |
 | 1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
 
@@ -126,6 +126,6 @@ Some additional information:
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
  - **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
- - **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/hapee/latest/getting-started/hardware/)
+ - **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/haproxy-enterprise/getting-started/installation/linux/)
 
 Please note that these are just baselines and should be adapted to your workload. No matter the application, monitoring and tuning the performance is always important. See {ref}`exp-performance` for more information.

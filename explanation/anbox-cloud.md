@@ -28,7 +28,7 @@ The Anbox Cloud Appliance, generally referred as the appliance, is a self-contai
 
 **Anbox Cloud**
 
-The charmed Anbox Cloud uses [Juju](https://juju.is/) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
+The charmed Anbox Cloud uses [Juju](https://canonical.com/juju) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
 
 See the following table for a comparison of features for the different variants:
 
