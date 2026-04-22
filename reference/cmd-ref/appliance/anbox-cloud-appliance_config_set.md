@@ -10,7 +10,7 @@ This command allows changing the following configuration items:
 
 * network.public_address (IP address)
 * network.location (DNS name)
-* core.https_allowed_origin (HTTP origin, see https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Origin)
+* core.https_allowed_origin (HTTP origin, see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin)
 * core.https_allowed_headers (comma seprated list of allowed HTTP headers)
 * core.https_allowed_methods (comma separate list of allowed HTTP methods)
 
