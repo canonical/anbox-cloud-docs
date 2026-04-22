@@ -3269,10 +3269,48 @@ paths:
         '500':
           $ref: '#/responses/InternalServerError'
     post:
-      description: 'This endpoint creates a new instance instance with the provided
-        specification.
+      description: 'This endpoint creates a new instance based on an application,
+        image, or
 
-        If AMS cannot fullfil the resource requirements for creating the instance,
+        an existing instance.
+
+
+        To create from an existing instance, ensure that the source instance is in
+
+        the "stopped" or "error" state; otherwise, the request will fail with an
+
+        error (for example, "instance must be stopped"), then:
+
+        1. leave ''app_id'' and ''image_id'' empty.
+
+        2. populate the ''source'' object with the source instance ID and type ''instance''.
+
+
+        When creating from an existing instance, certain properties are derived from
+        the
+
+        source instance and are not freely configurable in the request:
+
+        addons
+
+        image architecture
+
+        disk size
+
+        application ID and version
+
+        image ID and version
+
+
+        All other configuration fields (e.g., CPU, Memory, GPU slots, Display settings)
+
+        are NOT inherited from the source instance. If not provided in the request,
+
+        they will be initialized with their default values, just like a standard instance
+        creation.
+
+
+        If AMS cannot fulfill the resource requirements for creating the instance,
 
         the request will fail.'
       consumes:
@@ -6000,6 +6038,13 @@ definitions:
           instance has not been created from an image.'
         type: string
         example: cilshrmnfpfec9b1kte0
+      image_name:
+        description: 'ImageName is the name of the image the instance is created from.
+          Empty if the
+
+          instance has not been created from an image.'
+        type: string
+        example: my-image
       image_version:
         description: 'ImageVersion is the version of the image the instance is created
           from. Empty if the
@@ -6270,7 +6315,8 @@ definitions:
         type: string
   InstanceSource:
     type: object
-    title: InstanceSource represents the source for creating a new instance.
+    title: InstanceSource represents the source for creating a new instance (e.g.,
+      for instance copy).
     properties:
       id:
         description: ID of the source resource.
@@ -6301,11 +6347,12 @@ definitions:
           - cilsreunfpfec9b1ktg0
           - cilsreunfpfec9b1ktg1
   InstancesPost:
-    description: 'InstancesPost represents the fields required to launch a new instance
-      for
+    description: 'It supports creating instances from an application, an image, or
+      by
 
-      a specific application'
+      copying an existing instance (via the ''source'' field).'
     type: object
+    title: InstancesPost represents the fields required to launch a new instance.
     properties:
       addons:
         description: Addons to enable for the instance
