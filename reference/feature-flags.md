@@ -47,11 +47,11 @@ The client-side virtual keyboard is disabled by default but can be enabled with 
 
 For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the application {ref}`bootstrap process <sec-application-bootstrap>`.
 
-## `disable_wifi`
+## `enable_wifi`
 
-*since 1.13.0*
+*since 1.30.0*
 
-By default, Anbox sets up a virtual WiFi device, which sits on top of an Ethernet connection and simulates a real WiFi connection. This WiFi support can be optionally disabled with the `disable_wifi` feature flag.
+By default, Anbox will not sets up a virtual WiFi device, which sits on top of an Ethernet connection and simulates a real WiFi connection. This WiFi support can be optionally enabled with the `enable_wifi` feature flag.
 
 The feature flag will be considered by all newly launched instances once set.
 
