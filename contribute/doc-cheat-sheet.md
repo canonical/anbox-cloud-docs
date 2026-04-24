@@ -204,10 +204,10 @@ Terms that should not be checked by the spelling checker: {spellexception}`Incrr
 A single-line terminal view that separates input from output:
 
 ```{terminal}
-   :input: command
    :user: root
    :host: vampyr
    :dir: /home/user/directory/
+command
 
 the output
 ```
@@ -218,10 +218,11 @@ A multi-line version of the same:
    :user: root
    :host: vampyr
    :dir: /home/user/directory/
+command 1
 
-:input: command 1
 output 1
-:input: command 2
+command 2
+
 output 2
 ```
 

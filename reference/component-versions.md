@@ -9,7 +9,7 @@ Not all components are updated with each release. When components are not update
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1475 | 1476 | 1.29.2-a624c30 |
@@ -22,7 +22,7 @@ Not all components are updated with each release. When components are not update
 | lxd-integrator | 1.29/stable | 738 | 739 | 1.29.2-a624c30 |
 | anbox-cloud-cos-configuration | 1.29/stable | 586 | 587 | 1.29.2-a624c30 |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1477 | 1478 | 1.29.2-a624c30 |
@@ -107,7 +107,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1390 | 1391 | `1.29.0-fdb4954` |
@@ -120,7 +120,7 @@ The following Anbox images are available in two variants: one based on a contain
 | lxd-integrator | 1.29/stable | 654 | 655 | `1.29.0-fdb4954` |
 | anbox-cloud-cos-configuration | 1.29/stable | 502 | 503 | `1.29.0-fdb4954` |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1392 | 1393 | `1.29.0-fdb4954` |
@@ -172,7 +172,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.28/stable | 1326 | 1327 | 1.28.2-e257005 |
@@ -185,7 +185,7 @@ The following Anbox images are available in two variants: one based on a contain
 | lxd-integrator | 1.28/stable | 597 | 598 | 1.28.2-e257005 |
 | anbox-cloud-cos-configuration | 1.28/stable | 438 | 439 | 1.28.2-e257005 |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.28/stable | 1328 | 1329 | 1.28.2-e257005 |
@@ -243,7 +243,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
@@ -259,7 +259,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.28/stable` | 426 | 427 | `1.28.1-0d1153d` |
 
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
@@ -321,7 +321,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
@@ -337,7 +337,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.28/stable` | 397 | 398 | `1.28.0-0fa313f` |
 
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
@@ -400,7 +400,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
@@ -417,7 +417,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.27/stable` | 341 | 342 | `1.27.2-fc85e76` |
 
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
@@ -521,7 +521,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -536,7 +536,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.27/stable` | 297 | 298 |
 | `nats` | `latest/stable` | 9 | 11 |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -596,7 +596,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -611,7 +611,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.26/stable` | 221 | 222 |
 | `nats` | `latest/stable` | 9 | 11 |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -671,7 +671,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -686,7 +686,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.26/stable` | 181 | 182 |
 | `nats` | `latest/stable` | 9 | 11 |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -746,7 +746,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
@@ -761,7 +761,7 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-cloud-cos-configuration` | `1.26/stable` | 173 | 174 |
 | `nats` | `latest/stable` | 9 | 11 |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|

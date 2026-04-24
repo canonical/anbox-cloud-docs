@@ -122,7 +122,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
 |November 30 2021|[Anbox Cloud 1.12.1](1.12.1.md)|
 |November 16 2021|[Anbox Cloud 1.12.0](1.12.0.md)|
 |November 1 2021|[Anbox Cloud 1.11.4](1.11.4.md)|
-|October 18 2021|[Anbox cloud 1.11.3](1.11.3.md)|
+|October 18 2021|[Anbox Cloud 1.11.3](1.11.3.md)|
 |September 20 2021|[Anbox Cloud 1.11.2](1.11.2.md)|
 |August 17 2021|[Anbox Cloud 1.11.1](1.11.1.md)|
 |August 5 2021|[Anbox Cloud 1.11.0](1.11.0.md)|

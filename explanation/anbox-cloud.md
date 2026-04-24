@@ -135,6 +135,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 | juju-34631c-0            | RUNNING | 240.0.180.30 (eth0)    |      | CONTAINER | 0         | lxd0     |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 ```
+
 (sec-lxd-storage)=
 ### LXD storage
 

@@ -47,7 +47,7 @@ Know the configuration options that can be defined for various components of Anb
 
 ## API reference
 
-Learn about the APIs provided by Anbox cloud.
+Learn about the APIs provided by Anbox Cloud.
 
 * {ref}`ref-api`
   - [AMS HTTP API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/ams-api/)

@@ -73,10 +73,10 @@ Now, let's create the application:
 This command will return the application ID.
 
 ```{terminal}
-      :input: amc application create my-app/
       :user: ubuntu
       :host: vm
       :dir: ~
+amc application create my-app/
 
 cv3a7ofg2e7td2g9smt0
 ```
@@ -90,11 +90,11 @@ The application is created and bootstrapped. Now, to see the application details
 The output of this command should look similar to the following. Watch this output till the application becomes *ready*. The time taken for the application to become ready could depend on your network speed but with a good network connection, it shouldn't take more than 10 minutes.
 
 ```{terminal}
-      :input: amc application list
       :user: ubuntu
       :host: vm
       :dir: ~
       :scroll:
+amc application list
 
 +----------------------+--------------+---------------+--------+------+-----------+--------------+---------------------+-------+
 |          ID          |     NAME     | INSTANCE TYPE | ADDONS | TAGS | PUBLISHED |    STATUS    |    LAST UPDATED     |  VM   |
@@ -112,10 +112,10 @@ When the application is *ready*, let's launch an instance:
       amc launch my-first-app --enable-streaming
 
 ```{terminal}
-      :input: amc launch my-first-app --enable-streaming
       :user: ubuntu
       :host: vm
       :dir: ~
+amc launch my-first-app --enable-streaming
 
 cv3ct202cdutj02fttsg
 ```
@@ -133,11 +133,11 @@ To see the instance details and its status, run:
 You will see an output similar to the following:
 
 ```{terminal}
-   :input: amc ls
    :user: ubuntu
    :host: vm
    :dir: ~
    :scroll:
+amc ls
 
 +----------------------+------+--------------+------+---------+------+------+---------+-----------+-------+----------------+
 |          ID          | NAME | APPLICATION  | TYPE | STATUS  | TAGS | NODE | ADDRESS | ENDPOINTS |  VM   | STATUS MESSAGE |
@@ -149,11 +149,11 @@ You will see an output similar to the following:
 When the instance reaches the *running* status, the output for `amc ls` should look like:
 
 ```{terminal}
-:input: amc ls
    :user: ubuntu
    :host: vm
    :dir: ~
    :scroll:
+amc ls
 
 +----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
 |          ID          | NAME | APPLICATION  |  TYPE   | STATUS  |             TAGS             | NODE |   ADDRESS    | ENDPOINTS |  VM   | STATUS MESSAGE |
@@ -204,11 +204,11 @@ The `list` command displays the list of applications available. As an applicatio
 The `show` command displays the application information along with its versions:
 
 ```{terminal}
-:input: amc application show my-first-app
    :user: ubuntu
    :host: vm
    :dir: ~
    :scroll:
+amc application show my-first-app
 
 id: cv3a7ofg2e7td2g9smt0
 name: my-first-app
@@ -253,15 +253,15 @@ resources:
 Now if we launch our application without explicitly specifying a version, our latest published version will be considered:
 
 ```{terminal}
-:input: amc launch my-first-app
    :user: ubuntu
    :host: vm
    :dir: ~
    :scroll:
+amc launch my-first-app
 
 cv3d5ag2cdutj02fttvg
 
-:input: amc ls
+amc ls
 
 +----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
 |          ID          | NAME | APPLICATION  |  TYPE   | STATUS  |             TAGS             | NODE |   ADDRESS    | ENDPOINTS |  VM   | STATUS MESSAGE |
@@ -297,7 +297,7 @@ The next step is to give our application, a name: *my-application*.
 
 We can select whether we want to create the application in a container or a virtual machine. For this tutorial, let's select *Container*.
 
-Then, we can select the Android image. Observe that the image can be identified if it is an Android (AOSP) or an Android automotive (AAOS) image by looking at the image names. Let's select `jammy:android14:amd64` which is an Ubuntu 22.04 based Android 14 image for AMD64 architecture.
+Then, we can select the Android image. Observe that the image can be identified if it is an Android (AOSP) or an Android automotive (AAOS) image by looking at the image names. Let's select `jammy:android14:amd64` which is an Ubuntu 22.04 LTS based Android 14 image for AMD64 architecture.
 
 Next, let's select the resource type. We can leave it to the default value for this tutorial.
 

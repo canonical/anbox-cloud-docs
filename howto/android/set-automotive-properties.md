@@ -26,8 +26,10 @@ You need an automotive instance that you can stream. {ref}`tut-create-virtual-de
 When you have an AAOS instance streaming, you can adjust the automotive properties using the dashboard or the API.
 
 ::::{tab-set}
+<!-- vale Canonical.000-US-spellcheck = NO -->
 :::{tab-item} API
 :sync: api
+<!-- vale Canonical.000-US-spellcheck = YES -->
 
 You can adjust the automotive properties with the {ref}`Anbox HTTP API <sec-anbox-https-api-vhal>`.
 

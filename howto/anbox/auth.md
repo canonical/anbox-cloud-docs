@@ -49,9 +49,10 @@ You can view the identities you created by using:
 
 The output will look similar to this:
 ```{terminal}
-   :input: amc auth identity ls
    :user: user
    :host: host
+amc auth identity ls
+
 `+--------------------+---------------------+----------------------+----------------------+--------------+`
 `|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |`
 `+----------------------+---------------------+------------------+------------------------+--------------+`
@@ -72,9 +73,10 @@ Create a new authorization group:
 To verify details of the created group, use the `show` command:
 
 ```{terminal}
-   :input: amc auth group show developer
    :user: user
    :host: host
+amc auth group show developer
+
 name: developer
 created-at: 2025-10-17 12:06:33 +0530 IST
 updated-at: 2025-10-17 12:06:33 +0530 IST
