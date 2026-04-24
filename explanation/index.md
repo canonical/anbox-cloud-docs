@@ -50,7 +50,6 @@ Understand how you can deploy Anbox Cloud secure, the cryptography information u
 
 * {ref}`Security <exp-security>`
 
-
 Also check out the {ref}`tutorials` for step-by-step instructions that help you get familiar with Anbox Cloud, the {ref}`how-to-guides` for instructions on how to achieve specific goals when using Anbox Cloud and the {ref}`reference` section for reference material.
 
 ```{toctree}

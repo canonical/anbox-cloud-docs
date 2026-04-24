@@ -82,7 +82,7 @@ curl -k https://$AMS_IP:8444/metrics
 curl -k https://$STREAM_GATEWAY_IP:4000/metrics
 ```
 
-2. If you don't have direct access (e.g., when deployed on a public cloud), use SSH to tunnel the request:
+1. If you don't have direct access (e.g., when deployed on a public cloud), use SSH to tunnel the request:
 
 ```bash
 # For AMS

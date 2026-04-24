@@ -31,6 +31,7 @@ The **charmed deployment** is a full deployment of all Anbox Cloud charms using 
 - [Troubleshoot](/howto/troubleshoot/index.md) | [View logs](/howto/troubleshoot/view-logs.md)
 ```
 ````
+
 ````{grid} 1 1 2 2
 :reverse:
 ```{grid-item-card} [Reference](/reference/index.md)

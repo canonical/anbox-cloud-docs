@@ -10,6 +10,7 @@ Not all components are updated with each release. When components are not update
 ### Charms
 
 #### Ubuntu 22.04 LTS
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1475 | 1476 | 1.29.2-a624c30 |
@@ -23,6 +24,7 @@ Not all components are updated with each release. When components are not update
 | anbox-cloud-cos-configuration | 1.29/stable | 586 | 587 | 1.29.2-a624c30 |
 
 #### Ubuntu 24.04 LTS
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1477 | 1478 | 1.29.2-a624c30 |
@@ -36,6 +38,7 @@ Not all components are updated with each release. When components are not update
 | anbox-cloud-cos-configuration | 1.29/stable | 588 | 589 | 1.29.2-a624c30 |
 
 ### Bundles
+
 | Name | Channel | Revision |
 |------|---------|----------|
 | anbox-cloud | 1.29/stable | 984 |
@@ -108,6 +111,7 @@ The following Anbox images are available in two variants: one based on a contain
 ### Charms
 
 #### Ubuntu 22.04 LTS
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1390 | 1391 | `1.29.0-fdb4954` |
@@ -121,6 +125,7 @@ The following Anbox images are available in two variants: one based on a contain
 | anbox-cloud-cos-configuration | 1.29/stable | 502 | 503 | `1.29.0-fdb4954` |
 
 #### Ubuntu 24.04 LTS
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.29/stable | 1392 | 1393 | `1.29.0-fdb4954` |
@@ -134,6 +139,7 @@ The following Anbox images are available in two variants: one based on a contain
 | anbox-cloud-cos-configuration | 1.29/stable | 504 | 505 | `1.29.0-fdb4954` |
 
 ### Bundles
+
 | Name | Channel | Revision |
 |------|---------|----------|
 | anbox-cloud | 1.29/stable | 939 |
@@ -173,6 +179,7 @@ The following Anbox images are available in two variants: one based on a contain
 ### Charms
 
 #### Ubuntu 22.04 LTS
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.28/stable | 1326 | 1327 | 1.28.2-e257005 |
@@ -186,6 +193,7 @@ The following Anbox images are available in two variants: one based on a contain
 | anbox-cloud-cos-configuration | 1.28/stable | 438 | 439 | 1.28.2-e257005 |
 
 #### Ubuntu 24.04 LTS
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
 | ams | 1.28/stable | 1328 | 1329 | 1.28.2-e257005 |
@@ -199,6 +207,7 @@ The following Anbox images are available in two variants: one based on a contain
 | anbox-cloud-cos-configuration | 1.28/stable | 440 | 441 | 1.28.2-e257005 |
 
 ### Bundles
+
 | Name | Channel | Revision |
 |------|---------|----------|
 | anbox-cloud | 1.28/stable | 905 |
@@ -245,7 +254,6 @@ The following Anbox images are available in two variants: one based on a contain
 
 #### Ubuntu 22.04 LTS
 
-
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
 | `anbox-cloud-dashboard` | `1.28/stable` | 1142 | 1143 | `1.28.1-0d1153d` |
@@ -257,7 +265,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-stream-agent` | `1.28/stable` | 1227 | 1228 | `1.28.1-0d1153d` |
 | `aar` | `1.28/stable` | 1309 | 1310 | `1.28.1-0d1153d` |
 | `anbox-cloud-cos-configuration` | `1.28/stable` | 426 | 427 | `1.28.1-0d1153d` |
-
 
 #### Ubuntu 24.04 LTS
 
@@ -273,14 +280,12 @@ The following Anbox images are available in two variants: one based on a contain
 | `aar` | `1.28/stable` | 1311 | 1312 | `1.28.1-0d1153d` |
 | `anbox-cloud-cos-configuration` | `1.28/stable` | 428 | 429 | `1.28.1-0d1153d` |
 
-
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
 | `anbox-cloud` | `1.28/stable` | 900 |
 | `anbox-cloud-core` | `1.28/stable` | 910 |
-
 
 ### Snaps
 
@@ -323,7 +328,6 @@ The following Anbox images are available in two variants: one based on a contain
 
 #### Ubuntu 22.04 LTS
 
-
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
 | `anbox-cloud-dashboard` | `1.28/stable` | 1114 | 1115 | `1.28.0-0fa313f` |
@@ -335,7 +339,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-stream-agent` | `1.28/stable` | 1199 | 1200 | `1.28.0-0fa313f` |
 | `aar` | `1.28/stable` | 1270 | 1271 | `1.28.0-0fa313f` |
 | `anbox-cloud-cos-configuration` | `1.28/stable` | 397 | 398 | `1.28.0-0fa313f` |
-
 
 #### Ubuntu 24.04 LTS
 
@@ -351,14 +354,12 @@ The following Anbox images are available in two variants: one based on a contain
 | `aar` | `1.28/stable` | 1272 | 1273 | `1.28.0-0fa313f` |
 | `anbox-cloud-cos-configuration` | `1.28/stable` | 399 | 400 | `1.28.0-0fa313f` |
 
-
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
 | `anbox-cloud` | `1.28/stable` | 885 |
 | `anbox-cloud-core` | `1.28/stable` | 898 |
-
 
 ### Snaps
 
@@ -395,13 +396,11 @@ The following Anbox images are available in two variants: one based on a contain
 | `jammy:android12:amd64` | `1.28.0-20251026235414.git7d62641` |
 | `jammy:android12:arm64` | `1.28.0-20251026235414.git7d62641` |
 
-
 ## 1.27.2
 
 ### Charms
 
 #### Ubuntu 22.04 LTS
-
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
@@ -415,7 +414,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-stream-agent` | `1.27/stable` | 1143 | 1144 | `1.27.2-fc85e76` |
 | `aar` | `1.27/stable` | 1210 | 1211 | `1.27.2-fc85e76` |
 | `anbox-cloud-cos-configuration` | `1.27/stable` | 341 | 342 | `1.27.2-fc85e76` |
-
 
 #### Ubuntu 24.04 LTS
 
@@ -432,14 +430,12 @@ The following Anbox images are available in two variants: one based on a contain
 | `aar` | `1.27/stable` | 1212 | 1213 | `1.27.2-fc85e76` |
 | `anbox-cloud-cos-configuration` | `1.27/stable` | 343 | 344 | `1.27.2-fc85e76` |
 
-
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
 | `anbox-cloud` | `1.27/stable` | 858 |
 | `anbox-cloud-core` | `1.27/stable` | 870 |
-
 
 ### Snaps
 
@@ -475,7 +471,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `jammy:android13:arm64` | `1.27.2-20251008173258.gite5e138f` |
 | `jammy:android12:amd64` | `1.27.2-20251008173258.gite5e138f` |
 | `jammy:android12:arm64` | `1.27.2-20251008173258.gite5e138f` |
-
 
 ## 1.27.1
 
@@ -515,7 +510,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `jammy:android13:arm64` | `1.27.1-20250908232521.gite93faa2` |
 | `jammy:android12:amd64` | `1.27.1-20250908232521.gite93faa2` |
 | `jammy:android12:arm64` | `1.27.1-20250908232521.gite93faa2` |
-
 
 ## 1.27.0
 

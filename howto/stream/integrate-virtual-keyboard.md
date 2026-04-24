@@ -71,6 +71,7 @@ Adding the following JavaScript code snippet builds up a communication tunnel be
      }
    </script>
    ```
+
 (sec-customizing-the-virtual-keyboard)=
 ## Customizing the virtual keyboard
 
@@ -80,6 +81,7 @@ You can take advantage of the interfaces that the Anbox WebView exposes to provi
 * Handling of state changes of the virtual keyboard
 
 1. Set up the listener to the activity for which you want to capture the text input events from the virtual keyboard or monitor its visibility changes during streaming.
+
    ```
    import com.canonical.anbox.streaming_sdk.AnboxWebView;
    ...
@@ -167,7 +169,6 @@ You can take advantage of the interfaces that the Anbox WebView exposes to provi
 
    Similarly, when the virtual keyboard pops down on the client side, you must ensure that the behavior of the virtual keyboard is synced on both ends. Therefore, the `hide` action must be sent out to the server side.
 
-
    ```
        @Override
        public void onVirtualKeyboardStateChanged(boolean visible, double displayRatio) {
@@ -183,9 +184,9 @@ You can take advantage of the interfaces that the Anbox WebView exposes to provi
    ```
 
 4. When typing on the virtual keyboard, a text input event is triggered when one of the following scenarios occurs:
-   - A series of characters is committed to a text editor
-   - A text is currently being composed
-   - A text is being deleted
+   * A series of characters is committed to a text editor
+   * A text is currently being composed
+   * A text is being deleted
 
     In the above cases, the changed text must be sent to the server side through the JavaScript SDK. This can be done by calling JavaScript functions that are defined in HTML through Anbox WebView. For example, for committing text:
 

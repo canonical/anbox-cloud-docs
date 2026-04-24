@@ -30,6 +30,7 @@ config:
     gpu-encoder-slots: 0
     tags: []
 ```
+
 (sec-config-allocation-rates)=
 ## Configure allocation rates
 

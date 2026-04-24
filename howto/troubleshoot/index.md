@@ -21,7 +21,6 @@ If the deployment is older than 3 months, you must upgrade Anbox Cloud to the la
 
 If you still need help, use any of the following utilities to collect troubleshooting information and report an [issue](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
-
 The following utilities could be applicable for the charmed Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see {ref}`sec-variants`.
 
 (sec-bug-report)=
@@ -44,6 +43,7 @@ When you download from the *Instance details page > Bug Report*, the report give
 If you have the [`juju-crashdump` plugin](https://github.com/juju/juju-crashdump) installed, you can collect troubleshooting information from the deployment model. The Juju crash dump gives you a high level overview of the issue and is the recommended option to provide debugging information when you report an issue with your Anbox Cloud deployment.
 
 A Juju crash dump may include the following debugging information:
+
 * Additional information provided by the Anbox Cloud charms
 * Information about any instances that crashed
 
@@ -81,6 +81,6 @@ saves it to the local `<target_file>`. This process might take a few seconds.
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
-If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection. 
+If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection.
 
 Use `amc show <instance_id>` command to list the available logs. See {ref}`howto-view-instance-logs` for information on viewing the instance logs.

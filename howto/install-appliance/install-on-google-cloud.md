@@ -12,6 +12,7 @@ Currently, Anbox Cloud requires support for 32-bit architecture. Since T2A ARM i
 ## Prerequisites
 
 Before starting the procedure,
+
 * Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox Cloud Appliance.
 * Make sure that you have a Google Cloud account and a project on Google Cloud to create the virtual machine.
 * If you wish to use your own [Ubuntu Pro subscription](https://ubuntu.com/pro), ensure you have the Ubuntu Pro token for your Ubuntu Pro subscription. If you wish to use the Ubuntu Pro subscription offered by Google Cloud along with the virtual machine, skip this prerequisite.
@@ -90,6 +91,7 @@ Protocols and ports : Specified protocols and ports
     TCP ports : 443
     UDP ports : 5349,60000-60100
 ```
+
 The target tag `foo` will be used as the network tag in the virtual machine settings. This tag should match the network tag of the virtual machine.
 
 If you want to use the service account to map the firewall rule to the instance, choose `Targets` as `Specified service account` and use the service account configured in the virtual machine.

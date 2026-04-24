@@ -31,6 +31,7 @@ unit-anbox-cloud-dashboard-0:
     enqueued: 2021-02-10 14:04:44 +0000 UTC
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
+
 (sec-register-ubuntu-one-appliance)=
 ### Register in the appliance
 

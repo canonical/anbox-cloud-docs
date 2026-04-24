@@ -24,5 +24,6 @@ Starting an instance that has stopped with an error status is is not allowed. Do
 ```
 
 ## Related topics
+
 * {ref}`howto-create-instance`
 * {ref}`howto-stop-instance`

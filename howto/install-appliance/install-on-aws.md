@@ -27,17 +27,19 @@ The appliance uses the following billable services by AWS:
 
 AWS supports running the Anbox Cloud Appliance both on [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances and on x86 instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
 
-* AWS Graviton (Arm) and x86 offer equal performance for Android applications.
-* GPUs are available for both x86 and AWS Graviton (Arm).
+- AWS Graviton (Arm) and x86 offer equal performance for Android applications.
+- GPUs are available for both x86 and AWS Graviton (Arm).
+
   ```{note}
   To use GPUs with AWS Graviton (Arm), you must select a [G5g instance](https://aws.amazon.com/de/ec2/instance-types/g5g/). This instance type might not be available in all regions.
   ```
+
 * Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
 
 For detailed information about the offering, see the following pages on the AWS Marketplace:
 
-* [Anbox Cloud Appliance for AWS Graviton (Arm)](https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk)
-* [Anbox Cloud Appliance for x86](https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4)
+- [Anbox Cloud Appliance for AWS Graviton (Arm)](https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk)
+- [Anbox Cloud Appliance for x86](https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4)
 
 ### Hardware requirements
 
@@ -47,8 +49,9 @@ Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox 
 
 Make sure you have the following accounts:
 
-* An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
-* An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
+- An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
+- An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
+
   ```{note}
   The quota for your AWS account must be sufficient for the instance types that you plan to use.
   ```
@@ -107,8 +110,8 @@ For reference, all required ports are documented in {ref}`ref-requirements`.
 
 The instance requires sufficient storage to work correctly. For optimal performance, we recommend the following setup:
 
-* A root disk with a minimum of 50 GB (required)
-* An additional EBS volume of at least 50 GB (strongly recommended)
+- A root disk with a minimum of 50 GB (required)
+- An additional EBS volume of at least 50 GB (strongly recommended)
 
 Anbox Cloud uses the additional volume exclusively to store all of its data, including its instances. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
 
@@ -116,9 +119,9 @@ Anbox Cloud uses the additional volume exclusively to store all of its data, inc
 
 In this example, we use three storage volumes:
 
-* Volume 1 at `/dev/sda1` as root disk with a size of 50 GB
-* Volume 2 at `/dev/sdb` as EBS volume with a size of 100 GB
-* Volume 3, an ephemeral disk at `/dev/nvme0n1`, which is part of the `g4dn` instance and which is ignored by the Anbox Cloud Appliance
+- Volume 1 at `/dev/sda1` as root disk with a size of 50 GB
+- Volume 2 at `/dev/sdb` as EBS volume with a size of 100 GB
+- Volume 3, an ephemeral disk at `/dev/nvme0n1`, which is part of the `g4dn` instance and which is ignored by the Anbox Cloud Appliance
 
 If you don't have any specific requirements, we recommend choosing the same configuration.
 
@@ -150,7 +153,7 @@ You can check the status of services using `pro status`.
 
 To enable the Anbox Cloud service, run:
 
-    $ sudo pro enable anbox-cloud
+    sudo pro enable anbox-cloud
 
 ## Install additional packages
 

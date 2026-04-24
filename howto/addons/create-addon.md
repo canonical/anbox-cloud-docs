@@ -19,15 +19,16 @@ cat "$ADDON_DIR"/public_key.pem >> ~/.ssh/authorized_keys
 ```
 
 To create an addon, you must provide the Anbox Management Client (AMC) with either of the following:
-* The addon directory
-* A tarball containing the required addon file structure
-* A zip archive containing the required addon file structure
+- The addon directory
+- A tarball containing the required addon file structure
+- A zip archive containing the required addon file structure
 
 Let's look at an example for of an addon for enabling SSH access on a container.
 
 ## Write the addon metadata
 
 In a new `ssh-addon` directory, create a `manifest.yaml` file with the following content:
+
 ```yaml
 name: ssh
 description: |
@@ -61,6 +62,7 @@ To make the `pre-start` file executable, run the following command in the `ssh-a
 
 See {ref}`ref-hooks` for more information.
 ```
+
 Create an SSH key in your addon directory and move the private key to a location outside of the addon directory:
 
         ssh-keygen -f ssh-addon-key -t ecdsa -b 521
@@ -87,7 +89,6 @@ In the parent directory of the `ssh-addon` directory, run the following command 
 When your addon is created, you can view it with:
 
         amc addon list
-
 
 ## Use the addon in an application
 
@@ -122,14 +123,13 @@ You can now access your container via SSH:
 
         ssh -i ~/ssh-addon-key root@<container_ip> -p <exposed port>
 
-
 ```{note}
 Exposed ports usually start around port 10000. `amc ls` displays the export port under the `ENDPOINTS` column.
 ```
 
 ## Related topics
 
-* {ref}`exp-addons`
-* {ref}`howto-update-addons`
-* {ref}`howto-extend-application`
-* {ref}`ref-addon-manifest`
+- {ref}`exp-addons`
+- {ref}`howto-update-addons`
+- {ref}`howto-extend-application`
+- {ref}`ref-addon-manifest`

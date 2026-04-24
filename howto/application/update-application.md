@@ -96,10 +96,11 @@ You can edit an application from the *Applications* list page.
 In the guided form, you can customize most of the fields that are available during {ref}`application creation <howto-create-application>`. Some of the fields, like the application name, or the container/VM option, cannot be modified and are disabled. When a field is disabled, hovering over it will display a tooltip explaining the reason.
 
 Similar to the application creation process, you can unlock advanced customization capabilities by toggling the *Customize manifest.yaml* switch at the bottom of the page. Note that customizing the manifest or updating one of the following fields will create a new version of the application:
+
 * APK
 * {ref}`manifest version name <ref-application-manifest>`
 * {ref}`boot activity <ref-application-manifest>`
-* {ref}`features <ref-feature-flags>` 
+* {ref}`features <ref-feature-flags>`
 * {ref}`sec-application-manifest-watchdog`
 
 When you click *Update*, you will be redirected either to the *Overview* tab of the application detail page - if the fields changed did not trigger a new version creation - or to the *Versions* tab of that page, when a new version of the application was created.

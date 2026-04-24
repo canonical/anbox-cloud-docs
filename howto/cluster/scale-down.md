@@ -6,12 +6,13 @@ Scaling down a LXD cluster involves more checks than scaling up.
 ## Prerequisites
 
 The following are important requirements when scaling down:
- - The node you remove must not have any instances left.
- - You must wait for a node to be fully removed before you can start removing another one.
- - Unless you are removing the entire cluster or are prepared for breaking changes, you should **not**
-   - remove database nodes. Especially, never remove a database leader node unless you are planning to remove the entire cluster. You can identify whether a LXD node is a database node by running `lxc cluster list` on the node.
-   - remove the LXD leader unit. You can identify the LXD leader unit by running `juju status lxd`. The leader is indicated by an asterisk (*) appended to the unit name in the output.
- - If the LXD leader unit is in the process of rebooting due to a kernel module or GPU driver update, do not scale down the LXD cluster until the leader has fully rebooted or Juju elects a new LXD unit as the leader.
+
+- The node you remove must not have any instances left.
+- You must wait for a node to be fully removed before you can start removing another one.
+- Unless you are removing the entire cluster or are prepared for breaking changes, you should **not**
+  - remove database nodes. Especially, never remove a database leader node unless you are planning to remove the entire cluster. You can identify whether a LXD node is a database node by running `lxc cluster list` on the node.
+  - remove the LXD leader unit. You can identify the LXD leader unit by running `juju status lxd`. The leader is indicated by an asterisk (*) appended to the unit name in the output.
+- If the LXD leader unit is in the process of rebooting due to a kernel module or GPU driver update, do not scale down the LXD cluster until the leader has fully rebooted or Juju elects a new LXD unit as the leader.
 - Since Anbox Cloud 1.25.0, the default channel for the LXD charm has changed to 5.21/stable.
 For users running LXD clusters with the LXD snap tracking a channel which is different than 5.21/stable, it is important that you set the charm configuration item `channel` *explicitly* to the currently running channel for LXD before scaling up or down, e.g. if the current LXD cluster consists of the LXD snap tracking the 5.0/stable channel, you should run:
 

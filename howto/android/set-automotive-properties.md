@@ -25,8 +25,8 @@ You need an automotive instance that you can stream. {ref}`tut-create-virtual-de
 
 When you have an AAOS instance streaming, you can adjust the automotive properties using the dashboard or the API.
 
-::::{tab-set}
 <!-- vale Canonical.000-US-spellcheck = NO -->
+::::{tab-set}
 :::{tab-item} API
 :sync: api
 <!-- vale Canonical.000-US-spellcheck = YES -->
@@ -85,7 +85,7 @@ Now if you try the `GET` query again, you should be able to see your changes ref
 :::{tab-item} Dashboard
 :sync: dashboard
 
-The dashboard has a HVAC panel with which you can control the automotive properties. 
+The dashboard has a HVAC panel with which you can control the automotive properties.
 
 For example, try setting the temperature property:
 

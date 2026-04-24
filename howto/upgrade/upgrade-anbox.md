@@ -45,7 +45,6 @@ If the upgrades are not held, run the following command to hold them until the L
 
     sudo apt-mark hold 'linux-modules-nvidia-*' 'nvidia-*' 'libnvidia-*'
 
-
 ## Upgrade all charms
 
 You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
@@ -212,7 +211,6 @@ If you do need to allow external access to services running inside LXD nodes, ru
 To revoke external access to services after enabling it for the LXD charm, run:
 
        juju unexpose lxd
-
 
 ## Upgrade Debian packages
 

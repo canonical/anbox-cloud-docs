@@ -31,7 +31,7 @@ This table lists the resource types and their endpoints that can be assigned res
 
 | Resource type | End point |
 | ---- | ---- |
-| identity | `/1.0/auth/identities/<id> `|
+| identity | `/1.0/auth/identities/<id>`|
 | group | `/1.0/auth/groups/<id>` |
 | addon | `/1.0/addons/<id>` |
 | application | `/1.0/applications/<id>` |

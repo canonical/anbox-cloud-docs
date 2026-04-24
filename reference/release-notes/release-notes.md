@@ -21,9 +21,9 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| May 20, 2026 | Anbox Cloud 1.30.0 | * New features<br/> * Android security updated<br/> * Bug fixes |
-| June 17, 2026 | Anbox Cloud 1.30.1 | * Android security updated<br/> * Bug fixes |
-| July 15, 2026 | Anbox Cloud 1.30.2 | * Android security updated<br/> * Bug fixes |
+| May 20, 2026 | Anbox Cloud 1.30.0 | *New features<br/>* Android security updated<br/> * Bug fixes |
+| June 17, 2026 | Anbox Cloud 1.30.1 | *Android security updated<br/>* Bug fixes |
+| July 15, 2026 | Anbox Cloud 1.30.2 | *Android security updated<br/>* Bug fixes |
 
 ## Release and support policy
 
@@ -42,7 +42,6 @@ Feature deprecations are generally announced two releases in advance before the 
 To ensure you receive latest security updates and bug fixes, you should upgrade to a new release of Anbox Cloud shortly after it is released.
 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
-
 
 ### What's new in 1.29.x?
 
@@ -163,6 +162,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
 |January 2019|[Anbox Cloud 1.1.0](1.1.0.md)|
 |December 2018|[Anbox Cloud 1.0.1](1.0.1.md)|
 |November 2018|[Anbox Cloud 1.0.0](1.0.0.md)|
+
 </details>
 
 ## Security policy

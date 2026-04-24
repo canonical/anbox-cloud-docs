@@ -3,7 +3,7 @@
 
 The performance of your Anbox Cloud deployment depends on multiple factors. To ensure optimal performance, check and monitor all areas and tune your deployment based on your findings.
 
-To measure the performance based on different parameters, you should run performance benchmarks. See {ref}`howto-run-benchmarks` for more information on how to run performance benchmarks. 
+To measure the performance based on different parameters, you should run performance benchmarks. See {ref}`howto-run-benchmarks` for more information on how to run performance benchmarks.
 
 See the provided {ref}`ref-performance-benchmarks` as a reference for what performance you can expect with different hardware configurations.
 
@@ -74,4 +74,3 @@ Also make sure to optimize the network path from the Anbox Cloud server to the c
 * {ref}`exp-capacity-planning`
 * {ref}`howto-run-benchmarks`
 * {ref}`ref-hooks`
-

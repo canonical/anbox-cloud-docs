@@ -48,8 +48,8 @@ Using the same method that you used to generate the CA certificate, generate a c
 
 Copy the generated credentials to the client machine:
 
-   * Copy the client certificate to `$HOME/snap/amc/current/client/client.crt`.
-   * Copy the client key to `$HOME/snap/amc/current/client/client.key`
+- Copy the client certificate to `$HOME/snap/amc/current/client/client.crt`.
+- Copy the client key to `$HOME/snap/amc/current/client/client.key`
 
 ### Configure AMC to connect to AMS
 
@@ -87,6 +87,7 @@ amc config set oidc.issuer_url '<issuer url configured for the provider>'
 amc config set oidc.client_id '<client id configured for the client on the identity provider>'
 amc config set oidc.audience '<audience, if configured, for the client>'
 ```
+
 You would have copied the issuer URL, client ID and audience API values when you finished the identity provider setup.
 
 ### Configure AMC to connect to AMS
@@ -117,4 +118,4 @@ After this step, all invocations of the `amc` command use the new remote.
 
 ## Related topics
 
-* {ref}`exp-ams`
+- {ref}`exp-ams`

@@ -12,6 +12,7 @@ resources:
   memory: 3GB
   disk-size: 3GB
 ```
+
 For a virtual machine instance, the default resource preset is:
 
 ```yaml

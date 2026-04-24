@@ -14,6 +14,7 @@ If you are using the `amc` CLI, you can use the `--enable-streaming` option at t
 When the `--enable-streaming` option is specified, the Anbox Management Service (AMS) automatically creates a streaming session for the instance. You can find the id of the session as a tag on the instance in the format `session=<id>`.
 
 To further customize the streaming configuration, use the following arguments:
+
 * `--display-size`
 * `--display-density`
 * `--fps`
@@ -67,7 +68,6 @@ The downloaded `.csv` file has the following statistics:
 | `audio-packetslost` | Number of audio packets lost |
 
 ### Sharing a streaming session
-
 
 ::::{tab-set}
 :::{tab-item} CLI

@@ -24,7 +24,6 @@ If `images.auth` is set to `false`, then the image authentication not being set 
 
     amc config set images.auth bearer:$(sudo cat /var/lib/ubuntu-advantage/private/machine-token.json | jq -r '.resourceTokens[] | select(.type=="anbox-images").token')
 
-
 ## Instance failed to start
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*

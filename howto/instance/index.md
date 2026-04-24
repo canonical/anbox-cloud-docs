@@ -22,4 +22,5 @@ backup-restore-application-data
 configure-geographic-location
 expose-services
 ```
+
 See {ref}`exp-instances` for an introduction to how instances are used in Anbox Cloud.

@@ -50,11 +50,10 @@ Know the configuration options that can be defined for various components of Anb
 Learn about the APIs provided by Anbox Cloud.
 
 * {ref}`ref-api`
-  - [AMS HTTP API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/ams-api/)
-  - [Anbox HTTPS API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/anbox-https-api/)
-  - [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
-  - [Stream Gateway API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/gateway-api/)
-
+  * [AMS HTTP API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/ams-api/)
+  * [Anbox HTTPS API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/anbox-https-api/)
+  * [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+  * [Stream Gateway API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/gateway-api/)
 
 ## Command reference
 

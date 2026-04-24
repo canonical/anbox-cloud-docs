@@ -15,4 +15,4 @@ The following table lists some Anbox features and whether they are supported for
 | {ref}`Client-Side Virtual Keyboard <sec-client-side-virtual-keyboard>`               | ✓    |   -   |
 | {ref}`VHAL HTTP API <sec-anbox-https-api-vhal>` | -    |   ✓   |
 | [VhalConnector](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/classanbox_1_1VhalConnector.html) in Platform SDK API                                                    | -    |   ✓   |
-| {ref}`exp-custom-images`     | -    |   ✓   | 
+| {ref}`exp-custom-images`     | -    |   ✓   |

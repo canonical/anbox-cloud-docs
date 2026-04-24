@@ -6,6 +6,7 @@ Scaling up a LXD cluster can be achieved via Juju. Juju automates the deployment
 ## Prerequisites
 
 The following are important requirements when scaling up:
+
 - If the LXD leader unit is in the process of rebooting due to a kernel module or GPU driver update, do not scale up the LXD cluster until the leader has fully rebooted or Juju elects a new LXD unit as the leader.
 - Since Anbox Cloud 1.25.0, the default channel for the LXD charm has changed to 5.21/stable.
 For users running LXD clusters with the LXD snap tracking a channel which is different than 5.21/stable, it is important that you set the charm configuration item `channel` *explicitly* to the currently running channel for LXD before scaling up or down, e.g. if the current LXD cluster consists of the LXD snap tracking the 5.0/stable channel, you should run:
@@ -23,7 +24,6 @@ Adding additional LXD units or removing existing ones is not an instant operatio
 3. LXD installation
 4. Registration of the LXD node with the existing cluster and AMS
 5. Synchronization of necessary artifacts from other nodes in the LXD cluster (for example, images)
-
 
 To add additional LXD nodes, run the following commands:
 

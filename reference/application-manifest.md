@@ -74,6 +74,7 @@ resources:
   disk-size: 3GB
 node-selector: [foo, bar]
 ```
+
 (sec-application-manifest-video-encoder)=
 ## Video encoder
 
@@ -86,8 +87,9 @@ Name                     |  Description
 `software`            |  A software-based video encoder
 
 When `gpu` video encoder is specified in the manifest, AMS can fail to create an application if:
- - All GPU slots are used up by running instances.
- - There is no GPU support across the entire LXD cluster.
+
+- All GPU slots are used up by running instances.
+- There is no GPU support across the entire LXD cluster.
 
 (sec-application-manifest-watchdog)=
 ## Watchdog
@@ -193,10 +195,10 @@ Each item (file or folder) declared in the `extra-data` field of the manifest YA
 
 For security reasons, the target location of the files and directories listed in the `extra-data` section is restricted to a few specific locations in the Android file system. These are:
 
-* `/sdcard/Android/obb/<apk-package-name>`
-* `/sdcard/Android/data/<apk-package-name>`
-* `/data/app/<apk-package-name>`
-* `/data/data/<apk-package-name>`
+- `/sdcard/Android/obb/<apk-package-name>`
+- `/sdcard/Android/data/<apk-package-name>`
+- `/data/app/<apk-package-name>`
+- `/data/data/<apk-package-name>`
 
 The manifest and extra data in our example are placed next to the application package, which must be named `app.apk`:
 

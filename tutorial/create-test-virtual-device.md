@@ -64,6 +64,7 @@ resources:
    memory: 4GB
    disk-size: 3GB
 ```
+
 This example will use the default image as we haven't mentioned a specific image.
 
 Now, let's create the application:
@@ -281,8 +282,8 @@ To look at a visual output of the stream-enabled instance that we created, we ne
 
 Go to `https://machine-address` using a browser and go to the *Instances* page where we can see the instance we created. See the *Dashboard* tab for details on using the dashboard to test the virtual device.
 
-## Success!
-You now know how to use the command line to create and test an Android virtual device in Anbox Cloud. 
+## Success
+You now know how to use the command line to create and test an Android virtual device in Anbox Cloud.
 
 :::
 
@@ -313,7 +314,7 @@ Click *Create* and watch the *Applications* page as our application gets initial
 
 **Launch an instance**
 
-Now, we need an instance that can be streamed to test our Android virtual device. 
+Now, we need an instance that can be streamed to test our Android virtual device.
 
 The *Create instance* button becomes available when the application is *ready*. Let's click *Create instance*.
 
@@ -353,15 +354,15 @@ When we click *Set up*, we are provided with a URL to our Android stream that ca
 
 If we click on our instance name, we can explore the instance details, interact with it using a terminal and view logs for debugging.
 
-This terminal is the shell for the Linux instance that runs the Android container. You can run commands in the Linux instance, or you can type `anbox-shell` and to gain access to the nested Android container. 
+This terminal is the shell for the Linux instance that runs the Android container. You can run commands in the Linux instance, or you can type `anbox-shell` and to gain access to the nested Android container.
 
 The `exit` command takes you back from the Android container shell to the Linux instance shell.
 
 If you have an instance with an *error* status, you can explore the different types of logs available for the instance.
 
-## Success!
+## Success
 
-You now know how to use the Anbox Cloud dashboard to create and test an Android virtual device. 
+You now know how to use the Anbox Cloud dashboard to create and test an Android virtual device.
 
 :::
 ::::

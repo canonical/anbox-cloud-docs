@@ -21,7 +21,7 @@ The later sections of this topic provide information about the supported Ubuntu 
 
 ### CPU Architecture compatibility
 
-Ensure that your deployment environment uses a CPU architecture officially supported by Android. Unsupported architectures are not compatible with Anbox Cloud and using them in an Anbox Cloud deployment will lead to errors and unexpected behavior. For a complete list of supported ABIs (Application Binary Interfaces), refer to the official Android documentation: https://developer.android.com/ndk/guides/abis.
+Ensure that your deployment environment uses a CPU architecture officially supported by Android. Unsupported architectures are not compatible with Anbox Cloud and using them in an Anbox Cloud deployment will lead to errors and unexpected behavior. For a complete list of supported ABIs (Application Binary Interfaces), refer to the official Android documentation: <https://developer.android.com/ndk/guides/abis>.
 
 ## Requirements for the appliance
 
@@ -117,15 +117,16 @@ To run the core version of Anbox Cloud without the streaming stack, we recommend
 
 Some additional information:
 
-- The ID in the table corresponds to the ID that the Juju bundle uses.
-- You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
-- The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
+* The ID in the table corresponds to the ID that the Juju bundle uses.
+* You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
+* The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
   More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of instances. See {ref}`exp-capacity-planning` for an introduction of how many resources are necessary to host a specific number of instances.
-- If you require GPU support, see {ref}`ref-rendering-resources` for a list of supported GPUs.
+* If you require GPU support, see {ref}`ref-rendering-resources` for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
- - **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
- - **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/haproxy-enterprise/getting-started/installation/linux/)
+
+* **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
+* **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/haproxy-enterprise/getting-started/installation/linux/)
 
 Please note that these are just baselines and should be adapted to your workload. No matter the application, monitoring and tuning the performance is always important. See {ref}`exp-performance` for more information.

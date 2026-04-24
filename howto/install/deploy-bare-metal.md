@@ -9,6 +9,7 @@ Before you start the installation, ensure that you have the required prerequisit
 
 * At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
   ```
@@ -88,9 +89,9 @@ By default, Anbox Cloud uses a loop file with an automatically calculated size f
 
 There are different ways of configuring a dedicated block storage device:
 
-- Use an {ref}`existing LXD storage pool <sec-existing-storage-pool>` (recommended)
-- Use a {ref}`dedicated storage device <sec-dedicated-storage-device>`
-- Use a storage device defined by Juju (see {ref}`sec-customize-storage-juju` for instructions)
+* Use an {ref}`existing LXD storage pool <sec-existing-storage-pool>` (recommended)
+* Use a {ref}`dedicated storage device <sec-dedicated-storage-device>`
+* Use a storage device defined by Juju (see {ref}`sec-customize-storage-juju` for instructions)
 
 (sec-existing-storage-pool)=
 #### Existing storage pool
@@ -109,6 +110,7 @@ applications:
 ```{important}
 The LXD storage pool must use the ZFS storage driver. Other storage drivers are not supported by Anbox Cloud.
 ```
+
 (sec-dedicated-storage-device)=
 #### Dedicated storage device
 
@@ -161,6 +163,7 @@ Unit       Workload  Agent  Machine  Public address  Ports      Message
 lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required
 ...
 ```
+
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot

@@ -8,6 +8,7 @@ Similar to the Anbox Management Service (AMS), the stream gateway exposes its AP
 ### Prerequisites
 
 To access the stream gateway,
+
 * The gateway's HTTP API must be exposed. This is the default configuration.
 * All calls to the stream gateway must be authenticated. Authentication takes the form of a single token per client that you must embed in your requests. A token is associated to a *service account*, has a limited lifetime, and can be revoked at any time.
 

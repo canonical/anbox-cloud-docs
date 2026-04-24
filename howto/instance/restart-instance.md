@@ -16,6 +16,7 @@ By default, the `amc restart` command waits 5 minutes for both stopping and star
     amc restart <instance_id> --timeout 10m
 
 ## Related topics
+
 * {ref}`howto-create-instance`
 * {ref}`howto-start-instance`
 * {ref}`howto-stop-instance`

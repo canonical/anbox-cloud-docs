@@ -37,6 +37,7 @@ In addition, make sure you have the following prerequisites:
 ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
 ```
+
 * An Azure account that you use to create the virtual machine.
 
 Once you have the prerequisites, the first step is to create a virtual machine on which you can install the Anbox Cloud Appliance.
