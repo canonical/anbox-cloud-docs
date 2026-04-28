@@ -103,8 +103,8 @@ clean-doc:
 	rm -rf $(SPHINX_DIR)/.doctrees
 
 linkcheck: install
-	. $(DOCS_VENV) ; $(SPHINX_BUILD) -b linkcheck -q "$(DOCS_SOURCEDIR)" "$(DOCS_BUILDDIR)" $(SPHINX_OPTS) || { grep --color -F "[broken]" "$(DOCS_BUILDDIR)/output.txt"; exit 1; }
-	exit 0
+	. $(DOCS_VENV) ; $(SPHINX_BUILD) -b linkcheck "$(DOCS_SOURCEDIR)" "$(DOCS_BUILDDIR)" $(SPHINX_OPTS) || \
+		python3 $(DOCS_SOURCEDIR)/scripts/validate_linkcheck.py $(DOCS_BUILDDIR)/output.json
 
 pa11y: pa11y-install html
 	find $(DOCS_BUILDDIR) -name *.html -print0 | xargs -n 1 -0 $(PA11Y_CMD)
