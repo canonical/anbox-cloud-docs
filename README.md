@@ -51,6 +51,7 @@ To help with syntax, there is a [cheat sheet](./contribute/doc-cheat-sheet.md) t
 **GitHub Actions**
 
 The following GitHub actions run automatically on every pull request:
+
 - Inclusive language check
 - Spellcheck
 - Accessibility check

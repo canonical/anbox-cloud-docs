@@ -130,7 +130,6 @@ Choose between the available {ref}`sec-juju-bundles`:
 
 To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://documentation.ubuntu.com/juju/latest/reference/constraint/#list-of-constraints) in the Juju documentation for details.
 
-
 ```{note}
 Anbox Cloud charms supports deployment on both Ubuntu noble 24.04 and Ubuntu jammy 22.04. The examples below use **noble**. If you prefer to deploy on Ubuntu jammy 22.04, simply modify the `series` configuration accordingly.
 ```
