@@ -51,6 +51,6 @@ When using a custom fragment shader in WebGL, you need to manage the following p
 
 ## Related topics
 
-* {ref}`exp-application-streaming`
-* {ref}`tut-set-up-stream-client`
-* {ref}`sec-streaming-sdk`
+- {ref}`exp-application-streaming`
+- {ref}`tut-set-up-stream-client`
+- {ref}`sec-streaming-sdk`

@@ -37,6 +37,6 @@ For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and 
 
 ## Related topics
 
-* {ref}`ref-rendering-resources`
-* [SurfaceFlinger](https://source.android.com/docs/core/graphics/surfaceflinger-windowmanager)
-* [Wayland](https://wayland.freedesktop.org/)
+- {ref}`ref-rendering-resources`
+- [SurfaceFlinger](https://source.android.com/docs/core/graphics/surfaceflinger-windowmanager)
+- [Wayland](https://wayland.freedesktop.org/)

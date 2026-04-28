@@ -54,6 +54,6 @@ If your client requires the AMS certificate, you can find it in `/var/snap/ams/c
 
 ## Related topics
 
-* {ref}`exp-aar`
-* {ref}`howto-access-ams-remote`
-* {ref}`ref-ams-configuration`
+- {ref}`exp-aar`
+- {ref}`howto-access-ams-remote`
+- {ref}`ref-ams-configuration`

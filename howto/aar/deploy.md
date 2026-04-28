@@ -121,6 +121,6 @@ Then update the AAR configuration via the charm configuration:
 
 ## Related topics
 
-* {ref}`exp-aar`
-* {ref}`howto-configure-aar`
-* {ref}`howto-revoke-aar`
+- {ref}`exp-aar`
+- {ref}`howto-configure-aar`
+- {ref}`howto-revoke-aar`

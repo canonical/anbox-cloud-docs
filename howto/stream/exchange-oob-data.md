@@ -190,7 +190,7 @@ If an instance is running on Android 14 or later, enabling the out-of-band v2 fe
 
 There are two ways to access the `org.anbox.webrtc.IDataProxyService` binder service from an Android application:
 
-* If you develop the application with Android studio, you can access the service by using Android's reflection API.
+- If you develop the application with Android studio, you can access the service by using Android's reflection API.
 
     ```
     IBinder getDataProxyService() {

@@ -7,44 +7,44 @@ The *How-to* guides in this section give directions on how to achieve your goals
 
 Learn how to install, configure and upgrade Anbox Cloud.
 
-* {ref}`howto-install-anbox-cloud`
-* {ref}`howto-install-appliance`
-* {ref}`howto-upgrade`
+- {ref}`howto-install-anbox-cloud`
+- {ref}`howto-install-appliance`
+- {ref}`howto-upgrade`
 
 ## Using Anbox Cloud
 
 Learn about applications, instances and more in Anbox Cloud and how to use them.
 
-* {ref}`howto-manage-images`
-* {ref}`howto-manage-applications`
-* {ref}`howto-instance`
-* {ref}`howto-addons`
-* {ref}`howto-streaming`
-* {ref}`howto-port-android-apps`
-* {ref}`howto-use-web-dashboard`
-* {ref}`howto-Android`
-* {ref}`howto-simulate-incoming-sms`
+- {ref}`howto-manage-images`
+- {ref}`howto-manage-applications`
+- {ref}`howto-instance`
+- {ref}`howto-addons`
+- {ref}`howto-streaming`
+- {ref}`howto-port-android-apps`
+- {ref}`howto-use-web-dashboard`
+- {ref}`howto-Android`
+- {ref}`howto-simulate-incoming-sms`
 
 ## Managing Anbox Cloud
 
 Learn how to manage the different variants of Anbox Cloud, distribute the load of Anbox Cloud over several machines in a cluster, manage the Anbox Application Registry (AAR), and work with Anbox runtime.
 
-* {ref}`howto-manage-anbox`
-* {ref}`howto-manage-cluster`
-* {ref}`howto-aar`
-* {ref}`howto-anbox-runtime`
+- {ref}`howto-manage-anbox`
+- {ref}`howto-manage-cluster`
+- {ref}`howto-aar`
+- {ref}`howto-anbox-runtime`
 
 ## Monitoring Anbox Cloud
 
 Understand monitoring options for Anbox Cloud to further optimize your deployment.
 
-* {ref}`howto-monitor-anbox`
+- {ref}`howto-monitor-anbox`
 
 ## Troubleshooting Anbox Cloud
 
 Learn resolutions for common issues with Anbox Cloud and how to collect useful debugging information before reporting an issue.
 
-* {ref}`howto-ts-anbox-cloud`
+- {ref}`howto-ts-anbox-cloud`
 
 Also check out the {ref}`tutorials` for step-by-step instructions that help you get started with Anbox Cloud, as well as the {ref}`reference` and {ref}`explanation` sections for other helpful information.
 

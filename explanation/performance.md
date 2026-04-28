@@ -25,10 +25,10 @@ Generally, applications should use the smallest suitable resource preset. Howeve
 
 AMS has different modes to grant CPU access to an instance. The `cpu.limit_mode` configuration option can be used to change the mode. The possible modes are:
 
-* `scheduler` :
+- `scheduler` :
 
     This mode uses the LXD [`limits.cpu.allowance`](https://documentation.ubuntu.com/lxd/latest/reference/instance_options/#cpu-limits) configuration option to grant an instance a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
-* `pinning` :
+- `pinning` :
 
    This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to an instance. LXD is responsible for allocating a specific number of cores to an instance and load-balancing all running instances on all available cores.
 
@@ -71,6 +71,6 @@ Also make sure to optimize the network path from the Anbox Cloud server to the c
 
 ## Related topics
 
-* {ref}`exp-capacity-planning`
-* {ref}`howto-run-benchmarks`
-* {ref}`ref-hooks`
+- {ref}`exp-capacity-planning`
+- {ref}`howto-run-benchmarks`
+- {ref}`ref-hooks`

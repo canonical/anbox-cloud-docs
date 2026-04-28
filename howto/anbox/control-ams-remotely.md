@@ -118,4 +118,4 @@ After this step, all invocations of the `amc` command use the new remote.
 
 ## Related topics
 
-* {ref}`exp-ams`
+- {ref}`exp-ams`

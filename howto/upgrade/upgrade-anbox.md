@@ -51,11 +51,11 @@ You can find a list of all charm, snap, bundle and Debian package versions for e
 
 Before you run the `juju refresh` command to upgrade the charms, there are a few points you should know:
 
-* If you don't run Anbox Cloud in a high availability configuration, upgrading the charms will cause a short down time of individual service components during the process.
-* Starting with the 1.21 release, the NATS charm has been switched from its [older version](https://charmhub.io/nats-charmers-nats) to a [newer version](https://charmhub.io/nats) on Charmhub. This switch does not have any breaking changes from a user's perspective but since the framework of the charm has been overhauled, the upgrade to the new charm would require users to `switch` the charm's source while refreshing/updating the charm.
-* Starting with the 1.22 release, the `anbox-stream-agent` charm has a new relation `client` which can be used to register new clients for the Anbox Stream Agent. This new relation is used by the new AMS charm to create stream-enabled instances using the `--enable-streaming` option. For deployments using the bundles from or after 1.22 release, the relation is created automatically. For users upgrading from older versions of Anbox Cloud, the relation needs to be manually created using `juju relate anbox-stream-agent:client ams:agent` after upgrading both the `ams` and the `anbox-stream-agent` charms to 1.22.
-* If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
-* For any of the charm upgrades, you can watch the upgrade status by running `juju status`.
+- If you don't run Anbox Cloud in a high availability configuration, upgrading the charms will cause a short down time of individual service components during the process.
+- Starting with the 1.21 release, the NATS charm has been switched from its [older version](https://charmhub.io/nats-charmers-nats) to a [newer version](https://charmhub.io/nats) on Charmhub. This switch does not have any breaking changes from a user's perspective but since the framework of the charm has been overhauled, the upgrade to the new charm would require users to `switch` the charm's source while refreshing/updating the charm.
+- Starting with the 1.22 release, the `anbox-stream-agent` charm has a new relation `client` which can be used to register new clients for the Anbox Stream Agent. This new relation is used by the new AMS charm to create stream-enabled instances using the `--enable-streaming` option. For deployments using the bundles from or after 1.22 release, the relation is created automatically. For users upgrading from older versions of Anbox Cloud, the relation needs to be manually created using `juju relate anbox-stream-agent:client ams:agent` after upgrading both the `ams` and the `anbox-stream-agent` charms to 1.22.
+- If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
+- For any of the charm upgrades, you can watch the upgrade status by running `juju status`.
 
   At any point during the upgrade process, proceed to the next step only when the current step has completed successfully and all units in the `juju status` output are marked as **active**.
 

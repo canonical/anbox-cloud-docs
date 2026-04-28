@@ -17,10 +17,10 @@ Anbox Cloud deployments require the Ubuntu operating system. You should consider
 
 Consider the following questions to decide your networking requirements:
 
-* In your deployment, how should your network structure and topology look like?
-* Do you need subnets? If yes, what is the range of the subnets that you want to define?
-* Do you require a virtual network and plan Juju spaces on top of it?
-* Where is your Anbox Application Registry (AAR) deployed? How will the AMS in other clusters connect to AAR? Define any peering requirements that you may have, based on the number of clusters you have and where AAR is deployed. To know more about AAR, see the following links:
+- In your deployment, how should your network structure and topology look like?
+- Do you need subnets? If yes, what is the range of the subnets that you want to define?
+- Do you require a virtual network and plan Juju spaces on top of it?
+- Where is your Anbox Application Registry (AAR) deployed? How will the AMS in other clusters connect to AAR? Define any peering requirements that you may have, based on the number of clusters you have and where AAR is deployed. To know more about AAR, see the following links:
   * {ref}`exp-aar`
   * {ref}`howto-deploy-aar`
   * {ref}`howto-configure-aar`
@@ -29,9 +29,9 @@ Consider the following questions to decide your networking requirements:
 
 Based on your safety protocols, think about where you would want to host your storage. Also, refer to the following links that will help you plan and calculate your storage needs:
 
-* {ref}`ref-requirements`
-* [etcd recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
-* {ref}`exp-capacity-planning`
+- {ref}`ref-requirements`
+- [etcd recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
+- {ref}`exp-capacity-planning`
 
 ## Scalability, High availability, and redundancy
 
@@ -73,11 +73,11 @@ Load balancing solutions can differ based on your deployment model. You should a
 
 Anbox Cloud is optimized to use only as much energy as is necessary for an operation to complete. When planning for a production deployment, think through the following questions about energy efficiency to choose the most optimum way possible for your specific requirements:
 
-* Does your hardware match the requirements for your use case?
-* What trade-offs does your requirement allow to improve energy efficiency? For example, is there a way to use a lower streaming resolution? Lowering the resolution will impact the streaming experience but where possible, it could be a trade-off between being energy efficient and the quality of the stream. This needs to be decided based on how you use Anbox Cloud.
-* Does your deployment use GPU encoding or CPU encoding?
-* What is the bandwidth consumption of your deployment and what are the factors that could make it more efficient?
-* Are you using the appropriate platform for your use case? For example, for automation use cases, `null` requires much less CPU usage than `webrtc` with GPU or CPU rendering. See {ref}`exp-platforms` for more information.
+- Does your hardware match the requirements for your use case?
+- What trade-offs does your requirement allow to improve energy efficiency? For example, is there a way to use a lower streaming resolution? Lowering the resolution will impact the streaming experience but where possible, it could be a trade-off between being energy efficient and the quality of the stream. This needs to be decided based on how you use Anbox Cloud.
+- Does your deployment use GPU encoding or CPU encoding?
+- What is the bandwidth consumption of your deployment and what are the factors that could make it more efficient?
+- Are you using the appropriate platform for your use case? For example, for automation use cases, `null` requires much less CPU usage than `webrtc` with GPU or CPU rendering. See {ref}`exp-platforms` for more information.
 
 ## Monitoring and metrics
 

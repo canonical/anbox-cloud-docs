@@ -51,5 +51,5 @@ To access the dashboard, go to `https://<your-machine-address>/`. The dashboard 
 
 ## Related topics
 
-* {ref}`exp-aar`
-* {ref}`exp-web-dashboard`
+- {ref}`exp-aar`
+- {ref}`exp-web-dashboard`

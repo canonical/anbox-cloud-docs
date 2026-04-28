@@ -29,8 +29,8 @@ Ensure that your deployment environment uses a CPU architecture officially suppo
 
 The appliance supports the following Ubuntu versions:
 
-* Ubuntu 22.04 LTS (Jammy Jellyfish)
-* Ubuntu 24.04 LTS (Noble Numbat)
+- Ubuntu 22.04 LTS (Jammy Jellyfish)
+- Ubuntu 24.04 LTS (Noble Numbat)
 
 ### LXD
 
@@ -44,10 +44,10 @@ If LXD is already installed but the version is earlier than 5.0, run `snap refre
 
 The following hardware specifications are required for running the appliance:
 
-* 64 bit x86 or Arm CPU with >= 4 CPU cores
-* 8 GB of memory
-* 30 GB of free disk space on the main disk
-* (optional) 100GB block volume to host instance storage
+- 64 bit x86 or Arm CPU with >= 4 CPU cores
+- 8 GB of memory
+- 30 GB of free disk space on the main disk
+- (optional) 100GB block volume to host instance storage
 
 The above recommendation is the minimum requirement to run the appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible Android containers. See {ref}`exp-capacity-planning` for an explanation on how to plan for a specific capacity on your appliance.
 
@@ -63,8 +63,8 @@ Anbox Cloud deployments are managed by Juju. They can be created on all the [sup
 
 Charmed Anbox Cloud supports the following Ubuntu versions:
 
-* Ubuntu 22.04 LTS (Jammy Jellyfish)
-* Ubuntu 24.04 LTS (Noble Numbat)
+- Ubuntu 22.04 LTS (Jammy Jellyfish)
+- Ubuntu 24.04 LTS (Noble Numbat)
 
 ```{note}
 Currently, the Juju bundle uses Ubuntu 20.04 for the machine that runs a [HAProxy load balancer](https://charmhub.io/haproxy). However, all supported Anbox Cloud charms use Ubuntu 22.04 or 24.04. So if you are using a load balancer, you should manually upgrade the revision of your HAProxy charm.
@@ -129,7 +129,7 @@ Some additional information:
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
 
-* **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
-* **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/haproxy-enterprise/getting-started/installation/linux/)
+- **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
+- **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/haproxy-enterprise/getting-started/installation/linux/)
 
 Please note that these are just baselines and should be adapted to your workload. No matter the application, monitoring and tuning the performance is always important. See {ref}`exp-performance` for more information.

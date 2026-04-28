@@ -5,17 +5,17 @@ When planning your Anbox Cloud deployment, you should start by estimating how mu
 
 When estimating capacity, consider the following questions to better understand your requirements:
 
-* Application resources:
-    - How much CPU, memory and disk space does your application need?
-    - Will the application use hardware- or software-based video encoding?
-    - If the application uses hardware-based encoding, how much GPU capacity is needed?
-* CPU and memory:
-    - Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
-* Application:
-    - What type of application are you running?
-    - What frame rate and what resolution does your application need?
-    - How many instances will be running simultaneously?
-    - What would be the impact of not being able to serve all users?
+- Application resources:
+  * How much CPU, memory and disk space does your application need?
+  * Will the application use hardware- or software-based video encoding?
+  * If the application uses hardware-based encoding, how much GPU capacity is needed?
+- CPU and memory:
+  * Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
+- Application:
+  * What type of application are you running?
+  * What frame rate and what resolution does your application need?
+  * How many instances will be running simultaneously?
+  * What would be the impact of not being able to serve all users?
 
 ## Application resources
 
@@ -116,5 +116,5 @@ To avoid your cluster running out of resources even at peak loads, you must size
 
 ## Related topics
 
-* {ref}`exp-clustering`
-* {ref}`ref-application-manifest`
+- {ref}`exp-clustering`
+- {ref}`ref-application-manifest`

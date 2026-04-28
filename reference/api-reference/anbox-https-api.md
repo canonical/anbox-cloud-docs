@@ -23,8 +23,8 @@ Feature additions are done without breaking backward compatibility only result i
 
 There are two standard return types:
 
-* Standard return value
-* Error
+- Standard return value
+- Error
 
 ### Standard return value
 
@@ -61,7 +61,7 @@ HTTP code must be one of 400 or 500.
 
 ## API structure
 
-* {ref}`sec-anbox-https-api-1.0`
+- {ref}`sec-anbox-https-api-1.0`
   * {ref}`sec-anbox-https-api-location`
   * {ref}`sec-anbox-https-api-camera`
     * {ref}`sec-anbox-https-api-cameradata`
@@ -79,11 +79,11 @@ HTTP code must be one of 400 or 500.
 ### `/1.0/`
 #### GET
 
-* Description: Server configuration
-* Operation: sync
-* Steps:
-    - Fetch general information of the server
-* Return: Dict representing server state
+- Description: Server configuration
+- Operation: sync
+- Steps:
+  * Fetch general information of the server
+- Return: Dict representing server state
 
 Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq .`:
 
@@ -114,9 +114,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### PATCH
 
-* Description: Update the server configuration
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Update the server configuration
+- Operation: sync
+- Return: standard return value or standard error
 
 Input:
 
@@ -144,9 +144,9 @@ Example: `curl -X PATCH --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.
 ### `/1.0/location`
 #### GET
 
-* Description: Get location status
-* Operation: sync
-* Return: Current location status
+- Description: Get location status
+- Operation: sync
+- Return: Current location status
 
 ```{note}
 After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) won't be processed by Anbox until the location endpoint is disabled again.
@@ -167,9 +167,9 @@ After enabling the location endpoint, any location updates provided via the [Anb
 
 #### POST
 
-* Description: Activate or deactivate location updates
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Activate or deactivate location updates
+- Operation: sync
+- Return: standard return value or standard error
 
 ```{note}
 Location updates must be activated before posting any location data to Anbox via the `PATCH` method.  If location updates are disabled, requests to provide updates to the Anbox HTTP API will fail.
@@ -187,9 +187,9 @@ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
 
 #### PATCH
 
-* Description: Provide location update to be forwarded to Android
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Provide location update to be forwarded to Android
+- Operation: sync
+- Return: standard return value or standard error
 
 ```{note}
 The latitude or longitude of geographic coordinates can be expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example or in an NMEA-based data format as [`ddmm.mm`](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). Specify the format by setting the `format` field to either `"wgs84"` or `"nmea"`. If the field is omitted, its value defaults to `"wgs84"`. No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.
@@ -213,14 +213,14 @@ Input:
 }
 ```
 
-* "latitude" and "longitude" indicate the Latitude and Longitude of geographic coordinates.
+- "latitude" and "longitude" indicate the Latitude and Longitude of geographic coordinates.
 
-* "altitude" indicates Altitude in meters.
-* "time" indicates the current time in millisecond since 1970-01-01 00:00:00 UTC.
-* "speed" indicates speed in meters per second.
-* "bearing" indicates magnetic heading in degrees.
-* "format" indicates the location format and is an optional value.
-* "horizontal_accuracy" and "vertical_accuracy" indicate the horizontal and vertical accuracy in meters and are optional.
+- "altitude" indicates Altitude in meters.
+- "time" indicates the current time in millisecond since 1970-01-01 00:00:00 UTC.
+- "speed" indicates speed in meters per second.
+- "bearing" indicates magnetic heading in degrees.
+- "format" indicates the location format and is an optional value.
+- "horizontal_accuracy" and "vertical_accuracy" indicate the horizontal and vertical accuracy in meters and are optional.
 
 Return value:
 
@@ -237,9 +237,9 @@ Return value:
 
 #### GET
 
-* Description: Get camera basic information
-* Operation: sync
-* Return: Current camera basic information
+- Description: Get camera basic information
+- Operation: sync
+- Return: Current camera basic information
 
  Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .`:
 
@@ -263,10 +263,10 @@ Return value:
 
 #### POST
 
-* Description: Activate or deactivate camera data updates.
+- Description: Activate or deactivate camera data updates.
     Whenever uploading a static image or streaming video content to display it in Anbox,  you need to enable the camera support first in Anbox.
-* Operation: sync
-* Return: standard return value or standard error
+- Operation: sync
+- Return: standard return value or standard error
 
  Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq .`:
 
@@ -292,10 +292,10 @@ To determine if the camera is enabled, run the following query:
 
 #### POST
 
-* Description: Upload a static image to Anbox
+- Description: Upload a static image to Anbox
  After a camera is enabled,  a static image (only JPEG format is supported by far) can be uploaded to Anbox as camera data.
-* Operation: sync
-* Return: standard return value or standard error
+- Operation: sync
+- Return: standard return value or standard error
 
 Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X POST s/1.0/camera/data --data-binary @/<jpeg image path> | jq .`:
 
@@ -317,9 +317,9 @@ Irrespective of whether the screen orientation is in landscape or portrait, the 
 
 #### DELETE
 
-* Description: Delete the uploaded static image
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Delete the uploaded static image
+- Operation: sync
+- Return: standard return value or standard error
 
 Return value for `curl --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/camera/data`:
 
@@ -368,9 +368,9 @@ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N
 
 #### GET
 
-* Description: Get sensors’ status and supported sensors by Anbox
-* Operation: sync
-* Return: Current sensors’ status and supported sensors by Anbox
+- Description: Get sensors’ status and supported sensors by Anbox
+- Operation: sync
+- Return: Current sensors’ status and supported sensors by Anbox
 
 Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors | jq .`:
 
@@ -408,9 +408,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### POST
 
-* Description: Activate or deactivate sensor updates
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Activate or deactivate sensor updates
+- Operation: sync
+- Return: standard return value or standard error
 
 ```{note}
 Sensor updates must be activated before posting any sensor data to Anbox via the `PATCH` method.  If sensor updates are disabled, requests to provide updates to the Anbox HTTP API will fail.
@@ -428,10 +428,10 @@ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
 
 #### PATCH
 
-* Description: Update sensor data to be forwarded to Android.
+- Description: Update sensor data to be forwarded to Android.
     The API accepts a JSON array-based sensor data to be forwarded to Android
-* Operation: sync
-* Return: standard return value or standard error
+- Operation: sync
+- Return: standard return value or standard error
 
 Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sensors --data '[{"type": "acceleration", "x": 0.3, "y":-0.1, "z": 0.1},{"type": "pressure", "value": 1.0}]' | jq .`:
 
@@ -469,9 +469,9 @@ Issuing GET method to sensor endpoint can check the current active sensors in th
 
 #### GET
 
-* Description: Get tracing status
-* Operation: sync
-* Return: Current tracing status
+- Description: Get tracing status
+- Operation: sync
+- Return: Current tracing status
 
 Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracing  | jq .`:
 
@@ -488,9 +488,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### POST
 
-* Description: Activate or deactivate tracing in Anbox
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Activate or deactivate tracing in Anbox
+- Operation: sync
+- Return: standard return value or standard error
 
 Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracing --data '{"enable":true}' | jq .`:
 
@@ -529,9 +529,9 @@ You can pull that file from the instance and import it to [Perfetto Trace Viewer
 
 #### GET
 
-* Description: Get information about the current platform that Anbox uses
-* Operation: sync
-* Return: Information about the current Anbox platform
+- Description: Get information about the current platform that Anbox uses
+- Operation: sync
+- Return: Information about the current Anbox platform
 
 Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/platform | jq .`:
 
@@ -551,9 +551,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### PATCH
 
-* Description: Update one or more configuration items of the platform currently used by Anbox
-* Operation: sync
-* Return: Standard return value or standard error
+- Description: Update one or more configuration items of the platform currently used by Anbox
+- Operation: sync
+- Return: Standard return value or standard error
 
 Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/platform --data '{"config":{"rtc_log":true}}' | jq .`:
 
@@ -583,9 +583,9 @@ Platform | Field name       | Available since   | JSON type | Access | Default v
 
 #### DELETE
 
-* Description: Reset one or more configuration items of the platform to their default values
-* Operation: sync
-* Return: Standard return value or standard error
+- Description: Reset one or more configuration items of the platform to their default values
+- Operation: sync
+- Return: Standard return value or standard error
 
 Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/platform --data '{"configs":["stream_video_bitrate_min_kbps"]}' | jq .`:
 
@@ -610,10 +610,10 @@ endpoint will fail with a 500 error code on non-automotive Anbox images.
 
 #### GET `1.0/vhal/{prop_id}/{area_id}`
 
-* Description: Get a VHAL property value
-* Operation: sync
-* Return: Current value for requested property
-* Parameters:
+- Description: Get a VHAL property value
+- Operation: sync
+- Return: Current value for requested property
+- Parameters:
   * `prop_id`: Property identifier. Can be given in decimal, octal or hexadecimal format.
   * `area_id`: Valid area identifier for the property. Can be omitted for global properties. Can be given in decimal, octal, or hexadecimal format.
   * Some properties require additional data for getting their values. See [OBD2_FREEZE_FRAME](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2061-2089) for an example. This additional data must be passed as JSON in the request body. The values must be set in the fields `int32_values`, `int64_values`, `float_values`, `bytes`, or `string_value`.
@@ -663,9 +663,9 @@ enumeration:
 
 #### PUT
 
-* Description: Set a VHAL property to a new value
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Set a VHAL property to a new value
+- Operation: sync
+- Return: standard return value or standard error
 
 Example input:
 
@@ -720,9 +720,9 @@ non-automotive Anbox images.
 
 #### GET
 
-* Description: Get all VHAL property configurations
-* Operation: sync
-* Return: Current VHAL property configurations
+- Description: Get all VHAL property configurations
+- Operation: sync
+- Return: Current VHAL property configurations
 
 Example shortened return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/config | jq .`:
 
@@ -786,10 +786,10 @@ See the [VHAL property configuration](https://source.android.com/docs/automotive
 
 #### GET `1.0/vhal/config/{prop_id},...,{prop_id}`
 
-* Description: Get request VHAL property configurations
-* Operation: sync
-* Return: Current configuration for requested properties
-* Parameters:
+- Description: Get request VHAL property configurations
+- Operation: sync
+- Return: Current configuration for requested properties
+- Parameters:
   * `prop_id`: Property identifier(s). Can be given in decimal, octal or hexadecimal format. Can be given multiple times to query for the configuration of more than one property. If queried multiple times, property IDs must be separated by commas.
 
 Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/config/0x11100101 | jq .`:
@@ -825,9 +825,9 @@ See the [VHAL property configuration](https://source.android.com/docs/automotive
 ### `/1.0/metrics`
 #### GET
 
-* Description: Get metrics in Prometheus output data format
-* Operation: sync
-* Return: Current metrics in Prometheus output data format
+- Description: Get metrics in Prometheus output data format
+- Operation: sync
+- Return: Current metrics in Prometheus output data format
 
  Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/metrics`:
 
@@ -845,9 +845,9 @@ anbox_vulkan_buffer_memory_size_total 78370816
 ### `/1.0/telephony`
 #### GET
 
-* Description: Get telephony status
-* Operation: sync
-* Return: Current telephony status
+- Description: Get telephony status
+- Operation: sync
+- Return: Current telephony status
 
 Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/telephony  | jq .`:
 
@@ -866,9 +866,9 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
 
 #### POST
 
-* Description: Simulate an incoming SMS message that Android can process.
-* Operation: sync
-* Return: standard return value or standard error
+- Description: Simulate an incoming SMS message that Android can process.
+- Operation: sync
+- Return: standard return value or standard error
 
 Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/telephony/sms --data '{"number": "+1234567", "message": "Hello world!"}' | jq .`:
 

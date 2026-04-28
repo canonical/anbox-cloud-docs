@@ -12,5 +12,5 @@ The following table lists the valid keys in an addon manifest:
 
 ## Related topics
 
-* {ref}`howto-create-addon`
-* {ref}`howto-addons`
+- {ref}`howto-create-addon`
+- {ref}`howto-addons`
