@@ -318,7 +318,6 @@ extensions = [
     "sphinx_filtered_toctree",
     "sphinx_related_links",
     "sphinx_rerediraffe",
-    "sphinx_reredirects",
     "sphinx_roles",
     "sphinx_tabs.tabs",
     "sphinx_terminal",
@@ -413,7 +412,7 @@ if os.path.exists('./reuse/substitutions.yaml'):
 #============================================#
 
 ## Generate dynamic configuration using scripts
-# Inject AMS configuration valuues and Node configuration values from the swagger
+# Inject AMS configuration values and Node configuration values from the swagger
 # specification hosted on Github.
 
 custom_required_modules = []
