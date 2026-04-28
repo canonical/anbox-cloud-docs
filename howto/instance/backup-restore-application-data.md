@@ -67,8 +67,8 @@ The resulting tarball file will include the following files:
 
 And exclude the following files:
 
-- Files with `jpeg` suffix below the folder `/sdcard/Android/data/com.canonical.candy/user_data`
-- Files with `cfg` suffix below the folder `/data/data/com.canonical.candy/new_level`
+* Files with `jpeg` suffix below the folder `/sdcard/Android/data/com.canonical.candy/user_data`
+* Files with `cfg` suffix below the folder `/data/data/com.canonical.candy/new_level`
 
 ## Related topics
 

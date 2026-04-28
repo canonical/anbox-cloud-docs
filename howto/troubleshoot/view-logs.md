@@ -69,11 +69,11 @@ This is the default for any Juju model. It indicates that the machine log level 
 
 The logging levels, from most verbose to least verbose, are as follows:
 
-- `TRACE`
-- `DEBUG`
-- `INFO`
-- `WARNING`
-- `ERROR`
+* `TRACE`
+* `DEBUG`
+* `INFO`
+* `WARNING`
+* `ERROR`
 
 The logging level can be set like this:
 

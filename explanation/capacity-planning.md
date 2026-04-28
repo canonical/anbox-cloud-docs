@@ -6,25 +6,25 @@ When planning your Anbox Cloud deployment, you should start by estimating how mu
 When estimating capacity, consider the following questions to better understand your requirements:
 
 * Application resources:
-  * How much CPU, memory and disk space does your application need?
-  * Will the application use hardware- or software-based video encoding?
-  * If the application uses hardware-based encoding, how much GPU capacity is needed?
+    - How much CPU, memory and disk space does your application need?
+    - Will the application use hardware- or software-based video encoding?
+    - If the application uses hardware-based encoding, how much GPU capacity is needed?
 * CPU and memory:
-  * Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
+    - Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
 * Application:
-  * What type of application are you running?
-  * What frame rate and what resolution does your application need?
-  * How many instances will be running simultaneously?
-  * What would be the impact of not being able to serve all users?
+    - What type of application are you running?
+    - What frame rate and what resolution does your application need?
+    - How many instances will be running simultaneously?
+    - What would be the impact of not being able to serve all users?
 
 ## Application resources
 
 A default resource preset will be set for every application. A resource preset specifies the resources that are available to the application:
 
-* The number of vCPU cores
-* The amount of RAM
-* The amount of disk space
-* The number of GPU slots
+- The number of vCPU cores
+- The amount of RAM
+- The amount of disk space
+- The number of GPU slots
 
 Depending on the resources that your application requires, if the {ref}`default resource preset <exp-resources-presets>` does not suit, you can choose suitable {ref}`sec-application-manifest-resources` that fit your application.
 
@@ -47,9 +47,9 @@ GPUs have limited capacity that can be shared among multiple instances, and GPU 
 
 To determine the best number of GPU slots for a specific GPU model, consider the following aspects:
 
-* The memory that the GPU provides
-* The memory that an instance uses
-* The number of parallel encoding pipelines that the GPU offers
+- The memory that the GPU provides
+- The memory that an instance uses
+- The number of parallel encoding pipelines that the GPU offers
 
 When you launch an instance for an application, AMS reserves the number of GPU slots defined for the application on the node where it is launched. These GPU slots are marked as unavailable until the instance is terminated. If no GPU slots are available on the node, instances that require a GPU (with video encoder type as `gpu`) will not be launched on it. Instances that don't require a GPU (with video encoder type as `software` or `gpu-preferred`) can still be launched. See {ref}`sec-application-manifest-video-encoder` for more information on video encoder types.
 
@@ -88,31 +88,31 @@ We now want to determine the capacity that is needed for the overall deployment.
 
 Without over-commitment, you would require the following resources to fulfill the average demand of 100 instances:
 
-* vCPU cores: `100 * 4 = 400`
-* RAM: `100 * 3 GB = 300 GB`
-* Disk space: `100 * 3 GB = 300 GB`
-* GPU slots: `100 * 1 = 100`
+- vCPU cores: `100 * 4 = 400`
+- RAM: `100 * 3 GB = 300 GB`
+- Disk space: `100 * 3 GB = 300 GB`
+- GPU slots: `100 * 1 = 100`
 
 With a CPU allocation rate of 2, you can bring the requirement of 400 vCPU cores down to 200 cores. With a CPU allocation rate of 4, the requirement would be further reduced to 100. With a memory allocation rate of 2, you can bring the memory requirement down to 150 GB. With over-committing, the numbers now look like the following:
 
-* vCPU cores: `100 * 4 = 400` or with CPU allocation rate 2: `200`
-* RAM: `100 * 3 GB = 300 GB` or with memory allocation rate 2: `150 GB`
-* Disk space: `100 * 3 GB = 300 GB`
-* GPU slots: `100 * 1 = 100`
+- vCPU cores: `100 * 4 = 400` or with CPU allocation rate 2: `200`
+- RAM: `100 * 3 GB = 300 GB` or with memory allocation rate 2: `150 GB`
+- Disk space: `100 * 3 GB = 300 GB`
+- GPU slots: `100 * 1 = 100`
 
 The current calculation does not take into account that there might be peaks of up to 200 simultaneous instances. To cover all peaks, you would require the following resources:
 
-* vCPU cores: `200 * 4 = 800` or with CPU allocation rate 2: `400`
-* RAM: `200 * 3 GB = 600 GB` or with memory allocation rate 2: `300 GB`
-* Disk space: `200 * 3 GB = 600 GB`
-* GPU slots: `200 * 1 = 200`
+- vCPU cores: `200 * 4 = 800` or with CPU allocation rate 2: `400`
+- RAM: `200 * 3 GB = 600 GB` or with memory allocation rate 2: `300 GB`
+- Disk space: `200 * 3 GB = 600 GB`
+- GPU slots: `200 * 1 = 200`
 
 To avoid your cluster running out of resources even at peak loads, you must size it accordingly (or dynamically scale it up and down). If the impact of not being able to provide additional instances at peak loads is rather low, you could compromise on the following factors:
 
-* Use a higher CPU and/or memory allocation rate, which might decrease performance at peak loads.
-* Configure your cluster nodes to use more GPU slots per GPU, which might decrease video quality.
-* Tweak the resource preset for your application to give less resources to each instance. The impact of doing this depends very much on your application.
-* Base your estimate on a lower maximum number of instances (for example, 150 instances), which will lead to your cluster running out of resources before the peak load is reached.
+- Use a higher CPU and/or memory allocation rate, which might decrease performance at peak loads.
+- Configure your cluster nodes to use more GPU slots per GPU, which might decrease video quality.
+- Tweak the resource preset for your application to give less resources to each instance. The impact of doing this depends very much on your application.
+- Base your estimate on a lower maximum number of instances (for example, 150 instances), which will lead to your cluster running out of resources before the peak load is reached.
 
 ## Related topics
 

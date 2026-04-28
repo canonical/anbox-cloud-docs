@@ -120,12 +120,12 @@ To run the core version of Anbox Cloud without the streaming stack, we recommend
 
 Some additional information:
 
-* The ID in the table corresponds to the ID that the Juju bundle uses.
-* You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
-* The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
+- The ID in the table corresponds to the ID that the Juju bundle uses.
+- You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
+- The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
   More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of instances. See {ref}`exp-capacity-planning` for an introduction of how many resources are necessary to host a specific number of instances.
-* If you require GPU support, see {ref}`ref-rendering-resources` for a list of supported GPUs.
+- If you require GPU support, see {ref}`ref-rendering-resources` for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
 

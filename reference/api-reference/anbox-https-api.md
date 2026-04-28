@@ -82,7 +82,7 @@ HTTP code must be one of 400 or 500.
 * Description: Server configuration
 * Operation: sync
 * Steps:
-  * Fetch general information of the server
+    - Fetch general information of the server
 * Return: Dict representing server state
 
 Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq .`:
@@ -126,7 +126,7 @@ Input:
 }
 ```
 
-* Possible values for `log_level` are: `trace`, `debug`, `info`, `warning`, `error`, `fatal`
+- Possible values for `log_level` are: `trace`, `debug`, `info`, `warning`, `error`, `fatal`
 
 Return value:
 

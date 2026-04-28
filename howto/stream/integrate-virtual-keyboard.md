@@ -184,9 +184,9 @@ You can take advantage of the interfaces that the Anbox WebView exposes to provi
    ```
 
 4. When typing on the virtual keyboard, a text input event is triggered when one of the following scenarios occurs:
-   * A series of characters is committed to a text editor
-   * A text is currently being composed
-   * A text is being deleted
+   - A series of characters is committed to a text editor
+   - A text is currently being composed
+   - A text is being deleted
 
     In the above cases, the changed text must be sent to the server side through the JavaScript SDK. This can be done by calling JavaScript functions that are defined in HTML through Anbox WebView. For example, for committing text:
 

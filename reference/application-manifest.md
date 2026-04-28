@@ -195,10 +195,10 @@ Each item (file or folder) declared in the `extra-data` field of the manifest YA
 
 For security reasons, the target location of the files and directories listed in the `extra-data` section is restricted to a few specific locations in the Android file system. These are:
 
-- `/sdcard/Android/obb/<apk-package-name>`
-- `/sdcard/Android/data/<apk-package-name>`
-- `/data/app/<apk-package-name>`
-- `/data/data/<apk-package-name>`
+* `/sdcard/Android/obb/<apk-package-name>`
+* `/sdcard/Android/data/<apk-package-name>`
+* `/data/app/<apk-package-name>`
+* `/data/data/<apk-package-name>`
 
 The manifest and extra data in our example are placed next to the application package, which must be named `app.apk`:
 

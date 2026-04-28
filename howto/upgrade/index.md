@@ -26,5 +26,5 @@ In a production environment, this update behavior might cause problems in some c
 - Different nodes of an Anbox Cloud or LXD cluster might end up running different snap versions.
 
 To prevent such problems, use either of the following methods:
-- Define maintenance windows in which your systems can be updated without interrupting operations. See [Managing updates](https://snapcraft.io/docs/managing-updates) in the snap documentation for information on how to control snap updates on your systems.
-- Configure a [Snap Store Proxy](https://ubuntu.com/enterprise-store/docs/) to control which snaps are served to the machines that use the proxy. In particular, you can use the proxy to [override snap revisions](https://ubuntu.com/enterprise-store/docs/). In this method, you have full control over when snaps are updated.
+* Define maintenance windows in which your systems can be updated without interrupting operations. See [Managing updates](https://snapcraft.io/docs/managing-updates) in the snap documentation for information on how to control snap updates on your systems.
+* Configure a [Snap Store Proxy](https://ubuntu.com/enterprise-store/docs/) to control which snaps are served to the machines that use the proxy. In particular, you can use the proxy to [override snap revisions](https://ubuntu.com/enterprise-store/docs/). In this method, you have full control over when snaps are updated.

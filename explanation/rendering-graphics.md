@@ -32,5 +32,5 @@ To use instances without a GPU and still render graphical output,
 
 ## Related topics
 
-- {ref}`ref-rendering-resources`
-- {ref}`exp-rendering-architecture`
+* {ref}`ref-rendering-resources`
+* {ref}`exp-rendering-architecture`
