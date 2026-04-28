@@ -20,8 +20,8 @@ To launch an application or an image, Anbox Cloud creates an instance for it. To
 
 Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
 
-- `amc launch` creates and starts the instance.
-- `amc init` only creates the instance.
+* `amc launch` creates and starts the instance.
+* `amc init` only creates the instance.
 
 By default, the instance will run headless.
 
@@ -189,6 +189,6 @@ The instance details page also contains all the available actions including stre
 
 ## Related topics
 
-- {ref}`exp-application-streaming`
-- {ref}`exp-instances`
-- {ref}`howto-access-instance`
+* {ref}`exp-application-streaming`
+* {ref}`exp-instances`
+* {ref}`howto-access-instance`

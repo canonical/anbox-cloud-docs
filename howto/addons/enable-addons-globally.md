@@ -19,4 +19,4 @@ Addons can delay the start of your applications. Therefore, keep them light.
 
 ## Related topics
 
-- {ref}`ref-application-manifest`
+* {ref}`ref-application-manifest`

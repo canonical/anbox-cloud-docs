@@ -3,8 +3,8 @@
 
 You can extend an application either by adding hooks directly to the application or by creating an addon that includes one or more hooks and adding it to the application.
 
-- If you want to extend one application only, you should use application hooks. They are easy and quick to set up and do not require creating an addon.
-- If your extension contains common functionality that you want to share among multiple applications, you should create an addon that includes one or more hooks. You can then add the addon to all applications that should use the functionality.
+* If you want to extend one application only, you should use application hooks. They are easy and quick to set up and do not require creating an addon.
+* If your extension contains common functionality that you want to share among multiple applications, you should create an addon that includes one or more hooks. You can then add the addon to all applications that should use the functionality.
 
 For both options, you must create one or more hooks first. The options differ in how you add these hooks to your application.
 
@@ -187,5 +187,5 @@ The application will now execute the hook and you should see that, for example, 
 
 ## Related topics
 
-- {ref}`exp-addons`
-- {ref}`howto-create-addon`.
+* {ref}`exp-addons`
+* {ref}`howto-create-addon`.

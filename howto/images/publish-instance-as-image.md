@@ -5,9 +5,9 @@ Publishing an instance as an image allows you to capture the current state of an
 
 Consider these best practices before publishing instances as images:
 
-- Remove any temporary files, logs, sensitive data before publishing the instance
-- Test the published image by launching an instance based on it and verifying all the modifications are working as intended.
-- Use meaningful names for your images to indicate the purpose and modifications they contain.
+* Remove any temporary files, logs, sensitive data before publishing the instance
+* Test the published image by launching an instance based on it and verifying all the modifications are working as intended.
+* Use meaningful names for your images to indicate the purpose and modifications they contain.
 
 ## Publish an instance
 
@@ -100,7 +100,7 @@ Once the instance is running, visit the *Terminal* tab from its *Instance detail
 
 ## Related topics
 
-- {ref}`howto-create-instance`
-- {ref}`howto-stop-instance`
-- {ref}`howto-add-image`
-- {ref}`howto-delete-image`
+* {ref}`howto-create-instance`
+* {ref}`howto-stop-instance`
+* {ref}`howto-add-image`
+* {ref}`howto-delete-image`

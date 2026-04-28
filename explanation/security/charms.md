@@ -13,12 +13,12 @@ See [Security with Juju](https://documentation.ubuntu.com/juju/latest/user/expla
 
 The following charms for Anbox Cloud make use of cryptographic technology for creation of TLS certificates:
 
-- [`ams`](https://charmhub.io/ams)
-- [`ams-lxd`](https://charmhub.io/ams-lxd)
-- [`anbox-stream-gateway`](https://charmhub.io/anbox-stream-gateway)
-- [`anbox-stream-agent`](https://charmhub.io/anbox-stream-agent)
-- [`anbox-cloud-dashboard`](https://charmhub.io/anbox-cloud-dashboard)
-- [`lxd-integrator`](https://charmhub.io/lxd-integrator)
+* [`ams`](https://charmhub.io/ams)
+* [`ams-lxd`](https://charmhub.io/ams-lxd)
+* [`anbox-stream-gateway`](https://charmhub.io/anbox-stream-gateway)
+* [`anbox-stream-agent`](https://charmhub.io/anbox-stream-agent)
+* [`anbox-cloud-dashboard`](https://charmhub.io/anbox-cloud-dashboard)
+* [`lxd-integrator`](https://charmhub.io/lxd-integrator)
 
 When Anbox Cloud is deployed without the use of an external CA, the charms will generate self-signed certificates using the [cryptography](https://pypi.org/project/cryptography/) Python package. The private key used for signing has a size of 4096 bits.
 
@@ -28,7 +28,7 @@ When using a TLS charm (e.g. [self-signed-certificates](https://charmhub.io/self
 
 ### Packages used
 
-- [cryptography from PyPI](https://pypi.org/project/cryptography/)
+* [cryptography from PyPI](https://pypi.org/project/cryptography/)
 
 ## Juju secrets
 

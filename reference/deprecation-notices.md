@@ -67,7 +67,7 @@ Legacy charms, specifically the [`etcd`](https://charmhub.io/etcd) and the [`eas
 
 Starting from 1.29.0, all new Anbox Cloud deployments must use modernized operator charms to replace their legacy counterparts. Specifically:
 
-- [charmed-etcd](https://charmhub.io/charmed-etcd) to replace `etcd`
-- [self-signed-certificates](https://charmhub.io/self-signed-certificates) to replace `easy-rsa`
+* [charmed-etcd](https://charmhub.io/charmed-etcd) to replace `etcd`
+* [self-signed-certificates](https://charmhub.io/self-signed-certificates) to replace `easy-rsa`
 
 This transition provides a two-year migration window before legacy charms become completely unsupported. Anbox Cloud 1.34.2 will be the last release that supports deployments using legacy charms. Starting from Anbox Cloud 1.35.0, Anbox Cloud deployments will exclusively support modernized charms.

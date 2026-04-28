@@ -58,4 +58,4 @@ For example, to configure the platform for a display height of 1080p and 60 FPS,
 
 ## Related topics
 
-- {ref}`exp-platforms`
+* {ref}`exp-platforms`

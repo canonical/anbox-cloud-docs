@@ -57,8 +57,8 @@ Now you can connect to the remote machine via ADB with the following command:
 You should see output similar to the following:
 
 ```bash
-- daemon not running; starting now at tcp:5037
-- daemon started successfully
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
 connected to localhost:10000
 ```
 

@@ -29,7 +29,7 @@ For base instances, if your addon needs additional tools and dependencies during
 
 ## Related topics
 
-- {ref}`exp-instances`
-- {ref}`howto-create-addon`
-- {ref}`howto-addons`
-- {ref}`ref-hooks`
+* {ref}`exp-instances`
+* {ref}`howto-create-addon`
+* {ref}`howto-addons`
+* {ref}`ref-hooks`

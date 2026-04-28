@@ -131,12 +131,12 @@ An application can be created either in a VM or a container. Selecting one of th
 
 The *Configuration (optional)* section allows you to customize additional fields, including the following attributes:
 
-- {ref}`manifest version name <ref-application-manifest>`
-- {ref}`boot package <ref-application-manifest>`
-- {ref}`boot activity <ref-application-manifest>`
-- {ref}`tags <ref-application-manifest>`
-- {ref}`features <ref-feature-flags>`
-- {ref}`sec-application-manifest-watchdog`
+* {ref}`manifest version name <ref-application-manifest>`
+* {ref}`boot package <ref-application-manifest>`
+* {ref}`boot activity <ref-application-manifest>`
+* {ref}`tags <ref-application-manifest>`
+* {ref}`features <ref-feature-flags>`
+* {ref}`sec-application-manifest-watchdog`
 
 The switch *Customize manifest.yaml* at the bottom of the form allows to directly customize your application manifest with a YAML editor.
 
@@ -152,4 +152,4 @@ Once the status of the application switches to `ready`, the application is ready
 
 ## Related topics
 
-- {ref}`sec-application-bootstrap`
+* {ref}`sec-application-bootstrap`

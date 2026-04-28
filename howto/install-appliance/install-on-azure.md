@@ -31,14 +31,14 @@ Check the hardware requirements listed in {ref}`sec-minimum-hardware-requirement
 
 In addition, make sure you have the following prerequisites:
 
-- An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
-- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+* An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
 
 ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
 ```
 
-- An Azure account that you use to create the virtual machine.
+* An Azure account that you use to create the virtual machine.
 
 Once you have the prerequisites, the first step is to create a virtual machine on which you can install the Anbox Cloud Appliance.
 
@@ -56,10 +56,10 @@ In the Quickstart Center, select **Deploy a virtual machine**. On the resulting 
 
 On the **Basics** tab of the virtual machine configuration, specify the required information. Several of the options are specific to how and where you want to deploy your virtual machine. In most cases you can keep the default values, but make sure to set the following configurations:
 
-- Select the latest supported Ubuntu image for the architecture that you want to use. The following instructions and screenshots use the Arm64 architecture.
-- Select a size that matches the hardware requirements(see {ref}`sec-minimum-hardware-requirements`). For example, select `Standard_D16ps_v5`, which has 16 vCPUs and 64 GB of RAM.
-- Change the user name of the administrator account to `ubuntu`.
-- Accept the defaults for the inbound port rules for now; these rules will be configured later in the setup process.
+* Select the latest supported Ubuntu image for the architecture that you want to use. The following instructions and screenshots use the Arm64 architecture.
+* Select a size that matches the hardware requirements(see {ref}`sec-minimum-hardware-requirements`). For example, select `Standard_D16ps_v5`, which has 16 vCPUs and 64 GB of RAM.
+* Change the user name of the administrator account to `ubuntu`.
+* Accept the defaults for the inbound port rules for now; these rules will be configured later in the setup process.
 
 ![Basics tab](/images/appliance-on-azure/azure_config-basics-co.png)
 

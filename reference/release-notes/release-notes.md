@@ -47,13 +47,13 @@ If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/s
 
 Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
 
-- New instance copy feature for near-instantaneous cloning of existing instances
-- Instance publishing support to create reusable images from running or stopped instances
-- Runtime bitrate control for WebRTC streaming
-- Optimized disk quota with two-tier validation
-- Migration to modernized charms, including charmed-etcd and self-signed-certificates
-- Fine-grained authorization through OpenFGA integration
-- Bug fixes
+* New instance copy feature for near-instantaneous cloning of existing instances
+* Instance publishing support to create reusable images from running or stopped instances
+* Runtime bitrate control for WebRTC streaming
+* Optimized disk quota with two-tier validation
+* Migration to modernized charms, including charmed-etcd and self-signed-certificates
+* Fine-grained authorization through OpenFGA integration
+* Bug fixes
 
 <details><summary>Click to view earlier releases' notes</summary>
 

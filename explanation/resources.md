@@ -29,4 +29,4 @@ In addition to the `cpus`, `memory` and the `disk-size` requirements, if your ap
 
 ## Related topics
 
-- {ref}`ref-application-manifest`
+* {ref}`ref-application-manifest`

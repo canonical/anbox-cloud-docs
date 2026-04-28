@@ -19,8 +19,8 @@ See [Requirements](https://documentation.ubuntu.com/anbox-cloud/en/latest/refere
 
 < Remember to include the below information >
 
-- Android security updates for < insert-month-year > (see Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
-- The Android WebView has been updated to < insert-version-along-with-link >.
+* Android security updates for < insert-month-year > (see Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
+* The Android WebView has been updated to < insert-version-along-with-link >.
 
 ## Removed functionality
 

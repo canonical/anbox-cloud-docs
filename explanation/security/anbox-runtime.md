@@ -3,9 +3,9 @@
 
 The Anbox runtime (see {ref}`howto-anbox-runtime`) is using cryptographic technology for:
 
-- TLS transport encryption
-- Token based authentication
-- WebRTC
+* TLS transport encryption
+* Token based authentication
+* WebRTC
 
 ## TLS transport encryption
 
@@ -27,6 +27,6 @@ The security model and cryptographic use of WebRTC is described in [RFC8827](htt
 
 ## Packages used
 
-- [Go standard library](https://pkg.go.dev/std)
-- [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/)
-- [`ca-certificates`](https://launchpad.net/ubuntu/+source/ca-certificates)
+* [Go standard library](https://pkg.go.dev/std)
+* [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/)
+* [`ca-certificates`](https://launchpad.net/ubuntu/+source/ca-certificates)

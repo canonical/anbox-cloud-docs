@@ -38,5 +38,5 @@ The user can also access AMS by running
 
 ## Related topics
 
-- {ref}`tut-installing-appliance`
-- {ref}`howto-use-web-dashboard`
+* {ref}`tut-installing-appliance`
+* {ref}`howto-use-web-dashboard`

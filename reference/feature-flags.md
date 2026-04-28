@@ -84,9 +84,9 @@ To enable the Android container to use a custom Android ID, add the feature flag
   `anbox.custom_android_id.<index>=<package_name>:<android_id>`
   ```
 
-- The `<index>` is a number in the range from 0 to 126, which allows you to have multiple overrides for different packages. If the same `<package_name>` with the different `<android_id>` is given for multiple system properties `anbox.custom_android_id.<index>`, the Android ID read from the system property which has the highest suffixing index that will be used in the end.
-- The `<package_name>` is the package name of the application.
-- The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
+* The `<index>` is a number in the range from 0 to 126, which allows you to have multiple overrides for different packages. If the same `<package_name>` with the different `<android_id>` is given for multiple system properties `anbox.custom_android_id.<index>`, the Android ID read from the system property which has the highest suffixing index that will be used in the end.
+* The `<package_name>` is the package name of the application.
+* The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
 
 Once set, this feature flag will be considered by all newly launched instances.
 

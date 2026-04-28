@@ -87,16 +87,16 @@ To check whether development mode is enabled, run `amc show <instance_ID>` or lo
 
 ## Related topics
 
-- {ref}`exp-addons`
-- [Platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
-- {ref}`howto-access-instance`
-- {ref}`howto-backup-restore-application-data`
-- {ref}`howto-create-instance`
-- {ref}`howto-configure-geographic-location`
-- {ref}`howto-delete-instance`
-- {ref}`howto-expose-services`
-- {ref}`howto-list-instances`
-- {ref}`howto-start-instance`
-- {ref}`howto-stop-instance`
-- {ref}`howto-view-instance-logs`
-- {ref}`howto-wait-for-application`
+* {ref}`exp-addons`
+* [Platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+* {ref}`howto-access-instance`
+* {ref}`howto-backup-restore-application-data`
+* {ref}`howto-create-instance`
+* {ref}`howto-configure-geographic-location`
+* {ref}`howto-delete-instance`
+* {ref}`howto-expose-services`
+* {ref}`howto-list-instances`
+* {ref}`howto-start-instance`
+* {ref}`howto-stop-instance`
+* {ref}`howto-view-instance-logs`
+* {ref}`howto-wait-for-application`

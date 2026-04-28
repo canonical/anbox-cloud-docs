@@ -5,8 +5,8 @@ For use within a [GitHub Action workflow](https://github.com/features/actions), 
 
 ## Prerequisites
 
-- A repository on GitHub which can host GitHub Action workflows
-- The token for your [Ubuntu Pro](https://ubuntu.com/pro) subscription
+* A repository on GitHub which can host GitHub Action workflows
+* The token for your [Ubuntu Pro](https://ubuntu.com/pro) subscription
 
 ## Create a new workflow
 

@@ -13,12 +13,12 @@ There are differences between the charmed Anbox Cloud installation and the Anbox
 
 Before you start the installation, ensure that you have the required credentials and prerequisites:
 
-- A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
-- Account credentials for one of the following public clouds:
+* A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
+* Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform](https://cloud.google.com/)
   * [Microsoft Azure](https://azure.microsoft.com/)
-- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
 
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
@@ -118,11 +118,11 @@ To install Anbox Cloud, deploy the suitable Anbox Cloud bundle to the Juju model
 
 Choose between the available {ref}`sec-juju-bundles`:
 
-- For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
+* For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
         juju deploy anbox-cloud-core --overlay ua.yaml
 
-- For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
+* For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
         juju deploy anbox-cloud --overlay ua.yaml
 
