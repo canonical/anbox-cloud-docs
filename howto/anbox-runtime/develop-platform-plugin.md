@@ -127,6 +127,6 @@ Use the `--vm` option to launch a VM instance.
 
 ## Related topics
 
-* {ref}`exp-addons`
-* {ref}`exp-instances`
-* {ref}`howto-create-addon`
+- {ref}`exp-addons`
+- {ref}`exp-instances`
+- {ref}`howto-create-addon`

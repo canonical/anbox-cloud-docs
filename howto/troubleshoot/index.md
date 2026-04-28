@@ -44,8 +44,8 @@ If you have the [`juju-crashdump` plugin](https://github.com/juju/juju-crashdump
 
 A Juju crash dump may include the following debugging information:
 
-* Additional information provided by the Anbox Cloud charms
-* Information about any instances that crashed
+- Additional information provided by the Anbox Cloud charms
+- Information about any instances that crashed
 
 Use the following command to generate a crash dump:
 

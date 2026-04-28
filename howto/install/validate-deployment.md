@@ -5,14 +5,14 @@ Anbox Cloud includes a test suite which allows the validation of an Anbox Cloud 
 
 The validation tests currently cover the following areas of an Anbox Cloud deployment:
 
-* AMS
+- AMS
   * Instance creation and deletion in different configurations
   * Expected images are present
   * Configuration is setup as expected
-* Anbox Stream Gateway API
+- Anbox Stream Gateway API
   * Session creation and deletion
   * Stress testing
-* Streaming
+- Streaming
   * Stream selected applications in different configurations from Anbox Cloud while ensuring performance is as expected
 
 ## Install Validation Tests
@@ -106,6 +106,6 @@ If you want to focus on a specific subset of the tests you can specify a focus f
 
 The following focus areas are available
 
-* `streaming`
-* `gateway`
-* `ams`
+- `streaming`
+- `gateway`
+- `ams`

@@ -3,10 +3,10 @@
 
 The Anbox Cloud Dashboard (dashboard) is using cryptographic technology for:
 
-* TLS transport encryption
-* Registration of new users
-* User authentication
-* Mutual TLS based authentication
+- TLS transport encryption
+- Registration of new users
+- User authentication
+- Mutual TLS based authentication
 
 ## TLS transport encryption
 
@@ -48,6 +48,6 @@ The dashboard uses mutual TLS authentication to establish a trusted TLS communic
 
 ## Packages used
 
-* [PyJWT](https://github.com/jpadilla/pyjwt), supplied by [PyPI](https://pypi.org/project/PyJWT/)
-* [`python-jose`](https://github.com/mpdavis/python-jose/), supplied by [PyPI](https://pypi.org/project/python-jose/)
-* [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/)
+- [PyJWT](https://github.com/jpadilla/pyjwt), supplied by [PyPI](https://pypi.org/project/PyJWT/)
+- [`python-jose`](https://github.com/mpdavis/python-jose/), supplied by [PyPI](https://pypi.org/project/python-jose/)
+- [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/)

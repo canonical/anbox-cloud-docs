@@ -36,4 +36,4 @@ See {ref}`sec-anbox-https-api-location` for information on the PATCH method and 
 
 ## Related topics
 
-* {ref}`howto-addons`
+- {ref}`howto-addons`

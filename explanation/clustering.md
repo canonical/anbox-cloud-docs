@@ -41,4 +41,4 @@ See {ref}`howto-scale-up-cluster` and {ref}`howto-scale-down-cluster` for instru
 
 ## Related topics
 
-* {ref}`howto-manage-cluster`
+- {ref}`howto-manage-cluster`
