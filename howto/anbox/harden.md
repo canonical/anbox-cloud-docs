@@ -51,8 +51,9 @@ Secure and back up the following folders on the Anbox Management Client (AMC) be
 The appliance has a built-in reverse proxy but if you are using the charmed deployment, remember to set up one for the deployment.
 
 These are the endpoints that you may require to expose for specific purposes:
-  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` - This endpoint is required for streaming
-  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` - This endpoint is required for seamless ADB support
+
+- `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` - This endpoint is required for streaming
+- `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` - This endpoint is required for seamless ADB support
 
   No other endpoint is required to be exposed over the public network and can be used instead through internal services.
 

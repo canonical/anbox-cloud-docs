@@ -74,6 +74,7 @@ resources:
   disk-size: 3GB
 node-selector: [foo, bar]
 ```
+
 (sec-application-manifest-video-encoder)=
 ## Video encoder
 
@@ -86,8 +87,9 @@ Name                     |  Description
 `software`            |  A software-based video encoder
 
 When `gpu` video encoder is specified in the manifest, AMS can fail to create an application if:
- - All GPU slots are used up by running instances.
- - There is no GPU support across the entire LXD cluster.
+
+- All GPU slots are used up by running instances.
+- There is no GPU support across the entire LXD cluster.
 
 (sec-application-manifest-watchdog)=
 ## Watchdog

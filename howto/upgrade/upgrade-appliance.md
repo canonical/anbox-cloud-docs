@@ -29,5 +29,3 @@ Then execute the script with:
     anbox-cloud-appliance upgrade-node-script | sudo bash -ex
 
 After the script completes, verify the output to determine if a system reboot is necessary.
-
-

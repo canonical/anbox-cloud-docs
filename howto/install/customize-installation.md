@@ -78,7 +78,6 @@ This will give the same result as configuring the proxy values through Juju:
     juju config anbox-stream-gateway https_proxy=https://proxy.example.com
     juju config anbox-stream-gateway snap_proxy=https://snap-proxy.example.com
 
-
 ## Edit a bundle file
 
 Another way to change or customize a deployment is to store the YAML bundle file locally and edit it with a text editor.

@@ -11,6 +11,7 @@ Starting with Anbox Cloud 1.12, use the following new hooks instead of the depre
 The new hooks run for **all** types of instances (containers and virtual machines). To execute a hook only for a regular or a base instance, use the `INSTANCE_TYPE` environment variable. This variable is set to either `base` or `regular`.
 
 For example, if you want to execute a hook only when your application is bootstrapped, you can do the following:
+
 ```bash
 if [ "$INSTANCE_TYPE" = "regular" ]; then
   exit 0

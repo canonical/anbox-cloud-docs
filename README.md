@@ -11,6 +11,7 @@ The concepts of the Anbox component in Anbox Cloud are similar to the [Anbox ope
 
 ## Contributing to Anbox Cloud documentation
 You can contribute to the Anbox Cloud documentation through either of the following channels:
+
 - [Report a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) in Launchpad
 - Create a pull request with your changes
 
@@ -50,6 +51,7 @@ To help with syntax, there is a [cheat sheet](./contribute/doc-cheat-sheet.md) t
 **GitHub Actions**
 
 The following GitHub actions run automatically on every pull request:
+
 - Inclusive language check
 - Spellcheck
 - Accessibility check

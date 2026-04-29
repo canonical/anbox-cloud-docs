@@ -27,11 +27,11 @@ bundled with the addon and copied in the ODM partition.
 This addon will be tasked with the following:
 
 1. Copying the VHAL binary to `/odm/bin/hw`.
-1. Copying an
-<!-- wokeignore:rule=master -->
-[init.rc file](https://android.googlesource.com/platform/system/core/+/master/init/README.md)
-for your VHAL service to `/odm/etc/init`.
-1. Disabling the Anbox Cloud VHAL by setting the `ro.anbox.automotive.vhal`
+2. Copying an
+   <!-- wokeignore:rule=master -->
+   [init.rc file](https://android.googlesource.com/platform/system/core/+/master/init/README.md)
+   for your VHAL service to `/odm/etc/init`.
+3. Disabling the Anbox Cloud VHAL by setting the `ro.anbox.automotive.vhal`
 property to `odm`. This will be done by writing that system property to the
 `/odm/etc/build.prop` file.
 

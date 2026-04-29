@@ -12,6 +12,7 @@ To be able to configure user permissions in Anbox Cloud, you need to first confi
 ```{important}
 In the Anbox Cloud Appliance, OpenFGA is pre-configured and the steps in this section can be skipped.
 ```
+
 Anbox Management Service (AMS) requires a store ID in OpenFGA to manage authorization data. To generate a store ID in OpenFGA, follow the steps in the [OpenFGA documentation](https://openfga.dev/docs/getting-started/create-store) and create a store.
 
 When you have a store ID, run these commands to configure AMS:
@@ -30,6 +31,7 @@ When the API URL and store ID are set, AMS starts synchronizing the data with Op
 ```{important}
 For fine-grained permissions to work in Anbox Cloud Dashboard, OpenFGA must be used in conjunction with a configured OIDC provider. Follow the instructions in {ref}`howto-set-up-idp` to configure Auth0, Keycloak, or Ory Hydra.
 ```
+
 (sec-create-identity)=
 ## Create identities
 
@@ -48,10 +50,12 @@ You can view the identities you created by using:
     amc auth identity ls
 
 The output will look similar to this:
+
 ```{terminal}
-   :input: amc auth identity ls
    :user: user
    :host: host
+amc auth identity ls
+
 `+--------------------+---------------------+----------------------+----------------------+--------------+`
 `|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |`
 `+----------------------+---------------------+------------------+------------------------+--------------+`
@@ -72,9 +76,10 @@ Create a new authorization group:
 To verify details of the created group, use the `show` command:
 
 ```{terminal}
-   :input: amc auth group show developer
    :user: user
    :host: host
+amc auth group show developer
+
 name: developer
 created-at: 2025-10-17 12:06:33 +0530 IST
 updated-at: 2025-10-17 12:06:33 +0530 IST
@@ -172,5 +177,6 @@ Authorized users can also delete groups. The admin group is immutable and cannot
 ```{important}
 Permission changes to groups the logged-in user belongs to take effect immediately in the dashboard.
 ```
+
 :::
 ::::

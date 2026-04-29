@@ -22,5 +22,3 @@ In order to now simulate a new incoming SMS message, you can simply run
     amc exec test0 -- anbox-api send-sms +12344536 "Hello world!"
 
 This will ask the modem simulator provided by the Android runtime to send the necessary notification to the Android telephony stack. Once received, Android will show the SMS message in its messaging app and depending on the Android version also as notification.
-
-

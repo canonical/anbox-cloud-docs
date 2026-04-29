@@ -23,7 +23,6 @@ By default, Juju allocates small machines to limit costs but you can request bet
 This is heavily recommended on production environments.
 ```
 
-
 ## Anbox Cloud Core
 
 Anbox Cloud Core HA requires additional AMS instances as well as a load balancer to spread out requests:

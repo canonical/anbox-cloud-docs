@@ -22,6 +22,6 @@ The following table lists supported images available on the official image serve
 
 ## Support for Anbox Cloud images
 
-Currently, Anbox Cloud provides images based on Ubuntu 22.04 (Jammy Jellyfish). Deprecations, if any, are announced at least two releases in advance.
+Currently, Anbox Cloud provides images based on Ubuntu 22.04 LTS (Jammy Jellyfish). Deprecations, if any, are announced at least two releases in advance.
 
 Android versions are supported as long as Google provides security updates for the respective versions.

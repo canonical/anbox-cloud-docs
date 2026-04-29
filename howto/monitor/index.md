@@ -1,4 +1,5 @@
 (howto-monitor-anbox)=
+
 # Monitor Anbox Cloud
 
 Anbox Cloud collects various metrics and makes them accessible through API endpoints. While Anbox Cloud does not provide its own observability solution, it supports integrating with external solutions.
@@ -74,25 +75,25 @@ You can then access the metrics in one of two ways:
 
 1. If you have direct access to the services, use `curl` directly:
 
-```bash
-# For AMS
-curl -k https://$AMS_IP:8444/metrics
+   ```bash
+   # For AMS
+   curl -k https://$AMS_IP:8444/metrics
 
-# For Anbox Stream Gateway
-curl -k https://$STREAM_GATEWAY_IP:4000/metrics
-```
+   # For Anbox Stream Gateway
+   curl -k https://$STREAM_GATEWAY_IP:4000/metrics
+   ```
 
 2. If you don't have direct access (e.g., when deployed on a public cloud), use SSH to tunnel the request:
 
-```bash
-# For AMS
-juju ssh ams/0 -- curl -k -s https://$AMS_IP:8444/metrics
+   ```bash
+   # For AMS
+   juju ssh ams/0 -- curl -k -s https://$AMS_IP:8444/metrics
 
-# For Anbox Stream Gateway
-juju ssh anbox-stream-gateway/0 -- curl -k -s https://$STREAM_GATEWAY_IP:4000/metrics
-```
+   # For Anbox Stream Gateway
+   juju ssh anbox-stream-gateway/0 -- curl -k -s https://$STREAM_GATEWAY_IP:4000/metrics
+   ```
 
-Note that these endpoints may require authentication depending on your setup.
+   Note that these endpoints may require authentication depending on your setup.
 
 ## Set up Canonical Observability Stack (COS)
 

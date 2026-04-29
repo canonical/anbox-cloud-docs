@@ -26,6 +26,7 @@ Let's assume that you have an application that consists of an APK file and an OB
    │   └── main.203779.com.foo.bar.obb
    ├── manifest.yaml
    ```
+
 1. Declare the OBB file as extra data in the application manifest:
 
    ```yaml

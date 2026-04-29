@@ -1,4 +1,3 @@
-
 (style-guide)=
 # Anbox Cloud Documentation Style Guide
 
@@ -14,11 +13,11 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
 
 * Use inclusive language and assume a friendly tone rather than an overly formal one.
 * Use monospaced font for:
-    * Inline code and code blocks
-    * File names
-    * References to utilities/programs
-    * File and directory paths
-    * Command options
+  * Inline code and code blocks
+  * File names
+  * References to utilities/programs
+  * File and directory paths
+  * Command options
 * Avoid long sentences. If it is a complex statement, try and break it down into multiple sentences. While the Canonical copy style guide has guidance about hyphens when joining words, it does not elaborate much on prefixes.
 * Use bold and italics very sparingly. Use italics for user interface fields and bold for UI elements that call for action.
 * Use single spaces between sentences.
@@ -40,6 +39,7 @@ Always use [explicit targets](https://webaim.org/techniques/alttext/) for pages 
 The target names must be unique for each page and topic.
 
 Anbox Cloud documentation adheres to the following convention when naming explicit targets:
+
 * Reference: `ref-xxx-yyy`
 * Explanation: `exp-xxx-yyy`
 * How-to guides: `howto-xxx-yyy`
@@ -72,6 +72,7 @@ Use hyphens when the starting letter of a word is in capital case or starts with
     **Note:** You might be required to add such words to the wordlist as spellcheck could flag these words.
 
 **Examples:**
+
 * `Pre-employment`
 * `Preconfigure`
 

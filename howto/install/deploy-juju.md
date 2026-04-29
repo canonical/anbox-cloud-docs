@@ -16,9 +16,10 @@ Before you start the installation, ensure that you have the required credentials
 * A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
-  * [Google Cloud platform ](https://cloud.google.com/)
+  * [Google Cloud platform](https://cloud.google.com/)
   * [Microsoft Azure](https://azure.microsoft.com/)
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
+
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
   ```
@@ -128,7 +129,6 @@ Choose between the available {ref}`sec-juju-bundles`:
 ## Customize the hardware configuration
 
 To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://documentation.ubuntu.com/juju/latest/reference/constraint/#list-of-constraints) in the Juju documentation for details.
-
 
 ```{note}
 Anbox Cloud charms supports deployment on both Ubuntu noble 24.04 and Ubuntu jammy 22.04. The examples below use **noble**. If you prefer to deploy on Ubuntu jammy 22.04, simply modify the `series` configuration accordingly.
@@ -273,6 +273,7 @@ Unit       Workload  Agent  Machine  Public address  Ports      Message
 lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required
 ...
 ```
+
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot

@@ -1,7 +1,7 @@
 import datetime
-import ast
 import os
 import subprocess
+import yaml
 
 # Configuration for the Sphinx documentation builder.
 # All configuration specific to your project should be done in this file.
@@ -61,7 +61,7 @@ html_title = "Anbox Cloud" + " documentation"
 #         -H 'Accept: application/vnd.github.v3.raw' \
 #         https://api.github.com/repos/canonical/<REPO> | jq '.created_at'
 
-copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
+copyright = f"{datetime.date.today().year}"
 
 
 # Documentation website URL
@@ -85,7 +85,7 @@ ogp_site_name = "Anbox Cloud"
 #
 # To customise the preview image, update as needed.
 
-ogp_image = "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
+ogp_image = "https://assets.ubuntu.com/v1/cc828679-docs_illustration.svg"
 
 
 # Product favicon; shown in bookmarks, browser tabs, etc.
@@ -137,7 +137,7 @@ html_context = {
     # Docs branch in the repo; used in links for viewing the source files
     #
     # To customise the branch, uncomment and update as needed.
-    'repo_version': 'main',
+    'repo_default_branch': 'main',
     # Docs location in the repo; used in links for viewing the source files
     #
 
@@ -152,6 +152,15 @@ html_context = {
 
     # Required for feedback button
     'github_issues': 'enabled',
+
+    # Inherit the author value
+    "author": author,
+
+    # License information
+    "license": {
+        "name": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    },
 }
 
 # To enable the edit button on pages, uncomment and change the link to a
@@ -179,11 +188,14 @@ slug = 'anbox-cloud'
 # Base URL of RTD hosted project
 # Include the trailing slash in the URL, it makes a difference
 
-html_baseurl = 'https://documentation.ubuntu.com/anbox-cloud/'
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
 
 # URL scheme; {link} is the default configuration
 
 sitemap_url_scheme = "{link}"
+
+# Include lastmod dates in the sitemap
+sitemap_show_lastmod = True
 
 # Template and asset locations
 
@@ -211,72 +223,16 @@ sitemap_excludes = [
 # Redirects #
 #############
 
-# To set up redirects: https://documatt.gitlab.io/sphinx-reredirects/usage.html
-# For example: 'explanation/old-name.html': '../how-to/prettify.html',
+# Redirects are defined in redirects.txt
+# https://sphinxext-rediraffe.readthedocs.io/en/latest/
 
 # To set up redirects in the Read the Docs project dashboard:
 # https://docs.readthedocs.io/en/stable/guides/redirects.html
 
-# NOTE: If undefined, set to None, or empty,
-#       the sphinx_reredirects extension will be disabled.
+rediraffe_redirects = "redirects.txt"
 
-redirects = {
-
-    'reference/roadmap': '../release-notes/release-notes',
-    'reference/supported-versions': '../release-notes/release-notes',
-    'reference/api-reference/landing': '../',
-    'reference/cmd-ref/landing': '../',
-    'reference/landing': '../',
-    'explanation/gpus-instances': '../rendering-graphics',
-    'explanation/cryptography/crypto_ams': '../../security/ams',
-    'explanation/cryptography/crypto_anbox_runtime': '../../security/anbox-runtime',
-    'explanation/cryptography/crypto_charms': '../../security/charms',
-    'explanation/cryptography/crypto_dashboard': '../../security/dashboard',
-    'explanation/cryptography/crypto_stream_agent': '../../security/streaming-stack',
-    'explanation/cryptography/crypto_stream_gateway': '../../security/streaming-stack',
-    'explanation/anbox-security': '../security/',
-    'explanation/landing': '../',
-    'explanation/security/landing': '../',
-    'howto/update/landing': '../../upgrade/',
-    'howto/update/upgrade-anbox': '../../upgrade/upgrade-anbox',
-    'howto/update/upgrade-appliance': '../../upgrade/upgrade-appliance',
-    'howto/update/control-updates': '../../upgrade/',
-    'howto/addons/customise-android-example': '../customize-android-example',
-    'howto/install/customise-installation': '../customize-installation',
-    'howto/anbox/manage-images': '../../images/',
-    'howto/install-appliance/enable-oidc': '../setup-custom-idp/',
-    'howto/android/access-instance': '../access-android-instance',
-    'howto/aar/landing': '../',
-    'howto/addons/landing': '../',
-    'howto/anbox-runtime/landing': '../',
-    'howto/anbox/landing': '../',
-    'howto/android/landing': '../',
-    'howto/application/landing': '../',
-    'howto/cluster/landing': '../',
-    'howto/dashboard/landing': '../',
-    'howto/images/landing.md': '../',
-    'howto/landing': '../',
-    'howto/install-appliance/landing': '../',
-    'howto/install-appliance/setup-oidc/landing': '../',
-    'howto/install-appliance/setup-oidc': '../../setup-custom-idp/',
-    'howto/install-appliance/setup-oidc/auth0': '../../../setup-custom-idp/',
-    'howto/install-appliance/setup-oidc/keycloak': '../../../setup-custom-idp/',
-    'howto/install-appliance/setup-oidc/ory': '../../../setup-custom-idp/',
-    'howto/install-appliance/setup-oidc/configure-oidc': '../../../setup-custom-idp/configure-oidc',
-    'howto/install/landing': '../',
-    'howto/instance/landing': '../',
-    'howto/monitor/landing': '../',
-    'howto/port/landing': '../',
-    'howto/stream/landing': '../',
-    'howto/troubleshoot/landing': '../',
-    'howto/upgrade/landing': '../',
-    'tutorial/getting-started-aaos': '../../howto/android/set-automotive-properties',
-    'tutorial/getting-started-dashboard': '../create-test-virtual-device',
-    'tutorial/getting-started': '../create-test-virtual-device',
-    'tutorial/landing': '../',
-    'tutorial/creating-addon': '../../howto/addons/create-addon',
-    'contribute/landing': '../',
-}
+# Strips '/index.html' from destination URLs when building with 'dirhtml'
+rediraffe_dir_only = True
 
 
 ###########################
@@ -349,23 +305,27 @@ myst_enable_extensions = set({"colon_fence"})
 # https://www.sphinx-doc.org/en/master/usage/extensions/index.html
 
 # NOTE: The canonical_sphinx extension is required for the starter pack.
-#       It automatically enables the following extensions:
-#       - custom-rst-roles
-#       - myst_parser
-#       - notfound.extension
-#       - related-links
-#       - sphinx_copybutton
-#       - sphinx_design
-#       - sphinx_reredirects
-#       - sphinx_tabs.tabs
-#       - sphinxcontrib.jquery
-#       - sphinxext.opengraph
-#       - terminal-output
-#       - youtube-links
+#       canonical_sphinx v0.6 does not reliably auto-load all extensions,
+#       so all required extensions are listed explicitly below.
 
 extensions = [
     "canonical_sphinx",
+    "myst_parser",
+    "notfound.extension",
+    "sphinx_config_options",
+    "sphinx_contributor_listing",
+    "sphinx_design",
+    "sphinx_filtered_toctree",
+    "sphinx_related_links",
+    "sphinx_rerediraffe",
+    "sphinx_roles",
+    "sphinx_tabs.tabs",
+    "sphinx_terminal",
+    "sphinx_ubuntu_images",
+    "sphinx_youtube_links",
     "sphinxcontrib.cairosvgconverter",
+    "sphinxcontrib.jquery",
+    "sphinxext.opengraph",
     "sphinx_last_updated_by_git",
     "sphinx_sitemap",
 ]
@@ -377,21 +337,21 @@ exclude_patterns = [
     'README.md',
     'SECURITY.md',
     '.github/pull_request_template.md',
-    'venv/**',
+    '.venv',
     '**/*.dist-info/**',
 ]
 
 # Adds custom CSS files, located under 'html_static_path'
 
 html_css_files = [
-    "css/cookie-banner.css"
+    "https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css",
 ]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
 
 html_js_files = [
-    "js/cookie-banner-bundle.js"
+    "https://assets.ubuntu.com/v1/287a5e8f-bundle.js",
 ]
 
 
@@ -437,7 +397,12 @@ rst_prolog = """
 # Workaround for https://github.com/canonical/canonical-sphinx/issues/34
 
 if "discourse_prefix" not in html_context and "discourse" in html_context:
-    html_context["discourse_prefix"] = html_context["discourse"] + "/t/"
+    html_context["discourse_prefix"] = f"{html_context['discourse']}/t/"
+
+# Workaround for substitutions.yaml
+if os.path.exists('./reuse/substitutions.yaml'):
+    with open('./reuse/substitutions.yaml', 'r') as fd:
+        myst_substitutions = yaml.safe_load(fd.read())
 
 #============================================#
 # Anbox Cloud specific configurations
@@ -447,7 +412,7 @@ if "discourse_prefix" not in html_context and "discourse" in html_context:
 #============================================#
 
 ## Generate dynamic configuration using scripts
-# Inject AMS configuration valuues and Node configuration values from the swagger
+# Inject AMS configuration values and Node configuration values from the swagger
 # specification hosted on Github.
 
 custom_required_modules = []

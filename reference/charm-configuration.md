@@ -38,7 +38,6 @@ Name          | Value type | Status |
 `public_interface` | string   | Removed since 1.25.0 |
 `snapd_refresh` | string   | Removed since 1.25.0 |
 
-
 ## [Anbox Stream Gateway](https://charmhub.io./anbox-stream-gateway)
 
 Name          | Value type | Status |

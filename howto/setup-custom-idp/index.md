@@ -51,6 +51,7 @@ Anbox Cloud needs the issuer URL, the client ID and the API audience values to a
 ```{note}
 This guide assumes that Keycloak is available over HTTPS.
 ```
+
 ## 1. Initial setup
 Configure Keycloak for production by following their [documentation](https://www.keycloak.org/server/configuration-production). If you are fine using the development version, download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open `http://localhost:8080/` and create an admin user. Sign in to Keycloak with the admin account.
 
@@ -97,11 +98,12 @@ Ory Hydra currently does not support authenticating clients using [device code f
 Create a free account on [Ory Hydra](https://www.ory.com/hydra). After logging into the Ory Console, navigate to *OAuth 2 > OAuth2 Clients > Create OAuth2 Client*.
 
 Create the client with:
-   - *Type*: *Mobile / SPA*
-   - *Client Name*: Choose a name, such as `anbox-cloud-ory-client`.
-   - *Scope*: Add the scopes `email`, `openid`, and `profile`.
-   - *Redirect URIs*: Add your web client address, followed by `/oidc/callback`, for example, `https://example.com:8406/oidc/callback`. You can choose to use an IP address instead of a domain name and `:8406` is the default listening port. This default port might differ for your setup.
-   - *Post Logout Redirect URIs*: Add your web client's address, for example, `https://example.com:8406`.
+
+- *Type*: *Mobile / SPA*
+- *Client Name*: Choose a name, such as `anbox-cloud-ory-client`.
+- *Scope*: Add the scopes `email`, `openid`, and `profile`.
+- *Redirect URIs*: Add your web client address, followed by `/oidc/callback`, for example, `https://example.com:8406/oidc/callback`. You can choose to use an IP address instead of a domain name and `:8406` is the default listening port. This default port might differ for your setup.
+- *Post Logout Redirect URIs*: Add your web client's address, for example, `https://example.com:8406`.
 
 ## 2. Copy necessary parameters
 
@@ -112,6 +114,7 @@ In the Ory Console, navigate to *OAuth 2* > *Overview*. Find and copy the value 
 ```{important}
 No users exist within ORY by default. New users can use the sign-up link during login. Alternatively, configure Google, Facebook, Microsoft, GitHub, Apple, or another social sign-in provider as described in the [ORY documentation](https://www.ory.com/docs/kratos/social-signin/overview).
 ```
+
 :::
 ::::
 
