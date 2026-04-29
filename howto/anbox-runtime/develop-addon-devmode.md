@@ -33,9 +33,9 @@ You can test your addon hooks by running it inside the instance shell. For examp
 
 To troubleshoot issues within the instance, try either of the following options:
 
-* Run `amc logs <instance_id>` on the host to see the Anbox runtime logs.
-* Run `journalctl --no-pager` within the instance to view instance logs.
-* Restart the instance using `amc stop <instance_id>` and then `amc start <instance_id>`.
+- Run `amc logs <instance_id>` on the host to see the Anbox runtime logs.
+- Run `journalctl --no-pager` within the instance to view instance logs.
+- Restart the instance using `amc stop <instance_id>` and then `amc start <instance_id>`.
 
 ## Example: Launch an SSH-enabled container for remote development
 

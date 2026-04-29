@@ -76,6 +76,6 @@ If you do not enable streaming when launching the instance, you cannot enable it
 
 ## Related topics
 
-* {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
-* [Signaling](https://web.dev/articles/webrtc-infrastructure)
-* {ref}`ref-codecs`
+- {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
+- [Signaling](https://web.dev/articles/webrtc-infrastructure)
+- {ref}`ref-codecs`

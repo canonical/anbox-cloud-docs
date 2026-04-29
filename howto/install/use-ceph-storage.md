@@ -13,11 +13,11 @@ The storage type must be configured at deployment time and cannot be changed aft
 
 Before configuring Ceph storage for Anbox Cloud, ensure that you have:
 
-* A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
-* Juju 3.x installed (see {ref}`howto-deploy-anbox-juju` for installation instructions).
-* A Juju controller and model set up (see {ref}`sec-setup-juju-controller`).
-* Your Ubuntu Pro token (see {ref}`sec-attach-pro-subscription`).
-* One of the following Ceph deployment options:
+- A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
+- Juju 3.x installed (see {ref}`howto-deploy-anbox-juju` for installation instructions).
+- A Juju controller and model set up (see {ref}`sec-setup-juju-controller`).
+- Your Ubuntu Pro token (see {ref}`sec-attach-pro-subscription`).
+- One of the following Ceph deployment options:
   * A [microceph](https://charmhub.io/microceph) deployment for testing or single-server setups.
   * A [ceph-mon](https://charmhub.io/ceph-mon) cluster for production deployments.
   * Access to an existing Ceph cluster via [ceph-proxy](https://charmhub.io/ceph-proxy).

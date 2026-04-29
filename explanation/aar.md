@@ -11,18 +11,18 @@ An imported application is immutable and cannot be changed other than through th
 
 AMS can act in two different roles, `publisher` or `client` when working with an AAR. A single AMS instance can act either as a publisher or as a client, but not both.
 
-* `publisher`:
+- `publisher`:
 
     The `publisher` role allows both read and write access to the AAR. AMS instances registered as publishers act in `push` mode and are meant to push new applications and their updates to the AAR so that they can be consumed by regular read-only clients.
 
     We recommend that you have one `publisher` per architecture, for example, one for `amd64` and one for `arm64`. The publishers should not be used to host regular instances but only to manage applications. Regular users should be directed to AMS instances acting as clients.
 
-* `client`:
+- `client`:
 
     The `client` role allows only read access to the AAR. AMS instances registered as clients consume the applications pushed by the publishers.
 
 ## Related topics
 
-* {ref}`howto-deploy-aar`
-* {ref}`howto-configure-aar`
-* {ref}`howto-revoke-aar`
+- {ref}`howto-deploy-aar`
+- {ref}`howto-configure-aar`
+- {ref}`howto-revoke-aar`

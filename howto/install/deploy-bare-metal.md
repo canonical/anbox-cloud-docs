@@ -7,8 +7,8 @@ This document guides you through the steps to install Anbox Cloud on a [manual c
 
 Before you start the installation, ensure that you have the required prerequisites:
 
-* At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+- At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
+- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
 
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
@@ -137,11 +137,11 @@ Now you can deploy Anbox Cloud. The deployment is entirely handled by Juju and d
 
 Choose between the available Juju bundles (see {ref}`sec-juju-bundles`):
 
-* For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
+- For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
         juju deploy anbox-cloud-core --overlay ua.yaml --map-machines 0=0,1=1
 
-* For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
+- For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
         juju deploy anbox-cloud --overlay ua.yaml --map-machines 0=0,1=1,2=2,3=3
 
