@@ -9,7 +9,6 @@ With this secure channel, Juju charms can communicate with each other using rela
 
 See [Security with Juju](https://documentation.ubuntu.com/juju/latest/user/explanation/juju-security/) for more information.
 
-
 ## Cryptography
 
 The following charms for Anbox Cloud make use of cryptographic technology for creation of TLS certificates:
@@ -27,16 +26,15 @@ When Anbox Cloud is deployed without the use of an external CA, the charms will 
 
 When using a TLS charm (e.g. [self-signed-certificates](https://charmhub.io/self-signed-certificates)) as the CA to issue certificates for etcd, it is essential to keep etcd certificates isolated. Granting leaf certificates from this CA effectively allows direct access to etcd data, and such access must be restricted strictly to AMS. Since Self-Signed-Certificates charm also serves as the base for mTLS, maintaining this separation enforces clear trust boundaries between AMS and other components such as Anbox-stream-gateway, Anbox-stream-agent, and other related services.
 
-
 ### Packages used
 
 * [cryptography from PyPI](https://pypi.org/project/cryptography/)
 
 ## Juju secrets
 
-Confidential data such as private keys, API tokens, or credentials managed by the charm or passed through relations between charms is securely handled using [Juju secrets](https://documentation.ubuntu.com/juju/3.6/reference/secret/) if you deploy Anbox Cloud with Juju 3.0 or later. You can use the following command to view the secrets used by charms:
+Confidential data such as private keys, API tokens, or credentials managed by the charm or passed through relations between charms is securely handled using [Juju secrets](https://documentation.ubuntu.com/juju/latest/reference/secret/) if you deploy Anbox Cloud with Juju 3.0 or later. You can use the following command to view the secrets used by charms:
 
-```
+```bash
 juju list-secrets
 ```
 
@@ -48,7 +46,7 @@ When using Juju secrets to protect data shared across units in different models,
 
 1. Switch to the model containing `nats` and create an offer:
 
-    ```
+    ```bash
     juju switch <model containing nats>
     juju offer nats:client
     ```
@@ -56,7 +54,7 @@ When using Juju secrets to protect data shared across units in different models,
     This command returns the offer name, for example: `my-controller/my-model.nats`
 2. Switch to the model containing `anbox-stream-agent` and relate it to the offer:
 
-    ```
+    ```bash
     juju switch <model containing anbox-stream-agent>
     juju relate anbox-stream-agent <offer name>
     ```

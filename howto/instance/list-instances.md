@@ -27,7 +27,6 @@ Name            |  Value
 `node`          |  Node on which the instance runs
 `status`        |  Instance status, possible values: "created", "prepared", "started", "stopped", "running", "error", "deleted", "unknown"
 
-
 To list all regular instances:
 
     amc ls --filter type=regular

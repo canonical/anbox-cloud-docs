@@ -59,7 +59,6 @@ By default, AMS scheduler automatically selects the most suitable node for the n
 
 This is especially useful for ensuring high availability by manually distributing instance copies across the cluster.
 
-
 ## Related topics
 
 * {ref}`howto-create-instance`

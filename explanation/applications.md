@@ -29,14 +29,13 @@ The application status reflects the status of its latest application version.
 
 If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See {ref}`howto-view-instance-logs`). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <howto-view-instance-logs>`.
 
-
 (sec-application-bootstrap)=
 ## Bootstrap process
 
 When creating an application from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronizes it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
 
-  * It enables AMS to launch an instance for an application without installing the APK every time.
-  * It dramatically speeds up the startup time of a regular instance.
+* It enables AMS to launch an instance for an application without installing the APK every time.
+* It dramatically speeds up the startup time of a regular instance.
 
 Furthermore, an application is synchronized within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through scaling down or lost from the cluster unexpectedly.
 

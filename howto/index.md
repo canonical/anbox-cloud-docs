@@ -48,7 +48,6 @@ Learn resolutions for common issues with Anbox Cloud and how to collect useful d
 
 Also check out the {ref}`tutorials` for step-by-step instructions that help you get started with Anbox Cloud, as well as the {ref}`reference` and {ref}`explanation` sections for other helpful information.
 
-
 ```{toctree}
 :hidden:
 

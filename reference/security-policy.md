@@ -10,7 +10,7 @@ All our public repositories have a `SECURITY.md` file that details our security 
 If you discover a security vulnerability with Anbox Cloud, report it using the following steps:
 
 1. Do not publicly disclose the vulnerability before discussing it with us.
-2. Report a bug at https://bugs.launchpad.net/anbox-cloud.
+2. Report a bug at <https://bugs.launchpad.net/anbox-cloud>.
 
     **Important**: Remember to set the information type to *Private Security*. You will see a field with the text *This bug contains information that is:*
 3. Provide detailed information about the vulnerability, including:
@@ -27,4 +27,4 @@ The Anbox Cloud team will be notified of the issue and review the vulnerability.
 
 If the issue is confirmed as a valid security vulnerability, we use the [NVD scoring system](https://nvd.nist.gov/vuln-metrics/cvss) for deciding the severity and assign a CVE number.
 
-We fix vulnerabilities classified as _critical_ or _high_ with the subsequent monthly release of Anbox Cloud and also document them as {ref}`ref-security-notices`.
+We fix vulnerabilities classified as *critical* or *high* with the subsequent monthly release of Anbox Cloud and also document them as {ref}`ref-security-notices`.

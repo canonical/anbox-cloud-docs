@@ -16,9 +16,10 @@ Before you start the installation, ensure that you have the required credentials
 * A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
-  * [Google Cloud platform ](https://cloud.google.com/)
+  * [Google Cloud platform](https://cloud.google.com/)
   * [Microsoft Azure](https://azure.microsoft.com/)
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
+
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
   ```
@@ -43,7 +44,7 @@ Most clouds require credentials so that the cloud knows which operations are aut
 
     juju add-credential aws
 
-For a different cloud, just substitute the cloud name with the name returned by the `juju clouds` command. The data you need to supply varies depending on the cloud. See [Juju documentation](https://documentation.ubuntu.com/juju/3.6/reference/juju-cli/list-of-juju-cli-commands/add-credential/) for details on the command.
+For a different cloud, just substitute the cloud name with the name returned by the `juju clouds` command. The data you need to supply varies depending on the cloud. See [Juju documentation](https://documentation.ubuntu.com/juju/latest/reference/juju-cli/list-of-juju-cli-commands/add-credential/) for details on the command.
 
 (sec-setup-juju-controller)=
 ## Add a controller and model
@@ -61,7 +62,7 @@ A Juju model holds a specific deployment. It is a good idea to create a new one 
 (sec-attach-pro-subscription)=
 ## Attach your Ubuntu Pro subscription
 
-Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licenses you're granted as part of your license agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
+Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licenses you're granted as part of your license agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/security/livepatch).
 
 You can retrieve your Ubuntu Pro token at [`https://ubuntu.com/pro`](https://ubuntu.com/pro) after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
 
@@ -127,8 +128,7 @@ Choose between the available {ref}`sec-juju-bundles`:
 
 ## Customize the hardware configuration
 
-To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/juju/constraint#heading--list-of-constraints) in the Juju documentation for details.
-
+To customize the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://documentation.ubuntu.com/juju/latest/reference/constraint/#list-of-constraints) in the Juju documentation for details.
 
 ```{note}
 Anbox Cloud charms supports deployment on both Ubuntu noble 24.04 and Ubuntu jammy 22.04. The examples below use **noble**. If you prefer to deploy on Ubuntu jammy 22.04, simply modify the `series` configuration accordingly.
@@ -177,14 +177,14 @@ The easiest way to do this is to use a storage device defined by Juju:
 
 1. Decide which Juju storage pool you want to use.
 
-   See [View the available storage pools](https://juju.is/docs/juju/manage-storage-pools#heading--view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
+   See [View the available storage pools](https://documentation.ubuntu.com/juju/latest/howto/manage-storage-pools/#view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
 
-   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/juju/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
+   If you want to use a new pool, see [Create a storage pool](https://documentation.ubuntu.com/juju/latest/howto/manage-storage-pools#create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimized for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) that are optimized for different purposes.
 
    If you decide to create a pool, make sure to do so before you start the deployment.
 1. Configure the `ams-lxd` charm to use the Juju storage pool.
 
-   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://documentation.ubuntu.com/juju/3.6/reference/storage/#storage-pool) for it.
+   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://documentation.ubuntu.com/juju/latest/reference/storage/#storage-pool) for it.
 
    For example, to use the AWS `ebs-ssd` Juju storage pool for LXD storage, use an overlay file with the following storage constraint:
 
@@ -273,6 +273,7 @@ Unit       Workload  Agent  Machine  Public address  Ports      Message
 lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required
 ...
 ```
+
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot

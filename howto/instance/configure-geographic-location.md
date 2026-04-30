@@ -35,4 +35,5 @@ To update the geographic location of an Android container dynamically while the 
 See {ref}`sec-anbox-https-api-location` for information on the PATCH method and the specification of the data format.
 
 ## Related topics
+
 * {ref}`howto-addons`

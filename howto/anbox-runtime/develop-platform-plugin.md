@@ -3,11 +3,11 @@
 
 Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the default platforms (see {ref}`exp-platforms`) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
 
-This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts the Anbox Cloud Appliance. See {ref}`tut-installing-appliance`.
+This guide assumes that all steps are run on an Ubuntu 22.04 LTS machine that hosts the Anbox Cloud Appliance. See {ref}`tut-installing-appliance`.
 
 ## Preparation
 
-A platform module must be built on the same version of Ubuntu as the Anbox runtime. This means that if you're using one of the Anbox images based on Ubuntu 22.04 (for example, `jammy:android12:arm64`), you must build on Ubuntu 22.04.
+A platform module must be built on the same version of Ubuntu as the Anbox runtime. This means that if you're using one of the Anbox images based on Ubuntu 22.04 LTS, for example `jammy:android12:arm64`, you must build on Ubuntu 22.04 LTS.
 
 However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker instance or on another machine).
 

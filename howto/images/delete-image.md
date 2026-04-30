@@ -18,7 +18,6 @@ Images that are synchronized from the image server are marked as immutable. To d
 
 If you're not using `--force`, the command will fail.
 
-
 Specific image versions can be deleted too, which is useful when all applications were migrated to a newer version and the old version is not needed anymore. The only requirement is that a single version of the image is available at all times.
 
 The following command removes version `1` of the image with the name `image-name`:

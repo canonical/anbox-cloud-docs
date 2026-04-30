@@ -3,7 +3,7 @@
 
 The performance of your Anbox Cloud deployment depends on multiple factors. To ensure optimal performance, check and monitor all areas and tune your deployment based on your findings.
 
-To measure the performance based on different parameters, you should run performance benchmarks. See {ref}`howto-run-benchmarks` for more information on how to run performance benchmarks. 
+To measure the performance based on different parameters, you should run performance benchmarks. See {ref}`howto-run-benchmarks` for more information on how to run performance benchmarks.
 
 See the provided {ref}`ref-performance-benchmarks` as a reference for what performance you can expect with different hardware configurations.
 
@@ -52,9 +52,9 @@ Also make sure that there is a stable network connection between the nodes of yo
 
 A very noticeable performance issue is a long wait time when starting an application.
 
-When a user starts an application, Anbox Cloud retrieves the application image and launches a new instance for it. By default, Anbox Cloud turns off image compression in LXD when launching an instance from an image. This method speeds up the launch of the instance (because the image does not need to be uncompressed), but it causes more traffic over the network (because the image is transferred uncompressed). If the network connection between your cluster nodes is rather slow, the overall instance startup time might improve by enabling image compression. You can change the default configuration by setting the [images_compression_algorithm](https://charmhub.io/ams-lxd/configuration#images_compression_algorithm) configuration on the `ams-lxd` charm. Of course, in addition to compression, the size of the image is also relevant. The smaller the image, the faster it can be synchronized across the LXD nodes in a cluster.
+When a user starts an application, Anbox Cloud retrieves the application image and launches a new instance for it. By default, Anbox Cloud turns off image compression in LXD when launching an instance from an image. This method speeds up the launch of the instance (because the image does not need to be uncompressed), but it causes more traffic over the network (because the image is transferred uncompressed). If the network connection between your cluster nodes is rather slow, the overall instance startup time might improve by enabling image compression. You can change the default configuration by setting the [images_compression_algorithm](https://charmhub.io/ams-lxd/configurations#images_compression_algorithm) configuration on the `ams-lxd` charm. Of course, in addition to compression, the size of the image is also relevant. The smaller the image, the faster it can be synchronized across the LXD nodes in a cluster.
 
-Another configuration that affects the instance startup time is [shiftfs_enabled](https://charmhub.io/ams-lxd/configuration#shiftfs_enabled). This configuration is currently disabled by default, because it can cause issues with some Android applications. However, if your applications run fine with `shiftfs_enabled` set, it can considerably improve the instance startup time. You should be aware though that support for shiftfs might be dropped in future releases.
+Another configuration that affects the instance startup time is [shiftfs_enabled](https://charmhub.io/ams-lxd/configurations#shiftfs_enabled). This configuration is currently disabled by default, because it can cause issues with some Android applications. However, if your applications run fine with `shiftfs_enabled` set, it can considerably improve the instance startup time. You should be aware though that support for shiftfs might be dropped in future releases.
 
 You should also check the hooks that you use in your application. If you use any startup hooks (`pre-start` or `post-start`) that take a long time or wait for resources to become available, the instance startup is delayed. If you use a `post-stop` hook that prolongs the shutdown of an instance, this might also affect the startup time of new instances (because it might not be possible to start more instances until the existing instances terminate).
 
@@ -74,4 +74,3 @@ Also make sure to optimize the network path from the Anbox Cloud server to the c
 * {ref}`exp-capacity-planning`
 * {ref}`howto-run-benchmarks`
 * {ref}`ref-hooks`
-

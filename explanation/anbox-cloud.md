@@ -22,13 +22,13 @@ Anbox Cloud maintains a single Android system per instance, providing higher den
 
 Anbox Cloud comes in two variants that serve different purposes:
 
-**Anbox Cloud Appliance**
+### Anbox Cloud Appliance
 
 The Anbox Cloud Appliance, generally referred as the appliance, is a self-contained deployment variant of Anbox Cloud. It combines all elements of Anbox Cloud in a single snap package for installation and management on a single, dedicated machine. It is suitable for small scale deployments and environments for development and prototyping.
 
-**Anbox Cloud**
+### Anbox Cloud
 
-The charmed Anbox Cloud uses [Juju](https://juju.is/) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
+The charmed Anbox Cloud uses [Juju](https://canonical.com/juju) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
 
 See the following table for a comparison of features for the different variants:
 
@@ -87,8 +87,8 @@ Each Anbox subcluster also has a number of LXD worker nodes that form a LXD clus
 
 Outside the Anbox subcluster, you have the following machines:
 
-  * **Juju controller**, which controls how Anbox Cloud is deployed and managed.
-  * **Anbox Application Registry (AAR)**, which provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple subclusters, in order to keep applications in sync. This component is not mandatory, but strongly recommended in a production deployment, to keep applications in sync across the different subclusters.
+* **Juju controller**, which controls how Anbox Cloud is deployed and managed.
+* **Anbox Application Registry (AAR)**, which provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple subclusters, in order to keep applications in sync. This component is not mandatory, but strongly recommended in a production deployment, to keep applications in sync across the different subclusters.
 
 ### Streaming stack
 
@@ -104,8 +104,8 @@ When the streaming stack is in use, each Anbox subcluster has the following addi
 
 You also need an additional machine to host the streaming stack control plane with the following components:
 
-  * **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
-  * **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
+* **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
+* **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
 
 You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as, selecting a game.
 
@@ -119,7 +119,8 @@ LXD is installed through the [`ams-lxd` charm](https://charmhub.io/ams-lxd), whi
 
 If you want to monitor LXD, you can always run `lxc list` to display the existing instances. For the full deployment, LXD hosts the instances created by AMS. If you run the Anbox Cloud Appliance, LXD hosts instances for the different Juju machines that Anbox Cloud requires:
 
-```
+```{terminal}
+:output-only:
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 |           NAME           |  STATE  |          IPV4          | IPV6 |   TYPE    | SNAPSHOTS | LOCATION |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
@@ -135,6 +136,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 | juju-34631c-0            | RUNNING | 240.0.180.30 (eth0)    |      | CONTAINER | 0         | lxd0     |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 ```
+
 (sec-lxd-storage)=
 ### LXD storage
 

@@ -38,6 +38,7 @@ The following issues might occur if you use clustering.
 >     raise CalledProcessError(retcode, process.args,
 > subprocess.CalledProcessError: Command '['amc', 'node', 'add', 'lxd5', '10.25.83.151', '--storage-device', 'dir', '--network-bridge-mtu', '1500', '--timeout', '5m']' returned non-zero exit status 1.
 > ```
+>
 > What is the problem, and how can I fix it?
 
 This error indicates a faulty LXD node. Most likely, something went wrong when AMS tried adding a new LXD node to the cluster, either because the LXD node was not available on the network or the node failed to join the cluster for unknown reasons.

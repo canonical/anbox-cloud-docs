@@ -27,11 +27,13 @@ The appliance uses the following billable services by AWS:
 
 AWS supports running the Anbox Cloud Appliance both on [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances and on x86 instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
 
-* AWS Graviton (Arm) and x86 offer equal performance for Android applications.
-* GPUs are available for both x86 and AWS Graviton (Arm).
+- AWS Graviton (Arm) and x86 offer equal performance for Android applications.
+- GPUs are available for both x86 and AWS Graviton (Arm).
+
   ```{note}
   To use GPUs with AWS Graviton (Arm), you must select a [G5g instance](https://aws.amazon.com/de/ec2/instance-types/g5g/). This instance type might not be available in all regions.
   ```
+
 * Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
 
 For detailed information about the offering, see the following pages on the AWS Marketplace:
@@ -47,8 +49,9 @@ Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox 
 
 Make sure you have the following accounts:
 
-* An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
-* An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
+- An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
+- An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
+
   ```{note}
   The quota for your AWS account must be sufficient for the instance types that you plan to use.
   ```
@@ -142,7 +145,7 @@ Connect to the virtual machine hosting the appliance using SSH. To do so, use th
 
 ## Enable the service
 
-The Anbox Cloud service must be enabled using the [Ubuntu Pro Client (`pro`)](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/) to be ready for use.
+The Anbox Cloud service must be enabled using the [Ubuntu Pro Client (`pro`)](https://documentation.ubuntu.com/pro-client/en/latest/) to be ready for use.
 
 ```{tip}
 You can check the status of services using `pro status`.
@@ -150,7 +153,7 @@ You can check the status of services using `pro status`.
 
 To enable the Anbox Cloud service, run:
 
-    $ sudo pro enable anbox-cloud
+    sudo pro enable anbox-cloud
 
 ## Install additional packages
 

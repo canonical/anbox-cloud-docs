@@ -11,7 +11,7 @@ When you have a running instance with streaming enabled, use:
 
     sudo anbox-cloud-appliance.gateway session share <session_id> --description="share with John Doe"
 
-A share of the session with `<session_id>` is created. 
+A share of the session with `<session_id>` is created.
 
 When you have many such shares for various purposes, you may want to update or revoke a session share. To do that, first identify the ID of the share:
 

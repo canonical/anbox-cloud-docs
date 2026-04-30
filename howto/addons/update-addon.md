@@ -6,6 +6,7 @@ You can update an existing addon with a new version by using the following comma
 ```bash
 amc addon update foo ./foo-addon
 ```
+
 ```{note}
 Due to Snap strict confinement, the addon must be located in your home directory.
 ```

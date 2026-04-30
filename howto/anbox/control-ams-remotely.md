@@ -87,6 +87,7 @@ amc config set oidc.issuer_url '<issuer url configured for the provider>'
 amc config set oidc.client_id '<client id configured for the client on the identity provider>'
 amc config set oidc.audience '<audience, if configured, for the client>'
 ```
+
 You would have copied the issuer URL, client ID and audience API values when you finished the identity provider setup.
 
 ### Configure AMC to connect to AMS

@@ -93,7 +93,7 @@ At the same time, a Unix domain socket is created under the `/run/user/1000/anbo
 - Receive data sent from a web client over the data channel and forward it to an Android application.
 - Receive data sent from an Android application and forward it to a web client over the data channel.
 
-To simulate data transmission between the Anbox runtime and the web client, you can use the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
+To simulate data transmission between the Anbox runtime and the web client, you can use the [`socat`](https://manpages.ubuntu.com/manpages/noble/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
 
 1. Install the `socat` package:
 
@@ -128,10 +128,10 @@ To simulate data transmission between the Anbox runtime and the web client, you 
 
 This enables data exchange between a service running on the Anbox instance and the web client. However, it does not yet facilitate data exchange between an Android application running inside the Android container and the web client.
 
-
 ## Data exchange between Android application and web client
 
-In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project. You can either:
+In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/main/examples/android/out_of_band_v2) project. You can either:
+
 - compile and modify the example application to meet your needs.
 - use the pre-built out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/howto/stream/exchange-oob-data/#run-end-to-end-test).
 
@@ -211,7 +211,7 @@ There are two ways to access the `org.anbox.webrtc.IDataProxyService` binder ser
     }
     ```
 
-*  If you ship the Android application inside of the AOSP source tree and [build](https://source.android.com/docs/setup/build/building) it from there, you can use Android's hidden API to access the service.
+- If you ship the Android application inside of the AOSP source tree and [build](https://source.android.com/docs/setup/build/building) it from there, you can use Android's hidden API to access the service.
 
     ```
     IBinder getDataProxyService() {
@@ -300,6 +300,7 @@ try {
 ### Install the APK as system app
 
 To connect the data channel to the Anbox WebRTC data proxy service within an Android container, the Android app must be installed and running as a system app. To do so, proceed with the following steps:
+
 1. Add the attribute `android:sharedUserId="android.uid.system"` to the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app, then build your application.
 1. Create an Addon to install your APK as a system app
    - First, create a directory for your addon. Inside this directory, create a `manifest.yaml` file that defines your addon.
@@ -351,7 +352,6 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
         --features allow_custom_system_signatures \
         --addons install-out-of-band-app
       ```
-
 
      ```{note}
      Enabling the `allow_custom_system_signatures` feature is required to run the Android application as a system app in an Android container.

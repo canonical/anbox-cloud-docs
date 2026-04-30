@@ -12,11 +12,13 @@ Start a raw instance with `--devmode` enabled:
 ```
 amc launch --devmode
 ```
+
 or
 
 ```
 amc launch --vm --devmode
 ```
+
 The command prints out the ID of the instance. Note down the instance ID for next steps.
 
 Use the `amc shell <instance_id>` command to open a shell inside the instance. `instance_id` is the instance ID from the previous step.
@@ -30,6 +32,7 @@ Use the instance as a remote environment to develop your addon. To make your add
 You can test your addon hooks by running it inside the instance shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works. See {ref}`sec-env-variables` for a list of available variables.
 
 To troubleshoot issues within the instance, try either of the following options:
+
 * Run `amc logs <instance_id>` on the host to see the Anbox runtime logs.
 * Run `journalctl --no-pager` within the instance to view instance logs.
 * Restart the instance using `amc stop <instance_id>` and then `amc start <instance_id>`.
@@ -53,4 +56,5 @@ node_port="$(amc show $id --format=json | jq -r '.network.services[0].node_port'
 # Connect to the container using SSH
 ssh -p "$node_port" root@"$container_address"
 ```
+
 Once you are logged in to the instance, you can remotely develop and test your addon within the instance. For example, see how to [set up VS Code for remote development using SSH](https://code.visualstudio.com/docs/remote/ssh).

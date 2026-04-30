@@ -19,9 +19,9 @@ For AWS, [configure the associated security group](https://docs.aws.amazon.com/v
 For Google Cloud, [adjust the firewall rules](https://documentation.ubuntu.com/anbox-cloud/howto/install-appliance/install-on-google-cloud/#firewall-setup) to open the port range 10000-11000.
 
 For Azure, perform the following action depending on whether you are doing this for a fresh deployment or an existing deployment:
+
 - If you are using the [template](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/canonical/anbox) for a fresh deployment, set `exposeAnboxContainerServices` to `true`.
 - For existing deployments, [update the network security group](https://learn.microsoft.com/en-us/azure/virtual-network/manage-network-security-group?tabs=network-security-group-portal#create-a-security-rule) to include 10000–11000 in the `Destination port range`.
-
 
 ## Expose a service
 
@@ -65,7 +65,6 @@ This will help to identify which endpoint is used for which service:
 If we want to expose the service on the public endpoint of a LXD node, we must slightly change the service definition when the instance is launched:
 
     amc launch -s +tcp:22 bdp7kmahmss3p9i8huu0
-
 
 Notice the `+` in front of the port definition. This tells AMS to expose the service on the public endpoint of the LXD node on which the instance is scheduled. The instance list shows the public address of the node on which the instance is running, in the list of endpoints:
 
