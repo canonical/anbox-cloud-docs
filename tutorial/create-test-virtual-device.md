@@ -337,13 +337,14 @@ Before the stream starts, there may be a warning from your browser to accept the
 
  Now, you should be able to interact with the Android virtual device. If we had used an APK, the application interface would be visible directly.
 
-On the stream page, we can see options for:
+On the stream page, inside the right sidebar, we can see options for:
 
 - Sharing the stream with others
 - Setting up an authenticated connection using the Android Debug Bridge (ADB)
 - Viewing the network, audio and video statistics for the stream
 - Setting the location for a maps application
 - A *Developer tools* toggle that offers access to the Ubuntu and Android instances. For example, if you are performing an resource intensive operation in your Android stream, you can monitor its impact using this terminal.
+- And many more. For a full list, see [stream-page-actions](/reference/stream-page-actions.md).
 
 Let's try a simple operation of sharing our stream: Click *Set up sharing*, give your share a title and an expiry date.
 
