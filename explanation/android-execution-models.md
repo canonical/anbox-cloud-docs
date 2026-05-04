@@ -22,21 +22,24 @@ This is the execution model that Anbox Cloud has used since its first release. T
 
 With virtualized Android, the Android system runs inside a [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machine within the LXD instance. This is the execution model used by `resolute:*-cf:*` images (for example, `resolute:android16-cf:amd64`). The `-cf` suffix in the image name indicates that the image uses the Cuttlefish virtual device.
 
-Virtualized Android currently supports only {ref}`raw instances <sec-application-raw-instances>`. It does not support applications, addons, or platform plugins. To access the Android shell, use `adb shell` instead of `anbox-shell`.
+Cuttlefish is Google's reference virtual Android device. Running Android through Cuttlefish means you get a standard, unmodified Android environment with no Anbox-specific changes to the Android system itself — the Android system image comes directly from Google's build infrastructure. This is the right choice when you need Android to behave exactly as it does on a physical device or in Google's own test environments.
+
+Virtualized Android supports {ref}`raw instances <sec-application-raw-instances>`. To access the Android shell, use `adb shell` on port 6520 instead of `anbox-shell`. See {ref}`ref-feature-support-by-image-type` for the full feature comparison.
 
 Virtualized Android is a good fit for the following scenarios:
 
-- **Raw instance workflows** where you do not need the application or addon abstractions and want to work directly with Android instances.
+- **Standard Android environments** where you need Android to behave exactly as it does on a real device, without any Anbox-specific modifications to the Android system.
 - **Custom Android or AAOS builds** where you want to run your own Android system image inside Anbox Cloud. See {ref}`howto-package-custom-android-build` for instructions.
+- **VHAL development** where native gRPC support for the vehicle HAL simplifies automotive development.
 - **Workloads that benefit from stronger isolation** where the additional virtualisation boundary between Android and the host is desirable.
 
-Virtualized Android instances require a minimum of 5 GB of memory and KVM support on the host. See {ref}`ref-feature-support-by-image-type` for the full comparison.
+Virtualized Android instances require a minimum of 5 GB of memory and KVM support on the host.
 
 ## Choosing between the two models
 
-If you need the application model (managed APK deployment, versioning, bootstrapping), addons, or platform plugins, use containerized Android.
+Use **virtualized Android** when you need a standard Android environment that behaves exactly like a physical device or Google's reference implementation, when you want to run a custom Android or AAOS build, or when you need native VHAL support for automotive use cases.
 
-If you are working with raw instances, want to run a custom Android build, or need native VHAL support for automotive use cases, use virtualized Android.
+Use **containerized Android** when you are building on top of Anbox Cloud's application and addon model for managed APK deployment, or when you need platform plugins for custom rendering and input pipelines.
 
 Both image types can coexist in the same AMS deployment. You can register and use images of both types simultaneously and launch instances from either type as needed.
 
