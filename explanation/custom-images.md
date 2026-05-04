@@ -12,7 +12,9 @@ Android Automotive OS(AAOS) includes reference designs that can be customized. C
 To enable such use cases, we support customized AAOS images integration with Anbox Cloud. Hence, building custom images of Anbox Cloud based on custom AAOS is possible.
 
 ```{note}
-Building custom images is currently possible only for Android 14 and AAOS images.
+Building custom images is currently possible only for Android 14 and AAOS images (using images with containerized Android).
+
+For images with virtualized Android, you can package a custom Android build as a snap and install it in a running instance. See {ref}`howto-package-custom-android-build` for instructions.
 ```
 
 By default, Anbox Cloud is regularly updated with security updates provided by the Android team to keep systems secure for consumers of generic AAOS images. Anbox Cloud users using a custom AAOS image are expected to maintain their systems secure by integrating these security updates, along with the updated version of Anbox Cloud. This might require manual deployment steps.

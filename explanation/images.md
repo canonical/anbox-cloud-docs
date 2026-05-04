@@ -25,3 +25,12 @@ The following table lists the different statuses that an image can have dependin
 | `unknown` | A possible error occurred and the real state of the image cannot be determined. |
 
 If you encounter the `error` or the `unknown` status, [file a bug](https://bugs.launchpad.net/anbox-cloud).
+
+## Image variants
+
+Anbox Cloud provides two variants of images that use different Android execution environments:
+
+- **Images with containerized Android** (`jammy:*`) run Android directly in the LXD container and support the full application model, addons, and platform plugins.
+- **Images with virtualized Android** (`resolute:*-cf:*`) run Android inside a virtual machine within the LXD instance.
+
+The image variant determines which execution environment is used. See {ref}`exp-android-execution-environments` for an explanation of the two environments and {ref}`ref-feature-support-by-image-type` for a detailed feature comparison.
