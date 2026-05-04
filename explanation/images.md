@@ -17,4 +17,6 @@ The following table lists the different statuses that an image can have dependin
 | `error` | The image has encountered an error. |
 | `unknown` | A possible error occurred and the real state of the image cannot be determined. |
 
+| `queued` | The image operation is queued and waiting to be processed. |
+
 If you encounter the `error` or the `unknown` status, [file a bug](https://bugs.launchpad.net/anbox-cloud).
