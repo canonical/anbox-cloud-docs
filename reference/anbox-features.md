@@ -5,7 +5,7 @@ Anbox Cloud provides images based on the Android Open Source Project (AOSP), an 
 
 The following table lists some Anbox features and whether they are supported for a given base.
 
-The following feature table applies to images with containerized Android (`jammy:*`). For a comparison of feature support between containerized and virtualized Android, see {ref}`ref-feature-support-by-image-type`.
+The following feature table applies to images with containerized Android only. For a comparison of feature support between containerized and virtualized Android, see {ref}`ref-feature-support-by-image-type`.
 
 |Feature   | AOSP | AAOS |
 |--------|------|------|
@@ -17,4 +17,4 @@ The following feature table applies to images with containerized Android (`jammy
 | {ref}`Client-Side Virtual Keyboard <sec-client-side-virtual-keyboard>`               | ✓    |   -   |
 | {ref}`VHAL HTTP API <sec-anbox-https-api-vhal>` | -    |   ✓   |
 | [VhalConnector](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/classanbox_1_1VhalConnector.html) in Platform SDK API                                                    | -    |   ✓   |
-| {ref}`exp-custom-images`     | -    |   ✓   | 
+| {ref}`exp-custom-images`     | -    |   ✓   |

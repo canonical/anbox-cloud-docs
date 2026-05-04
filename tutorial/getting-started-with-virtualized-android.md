@@ -6,45 +6,28 @@ This tutorial guides you through launching your first instance with virtualized 
 ## Prerequisites
 
 - A working Anbox Cloud deployment (appliance or charmed). If you haven't set one up yet, see {ref}`tut-installing-appliance`.
-- KVM support on the host machine. Verify by checking that `/dev/kvm` exists:
+- KVM support on the machine running Anbox Cloud. Verify by checking that `/dev/kvm` exists:
 
       ls /dev/kvm
 
-## Add a virtualized Android image
-
-Register a virtualized Android image with AMS:
-
-    amc image add resolute:android16-cf:amd64
-
-For ARM64 hosts, use:
-
-    amc image add resolute:android16-cf:arm64
-
-Wait for the image to become available:
-
-    amc image list
-
-The image status should show `active` when it is ready.
-
 ## Launch an instance
 
-Launch a raw instance from the image. Virtualized Android instances require at least 5 GB of memory:
+Launch an instance from the image. Virtualized Android instances require at least 4 CPU cores, 5 GB of memory and 15 GB of disk space:
 
-    amc launch --raw resolute:android16-cf:amd64 --memory 5GB
+    amc launch resolute:android16-cf:amd64 --cpus 4 --memory 5GB --disk-size 15GB --name test0
 
 Note the instance ID in the output. Wait for the instance to reach the `running` state:
 
-    amc wait <instance_id> --timeout 5m
+    amc wait test0 --timeout 5m
 
 ## Connect to the instance
 
-Find the instance IP address:
+Open a shell inside the `test0` instance by running
 
-    amc show <instance_id>
+    amc shell test0
 
-Connect to the Android shell through ADB on port 6520:
+Connect to the Android shell through ADB
 
-    adb connect <instance_ip>:6520
     adb shell
 
 You now have a shell inside the Android system running in your instance.
@@ -59,7 +42,7 @@ To view the Android system logs:
 
 When you are done, delete the instance:
 
-    amc delete <instance_id>
+    amc delete test0
 
 ## Next steps
 

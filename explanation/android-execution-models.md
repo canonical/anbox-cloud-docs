@@ -24,7 +24,7 @@ With virtualized Android, the Android system runs inside a [Cuttlefish](https://
 
 Cuttlefish is Google's reference virtual Android device. Running Android through Cuttlefish means you get a standard, unmodified Android environment with no Anbox-specific changes to the Android system itself — the Android system image comes directly from Google's build infrastructure. This is the right choice when you need Android to behave exactly as it does on a physical device or in Google's own test environments.
 
-Virtualized Android supports {ref}`raw instances <sec-application-raw-instances>`. To access the Android shell, use `adb shell` on port 6520 instead of `anbox-shell`. See {ref}`ref-feature-support-by-image-type` for the full feature comparison.
+Virtualized Android supports {ref}`instances <sec-application-raw-instances>`. To access the Android shell, use `adb shell` on port 6520 instead of `anbox-shell`. See {ref}`ref-feature-support-by-image-type` for the full feature comparison.
 
 Virtualized Android is a good fit for the following scenarios:
 

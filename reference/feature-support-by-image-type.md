@@ -21,7 +21,7 @@ See {ref}`ref-provided-images` for the full list of available images.
 | {ref}`Applications <exp-applications>` | ✓ | ✗ |
 | {ref}`Addons <exp-addons>` | ✓ | ✗ |
 | {ref}`Platform plugins <exp-platforms>` | ✓ | ✗ |
-| Raw instances | ✓ | ✓ |
+| Instances | ✓ | ✓ |
 | Streaming | ✓ | ✓ |
 | Custom Android builds | ✓ (see {ref}`exp-custom-images`) | ✓ (see {ref}`howto-package-custom-android-build`) |
 | VHAL support | Via adapter | Native gRPC |

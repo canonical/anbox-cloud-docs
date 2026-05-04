@@ -271,7 +271,7 @@ Ubuntu One
     See [Ubuntu One](https://login.ubuntu.com/) for more information.
 
 Virtualized Android
-    An {ref}`Android execution model <exp-android-execution-models>` where the Android system runs inside a Cuttlefish virtual machine within the LXD instance. Used by `resolute:*-cf:*` images. Supports only raw instances.
+    An {ref}`Android execution model <exp-android-execution-models>` where the Android system runs inside a Cuttlefish virtual machine within the LXD instance. Used by `resolute:*-cf:*` images.
 
 Watchdog
     A software component that monitors the app in an instance and terminates the instance if the app crashes or is moved to the background.
