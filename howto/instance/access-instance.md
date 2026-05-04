@@ -14,6 +14,15 @@ This command opens a bash shell inside the instance. To access the nested Androi
 
     amc exec <id> -- anbox-shell
 
+```{note}
+`anbox-shell` is available only for images with containerized Android (`jammy:*`). For images with virtualized Android (`resolute:*-cf:*`), connect to the Android shell through ADB:
+
+    adb connect <instance_ip>:6520
+    adb shell
+
+See {ref}`tut-getting-started-virtualized-android` for details.
+```
+
 If you only want to watch the Android log output, use the following command:
 
     amc exec <id> -- anbox-shell logcat

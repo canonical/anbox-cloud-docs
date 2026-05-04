@@ -127,6 +127,9 @@ Bootstrap process
 Control node
     The machine on which the components that make up the management layer, AMS, AMC, and etcd, are installed.
 
+Containerized Android
+    An {ref}`Android execution model <exp-android-execution-models>` where the Android system runs directly inside the LXD container. Used by `jammy:*` images. Supports the full application model, addons, and platform plugins.
+
 Core stack
     The core parts of the Anbox Cloud stack that are required for all deployments. As a bare minimum, an Anbox Cloud deployment requires the following services:
 
@@ -266,6 +269,9 @@ Ubuntu One
     A central user account system used by all Canonical sites and services. You need an Ubuntu One account to purchase the Ubuntu Pro subscription that is required to run Anbox Cloud, and to log in to the web dashboard.
 
     See [Ubuntu One](https://login.ubuntu.com/) for more information.
+
+Virtualized Android
+    An {ref}`Android execution model <exp-android-execution-models>` where the Android system runs inside a Cuttlefish virtual machine within the LXD instance. Used by `resolute:*-cf:*` images. Supports only raw instances.
 
 Watchdog
     A software component that monitors the app in an instance and terminates the instance if the app crashes or is moved to the background.

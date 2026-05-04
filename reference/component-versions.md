@@ -5,6 +5,10 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.30.0
+
+*Component versions will be added at release time.*
+
 ## 1.29.2
 
 ### Charms

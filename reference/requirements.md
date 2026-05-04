@@ -51,6 +51,8 @@ The following hardware specifications are required for running the appliance:
 
 The above recommendation is the minimum requirement to run the appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible Android containers. See {ref}`exp-capacity-planning` for an explanation on how to plan for a specific capacity on your appliance.
 
+Images with virtualized Android (`resolute:*-cf:*`) have additional requirements: the host CPU must support hardware virtualisation and `/dev/kvm` must be available, and each instance requires a minimum of 5 GB of memory. See {ref}`ref-feature-support-by-image-type` for details.
+
 On public clouds, it is always recommended to allocate an additional storage volume for instance storage. If no additional storage volume is available, the appliance creates an on-disk image and uses it for instance storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and instance startup time.
 
 For external access, you must expose a couple of network ports on the machine where the appliance is running. See {ref}`ref-network-ports` for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.

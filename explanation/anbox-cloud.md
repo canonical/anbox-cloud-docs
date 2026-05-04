@@ -36,7 +36,7 @@ See the following table for a comparison of features for the different variants:
 |---------|-----------------------|-------------|
 | {ref}`exp-application-streaming` | ✓ | ✓ |
 | {ref}`exp-web-dashboard` | ✓ | ✓ |
-| {ref}`Android versions <ref-provided-images>` | 14, 15 | 14, 15 |
+| {ref}`Android versions <ref-provided-images>` | 14, 15, 16 | 14, 15, 16 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
 | [Community support](https://discourse.ubuntu.com/c/project/anbox-user/148) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
@@ -46,6 +46,10 @@ See the following table for a comparison of features for the different variants:
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
 
 We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a charmed Anbox Cloud installation later.
+
+## Android execution models
+
+Anbox Cloud supports two ways of running Android: containerized Android, where the Android system runs directly in the LXD container, and virtualized Android, where Android runs inside a virtual machine within the LXD instance. The execution model is determined by the image that an instance is based on. See {ref}`exp-android-execution-models` for details on the two models and {ref}`ref-feature-support-by-image-type` for a comparison of their supported features.
 
 ## Anbox Cloud Components
 

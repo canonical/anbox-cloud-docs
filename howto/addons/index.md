@@ -1,6 +1,8 @@
 (howto-addons)=
 # Addons
 
+The guides in this section apply to images with containerized Android (`jammy:*`). Addons are not supported for images with virtualized Android. See {ref}`exp-android-execution-models` for details.
+
 In Anbox Cloud, addons can be used to customize images that are used for instances. See {ref}`exp-addons` and {ref}`ref-addon-manifest` to learn about addons in detail.
 
 You can use addons to, for example:

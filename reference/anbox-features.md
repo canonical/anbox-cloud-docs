@@ -5,6 +5,8 @@ Anbox Cloud provides images based on the Android Open Source Project (AOSP), an 
 
 The following table lists some Anbox features and whether they are supported for a given base.
 
+The following feature table applies to images with containerized Android (`jammy:*`). For a comparison of feature support between containerized and virtualized Android, see {ref}`ref-feature-support-by-image-type`.
+
 |Feature   | AOSP | AAOS |
 |--------|------|------|
 | boot-package and boot-activity in {ref}`ref-application-manifest` | ✓    |  -   |

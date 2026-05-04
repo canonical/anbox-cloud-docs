@@ -20,3 +20,12 @@ The following table lists the different statuses that an image can have dependin
 | `queued` | The image operation is queued and waiting to be processed. |
 
 If you encounter the `error` or the `unknown` status, [file a bug](https://bugs.launchpad.net/anbox-cloud).
+
+## Image variants
+
+Anbox Cloud provides two variants of images that use different Android execution models:
+
+- **Images with containerized Android** (`jammy:*`) run Android directly in the LXD container and support the full application model, addons, and platform plugins.
+- **Images with virtualized Android** (`resolute:*-cf:*`) run Android inside a virtual machine within the LXD instance and support only raw instances.
+
+The image variant determines which execution model is used. See {ref}`exp-android-execution-models` for an explanation of the two models and {ref}`ref-feature-support-by-image-type` for a detailed feature comparison.

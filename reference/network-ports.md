@@ -26,6 +26,7 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 | LXD                   | 8443        | TCP       | no                 | yes                          | HTTPS API                             |
 | LXD                   | 10000-11000 | UDP & TCP | yes                | no                           | Instance service ports                |
 | NATS                  | 4222        | TCP       | no                 | yes                          | NATS API                              |
+| ADB (virtualized Android) | 6520    | TCP       | no                 | no                           | ADB access for virtualized Android instances |
 
 ## Anbox Cloud Appliance
 
