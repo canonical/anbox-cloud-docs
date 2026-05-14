@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to create an Anbox Cloud application from an APK using the dashboard or amc application create."
+---
+
 (howto-create-application)=
 # Create an application
 

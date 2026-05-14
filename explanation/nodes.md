@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of nodes in Anbox Cloud, which are LXD cluster machines serving management or GPU-accelerated streaming roles."
+---
+
 (exp-nodes)=
 # Nodes
 

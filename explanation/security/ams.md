@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of AMS security, which uses TLS transport encryption and mutual TLS or token authentication to secure API access."
+---
+
 (exp-security-ams)=
 # AMS
 

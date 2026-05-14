@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to replace the default Anbox VHAL with a custom implementation on AAOS images."
+---
+
 (howto-replace-anbox-vhal)=
 # Replace Anbox VHAL
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to upgrade the Anbox Cloud Appliance by refreshing the snap to the target channel."
+---
+
 (howto-upgrade-appliance)=
 # Upgrade appliance
 

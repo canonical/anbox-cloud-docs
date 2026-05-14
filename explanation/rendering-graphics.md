@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of rendering modes in Anbox Cloud, covering how graphics behaviour adapts based on GPU availability."
+---
+
 (exp-rendering-graphics)=
 # Rendering graphical output
 

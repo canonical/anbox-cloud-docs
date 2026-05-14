@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to replace the self-signed certificate on the Anbox Cloud Appliance with a custom TLS certificate."
+---
+
 (howto-set-up-tls)=
 # Set up TLS for the appliance
 

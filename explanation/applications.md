@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of applications in Anbox Cloud, covering how AMS manages Android APKs, application lifecycle, versioning, and instances."
+---
+
 (exp-applications)=
 # Applications
 

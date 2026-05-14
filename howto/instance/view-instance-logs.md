@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to view Anbox and Android system logs for a running or failed Anbox Cloud instance."
+---
+
 (howto-view-instance-logs)=
 # View instance logs
 

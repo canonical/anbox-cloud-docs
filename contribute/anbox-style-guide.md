@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for the Anbox Cloud documentation style guide, covering MyST Markdown conventions."
+---
+
 (style-guide)=
 # Anbox Cloud Documentation Style Guide
 

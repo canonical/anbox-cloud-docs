@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to change configuration on a running or stopped Anbox Cloud instance using amc set or the dashboard."
+---
+
 (howto-configure-instance)=
 # Configure an instance
 

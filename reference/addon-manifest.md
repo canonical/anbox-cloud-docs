@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for the Anbox Cloud addon manifest, which defines addon metadata and hook scripts."
+---
+
 (ref-addon-manifest)=
 # Addon manifest
 

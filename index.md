@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Run Android at scale in the cloud. Anbox Cloud delivers high-density streaming using LXD containers or VMs on public or private infrastructure."
+---
+
 # Anbox Cloud documentation
 
 Anbox Cloud runs Android in the cloud using lightweight LXD system containers or full virtual machines. Built on Ubuntu, it provides a scalable platform to deploy, manage, and stream Android workloads across public or private infrastructure. Compared to other Android emulation solutions, Anbox Cloud can provide at least twice the density and can serve up to **100 Android instances per server**.

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Learn how to build a streaming client for Anbox Cloud. In this tutorial, we set up WebRTC, service accounts, and a Flask proxy server."
+---
+
 (tut-set-up-stream-client)=
 
 # Set up a stream client

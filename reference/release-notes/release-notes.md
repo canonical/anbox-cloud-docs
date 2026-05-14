@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud release notes, with links to per-version changelogs."
+---
+
 (ref-release-notes)=
 # Release notes
 

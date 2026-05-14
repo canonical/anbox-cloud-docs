@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox runtime security, which protects communications with TLS encryption and relies on WebRTC mandatory encryption."
+---
+
 (exp-security-anbox-runtime)=
 # Anbox runtime
 

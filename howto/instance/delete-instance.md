@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to delete an Anbox Cloud instance with amc delete to release its resources."
+---
+
 (howto-delete-instance)=
 # Delete an instance
 

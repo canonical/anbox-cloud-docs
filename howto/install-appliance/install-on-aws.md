@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install the Anbox Cloud Appliance on AWS via the Marketplace or by manually launching an EC2 instance."
+---
+
 (howto-install-appliance-aws)=
 # Install on AWS
 

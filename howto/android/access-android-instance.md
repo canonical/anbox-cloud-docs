@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to connect to an Android instance running in Anbox Cloud via ADB over TCP for debugging."
+---
+
 (howto-access-android-instance)=
 # Access an Android instance
 

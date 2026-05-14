@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to list and inspect Anbox Cloud applications using amc application list or the dashboard."
+---
+
 (howto-list-applications)=
 # List applications
 

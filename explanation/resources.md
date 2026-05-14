@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of resource presets in Anbox Cloud, which define CPU, memory, and storage allocated to instances."
+---
+
 (exp-resources-presets)=
 # Resources and resource presets
 

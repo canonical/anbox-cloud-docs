@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of streaming stack security in Anbox Cloud, which uses WebRTC with mandatory end-to-end encryption."
+---
+
 (exp-security-streaming)=
 # Streaming
 

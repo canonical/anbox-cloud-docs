@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to integrate the Anbox HIDL interface to connect a custom VHAL implementation with Android HAL."
+---
+
 (howto-integrate-hidl)=
 # Integrate Anbox HIDL interface
 

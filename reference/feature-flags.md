@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud feature flags, which enable optional and experimental capabilities."
+---
+
 (ref-feature-flags)=
 # Feature flags
 

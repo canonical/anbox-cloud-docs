@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of capacity planning for Anbox Cloud, with guidance on estimating resources based on user load and application profiles."
+---
+
 (exp-capacity-planning)=
 # Capacity planning
 

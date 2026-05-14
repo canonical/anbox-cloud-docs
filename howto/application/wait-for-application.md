@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to wait for an Anbox Cloud application to reach a ready state using amc wait."
+---
+
 (howto-wait-for-application)=
 # Wait for an application
 

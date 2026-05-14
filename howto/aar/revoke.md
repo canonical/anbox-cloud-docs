@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to revoke a compromised client certificate from the Anbox Application Registry."
+---
+
 (howto-revoke-aar)=
 
 # Revoke a client

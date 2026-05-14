@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to migrate Anbox Cloud addons from deprecated hook names to the current format introduced in version 1.12."
+---
+
 (howto-migrate-addons)=
 # Migrate from previous versions
 

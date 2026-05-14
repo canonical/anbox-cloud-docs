@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to enable client-side video upscaling in Anbox Cloud streams using AMD FidelityFX Super Resolution."
+---
+
 (howto-enable-client-side-video-upscaling)=
 # Enable client-side video upscaling
 

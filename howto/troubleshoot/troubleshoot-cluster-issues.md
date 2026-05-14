@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to resolve Anbox Cloud LXD cluster problems, including node connectivity and database errors."
+---
+
 (howto-ts-lxd-clustering)=
 # Troubleshoot issues with LXD clustering
 

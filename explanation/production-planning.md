@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of production planning for Anbox Cloud, covering configuration, networking, security, and high availability."
+---
+
 (exp-production-planning)=
 # Production planning
 

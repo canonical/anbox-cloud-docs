@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for per-instance configuration in AMS, covering CPU, memory, GPU, and display settings."
+---
+
 (ref-ams-instance-configuration)=
 # AMS instance configuration
 

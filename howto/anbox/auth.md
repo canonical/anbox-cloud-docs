@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure user permissions in Anbox Cloud with OpenFGA, including identities, groups, and entitlements."
+---
+
 (howto-auth)=
 # Configure user permissions
 

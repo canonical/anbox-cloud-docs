@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure individual nodes in an Anbox Cloud LXD cluster, including capacity limits and GPU assignment."
+---
+
 (howto-configure-cluster-nodes)=
 # Configure cluster nodes
 

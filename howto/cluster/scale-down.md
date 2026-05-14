@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to remove a node from an Anbox Cloud LXD cluster safely by draining instances and detaching with Juju."
+---
+
 (howto-scale-down-cluster)=
 # Scale down a LXD cluster
 

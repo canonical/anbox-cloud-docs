@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to build a custom Anbox Cloud platform plugin with the Platform SDK."
+---
+
 (howto-develop-platform-plugin)=
 # Develop a platform plugin
 

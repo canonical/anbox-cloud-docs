@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure which images AMS downloads from the Canonical image server."
+---
+
 (howto-configure-image-server)=
 # Configure an image server
 

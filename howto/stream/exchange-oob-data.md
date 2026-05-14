@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    "description": "How to exchange out-of-band data between an Android app and a WebRTC client in Anbox Cloud."
+---
 
 (howto-exchange-oob-data)=
 # Exchange out-of-band data

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud SDKs, covering the Streaming SDK, AMS SDK, and Platform SDK."
+---
+
 (ref-sdks)=
 # Anbox Cloud SDKs
 

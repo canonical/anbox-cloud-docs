@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to upgrade charmed Anbox Cloud or the Anbox Cloud Appliance to the latest release."
+---
+
 (howto-upgrade)=
 # Upgrade Anbox Cloud
 

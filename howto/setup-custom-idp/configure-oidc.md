@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure OIDC authentication for the Anbox Cloud Appliance using a preseed file."
+---
+
 (howto-configure-oidc)=
 # Configure OIDC for the appliance
 

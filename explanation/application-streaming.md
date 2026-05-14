@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of the Anbox Cloud streaming stack, which uses WebRTC-based video encoding with GPU integration and session management."
+---
+
 (exp-application-streaming)=
 # Application streaming
 

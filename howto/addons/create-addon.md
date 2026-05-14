@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to create an Anbox Cloud addon by writing hook scripts, packaging, and attaching it to applications."
+---
+
 (howto-create-addon)=
 # Create an addon
 

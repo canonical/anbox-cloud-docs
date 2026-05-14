@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to validate a new Anbox Cloud deployment by running the built-in test suite."
+---
+
 (howto-validate-deployment)=
 # Validate your deployment
 

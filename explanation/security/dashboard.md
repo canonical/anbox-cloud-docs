@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of dashboard security in Anbox Cloud, covering TLS, registration tokens, and mutual TLS mechanisms."
+---
+
 (exp-security-dashboard)=
 # Dashboard
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to troubleshoot Anbox Cloud issues, including application creation failures, cluster problems, and streaming faults."
+---
+
 (howto-ts-anbox-cloud)=
 # Troubleshoot Anbox Cloud
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to list Anbox Cloud instances with amc ls and filter by application, status, or node."
+---
+
 (howto-list-instances)=
 # List instances
 

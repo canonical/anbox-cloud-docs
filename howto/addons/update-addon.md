@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to update an Anbox Cloud addon to a new version and control how running instances receive the update."
+---
+
 (howto-update-addons)=
 # Update addons
 

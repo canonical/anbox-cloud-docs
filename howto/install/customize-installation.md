@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to customise a charmed Anbox Cloud deployment using Juju overlay files or modified bundle files."
+---
+
 (howto-customize-installation)=
 # Customize installation
 

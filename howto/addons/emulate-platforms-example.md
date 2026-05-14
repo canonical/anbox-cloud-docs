@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to use an addon hook to emulate non-native CPU architectures for cross-platform application support."
+---
+
 (howto-emulate-platforms-example)=
 # Example: Emulate platforms
 

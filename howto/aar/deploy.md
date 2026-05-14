@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to deploy an Anbox Application Registry (AAR) and connect it to AMS for centralised application storage."
+---
+
 (howto-deploy-aar)=
 # Deploy
 

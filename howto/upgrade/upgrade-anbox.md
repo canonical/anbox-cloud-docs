@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to upgrade charmed Anbox Cloud to the latest release using Juju."
+---
+
 (howto-upgrade-anbox-cloud)=
 # Upgrade charmed deployment
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage Anbox Cloud images, including adding from the Canonical server, publishing custom images, and pinning releases."
+---
+
 (howto-manage-images)=
 # Manage images
 

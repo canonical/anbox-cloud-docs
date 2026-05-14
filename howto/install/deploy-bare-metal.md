@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to deploy Anbox Cloud on bare metal using Juju's manual cloud option."
+---
+
 (howto-deploy-anbox-baremetal)=
 # Deploy on bare metal
 

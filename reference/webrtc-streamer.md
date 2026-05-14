@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for WebRTC streamer configuration in Anbox Cloud."
+---
+
 (ref-webrtc)=
 # WebRTC streamer
 

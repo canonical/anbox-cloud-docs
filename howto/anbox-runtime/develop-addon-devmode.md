@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to develop Anbox Cloud addons in developer mode to iterate quickly without full application bootstrap."
+---
+
 (howto-develop-addons-devmode)=
 # Develop addons in `--devmode`
 

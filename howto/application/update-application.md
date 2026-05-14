@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to update an Anbox Cloud application to a new APK version using amc application update."
+---
+
 (howto-update-application)=
 # Update an application
 

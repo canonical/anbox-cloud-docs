@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for video codecs supported by Anbox Cloud, covering H.264, H.265, and VP8/VP9."
+---
+
 (ref-codecs)=
 # Supported video codecs
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for supported GPU hardware and rendering APIs in Anbox Cloud."
+---
+
 (ref-rendering-resources)=
 # Supported rendering resources
 

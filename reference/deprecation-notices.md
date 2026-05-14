@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud deprecation notices, covering features and APIs scheduled for removal."
+---
+
 (ref-deprecation-notes)=
 # Deprecation notices
 

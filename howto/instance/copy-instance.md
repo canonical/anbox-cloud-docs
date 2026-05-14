@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to copy an Anbox Cloud instance to duplicate its current state for testing or debugging."
+---
+
 (howto-copy-instance)=
 
 # Copy an instance

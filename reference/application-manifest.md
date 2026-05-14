@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for the Anbox Cloud application manifest, covering all keys and their effects."
+---
+
 (ref-application-manifest)=
 # Application manifest
 

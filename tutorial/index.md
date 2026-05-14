@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Learn Anbox Cloud essentials. In this section, we guide you through installation, creating virtual devices, and building streaming clients."
+---
+
 (tutorials)=
 # Tutorials
 

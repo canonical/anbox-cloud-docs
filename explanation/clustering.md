@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of clustering in charmed Anbox Cloud, which uses multi-node LXD clusters managed with Juju for large-scale deployments."
+---
+
 (exp-clustering)=
 # Clustering
 

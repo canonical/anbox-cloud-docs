@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to choose the correct APK architecture for Anbox Cloud based on your host CPU type."
+---
+
 (howto-choose-apk-architecture)=
 # Choose APK architecture
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud Juju charm configuration options and their defaults."
+---
+
 (ref-charm-configuration)=
 # Charm Configuration
 

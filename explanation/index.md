@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox Cloud concepts, covering architecture, components, applications, instances, security, capacity planning, and deployment."
+---
+
 (explanation)=
 # Explanation
 

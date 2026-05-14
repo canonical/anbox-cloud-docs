@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud Appliance preseed configuration for automated initialisation."
+---
+
 (ref-appliance-preseed-config)=
 # Anbox Cloud Appliance preseed configuration format
 

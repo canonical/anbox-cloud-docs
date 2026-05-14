@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Android security in Anbox Cloud, covering monthly security patches applied to AOSP and AAOS images."
+---
+
 # Android
 
 The images that Anbox Cloud provides are based on different Android versions. They are updated with security patches monthly, based on the upstream security tags. You can find detailed information on the security patches that have been included (or considered to be included but found unrelated) in the [Android Security Bulletins](https://source.android.com/docs/security/bulletin). The relevant security bulletin for each Anbox Cloud release is linked in the {ref}`ref-release-notes`.

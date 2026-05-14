@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud, covering configuration, requirements, APIs, SDKs, and release notes."
+---
+
 (reference)=
 # Reference
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud terminology, with definitions for AMS, AAR, instances, and more."
+---
+
 (ref-glossary)=
 # Glossary
 

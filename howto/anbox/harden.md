@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to harden an Anbox Cloud deployment by restricting network exposure and managing TLS certificates."
+---
+
 (howto-harden)=
 # Harden your deployment
 

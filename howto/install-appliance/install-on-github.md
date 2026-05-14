@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to run the Anbox Cloud Appliance inside a GitHub Actions workflow for automated CI testing."
+---
+
 (howto-install-appliance-github)=
 # Install on GitHub
 

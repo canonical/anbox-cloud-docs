@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of the Anbox Application Registry (AAR), which provides a central repository for syncing applications across deployments."
+---
+
 (exp-aar)=
 # Anbox Application Registry
 

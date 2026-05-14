@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to extend an Anbox Cloud application with custom behaviour using hooks or addons."
+---
+
 (howto-extend-application)=
 # Extend an application
 

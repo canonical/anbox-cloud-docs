@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to access an Anbox Cloud instance for debugging using amc shell or amc exec."
+---
+
 (howto-access-instance)=
 # Access an instance
 

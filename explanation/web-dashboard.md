@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of the Anbox Cloud dashboard, a web UI for managing applications and streaming sessions."
+---
+
 (exp-web-dashboard)=
 # Anbox Cloud dashboard
 

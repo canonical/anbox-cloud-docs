@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to perform common tasks in Anbox Cloud, covering installation, application management, instance operations, and troubleshooting."
+---
+
 (how-to-guides)=
 # How-to guides
 

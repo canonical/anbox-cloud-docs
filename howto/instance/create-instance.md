@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to launch an Anbox Cloud instance from an application or raw image using amc launch or amc init."
+---
+
 (howto-create-instance)=
 # Create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.

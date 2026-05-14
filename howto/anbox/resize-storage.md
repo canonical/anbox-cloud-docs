@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to safely resize the LXD storage pool used by Anbox Cloud when capacity is running low."
+---
+
 (howto-resize-lxd-storage)=
 # Resize LXD storage
 

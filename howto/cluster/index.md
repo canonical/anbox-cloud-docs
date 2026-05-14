@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage an Anbox Cloud LXD cluster, including adding nodes, configuring capacity, and scaling up or down."
+---
+
 (howto-manage-cluster)=
 # Manage cluster nodes
 

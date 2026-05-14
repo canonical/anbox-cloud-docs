@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to expose TCP or UDP services running inside an Anbox Cloud instance to the external network."
+---
+
 (howto-expose-services)=
 # Expose services on an instance
 

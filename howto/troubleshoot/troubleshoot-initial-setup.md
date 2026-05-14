@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to diagnose Anbox Cloud setup failures, including snap installation and LXD initialisation problems."
+---
+
 (howto-ts-initial-setup)=
 # Troubleshoot issues with initial setup
 

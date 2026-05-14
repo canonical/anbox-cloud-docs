@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure AMC to connect to AMS over HTTPS from a remote host."
+---
+
 (howto-access-ams-remote)=
 # Access AMS remotely
 
