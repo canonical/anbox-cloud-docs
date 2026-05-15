@@ -252,7 +252,8 @@ linkcheck_ignore = [
     'https://10.2.9.2/',
     'http://Add-SECURITY.md',
     'https://jwt.io/',
-    'https://www.vulkan.org/'
+    'https://www.vulkan.org/',
+    'https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt',
     ]
 
 # This setting will check the links but not the anchors
