@@ -9,7 +9,7 @@ myst:
 
 The Anbox Cloud Streaming Stack is based on [WebRTC](https://webrtc.org/). WebRTC forbids unencrypted communication, which enforces a certain security level.
 
-For communication with the Anbox stream gateway, token-based authentication is used. This allows components that need to communicate with the stream gateway to verify their identity, and in return receive a unique access token. During the life of the token, it acts as a means to verify the identity of the services that handle communication between the applications and the gateway.
+For communication with the Anbox Stream Gateway, token-based authentication is used. This allows components that need to communicate with the stream gateway to verify their identity, and in return receive a unique access token. During the life of the token, it acts as a means to verify the identity of the services that handle communication between the applications and the gateway.
 
 Of course, the overall streaming security relies on a secure client implementation. This is ensured by Anbox Cloud's web dashboard, but other client implementations might have weaknesses. However, since encryption is a mandatory feature of WebRTC, developers are forced to consider security aspects when implementing a client application.
 

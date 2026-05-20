@@ -50,7 +50,7 @@ Decoding the Token
 
 ## Mutual TLS based authentication
 
-The dashboard uses mutual TLS authentication to establish a trusted TLS communication channel with the Anbox management Service (AMS) to communicate with the AMS API. To do this, the dashboard generates a TLS certificate using a 4096 bit RSA key.
+The dashboard uses mutual TLS authentication to establish a trusted TLS communication channel with the Anbox Management Service (AMS) to communicate with the AMS API. To do this, the dashboard generates a TLS certificate using a 4096 bit RSA key.
 
 ## Packages used
 

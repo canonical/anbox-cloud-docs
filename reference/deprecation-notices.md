@@ -66,7 +66,7 @@ Support for Ubuntu 20.04 LTS (Focal Fossa) is deprecated in 1.22.0 and is planne
 
 Support for the EmuGL renderer is deprecated in 1.22.0 and planned to be removed in Anbox Cloud 1.23.0. Starting with 1.22.0, VirGL will be the default renderer for NVIDIA GPUs with driver version 545 and later.
 
-## Etcd and EasyRSA charms
+## etcd and EasyRSA charms
 *Deprecated in 1.29.0* ; *Unsupported in 1.35.0*
 
 Legacy charms, specifically the [`etcd`](https://charmhub.io/etcd) and the [`easy-rsa`](https://charmhub.io/easyrsa) charms, are deprecated as of Anbox Cloud 1.29.0 release. This aligns with the transition toward modernized, operator-based Anbox Cloud deployment.
