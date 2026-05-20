@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud addon hooks, covering supported hook names and environment variables."
+---
+
 (ref-hooks)=
 # Hooks
 

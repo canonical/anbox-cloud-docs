@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure Anbox Cloud to use Ceph as shared distributed storage instead of local LXD storage."
+---
+
 (howto-use-ceph-storage)=
 # Use Ceph storage
 

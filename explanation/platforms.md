@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox Cloud platforms (swrast, null, webrtc), covering what each does and how to configure display settings."
+---
+
 (exp-platforms)=
 # Supported platforms
 

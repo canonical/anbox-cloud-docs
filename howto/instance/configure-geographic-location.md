@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to set a GPS location on an Anbox Cloud Android container for location-aware applications."
+---
+
 (howto-configure-geographic-location)=
 # Configure geographic location
 

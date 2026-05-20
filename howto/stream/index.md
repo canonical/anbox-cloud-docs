@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure Anbox Cloud streaming, including Stream Gateway access, video upscaling, and virtual keyboard integration."
+---
+
 (howto-streaming)=
 # Implement streaming
 

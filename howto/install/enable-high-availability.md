@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to enable high availability for charmed Anbox Cloud by deploying additional units using Juju."
+---
+
 (howto-enable-ha)=
 # Enable High Availability
 

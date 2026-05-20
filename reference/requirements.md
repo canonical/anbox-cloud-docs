@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud system requirements, covering hardware, Ubuntu versions, and LXD."
+---
+
 (ref-requirements)=
 # Requirements
 

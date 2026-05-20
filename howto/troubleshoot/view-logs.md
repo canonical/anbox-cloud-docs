@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to collect Anbox Cloud logs from AMS, instances, and the Anbox runtime for troubleshooting."
+---
+
 (howto-ts-view-logs)=
 # View logs
 

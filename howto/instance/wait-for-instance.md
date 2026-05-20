@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to use amc wait to pause automation until an Anbox Cloud instance reaches the running state."
+---
+
 (howto-wait-for-instance)=
 # Wait for an instance
 

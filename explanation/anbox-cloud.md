@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox Cloud architecture, covering the two variants (Appliance and charmed), core components, and supported platforms."
+---
+
 (exp-anbox-cloud)=
 # Anbox Cloud
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to grant Android runtime permissions to an app in Anbox Cloud at bootstrap time."
+---
+
 (howto-grant-runtime-permissions)=
 # Grant runtime permissions
 

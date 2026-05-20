@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to stream an Anbox Cloud application to a browser via the dashboard or a custom client."
+---
+
 (howto-stream-applications)=
 # Stream applications
 

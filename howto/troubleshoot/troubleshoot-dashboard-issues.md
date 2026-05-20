@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to fix Anbox Cloud dashboard problems, including login failures and certificate errors."
+---
+
 (howto-ts-web-dashboard)=
 # Troubleshoot issues while using the web dashboard
 

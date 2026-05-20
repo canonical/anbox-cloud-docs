@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud feature comparison between AOSP and AAOS images."
+---
+
 (ref-aosp-aaos)=
 # Supported features for AOSP vs AAOS images
 

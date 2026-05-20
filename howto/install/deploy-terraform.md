@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to deploy Anbox Cloud with Terraform using the Juju provider for infrastructure-as-code deployments."
+---
+
 (howto-deploy-anbox-terraform)=
 # Deploy with Terraform
 

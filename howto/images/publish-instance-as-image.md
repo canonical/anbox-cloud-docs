@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to capture the current state of an Anbox Cloud instance as a reusable custom image."
+---
+
 (howto-publish-instance-as-image)=
 # Publish an instance as an image
 

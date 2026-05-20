@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure TLS certificate authentication between the Anbox Application Registry and AMS."
+---
+
 (howto-configure-aar)=
 # Configure
 

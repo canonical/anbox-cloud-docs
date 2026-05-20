@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for authorisation in Anbox Cloud, covering entitlements, identity types, and groups."
+---
+
 (ref-auth)=
 # Authentication and authorization
 

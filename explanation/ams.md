@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of the Anbox Management Service (AMS), which handles instance and application lifecycle, scheduling, and resource management."
+---
+
 (exp-ams)=
 # Anbox Management Service
 

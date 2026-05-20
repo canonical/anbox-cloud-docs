@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of instances in Anbox Cloud, covering lifecycle states, types, resource handling, and how each runs a full Android system."
+---
+
 (exp-instances)=
 # Instances
 

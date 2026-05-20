@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of the Anbox Cloud rendering pipeline, covering architecture and rendering models for different GPU types."
+---
+
 (exp-rendering-architecture)=
 # Rendering architecture
 

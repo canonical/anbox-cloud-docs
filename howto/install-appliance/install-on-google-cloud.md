@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install the Anbox Cloud Appliance on Google Cloud by creating a Compute Engine VM."
+---
+
 (howto-install-appliance-google-cloud)=
 # Install on Google Cloud
 

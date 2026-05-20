@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install additional tools into an Anbox Cloud instance using an addon install hook."
+---
+
 (howto-install-tools-example)=
 # Example: Install tools
 

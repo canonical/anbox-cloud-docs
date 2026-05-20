@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install the Anbox Cloud Appliance on Microsoft Azure by provisioning a VM and deploying the snap."
+---
+
 (howto-install-appliance-azure)=
 # Install on Azure
 

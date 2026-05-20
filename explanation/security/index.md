@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of security in Anbox Cloud, covering secure-by-default principles across AMS, the Anbox runtime, and streaming."
+---
+
 (exp-security)=
 # Security
 

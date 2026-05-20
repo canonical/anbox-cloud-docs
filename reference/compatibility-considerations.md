@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud compatibility, covering Android API limitations and hardware gaps."
+---
+
 (ref-compatibility-considerations)=
 # Compatibility Considerations
 

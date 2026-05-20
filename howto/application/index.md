@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage Anbox Cloud applications, including creating, updating, deleting, extending with addons, and streaming."
+---
+
 (howto-manage-applications)=
 # Manage applications
 

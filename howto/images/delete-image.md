@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to delete an Anbox Cloud image from AMS using amc image delete."
+---
+
 (howto-delete-image)=
 # Delete an image
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to set up monitoring for Anbox Cloud with Prometheus and Grafana, including scraping metrics and building dashboards."
+---
+
 (howto-monitor-anbox)=
 
 # Monitor Anbox Cloud

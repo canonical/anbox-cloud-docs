@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to enable an Anbox Cloud addon globally so it applies to every application automatically."
+---
+
 (howto-enable-addons-globally)=
 # Enable an addon globally
 

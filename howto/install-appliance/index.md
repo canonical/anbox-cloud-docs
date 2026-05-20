@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install the Anbox Cloud Appliance on AWS, Azure, Google Cloud, or inside a GitHub Actions workflow."
+---
+
 (howto-install-appliance)=
 # Install the appliance
 

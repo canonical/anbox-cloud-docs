@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for images provided by Anbox Cloud, covering Android versions and architectures."
+---
+
 (ref-provided-images)=
 # Provided Anbox Cloud images
 

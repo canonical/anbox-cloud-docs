@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to add an Anbox Cloud image to AMS from the Canonical image server or a custom registry."
+---
+
 (howto-add-image)=
 # Add an image
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to share an active Anbox Cloud streaming session with another user via the Stream Gateway."
+---
+
 (howto-share-session)=
 # Share a session
 

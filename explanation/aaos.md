@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Android Automotive OS (AAOS) support in Anbox Cloud, with details on VHAL integration and dashboard property visibility."
+---
+
 (exp-aaos)=
 # Android Automotive OS(AAOS)
 

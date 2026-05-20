@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox Cloud addons, which extend images by running hook scripts at instance lifecycle events."
+---
+
 (exp-addons)=
 # Addons
 

@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    "description": "How to integrate a virtual keyboard into an Anbox Cloud web streaming application."
+---
 
 (howto-integrate-virtual-keyboard)=
 # Integrate a client-side virtual keyboard

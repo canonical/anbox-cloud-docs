@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage an Anbox Cloud deployment, including authentication, remote AMS access, benchmarks, and security hardening."
+---
+
 (howto-manage-anbox)=
 # Manage Anbox Cloud
 

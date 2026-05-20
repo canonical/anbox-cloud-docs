@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to start an Anbox Cloud instance that was initialised with amc init or previously stopped."
+---
+
 (howto-start-instance)=
 # Start an instance
 

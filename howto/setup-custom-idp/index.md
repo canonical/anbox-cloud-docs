@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to set up a custom identity provider for Anbox Cloud using OpenID Connect."
+---
+
 (howto-set-up-idp)=
 # Set up a custom identity provider
 

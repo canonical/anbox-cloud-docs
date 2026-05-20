@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to back up and restore Android application data across Anbox Cloud instance restarts."
+---
+
 (howto-backup-restore-application-data)=
 # Back up and restore application data
 

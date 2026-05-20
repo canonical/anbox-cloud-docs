@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to work with the Anbox runtime, including addon development in developer mode and building custom platform plugins."
+---
+
 (howto-anbox-runtime)=
 # Work with the Anbox runtime
 

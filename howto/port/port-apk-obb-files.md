@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to port an Android APK with OBB expansion files to Anbox Cloud."
+---
+
 (howto-port-apk-oob)=
 # Port APKs with OBB files
 

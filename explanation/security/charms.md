@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of charm security in Anbox Cloud, covering TLS-encrypted websocket communication between Juju units and controllers."
+---
+
 (exp-security-charms)=
 # Charms
 

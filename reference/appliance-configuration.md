@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud Appliance configuration, covering all available settings and defaults."
+---
+
 (ref-appliance-configuration)=
 # Anbox Cloud Appliance configuration
 

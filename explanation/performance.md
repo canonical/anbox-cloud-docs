@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of performance factors in Anbox Cloud, with guidance on hardware, configuration, and workload tuning."
+---
+
 (exp-performance)=
 # Performance
 

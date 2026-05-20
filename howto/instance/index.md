@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage Anbox Cloud instances, including creating, configuring, starting, stopping, accessing, and viewing logs."
+---
+
 (howto-instance)=
 # Manage instances
 

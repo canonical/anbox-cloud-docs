@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for the Anbox HTTP API available inside every instance via Unix socket."
+---
+
 (anbox-https-api)=
 # Anbox HTTPS API
 

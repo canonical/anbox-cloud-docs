@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Learn how to install the Anbox Cloud Appliance. In this tutorial, we set up the snap inside a Multipass VM and access the web dashboard."
+---
+
 (tut-installing-appliance)=
 # Install the appliance
 

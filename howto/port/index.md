@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to port Android APKs to Anbox Cloud, including architecture selection, watchdog configuration, and OBB files."
+---
+
 (howto-port-android-apps)=
 # Port Android apps
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to access the Anbox Cloud Stream Gateway API using a service account token."
+---
+
 (howto-access-stream-gateway)=
 # Access the stream gateway
 

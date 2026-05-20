@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to work with Android in Anbox Cloud, including ADB access, custom VHAL configuration, graphics debugging, and SMS simulation."
+---
+
 (howto-Android)=
 # Work with Android
 

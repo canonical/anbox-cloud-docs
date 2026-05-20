@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to pass arbitrary data to an Anbox Cloud application at launch time and read it inside addon hooks."
+---
+
 (howto-pass-custom-data-application)=
 # Pass custom data to an application
 

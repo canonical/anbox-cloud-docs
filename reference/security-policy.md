@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud security policy, covering release cadence and vulnerability reporting."
+---
+
 (ref-security-policy)=
 # Security policy
 

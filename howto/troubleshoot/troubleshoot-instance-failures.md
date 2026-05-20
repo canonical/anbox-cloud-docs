@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to investigate Anbox Cloud instance failures by interpreting error states and reading logs."
+---
+
 (howto-ts-instance-failures)=
 # Troubleshoot instance failures
 

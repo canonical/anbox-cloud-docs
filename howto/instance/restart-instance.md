@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to restart an Anbox Cloud instance with amc restart to apply configuration changes."
+---
+
 (howto-restart-instance)=
 # Restart an instance
 

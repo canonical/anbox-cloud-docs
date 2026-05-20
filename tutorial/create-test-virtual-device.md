@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Learn how to create a virtual Android device. In this tutorial, we use the CLI or dashboard to launch and test an Anbox Cloud instance."
+---
+
 (tut-create-virtual-device)=
 # Create and test a virtual device
 
