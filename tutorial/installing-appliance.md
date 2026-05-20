@@ -52,7 +52,7 @@ The *Ubuntu Pro (Infra-only)* token does not work and will result in a failed de
 
 Make sure to allocate sufficient disk space, memory and CPUs as shown in the example. Otherwise, the VM will run out of space while creating the application. See {ref}`ref-requirements` for information on minimum resource requirements.
 
-1. Shell into the virtual machine:
+3. Shell into the virtual machine:
 
         multipass shell anbox
 

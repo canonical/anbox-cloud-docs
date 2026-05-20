@@ -127,6 +127,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 
 ```{terminal}
 :output-only:
+
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 |           NAME           |  STATE  |          IPV4          | IPV6 |   TYPE    | SNAPSHOTS | LOCATION |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+

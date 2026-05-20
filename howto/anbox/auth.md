@@ -58,17 +58,18 @@ You can view the identities you created by using:
 The output will look similar to this:
 
 ```{terminal}
-   :user: user
-   :host: host
+:user: user
+:host: host
+
 amc auth identity ls
 
-`+--------------------+---------------------+----------------------+----------------------+--------------+`
-`|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |`
-`+----------------------+---------------------+------------------+------------------------+--------------+`
-`| d3kb9pvriueuguose410 | oidc                | test@example.com   | test@example.com     | image_viewer |`
-`+----------------------+---------------------+-------------------------+----------------------+---------+`
-`| d3o2u7vriuenvvlfcae0 | tls                 | test-user          | 9cbb1aced3fb587405c7abaa7c83ec59b4bb9bd567843703884632e77e0aa455 |   |`
-`+----------------------+---------------------+-----------------------+--------------------+-------------+`
++--------------------+---------------------+----------------------+----------------------+--------------+
+|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |
++----------------------+---------------------+------------------+------------------------+--------------+
+| d3kb9pvriueuguose410 | oidc                | test@example.com   | test@example.com     | image_viewer |
++----------------------+---------------------+-------------------------+----------------------+---------+
+| d3o2u7vriuenvvlfcae0 | tls                 | test-user          | 9cbb1aced3fb587405c7abaa7c83ec59b4bb9bd567843703884632e77e0aa455 |   |
++----------------------+---------------------+-----------------------+--------------------+-------------+
 ```
 
 ## Create authorization groups with identities
@@ -82,8 +83,9 @@ Create a new authorization group:
 To verify details of the created group, use the `show` command:
 
 ```{terminal}
-   :user: user
-   :host: host
+:user: user
+:host: host
+
 amc auth group show developer
 
 name: developer
