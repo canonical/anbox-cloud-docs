@@ -39,13 +39,13 @@ Based on your safety protocols, think about where you would want to host your st
 - [etcd recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
 - {ref}`exp-capacity-planning`
 
-## Scalability, High availability, and redundancy
+## Scalability, high availability, and redundancy
 
 With Anbox Cloud, you can scale your deployment to as many clusters and subclusters as you require. It is a good idea to define how many Anbox clusters you want to deploy and how many subclusters per cluster.
 
 You should also assess the number of instances that you require for each model/service. For example, think about the number of Juju controller instances that you need. See [Make a controller highly available](https://documentation.ubuntu.com/juju/latest/howto/manage-controllers/#make-a-controller-highly-available) for more information.
 
-Anbox Cloud comes with support for High Availability (HA) for both Core and the Streaming Stack. You can define HA by adding new Juju units. See {ref}`howto-enable-ha` to plan your HA requirements.
+Anbox Cloud comes with support for high availability (HA) for both Core and the Streaming Stack. You can define HA by adding new Juju units. See {ref}`howto-enable-ha` to plan your HA requirements.
 
 ## Security
 
