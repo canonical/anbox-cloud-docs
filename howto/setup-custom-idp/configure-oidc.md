@@ -36,7 +36,7 @@ In addition to creating the user you need to add it to a group to give permissio
 
     amc auth identity group add <identity id> --groups admin
 
-The user can now login to Anbox Cloud dashboard with the identity created.
+The user can now log in to Anbox Cloud dashboard with the identity created.
 
 The user can also access AMS by running
 

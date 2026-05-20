@@ -12,7 +12,7 @@ This document contains a list of deprecation notices for Anbox Cloud and its com
 ## VM images
 *Deprecated in 1.28.0* ; *Unsupported in 1.30.0*
 
-The VM variant of Anbox images for all versions are deprecated  as of release 1.28.0. Use the container based images instead.
+The VM variant of Anbox images for all versions are deprecated as of release 1.28.0. Use the container based images instead.
 
 ## Bundles
 *Deprecated in 1.28.0* ; *Unsupported in 1.30.0*

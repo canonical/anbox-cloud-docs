@@ -75,7 +75,7 @@ Consider how frequently you want your data backed up and where you want to host 
 
 Load balancing solutions can differ based on your deployment model. You should assess the load balancing solution that you want to use and the number of load balancers that is ideal for your deployment model.
 
-## Energy Efficiency
+## Energy efficiency
 
 Anbox Cloud is optimized to use only as much energy as is necessary for an operation to complete. When planning for a production deployment, think through the following questions about energy efficiency to choose the most optimum way possible for your specific requirements:
 
@@ -91,7 +91,7 @@ Although Anbox Cloud does not offer its own observability solution, Anbox Cloud 
 
 To create a customized monitoring solution, see {ref}`ref-prometheus-metrics` for a detailed understanding of available metrics to assess your monitoring needs for the production deployment. See {ref}`exp-performance` to learn about the factors that could influence the performance of your deployment.
 
-## Licensing and Support
+## Licensing and support
 
 You need the Ubuntu Pro subscription to use Anbox Cloud. Depending on the type of subscription you choose, your support model differs. You can refer to the [Ubuntu Pro website](https://ubuntu.com/pro) to learn and compare the different types of subscriptions.
 

@@ -71,7 +71,7 @@ This is the recommended option to provide debugging information when you report 
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance since 1.16.0*
 
-In Anbox Cloud, instances come preinstalled with the `anbox-bug-report` utility, which
+In Anbox Cloud, instances come pre-installed with the `anbox-bug-report` utility, which
 collects the log files and other relevant information for a specific instance.
 To generate the report and save it to a local file, use `amc exec` on a running
 instance:

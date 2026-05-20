@@ -23,7 +23,7 @@ which is also in active development. There may be breaking changes in the future
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
   ```
 
-- A Juju Controller bootstrapped and connected to your Juju Client (CLI). See {ref}`sec-setup-juju-controller` for information on how to setup a Juju Controller.
+- A Juju Controller bootstrapped and connected to your Juju Client (CLI). See {ref}`sec-setup-juju-controller` for information on how to set up a Juju Controller.
 
 ## Install Terraform
 

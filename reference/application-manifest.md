@@ -41,7 +41,7 @@ The `instance-type` attribute is deprecated since 1.20. For any application, a d
 When using the web dashboard to create an application, the field *Instance type* is changed to *Resource type* to maintain backward compatibility.
 ```
 
-Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
+Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This provides an easy abstraction when referring to resource requirements of instances or particular applications.
 
 Anbox Cloud offers the following instance types:
 
@@ -232,7 +232,7 @@ The `bootstrap` attribute includes the following field definitions:
 
 Name                  | Value type | Description
 ----------------------|------------|-------------------------
-`keep`                |  array     | Contents under the APP_DIR directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported.  See {ref}`sec-env-variables` and [pattern syntax](https://pkg.go.dev/path/filepath#Match) for more information.
+`keep`                |  array     | Contents under the APP_DIR directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported. See {ref}`sec-env-variables` and [pattern syntax](https://pkg.go.dev/path/filepath#Match) for more information.
 
 To minimize the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular instance runtime, you must include them in the application image.
 

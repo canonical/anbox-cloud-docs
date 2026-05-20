@@ -14,7 +14,7 @@ The validation tests currently cover the following areas of an Anbox Cloud deplo
 - AMS
   * Instance creation and deletion in different configurations
   * Expected images are present
-  * Configuration is setup as expected
+  * Configuration is set up as expected
 - Anbox Stream Gateway API
   * Session creation and deletion
   * Stress testing

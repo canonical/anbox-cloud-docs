@@ -124,7 +124,7 @@ No users exist within ORY by default. New users can use the sign-up link during 
 :::
 ::::
 
-## Next Steps
+## Next steps
 
 Once you have the issuer URL, client ID, audience API:
 

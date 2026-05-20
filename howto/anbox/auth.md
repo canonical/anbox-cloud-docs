@@ -16,7 +16,7 @@ To be able to configure user permissions in Anbox Cloud, you need to first confi
 ## Configure OpenFGA
 
 ```{important}
-In the Anbox Cloud Appliance, OpenFGA is pre-configured and the steps in this section can be skipped.
+In the Anbox Cloud Appliance, OpenFGA is preconfigured and the steps in this section can be skipped.
 ```
 
 Anbox Management Service (AMS) requires a store ID in OpenFGA to manage authorization data. To generate a store ID in OpenFGA, follow the steps in the [OpenFGA documentation](https://openfga.dev/docs/getting-started/create-store) and create a store.
@@ -51,7 +51,7 @@ To create a TLS identity, run:
 
 {ref}`The security explanation on AMS <exp-security-ams>` provides information about TLS based and token based authentication methods. See {ref}`howto-access-ams-remote` for understanding how to connect to AMS remotely.
 
-You can view the identities you created by using:  
+You can view the identities you created by using:
 
     amc auth identity ls
 

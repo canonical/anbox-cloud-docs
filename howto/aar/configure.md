@@ -39,7 +39,7 @@ The second command returns the name of the generated offer, for example, `my-con
     juju switch <model containing ams>
     juju relate ams <offer name>
 
-## Configuring AAR for the Appliance
+## Configuring AAR for the appliance
 
 If you are using the appliance, you must register the clients manually. Adding clients manually requires access to the machines hosting AMS and the AAR.
 

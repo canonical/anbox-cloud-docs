@@ -46,7 +46,7 @@ Configure the boot disk by selecting **Boot disk > Change** to choose the operat
 
 ![Configure boot disk|690x440](/images/appliance-on-google-cloud/boot-disk-config.png)
 
-Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and attach your subscription(see {ref}`tut-installing-appliance`) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud.
+Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and attach your subscription (see {ref}`tut-installing-appliance`) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud.
 
 ```{note}
 Remember that choosing the Ubuntu Pro option will impact your pricing. Google Cloud provides the resource details and associated costs in the **Pricing summary** section on the **Create an instance** page.

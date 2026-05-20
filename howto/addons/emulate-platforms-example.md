@@ -20,4 +20,4 @@ provides:
     - armeabi-v7a
 ```
 
-This manifest instructs the Anbox Management Service(AMS) that an application can be scheduled on `arm64-v8a` and `armeabi-v7a` systems even if no native support is detected in the APK.
+This manifest instructs the Anbox Management Service (AMS) that an application can be scheduled on `arm64-v8a` and `armeabi-v7a` systems even if no native support is detected in the APK.

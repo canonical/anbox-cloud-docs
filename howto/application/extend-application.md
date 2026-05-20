@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    "description": "How to extend an Anbox Cloud application with custom behaviour using hooks or addons."
+    "description": "How to extend an Anbox Cloud application with custom behavior using hooks or addons."
 ---
 
 (howto-extend-application)=

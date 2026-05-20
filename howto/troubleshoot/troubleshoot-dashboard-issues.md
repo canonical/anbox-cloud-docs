@@ -31,7 +31,7 @@ A session does not start and the session details page displays the following err
 
 See {ref}`howto-view-instance-logs` to find reasons for the session failure.
 
-## Instances(s) in Error status
+## Instance(s) in Error status
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 

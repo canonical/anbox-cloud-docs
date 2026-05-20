@@ -144,7 +144,7 @@ The *Configuration (optional)* section allows you to customize additional fields
 - {ref}`features <ref-feature-flags>`
 - {ref}`sec-application-manifest-watchdog`
 
-The switch *Customize manifest.yaml* at the bottom of the form allows to directly customize your application manifest with a YAML editor.
+The switch *Customize manifest.yaml* at the bottom of the form allows you to directly customize your application manifest with a YAML editor.
 
 There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI command.
 
