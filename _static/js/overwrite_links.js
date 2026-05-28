@@ -1,9 +1,27 @@
 // Replace oldDomain with newDomain
-const oldDomain = 'documentation.ubuntu.com/anbox-cloud';
+const oldDomain = 'canonical-anbox-cloud-docs.readthedocs-hosted.com/';
 const newDomain = 'canonical.com/anbox-cloud/docs';
+
+function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function overwriteMatchingAnchorUrls(container) {
+    if (!container) return;
+
+    const anchors = container.querySelectorAll('a[href], link[href]');
+    const oldDomainRegex = new RegExp(escapeRegExp(oldDomain), 'g');
+
+    anchors.forEach(anchor => {
+        anchor.href = anchor.href.replace(oldDomainRegex, newDomain);
+    });
+}
+
+overwriteMatchingAnchorUrls(document.querySelector('header'));
 
 // Use a MutationObserver to wait for the RTD flyout element to appear in the DOM
 const observer = new MutationObserver(function(mutations, obs) {
+
     const rtdFlyout = document.querySelector('readthedocs-flyout');
     if (!rtdFlyout) return;
 
@@ -13,10 +31,7 @@ const observer = new MutationObserver(function(mutations, obs) {
         const shadowRoot = rtdFlyout.shadowRoot;
         if (!shadowRoot) return;
 
-        const anchors = shadowRoot.querySelectorAll('a');
-        anchors.forEach(anchor => {
-            anchor.href = anchor.href.replace(new RegExp(oldDomain, 'g'), newDomain);
-        });
+        overwriteMatchingAnchorUrls(shadowRoot);
     });
 });
 
