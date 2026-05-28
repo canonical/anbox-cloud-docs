@@ -89,9 +89,7 @@ For example, try setting the temperature property:
 
 Open the HVAC panel (fan icon in the navigation bar at the bottom).
 
-Select *All VHAL properties* on the right.
-
-Search for *HVAC_TEMPERATURE_DISPLAY_UNITS* which indicates the unit of temperature.
+In the VHAL Controls panel on the right, search for *HVAC_TEMPERATURE_DISPLAY_UNITS* which indicates the unit of temperature.
 
 By default, the HVAC panel displays the temperature in Fahrenheit while the VHAL properties show values in Celsius. To switch the HVAC panel display to Celsius, update the value from 49 to 50.
 
