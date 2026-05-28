@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    "description": "How to implement common addon patterns in Anbox Cloud, with worked examples for backup, customisation, and tool installation."
+    "description": "How to implement common addon patterns in Anbox Cloud, with worked examples for backup, customization, and tool installation."
 ---
 
 # Examples

@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    "description": "How to use RenderDoc to capture and analyse GPU frames from Android applications in Anbox Cloud."
+    "description": "How to use RenderDoc to capture and analyze GPU frames from Android applications in Anbox Cloud."
 ---
 
 (howto-debug-graphics-renderdoc)=
