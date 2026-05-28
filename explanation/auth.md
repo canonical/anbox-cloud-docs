@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    "description": "Explanation of authentication and authorisation in Anbox Cloud, covering OIDC and TLS identity types, groups, and permission levels."
+    "description": "Explanation of authentication and authorization in Anbox Cloud, covering OIDC and TLS identity types, groups, and permission levels."
 ---
 
 (exp-auth)=
