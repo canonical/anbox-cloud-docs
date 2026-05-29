@@ -33,6 +33,7 @@ async
 AttributeError
 AudioTrack
 Auth
+Authz
 Authorise
 backend
 balancer
