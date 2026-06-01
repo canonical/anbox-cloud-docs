@@ -1,5 +1,5 @@
 // Replace oldDomain with newDomain
-const oldDomain = 'canonical-anbox-cloud-docs.readthedocs-hosted.com/';
+const oldDomain = 'canonical-anbox-cloud-docs.readthedocs-hosted.com';
 const newDomain = 'canonical.com/anbox-cloud/docs';
 
 function escapeRegExp(value) {
