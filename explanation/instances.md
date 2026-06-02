@@ -85,7 +85,7 @@ If you encounter the `error` or the `unknown` status, use [`amc show <instance_i
 (sec-dev-mode)=
 ## Development mode
 
-AMS allows to start an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
+AMS allows starting an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
 
 When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test addons or develop a platform plugin.
 

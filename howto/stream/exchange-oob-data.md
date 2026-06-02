@@ -138,9 +138,9 @@ This enables data exchange between a service running on the Anbox instance and t
 In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/main/examples/android/out_of_band_v2) project. You can either:
 
 - compile and modify the example application to meet your needs.
-- use the pre-built out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/howto/stream/exchange-oob-data/#run-end-to-end-test).
+- use the prebuilt out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/howto/stream/exchange-oob-data/#run-end-to-end-test).
 
-To build up the communication bridge between an Android application and the web client, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`.  This daemon is responsible for:
+To build up the communication bridge between an Android application and the web client, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`. This daemon is responsible for:
 
  * Registering a system service named `org.anbox.webrtc.IDataProxyService` to the Android system
  * Accepting connection requests from an Android application

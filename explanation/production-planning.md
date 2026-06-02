@@ -39,13 +39,13 @@ Based on your safety protocols, think about where you would want to host your st
 - [etcd recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
 - {ref}`exp-capacity-planning`
 
-## Scalability, High availability, and redundancy
+## Scalability, high availability, and redundancy
 
 With Anbox Cloud, you can scale your deployment to as many clusters and subclusters as you require. It is a good idea to define how many Anbox clusters you want to deploy and how many subclusters per cluster.
 
 You should also assess the number of instances that you require for each model/service. For example, think about the number of Juju controller instances that you need. See [Make a controller highly available](https://documentation.ubuntu.com/juju/latest/howto/manage-controllers/#make-a-controller-highly-available) for more information.
 
-Anbox Cloud comes with support for High Availability (HA) for both Core and the Streaming Stack. You can define HA by adding new Juju units. See {ref}`howto-enable-ha` to plan your HA requirements.
+Anbox Cloud comes with support for high availability (HA) for both Core and the Streaming Stack. You can define HA by adding new Juju units. See {ref}`howto-enable-ha` to plan your HA requirements.
 
 ## Security
 
@@ -75,7 +75,7 @@ Consider how frequently you want your data backed up and where you want to host 
 
 Load balancing solutions can differ based on your deployment model. You should assess the load balancing solution that you want to use and the number of load balancers that is ideal for your deployment model.
 
-## Energy Efficiency
+## Energy efficiency
 
 Anbox Cloud is optimized to use only as much energy as is necessary for an operation to complete. When planning for a production deployment, think through the following questions about energy efficiency to choose the most optimum way possible for your specific requirements:
 
@@ -91,7 +91,7 @@ Although Anbox Cloud does not offer its own observability solution, Anbox Cloud 
 
 To create a customized monitoring solution, see {ref}`ref-prometheus-metrics` for a detailed understanding of available metrics to assess your monitoring needs for the production deployment. See {ref}`exp-performance` to learn about the factors that could influence the performance of your deployment.
 
-## Licensing and Support
+## Licensing and support
 
 You need the Ubuntu Pro subscription to use Anbox Cloud. Depending on the type of subscription you choose, your support model differs. You can refer to the [Ubuntu Pro website](https://ubuntu.com/pro) to learn and compare the different types of subscriptions.
 

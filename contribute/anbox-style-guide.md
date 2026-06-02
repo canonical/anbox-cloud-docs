@@ -67,11 +67,11 @@ Keeping the types of admonishments to a minimum could be simplistic and also red
 
 ## Language
 
-### Oxford/Serial Comma
+### Oxford/Serial comma
 
 The Anbox Cloud documentation does not use the oxford comma but exceptions are allowed for the sake of technical accuracy and ease of readability.
 
-### Hyphens for Prefixes
+### Hyphens for prefixes
 
 Use hyphens when the starting letter of a word is in capital case or starts with a vowel. In other cases, do not hyphenate and use it as a single word.
 

@@ -14,20 +14,20 @@ The validation tests currently cover the following areas of an Anbox Cloud deplo
 - AMS
   * Instance creation and deletion in different configurations
   * Expected images are present
-  * Configuration is setup as expected
+  * Configuration is set up as expected
 - Anbox Stream Gateway API
   * Session creation and deletion
   * Stress testing
 - Streaming
   * Stream selected applications in different configurations from Anbox Cloud while ensuring performance is as expected
 
-## Install Validation Tests
+## Install validation tests
 
 The validation tests are packaged as a snap and are distributed via the Canonical snap store. You can install them via
 
     snap install anbox-cloud-tests
 
-## Configure the Validation Tests
+## Configure the validation tests
 
 To run the validation tests, you must generate a configuration file for it first. The tests include an interactive generator that you can use to generate the configuration file. Run the following command:
 
@@ -100,7 +100,7 @@ Depending on your deployment you can further customize the generated configurati
 
 If you have support for real GPUs, set the `suites.ams.gpu-type` item to the right GPU type (supported values are: `nvidia`, `amd`, `intel`, `none`) and add GPU based instance types (see {ref}`sec-application-manifest-instance-type` for more details) to the `suites.ams.instance-types`.
 
-## Run the Validation Tests
+## Run the validation tests
 
 You can run the validation tests with the following command:
 

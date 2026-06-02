@@ -57,7 +57,7 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 ```{toctree}
 :hidden:
 
-Install the Appliance <install-appliance/index>
+Install the appliance <install-appliance/index>
 Install Anbox Cloud <install/index>
 Set up a custom IdP <setup-custom-idp/index>
 Manage AAR <aar/index>

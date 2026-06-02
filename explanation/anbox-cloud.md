@@ -113,7 +113,7 @@ You also need an additional machine to host the streaming stack control plane wi
 - **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
 - **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
 
-You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as, selecting a game.
+You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as selecting a game.
 
 For example, your web client can be a mobile app used to access the provided Android containers. We provide the {ref}`sec-streaming-sdk` as a starting point for creating a web client. The web dashboard in Anbox Cloud is an example for a frontend service and web client, combined into one.
 
@@ -127,6 +127,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 
 ```{terminal}
 :output-only:
+
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 |           NAME           |  STATE  |          IPV4          | IPV6 |   TYPE    | SNAPSHOTS | LOCATION |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+

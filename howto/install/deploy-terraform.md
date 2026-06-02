@@ -23,7 +23,7 @@ which is also in active development. There may be breaking changes in the future
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
   ```
 
-- A Juju Controller bootstrapped and connected to your Juju Client (CLI). See {ref}`sec-setup-juju-controller` for information on how to setup a Juju Controller.
+- A Juju Controller bootstrapped and connected to your Juju Client (CLI). See {ref}`sec-setup-juju-controller` for information on how to set up a Juju Controller.
 
 ## Install Terraform
 
@@ -118,7 +118,7 @@ Similarly, to scale down your deployment, remove the subcluster from the configu
 Similar to the scaling operation for subclusters, we can also scale the number of LXD nodes per subcluster.
 To add or remove LXD nodes, modify the value of the `lxd_node_count` variable.
 
-## Enable HA Configuration
+## Enable HA configuration
 
 The terraform plan comes with a recommended high availability (HA) configuration for Anbox Cloud deployments. Enable it by setting `enable_ha` to `true`.
 
