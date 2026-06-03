@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to list Anbox Cloud instances with amc ls and filter by application, status, or node."
+---
+
 (howto-list-instances)=
 # List instances
 
@@ -26,7 +32,6 @@ Name            |  Value
 `type`          |  Type of the instance, possible values: "base", "regular"
 `node`          |  Node on which the instance runs
 `status`        |  Instance status, possible values: "created", "prepared", "started", "stopped", "running", "error", "deleted", "unknown"
-
 
 To list all regular instances:
 

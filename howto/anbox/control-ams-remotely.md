@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure AMC to connect to AMS over HTTPS from a remote host."
+---
+
 (howto-access-ams-remote)=
 # Access AMS remotely
 
@@ -87,6 +93,7 @@ amc config set oidc.issuer_url '<issuer url configured for the provider>'
 amc config set oidc.client_id '<client id configured for the client on the identity provider>'
 amc config set oidc.audience '<audience, if configured, for the client>'
 ```
+
 You would have copied the issuer URL, client ID and audience API values when you finished the identity provider setup.
 
 ### Configure AMC to connect to AMS
@@ -117,4 +124,4 @@ After this step, all invocations of the `amc` command use the new remote.
 
 ## Related topics
 
-* {ref}`exp-ams`
+- {ref}`exp-ams`

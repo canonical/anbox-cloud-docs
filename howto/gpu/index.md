@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure GPUs in Anbox Cloud, including benchmarking and enabling NVIDIA MPS to increase instance density."
+---
+
 (howto-gpu)=
 # GPU
 

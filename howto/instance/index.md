@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage Anbox Cloud instances, including creating, configuring, starting, stopping, accessing, and viewing logs."
+---
+
 (howto-instance)=
 # Manage instances
 
@@ -22,4 +28,5 @@ backup-restore-application-data
 configure-geographic-location
 expose-services
 ```
+
 See {ref}`exp-instances` for an introduction to how instances are used in Anbox Cloud.

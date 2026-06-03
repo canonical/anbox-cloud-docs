@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Learn how to build a streaming client for Anbox Cloud. In this tutorial, we set up WebRTC, service accounts, and a Flask proxy server."
+---
+
 (tut-set-up-stream-client)=
 
 # Set up a stream client
@@ -231,7 +237,7 @@ Next, let's make a copy of the Anbox Stream Gateway server to allow the service 
     # We use cat here to ensure gateway.crt has the users permissions
     sudo cat /var/snap/anbox-cloud-appliance/common/gateway/server.crt > gateway.crt
 
-As a final step, download a copy of the Anbox streaming SDK and place it inside `stream-client/static`
+As a final step, download a copy of the Anbox Streaming SDK and place it inside `stream-client/static`
 
     curl -o stream-client/static/anbox-stream-sdk.js \
         https://raw.githubusercontent.com/canonical/anbox-streaming-sdk/refs/heads/main/js/anbox-stream-sdk.js

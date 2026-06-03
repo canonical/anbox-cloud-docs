@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage an Anbox Cloud LXD cluster, including adding nodes, configuring capacity, and scaling up or down."
+---
+
 (howto-manage-cluster)=
 # Manage cluster nodes
 
@@ -8,6 +14,7 @@ See {ref}`exp-clustering` for an introduction to how clustering works in Anbox C
 ```{important}
 Currently, Anbox Cloud Appliance does not support clustering.
 ```
+
 The following how-to guides are available for operations related to clustering in charmed Anbox Cloud deployments:
 
 ```{toctree}

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to enable client-side video upscaling in Anbox Cloud streams using AMD FidelityFX Super Resolution."
+---
+
 (howto-enable-client-side-video-upscaling)=
 # Enable client-side video upscaling
 
@@ -35,7 +41,7 @@ The option `options.experimental.upscaling.fragmentShaders` allows the use of cu
 
 Each shader in the array is applied in order, with the frame buffer from the output of the previous shader being used as the input texture for the next shader. Therefore, the order of shaders in the list is critical to achieving the desired post-processing effects. This provides greater flexibility for advanced video upscaling workflows by combining multiple shaders in a single rendering pipeline.
 
-When using a custom fragment shader in WebGL, you need to manage the following pre-defined variables to interact with textures and control rendering:
+When using a custom fragment shader in WebGL, you need to manage the following predefined variables to interact with textures and control rendering:
 
 - **uSampler**
   Type: sampler2D
@@ -51,6 +57,6 @@ When using a custom fragment shader in WebGL, you need to manage the following p
 
 ## Related topics
 
-* {ref}`exp-application-streaming`
-* {ref}`tut-set-up-stream-client`
-* {ref}`sec-streaming-sdk`
+- {ref}`exp-application-streaming`
+- {ref}`tut-set-up-stream-client`
+- {ref}`sec-streaming-sdk`

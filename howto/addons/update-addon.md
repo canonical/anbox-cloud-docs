@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to update an Anbox Cloud addon to a new version and control how running instances receive the update."
+---
+
 (howto-update-addons)=
 # Update addons
 
@@ -6,6 +12,7 @@ You can update an existing addon with a new version by using the following comma
 ```bash
 amc addon update foo ./foo-addon
 ```
+
 ```{note}
 Due to Snap strict confinement, the addon must be located in your home directory.
 ```

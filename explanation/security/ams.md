@@ -1,11 +1,17 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of AMS security, which uses TLS transport encryption and mutual TLS or token authentication to secure API access."
+---
+
 (exp-security-ams)=
 # AMS
 
 Anbox Management Service (AMS) is using cryptographic technology for:
 
-* TLS transport encryption
-* Mutual TLS based authentication
-* Token based authentication
+- TLS transport encryption
+- Mutual TLS based authentication
+- Token based authentication
 
 ## TLS transport encryption
 
@@ -29,6 +35,6 @@ Individual Anbox instances have access to a limited set of API endpoints exposed
 
 ## Packages used
 
-* [Go standard library](https://pkg.go.dev/std)
-* [`github.com/golang-jwt/jwt`](https://github.com/golang-jwt/jwt)
-* [OIDC](https://github.com/zitadel/oidc)
+- [Go standard library](https://pkg.go.dev/std)
+- [`github.com/golang-jwt/jwt`](https://github.com/golang-jwt/jwt)
+- [OIDC](https://github.com/zitadel/oidc)

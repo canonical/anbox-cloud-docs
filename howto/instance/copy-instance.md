@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to copy an Anbox Cloud instance to duplicate its current state for testing or debugging."
+---
+
 (howto-copy-instance)=
 
 # Copy an instance
@@ -6,9 +12,9 @@ Copying an instance allows you to create a copy of an existing instance. This is
 
 Important considerations before copying instances:
 
-* Resource availability: Ensure the cluster has enough capacity (CPU, GPU, RAM) to host the new copy.
-* State awareness: Understand that a copied instance will inherit the file system state of the source.
-* Log isolation: When copying an instance in an error state, the new instance is a fresh clone and will not include logs from the source instance.
+- Resource availability: Ensure the cluster has enough capacity (CPU, GPU, RAM) to host the new copy.
+- State awareness: Understand that a copied instance will inherit the file system state of the source.
+- Log isolation: When copying an instance in an error state, the new instance is a fresh clone and will not include logs from the source instance.
 
 ## Copy an instance
 
@@ -37,9 +43,9 @@ Exit the instance shell when you're done.
 
 Before initializing a copy, verify the status of the source instance. A copy operation is permitted only if the instance is in one of the following states:
 
-* `Stopped`
-* `Running` (requires --force or interactive confirmation to stop the instance)
-* `Error` (requires --force or interactive confirmation to acknowledge logs will not be copied)
+- `Stopped`
+- `Running` (requires --force or interactive confirmation to stop the instance)
+- `Error` (requires --force or interactive confirmation to acknowledge logs will not be copied)
 
 Check the instance status with:
 
@@ -105,10 +111,9 @@ Verify the instance you want to copy is pre-selected in the *Source* section of 
 
 Once the instance is running, visit the *Terminal* tab from its *Instance details* page to confirm that your modifications are present.
 
-
 ## Related topics
 
-* {ref}`howto-create-instance`
-* {ref}`howto-start-instance`
-* {ref}`howto-stop-instance`
-* {ref}`howto-publish-instance-as-image`
+- {ref}`howto-create-instance`
+- {ref}`howto-start-instance`
+- {ref}`howto-stop-instance`
+- {ref}`howto-publish-instance-as-image`

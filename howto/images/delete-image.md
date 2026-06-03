@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to delete an Anbox Cloud image from AMS using amc image delete."
+---
+
 (howto-delete-image)=
 # Delete an image
 
@@ -18,7 +24,6 @@ Images that are synchronized from the image server are marked as immutable. To d
 
 If you're not using `--force`, the command will fail.
 
-
 Specific image versions can be deleted too, which is useful when all applications were migrated to a newer version and the old version is not needed anymore. The only requirement is that a single version of the image is available at all times.
 
 The following command removes version `1` of the image with the name `image-name`:
@@ -34,7 +39,7 @@ To delete an image, click the *Delete* button ( ![delete application icon](/imag
 
 To delete a specific version, go to *Images > Image details > Versions >  ![delete application icon](/images/icons/delete-icon.png)*.
 
-Images can not be deleted in the following scenarios:
+Images cannot be deleted in the following scenarios:
 
 - Default images cannot be deleted. To delete a default image, change the default to another image of the same type, then proceed with the deletion.
 - Images currently in use by applications cannot be deleted until all the associated applications are deleted first.

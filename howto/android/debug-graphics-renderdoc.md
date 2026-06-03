@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to use RenderDoc to capture and analyze GPU frames from Android applications in Anbox Cloud."
+---
+
 (howto-debug-graphics-renderdoc)=
 # Debug graphics with Renderdoc
 

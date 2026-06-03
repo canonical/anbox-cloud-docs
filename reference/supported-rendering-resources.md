@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for supported GPU hardware and rendering APIs in Anbox Cloud."
+---
+
 (ref-rendering-resources)=
 # Supported rendering resources
 
@@ -12,9 +18,9 @@ Currently Anbox Cloud does not support GPU for virtual machines.
 
 Being a cloud solution, Anbox Cloud is optimized for GPUs that are designed for a data center. We currently support the following GPU vendors:
 
-* NVIDIA
-* Intel
-* AMD
+- NVIDIA
+- Intel
+- AMD
 
 Mixing GPUs from different vendors is not supported.
 
@@ -43,17 +49,17 @@ See {ref}`ref-component-versions` to refer to the actual version supported for a
 
 Anbox Cloud can make use of different [platforms](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) to customize its behavior and currently supports 3 platforms.
 
-| Name     	| Behavior                                                                                                                                            	|
-|----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching an instance.                                                                       	|
-| `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVIDIA GPUs as well as LLVMpipe based software rendering if no GPU is detected.  Support audio input/output. |
-| `swrast` 	| (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.    |
+| Name      | Behavior                                                                                                                                             |
+|---------- |----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `null`    |  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching an instance.                                                                        |
+| `webrtc`  | Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVIDIA GPUs as well as LLVMpipe based software rendering if no GPU is detected. Supports audio input/output. |
+| `swrast`  | (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.    |
 
 For rendering, you can use the `swrast` or the `null` platforms depending on your requirements.
 
 `swrast` is a software rasterization platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilized for use cases that require a visual output without a GPU. The rendering pipe for the `swrast` or `null` platform is not different than the one for the `webrtc` platform with NVIDIA GPU support except that it is irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
 
-`null` is an OpenGL headless platform that makes use of the rendering backend of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing. It does not perform software rendering and does not produce any graphic output. Hence, the overhead on the CPU when using `null` platform is significantly low which makes it a good candidate for all use cases where a graphic output is not necessary.
+`null` is an OpenGL headless platform that makes use of the rendering backend of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as automation testing. It does not perform software rendering and does not produce any graphic output. Hence, the overhead on the CPU when using `null` platform is significantly low which makes it a good candidate for all use cases where a graphic output is not necessary.
 
 The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when an instance is launched with `--enable-graphics`, or via the Anbox Stream Gateway.
 
@@ -69,10 +75,10 @@ Support for API extensions on all supported GPUs depends on the availability of 
 
 The following OpenGL ES extensions are known to be unsupported by all used GPU drivers:
 
-* [`GL_EXT_shader_framebuffer_fetch`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
-* [`GL_EXT_shader_framebuffer_fetch_non_coherent`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
+- [`GL_EXT_shader_framebuffer_fetch`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
+- [`GL_EXT_shader_framebuffer_fetch_non_coherent`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 
 ## Related topics
 
-* {ref}`exp-rendering-architecture`
-* {ref}`exp-platforms`
+- {ref}`exp-rendering-architecture`
+- {ref}`exp-platforms`

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud release notes, with links to per-version changelogs."
+---
+
 (ref-release-notes)=
 # Release notes
 
@@ -15,15 +21,15 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 ## Upcoming release roadmap
 
-The current, supported minor release is **1.29.0** and the next one will be **1.30.0** expected in May 2026.
+The current, supported minor release is **1.29.0** and the next one will be **1.30.0** expected in June 2026.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| May 20, 2026 | Anbox Cloud 1.30.0 | * New features<br/> * Android security updated<br/> * Bug fixes |
-| June 17, 2026 | Anbox Cloud 1.30.1 | * Android security updated<br/> * Bug fixes |
-| July 15, 2026 | Anbox Cloud 1.30.2 | * Android security updated<br/> * Bug fixes |
+| June 17, 2026 | Anbox Cloud 1.30.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
+| July 15, 2026 | Anbox Cloud 1.30.1 | *Android security updates*<br/>Bug fixes |
+| August 19, 2026 | Anbox Cloud 1.30.2 | *Android security updates*<br/>Bug fixes |
 
 ## Release and support policy
 
@@ -43,18 +49,17 @@ To ensure you receive latest security updates and bug fixes, you should upgrade 
 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
-
 ### What's new in 1.29.x?
 
 Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
 
-* New instance copy feature for near-instantaneous cloning of existing instances
-* Instance publishing support to create reusable images from running or stopped instances
-* Runtime bitrate control for WebRTC streaming
-* Optimized disk quota with two-tier validation
-* Migration to modernized charms, including charmed-etcd and self-signed-certificates
-* Fine-grained authorization through OpenFGA integration
-* Bug fixes
+- New instance copy feature for near-instantaneous cloning of existing instances
+- Instance publishing support to create reusable images from running or stopped instances
+- Runtime bitrate control for WebRTC streaming
+- Optimized disk quota with two-tier validation
+- Migration to modernized charms, including charmed-etcd and self-signed-certificates
+- Fine-grained authorization through OpenFGA integration
+- Bug fixes
 
 <details><summary>Click to view earlier releases' notes</summary>
 
@@ -122,7 +127,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
 |November 30 2021|[Anbox Cloud 1.12.1](1.12.1.md)|
 |November 16 2021|[Anbox Cloud 1.12.0](1.12.0.md)|
 |November 1 2021|[Anbox Cloud 1.11.4](1.11.4.md)|
-|October 18 2021|[Anbox cloud 1.11.3](1.11.3.md)|
+|October 18 2021|[Anbox Cloud 1.11.3](1.11.3.md)|
 |September 20 2021|[Anbox Cloud 1.11.2](1.11.2.md)|
 |August 17 2021|[Anbox Cloud 1.11.1](1.11.1.md)|
 |August 5 2021|[Anbox Cloud 1.11.0](1.11.0.md)|
@@ -163,6 +168,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
 |January 2019|[Anbox Cloud 1.1.0](1.1.0.md)|
 |December 2018|[Anbox Cloud 1.0.1](1.0.1.md)|
 |November 2018|[Anbox Cloud 1.0.0](1.0.0.md)|
+
 </details>
 
 ## Security policy

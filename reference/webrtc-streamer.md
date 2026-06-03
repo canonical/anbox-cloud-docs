@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for WebRTC streamer configuration in Anbox Cloud."
+---
+
 (ref-webrtc)=
 # WebRTC streamer
 
@@ -27,8 +33,8 @@ As different resolutions require different bitrates, the bitrate limits allow de
 
 The WebRTC streamer will pick the closest limit for the configured resolution by comparing the number of pixels and frame rate. The following rules apply:
 
-* If more than one limit is specified, the WebRTC streamer selects the nearest limit with a number of pixels higher than the number of pixels that a frame of the given resolution has.
-* If multiple limits have the same number of pixels, the streamer will sort limits descending by frame rate and apply the nearest.
+- If more than one limit is specified, the WebRTC streamer selects the nearest limit with a number of pixels higher than the number of pixels that a frame of the given resolution has.
+- If multiple limits have the same number of pixels, the streamer will sort limits descending by frame rate and apply the nearest.
 
 The JSON object defining a bitrate limit has the following possible fields:
 

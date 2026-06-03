@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to run automated tests for Android applications at scale in Anbox Cloud using raw instances."
+---
+
 (howto-test-application)=
 # Test your application
 
@@ -42,9 +48,9 @@ In the above output, the IP address and the exposed port of the running instance
 
 ## Connect Appium with Android Instance
 
-As the endpoint `10.226.4.168:10000/tcp` shown above is not exposed to the public internet, the Android instance is not accessible from outside of the subnet the LXD instance is on. To connect to the exposed ADB port you have to setup a secure and encrypted SSH tunnel to the LXD machine the instance is running on. For that you should have an SSH client available you can use to setup the tunnel.
+As the endpoint `10.226.4.168:10000/tcp` shown above is not exposed to the public internet, the Android instance is not accessible from outside of the subnet the LXD instance is on. To connect to the exposed ADB port you have to set up a secure and encrypted SSH tunnel to the LXD machine the instance is running on. For that you should have an SSH client available you can use to set up the tunnel.
 
-On a Linux system you can setup a tunnel with the following command:
+On a Linux system you can set up a tunnel with the following command:
 
     ssh -NL 10000:10.226.4.168:10000 ubuntu@10.180.45.183
 
@@ -57,8 +63,8 @@ Now you can connect to the remote machine via ADB with the following command:
 You should see output similar to the following:
 
 ```bash
-* daemon not running; starting now at tcp:5037
-* daemon started successfully
+- daemon not running; starting now at tcp:5037
+- daemon started successfully
 connected to localhost:10000
 ```
 

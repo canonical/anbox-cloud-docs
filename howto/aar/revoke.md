@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to revoke a compromised client certificate from the Anbox Application Registry."
+---
+
 (howto-revoke-aar)=
 
 # Revoke a client
@@ -16,6 +22,6 @@ This operation is irreversible. You cannot reverse a revocation or add the certi
 
 ## Related topics
 
-* {ref}`exp-aar`
-* {ref}`howto-configure-aar`
-* {ref}`howto-deploy-aar`
+- {ref}`exp-aar`
+- {ref}`howto-configure-aar`
+- {ref}`howto-deploy-aar`

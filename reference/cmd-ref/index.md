@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud command-line tools: amc, anbox-cloud-appliance, and aar."
+---
+
 (ref-cmd-ref)=
 # Command reference
 

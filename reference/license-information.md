@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud licensing, with guidance on finding copyright and license files."
+---
+
 (ref-license-information)=
 # License information
 The copyright and license information of Anbox Cloud can be found within the container or the virtual machine at `/usr/share/doc/anbox/copyright`.

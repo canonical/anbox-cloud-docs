@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to stream an Anbox Cloud application to a browser via the dashboard or a custom client."
+---
+
 (howto-stream-applications)=
 # Stream applications
 
@@ -14,9 +20,10 @@ If you are using the `amc` CLI, you can use the `--enable-streaming` option at t
 When the `--enable-streaming` option is specified, the Anbox Management Service (AMS) automatically creates a streaming session for the instance. You can find the id of the session as a tag on the instance in the format `session=<id>`.
 
 To further customize the streaming configuration, use the following arguments:
-* `--display-size`
-* `--display-density`
-* `--fps`
+
+- `--display-size`
+- `--display-density`
+- `--fps`
 
 For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
 
@@ -67,7 +74,6 @@ The downloaded `.csv` file has the following statistics:
 | `audio-packetslost` | Number of audio packets lost |
 
 ### Sharing a streaming session
-
 
 ::::{tab-set}
 :::{tab-item} CLI
@@ -125,5 +131,5 @@ In the *Logs* tabs, you can toggle auto-scroll, pause and resume log messages, c
 
 ## Related topics
 
-* {ref}`tut-set-up-stream-client`
-* {ref}`howto-access-stream-gateway`
+- {ref}`tut-set-up-stream-client`
+- {ref}`howto-access-stream-gateway`

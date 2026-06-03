@@ -1,0 +1,50 @@
+name: Sync main to release branches
+
+# Sync main into release branches via PR
+#
+# On every push to main, this workflow ensures that an open PR exists for each
+# release branch (next-release, next-patch).
+#
+# 1. A push to main triggers this workflow.
+# 2. For each release branch, if no open PR exists, one is created. GitHub only
+#    allows one open PR per head/base pair, so any subsequent push to main
+#    (should) automatically updates the existing PR.
+# 3. Once the PR is merge, the next push to main will open a new PR.
+#
+# Running it manually is also possible, if for some reason it didn't run the
+# first time.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  sync:
+    name: Sync PR for ${{ matrix.branch }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    strategy:
+      matrix:
+        branch:
+          - next-release
+          - next-patch
+    steps:
+      - name: Open PR if none exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          # Check if we already have an open PR
+          if [[ -z "$(gh pr list --base ${{ matrix.branch }} --head main --json number -q '.[0].number')" ]]; then
+            # Or create one
+            gh pr create \
+              --base ${{ matrix.branch }} \
+              --head main \
+              --title "chore: sync main into ${{ matrix.branch }}" \
+              --body "Automated PR to sync \`main\` into \`${{ matrix.branch }}\`."
+          fi

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to deploy Anbox Cloud with Terraform using the Juju provider for infrastructure-as-code deployments."
+---
+
 (howto-deploy-anbox-terraform)=
 # Deploy with Terraform
 
@@ -10,12 +16,14 @@ which is also in active development. There may be breaking changes in the future
 
 ## Prerequisites
 
-* A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
+- A machine running a {ref}`supported Ubuntu version <ref-requirements>`.
+- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro website](https://ubuntu.com/pro) to retrieve it.
+
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an Ubuntu Pro subscription.
   ```
-* A Juju Controller bootstrapped and connected to your Juju Client (CLI). See {ref}`sec-setup-juju-controller` for information on how to setup a Juju Controller.
+
+- A Juju Controller bootstrapped and connected to your Juju Client (CLI). See {ref}`sec-setup-juju-controller` for information on how to set up a Juju Controller.
 
 ## Install Terraform
 
@@ -110,7 +118,7 @@ Similarly, to scale down your deployment, remove the subcluster from the configu
 Similar to the scaling operation for subclusters, we can also scale the number of LXD nodes per subcluster.
 To add or remove LXD nodes, modify the value of the `lxd_node_count` variable.
 
-## Enable HA Configuration
+## Enable HA configuration
 
 The terraform plan comes with a recommended high availability (HA) configuration for Anbox Cloud deployments. Enable it by setting `enable_ha` to `true`.
 
@@ -142,4 +150,3 @@ Set the `enable_cos` configuration to `true` to deploy the required resources/ch
 The plan only deploys the `grafana-agent` charm internally in the models and creates the required relations with other anbox charms. The plan does NOT create Juju relations for integrating with a COS model deployed externally.
 If you want to use an external COS model, follow the instructions as described in the [COS tutorial](https://charmhub.io/topics/canonical-observability-stack/tutorials/instrumenting-machine-charms#step-4-relate-grafana-agent-to-cos-lite-prometheus-loki-and-grafana) to create those relations manually.
 ```
-

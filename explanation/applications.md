@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of applications in Anbox Cloud, covering how AMS manages Android APKs, application lifecycle, versioning, and instances."
+---
+
 (exp-applications)=
 # Applications
 
@@ -7,8 +13,8 @@ Applications are one of the main objects managed by Anbox Management Service (AM
 
 To run on the Anbox Cloud platform, applications must fulfill the following requirements:
 
-* The application *should not* download any additional resources on regular startup to contribute to short startup times. If additional resources need to be downloaded, this can be done during the application bootstrap phase.
-* The application *must not* require the *Google Play services* to be available as Anbox Cloud does not include them.
+- The application *should not* download any additional resources on regular startup to contribute to short startup times. If additional resources need to be downloaded, this can be done during the application bootstrap phase.
+- The application *must not* require the *Google Play services* to be available as Anbox Cloud does not include them.
 
 If your application fulfills these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
@@ -29,14 +35,13 @@ The application status reflects the status of its latest application version.
 
 If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See {ref}`howto-view-instance-logs`). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <howto-view-instance-logs>`.
 
-
 (sec-application-bootstrap)=
 ## Bootstrap process
 
 When creating an application from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronizes it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
 
-  * It enables AMS to launch an instance for an application without installing the APK every time.
-  * It dramatically speeds up the startup time of a regular instance.
+- It enables AMS to launch an instance for an application without installing the APK every time.
+- It dramatically speeds up the startup time of a regular instance.
 
 Furthermore, an application is synchronized within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through scaling down or lost from the cluster unexpectedly.
 
@@ -66,11 +71,11 @@ In general, the bootstrap process goes through the following steps in order:
 
 The bootstrap process fails if one or more of the following situations happen:
 
-* If one of the steps in the bootstrap process fails, AMS will interrupt the bootstrap process and hence the entire process fails. As a result, the status of the base instance will be set to `error` and the application status is set to `error` as well.
+- If one of the steps in the bootstrap process fails, AMS will interrupt the bootstrap process and hence the entire process fails. As a result, the status of the base instance will be set to `error` and the application status is set to `error` as well.
 
-* An application crash or ANR upon APK installation causes the bootstrap process to terminate abnormally and the application status is set to `error`.
+- An application crash or ANR upon APK installation causes the bootstrap process to terminate abnormally and the application status is set to `error`.
 
-* The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the instance status is set to `error`.
+- The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the instance status is set to `error`.
 
 When a base instance runs into an `error` status, you can find the issue by checking the error message with `amc show <instance ID>`:
 
@@ -100,14 +105,14 @@ When the application bootstrap succeeds, the base instance is automatically remo
 
 ## Related topics
 
-* {ref}`exp-addons`
-* {ref}`exp-resources-presets`
-* {ref}`tut-create-virtual-device`
-* {ref}`howto-create-application`
-* {ref}`howto-delete-application`
-* {ref}`howto-list-applications`
-* {ref}`howto-scale-down-cluster`
-* {ref}`howto-test-application`
-* {ref}`howto-update-application`
-* {ref}`howto-wait-for-application`
-* {ref}`ref-application-manifest`
+- {ref}`exp-addons`
+- {ref}`exp-resources-presets`
+- {ref}`tut-create-virtual-device`
+- {ref}`howto-create-application`
+- {ref}`howto-delete-application`
+- {ref}`howto-list-applications`
+- {ref}`howto-scale-down-cluster`
+- {ref}`howto-test-application`
+- {ref}`howto-update-application`
+- {ref}`howto-wait-for-application`
+- {ref}`ref-application-manifest`

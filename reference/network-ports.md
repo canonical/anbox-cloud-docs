@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for network ports used by Anbox Cloud services."
+---
+
 (ref-network-ports)=
 # Network ports
 

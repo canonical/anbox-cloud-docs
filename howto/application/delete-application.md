@@ -1,7 +1,14 @@
+---
+myst:
+  html_meta:
+    "description": "How to delete an Anbox Cloud application and all its versions using the dashboard or CLI."
+---
+
 (howto-delete-application)=
 # Delete an application
 
 When an application is no longer needed, it can be fully removed from Anbox Cloud. However, be mindful of the consequences that come with removing an application such as:
+
 - Removal of associated base instances. Note that the base instance could first enter an error state before being cleaned up.
 - Removal of all the versions of the deleted application.
 

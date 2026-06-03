@@ -1,10 +1,16 @@
+---
+myst:
+  html_meta:
+    "description": "How to extend an Anbox Cloud application with custom behavior using hooks or addons."
+---
+
 (howto-extend-application)=
 # Extend an application
 
 You can extend an application either by adding hooks directly to the application or by creating an addon that includes one or more hooks and adding it to the application.
 
-* If you want to extend one application only, you should use application hooks. They are easy and quick to set up and do not require creating an addon.
-* If your extension contains common functionality that you want to share among multiple applications, you should create an addon that includes one or more hooks. You can then add the addon to all applications that should use the functionality.
+- If you want to extend one application only, you should use application hooks. They are easy and quick to set up and do not require creating an addon.
+- If your extension contains common functionality that you want to share among multiple applications, you should create an addon that includes one or more hooks. You can then add the addon to all applications that should use the functionality.
 
 For both options, you must create one or more hooks first. The options differ in how you add these hooks to your application.
 
@@ -23,6 +29,7 @@ The general steps for creating a hook are as follows:
    - Supported hooks are `pre-start`, `post-start` and `post-stop`.
    - Use the `INSTANCE_TYPE` variable to distinguish between regular and base instances.
    ```
+
 1. Make the hook file executable.
 
 You must then add the hook file to your application, either as an application hook or through an addon.
@@ -61,6 +68,7 @@ Complete the following steps to create a hook that changes the Android system lo
    ```{important}
    In the file, replace `<working_dir>` with the environment variable (see {ref}`sec-env-variables`) that points to the current working directory for the hook. If you plan to run the hook as an application hook, use `$APP_DIR`. If you plan to run the hook through an addon, use `$ADDON_DIR`.
    ```
+
 1. Make all files in the `hooks` directory executable:
 
         cd .. && chmod +x hooks/*
@@ -102,6 +110,7 @@ Complete the following steps to create a hook that replaces the standard Android
    ```{important}
    In the file, replace `<working_dir>` with the environment variable that points to the current working directory for the hook. If you plan to run the hook as an application hook, use `$APP_DIR`. If you plan to run the hook through an addon, use `$ADDON_DIR`.
    ```
+
 1. Make all files in the `hooks` directory executable:
 
         cd .. && chmod +x hooks/*
@@ -154,6 +163,7 @@ If you want to use your hooks in multiple applications, you should include them 
    description: |
      <Description of your addon>
    ```
+
 1. Ensure that the folder structure looks like this:
 
    ```
@@ -163,6 +173,7 @@ If you want to use your hooks in multiple applications, you should include them 
    |__ hooks
        |__ <hook files>
    ```
+
 1. Add the addon:
 
         amc addon add my-addon .
@@ -181,5 +192,6 @@ addons: [my-addon]
 The application will now execute the hook and you should see that, for example, the system locale is changed or the standard Android launcher is replaced.
 
 ## Related topics
-* {ref}`exp-addons`
-* {ref}`howto-create-addon`.
+
+- {ref}`exp-addons`
+- {ref}`howto-create-addon`.
