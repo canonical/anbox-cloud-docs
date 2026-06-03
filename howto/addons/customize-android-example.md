@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to use anbox-shell inside a prepare hook to configure the Android system before your application starts."
+---
+
 (howto-customize-android-example)=
 # Example: Customize Android
 

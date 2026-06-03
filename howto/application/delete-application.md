@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to delete an Anbox Cloud application and all its versions using the dashboard or CLI."
+---
+
 (howto-delete-application)=
 # Delete an application
 

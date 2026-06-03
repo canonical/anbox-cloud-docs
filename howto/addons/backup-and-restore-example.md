@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to use an Anbox Cloud addon to back up application data on instance stop and restore it on start."
+---
+
 (howto-backup-restore-example)=
 # Example: Back up data
 When an instance is stopped, all the data and logs produced during the runtime are lost. To avoid this, you can use hooks to back up and restore any type of data you want.

@@ -1,9 +1,15 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of streaming stack security in Anbox Cloud, which uses WebRTC with mandatory end-to-end encryption."
+---
+
 (exp-security-streaming)=
 # Streaming
 
 The Anbox Cloud Streaming Stack is based on [WebRTC](https://webrtc.org/). WebRTC forbids unencrypted communication, which enforces a certain security level.
 
-For communication with the Anbox stream gateway, token-based authentication is used. This allows components that need to communicate with the stream gateway to verify their identity, and in return receive a unique access token. During the life of the token, it acts as a means to verify the identity of the services that handle communication between the applications and the gateway.
+For communication with the Anbox Stream Gateway, token-based authentication is used. This allows components that need to communicate with the stream gateway to verify their identity, and in return receive a unique access token. During the life of the token, it acts as a means to verify the identity of the services that handle communication between the applications and the gateway.
 
 Of course, the overall streaming security relies on a secure client implementation. This is ensured by Anbox Cloud's web dashboard, but other client implementations might have weaknesses. However, since encryption is a mandatory feature of WebRTC, developers are forced to consider security aspects when implementing a client application.
 
@@ -14,9 +20,9 @@ See [A Study of WebRTC Security](https://webrtc-security.github.io/) for a detai
 
 Anbox Streaming Gateway is using cryptographic technology for:
 
-* TLS transport encryption
-* Mutual TLS based authentication
-* Token based authentication
+- TLS transport encryption
+- Mutual TLS based authentication
+- Token based authentication
 
 ### TLS transport encryption
 
@@ -32,17 +38,17 @@ Users can generate API tokens to authenticate with the HTTP API provided by the 
 
 ### Packages used
 
-* [Go standard library](https://pkg.go.dev/std)
-* [`gopkg.in/macaroon.v2`](https://gopkg.in/macaroon.v2)
+- [Go standard library](https://pkg.go.dev/std)
+- [`gopkg.in/macaroon.v2`](https://gopkg.in/macaroon.v2)
 
 (sec-security-crypto-stream-agent)=
 ## Cryptography used by the stream agent
 
 Anbox Streaming Agent is using cryptographic technology for:
 
-* TLS transport encryption
-* Mutual TLS based authentication
-* Token based authentication
+- TLS transport encryption
+- Mutual TLS based authentication
+- Token based authentication
 
 ### TLS transport encryption
 
@@ -62,5 +68,5 @@ For authentication purposes with the [Coturn TURN server](https://github.com/cot
 
 ### Packages used
 
-* [Go standard library](https://pkg.go.dev/std)
-* [`gopkg.in/macaroon.v2`](https://gopkg.in/macaroon.v2)
+- [Go standard library](https://pkg.go.dev/std)
+- [`gopkg.in/macaroon.v2`](https://gopkg.in/macaroon.v2)

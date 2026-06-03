@@ -1,6 +1,10 @@
 ---
 orphan: true
+myst:
+  html_meta:
+    "description": "Reference documentation for MyST Markdown syntax used in Anbox Cloud docs."
 ---
+
 (cheat-sheet-myst)=
 # Markdown/MyST cheat sheet
 

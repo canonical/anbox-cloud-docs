@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install an Android APK as a system application in Anbox Cloud for elevated privileges."
+---
+
 (howto-install-apk-system-app)=
 # Install an APK as a system app
 

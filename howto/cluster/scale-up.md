@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to add a new node to an Anbox Cloud LXD cluster using Juju to increase instance capacity."
+---
+
 (howto-scale-up-cluster)=
 # Scale up a LXD cluster
 

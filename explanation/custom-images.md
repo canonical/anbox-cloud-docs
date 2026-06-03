@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of custom Anbox Cloud images, which let automotive OEMs build tailored AAOS infotainment experiences."
+---
+
 (exp-custom-images)=
 # Custom images
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud component versions across releases."
+---
+
 (ref-component-versions)=
 # Component versions
 

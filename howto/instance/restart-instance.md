@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to restart an Anbox Cloud instance with amc restart to apply configuration changes."
+---
+
 (howto-restart-instance)=
 # Restart an instance
 
@@ -17,6 +23,6 @@ By default, the `amc restart` command waits 5 minutes for both stopping and star
 
 ## Related topics
 
-* {ref}`howto-create-instance`
-* {ref}`howto-start-instance`
-* {ref}`howto-stop-instance`
+- {ref}`howto-create-instance`
+- {ref}`howto-start-instance`
+- {ref}`howto-stop-instance`

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to contribute to Anbox Cloud documentation by fixing errors, adding content, or raising issues."
+---
+
 (contribute)=
 # Contribute to Anbox Cloud documentation
 

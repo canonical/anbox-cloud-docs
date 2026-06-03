@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to build a custom Anbox Cloud platform plugin with the Platform SDK."
+---
+
 (howto-develop-platform-plugin)=
 # Develop a platform plugin
 
@@ -127,6 +133,6 @@ Use the `--vm` option to launch a VM instance.
 
 ## Related topics
 
-* {ref}`exp-addons`
-* {ref}`exp-instances`
-* {ref}`howto-create-addon`
+- {ref}`exp-addons`
+- {ref}`exp-instances`
+- {ref}`howto-create-addon`

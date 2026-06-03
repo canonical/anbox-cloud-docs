@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to stream an Anbox Cloud application to a browser via the dashboard or a custom client."
+---
+
 (howto-stream-applications)=
 # Stream applications
 
@@ -15,9 +21,9 @@ When the `--enable-streaming` option is specified, the Anbox Management Service 
 
 To further customize the streaming configuration, use the following arguments:
 
-* `--display-size`
-* `--display-density`
-* `--fps`
+- `--display-size`
+- `--display-density`
+- `--fps`
 
 For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
 
@@ -125,5 +131,5 @@ In the *Logs* tabs, you can toggle auto-scroll, pause and resume log messages, c
 
 ## Related topics
 
-* {ref}`tut-set-up-stream-client`
-* {ref}`howto-access-stream-gateway`
+- {ref}`tut-set-up-stream-client`
+- {ref}`howto-access-stream-gateway`

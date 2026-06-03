@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to customize a charmed Anbox Cloud deployment using Juju overlay files or modified bundle files."
+---
+
 (howto-customize-installation)=
 # Customize installation
 
@@ -28,7 +34,7 @@ An [overlay bundle](https://documentation.ubuntu.com/juju/latest/reference/bundl
         series: noble
         constraints: "instance-type=m5.xlarge root-disk=100G"
 
-See the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/ ) for more information about Juju's bundle format and valid YAML.
+See the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/) for more information about Juju's bundle format and valid YAML.
 
 To use one or more overlay files with the Anbox Cloud bundle, specify them during the deployment:
 
@@ -84,7 +90,7 @@ Another way to change or customize a deployment is to store the YAML bundle file
 
 The latest version of the Anbox Cloud bundles can be retrieved by fetching the current stable version from [Charmhub](https://charmhub.io/). See {ref}`sec-juju-bundles` for more details on the available bundles.
 
-Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/ ).
+Be careful when editing the YAML file, because the format is very strict. For more details on the format used by Juju, see the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/).
 
 ### Retrieve a bundle from a running model
 

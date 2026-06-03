@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to launch an Anbox Cloud instance from an application or raw image using amc launch or amc init."
+---
+
 (howto-create-instance)=
 # Create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
@@ -20,8 +26,8 @@ To launch an application or an image, Anbox Cloud creates an instance for it. To
 
 Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
 
-* `amc launch` creates and starts the instance.
-* `amc init` only creates the instance.
+- `amc launch` creates and starts the instance.
+- `amc init` only creates the instance.
 
 By default, the instance will run headless.
 
@@ -149,7 +155,7 @@ To launch an instance with development mode enabled, add the `--devmode` flag to
 
 ## Launch an instance without disk reservation
 
-By default, AMS reserves the full logical disk quota to ensure guaranteed disk space availability on the target node. In deployments backed by the ZFS storage driver, which provides Copy-on-Write(CoW) capabilities, you can use the `--no-disk-reserve` flag to achieve higher instance density by skipping strict logical quota checks:
+By default, AMS reserves the full logical disk quota to ensure guaranteed disk space availability on the target node. In deployments backed by the ZFS storage driver, which provides Copy-on-Write (CoW) capabilities, you can use the `--no-disk-reserve` flag to achieve higher instance density by skipping strict logical quota checks:
 
     amc launch --no-disk-reserve <application_id>
 
@@ -189,6 +195,6 @@ The instance details page also contains all the available actions including stre
 
 ## Related topics
 
-* {ref}`exp-application-streaming`
-* {ref}`exp-instances`
-* {ref}`howto-access-instance`
+- {ref}`exp-application-streaming`
+- {ref}`exp-instances`
+- {ref}`howto-access-instance`

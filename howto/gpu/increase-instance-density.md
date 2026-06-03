@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to increase GPU-accelerated instance density on NVIDIA hardware by enabling Multi-Process Service (MPS)."
+---
+
 (howto-increase-instance-density)=
 # Increase instance density
 

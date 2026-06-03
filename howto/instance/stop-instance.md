@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to stop a running Anbox Cloud instance gracefully or immediately with amc stop."
+---
+
 (howto-stop-instance)=
 # Stop an instance
 

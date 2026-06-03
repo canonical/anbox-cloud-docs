@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Learn how to create a virtual Android device. In this tutorial, we use the CLI or dashboard to launch and test an Anbox Cloud instance."
+---
+
 (tut-create-virtual-device)=
 # Create and test a virtual device
 
@@ -74,9 +80,10 @@ Now, let's create the application:
 This command will return the application ID.
 
 ```{terminal}
-      :user: ubuntu
-      :host: vm
-      :dir: ~
+:user: ubuntu
+:host: vm
+:dir: ~
+
 amc application create my-app/
 
 cv3a7ofg2e7td2g9smt0
@@ -91,10 +98,11 @@ The application is created and bootstrapped. Now, to see the application details
 The output of this command should look similar to the following. Watch this output till the application becomes *ready*. The time taken for the application to become ready could depend on your network speed but with a good network connection, it shouldn't take more than 10 minutes.
 
 ```{terminal}
-      :user: ubuntu
-      :host: vm
-      :dir: ~
-      :scroll:
+:user: ubuntu
+:host: vm
+:dir: ~
+:scroll:
+
 amc application list
 
 +----------------------+--------------+---------------+--------+------+-----------+--------------+---------------------+-------+
@@ -113,9 +121,10 @@ When the application is *ready*, let's launch an instance:
       amc launch my-first-app --enable-streaming
 
 ```{terminal}
-      :user: ubuntu
-      :host: vm
-      :dir: ~
+:user: ubuntu
+:host: vm
+:dir: ~
+
 amc launch my-first-app --enable-streaming
 
 cv3ct202cdutj02fttsg
@@ -134,10 +143,11 @@ To see the instance details and its status, run:
 You will see an output similar to the following:
 
 ```{terminal}
-   :user: ubuntu
-   :host: vm
-   :dir: ~
-   :scroll:
+:user: ubuntu
+:host: vm
+:dir: ~
+:scroll:
+
 amc ls
 
 +----------------------+------+--------------+------+---------+------+------+---------+-----------+-------+----------------+
@@ -150,10 +160,11 @@ amc ls
 When the instance reaches the *running* status, the output for `amc ls` should look like:
 
 ```{terminal}
-   :user: ubuntu
-   :host: vm
-   :dir: ~
-   :scroll:
+:user: ubuntu
+:host: vm
+:dir: ~
+:scroll:
+
 amc ls
 
 +----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
@@ -205,10 +216,11 @@ The `list` command displays the list of applications available. As an applicatio
 The `show` command displays the application information along with its versions:
 
 ```{terminal}
-   :user: ubuntu
-   :host: vm
-   :dir: ~
-   :scroll:
+:user: ubuntu
+:host: vm
+:dir: ~
+:scroll:
+
 amc application show my-first-app
 
 id: cv3a7ofg2e7td2g9smt0
@@ -254,10 +266,11 @@ resources:
 Now if we launch our application without explicitly specifying a version, our latest published version will be considered:
 
 ```{terminal}
-   :user: ubuntu
-   :host: vm
-   :dir: ~
-   :scroll:
+:user: ubuntu
+:host: vm
+:dir: ~
+:scroll:
+
 amc launch my-first-app
 
 cv3d5ag2cdutj02fttvg

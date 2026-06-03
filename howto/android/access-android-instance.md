@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to connect to an Android instance running in Anbox Cloud via ADB over TCP for debugging."
+---
+
 (howto-access-android-instance)=
 # Access an Android instance
 
@@ -82,7 +88,7 @@ If you are using the charmed deployment, use `anbox-stream-gateway` instead of `
     sudo anbox-cloud-appliance.gateway session share <session_id> --description="remote access to demo instance"
 
 ```{tip}
-Providing a description helps you identify a shared session when you are sharing a session multiple times with different people. 
+Providing a description helps you identify a shared session when you are sharing a session multiple times with different people.
 ```
 
 The output returns the command you need to run next from your host machine: `anbox-connect <connection_url>`

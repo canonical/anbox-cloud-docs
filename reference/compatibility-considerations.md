@@ -1,5 +1,11 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud compatibility, covering Android API limitations and hardware gaps."
+---
+
 (ref-compatibility-considerations)=
-# Compatibility Considerations
+# Compatibility considerations
 
 Anbox Cloud runs Android inside [LXC](https://linuxcontainers.org/lxc/introduction/) containers to deliver a complete AOSP experience (see {ref}`ref-android-features`). While this approach provides efficient, scalable Android instances, the containerized environment imposes certain constraints that can affect application compatibility.
 
@@ -21,7 +27,7 @@ Applications that rely on any of these checks may not work as expected in Anbox 
 
 Some applications depend on vendor provided services that are not part of AOSP and are not included in Anbox Cloud:
 
-- **Google Play Services(GMS):** Some applications, including those that use Google Maps, or Google Sign-In require Google Mobile Services to be present. Anbox Cloud does not ship with GMS, and applications with a hard dependency on it will not function unless GMS is separately installed under your own licensing agreement.
+- **Google Play Services (GMS):** Some applications, including those that use Google Maps, or Google Sign-In require Google Mobile Services to be present. Anbox Cloud does not ship with GMS, and applications with a hard dependency on it will not function unless GMS is separately installed under your own licensing agreement.
 
 - **Other vendor services:** Applications that depend on equivalent services from other vendors mobile services, are similarly affected if those services are not present in the Android instance.
 

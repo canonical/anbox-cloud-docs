@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to create an Anbox Cloud addon by writing hook scripts, packaging, and attaching it to applications."
+---
+
 (howto-create-addon)=
 # Create an addon
 
@@ -19,9 +25,9 @@ cat "$ADDON_DIR"/public_key.pem >> ~/.ssh/authorized_keys
 ```
 
 To create an addon, you must provide the Anbox Management Client (AMC) with either of the following:
-* The addon directory
-* A tarball containing the required addon file structure
-* A zip archive containing the required addon file structure
+- The addon directory
+- A tarball containing the required addon file structure
+- A zip archive containing the required addon file structure
 
 Let's look at an example for of an addon for enabling SSH access on a container.
 
@@ -129,7 +135,7 @@ Exposed ports usually start around port 10000. `amc ls` displays the export port
 
 ## Related topics
 
-* {ref}`exp-addons`
-* {ref}`howto-update-addons`
-* {ref}`howto-extend-application`
-* {ref}`ref-addon-manifest`
+- {ref}`exp-addons`
+- {ref}`howto-update-addons`
+- {ref}`howto-extend-application`
+- {ref}`ref-addon-manifest`

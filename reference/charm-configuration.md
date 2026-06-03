@@ -1,5 +1,11 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud Juju charm configuration options and their defaults."
+---
+
 (ref-charm-configuration)=
-# Charm Configuration
+# Charm configuration
 
 Since the release of Anbox Cloud 1.25.0, Anbox Cloud Charms have been updated to support the latest [Operator Framework](https://github.com/canonical/operator) used by Juju.
 This document lists all the resulting changes to the configuration and actions of various Anbox Cloud charms.
@@ -80,7 +86,7 @@ Name          | Value type | Status |
 `public_interface` | string   | Removed since 1.25.0 |
 `snap_revision` | string   | Added since 1.25.0 |
 
-## Updates to Charm actions
+## Updates to charm actions
 
 | Action          | Charm | Change | Notes |
 |---------------|------------|-------------------------| ----- |

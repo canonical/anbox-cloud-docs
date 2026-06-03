@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to troubleshoot Anbox Cloud issues, including application creation failures, cluster problems, and streaming faults."
+---
+
 (howto-ts-anbox-cloud)=
 # Troubleshoot Anbox Cloud
 
@@ -44,8 +50,8 @@ If you have the [`juju-crashdump` plugin](https://github.com/juju/juju-crashdump
 
 A Juju crash dump may include the following debugging information:
 
-* Additional information provided by the Anbox Cloud charms
-* Information about any instances that crashed
+- Additional information provided by the Anbox Cloud charms
+- Information about any instances that crashed
 
 Use the following command to generate a crash dump:
 
@@ -65,7 +71,7 @@ This is the recommended option to provide debugging information when you report 
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance since 1.16.0*
 
-In Anbox Cloud, instances come preinstalled with the `anbox-bug-report` utility, which
+In Anbox Cloud, instances come pre-installed with the `anbox-bug-report` utility, which
 collects the log files and other relevant information for a specific instance.
 To generate the report and save it to a local file, use `amc exec` on a running
 instance:

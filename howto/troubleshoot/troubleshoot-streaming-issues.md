@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to debug Anbox Cloud streaming problems, including WebRTC ICE failures and codec mismatches."
+---
+
 (howto-ts-streaming-issues)=
 # Troubleshoot streaming issues
 

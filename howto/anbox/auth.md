@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure user permissions in Anbox Cloud with OpenFGA, including identities, groups, and entitlements."
+---
+
 (howto-auth)=
 # Configure user permissions
 
@@ -10,7 +16,7 @@ To be able to configure user permissions in Anbox Cloud, you need to first confi
 ## Configure OpenFGA
 
 ```{important}
-In the Anbox Cloud Appliance, OpenFGA is pre-configured and the steps in this section can be skipped.
+In the Anbox Cloud Appliance, OpenFGA is preconfigured and the steps in this section can be skipped.
 ```
 
 Anbox Management Service (AMS) requires a store ID in OpenFGA to manage authorization data. To generate a store ID in OpenFGA, follow the steps in the [OpenFGA documentation](https://openfga.dev/docs/getting-started/create-store) and create a store.
@@ -45,24 +51,25 @@ To create a TLS identity, run:
 
 {ref}`The security explanation on AMS <exp-security-ams>` provides information about TLS based and token based authentication methods. See {ref}`howto-access-ams-remote` for understanding how to connect to AMS remotely.
 
-You can view the identities you created by using:  
+You can view the identities you created by using:
 
     amc auth identity ls
 
 The output will look similar to this:
 
 ```{terminal}
-   :user: user
-   :host: host
+:user: user
+:host: host
+
 amc auth identity ls
 
-`+--------------------+---------------------+----------------------+----------------------+--------------+`
-`|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |`
-`+----------------------+---------------------+------------------+------------------------+--------------+`
-`| d3kb9pvriueuguose410 | oidc                | test@example.com   | test@example.com     | image_viewer |`
-`+----------------------+---------------------+-------------------------+----------------------+---------+`
-`| d3o2u7vriuenvvlfcae0 | tls                 | test-user          | 9cbb1aced3fb587405c7abaa7c83ec59b4bb9bd567843703884632e77e0aa455 |   |`
-`+----------------------+---------------------+-----------------------+--------------------+-------------+`
++--------------------+---------------------+----------------------+----------------------+--------------+
+|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |
++----------------------+---------------------+------------------+------------------------+--------------+
+| d3kb9pvriueuguose410 | oidc                | test@example.com   | test@example.com     | image_viewer |
++----------------------+---------------------+-------------------------+----------------------+---------+
+| d3o2u7vriuenvvlfcae0 | tls                 | test-user          | 9cbb1aced3fb587405c7abaa7c83ec59b4bb9bd567843703884632e77e0aa455 |   |
++----------------------+---------------------+-----------------------+--------------------+-------------+
 ```
 
 ## Create authorization groups with identities
@@ -76,8 +83,9 @@ Create a new authorization group:
 To verify details of the created group, use the `show` command:
 
 ```{terminal}
-   :user: user
-   :host: host
+:user: user
+:host: host
+
 amc auth group show developer
 
 name: developer

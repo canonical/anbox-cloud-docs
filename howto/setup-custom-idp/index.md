@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to set up a custom identity provider for Anbox Cloud using OpenID Connect."
+---
+
 (howto-set-up-idp)=
 # Set up a custom identity provider
 
@@ -118,7 +124,7 @@ No users exist within ORY by default. New users can use the sign-up link during 
 :::
 ::::
 
-## Next Steps
+## Next steps
 
 Once you have the issuer URL, client ID, audience API:
 

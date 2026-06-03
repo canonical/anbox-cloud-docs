@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to work with Anbox Cloud addons, including creating hooks, enabling addons globally, updating, and migrating from deprecated hooks."
+---
+
 (howto-addons)=
 # Addons
 

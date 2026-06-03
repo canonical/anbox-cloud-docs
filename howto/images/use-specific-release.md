@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to pin an Anbox Cloud image to a specific release version to prevent automatic updates."
+---
+
 (howto-use-specific-release)=
 # Use a specific release
 

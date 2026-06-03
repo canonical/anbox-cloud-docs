@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to set Android Automotive VHAL properties in Anbox Cloud to simulate vehicle states."
+---
+
 (howto-set-automotive-properties)=
 # Set automotive properties using VHAL
 

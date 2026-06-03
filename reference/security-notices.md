@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud security notices, covering published vulnerabilities and fixes."
+---
+
 (ref-security-notices)=
 # Security notices
 

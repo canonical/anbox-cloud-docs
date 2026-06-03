@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install charmed Anbox Cloud with Juju, including deployment on bare metal or public cloud and enabling high availability."
+---
+
 (howto-install-anbox-cloud)=
 # Install Anbox Cloud
 

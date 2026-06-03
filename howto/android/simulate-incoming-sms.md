@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to simulate incoming SMS messages for Android apps in Anbox Cloud."
+---
+
 (howto-simulate-incoming-sms)=
 # Simulate incoming SMS messages
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for authorization in Anbox Cloud, covering entitlements, identity types, and groups."
+---
+
 (ref-auth)=
 # Authentication and authorization
 
@@ -29,7 +35,7 @@ This table lists the entitlements that can be assigned at a global level.
 
 This table lists the resource types and their endpoints that can be assigned resource level permissions.
 
-| Resource type | End point |
+| Resource type | Endpoint |
 | ---- | ---- |
 | identity | `/1.0/auth/identities/<id>`|
 | group | `/1.0/auth/groups/<id>` |

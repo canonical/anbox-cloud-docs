@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud terminology, with definitions for AMS, AAR, instances, and more."
+---
+
 (ref-glossary)=
 # Glossary
 
@@ -68,7 +74,7 @@ anbox-connect
     A tool that helps you to remotely connect to an Android container that is running inside the Anbox instance. through a secure ADB connection. It must be installed on your host machine.
 
 anbox-shell
-    A command-line tool for interacting with the Android container within the Anbox instance. It acts as a streamlined Android Debug Bridge(ADB) interface, allowing access to the Android environment with `root` privileges. It must be used within the context of an Anbox instance.
+    A command-line tool for interacting with the Android container within the Anbox instance. It acts as a streamlined Android Debug Bridge (ADB) interface, allowing access to the Android environment with `root` privileges. It must be used within the context of an Anbox instance.
 
 Anbox Streaming SDK
     An SDK that allows the development of custom streaming clients, using JavaScript.
@@ -84,7 +90,7 @@ Android Archive (AAR)
     See [Create an Android library](https://developer.android.com/studio/projects/android-library) in the Android developer documentation.
 
 Android Debug Bridge (ADB)
-    A command-line tool that is included in the Android SDK Platform-Tools package and that allows to connect to and communicate with an Android device from your computer.
+    A command-line tool that is included in the Android SDK Platform-Tools package and that allows connecting to and communicating with an Android device from your computer.
 
     See [Android Debug Bridge (ADB)](https://developer.android.com/tools/adb) in the Android developer documentation.
 

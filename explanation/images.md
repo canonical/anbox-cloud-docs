@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of images in Anbox Cloud, which bundle the Anbox runtime and Android root file system to form the base for instances."
+---
+
 (exp-images)=
 # Images
 

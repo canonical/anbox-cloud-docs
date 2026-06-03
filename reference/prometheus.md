@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Prometheus metrics exposed by Anbox Cloud."
+---
+
 (ref-prometheus-metrics)=
 # Prometheus metrics
 
