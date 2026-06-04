@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to set a GPS location on an Anbox Cloud Android container for location-aware applications."
+---
+
 (howto-configure-geographic-location)=
 # Configure geographic location
 
@@ -35,4 +41,5 @@ To update the geographic location of an Android container dynamically while the 
 See {ref}`sec-anbox-https-api-location` for information on the PATCH method and the specification of the data format.
 
 ## Related topics
-* {ref}`howto-addons`
+
+- {ref}`howto-addons`

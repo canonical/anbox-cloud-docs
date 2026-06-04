@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox Cloud architecture, covering the two variants (Appliance and charmed), core components, and supported platforms."
+---
+
 (exp-anbox-cloud)=
 # Anbox Cloud
 
@@ -22,13 +28,13 @@ Anbox Cloud maintains a single Android system per instance, providing higher den
 
 Anbox Cloud comes in two variants that serve different purposes:
 
-**Anbox Cloud Appliance**
+### Anbox Cloud Appliance
 
 The Anbox Cloud Appliance, generally referred as the appliance, is a self-contained deployment variant of Anbox Cloud. It combines all elements of Anbox Cloud in a single snap package for installation and management on a single, dedicated machine. It is suitable for small scale deployments and environments for development and prototyping.
 
-**Anbox Cloud**
+### Anbox Cloud
 
-The charmed Anbox Cloud uses [Juju](https://juju.is/) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
+The charmed Anbox Cloud uses [Juju](https://canonical.com/juju) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
 
 See the following table for a comparison of features for the different variants:
 
@@ -65,30 +71,30 @@ The core stack contains one or more Anbox subclusters, a Juju controller, and th
 
 Inside each Anbox subcluster, the following components are present:
 
-* **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and instance life cycle, including application and image update, while ensuring high density, performance, and fast startup times.
+- **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and instance life cycle, including application and image update, while ensuring high density, performance, and fast startup times.
 
   Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with the instances, requesting and releasing resources as per demand.
 
-* **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to {ref}`control AMS remotely <howto-access-ams-remote>`, but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
+- **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to {ref}`control AMS remotely <howto-access-ams-remote>`, but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
 
-* **etcd** - etcd is the database that is used to store the data managed by AMS. It provides a reliable way to store data across a cluster of machines. It gracefully handles primary node selections when a network is split into subnets and will tolerate machine failure. For more information, see [etcd](https://etcd.io/).
+- **etcd** - etcd is the database that is used to store the data managed by AMS. It provides a reliable way to store data across a cluster of machines. It gracefully handles primary node selections when a network is split into subnets and will tolerate machine failure. For more information, see [etcd](https://etcd.io/).
 
-* **Control node** - Control node is the machine on which the AMS, AMC, and etcd are installed. These three components inside the control node make up the management layer of Anbox Cloud.
+- **Control node** - Control node is the machine on which the AMS, AMC, and etcd are installed. These three components inside the control node make up the management layer of Anbox Cloud.
 
 Each Anbox subcluster also has a number of LXD worker nodes that form a LXD cluster. Each LXD worker node runs the following components:
 
-* **LXD** - The LXD daemon spawns a number of LXD instances containing Anbox-related configuration. These instances provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD instance runs exactly one Android instance that the end user can access/stream.
+- **LXD** - The LXD daemon spawns a number of LXD instances containing Anbox-related configuration. These instances provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD instance runs exactly one Android instance that the end user can access/stream.
 
    ```{note}
    The term LXD instance means that they are LXD containers or virtual machines that contain configuration related to Anbox Cloud. Within the context of Anbox Cloud, the term Anbox Cloud images is used interchangeably with LXD images in the sense that they are LXD images containing specific configuration related to Anbox Cloud.
    ```
 
-* **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when an instance is started or stopped to control ingress and egress traffic.
+- **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when an instance is started or stopped to control ingress and egress traffic.
 
 Outside the Anbox subcluster, you have the following machines:
 
-  * **Juju controller**, which controls how Anbox Cloud is deployed and managed.
-  * **Anbox Application Registry (AAR)**, which provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple subclusters, in order to keep applications in sync. This component is not mandatory, but strongly recommended in a production deployment, to keep applications in sync across the different subclusters.
+- **Juju controller**, which controls how Anbox Cloud is deployed and managed.
+- **Anbox Application Registry (AAR)**, which provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple subclusters, in order to keep applications in sync. This component is not mandatory, but strongly recommended in a production deployment, to keep applications in sync across the different subclusters.
 
 ### Streaming stack
 
@@ -98,16 +104,16 @@ The diagram below depicts the streaming stack along with the core stack and user
 
 When the streaming stack is in use, each Anbox subcluster has the following additional components:
 
-* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the application running on Anbox Cloud. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
+- **TURN/STUN servers** - Servers that find the most optimal network path between a client and the application running on Anbox Cloud. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
 
-* **Stream agent** - Serves as an entry point that the gateway can connect to to talk to the AMS of the Anbox subcluster.
+- **Stream agent** - Serves as an entry point that the gateway can connect to to talk to the AMS of the Anbox subcluster.
 
 You also need an additional machine to host the streaming stack control plane with the following components:
 
-  * **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
-  * **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
+- **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
+- **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
 
-You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as, selecting a game.
+You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as selecting a game.
 
 For example, your web client can be a mobile app used to access the provided Android containers. We provide the {ref}`sec-streaming-sdk` as a starting point for creating a web client. The web dashboard in Anbox Cloud is an example for a frontend service and web client, combined into one.
 
@@ -119,7 +125,9 @@ LXD is installed through the [`ams-lxd` charm](https://charmhub.io/ams-lxd), whi
 
 If you want to monitor LXD, you can always run `lxc list` to display the existing instances. For the full deployment, LXD hosts the instances created by AMS. If you run the Anbox Cloud Appliance, LXD hosts instances for the different Juju machines that Anbox Cloud requires:
 
-```
+```{terminal}
+:output-only:
+
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 |           NAME           |  STATE  |          IPV4          | IPV6 |   TYPE    | SNAPSHOTS | LOCATION |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
@@ -135,6 +143,7 @@ If you want to monitor LXD, you can always run `lxc list` to display the existin
 | juju-34631c-0            | RUNNING | 240.0.180.30 (eth0)    |      | CONTAINER | 0         | lxd0     |
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
 ```
+
 (sec-lxd-storage)=
 ### LXD storage
 
@@ -155,11 +164,11 @@ If you are using the Anbox Cloud Appliance, you are prompted during the initiali
 
 The charmed Anbox Cloud variant provides two different Juju bundles:
 
-* The `anbox-cloud-core` bundle provides a minimized version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
+- The `anbox-cloud-core` bundle provides a minimized version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
 
   For more information, see the [charm page](https://charmhub.io/anbox-cloud-core).
 
-* The `anbox-cloud` bundle provides the full version of Anbox Cloud, including its streaming stack.
+- The `anbox-cloud` bundle provides the full version of Anbox Cloud, including its streaming stack.
 
   For more information, see the [charm page](https://charmhub.io/anbox-cloud).
 
@@ -173,4 +182,4 @@ If you don't need to stream the visual output of the Android containers, you can
 
 ## Related topics
 
-* {ref}`exp-instances`
+- {ref}`exp-instances`

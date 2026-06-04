@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to use the Anbox Cloud dashboard to launch applications, start streaming sessions, and monitor instance status."
+---
+
 (howto-use-web-dashboard)=
 # Use the dashboard
 The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. If you have configured the Anbox Application Registry (AAR), you can also view applications in the registry using the **Registry** button on the main menu. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
@@ -31,6 +37,7 @@ unit-anbox-cloud-dashboard-0:
     enqueued: 2021-02-10 14:04:44 +0000 UTC
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
+
 (sec-register-ubuntu-one-appliance)=
 ### Register in the appliance
 
@@ -50,5 +57,5 @@ To access the dashboard, go to `https://<your-machine-address>/`. The dashboard 
 
 ## Related topics
 
-* {ref}`exp-aar`
-* {ref}`exp-web-dashboard`
+- {ref}`exp-aar`
+- {ref}`exp-web-dashboard`

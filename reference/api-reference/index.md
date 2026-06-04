@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud APIs, covering AMS HTTP API, Stream Gateway API, and Platform SDK."
+---
+
 (ref-api)=
 # API reference
 

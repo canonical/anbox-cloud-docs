@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to collect Anbox Cloud logs from AMS, instances, and the Anbox runtime for troubleshooting."
+---
+
 (howto-ts-view-logs)=
 # View logs
 
@@ -69,11 +75,11 @@ This is the default for any Juju model. It indicates that the machine log level 
 
 The logging levels, from most verbose to least verbose, are as follows:
 
-* `TRACE`
-* `DEBUG`
-* `INFO`
-* `WARNING`
-* `ERROR`
+- `TRACE`
+- `DEBUG`
+- `INFO`
+- `WARNING`
+- `ERROR`
 
 The logging level can be set like this:
 

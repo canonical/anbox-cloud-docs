@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to enable an Anbox Cloud addon globally so it applies to every application automatically."
+---
+
 (howto-enable-addons-globally)=
 # Enable an addon globally
 
@@ -19,4 +25,4 @@ Addons can delay the start of your applications. Therefore, keep them light.
 
 ## Related topics
 
-* {ref}`ref-application-manifest`
+- {ref}`ref-application-manifest`

@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    "description": "How to integrate a virtual keyboard into an Anbox Cloud web streaming application."
+---
 
 (howto-integrate-virtual-keyboard)=
 # Integrate a client-side virtual keyboard
@@ -6,8 +11,8 @@ The Anbox Streaming SDK enables developers to build a hybrid mobile application 
 
 You can use Anbox WebView to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing:
 
-* When the text editor of the application in the instance gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
-* When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
+- When the text editor of the application in the instance gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
+- When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
 
 The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See {ref}`sec-customizing-the-virtual-keyboard` for additional implementation options.
 
@@ -71,15 +76,17 @@ Adding the following JavaScript code snippet builds up a communication tunnel be
      }
    </script>
    ```
+
 (sec-customizing-the-virtual-keyboard)=
 ## Customizing the virtual keyboard
 
 You can take advantage of the interfaces that the Anbox WebView exposes to provide your own implementation of a client-side virtual keyboard that customizes:
 
-* Input text processing
-* Handling of state changes of the virtual keyboard
+- Input text processing
+- Handling of state changes of the virtual keyboard
 
 1. Set up the listener to the activity for which you want to capture the text input events from the virtual keyboard or monitor its visibility changes during streaming.
+
    ```
    import com.canonical.anbox.streaming_sdk.AnboxWebView;
    ...
@@ -166,7 +173,6 @@ You can take advantage of the interfaces that the Anbox WebView exposes to provi
 3. Once the virtual keyboard pops up on the client side, the `onVirtualKeyboardStateChanged` callback function is triggered. To keep the display proportions correct for IME displaying on both the client and the server ends, the `show` action, which carries the display ratio, must be sent out to the server side.
 
    Similarly, when the virtual keyboard pops down on the client side, you must ensure that the behavior of the virtual keyboard is synced on both ends. Therefore, the `hide` action must be sent out to the server side.
-
 
    ```
        @Override

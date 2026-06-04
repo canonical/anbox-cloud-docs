@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of the Anbox Cloud streaming stack, which uses WebRTC-based video encoding with GPU integration and session management."
+---
+
 (exp-application-streaming)=
 # Application streaming
 
@@ -76,6 +82,6 @@ If you do not enable streaming when launching the instance, you cannot enable it
 
 ## Related topics
 
-* {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
-* [Signaling](https://web.dev/articles/webrtc-infrastructure)
-* {ref}`ref-codecs`
+- {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
+- [Signaling](https://web.dev/articles/webrtc-infrastructure)
+- {ref}`ref-codecs`

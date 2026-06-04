@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of instances in Anbox Cloud, covering lifecycle states, types, resource handling, and how each runs a full Android system."
+---
+
 (exp-instances)=
 # Instances
 
@@ -79,7 +85,7 @@ If you encounter the `error` or the `unknown` status, use [`amc show <instance_i
 (sec-dev-mode)=
 ## Development mode
 
-AMS allows to start an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
+AMS allows starting an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
 
 When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test addons or develop a platform plugin.
 
@@ -87,16 +93,16 @@ To check whether development mode is enabled, run `amc show <instance_ID>` or lo
 
 ## Related topics
 
-* {ref}`exp-addons`
-* [Platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
-* {ref}`howto-access-instance`
-* {ref}`howto-backup-restore-application-data`
-* {ref}`howto-create-instance`
-* {ref}`howto-configure-geographic-location`
-* {ref}`howto-delete-instance`
-* {ref}`howto-expose-services`
-* {ref}`howto-list-instances`
-* {ref}`howto-start-instance`
-* {ref}`howto-stop-instance`
-* {ref}`howto-view-instance-logs`
-* {ref}`howto-wait-for-application`
+- {ref}`exp-addons`
+- [Platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+- {ref}`howto-access-instance`
+- {ref}`howto-backup-restore-application-data`
+- {ref}`howto-create-instance`
+- {ref}`howto-configure-geographic-location`
+- {ref}`howto-delete-instance`
+- {ref}`howto-expose-services`
+- {ref}`howto-list-instances`
+- {ref}`howto-start-instance`
+- {ref}`howto-stop-instance`
+- {ref}`howto-view-instance-logs`
+- {ref}`howto-wait-for-application`

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure the Anbox Cloud watchdog to monitor a running Android app and trigger restarts."
+---
+
 (howto-configure-watchdog)=
 # Configure the watchdog
 

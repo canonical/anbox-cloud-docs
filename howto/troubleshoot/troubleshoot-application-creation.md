@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to diagnose Anbox Cloud application creation failures, including bootstrap errors and APK issues."
+---
+
 (howto-ts-application-creation-issues)=
 # Troubleshoot issues with application creation
 

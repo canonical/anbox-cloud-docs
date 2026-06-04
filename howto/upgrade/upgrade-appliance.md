@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to upgrade the Anbox Cloud Appliance by refreshing the snap to the target channel."
+---
+
 (howto-upgrade-appliance)=
 # Upgrade appliance
 
@@ -29,5 +35,3 @@ Then execute the script with:
     anbox-cloud-appliance upgrade-node-script | sudo bash -ex
 
 After the script completes, verify the output to determine if a system reboot is necessary.
-
-

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install the Anbox Cloud Appliance on AWS, Azure, Google Cloud, or inside a GitHub Actions workflow."
+---
+
 (howto-install-appliance)=
 # Install the appliance
 
@@ -13,18 +19,18 @@ Also, see {ref}`ref-requirements` before you start your installation.
 
 The Anbox Cloud Appliance is currently available for the following cloud platforms:
 
-* {ref}`howto-install-appliance-aws`
+- {ref}`howto-install-appliance-aws`
 
 Other clouds are also supported, but the Anbox Cloud Appliance is not available from their application directories yet. Therefore, to install the appliance on such a cloud, install the Anbox Cloud Appliance snap on a cloud machine. See the following instructions:
 
-* For [Azure](https://azure.microsoft.com/) : {ref}`howto-install-appliance-azure`
-* For [Google Cloud](https://cloud.google.com/) : {ref}`howto-install-appliance-google-cloud`
+- For [Azure](https://azure.microsoft.com/) : {ref}`howto-install-appliance-azure`
+- For [Google Cloud](https://cloud.google.com/) : {ref}`howto-install-appliance-google-cloud`
 
 ## Supported CI/CD platforms
 
 The Anbox Cloud Appliance is currently available on the following CI/CD platforms:
 
-* {ref}`howto-install-appliance-github`
+- {ref}`howto-install-appliance-github`
 
 ```{toctree}
 :hidden:

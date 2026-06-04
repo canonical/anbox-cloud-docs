@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of clustering in charmed Anbox Cloud, which uses multi-node LXD clusters managed with Juju for large-scale deployments."
+---
+
 (exp-clustering)=
 # Clustering
 
@@ -5,7 +11,7 @@ While it is possible to install Anbox Cloud on a single machine, Anbox Cloud App
 
 In a clustering setup for a charmed Anbox Cloud deployment, one node is dedicated as the management node to host the Anbox Management Service (AMS). If you use the Streaming Stack, two additional nodes are dedicated to host the extra services required for streaming. All other nodes are used as worker nodes.
 
-Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https://documentation.ubuntu.com/lxd/latest/clustering/), and this LXD cluster is used to host the Android containers.
+Each worker node runs [LXD](https://canonical.com/lxd) in [clustering mode](https://documentation.ubuntu.com/lxd/latest/clustering/), and this LXD cluster is used to host the Android containers.
 
 ## Cluster capacity
 
@@ -41,4 +47,4 @@ See {ref}`howto-scale-up-cluster` and {ref}`howto-scale-down-cluster` for instru
 
 ## Related topics
 
-* {ref}`howto-manage-cluster`
+- {ref}`howto-manage-cluster`

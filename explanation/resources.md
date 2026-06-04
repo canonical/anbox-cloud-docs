@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of resource presets in Anbox Cloud, which define CPU, memory, and storage allocated to instances."
+---
+
 (exp-resources-presets)=
 # Resources and resource presets
 
@@ -12,6 +18,7 @@ resources:
   memory: 3GB
   disk-size: 3GB
 ```
+
 For a virtual machine instance, the default resource preset is:
 
 ```yaml
@@ -28,4 +35,4 @@ In addition to the `cpus`, `memory` and the `disk-size` requirements, if your ap
 
 ## Related topics
 
-* {ref}`ref-application-manifest`
+- {ref}`ref-application-manifest`

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to create an Anbox Cloud application from an APK using the dashboard or amc application create."
+---
+
 (howto-create-application)=
 # Create an application
 
@@ -130,14 +136,15 @@ Click *Create application* on the applications page, enter the required and any 
 An application can be created either in a VM or a container. Selecting one of these options will update the image dropdown to only include images of the chosen type. The default image for the selected type is selected by default in the image dropdown.
 
 The *Configuration (optional)* section allows you to customize additional fields, including the following attributes:
-* {ref}`manifest version name <ref-application-manifest>`
-* {ref}`boot package <ref-application-manifest>`
-* {ref}`boot activity <ref-application-manifest>`
-* {ref}`tags <ref-application-manifest>`
-* {ref}`features <ref-feature-flags>` 
-* {ref}`sec-application-manifest-watchdog`
 
-The switch *Customize manifest.yaml* at the bottom of the form allows to directly customize your application manifest with a YAML editor.
+- {ref}`manifest version name <ref-application-manifest>`
+- {ref}`boot package <ref-application-manifest>`
+- {ref}`boot activity <ref-application-manifest>`
+- {ref}`tags <ref-application-manifest>`
+- {ref}`features <ref-feature-flags>`
+- {ref}`sec-application-manifest-watchdog`
+
+The switch *Customize manifest.yaml* at the bottom of the form allows you to directly customize your application manifest with a YAML editor.
 
 There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI command.
 
@@ -151,4 +158,4 @@ Once the status of the application switches to `ready`, the application is ready
 
 ## Related topics
 
-* {ref}`sec-application-bootstrap`
+- {ref}`sec-application-bootstrap`

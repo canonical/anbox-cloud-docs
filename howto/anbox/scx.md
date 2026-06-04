@@ -12,6 +12,7 @@ Using a userspace scheduler is experimental and may not improve performance; it 
 ## Prerequisites
 
 The following are required:
+
 - Ubuntu 24.04 LTS or newer with the latest HWE kernel. See [Ubuntu kernel life cycle](https://ubuntu.com/kernel/lifecycle) for more information.
 - An existing Anbox Cloud deployment.
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to configure OIDC authentication for the Anbox Cloud Appliance using a preseed file."
+---
+
 (howto-configure-oidc)=
 # Configure OIDC for the appliance
 
@@ -30,7 +36,7 @@ In addition to creating the user you need to add it to a group to give permissio
 
     amc auth identity group add <identity id> --groups admin
 
-The user can now login to Anbox Cloud dashboard with the identity created.
+The user can now log in to Anbox Cloud dashboard with the identity created.
 
 The user can also access AMS by running
 
@@ -38,5 +44,5 @@ The user can also access AMS by running
 
 ## Related topics
 
-* {ref}`tut-installing-appliance`
-* {ref}`howto-use-web-dashboard`
+- {ref}`tut-installing-appliance`
+- {ref}`howto-use-web-dashboard`

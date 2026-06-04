@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Anbox Cloud performance benchmarks, covering instance density and GPU throughput."
+---
+
 (ref-performance-benchmarks)=
 # Performance benchmarks
 

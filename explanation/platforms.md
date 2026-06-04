@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Explanation of Anbox Cloud platforms (swrast, null, webrtc), covering what each does and how to configure display settings."
+---
+
 (exp-platforms)=
 # Supported platforms
 
@@ -58,4 +64,4 @@ For example, to configure the platform for a display height of 1080p and 60 FPS,
 
 ## Related topics
 
-* {ref}`exp-platforms`
+- {ref}`exp-platforms`

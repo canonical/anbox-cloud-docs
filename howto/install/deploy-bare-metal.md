@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to deploy Anbox Cloud on bare metal using Juju's manual cloud option."
+---
+
 (howto-deploy-anbox-baremetal)=
 # Deploy on bare metal
 
@@ -7,8 +13,9 @@ This document guides you through the steps to install Anbox Cloud on a [manual c
 
 Before you start the installation, ensure that you have the required prerequisites:
 
-* At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+- At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
+- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
   ```
@@ -95,7 +102,7 @@ There are different ways of configuring a dedicated block storage device:
 (sec-existing-storage-pool)=
 #### Existing storage pool
 
-To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configuration#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
+To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configurations#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
 
 For example, to use an existing LXD storage pool with the name `my-zfs-pool`, use an overlay file with the following content:
 
@@ -109,10 +116,11 @@ applications:
 ```{important}
 The LXD storage pool must use the ZFS storage driver. Other storage drivers are not supported by Anbox Cloud.
 ```
+
 (sec-dedicated-storage-device)=
 #### Dedicated storage device
 
-To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configuration#storage_device) configuration on the AMS charm to the path of the storage device.
+To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configurations#storage_device) configuration on the AMS charm to the path of the storage device.
 
 For example, to use `/dev/sdb` as the dedicated storage device, use an overlay file with the following content:
 
@@ -135,11 +143,11 @@ Now you can deploy Anbox Cloud. The deployment is entirely handled by Juju and d
 
 Choose between the available Juju bundles (see {ref}`sec-juju-bundles`):
 
-* For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
+- For a minimized version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
         juju deploy anbox-cloud-core --overlay ua.yaml --map-machines 0=0,1=1
 
-* For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
+- For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
         juju deploy anbox-cloud --overlay ua.yaml --map-machines 0=0,1=1,2=2,3=3
 
@@ -161,6 +169,7 @@ Unit       Workload  Agent  Machine  Public address  Ports      Message
 lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required
 ...
 ```
+
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot

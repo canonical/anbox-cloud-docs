@@ -6,9 +6,11 @@
 
 Have you reviewed and previewed your documentation updates?
 In your local repository,
-1. Run `make spelling` and fix any spelling issues.
-2. Run `make linkcheck` and fix any broken links.
-3. Run `make run`. This will build a local copy of the entire documentation and you can preview the updated pages locally before creating this PR.
+
+- [ ] Run `make spelling` and fix any spelling issues.
+- [ ] Run `make linkcheck` and fix any broken links.
+- [ ] Run `make lint-md` and fix any linting issues.
+- [ ] Run `make run`. This will build a local copy of the entire documentation and you can preview the updated pages locally before creating this PR.
 
 ## Reviewers
 

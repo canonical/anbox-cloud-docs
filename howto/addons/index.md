@@ -1,9 +1,16 @@
+---
+myst:
+  html_meta:
+    "description": "How to work with Anbox Cloud addons, including creating hooks, enabling addons globally, updating, and migrating from deprecated hooks."
+---
+
 (howto-addons)=
 # Addons
 
 In Anbox Cloud, addons can be used to customize images that are used for instances. See {ref}`exp-addons` and {ref}`ref-addon-manifest` to learn about addons in detail.
 
 You can use addons to, for example:
+
 - Enable SSH access for automation tools (see {ref}`howto-create-addon`)
 - Set up user-specific data when starting an application (see {ref}`howto-backup-restore-example`)
 - Install additional tools in the instance (see {ref}`howto-install-tools-example`)

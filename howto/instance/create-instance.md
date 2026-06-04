@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to launch an Anbox Cloud instance from an application or raw image using amc launch or amc init."
+---
+
 (howto-create-instance)=
 # Create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
@@ -20,8 +26,8 @@ To launch an application or an image, Anbox Cloud creates an instance for it. To
 
 Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
 
-* `amc launch` creates and starts the instance.
-* `amc init` only creates the instance.
+- `amc launch` creates and starts the instance.
+- `amc init` only creates the instance.
 
 By default, the instance will run headless.
 
@@ -64,6 +70,7 @@ You can launch a raw instance from an image. To do so, get the ID of the image b
 ```{tip}
 If you don't know what a raw instance is, see {ref}`sec-application-raw-instances`.
 ```
+
     amc image ls
 
 This command lists the available images along with their IDs and status:
@@ -148,13 +155,14 @@ To launch an instance with development mode enabled, add the `--devmode` flag to
 
 ## Launch an instance without disk reservation
 
-By default, AMS reserves the full logical disk quota to ensure guaranteed disk space availability on the target node. In deployments backed by the ZFS storage driver, which provides Copy-on-Write(CoW) capabilities, you can use the `--no-disk-reserve` flag to achieve higher instance density by skipping strict logical quota checks:
+By default, AMS reserves the full logical disk quota to ensure guaranteed disk space availability on the target node. In deployments backed by the ZFS storage driver, which provides Copy-on-Write (CoW) capabilities, you can use the `--no-disk-reserve` flag to achieve higher instance density by skipping strict logical quota checks:
 
     amc launch --no-disk-reserve <application_id>
 
 ```{note}
 Using this flag makes "out of disk" scenarios possible on the node. To better handle such cases, future AMS releases will introduce additional storage-level safety mechanisms to prevent new instances from being scheduled when physical disk space is critically low. In the meantime, you should closely monitor LXD node's physical disk usage via the monitor system. See {ref}`howto-monitor-anbox` for more details.
 ```
+
 :::
 
 :::{tab-item} Dashboard
@@ -169,6 +177,7 @@ When you create the instance from an application, the attributes you define for 
 ```{note}
 There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
 ```
+
 Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
 
 You can view details about a particular instance when you click on the instance name in the *Instances* list page. The instance details page offers three types of information: *Overview*, *Terminal*, and *Logs*.
@@ -186,6 +195,6 @@ The instance details page also contains all the available actions including stre
 
 ## Related topics
 
-* {ref}`exp-application-streaming`
-* {ref}`exp-instances`
-* {ref}`howto-access-instance`
+- {ref}`exp-application-streaming`
+- {ref}`exp-instances`
+- {ref}`howto-access-instance`

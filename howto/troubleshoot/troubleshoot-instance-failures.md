@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to investigate Anbox Cloud instance failures by interpreting error states and reading logs."
+---
+
 (howto-ts-instance-failures)=
 # Troubleshoot instance failures
 
@@ -23,7 +29,6 @@ If you are using the charmed deployment, you will need to first `ssh` into the m
 If `images.auth` is set to `false`, then the image authentication not being set properly is the issue. To correct the authentication and access images on the appliance, run:
 
     amc config set images.auth bearer:$(sudo cat /var/lib/ubuntu-advantage/private/machine-token.json | jq -r '.resourceTokens[] | select(.type=="anbox-images").token')
-
 
 ## Instance failed to start
 

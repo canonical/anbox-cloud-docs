@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to manage the Anbox Application Registry (AAR), including deployment, TLS configuration, and certificate revocation."
+---
+
 (howto-aar)=
 # AAR
 
@@ -10,4 +16,5 @@ configure
 deploy
 revoke
 ```
+
 See {ref}`exp-aar` for an overview of AAR and how it works.

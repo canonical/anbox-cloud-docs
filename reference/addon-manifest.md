@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for the Anbox Cloud addon manifest, which defines addon metadata and hook scripts."
+---
+
 (ref-addon-manifest)=
 # Addon manifest
 
@@ -12,5 +18,5 @@ The following table lists the valid keys in an addon manifest:
 
 ## Related topics
 
-* {ref}`howto-create-addon`
-* {ref}`howto-addons`
+- {ref}`howto-create-addon`
+- {ref}`howto-addons`

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "Reference documentation for Prometheus metrics exposed by Anbox Cloud."
+---
+
 (ref-prometheus-metrics)=
 # Prometheus metrics
 
@@ -120,7 +126,6 @@ The following table contains all routes and their corresponding labels (ignoring
 | `PATCH` | `/1.0/containers/<id>`                      | `internal_containers_PATCH` (Deprecated)|
 | `PATCH` | `/1.0/instances/<id>`                       | `internal_instances_PATCH`         |
 
-
 ## Anbox Stream Gateway
 
 The Anbox Stream Gateway provides metrics about the streaming activities of your cluster or server and the Anbox Stream Gateway API access.
@@ -175,7 +180,6 @@ The following table contains all routes and their corresponding labels.
 | `GET`    | `/1.0/sessions/<id>/sockets/slave`  | `streaming_websocket_slave`  <!-- wokeignore:rule=slave -->  |
 | `GET`    | `/1.0/applications`                 | `get_applications`           |
 | `GET`    | `/1.0/regions`                      | `get_regions`                |
-
 
 ## Anbox Runtime metrics
 

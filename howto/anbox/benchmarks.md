@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to run Anbox Cloud benchmarks with amc benchmark to measure instance launch throughput and GPU performance."
+---
+
 (howto-run-benchmarks)=
 # Run benchmarks
 

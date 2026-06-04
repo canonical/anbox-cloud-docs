@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to install an Android APK as a system application in Anbox Cloud for elevated privileges."
+---
+
 (howto-install-apk-system-app)=
 # Install an APK as a system app
 
@@ -60,6 +66,7 @@ aam install-system-app \
 ```
 
 The values of the `package-name` and the `permissions` parameters must match the ones defined in the `AndroidManifest.xml` file of the Android project. For instance, if your `AndroidManifest.xml` contains the following system-level permissions:
+
 ```xml
 ...
     <uses-permission android:name="android.permission.MANAGE_USB" />
@@ -67,6 +74,7 @@ The values of the `package-name` and the `permissions` parameters must match the
     <uses-permission android:name="android.permission.SET_TIME_ZONE" />
 ...
 ```
+
 Then, the `permissions` parameter must be: `android.permission.MANAGE_USB,android.permission.SET_TIME,android.permission.SET_TIME_ZONE`.
 
 If the app requires access to hidden Android APIs to function, add the `--access-hidden-api` parameter to the above command. Use `aam install-system-app --help` for details about this command.

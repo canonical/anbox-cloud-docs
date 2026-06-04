@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description": "How to implement common addon patterns in Anbox Cloud, with worked examples for backup, customization, and tool installation."
+---
+
 # Examples
 
 Here are some examples to illustrate how to use addons and hooks:
