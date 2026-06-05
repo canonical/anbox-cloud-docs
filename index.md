@@ -28,8 +28,8 @@ The platform is available as a single-machine {ref}`appliance <sec-variants>` fo
 
 ### Artifacts and interfaces
 
-- **Appliance:** {ref}`sec-variants` • [CLI](reference/cmd-ref/appliance/anbox-cloud-appliance.md) • {ref}`exp-web-dashboard`
-- **Anbox Management Service:** {ref}`exp-ams` • {ref}`howto-access-ams-remote` • [CLI](reference/cmd-ref/amc/ams.amc.md)
+- **Appliance:** {ref}`sec-variants` • {doc}`CLI </reference/cmd-ref/appliance/anbox-cloud-appliance>` • {ref}`exp-web-dashboard`
+- **Anbox Management Service:** {ref}`exp-ams` • {ref}`howto-access-ams-remote` • {doc}`CLI </reference/cmd-ref/amc/ams.amc>`
 - **Anbox Application Registry:** {ref}`exp-aar` • {ref}`howto-configure-aar` • {ref}`howto-deploy-aar` • {ref}`howto-revoke-aar`
 - **Images:** {ref}`exp-images` • {ref}`howto-configure-image-server` • {ref}`howto-add-image` • {ref}`howto-delete-image` • {ref}`howto-use-specific-release`
 - **Instances:** {ref}`exp-instances` • {ref}`exp-resources-presets` • {ref}`howto-create-instance` • {ref}`howto-configure-instance` • {ref}`howto-start-instance` • {ref}`howto-stop-instance` • {ref}`howto-delete-instance` • {ref}`howto-expose-services` • {ref}`howto-view-instance-logs` • {ref}`howto-backup-restore-application-data` • {ref}`ref-hooks`
@@ -39,7 +39,7 @@ The platform is available as a single-machine {ref}`appliance <sec-variants>` fo
 
 ### Features
 
-- **Streaming:** {ref}`exp-application-streaming` • {ref}`tut-set-up-stream-client` • [Stream Gateway API](reference/api-reference/gateway-api.md) • {ref}`ref-webrtc` • {ref}`exp-platforms` • {ref}`howto-share-session`
+- **Streaming:** {ref}`exp-application-streaming` • {ref}`tut-set-up-stream-client` • {doc}`Stream Gateway API </reference/api-reference/gateway-api>` • {ref}`ref-webrtc` • {ref}`exp-platforms` • {ref}`howto-share-session`
 - **Rendering:** {ref}`exp-rendering-architecture` • {ref}`exp-rendering-graphics`
 - **Images:** {ref}`exp-custom-images` • {ref}`exp-aaos`
 - **Supported features:** {ref}`ref-android-features` • {ref}`ref-aosp-aaos` • {ref}`ref-rendering-resources` • {ref}`ref-codecs` • {ref}`ref-feature-flags`
