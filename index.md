@@ -7,9 +7,9 @@ myst:
 (home)=
 # Anbox Cloud documentation
 
-**Anbox Cloud provides a scalable platform for running Android in the cloud using lightweight LXD system containers or full virtual machines.**
+**Anbox Cloud runs Android in the cloud using lightweight LXD system containers or full virtual machines.**
 
-**Built on Ubuntu, it deploys, manages, and streams Android workloads across public and private infrastructure with consistent performance and low latency.** It can run up to 100 Android instances per server while maintaining security and isolation.
+**Built on Ubuntu, it provides a scalable platform to deploy, manage, and stream Android workloads across public and private infrastructure with consistent performance and low latency.** It can run up to 100 Android instances per server while maintaining security and isolation.
 
 Anbox Cloud is available as a single-machine {ref}`appliance <sec-variants>` for small-scale deployments or as a {ref}`charmed deployment <sec-variants>` using Juju for production environments and multi-cluster scaling.
 
