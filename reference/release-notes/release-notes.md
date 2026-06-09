@@ -53,10 +53,11 @@ If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/s
 
 Along with bug fixes and general improvements, Anbox Cloud 1.30.x includes:
 
-- Stream controls overhaul with a new vertical controls bar in the dashboard, adding resize, rotate, volume, power, home, back, keyboard capture toggle, screenshot, and screen recording
+- Stream controls overhaul with a redesigned and expanded stream page actions sidebar in the dashboard
 - Instance copy support in the dashboard for near-instantaneous cloning of existing instances
 - Anbox Cloud Terraform plan as the supported method for charm-based deployments
-- Cuttlefish image support
+- Virtualized Android as a new execution model using Cuttlefish virtual machines, with new `resolute:*-cf:*` images for Android 16 on `amd64` and `arm64`
+- Experimental userspace scheduler support via the Linux kernel's `sched_ext` framework
 - NVIDIA driver series 580 as a hard requirement for NVIDIA GPU deployments
 
 <details><summary>Click to view earlier releases' notes</summary>
