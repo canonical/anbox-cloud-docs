@@ -15,21 +15,21 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| June 17, 2026 | [Anbox Cloud 1.30.0](1.30.0.md) |
 | April 15, 2026 | [Anbox Cloud 1.29.2](1.29.2.md) |
 | March 18, 2026 | [Anbox Cloud 1.29.1](1.29.1.md) |
-| February 18, 2026 | [Anbox Cloud 1.29.0](1.29.0.md) |
 
 ## Upcoming release roadmap
 
-The current, supported minor release is **1.29.0** and the next one will be **1.30.0** expected in June 2026.
+The current, supported minor release is **1.30.0** and the next one will be **1.31.0** expected in September 2026.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| June 17, 2026 | Anbox Cloud 1.30.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
 | July 15, 2026 | Anbox Cloud 1.30.1 | *Android security updates*<br/>Bug fixes |
 | August 19, 2026 | Anbox Cloud 1.30.2 | *Android security updates*<br/>Bug fixes |
+| September 16, 2026 | Anbox Cloud 1.31.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
 
 ## Release and support policy
 
@@ -49,22 +49,21 @@ To ensure you receive latest security updates and bug fixes, you should upgrade 
 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
-### What's new in 1.29.x?
+### What's new in 1.30.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.29.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.30.x includes:
 
-- New instance copy feature for near-instantaneous cloning of existing instances
-- Instance publishing support to create reusable images from running or stopped instances
-- Runtime bitrate control for WebRTC streaming
-- Optimized disk quota with two-tier validation
-- Migration to modernized charms, including charmed-etcd and self-signed-certificates
-- Fine-grained authorization through OpenFGA integration
-- Bug fixes
+- Stream controls overhaul with a new vertical controls bar in the dashboard, adding resize, rotate, volume, power, home, back, keyboard capture toggle, screenshot, and screen recording
+- Instance copy support in the dashboard for near-instantaneous cloning of existing instances
+- Anbox Cloud Terraform plan as the supported method for charm-based deployments
+- Cuttlefish image support
+- NVIDIA driver series 580 as a hard requirement for NVIDIA GPU deployments
 
 <details><summary>Click to view earlier releases' notes</summary>
 
 |  Release date  |  Release notes  |
 |----|----|
+| February 18, 2026 | [Anbox Cloud 1.29.0](1.29.0.md) |
 | January 21, 2026 | [Anbox Cloud 1.28.2](1.28.2.md) |
 | December 10, 2025 | [Anbox Cloud 1.28.1](1.28.1.md) |
 | November 12, 2025 | [Anbox Cloud 1.28.0](1.28.0.md) |
