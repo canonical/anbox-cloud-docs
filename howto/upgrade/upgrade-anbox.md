@@ -27,7 +27,7 @@ Read the release notes for your target version to learn about important changes 
 
 ### Upgrade Juju
 
-Check the [required Juju version](https://documentation.ubuntu.com/anbox-cloud/reference/requirements/#juju).
+Check the {ref}`required Juju version <sec-juju-version-requirements>`.
 If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-models/) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
 ### Upgrade OS
@@ -85,7 +85,7 @@ For version Anbox Cloud 1.28.2 and earlier, deployments still use legacy charms.
     juju refresh etcd-ca --channel=1.33/stable --revision=74
     juju refresh etcd --channel=stable --revision=781
 
-See [deprecation notices for legacy charms](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#etcd-and-easyrsa-charms) for more information. You should transition to modernized charms as soon as possible for new deployments.
+See [deprecation notices for legacy charms](/reference/deprecation-notices.md#etcd-and-easyrsa-charms) for more information. You should transition to modernized charms as soon as possible for new deployments.
 ```
 
 ### Upgrade application registry
@@ -200,7 +200,7 @@ Finally after all the upgrades finish and the nodes are healthy, run:
 
 where `<node_name>` refers to the LXD node name stored within AMS.
 
-As a subordinate charm deployed alongside the LXD charm, the AMS node controller charm  is no longer supported as of Anbox Cloud 1.28.0, following the [deprecation of the node controller charm](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#node-controller-charm). It has been removed from this release and must be removed from any existing deployment. To do so, run:
+As a subordinate charm deployed alongside the LXD charm, the AMS node controller charm  is no longer supported as of Anbox Cloud 1.28.0, following the [deprecation of the node controller charm](/reference/deprecation-notices.md#node-controller-charm). It has been removed from this release and must be removed from any existing deployment. To do so, run:
 
        juju remove-relation ams-node-controller lxd
        juju remove-application ams-node-controller --no-prompt

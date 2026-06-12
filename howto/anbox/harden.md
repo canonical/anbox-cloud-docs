@@ -53,7 +53,7 @@ Secure and back up the following folders on the Anbox Management Client (AMC) be
 
 ### 4 - Stream gateway
 
-- Expose endpoints only when required. When doing so, limit [API exposure](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/gateway-api/) by using a reverse proxy or a web application firewall.
+- Expose endpoints only when required. When doing so, limit [API exposure](/reference/api-reference/gateway-api.md) by using a reverse proxy or a web application firewall.
 The appliance has a built-in reverse proxy but if you are using the charmed deployment, remember to set up one for the deployment.
 
 These are the endpoints that you may require to expose for specific purposes:
