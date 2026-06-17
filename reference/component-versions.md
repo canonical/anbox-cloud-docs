@@ -57,6 +57,23 @@ Not all components are updated with each release. When components are not update
 | anbox-cloud-dashboard | 1.30/stable | 4712 | 4711 | 1.30.0-2c0be4f6c |
 | anbox-connect | latest/stable | 2037 | 2036 | 1.30.0-2c0be4f6c |
 
+### Anbox images
+
+| Name | Version | Execution environment |
+|----------------------------|---------------------------------|---------------------|
+| `jammy:android14:amd64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:android14:arm64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:android15:amd64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:android15:arm64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:aaos14:amd64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:aaos14:arm64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:aaos15:amd64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `jammy:aaos15:arm64` | `1.30.0-20260610021926.git353c487` | Containerized |
+| `resolute:android16-cf:amd64` | `1.30.0-20260610021926.git353c487` | Virtualized |
+| `resolute:android16-cf:arm64` | `1.30.0-20260610021926.git353c487` | Virtualized |
+| `resolute:aaos16-cf:amd64` | `1.30.0-20260610021926.git353c487` | Virtualized |
+| `resolute:aaos16-cf:arm64` | `1.30.0-20260610021926.git353c487` | Virtualized |
+
 ## 1.29.2
 
 ### Charms
