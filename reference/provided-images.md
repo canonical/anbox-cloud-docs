@@ -15,19 +15,25 @@ Anbox Cloud images are regular [Ubuntu cloud images](https://cloud-images.ubuntu
 
 The following table lists supported images available on the official image server, along with their corresponding image type, Android and Ubuntu versions.
 
-| Name                        | Based on | Android Version | Ubuntu Version | Available since |
-|-----------------------------|----------|-----------------|----------------|---------------|
-| `jammy:aaos15:amd64`        | AAOS     | 15              | 22.04          | 1.26.0 |
-| `jammy:aaos15:arm64`        | AAOS     | 15              | 22.04          | 1.26.0 |
-| `jammy:android15:amd64`     | AOSP     | 15              | 22.04          | 1.26.0 |
-| `jammy:android15:arm64`     | AOSP     | 15              | 22.04          | 1.26.0 |
-| `jammy:aaos14:amd64`        | AAOS     | 14              | 22.04          | 1.24.0 |
-| `jammy:aaos14:arm64`        | AAOS     | 14              | 22.04          | 1.24.0 |
-| `jammy:android14:amd64`     | AOSP     | 14              | 22.04          | 1.24.0 |
-| `jammy:android14:arm64`     | AOSP     | 14              | 22.04          | 1.24.0 |
+| Name                        | Based on | Android Version | Ubuntu Version | Execution environment | Available since |
+|-----------------------------|----------|-----------------|----------------|-----------------|---------------|
+| `resolute:android16-cf:amd64` | AOSP  | 16              | 26.04          | Virtualized | 1.30.0 |
+| `resolute:android16-cf:arm64` | AOSP  | 16              | 26.04          | Virtualized | 1.30.0 |
+| `resolute:aaos16-cf:amd64`    | AAOS  | 16              | 26.04          | Virtualized | 1.30.0 |
+| `resolute:aaos16-cf:arm64`    | AAOS  | 16              | 26.04          | Virtualized | 1.30.0 |
+| `jammy:aaos15:amd64`        | AAOS     | 15              | 22.04          | Containerized | 1.26.0 |
+| `jammy:aaos15:arm64`        | AAOS     | 15              | 22.04          | Containerized | 1.26.0 |
+| `jammy:android15:amd64`     | AOSP     | 15              | 22.04          | Containerized | 1.26.0 |
+| `jammy:android15:arm64`     | AOSP     | 15              | 22.04          | Containerized | 1.26.0 |
+| `jammy:aaos14:amd64`        | AAOS     | 14              | 22.04          | Containerized | 1.24.0 |
+| `jammy:aaos14:arm64`        | AAOS     | 14              | 22.04          | Containerized | 1.24.0 |
+| `jammy:android14:amd64`     | AOSP     | 14              | 22.04          | Containerized | 1.24.0 |
+| `jammy:android14:arm64`     | AOSP     | 14              | 22.04          | Containerized | 1.24.0 |
 
 ## Support for Anbox Cloud images
 
-Currently, Anbox Cloud provides images based on Ubuntu 22.04 LTS (Jammy Jellyfish). Deprecations, if any, are announced at least two releases in advance.
+Currently, Anbox Cloud provides images based on Ubuntu 22.04 LTS (Jammy Jellyfish) and Ubuntu 26.04 LTS (Resolute Raccoon). Deprecations, if any, are announced at least two releases in advance.
+
+Images with containerized Android (`jammy:*`) and images with virtualized Android (`resolute:*-cf:*`) differ in their supported features. See {ref}`ref-feature-support-by-image-type` for a detailed comparison and {ref}`exp-android-execution-environments` for an explanation of the two execution environments.
 
 Android versions are supported as long as Google provides security updates for the respective versions.

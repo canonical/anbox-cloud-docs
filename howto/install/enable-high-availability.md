@@ -10,7 +10,7 @@ myst:
 Anbox Cloud comes with support for high availability (HA) for both Core and the Streaming Stack.
 In addition to Juju's support for high availability of the Juju controller (see [Juju documentation](https://documentation.ubuntu.com/juju/latest/howto/manage-controllers#make-a-controller-highly-available)), you can add HA for the Anbox Management Service (AMS) and the Anbox Stream Gateway to ensure fault tolerance and higher uptime.
 
-Enabling high availability (HA for short) is achieved by adding new units via Juju (see [Juju documentation](https://documentation.ubuntu.com/juju/latest/howto/manage-applications#scale-an-application)).
+Enabling high availability (HA for short) is achieved by adding new units via Juju (see [Juju documentation](https://canonical.com/juju/docs/terraform-provider-juju/2.0/howto/manage-applications/#scale-an-application)).
 This will allocate a new machine, run new instances of the scaled application and configure the cluster automatically.
 
 Adding a unit is done with the following syntax:
@@ -85,7 +85,7 @@ anbox-stream-gateway/2      active    idle   4       10.212.218.136  4000/tcp,70
 
 ## Scaling down
 
-Scaling down can be done by removing units via Juju (see [Juju documentation](https://documentation.ubuntu.com/terraform-provider-juju/latest/howto/manage-applications/#scale-an-application)). You have to specifically target the unit that you want to remove:
+Scaling down can be done by removing units via Juju (see [Juju documentation](https://canonical.com/juju/docs/terraform-provider-juju/2.0/howto/manage-applications/#scale-an-application)). You have to specifically target the unit that you want to remove:
 
     juju remove-unit anbox-stream-agent/2
 

@@ -20,4 +20,5 @@ add-image
 publish-instance-as-image
 delete-image
 use-specific-release
+package-custom-android-build
 ```
