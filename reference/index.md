@@ -23,6 +23,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 
 - {ref}`ref-requirements`
 - {ref}`Anbox Cloud images <ref-provided-images>`
+- {ref}`ref-feature-support-by-image-type`
 - {ref}`ref-rendering-resources`
 - {ref}`ref-codecs`
 - {ref}`ref-android-features`
@@ -97,6 +98,7 @@ addon-manifest
 ams-configuration
 ams-instance-configuration
 Anbox Cloud images <provided-images>
+feature-support-by-image-type
 appliance-preseed
 appliance-configuration
 auth

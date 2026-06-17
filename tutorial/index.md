@@ -7,12 +7,24 @@ myst:
 (tutorials)=
 # Tutorials
 
-The tutorials we offer guiding you through installing the {term}`Anbox Cloud Appliance` and creating your first virtual Android device.
-We also offer an optional tutorial to set up your custom stream client.
+The tutorials in this section guide you through the workflows of {term}`Anbox Cloud Appliance`, from installation to running and streaming Android instances.
+
+The following tutorials use images with containerized Android.
+
+- {ref}`tut-installing-appliance`
+- {ref}`tut-create-virtual-device`
+- {ref}`tut-set-up-stream-client`
+
+The following tutorial uses images with virtualized Android.
+
+- {ref}`tut-getting-started-virtualized-android`
+
+For an explanation of the two execution environments, see {ref}`exp-android-execution-environments`.
 
 ```{toctree}
 :maxdepth: 1
 installing-appliance
 create-test-virtual-device
 stream-client
+getting-started-with-virtualized-android
 ```

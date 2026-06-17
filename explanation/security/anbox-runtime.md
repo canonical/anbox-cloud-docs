@@ -31,8 +31,18 @@ For streaming of audio, video and other data, the Anbox runtime uses WebRTC as p
 
 The security model and cryptographic use of WebRTC is described in [RFC8827](https://www.rfc-editor.org/rfc/rfc8827) and use of WebRTC in the Anbox runtime does not deviate from this.
 
-## Packages used
+## Packages used for containerized Android
 
 - [Go standard library](https://pkg.go.dev/std)
 - [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/)
 - [`ca-certificates`](https://launchpad.net/ubuntu/+source/ca-certificates)
+
+## Virtualized Android
+
+The runtime for virtualized Android is written in Rust and runs within snap confinement. Its security model adds the following properties on top of the general security measures described above:
+
+* **Rust memory safety** - the Rust ownership model eliminates common memory safety vulnerabilities (buffer overflows, use-after-free, data races) at compile time.
+* **Snap confinement** - the runtime runs as a snap with strict confinement, limiting its access to the host system.
+* **QEMU isolation** - Android runs inside a virtual machine, providing an additional isolation boundary between the Android workload and the host.
+
+See {ref}`exp-android-execution-environments` for more details on the two execution environments.

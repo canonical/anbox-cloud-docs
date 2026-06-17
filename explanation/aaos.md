@@ -7,7 +7,7 @@ myst:
 (exp-aaos)=
 # Android Automotive OS(AAOS)
 
-Since the 1.21.0 release, in addition to providing images based on the Android Open Source Project (AOSP), Anbox Cloud also offers images based on the [Android Automotive OS (AAOS)](https://source.android.com/docs/automotive/start/what_automotive). These images help run Android in automotive infotainment systems at scale.
+Anbox Cloud offers images based on the [Android Automotive OS (AAOS)](https://source.android.com/docs/automotive/start/what_automotive). These images help run Android in automotive infotainment systems at scale.
 
 ```{important}
 - The Anbox Cloud AAOS images are based on Android Automotive and *not* Android Auto. For understanding the differences between the two, see upstream documentation on [Android Automotive and Android Auto](https://source.android.com/docs/automotive/start/what_automotive#android-automotive-android-auto).
@@ -19,7 +19,9 @@ Until the 1.24.0 release, if you created your own VHAL implementation by followi
 
 However, if a third-party VHAL implementation is loaded during Android runtime, on the Anbox Cloud Dashboard, some vehicle property values may still not be accessible while others may not be editable on the Anbox Cloud dashboard, due to [permission controls](https://source.android.com/docs/automotive/vhal/property-configuration) that categorize vehicle properties as read-only, write-only, or read-write.
 
-Anbox Cloud offers an [Anbox-specific VHAL HIDL interface](https://github.com/canonical/vendor_canonical_interfaces). By using this HIDL, the VHAL implementation allows the Anbox VHAL adapter to modify non-writable and access non-readable vehicle property values without encountering permission issues. See the {ref}`how-to guide <howto-integrate-hidl>` on instructions for setting this up with your VHAL implementation.
+Anbox Cloud offers an [Anbox-specific VHAL HIDL interface](https://github.com/canonical/vendor_canonical_interfaces) for containerized images. By using this HIDL, the VHAL implementation allows the Anbox VHAL adapter to modify non-writable and access non-readable vehicle property values without encountering permission issues. See the {ref}`how-to guide <howto-integrate-hidl>` on instructions for setting this up with your VHAL implementation.
+
+Since the 1.30.0 release, AAOS 16 is available through images with virtualized Android (`resolute:aaos16-cf:amd64` and `resolute:aaos16-cf:arm64`). These images provide native gRPC support for the vehicle HAL. See {ref}`exp-android-execution-environments` for details on the virtualized Android execution environment.
 
 ## Related topics
 
