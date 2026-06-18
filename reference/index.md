@@ -23,6 +23,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 
 - {ref}`ref-requirements`
 - {ref}`Anbox Cloud images <ref-provided-images>`
+- {ref}`ref-feature-support-by-image-type`
 - {ref}`ref-rendering-resources`
 - {ref}`ref-codecs`
 - {ref}`ref-android-features`
@@ -32,6 +33,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 - {ref}`ref-network-ports`
 - {ref}`ref-addon-manifest`
 - {ref}`ref-hooks`
+- {ref}`ref-stream-page-actions`
 
 ## Authorization
 
@@ -96,6 +98,7 @@ addon-manifest
 ams-configuration
 ams-instance-configuration
 Anbox Cloud images <provided-images>
+feature-support-by-image-type
 appliance-preseed
 appliance-configuration
 auth
@@ -117,6 +120,7 @@ release-notes/release-notes.md
 requirements
 security-notices
 security-policy
+stream-page-actions
 android-features
 compatibility-considerations
 Supported features <anbox-features>
