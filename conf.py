@@ -71,7 +71,7 @@ copyright = f"{datetime.date.today().year}"
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://documentation.ubuntu.com/anbox-cloud/"
+ogp_site_url = "https://canonical.com/anbox-cloud/docs/"
 
 
 # Preview name of the documentation website
@@ -179,7 +179,7 @@ html_context = {
 # If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-slug = 'anbox-cloud'
+slug = 'anbox-cloud/docs'
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
@@ -188,7 +188,7 @@ slug = 'anbox-cloud'
 # Base URL of RTD hosted project
 # Include the trailing slash in the URL, it makes a difference
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+html_baseurl = "https://canonical.com/anbox-cloud/docs/"
 
 # URL scheme; {link} is the default configuration
 
@@ -196,6 +196,9 @@ sitemap_url_scheme = "{link}"
 
 # Include lastmod dates in the sitemap
 sitemap_show_lastmod = True
+
+# Custom sitemap filename to avoid conflict with RTD-generated sitemap
+sitemap_filename = "doc-sitemap.xml"
 
 # Template and asset locations
 
@@ -353,6 +356,7 @@ html_css_files = [
 
 html_js_files = [
     "https://assets.ubuntu.com/v1/287a5e8f-bundle.js",
+    "js/overwrite_links.js",
 ]
 
 

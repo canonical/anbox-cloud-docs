@@ -13,7 +13,7 @@ The Anbox Management Service (AMS) sits at the heart of Anbox Cloud and handles 
 
 AMS is usually managed through the command line interface, the Anbox Management Client (AMC), which can run either on the same machine as AMS or on a remote machine.
 
-Since AMS exposes an HTTP interface, any tool can use the [AMS HTTP API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/ams-api/) to interact with AMS. Both the AMC (when running as a remote client) and the Anbox Application Registry (AAR) use the AMS HTTP API to interact with AMS.
+Since AMS exposes an HTTP interface, any tool can use the [AMS HTTP API](/reference/api-reference/ams-api.md) to interact with AMS. Both the AMC (when running as a remote client) and the Anbox Application Registry (AAR) use the AMS HTTP API to interact with AMS.
 
 You can also develop your own client by using the {ref}`sec-ams-sdk`.
 
