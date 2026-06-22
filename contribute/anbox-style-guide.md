@@ -87,7 +87,7 @@ Use hyphens when the starting letter of a word is in capital case or starts with
 - It’s always “Anbox Cloud Appliance” when used in full form and “appliance” when used generically.
 - Always use product name in full form with capitalization - "Anbox Cloud".
 - Within the context of Anbox Cloud, such as AMS, you can use the term "Anbox images" or "Anbox instances". When documenting about LXD images or containers that contain Anbox specific configuration from a big picture point of view,such as the architecture, use the term as "LXD images" or "LXD containers". When there is scope for ambiguity, elaborate and use as "LXD images with Anbox Cloud configuration".
-- Use *charmed deployment* vs *appliance* to differentiate the [variants](https://documentation.ubuntu.com/anbox-cloud/explanation/anbox-cloud/#variants) of Anbox Cloud.
+- Use *charmed deployment* vs *appliance* to differentiate the {ref}`variants <sec-variants>` of Anbox Cloud.
 - Use *Upgrade* to denote a change that results in a different product version and *Update* for making changes to configuration or deployment but don't change the version of the product.
 - Use the term 'page' to describe the different pages of the web dashboard.
 Example: You can see all the instances you created on the *Instances* page.

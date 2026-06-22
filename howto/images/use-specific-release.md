@@ -15,7 +15,7 @@ For instance, to fetch the arm64 Android 15 image of the 1.29.1 release:
 
     amc image add foobar jammy:android15:amd64@1.29.1-20260309214816.git3a659fb
 
-Please refer to [component versions](https://documentation.ubuntu.com/anbox-cloud/reference/component-versions/) for all available image versions.
+Please refer to {ref}`component versions <ref-component-versions>` for all available image versions.
 
 You can then use the `foobar` image as you would any other image.
 

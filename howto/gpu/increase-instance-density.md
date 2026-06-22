@@ -7,7 +7,7 @@ myst:
 (howto-increase-instance-density)=
 # Increase instance density
 
-In an Anbox Cloud deployment with NVIDIA GPUs, launching multiple GPU-based Anbox instances or performing {ref}`howto-run-benchmarks` may reveal a limit on the number of running instances. Although [nvidia-smi](https://developer.nvidia.com/system-management-interface) shows low GPU memory usage and utilization, launching additional instances can result in the following errors when [viewing instance logs](/howto/troubleshoot/view-logs.md):
+In an Anbox Cloud deployment with NVIDIA GPUs, launching multiple GPU-based Anbox instances or performing {ref}`howto-run-benchmarks` may reveal a limit on the number of running instances. Although [nvidia-smi](https://developer.nvidia.com/system-management-interface) shows low GPU memory usage and utilization, launching additional instances can result in the following errors when {ref}`viewing instance logs <howto-ts-view-logs>`:
 
     anbox-starter[698]: I0826 00:57:18.131316 787 vk_context.cpp:267] Using Vulkan device: NVIDIA T4G (driver 570.632.64 api 1.4.303)
     anbox-starter[698]: E0826 00:57:18.168112 787 vk_context.cpp:345] Failed to create Vulkan device: VK_ERROR_INITIALIZATION_FAILED
