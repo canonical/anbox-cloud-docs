@@ -21,31 +21,29 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 ## Upcoming release roadmap
 
-The current, supported minor release is **1.30.0** and the next one will be **1.31.0** expected in September 2026.
+The current supported minor release is **1.30.0**. The next one will be **1.31.0**, expected in November 2026.
 
-The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
+Target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| July 15, 2026 | Anbox Cloud 1.30.1 | *Android security updates*<br/>Bug fixes |
-| August 19, 2026 | Anbox Cloud 1.30.2 | *Android security updates*<br/>Bug fixes |
-| September 16, 2026 | Anbox Cloud 1.31.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
+| November 25, 2026 | Anbox Cloud 1.31.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
 
 ## Release and support policy
 
-Anbox Cloud follows a defined release cycle with frequent minor and patch releases.
+Anbox Cloud follows a defined release cycle with minor and patch releases.
 
 Minor releases
-: A new minor release of Anbox Cloud is released every three months. It includes new features and bug fixes.
+: Anbox Cloud delivers three minor releases per year, in March, June, and November. Minor releases include new features, bug fixes and security updates.
 
 Patch releases
-: A patch release for Anbox Cloud is released every month and includes Android and Chrome security updates alongside Anbox Cloud specific bug fixes.
+: Patch releases are delivered between minor releases and include Android and Chrome security updates alongside Anbox Cloud specific bug fixes. No new features are introduced in patch releases.
 
-Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release was published.
+Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release is published.
 
 Feature deprecations are generally announced two releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
 
-To ensure you receive latest security updates and bug fixes, you should upgrade to a new release of Anbox Cloud shortly after it is released.
+To ensure you receive the latest security updates and bug fixes, you should upgrade to a new release of Anbox Cloud shortly after it is released.
 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
