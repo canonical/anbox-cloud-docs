@@ -37,7 +37,7 @@ Minor releases
 : Anbox Cloud delivers three minor releases per year, in March, June, and November. Minor releases include new features, bug fixes and security updates.
 
 Patch releases
-: Patch releases deliver Android and Chrome security updates alongside Anbox Cloud specific bug fixes between minor releases. No new features are introduced in patch releases.
+: Patch releases are delivered between minor releases and include Android and Chrome security updates alongside Anbox Cloud specific bug fixes. No new features are introduced in patch releases.
 
 Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release is published.
 
