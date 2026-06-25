@@ -22,6 +22,7 @@ The following tutorial uses images with virtualized Android.
 For an explanation of the two execution environments, see {ref}`exp-android-execution-environments`.
 
 ```{toctree}
+:hidden:
 :maxdepth: 1
 installing-appliance
 create-test-virtual-device
