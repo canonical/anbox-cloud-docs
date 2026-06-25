@@ -23,23 +23,21 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 The current supported release is **1.30.0**. The next minor release will be **1.31.0**, expected in November 2026.
 
-The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
+Target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches.
 
 | Target date | Version | Planned updates |
 |----|----|----|
 | November 25, 2026 | Anbox Cloud 1.31.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
 
-Patch releases addressing security vulnerabilities and critical bug fixes are published between minor releases as needed.
-
 ## Release and support policy
 
-Anbox Cloud follows a defined release cycle with planned minor releases and patch releases as needed.
+Anbox Cloud follows a defined release cycle with minor and patch releases.
 
 Minor releases
 : Anbox Cloud delivers three minor releases per year, in March, June, and November. Minor releases include new features, bug fixes and security updates.
 
 Patch releases
-: Patch releases are published between minor releases to address Android and Chrome security updates alongside Anbox Cloud specific bug fixes. No new features are introduced in patch releases.
+: Patch releases deliver Android and Chrome security updates alongside Anbox Cloud specific bug fixes between minor releases. No new features are introduced in patch releases.
 
 Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release is published.
 
