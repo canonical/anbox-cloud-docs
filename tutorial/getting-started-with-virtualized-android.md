@@ -12,6 +12,7 @@ In this tutorial, we will go through launching our first instance with virtualiz
 ## Prerequisites
 
 To proceed with the tutorial, we need:
+
 - A working Anbox Cloud deployment (appliance or charmed). If you haven't set one up yet, see {ref}`tut-installing-appliance`. It needs at least:
   * 4 CPU cores
   * 5GB of memory
