@@ -292,6 +292,12 @@ linkcheck_request_headers = {
     }
 }
 
+##########################
+# Search result scoring  #
+##########################
+
+html_search_scorer = "_static/js/search_scorer.js"
+
 ########################
 # Configuration extras #
 ########################
