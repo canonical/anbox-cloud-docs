@@ -238,6 +238,23 @@ rediraffe_redirects = "redirects.txt"
 rediraffe_dir_only = True
 
 
+############################
+# sphinx-llm configuration #
+############################
+
+# Description included at the top of llms.txt to give LLMs initial context.
+# This repo has no pyproject.toml, so the description must be set explicitly;
+# otherwise the extension has no project description to fall back on.
+llms_txt_description = (
+    "This is the documentation for Anbox Cloud, which runs Android in the "
+    "cloud using lightweight LXD system containers or full virtual machines."
+)
+
+# Base URL prepended to links in the generated Markdown so they are absolute.
+# Reuses the hardcoded html_baseurl defined in the sitemap section above.
+markdown_http_base = html_baseurl
+
+
 ###########################
 # Link checker exceptions #
 ###########################
@@ -338,6 +355,7 @@ extensions = [
     "sphinxext.opengraph",
     "sphinx_last_updated_by_git",
     "sphinx_sitemap",
+    "sphinx_llm.txt",
 ]
 
 # Excludes files or directories from processing
