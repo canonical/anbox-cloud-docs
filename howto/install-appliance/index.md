@@ -15,6 +15,7 @@ We strongly recommend that you follow the {ref}`tut-installing-appliance` tutori
 
 Also, see {ref}`ref-requirements` before you start your installation.
 
+(supported-cloud-platforms)=
 ## Supported cloud platforms
 
 The Anbox Cloud Appliance is currently available for the following cloud platforms:

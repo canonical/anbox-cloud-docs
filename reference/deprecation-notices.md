@@ -24,6 +24,7 @@ The bundles [Anbox Cloud](https://charmhub.io/anbox-cloud) and [Anbox Cloud Core
 
 Support for the Android 12, Android 13, and AAOS 13 images will be deprecated starting with release 1.27.1 and will be unsupported as of release 1.29.0.
 
+(node-controller-charm)=
 ## Node controller charm
 *Deprecated in 1.26.0* ; *Unsupported in 1.28.0*
 
@@ -66,6 +67,7 @@ Support for Ubuntu 20.04 LTS (Focal Fossa) is deprecated in 1.22.0 and is planne
 
 Support for the EmuGL renderer is deprecated in 1.22.0 and planned to be removed in Anbox Cloud 1.23.0. Starting with 1.22.0, VirGL will be the default renderer for NVIDIA GPUs with driver version 545 and later.
 
+(etcd-and-easyrsa-charms)=
 ## etcd and EasyRSA charms
 *Deprecated in 1.29.0* ; *Unsupported in 1.35.0*
 

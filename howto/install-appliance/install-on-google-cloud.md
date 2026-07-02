@@ -74,6 +74,7 @@ For more information, see [Google's documentation](https://docs.cloud.google.com
 
 Select **Create** to create the virtual machine on Google Cloud. For additional information on creating a virtual machine in Google Cloud, see [Google's documentation](https://docs.cloud.google.com/compute/docs/instances/create-start-instance).
 
+(firewall-setup)=
 ## Firewall setup
 
 Before installing Anbox Cloud on the virtual machine, you should set up a firewall to control the incoming and outgoing traffic to your virtual machine. From the navigation menu, select **VPC network > Firewall**. Select **Create firewall rule**.

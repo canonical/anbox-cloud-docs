@@ -29,6 +29,7 @@ Target dates for upcoming releases are not final and could vary depending on var
 |----|----|----|
 | November 25, 2026 | Anbox Cloud 1.31.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
 
+(release-and-support-policy)=
 ## Release and support policy
 
 Anbox Cloud follows a defined release cycle with minor and patch releases.
