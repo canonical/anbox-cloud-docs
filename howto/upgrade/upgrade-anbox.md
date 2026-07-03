@@ -85,7 +85,7 @@ For version Anbox Cloud 1.28.2 and earlier, deployments still use legacy charms.
     juju refresh etcd-ca --channel=1.33/stable --revision=74
     juju refresh etcd --channel=stable --revision=781
 
-See [deprecation notices for legacy charms](/reference/deprecation-notices.md#etcd-and-easyrsa-charms) for more information. You should transition to modernized charms as soon as possible for new deployments.
+See [deprecation notices for legacy charms](#etcd-and-easyrsa-charms) for more information. You should transition to modernized charms as soon as possible for new deployments.
 ```
 
 ### Upgrade application registry
@@ -200,7 +200,7 @@ Finally after all the upgrades finish and the nodes are healthy, run:
 
 where `<node_name>` refers to the LXD node name stored within AMS.
 
-As a subordinate charm deployed alongside the LXD charm, the AMS node controller charm  is no longer supported as of Anbox Cloud 1.28.0, following the [deprecation of the node controller charm](/reference/deprecation-notices.md#node-controller-charm). It has been removed from this release and must be removed from any existing deployment. To do so, run:
+As a subordinate charm deployed alongside the LXD charm, the AMS node controller charm  is no longer supported as of Anbox Cloud 1.28.0, following the [deprecation of the node controller charm](#node-controller-charm). It has been removed from this release and must be removed from any existing deployment. To do so, run:
 
        juju remove-relation ams-node-controller lxd
        juju remove-application ams-node-controller --no-prompt

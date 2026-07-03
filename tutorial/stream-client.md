@@ -46,6 +46,7 @@ For the next step, we need the session ID which AMS assigned to the instance. So
 
     amc ls --filter name=a13 --format=csv | cut -d, -f6 | awk -F"session=" '{ print $2 }'
 
+(implement-the-stream-client)=
 ## Implement the stream client
 
 Now that we have everything ready, let's create a directory to set up the stream client:
