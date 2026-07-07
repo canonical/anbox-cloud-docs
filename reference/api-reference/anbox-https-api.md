@@ -102,7 +102,10 @@ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.
           "camera_video_streaming",
           "sensor_support",
           "tracing_support",
-          "vhal_support"
+          "active_sensors",
+          "platform_support",
+          "vhal_support",
+          "location_support",
           "pprof",
           "metrics",
           "log_level",
