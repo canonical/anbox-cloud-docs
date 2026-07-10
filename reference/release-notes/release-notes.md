@@ -27,7 +27,7 @@ Target dates for upcoming releases are not final and could vary depending on var
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| July 22, 2026 | Anbox Cloud 1.30.1 | Android security updates<br/>Bug fixes |
+| July 22, 2026 | Anbox Cloud 1.30.1 | Bug fixes |
 | November 25, 2026 | Anbox Cloud 1.31.0 | New features<br/>Android security updates<br/>Bug fixes |
 
 (release-and-support-policy)=
