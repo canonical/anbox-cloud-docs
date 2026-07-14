@@ -23,11 +23,12 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 The current supported minor release is **1.30.0**. The next one will be **1.31.0**, expected in November 2026.
 
-Target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches.
+Target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. Additional patch releases may be added to this roadmap as they are planned.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| November 25, 2026 | Anbox Cloud 1.31.0 | *New features*<br/>*Android security updates*<br/>Bug fixes |
+| July 22, 2026 | Anbox Cloud 1.30.1 | Bug fixes |
+| November 25, 2026 | Anbox Cloud 1.31.0 | New features<br/>Android security updates<br/>Bug fixes |
 
 (release-and-support-policy)=
 ## Release and support policy
@@ -35,10 +36,12 @@ Target dates for upcoming releases are not final and could vary depending on var
 Anbox Cloud follows a defined release cycle with minor and patch releases.
 
 Minor releases
-: Anbox Cloud delivers three minor releases per year, in March, June, and November. Minor releases include new features, bug fixes and security updates.
+: A new minor release is delivered three times per year: in March, June and November. It includes new features, bug fixes and security updates.
 
 Patch releases
-: Patch releases are delivered between minor releases and include Android and Chrome security updates alongside Anbox Cloud specific bug fixes. No new features are introduced in patch releases.
+: A patch release includes Android and Chrome security updates alongside Anbox Cloud specific bug fixes. No new features are introduced.
+
+  Patch releases are not issued every month; they are published as needed. When planned, they are listed in the upcoming release roadmap above.
 
 Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release is published.
 
