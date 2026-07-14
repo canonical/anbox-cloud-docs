@@ -7,17 +7,13 @@ myst:
 (howto-upgrade)=
 # Upgrade Anbox Cloud
 
-The following guides in this section describe how to upgrade your charmed or appliance installation.
+Follow the appropriate guide for your deployment variant:
+
+- {ref}`howto-upgrade-appliance`
+- {ref}`howto-upgrade-anbox-cloud`
 
 ```{note}
 When possible, Anbox Cloud automatically enables [Livepatch](https://ubuntu.com/security/livepatch). Livepatch applies critical Linux kernel patches with zero downtime. You can check whether Livepatch is available for your platform by running `pro status`.
-```
-
-```{toctree}
-:titlesonly:
-
-upgrade-appliance
-upgrade-anbox
 ```
 
 (sec-control-updates)=
@@ -34,3 +30,10 @@ In a production environment, this update behavior might cause problems in some c
 To prevent such problems, use either of the following methods:
 - Define maintenance windows in which your systems can be updated without interrupting operations. See [Managing updates](https://snapcraft.io/docs/managing-updates) in the snap documentation for information on how to control snap updates on your systems.
 - Configure a [Snap Store Proxy](https://ubuntu.com/enterprise-store/docs/) to control which snaps are served to the machines that use the proxy. In particular, you can use the proxy to [override snap revisions](https://ubuntu.com/enterprise-store/docs/). In this method, you have full control over when snaps are updated.
+
+```{toctree}
+:hidden:
+
+upgrade-appliance
+upgrade-anbox
+```

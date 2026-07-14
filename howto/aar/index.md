@@ -7,14 +7,20 @@ myst:
 (howto-aar)=
 # AAR
 
-The following guides in this section describe how to manage the Anbox Application Registry (AAR).
+The Anbox Application Registry (AAR) enables you to share applications across multiple Anbox Cloud deployments.
+
+To manage AAR, refer to the guide for your required operation:
+
+- {ref}`howto-deploy-aar`
+- {ref}`howto-configure-aar`
+- {ref}`howto-revoke-aar`
+
+Refer to {ref}`exp-aar` for an overview.
 
 ```{toctree}
-:titlesonly:
+:hidden:
 
 configure
 deploy
 revoke
 ```
-
-See {ref}`exp-aar` for an overview of AAR and how it works.

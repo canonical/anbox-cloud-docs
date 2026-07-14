@@ -7,18 +7,18 @@ myst:
 (howto-manage-cluster)=
 # Manage cluster nodes
 
-The guides in this section describe how to distribute the load of your Anbox Cloud installation over several machines in a cluster.
-
-See {ref}`exp-clustering` for an introduction to how clustering works in Anbox Cloud.
-
 ```{important}
-Currently, Anbox Cloud Appliance does not support clustering.
+Clustering is supported only for charmed Anbox Cloud deployments. The Anbox Cloud Appliance does not support clustering.
 ```
 
-The following how-to guides are available for operations related to clustering in charmed Anbox Cloud deployments:
+These guides describe how to distribute the load of your Anbox Cloud installation over several machines in a cluster. See {ref}`exp-clustering` for an introduction to how clustering works.
+
+- {ref}`howto-configure-cluster-nodes`
+- {ref}`howto-scale-up-cluster`
+- {ref}`howto-scale-down-cluster`
 
 ```{toctree}
-:titlesonly:
+:hidden:
 
 configure-nodes
 Scale down <scale-down>

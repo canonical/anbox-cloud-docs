@@ -7,10 +7,28 @@ myst:
 (howto-manage-anbox)=
 # Manage Anbox Cloud
 
-The following guides in this section help you to manage and work with your Anbox Cloud or Anbox Cloud Appliance installation.
+The guides apply to both Anbox Cloud and Anbox Cloud Appliance installation.
+
+## Access and authentication
+
+- {ref}`howto-access-ams-remote`
+- {ref}`howto-auth`
+
+## Security
+
+- {ref}`howto-harden`
+- {ref}`howto-set-up-tls`
+
+## Storage and performance
+
+- {ref}`howto-resize-lxd-storage`
+- {ref}`howto-run-benchmarks`
+- {ref}`howto-scx`
+
+You can also refer to {ref}`ref-cmd-ref` for commands that you can use with the CLI.
 
 ```{toctree}
-:titlesonly:
+:hidden:
 
 control-ams-remotely
 auth
@@ -20,5 +38,3 @@ benchmarks
 tls-for-appliance
 scx
 ```
-
-You can also refer to {ref}`ref-cmd-ref` for commands that you can use with the CLI.

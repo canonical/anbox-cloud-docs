@@ -7,14 +7,25 @@ myst:
 (howto-install-anbox-cloud)=
 # Install Anbox Cloud
 
-It is important to remember that there is a difference between the charmed Anbox Cloud installation and the Anbox Cloud Appliance (see {ref}`sec-variants`). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`.
+This section focuses on installing **charmed Anbox Cloud**. For the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`. For a comparison of both variants, see {ref}`sec-variants`.
 
-Also, see {ref}`ref-requirements` before you start your installation.
+Check {ref}`ref-requirements` before you start your installation.
 
-The following guides in this section describe how to install Anbox Cloud.
+## Deploy
+
+- {ref}`howto-deploy-anbox-juju`
+- {ref}`howto-deploy-anbox-baremetal`
+- {ref}`howto-deploy-anbox-terraform`
+
+## Configure and validate
+
+- {ref}`howto-customize-installation`
+- {ref}`howto-enable-ha`
+- {ref}`howto-use-ceph-storage`
+- {ref}`howto-validate-deployment`
 
 ```{toctree}
-:titlesonly:
+:hidden:
 
 customize-installation
 deploy-bare-metal
