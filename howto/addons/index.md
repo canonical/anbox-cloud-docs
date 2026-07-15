@@ -11,18 +11,31 @@ myst:
 These guides apply to images with containerized Android (`jammy:*`). Addons are not supported for images with virtualized Android. See {ref}`exp-android-execution-environments` for details.
 ```
 
-In Anbox Cloud, addons can be used to customize images that are used for instances. See {ref}`exp-addons` and {ref}`ref-addon-manifest` to learn about addons in detail.
+Addons customize the images used for instances. You can use addons to:
 
-You can use addons to, for example:
+- Enable SSH access for automation tools ({ref}`howto-create-addon`)
+- Install additional tools in the instance ({ref}`howto-install-tools-example`)
+- Set up user-specific data when starting an application ({ref}`howto-backup-restore-example`)
+- Back up data when the instance is stopping ({ref}`howto-backup-restore-example`)
+- Configure the Android system before running the application ({ref}`howto-customize-android-example`)
+- Provide support for other platforms ({ref}`howto-emulate-platforms-example`)
 
-- Enable SSH access for automation tools (see {ref}`howto-create-addon`)
-- Set up user-specific data when starting an application (see {ref}`howto-backup-restore-example`)
-- Install additional tools in the instance (see {ref}`howto-install-tools-example`)
-- Back up data when the instance is stopping (see {ref}`howto-backup-restore-example`)
-- Configure the Android system before running the application (see {ref}`howto-customize-android-example`)
-- Provide support for other platforms (see {ref}`howto-emulate-platforms-example`)
+To manage existing addons:
 
-If you have used addons before Anbox Cloud 1.12, see {ref}`howto-migrate-addons` to update your addons to use the new hooks.
+- {ref}`howto-enable-addons-globally`
+- {ref}`howto-update-addons`
+
+If you used addons before Anbox Cloud 1.12, refer to {ref}`howto-migrate-addons` to update your addons to use the new hooks.
+
+## Related topics
+
+Explanation:
+
+- {ref}`exp-addons` 
+
+Reference:
+
+- {ref}`ref-addon-manifest`
 
 ```{toctree}
 :hidden:

@@ -14,8 +14,13 @@ This section contains guides for implementing specific streaming features in you
 - {ref}`howto-integrate-virtual-keyboard`
 - {ref}`howto-enable-client-side-video-upscaling`
 
+## Related topics
 
-For an overview of the Streaming Stack and Streaming SDK, refer to {ref}`exp-application-streaming` and {ref}`sec-streaming-sdk` respectively.
+Explanation:
+- {ref}`exp-application-streaming`
+
+Reference:
+- {ref}`sec-streaming-sdk`
 
 ```{toctree}
 :hidden:

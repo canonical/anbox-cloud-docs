@@ -7,7 +7,7 @@ myst:
 (howto-install-anbox-cloud)=
 # Install Anbox Cloud
 
-This section focuses on installing **charmed Anbox Cloud**. For the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`. For a comparison of both variants, see {ref}`sec-variants`.
+This section focuses on installing **Anbox Cloud**. For the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`. For a comparison of both variants, see {ref}`sec-variants`.
 
 Check {ref}`ref-requirements` before you start your installation.
 

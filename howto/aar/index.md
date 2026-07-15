@@ -15,7 +15,7 @@ To manage AAR, refer to the guide for your required operation:
 - {ref}`howto-configure-aar`
 - {ref}`howto-revoke-aar`
 
-Refer to {ref}`exp-aar` for an overview.
+For an overview of AAR and how it works, refer to {ref}`exp-aar`.
 
 ```{toctree}
 :hidden:

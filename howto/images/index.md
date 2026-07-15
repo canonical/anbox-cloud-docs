@@ -7,26 +7,22 @@ myst:
 (howto-manage-images)=
 # Manage images
 
-An image is the base for an instance running in Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. Each release of Anbox Cloud comes with an updated image.
+An image is the base for an instance running in Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. These how-to guides cover common operations related to images.
 
-## Add and configure
-
-Set up access to the image server and add images to your deployment.
-
-- {ref}`howto-add-image`
 - {ref}`howto-configure-image-server`
+- {ref}`howto-add-image`
 - {ref}`howto-use-specific-release`
 - {ref}`howto-delete-image`
-
-## Customize and publish
-
-Create custom images from running instances or build your own Android image from source.
-
 - {ref}`howto-publish-instance-as-image`
 - {ref}`howto-package-custom-android-build`
 
+## Related topics
 
-See {ref}`ref-provided-images` for information about which images Anbox Cloud provides.
+Explanation:
+- {ref}`exp-images`
+
+Reference:
+- {ref}`ref-provided-images`
 
 ```{toctree}
 :hidden:

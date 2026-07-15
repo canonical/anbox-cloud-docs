@@ -9,34 +9,45 @@ myst:
 
 Instances are the running workloads in Anbox Cloud. These guides walk you through creating, accessing and managing instances throughout their lifecycle.
 
-## Create and configure
+## Create and manage instances
+
+Instances can be created from applications or images, configured, copied, or removed as needed.
 
 - {ref}`howto-create-instance`
 - {ref}`howto-configure-instance`
 - {ref}`howto-configure-geographic-location`
 - {ref}`howto-list-instances`
+- {ref}`howto-copy-instance`
+- {ref}`howto-delete-instance`
 
-## Start, stop, and manage
+## Control instance state
+
+Start, stop, and restart instances, or wait for them to reach a ready state before proceeding.
 
 - {ref}`howto-start-instance`
 - {ref}`howto-wait-for-instance`
 - {ref}`howto-stop-instance`
 - {ref}`howto-restart-instance`
-- {ref}`howto-copy-instance`
-- {ref}`howto-delete-instance`
 
-## Access and debug
+## Access and share instances
+
+Access a running instance through a shell, inspect its logs, or share an active streaming session with other users.
 
 - {ref}`howto-access-instance`
 - {ref}`howto-view-instance-logs`
 - {ref}`howto-share-session`
 
-## Back up and expose
+## Back up data and expose services
+
+Back up application data across restarts and expose instance services to the external network.
 
 - {ref}`howto-backup-restore-application-data`
 - {ref}`howto-expose-services`
 
-Refer to {ref}`exp-instances` for an introduction to how instances are used in Anbox Cloud.
+## Related topics
+
+Explanation:
+- {ref}`exp-instances`
 
 ```{toctree}
 :hidden:

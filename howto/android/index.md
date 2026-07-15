@@ -7,22 +7,19 @@ myst:
 (howto-Android)=
 # Work with Android
 
-These guides cover Android-specific tasks such as debugging and automotive integration.
+These guides cover Android-specific tasks, including debugging instances with ADB and integrating custom VHAL implementations for automotive use cases.
 
-To access and debug Android instances:
+## Access and debug
 
 - {ref}`howto-access-android-instance`
 - {ref}`howto-debug-graphics-renderdoc`
+- {ref}`howto-simulate-incoming-sms`
 
-To integrate with Android Automotive (AAOS):
+## Integrate with Android Automotive
 
 - {ref}`howto-integrate-hidl`
 - {ref}`howto-replace-anbox-vhal`
 - {ref}`howto-set-automotive-properties`
-
-To simulate Android system behavior:
-
-- {ref}`howto-simulate-incoming-sms`
 
 ```{toctree}
 :hidden:
