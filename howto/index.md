@@ -11,7 +11,7 @@ These how-to guides help you perform key operational tasks when configuring, man
 
 ## Installation and deployment
 
-Anbox Cloud can be installed as a single-machine appliance or as a charmed deployment using Juju.
+Deploy Anbox Cloud as a single-machine appliance or as a charmed deployment using Juju.
 
 - {ref}`howto-install-anbox-cloud`
 - {ref}`howto-install-appliance`
@@ -19,7 +19,7 @@ Anbox Cloud can be installed as a single-machine appliance or as a charmed deplo
 
 ## Using Anbox Cloud
 
-Images provide the Android base for instances, which run packaged applications. The streaming stack can deliver the visual output to end users.
+Images provide the Android base for instances, which run packaged applications. The streaming stack delivers the visual output to end users.
 
 - {ref}`howto-manage-images`
 - {ref}`howto-manage-applications`
@@ -47,7 +47,7 @@ Anbox Cloud exposes metrics through API endpoints for integration with external 
 
 ## Troubleshooting Anbox Cloud
 
-Resolutions for common issues with Anbox Cloud and how to collect useful debugging information before reporting an issue.
+When something goes wrong, these guides help you diagnose the issue and collect the information needed for a bug report.
 
 - {ref}`howto-ts-anbox-cloud`
 

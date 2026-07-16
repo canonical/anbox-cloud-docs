@@ -22,7 +22,7 @@ Understand the underlying architecture of Anbox Cloud, its variants and how the 
 
 ## Working with Anbox Cloud
 
-Understand the different objects used in the product stack and how to use them to tune the performance of Anbox Cloud.
+Explore the different objects used in the product stack and how to use them to tune the performance of Anbox Cloud.
 
 - {ref}`exp-applications`
 - {ref}`exp-instances`
@@ -36,13 +36,13 @@ Understand the different objects used in the product stack and how to use them t
 
 ## Authentication and authorization
 
-Learn concepts of identities, groups and permissions in Anbox Cloud.
+Identities, groups, and permissions control access in Anbox Cloud.
 
 - {ref}`exp-auth`
 
 ## Deploying Anbox Cloud
 
-Understand deployment configurations to plan your deployment.
+Plan your deployment with guidance on capacity, performance, rendering, and custom image options.
 
 - {ref}`exp-production-planning`
 - {ref}`exp-capacity-planning`
