@@ -52,6 +52,7 @@ Know the configuration options that can be defined for various components of Anb
 - {ref}`ref-application-manifest`
 - {ref}`ref-feature-flags`
 - {ref}`ref-webrtc`
+- {ref}`ref-charm-configuration`
 
 ## API reference
 
@@ -89,7 +90,9 @@ Learn about our security policies and about the fixes we have provided for vulne
 - {ref}`ref-license-information`
 - {ref}`ref-glossary`
 
-Also check out the {ref}`tutorials` for step-by-step instructions that help you get familiar with Anbox Cloud, the {ref}`how-to-guides` for instructions on how to achieve specific goals when using Anbox Cloud and the {ref}`explanation` section for background information.
+If you are new to Anbox Cloud, start with the {ref}`tutorials` for step-by-step instructions.
+For operational tasks, see the {ref}`how-to-guides`.
+For background information and concepts, refer to {ref}`explanation`.
 
 ```{toctree}
 :hidden:
