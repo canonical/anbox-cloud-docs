@@ -11,7 +11,7 @@ The reference guides in this section provide additional information about using 
 
 ## Releases and versions
 
-Learn about Anbox Cloud releases, the product roadmap, deprecations, supported product versions and component versions.
+Anbox Cloud releases, the product roadmap, deprecations, supported product versions and component versions.
 
 - {ref}`ref-release-notes`
 - {ref}`ref-deprecation-notes`
@@ -19,7 +19,7 @@ Learn about Anbox Cloud releases, the product roadmap, deprecations, supported p
 
 ## Usage
 
-Understand the difference aspects of using Anbox Cloud such as requirements, supported features, provided SDKs, images, APIs, available network ports for communication, extending Anbox Cloud through addons and hooks.
+Reference information about Anbox Cloud requirements, supported features, SDKs, images, APIs, network ports, addons, and hooks.
 
 - {ref}`ref-requirements`
 - {ref}`Anbox Cloud images <ref-provided-images>`
@@ -37,13 +37,13 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 
 ## Authorization
 
-Different levels of entitlements that can be assigned at a global level and at a resource level
+Authorization entitlements and permissions at the global and resource levels.
 
 - {ref}`ref-auth`
 
 ## Configuration
 
-Know the configuration options that can be defined for various components of Anbox Cloud.
+Configuration options defined for various components of Anbox Cloud.
 
 - {ref}`Appliance preseed configuration <ref-appliance-preseed-config>`
 - {ref}`ref-ams-configuration`
@@ -56,7 +56,7 @@ Know the configuration options that can be defined for various components of Anb
 
 ## API reference
 
-Learn about the APIs provided by Anbox Cloud.
+APIs for management, runtime control, and streaming.
 
 - {ref}`ref-api`
   * [AMS HTTP API](/reference/api-reference/ams-api.md)
@@ -66,21 +66,22 @@ Learn about the APIs provided by Anbox Cloud.
 
 ## Command reference
 
-Learn about the commands and their usage for the Anbox Management Client (AMC) and the Anbox Cloud Appliance.
+CLI reference for the Anbox Management Client (AMC), the Anbox Cloud Appliance, and AAR.
 
 - [AMC commands](./cmd-ref/amc/ams.amc.md)
 - [Appliance commands](./cmd-ref/appliance/anbox-cloud-appliance.md)
+- [AAR commands](./cmd-ref/aar/aar.md)
 
 ## Performance
 
-Learn about the available metrics and benchmarks for measuring performance.
+Performance metrics, benchmarks, and monitoring data.
 
 - {ref}`ref-prometheus-metrics`
 - {ref}`ref-performance-benchmarks`
 
 ## Security
 
-Learn about our security policies and about the fixes we have provided for vulnerabilities.
+Security policies and fixes for reported vulnerabilities.
 
 - {ref}`ref-security-notices`
 - {ref}`ref-security-policy`
