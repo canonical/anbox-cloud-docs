@@ -53,7 +53,7 @@ Plan your deployment with guidance on capacity, performance, rendering, and cust
 
 ## Security with Anbox Cloud
 
-Understand how you can deploy Anbox Cloud secure, the cryptography information used by various Anbox Cloud components.
+Learn how Anbox Cloud ensures security across its components, including communication, isolation, and cryptography.
 
 - {ref}`Security <exp-security>`
 
