@@ -27,15 +27,10 @@ To manage existing addons:
 
 If you used addons before Anbox Cloud 1.12, refer to {ref}`howto-migrate-addons` to update your addons to use the new hooks.
 
-## Related topics
+## See also
 
-Explanation:
-
-- {ref}`exp-addons` 
-
-Reference:
-
-- {ref}`ref-addon-manifest`
+- Explanation: {ref}`exp-addons`
+- Reference: {ref}`ref-addon-manifest`
 
 ```{toctree}
 :hidden:

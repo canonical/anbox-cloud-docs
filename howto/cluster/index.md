@@ -17,10 +17,9 @@ These guides describe how to distribute the load of your Anbox Cloud installatio
 - {ref}`howto-scale-up-cluster`
 - {ref}`howto-scale-down-cluster`
 
-## Related topics
+## See also
 
-Explanation:
-- {ref}`exp-clustering`
+- Explanation: {ref}`exp-clustering`
 
 ```{toctree}
 :hidden:

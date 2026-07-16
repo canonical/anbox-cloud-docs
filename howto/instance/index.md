@@ -44,10 +44,9 @@ Back up application data across restarts and expose instance services to the ext
 - {ref}`howto-backup-restore-application-data`
 - {ref}`howto-expose-services`
 
-## Related topics
+## See also
 
-Explanation:
-- {ref}`exp-instances`
+- Explanation: {ref}`exp-instances`
 
 ```{toctree}
 :hidden:

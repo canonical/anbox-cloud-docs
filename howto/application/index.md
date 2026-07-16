@@ -33,13 +33,10 @@ Once ready, applications can be streamed to users or tested with automated UI fr
 - {ref}`howto-list-applications`
 - {ref}`howto-delete-application`
 
-## Related topics
+## See also
 
-Explanation:
-- {ref}`exp-applications`
-
-Reference:
-- {ref}`ref-application-manifest`
+- Explanation: {ref}`exp-applications`
+- Reference: {ref}`ref-application-manifest`
 
 ```{toctree}
 :hidden:

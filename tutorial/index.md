@@ -19,7 +19,9 @@ The tutorials in this section guide you through the workflows of {term}`Anbox Cl
 
 - {ref}`tut-getting-started-virtualized-android`
 
-To understand the two execution environments, see {ref}`exp-android-execution-environments`.
+## See also
+
+- Explanation: {ref}`exp-android-execution-environments`
 
 ```{toctree}
 :hidden:

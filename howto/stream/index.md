@@ -14,13 +14,10 @@ This section contains guides for implementing specific streaming features in you
 - {ref}`howto-integrate-virtual-keyboard`
 - {ref}`howto-enable-client-side-video-upscaling`
 
-## Related topics
+## See also
 
-Explanation:
-- {ref}`exp-application-streaming`
-
-Reference:
-- {ref}`sec-streaming-sdk`
+- Explanation: {ref}`exp-application-streaming`
+- Reference: {ref}`sec-streaming-sdk`
 
 ```{toctree}
 :hidden:

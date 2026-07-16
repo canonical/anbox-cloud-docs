@@ -16,13 +16,10 @@ An image is the base for an instance running in Anbox Cloud. It contains all nec
 - {ref}`howto-publish-instance-as-image`
 - {ref}`howto-package-custom-android-build`
 
-## Related topics
+## See also
 
-Explanation:
-- {ref}`exp-images`
-
-Reference:
-- {ref}`ref-provided-images`
+- Explanation: {ref}`exp-images`
+- Reference: {ref}`ref-provided-images`
 
 ```{toctree}
 :hidden:
