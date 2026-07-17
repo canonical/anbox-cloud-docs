@@ -7,19 +7,20 @@ myst:
 (how-to-guides)=
 # How-to guides
 
-These how-to guides help you perform key operational tasks when configuring, managing or using Anbox Cloud.
+These how-to guides help you install, configure, manage, and use Anbox Cloud.
 
-## Installation and deployment
+## Installation and configuration
 
-Deploy Anbox Cloud as a single-machine appliance or as a charmed deployment using Juju.
+Deploy Anbox Cloud on a single machine with the Appliance or at scale with a charmed deployment managed by Juju.
 
 - {ref}`howto-install-anbox-cloud`
 - {ref}`howto-install-appliance`
 - {ref}`howto-upgrade`
+- {ref}`howto-set-up-idp`
 
 ## Using Anbox Cloud
 
-Images provide the Android base for instances, which run packaged applications. The streaming stack delivers the visual output to end users.
+Manage Android workloads by working with images, applications, instances and more.
 
 - {ref}`howto-manage-images`
 - {ref}`howto-manage-applications`
@@ -29,10 +30,11 @@ Images provide the Android base for instances, which run packaged applications. 
 - {ref}`howto-port-android-apps`
 - {ref}`howto-use-web-dashboard`
 - {ref}`howto-Android`
+- {ref}`howto-gpu`
 
 ## Managing Anbox Cloud
 
-Both deployment variants can be managed remotely. Charmed deployments can additionally distribute load across a cluster and share applications via AAR.
+Distribute the load of Anbox Cloud over several machines in a cluster, share applications via AAR and work with Anbox runtime.
 
 - {ref}`howto-manage-anbox`
 - {ref}`howto-manage-cluster`

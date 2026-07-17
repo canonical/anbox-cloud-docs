@@ -8,7 +8,7 @@ myst:
 # Work with the Anbox runtime
 
 ```{important}
-These guides apply to images with containerized Android (`jammy:*`). To work with virtualized Android, see {ref}`tut-getting-started-virtualized-android` and {ref}`howto-package-custom-android-build`.
+These guides apply to images with containerized Android (`jammy:*`). For virtualized Android, see {ref}`tut-getting-started-virtualized-android` and {ref}`howto-package-custom-android-build`.
 ```
 
 The Anbox runtime runs the Android container, provides access to hardware, and integrates with streaming protocols. To work with Anbox runtime:

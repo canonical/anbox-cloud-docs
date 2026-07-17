@@ -7,18 +7,18 @@ myst:
 (howto-manage-anbox)=
 # Manage Anbox Cloud
 
-The guides apply to both Anbox Cloud and Anbox Cloud Appliance installation.
+The guides in this section apply to both Anbox Cloud and Anbox Cloud Appliance deployments.
 
 ## Access and permissions
 
-AMS supports remote management over HTTPS with OpenFGA-based access control.
+Manage remote access to AMS and configure user permissions.
 
 - {ref}`howto-access-ams-remote`
 - {ref}`howto-auth`
 
 ## Security
 
-Harden your deployment by restricting network exposure and replacing the appliance's default TLS certificate.
+Harden your deployment by restricting network exposure and setting up TLS for the appliance.
 
 - {ref}`howto-harden`
 - {ref}`howto-set-up-tls`

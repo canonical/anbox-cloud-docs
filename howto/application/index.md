@@ -11,7 +11,7 @@ myst:
 These guides apply to images with containerized Android (`jammy:*`). The application model is not supported for images with virtualized Android. See {ref}`exp-android-execution-environments` for details.
 ```
 
-## Create and configure
+## Create and manage
 
 Applications are packaged from Android APKs, extended with addons or hooks, and updated as needed.
 
@@ -28,7 +28,7 @@ Once ready, applications can be streamed to users or tested with automated UI fr
 - {ref}`howto-stream-applications`
 - {ref}`howto-test-application`
 
-## List and remove
+## List and delete
 
 - {ref}`howto-list-applications`
 - {ref}`howto-delete-application`

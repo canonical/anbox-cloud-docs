@@ -7,7 +7,9 @@ myst:
 (howto-install-anbox-cloud)=
 # Install Anbox Cloud
 
-This section focuses on installing **Anbox Cloud**. For the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`. For a comparison of both variants, see {ref}`sec-variants`.
+This section focuses on installing **Anbox Cloud**.
+
+If you are looking for the Anbox Cloud Appliance, see {ref}`howto-install-appliance`. For a comparison of both variants, see {ref}`sec-variants`.
 
 Check {ref}`ref-requirements` before you start your installation.
 
@@ -17,13 +19,15 @@ Check {ref}`ref-requirements` before you start your installation.
 - {ref}`howto-deploy-anbox-baremetal`
 - {ref}`howto-deploy-anbox-terraform`
 
-## Configure and validate
+## Configure
 
 - {ref}`howto-customize-installation`
 - {ref}`howto-enable-ha`
 - {ref}`howto-use-ceph-storage`
-- {ref}`howto-validate-deployment`
 
+## Validate
+- {ref}`howto-validate-deployment`
+  
 ```{toctree}
 :hidden:
 
