@@ -53,9 +53,9 @@ See the following table for a comparison of features for the different variants:
 
 We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a charmed Anbox Cloud installation later.
 
-## Android execution environments
+## Android execution models
 
-Anbox Cloud supports two ways of running Android: containerized Android, where the Android system runs directly in the LXD container, and virtualized Android, where Android runs inside a virtual machine within the LXD instance. The execution environment is determined by the image that an instance is based on. See {ref}`exp-android-execution-environments` for details on the two environments and {ref}`ref-feature-support-by-image-type` for a comparison of their supported features.
+Anbox Cloud supports two ways of running Android: containerized Android, where the Android system runs directly in the LXD container, and virtualized Android, where Android runs inside a virtual machine within the LXD instance. The execution model is determined by the image that an instance is based on. See {ref}`exp-android-execution-models` for details on the two execution models and {ref}`ref-feature-support-by-image-type` for a comparison of their supported features.
 
 ## Anbox Cloud Components
 

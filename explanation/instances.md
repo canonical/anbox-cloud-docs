@@ -31,7 +31,7 @@ Application instances are containers or virtual machines created when launching 
 
 Raw instances are containers or virtual machines created when launching an image. They run the full Android system, without any additional apps installed.
 
-Instances can be based on images with containerized Android or images with virtualized Android. The image determines the {ref}`Android execution environment <exp-android-execution-environments>` used by the instance.
+Instances can be based on images with containerized Android or images with virtualized Android. The image determines the {ref}`Android execution model <exp-android-execution-models>` used by the instance.
 
 ## Life cycle of an instance
 

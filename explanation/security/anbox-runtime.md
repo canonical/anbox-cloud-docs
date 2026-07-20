@@ -45,4 +45,4 @@ The runtime for virtualized Android is written in Rust and runs within snap conf
 * **Snap confinement** - the runtime runs as a snap with strict confinement, limiting its access to the host system.
 * **QEMU isolation** - Android runs inside a virtual machine, providing an additional isolation boundary between the Android workload and the host.
 
-See {ref}`exp-android-execution-environments` for more details on the two execution environments.
+See {ref}`exp-android-execution-models` for more details on the two execution models.

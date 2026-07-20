@@ -7,7 +7,7 @@ myst:
 (howto-manage-applications)=
 # Manage applications
 
-The guides in this section apply to images with containerized Android (`jammy:*`). The application model is not supported for images with virtualized Android. See {ref}`exp-android-execution-environments` for details.
+The guides in this section apply to images with containerized Android (`jammy:*`). The application model is not supported for images with virtualized Android. See {ref}`exp-android-execution-models` for details.
 
 The guides in this section describe how to manage your applications.
 
