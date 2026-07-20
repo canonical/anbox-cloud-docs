@@ -86,9 +86,8 @@ To do all this, we offer a script that helps prepare machines. Let's first revie
 
 The generated bash script will do the following:
 
-1. Install `linux-modules-extra` packages to ensure that the binder kernel driver is available.
-2. Install additional Anbox Cloud specific kernel modules.
-3. (If GPU is available) Install GPU driver packages from the Ubuntu archive and apply tuning settings for the driver.
+1. Install `linux-modules-extra` packages if necessary to ensure that the binder kernel driver is available.
+2. (If GPU is available) Install GPU driver packages from the Ubuntu archive and apply tuning settings for the driver.
 
 To apply the script after reviewing it, run:
 

@@ -148,7 +148,7 @@ Once the unnecessary nodes are dropped, the upgrade for a single LXD deployment 
 
 Once the upgrade has completed, the unit will be marked as active.
 
-Major and minor version upgrades may include upgrades to kernel modules or GPU drivers. This requires stopping any running instances before applying the upgrade and performing a reboot of the machine once the upgrade completed.
+Major and minor version upgrades may include upgrades to GPU drivers. This requires stopping any running instances before applying the upgrade and performing a reboot of the machine once the upgrade completed.
 
 In case a reboot is required, a notification is displayed. When the machine is rebooted, you can clear the notification by running:
 
@@ -188,7 +188,7 @@ After a node is successfully marked as unschedulable, we can safely upgrade it. 
 
 where `<unit_number>` refers to the Juju unit number on the corresponding node.
 
-Upgrading a node will also upgrade the GPU drivers and the installed kernel modules. When done, this action might require a reboot to successfully load the new modules and drivers. If you want to set the reboot to happen automatically, set `reboot=true`. Otherwise, run `juju exec lxd/<unit_number> -- sudo reboot` when you are ready to reboot the node.
+Upgrading a node will also upgrade the GPU drivers. When done, this action might require a reboot to successfully load new drivers. If you want to set the reboot to happen automatically, set `reboot=true`. Otherwise, run `juju exec lxd/<unit_number> -- sudo reboot` when you are ready to reboot the node.
 
 After the upgrades to all the nodes have finished, upgrade the LXD snap on the node using:
 

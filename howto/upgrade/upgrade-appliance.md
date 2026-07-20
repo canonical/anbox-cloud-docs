@@ -23,8 +23,8 @@ After refreshing the snap, the appliance will automatically apply the necessary 
 
 For the host system, run the upgrade script manually. This script performs additional updates, including:
 
-1. Upgrading Anbox Cloud-specific kernel modules.
-2. (If a GPU is available) Upgrading GPU driver packages from the Ubuntu archive and applying required tuning settings.
+1. Upgrading the kernel modules required by Anbox Cloud, if necessary.
+2. Upgrading GPU driver packages from the Ubuntu archive and applying required tuning settings (if a GPU is available).
 
 Review the upgrade script by running:
 
