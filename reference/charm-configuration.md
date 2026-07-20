@@ -95,5 +95,5 @@ Name          | Value type | Status |
 | `upgrade` | AMS-LXD | Removed | This action has been superseded by a combination of `upgrade-machine` and `upgrade-cluster` actions. |
 | `upgrade-gpu-drivers` | AMS-LXD | Removed | This action has been superseded by a combination of `upgrade-machine` and `upgrade-cluster` actions. |
 | `upgrade-cluster` | AMS-LXD | Added | Upgrade cluster wide properties like snap updates for LXD. |
-| `upgrade-machine` | AMS-LXD | Added | Upgrade node specific properties like kernel module and GPU driver updates.|
+| `upgrade-machine` | AMS-LXD | Added | Upgrade node specific properties like GPU driver updates.|
 | `upgrade-info` | AMS-LXD | Changed | Output changed for the AMS-LXD charm. |
