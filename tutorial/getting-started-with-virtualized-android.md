@@ -47,6 +47,6 @@ We have successfully launched a virtualized Android instance with ADB shell acce
 
 ## Next steps
 
-- Read {ref}`exp-android-execution-environments` to understand how virtualized Android differs from containerized Android.
+- Read {ref}`exp-android-execution-models` to understand how virtualized Android differs from containerized Android.
 - See {ref}`howto-package-custom-android-build` to learn how to run your own Android build in Anbox Cloud.
 - Consult {ref}`ref-feature-support-by-image-type` for a full comparison of supported features.

@@ -21,7 +21,7 @@ However, if a third-party VHAL implementation is loaded during Android runtime, 
 
 Anbox Cloud offers an [Anbox-specific VHAL HIDL interface](https://github.com/canonical/vendor_canonical_interfaces) for containerized images. By using this HIDL, the VHAL implementation allows the Anbox VHAL adapter to modify non-writable and access non-readable vehicle property values without encountering permission issues. See the {ref}`how-to guide <howto-integrate-hidl>` on instructions for setting this up with your VHAL implementation.
 
-Since the 1.30.0 release, AAOS 16 is available through images with virtualized Android (`resolute:aaos16-cf:amd64` and `resolute:aaos16-cf:arm64`). These images provide native gRPC support for the vehicle HAL. See {ref}`exp-android-execution-environments` for details on the virtualized Android execution environment.
+Since the 1.30.0 release, AAOS 16 is available through images with virtualized Android (`resolute:aaos16-cf:amd64` and `resolute:aaos16-cf:arm64`). These images provide native gRPC support for the vehicle HAL. See {ref}`exp-android-execution-models` for details on the virtualized Android execution model.
 
 ## Related topics
 

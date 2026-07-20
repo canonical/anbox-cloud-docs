@@ -1,13 +1,13 @@
-(exp-android-execution-environments)=
-# Android execution environments
+(exp-android-execution-models)=
+# Android execution models
 
-Anbox Cloud supports two ways of running Android inside an instance: **containerized Android** and **virtualized Android**. The execution environment is determined by the image that an instance is based on - you choose an image when creating an instance, and the image determines how Android runs.
+Anbox Cloud supports two ways of running Android inside an instance: **containerized Android** and **virtualized Android**. The execution model is determined by the image that an instance is based on - you choose an image when creating an instance, and the image determines how Android runs.
 
-Both execution environments provide access to Android through the same streaming infrastructure and can coexist in the same Anbox Cloud deployment.
+Both execution models provide access to Android through the same streaming infrastructure and can coexist in the same Anbox Cloud deployment.
 
 ## Containerized Android
 
-With containerized Android, the Android system runs directly inside the LXD container. This is the execution environment used by `jammy:*` images (for example, `jammy:android14:amd64`).
+With containerized Android, the Android system runs directly inside the LXD container. This is the execution model used by `jammy:*` images (for example, `jammy:android14:amd64`).
 
 Containerized Android supports the full set of Anbox Cloud features:
 
@@ -16,11 +16,11 @@ Containerized Android supports the full set of Anbox Cloud features:
 - {ref}`Platform plugins <exp-platforms>` for custom rendering and input pipelines
 - Shell access to the Android environment through `anbox-shell`
 
-This is the execution environment that Anbox Cloud has used since its first release. The Android system shares the kernel with the host through LXD's container isolation, which keeps resource overhead low and allows high instance density.
+This is the execution model that Anbox Cloud has used since its first release. The Android system shares the kernel with the host through LXD's container isolation, which keeps resource overhead low and allows high instance density.
 
 ## Virtualized Android
 
-With virtualized Android, the Android system runs inside a [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machine within the LXD instance. This is the execution environment used by `resolute:*-cf:*` images (for example, `resolute:android16-cf:amd64`). The `-cf` suffix in the image name indicates that the image uses the Cuttlefish virtual device.
+With virtualized Android, the Android system runs inside a [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machine within the LXD instance. This is the execution model used by `resolute:*-cf:*` images (for example, `resolute:android16-cf:amd64`). The `-cf` suffix in the image name indicates that the image uses the Cuttlefish virtual device.
 
 Cuttlefish is Google's reference virtual Android device. Running Android through Cuttlefish means you get a standard, unmodified Android environment with no Anbox-specific changes to the Android system itself — the Android system image comes directly from Google's build infrastructure. This is the right choice when you need Android to behave exactly as it does on a physical device or in Google's own test environments.
 
@@ -33,7 +33,7 @@ Virtualized Android is a good fit for the following scenarios:
 - **VHAL development** where native gRPC support for the vehicle HAL simplifies automotive development.
 - **Workloads that benefit from stronger isolation** where the additional virtualisation boundary between Android and the host is desirable.
 
-## Choosing between the two environments
+## Choosing between the two execution models
 
 Use **virtualized Android** when you need a standard Android environment that behaves exactly like a physical device or Google's reference implementation, when you want to run a custom Android or AAOS build, or when you need native VHAL support for automotive use cases.
 
