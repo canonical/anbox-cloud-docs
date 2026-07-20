@@ -7,7 +7,7 @@ myst:
 (ref-compatibility-considerations)=
 # Compatibility considerations
 
-Anbox Cloud runs Android inside [LXC](https://linuxcontainers.org/lxc/introduction/) containers to deliver a complete AOSP experience (see {ref}`ref-android-features`). While this approach provides efficient, scalable Android instances, the containerized environment imposes certain constraints that can affect application compatibility.
+Anbox Cloud runs Android inside [LXC](https://linuxcontainers.org/lxc/introduction/) containers to deliver a complete AOSP experience (see {ref}`ref-android-features`). While this approach provides efficient, scalable Android instances, the containerized model imposes certain constraints that can affect application compatibility.
 
 ## Application and game compatibility
 

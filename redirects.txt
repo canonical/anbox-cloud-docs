@@ -7,7 +7,7 @@
 "reference/cmd-ref/landing.md" "reference/index.md"
 "reference/landing.md" "reference/index.md"
 "explanation/gpus-instances.md" "explanation/rendering-graphics.md"
-"explanation/android-execution-models.md" "explanation/android-execution-environments.md"
+"explanation/android-execution-environments.md" "explanation/android-execution-models.md"
 "explanation/cryptography/crypto_ams.md" "explanation/security/ams.md"
 "explanation/cryptography/crypto_anbox_runtime.md" "explanation/security/anbox-runtime.md"
 "explanation/cryptography/crypto_charms.md" "explanation/security/charms.md"

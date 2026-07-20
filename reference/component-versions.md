@@ -59,7 +59,7 @@ Not all components are updated with each release. When components are not update
 
 ### Anbox images
 
-| Name | Version | Execution environment |
+| Name | Version | Execution model |
 |----------------------------|---------------------------------|---------------------|
 | `jammy:android14:amd64` | `1.30.0-20260610021926.git353c487` | Containerized |
 | `jammy:android14:arm64` | `1.30.0-20260610021926.git353c487` | Containerized |

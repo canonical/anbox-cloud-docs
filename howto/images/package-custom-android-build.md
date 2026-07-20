@@ -9,7 +9,7 @@ myst:
 
 You can package a custom [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) Android build as a [snap](https://snapcraft.io/) and install it in a running virtualized Android instance. This lets you run your own Android system image while using the Anbox Cloud infrastructure for streaming and instance management.
 
-For background on how virtualized Android works in Anbox Cloud, see {ref}`exp-android-execution-environments`.
+For background on how virtualized Android works in Anbox Cloud, see {ref}`exp-android-execution-models`.
 
 ## Prerequisites
 
@@ -155,6 +155,6 @@ Verify that the snap was built for the correct architecture and that the directo
 
 ## Related topics
 
-- {ref}`exp-android-execution-environments`
+- {ref}`exp-android-execution-models`
 - {ref}`tut-getting-started-virtualized-android`
 - {ref}`ref-feature-support-by-image-type`

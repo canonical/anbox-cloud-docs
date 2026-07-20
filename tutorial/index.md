@@ -19,7 +19,7 @@ The following tutorial uses images with virtualized Android.
 
 - {ref}`tut-getting-started-virtualized-android`
 
-For an explanation of the two execution environments, see {ref}`exp-android-execution-environments`.
+For an explanation of the two execution models, see {ref}`exp-android-execution-models`.
 
 ```{toctree}
 :hidden:

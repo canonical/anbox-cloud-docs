@@ -28,9 +28,9 @@ If you encounter the `error` or the `unknown` status, [file a bug](https://bugs.
 
 ## Image variants
 
-Anbox Cloud provides two variants of images that use different Android execution environments:
+Anbox Cloud provides two variants of images that use different Android execution models:
 
 - **Images with containerized Android** (`jammy:*`) run Android directly in the LXD container and support the full application model, addons, and platform plugins.
 - **Images with virtualized Android** (`resolute:*-cf:*`) run Android inside a virtual machine within the LXD instance.
 
-The image variant determines which execution environment is used. See {ref}`exp-android-execution-environments` for an explanation of the two environments and {ref}`ref-feature-support-by-image-type` for a detailed feature comparison.
+The image variant determines which execution model is used. See {ref}`exp-android-execution-models` for an explanation of the two execution models and {ref}`ref-feature-support-by-image-type` for a detailed feature comparison.
