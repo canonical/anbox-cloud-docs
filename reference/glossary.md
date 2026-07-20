@@ -131,7 +131,7 @@ Bootstrap process
     See {ref}`sec-application-bootstrap` for more information.
 
 Containerized Android
-    An {ref}`Android execution environment <exp-android-execution-environments>` where the Android system runs directly inside the LXD container. Used by `jammy:*` images. Supports the full application model, addons, and platform plugins.
+    An {ref}`Android execution model <exp-android-execution-models>` where the Android system runs directly inside the LXD container. Used by `jammy:*` images. Supports the full application model, addons, and platform plugins.
 
 Control node
     The machine on which the components that make up the management layer, AMS, AMC, and etcd, are installed.
@@ -277,7 +277,7 @@ Ubuntu One
     See [Ubuntu One](https://login.ubuntu.com/) for more information.
 
 Virtualized Android
-    An {ref}`Android execution environment <exp-android-execution-environments>` where the Android system runs inside a Cuttlefish virtual machine within the LXD instance. Used by `resolute:*-cf:*` images.
+    An {ref}`Android execution model <exp-android-execution-models>` where the Android system runs inside a Cuttlefish virtual machine within the LXD instance. Used by `resolute:*-cf:*` images.
 
 Watchdog
     A software component that monitors the app in an instance and terminates the instance if the app crashes or is moved to the background.

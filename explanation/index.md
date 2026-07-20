@@ -32,7 +32,7 @@ Understand the different objects used in the product stack and how to use them t
 - {ref}`AAOS <exp-aaos>`
 - {ref}`exp-platforms`
 - {ref}`exp-clustering`
-- {ref}`exp-android-execution-environments`
+- {ref}`exp-android-execution-models`
 
 ## Authentication and authorization
 
@@ -64,7 +64,7 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 
 addons
 aar
-android-execution-environments
+android-execution-models
 anbox-cloud
 web-dashboard
 ams

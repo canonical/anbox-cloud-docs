@@ -1,11 +1,11 @@
 (ref-feature-support-by-image-type)=
 # Image types reference
 
-Anbox Cloud provides two types of images, each using a different {ref}`Android execution environment <exp-android-execution-environments>`. This page describes the capabilities, naming, and requirements for each type.
+Anbox Cloud provides two types of images, each using a different {ref}`Android execution model <exp-android-execution-models>`. This page describes the capabilities, naming, and requirements for each type.
 
 ## Image naming
 
-| Pattern | Execution environment | Example |
+| Pattern | Execution model | Example |
 |---------|----------------|---------|
 | `jammy:*` | Containerized Android | `jammy:android14:amd64` |
 | `resolute:*-cf:*` | Virtualized Android | `resolute:android16-cf:amd64` |
@@ -60,6 +60,6 @@ For virtualized Android:
 
 ## Related topics
 
-* {ref}`exp-android-execution-environments`
+* {ref}`exp-android-execution-models`
 * {ref}`ref-provided-images`
 * {ref}`ref-requirements`
