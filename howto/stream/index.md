@@ -7,17 +7,23 @@ myst:
 (howto-streaming)=
 # Implement streaming
 
-The following guides in this section describe how to use the Streaming Stack to implement specific streaming features in your application.
+This section contains guides for implementing specific streaming features in your application using the Streaming Stack.
+
+- {ref}`howto-access-stream-gateway`
+- {ref}`howto-exchange-oob-data`
+- {ref}`howto-integrate-virtual-keyboard`
+- {ref}`howto-enable-client-side-video-upscaling`
+
+## See also
+
+- Explanation: {ref}`exp-application-streaming`
+- Reference: {ref}`sec-streaming-sdk`
 
 ```{toctree}
-:titlesonly:
+:hidden:
 
 access-stream-gateway
 exchange-oob-data
 integrate-virtual-keyboard
 enable-client-side-video-upscaling
 ```
-
-See {ref}`exp-application-streaming` for an introduction to the Streaming Stack.
-
-For an introduction to the Streaming SDK, see {ref}`sec-streaming-sdk`.

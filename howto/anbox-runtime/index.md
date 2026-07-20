@@ -7,14 +7,17 @@ myst:
 (howto-anbox-runtime)=
 # Work with the Anbox runtime
 
-The guides in this section describe how to work with the Anbox runtime, which is responsible for running the Android container, providing access to any hardware and integrating with streaming protocols. They apply to images with containerized Android (`jammy:*`).
+```{important}
+These guides apply to images with containerized Android (`jammy:*`). For virtualized Android, see {ref}`tut-getting-started-virtualized-android` and {ref}`howto-package-custom-android-build`.
+```
 
-For images with virtualized Android (`resolute:*-cf:*`), see {ref}`tut-getting-started-virtualized-android` and {ref}`howto-package-custom-android-build`. For a comparison of the two execution environments, see {ref}`exp-android-execution-environments`.
+The Anbox runtime runs the Android container, provides access to hardware, and integrates with streaming protocols. To work with Anbox runtime:
 
-The following guides are available:
+- {ref}`howto-develop-addons-devmode`
+- {ref}`howto-develop-platform-plugin`
 
 ```{toctree}
-:titlesonly:
+:hidden:
 
 develop-addon-devmode
 develop-platform-plugin

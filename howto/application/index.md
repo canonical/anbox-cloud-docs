@@ -7,16 +7,40 @@ myst:
 (howto-manage-applications)=
 # Manage applications
 
-The guides in this section apply to images with containerized Android (`jammy:*`). The application model is not supported for images with virtualized Android. See {ref}`exp-android-execution-environments` for details.
+```{important}
+These guides apply to images with containerized Android (`jammy:*`). The application model is not supported for images with virtualized Android. See {ref}`exp-android-execution-environments` for details.
+```
 
-The guides in this section describe how to manage your applications.
+## Create and manage
 
-See {ref}`exp-applications` for an introduction to how applications are used in Anbox Cloud. To check which configuration options are available for applications, see {ref}`ref-application-manifest`.
+Applications are packaged from Android APKs, extended with addons or hooks, and updated as needed.
 
-The following how-to guides are available for operations on applications:
+- {ref}`howto-create-application`
+- {ref}`howto-update-application`
+- {ref}`howto-extend-application`
+- {ref}`howto-pass-custom-data-application`
+- {ref}`howto-wait-for-application`
+
+## Stream and test
+
+Once ready, applications can be streamed to users or tested with automated UI frameworks.
+
+- {ref}`howto-stream-applications`
+- {ref}`howto-test-application`
+
+## List and delete
+
+- {ref}`howto-list-applications`
+- {ref}`howto-delete-application`
+
+## See also
+
+- Explanation: {ref}`exp-applications`
+- Reference: {ref}`ref-application-manifest`
 
 ```{toctree}
-:titlesonly:
+:hidden:
+
 create-application
 delete-application
 extend-application

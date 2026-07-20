@@ -115,6 +115,6 @@ For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
 
 The data that you provide to your applications in Android is stored within the instance, for the duration of the instance.
 
-## Related topics
+## See also
 
-- {ref}`howto-harden`
+- How-to: {ref}`howto-harden`
