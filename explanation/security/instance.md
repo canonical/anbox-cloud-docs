@@ -6,7 +6,7 @@ myst:
 
 # Instances
 
-Anbox Cloud uses secure and isolated system instances supplied by [LXD](https://canonical.com/lxd). LXD provides a high degree of flexibility when setting up instances - you get to decide the level of security for your requirements. See [Security](https://documentation.ubuntu.com/lxd/latest/explanation/security/) in the LXD documentation for more information about how a LXD setup can be secured.
+Anbox Cloud uses secure and isolated system instances supplied by [LXD](https://canonical.com/lxd). LXD provides a high degree of flexibility when setting up instances - you get to decide the level of security for your requirements. See [Security](https://canonical.com/lxd/docs/latest/explanation/security/) in the LXD documentation for more information about how a LXD setup can be secured.
 
 ```{tip}
 Using virtual machines to host Android containers provides better workload isolation. 

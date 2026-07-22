@@ -13,7 +13,7 @@ However, if you run into a situation where you need to grow the LXD storage pool
 
 - **Loop-backed storage pool**
 
-  If you use a loop file for your LXD storage, follow the instructions for ZFS in [Resize a storage pool](https://documentation.ubuntu.com/lxd/latest/howto/storage_pools/#resize-a-storage-pool) in the LXD documentation.
+  If you use a loop file for your LXD storage, follow the instructions for ZFS in [Resize a storage pool](https://canonical.com/lxd/docs/latest/howto/storage_pools/#resize-a-storage-pool) in the LXD documentation.
 
   After resizing the storage pool, you must restart AMS.
 - **Dedicated block device**
