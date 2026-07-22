@@ -118,7 +118,6 @@ info:
 paths:
   /1.0/:
     get:
-      security: []
       description: 'This endpoint returns the service status and its supported API
         extensions.
 
@@ -141,6 +140,7 @@ paths:
                 $ref: '#/definitions/ServiceStatus'
         default:
           $ref: '#/responses/InternalServerError'
+      security: []
   /1.0/addons:
     get:
       description: This endpoint returns a list of addons in AMS.
@@ -1471,7 +1471,6 @@ paths:
           $ref: '#/responses/InternalServerError'
   /1.0/auth/oidc:
     get:
-      security: []
       description: 'This endpoint returns the service status and its supported API
         extensions.
 
@@ -1494,6 +1493,7 @@ paths:
                 $ref: '#/definitions/OIDCResponse'
         default:
           $ref: '#/responses/InternalServerError'
+      security: []
   /1.0/auth/permissions:
     get:
       description: This endpoint returns a list of permissions based on the identity's
@@ -2074,7 +2074,7 @@ paths:
                       openfga.store.id:
                         description: 'A pre-created OpenFGA store to load the
 
-                          the authrorization model and data from.
+                          authorization model and data from.
 
                           This is required and will be used for
 
@@ -4442,7 +4442,6 @@ paths:
           $ref: '#/responses/InternalServerError'
   /1.0/version:
     get:
-      security: []
       description: This endpoint returns the current running version for the service.
       produces:
         - application/json
@@ -4462,6 +4461,7 @@ paths:
                 $ref: '#/definitions/VersionResponse'
         default:
           $ref: '#/responses/InternalServerError'
+      security: []
 definitions:
   Addon:
     description: Addon describes a package with additional functionality to be added
@@ -5739,6 +5739,14 @@ definitions:
         description: CPU architecture supported by the image
         type: string
         example: x86_64
+      capabilities:
+        description: Capabilities of the image
+        type: array
+        items:
+          type: string
+        example:
+          - gpu
+          - camera
       default:
         description: Flag to show whether the image is used by default if no image
           name is provided
@@ -5993,6 +6001,9 @@ definitions:
             description: EnableStreaming specifies if streaming should be enabled
               for the instance or not
             type: boolean
+          features:
+            description: Feature flags to enable for the instance.
+            type: string
           metrics_server:
             description: MetricsServer specifies a metrics server the instance will
               use
@@ -6045,6 +6056,13 @@ definitions:
           instance has not been created from an image.'
         type: string
         example: my-image
+      image_variant:
+        description: 'ImageVariant is the variant of the image the instance is created
+          from. Empty if the
+
+          instance has not been created from an image.'
+        type: string
+        example: aaos
       image_version:
         description: 'ImageVersion is the version of the image the instance is created
           from. Empty if the

@@ -36,8 +36,6 @@ basePath: /1.0/
 paths:
   /1.0/applications:
     get:
-      security:
-        - AuthToken: []
       description: Return all applications that were registered via AMS and that support
         streaming.
       tags:
@@ -49,6 +47,8 @@ paths:
           description: List of applications
           schema:
             $ref: '#/definitions/api.ApplicationsGetResponse'
+      security:
+        - AuthToken: []
   /1.0/config:
     get:
       description: Get all config items
@@ -90,8 +90,6 @@ paths:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
   /1.0/regions:
     get:
-      security:
-        - AuthToken: []
       description: 'Regions are cloud regions, allowing clients to be as close as
         possible
 
@@ -108,6 +106,8 @@ paths:
           description: List of regions
           schema:
             $ref: '#/definitions/api.RegionsGetResponse'
+      security:
+        - AuthToken: []
   /1.0/session/{id}/sockets/adb:
     get:
       description: 'A websocket connection endpoint which initiates the signaling
@@ -143,8 +143,6 @@ paths:
       responses: {}
   /1.0/sessions:
     get:
-      security:
-        - AuthToken: []
       produces:
         - application/json
       tags:
@@ -190,9 +188,9 @@ paths:
           description: Internal server error. E.g. failed to load sessions
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-    post:
       security:
         - AuthToken: []
+    post:
       description: 'Create a new session based on an application, application version,
         region
 
@@ -236,9 +234,9 @@ paths:
           description: Internal Server Error
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-    delete:
       security:
         - AuthToken: []
+    delete:
       tags:
         - session
       summary: Batch delete sessions
@@ -288,10 +286,10 @@ paths:
           description: Internal issue
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-  /1.0/sessions/{id}:
-    get:
       security:
         - AuthToken: []
+  /1.0/sessions/{id}:
+    get:
       description: Returns a session from its ID.
       produces:
         - application/json
@@ -318,9 +316,9 @@ paths:
           description: Non-existent session
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-    delete:
       security:
         - AuthToken: []
+    delete:
       tags:
         - session
       summary: Delete a session
@@ -358,6 +356,8 @@ paths:
           description: Internal server error
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
+      security:
+        - AuthToken: []
   /1.0/sessions/{id}/connect:
     get:
       description: 'Connect an existing running session from a client. The returned
@@ -390,8 +390,6 @@ paths:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
   /1.0/sessions/{id}/join:
     post:
-      security:
-        - AuthToken: []
       description: 'Join an existing running session. The session must already be
         running. The
 
@@ -438,10 +436,10 @@ paths:
           description: Error when trying to generate session details
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-  /1.0/sessions/{id}/share:
-    post:
       security:
         - AuthToken: []
+  /1.0/sessions/{id}/share:
+    post:
       description: 'Share an existing running session with a client. The returned
 
         object contains a URL for a client to interact with a session'
@@ -478,10 +476,10 @@ paths:
           description: Error when failing to generate auth token
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-  /1.0/shares:
-    get:
       security:
         - AuthToken: []
+  /1.0/shares:
+    get:
       description: Get all shares
       produces:
         - application/json
@@ -520,10 +518,10 @@ paths:
           description: Internal server error
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-  /1.0/shares/{id}:
-    get:
       security:
         - AuthToken: []
+  /1.0/shares/{id}:
+    get:
       description: Retrieves detailed information about a specific share using its
         ID.
       produces:
@@ -551,9 +549,9 @@ paths:
           description: Non-existent share
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-    delete:
       security:
         - AuthToken: []
+    delete:
       description: Delete a share identified by its unique ID. Any active connection
         to the session associated with this share will be immediately terminated,
         and the session will no longer be accessible once deleted.
@@ -594,9 +592,9 @@ paths:
           description: Internal server error
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
-    patch:
       security:
         - AuthToken: []
+    patch:
       description: Extend the expiration time of a share by specifying an absolute
         expiration date or update the description of a share.
       tags:
@@ -626,6 +624,8 @@ paths:
           description: Internal server error
           schema:
             $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
+      security:
+        - AuthToken: []
   /1.0/status:
     get:
       description: 'Returns the current status of the Gateway service along with some
