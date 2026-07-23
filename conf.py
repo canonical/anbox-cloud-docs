@@ -92,7 +92,7 @@ ogp_image = "https://assets.ubuntu.com/v1/cc828679-docs_illustration.svg"
 
 # To customise the favicon, uncomment and update as needed.
 
-html_favicon = '.sphinx/_static/favicon.png'
+html_favicon = '_dev/_static/favicon.png'
 
 
 # Dictionary of values to pass into the Sphinx context for all pages:
@@ -106,7 +106,7 @@ html_context = {
     #
     # If there's no such website,
     #       remove the {{ product_page }} link from the page header template
-    #       (usually .sphinx/_templates/header.html; also, see README.rst).
+    #       (usually _dev/_templates/header.html; also, see README.rst).
     "product_page": "canonical.com/anbox-cloud",
     # Product tag image; the orange part of your logo, shown in the page header
     #
@@ -203,7 +203,7 @@ sitemap_filename = "doc-sitemap.xml"
 # Template and asset locations
 
 html_static_path = [
-    ".sphinx/_static",
+    "_dev/_static",
     # This is required for Google Analytics to work till we unify
     # all the static files into one well-known directory.
     "_static",
@@ -367,6 +367,7 @@ exclude_patterns = [
     '.github/pull_request_template.md',
     '.venv',
     '**/*.dist-info/**',
+    '_dev',
 ]
 
 # Adds custom CSS files, located under 'html_static_path'
@@ -469,7 +470,7 @@ generate_ams_configuration()
 ## The following code is to automatically load the API from swagger into documentation.
 
 # Path to copy the YAML files during build
-html_extra_path = ['.sphinx/_extra']
+html_extra_path = ['_dev/_extra']
 
 # The swagger-ui repository is required to be able to render the swagger YAML
 # file as browseable API documentation. The below variable specifies which
@@ -477,14 +478,14 @@ html_extra_path = ['.sphinx/_extra']
 swagger_ui_repository = "https://github.com/swagger-api/swagger-ui"
 
 # Download and link swagger-ui files
-if not os.path.isdir('.sphinx/deps/swagger-ui'):
-    subprocess.check_call(["git", "clone", "--depth=1", swagger_ui_repository, ".sphinx/deps/swagger-ui"])
+if not os.path.isdir('_dev/deps/swagger-ui'):
+    subprocess.check_call(["git", "clone", "--depth=1", swagger_ui_repository, "_dev/deps/swagger-ui"])
 
-os.makedirs('.sphinx/_static/swagger-ui/', exist_ok=True)
+os.makedirs('_dev/_static/swagger-ui/', exist_ok=True)
 
-if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui-bundle.js'):
-    os.symlink('../../deps/swagger-ui/dist/swagger-ui-bundle.js', '.sphinx/_static/swagger-ui/swagger-ui-bundle.js')
-if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui-standalone-preset.js'):
-    os.symlink('../../deps/swagger-ui/dist/swagger-ui-standalone-preset.js', '.sphinx/_static/swagger-ui/swagger-ui-standalone-preset.js')
-if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui.css'):
-    os.symlink('../../deps/swagger-ui/dist/swagger-ui.css', '.sphinx/_static/swagger-ui/swagger-ui.css')
+if not os.path.islink('_dev/_static/swagger-ui/swagger-ui-bundle.js'):
+    os.symlink('../../deps/swagger-ui/dist/swagger-ui-bundle.js', '_dev/_static/swagger-ui/swagger-ui-bundle.js')
+if not os.path.islink('_dev/_static/swagger-ui/swagger-ui-standalone-preset.js'):
+    os.symlink('../../deps/swagger-ui/dist/swagger-ui-standalone-preset.js', '_dev/_static/swagger-ui/swagger-ui-standalone-preset.js')
+if not os.path.islink('_dev/_static/swagger-ui/swagger-ui.css'):
+    os.symlink('../../deps/swagger-ui/dist/swagger-ui.css', '_dev/_static/swagger-ui/swagger-ui.css')
