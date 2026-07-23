@@ -12,7 +12,7 @@ import yaml
 # A complete list of built-in Sphinx configuration values:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 #
-# Our starter pack uses the custom Canonical Sphinx extension
+# Our Sphinx Stack uses the custom Canonical Sphinx extension
 # to keep all documentation based on it consistent and on brand:
 # https://github.com/canonical/canonical-sphinx
 
@@ -40,7 +40,7 @@ html_title = "Anbox Cloud" + " documentation"
 
 # Copyright string; shown at the bottom of the page
 #
-# Now, the starter pack uses CC-BY-SA as the license
+# Now, the Sphinx Stack uses CC-BY-SA as the license
 # and the current year as the copyright year.
 #
 # If your docs need another license, specify it instead of 'CC-BY-SA'.
@@ -331,7 +331,7 @@ myst_enable_extensions = set({"colon_fence"})
 # Custom Sphinx extensions; see
 # https://www.sphinx-doc.org/en/master/usage/extensions/index.html
 
-# NOTE: The canonical_sphinx extension is required for the starter pack.
+# NOTE: The canonical_sphinx extension is required for the Sphinx Stack.
 #       canonical_sphinx v0.6 does not reliably auto-load all extensions,
 #       so all required extensions are listed explicitly below.
 
@@ -437,7 +437,7 @@ if os.path.exists('./reuse/substitutions.yaml'):
 #============================================#
 # Anbox Cloud specific configurations
 # The following configuration won't be available
-# in the starter pack. It is maintained by the
+# in the Sphinx Stack. It is maintained by the
 # Anbox cloud team.
 #============================================#
 
@@ -463,7 +463,7 @@ def generate_ams_configuration():
     parse_swagger(swagger, ams_configuration_file)
 
 # Anbox specific function to generate dynamic AMS configuration
-# Add this change to conf.py every time the starter pack is upgraded to a later version.
+# Add this change to conf.py every time the Sphinx Stack is upgraded to a later version.
 generate_ams_configuration()
 
 
