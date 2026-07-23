@@ -120,6 +120,7 @@ lint-md: pymarkdownlnt-install
 			--recurse \
 			--exclude=$(DEV_DIR)/** \
 			--exclude=$(DOCS_VENVDIR)/** \
+			--exclude=$(DOCS_BUILDDIR)/** \
 			--exclude=reference/cmd-ref/** \
 			$(DOCS_SOURCEDIR); \
 	status=$$?; \
