@@ -1,10 +1,10 @@
 # ams.amc auth identity
 
-Manage authentiation & authorization
+Manage authentication & authorization
 
 ## Synopsis
 
-Manage authentiation & authorization in AMS.
+Manage authentication & authorization in AMS.
 
 Create, Show and list users in Anbox Management Service (AMS).
 	

@@ -12,8 +12,8 @@ necessary to properly run an Android application in a container.
 Images can be provided manually or via an image server. You can add, update or
 delete them from AMS.
 
-See https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/provided-images/ and
-https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/anbox/manage-images/ for more information.
+See https://canonical.com/anbox-cloud/docs/reference/provided-images/ and
+https://canonical.com/anbox-cloud/docs/howto/anbox/manage-images/ for more information.
 
 
 ## Options
