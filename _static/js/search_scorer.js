@@ -15,13 +15,13 @@ window.Scorer = {
       return score - 20;
     }
 
-// Demote auto-generated command references (AMC, appliance, AAR)
-// unless the search query matches the command name in the title
-if (docName.startsWith("reference/cmd-ref/")) {
-  if (!_searchQuery || !title.toLowerCase().includes(_searchQuery)) {
-    return score - 20;
-  }
-}
+    // Demote auto-generated command references (AMC, appliance, AAR)
+    // When the query matches the command title, apply a smaller demotion
+    // so they rank above release notes (-20) but below primary content
+    if (docName.startsWith("reference/cmd-ref/")) {
+      if (_searchQuery && title.toLowerCase().includes(_searchQuery)) {
+        return score - 10;
+      }
       return score - 20;
     }
 
