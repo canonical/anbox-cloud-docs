@@ -27,5 +27,5 @@ $ amc auth identity create oidc/john.doe@example.com\n$amc auth identity create 
 
 ## SEE ALSO
 
-* [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentiation & authorization
+* [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentication & authorization
 

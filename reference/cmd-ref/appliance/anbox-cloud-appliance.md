@@ -15,7 +15,7 @@ accessible to you.
 
 Anbox Cloud Appliance puts an emphasis on your productivity. It provides a
 developer-friendly CLI and a simple web UI to manage and operate Android cloud apps at
-the scale of your lab. Upload your Android apps, configure and virtualise Android devices
+the scale of your lab. Upload your Android apps, configure and virtualize Android devices
 and stream graphical output in real time to any web or mobile client. Unleash your
 creativity to invent new mobile user experiences with Anbox Cloud Appliance.
 

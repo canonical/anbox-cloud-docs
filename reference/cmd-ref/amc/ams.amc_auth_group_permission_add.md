@@ -6,7 +6,7 @@ Assign a permission to an authorization group
 
 Assign a permission to an authorization group.
 
-Use this command to assing a permission to an authorization group to give them access
+Use this command to assign a permission to an authorization group to give them access
 to manage the given resource in AMS.
 		
 
