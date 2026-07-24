@@ -10,6 +10,21 @@ window.Scorer = {
       return score - 20;
     }
 
+    // Demote glossary
+    if (docName === "reference/glossary") {
+      return score - 20;
+    }
+
+    // Demote auto-generated command references (AMC, appliance, AAR)
+    // When the query matches the command title, apply a smaller demotion
+    // so they rank above release notes (-20) but below primary content
+    if (docName.startsWith("reference/cmd-ref/")) {
+      if (_searchQuery && title.toLowerCase().includes(_searchQuery)) {
+        return score - 10;
+      }
+      return score - 20;
+    }
+
     // Boost pages whose H1 title contains the search query
     if (anchor === "" && _searchQuery && title.toLowerCase().includes(_searchQuery)) score += 5;
 

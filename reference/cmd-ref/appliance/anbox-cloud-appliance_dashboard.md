@@ -6,7 +6,7 @@ Manage the dashboard of the Anbox Cloud Appliance
 
 Manage the dashboard of the Anbox Cloud Appliance
 
-Provides subcommands used to manage the dasboard of the Anbox Cloud Appliance.
+Provides subcommands used to manage the dashboard of the Anbox Cloud Appliance.
 This includes management of users allowed to access the dashboard.
 
 ## Options

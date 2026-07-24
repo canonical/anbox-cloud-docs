@@ -15,7 +15,7 @@ Not all components are updated with each release. When components are not update
 
 ### Charms
 
-#### Ubuntu 22.04
+#### Ubuntu 22.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|----------|
@@ -29,7 +29,7 @@ Not all components are updated with each release. When components are not update
 | lxd-integrator | 1.30/stable | 906 | 907 | 1.30.1-9d2cbdd |
 | anbox-cloud-cos-configuration | 1.30/stable | 773 | 774 | 1.30.1-9d2cbdd |
 
-#### Ubuntu 24.04
+#### Ubuntu 24.04 LTS
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|----------|

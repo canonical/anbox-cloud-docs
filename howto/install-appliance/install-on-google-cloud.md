@@ -107,7 +107,7 @@ Select **Create** to create the firewall rule.
 
 ## Connect to the VM
 
-On the virtual machine instance page, connect to the instance using SSH. See [Google's documentation](https://docs.cloud.google.com/compute/docs/ssh-in-browser) for more information.
+On the virtual machine instance page, connect to the instance using SSH. See [Google's documentation](https://docs.cloud.google.com/compute/docs/connect/ssh-in-browser) for more information.
 
 ## Finish the installation
 

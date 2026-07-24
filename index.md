@@ -94,8 +94,12 @@ Thinking about using Anbox Cloud for your next project? [Get in touch\!](https:/
 :hidden:
 tutorial/index
 howto/index
-explanation/index
 reference/index
-Contribute <contribute/index>
+explanation/index
+```
+
+```{toctree}
+:hidden:
 reference/release-notes/release-notes
+Contribute <contribute/index>
 ```

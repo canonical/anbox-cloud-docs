@@ -9,7 +9,7 @@ Anbox Management Client.
 The Anbox Management Client (AMC) manages containers in Anbox Cloud.
 You can use it to create, launch and manage applications on any machine.
 
-See https://documentation.ubuntu.com/anbox-cloud/ for more information on how to work
+See https://canonical.com/anbox-cloud/docs/ for more information on how to work
 with Anbox Cloud.
 
 ## Options

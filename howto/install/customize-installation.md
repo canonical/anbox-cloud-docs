@@ -18,7 +18,7 @@ Saving a copy of the bundle file and editing that file means that your customiza
 
 ## Use overlay files
 
-An [overlay bundle](https://documentation.ubuntu.com/juju/latest/reference/bundle/) is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):
+An [overlay bundle](https://canonical.com/juju/docs/juju-cli/latest/reference/bundle/) is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):
 
     machines:
       '0':
@@ -34,7 +34,7 @@ An [overlay bundle](https://documentation.ubuntu.com/juju/latest/reference/bundl
         series: noble
         constraints: "instance-type=m5.xlarge root-disk=100G"
 
-See the [Juju bundle documentation](https://documentation.ubuntu.com/charmcraft/stable/reference/files/bundle-yaml-file/) for more information about Juju's bundle format and valid YAML.
+See the [Juju bundle documentation](https://canonical.com/juju/docs/charmcraft/4.3/reference/files/bundle-yaml-file/) for more information about Juju's bundle format and valid YAML.
 
 To use one or more overlay files with the Anbox Cloud bundle, specify them during the deployment:
 
@@ -110,4 +110,4 @@ Running this command will output login information and a URL for the GUI interfa
 
 ![Anbox Cloud - Juju GUI|690x444](/images/install_customize_juju_model.png)
 
-For more information on the Juju GUI, see the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-the-juju-dashboard/#manage-the-juju-dashboard).
+For more information on the Juju GUI, see the [Juju documentation](https://canonical.com/juju/docs/juju-cli/latest/user/howto/manage-the-juju-dashboard/#manage-the-juju-dashboard).

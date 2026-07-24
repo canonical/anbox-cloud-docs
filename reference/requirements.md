@@ -44,7 +44,7 @@ The appliance supports LXD >= 5.0.
 
 By default, LXD is installed from the `5.21/stable` track.
 
-If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.21/stable lxd` to update it. If you are already on LXD version 5.21, [do not downgrade it as it may render LXD unusable](https://documentation.ubuntu.com/lxd/latest/installing/#upgrade-lxd).
+If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.21/stable lxd` to update it. If you are already on LXD version 5.21, [do not downgrade it as it may render LXD unusable](https://canonical.com/lxd/docs/latest/installing/#upgrade-lxd).
 
 ### Hardware requirements
 
@@ -65,7 +65,7 @@ For external access, you must expose a couple of network ports on the machine wh
 
 ## Requirements for charmed Anbox Cloud
 
-Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://documentation.ubuntu.com/juju/latest/user/reference/cloud/) as well as manually provided machines as long as the minimum requirements are met.
+Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://canonical.com/juju/docs/juju-cli/latest/user/reference/cloud/) as well as manually provided machines as long as the minimum requirements are met.
 
 ### Ubuntu
 
@@ -92,7 +92,7 @@ The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://canoni
 
 Anbox Cloud charms support user secrets and if you would like to use that feature, use Juju 3.3 or later.
 
-We recommend using Juju 3.6, so that you will be using the latest LTS version of Juju and can manage user secrets. Juju 3.6 has the full range of features that Anbox Cloud charms support. See [Juju documentation](https://documentation.ubuntu.com/juju/latest/howto/manage-secrets/) for more information about managing secrets.
+We recommend using Juju 3.6, so that you will be using the latest LTS version of Juju and can manage user secrets. Juju 3.6 has the full range of features that Anbox Cloud charms support. See [Juju documentation](https://canonical.com/juju/docs/juju-cli/latest/howto/manage-secrets/) for more information about managing secrets.
 
 You can install Juju with the following command:
 
@@ -100,7 +100,7 @@ You can install Juju with the following command:
 
 If you wish to install a different version, replace `3` in the command with the desired version.
 
-See the [Juju documentation](https://documentation.ubuntu.com/juju/latest/user/howto/manage-juju/#install-juju) for more information.
+See the [Juju documentation](https://canonical.com/juju/docs/juju-cli/latest/user/howto/manage-juju/#install-juju) for more information.
 
 (sec-minimum-hardware-requirements)=
 ### Hardware requirements
@@ -111,7 +111,7 @@ To run an Anbox Cloud deployment including the streaming stack, we recommend the
 
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
-| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/latest/reference/controller/)  |
+| -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://canonical.com/juju/docs/juju-cli/latest/reference/controller/)  |
 | -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://documentation.ubuntu.com/juju/latest/reference/controller/)  |
 | 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the load balancer, streaming stack control plane |
 | 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
