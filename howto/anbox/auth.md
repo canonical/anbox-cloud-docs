@@ -148,7 +148,15 @@ Anbox Cloud Dashboard allows you to manage identities and their access through g
 
 ## Identities
 
-The dashboard does not support creating identities. Instead, it displays the identities that the currently logged-in user is authorized to view on the **Permissions > Identities** page.
+The **Permissions > Identities** page displays the identities that the currently logged-in user is authorized to view.
+
+To create an identity from this page:
+
+1. Click *Create identity*.
+2. Select the *Authentication method*:
+   - OIDC: Enter the identity name and email address.
+   - TLS: Enter the identity name and provide the client certificate.
+3. Click *Create* to confirm.
 
 To manage an identity’s group memberships, click *Groups count* or *Manage groups* ( ![manage groups icon](/images/icons/manage-groups-icon.png) ). This opens the *Change groups* panel, which lists all groups that the logged-in user is authorized to view. Select or deselect groups as needed, then confirm with *Save changes*.
 
