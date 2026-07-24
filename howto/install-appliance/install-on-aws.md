@@ -180,7 +180,7 @@ You will be asked a few questions when you run the `init` command. Accept the de
 ## Register with the dashboard
 
 ```{important}
-Version 1.29.0 onward: If an OIDC provider is configured, dashboard user registration is not required and the steps in this section can be skipped. {ref}`sec-create-identity` in AMS instead.
+Version 1.29.0 onward: If an OIDC provider is configured, dashboard user registration is not required and the steps in this section can be skipped. {ref}`sec-create-identity` instead.
 ```
 
 After initialization, you must register your user account with the Anbox Cloud dashboard to access it. Run:
