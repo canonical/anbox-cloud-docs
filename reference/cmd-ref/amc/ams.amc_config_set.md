@@ -6,7 +6,7 @@ Set a single configuration item
 
 Set a single configuration item.
 
-See https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/ams-configuration/ for a list of
+See https://canonical.com/anbox-cloud/docs/reference/ams-configuration/ for a list of
 available configuration items.
 
 ```

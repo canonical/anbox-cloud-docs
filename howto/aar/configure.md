@@ -154,5 +154,5 @@ Finally, reboot the AAR:
 
 - {ref}`exp-aar`
 - {ref}`howto-revoke-aar`
-- [Juju relations](https://documentation.ubuntu.com/juju/latest/user/reference/relation/)
-- [Juju cross model relations](https://documentation.ubuntu.com/juju/latest/user/reference/relation/#cross-model/)
+- [Juju relations](https://canonical.com/juju/docs/juju-cli/latest/user/reference/relation/)
+- [Juju cross model relations](https://canonical.com/juju/docs/juju-cli/latest/user/reference/relation/#cross-model/)

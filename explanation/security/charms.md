@@ -13,7 +13,7 @@ All communication between Juju units and the Juju controller happens over TLS-en
 
 With this secure channel, Juju charms can communicate with each other using relation data. The data published by one unit is sent to the controller, which then makes it available for all other units on the same relation. The data for each relation is scoped by ID and is only visible to units participating in the specific relation on which it is set.
 
-See [Security with Juju](https://documentation.ubuntu.com/juju/latest/user/explanation/juju-security/) for more information.
+See [Security with Juju](https://canonical.com/juju/docs/juju-cli/latest/user/explanation/juju-security/) for more information.
 
 ## Cryptography
 
@@ -38,7 +38,7 @@ When using a TLS charm (e.g. [self-signed-certificates](https://charmhub.io/self
 
 ## Juju secrets
 
-Confidential data such as private keys, API tokens, or credentials managed by the charm or passed through relations between charms is securely handled using [Juju secrets](https://documentation.ubuntu.com/juju/latest/reference/secret/) if you deploy Anbox Cloud with Juju 3.0 or later. You can use the following command to view the secrets used by charms:
+Confidential data such as private keys, API tokens, or credentials managed by the charm or passed through relations between charms is securely handled using [Juju secrets](https://canonical.com/juju/docs/juju-cli/latest/reference/secret/) if you deploy Anbox Cloud with Juju 3.0 or later. You can use the following command to view the secrets used by charms:
 
 ```bash
 juju list-secrets

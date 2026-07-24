@@ -1,22 +1,22 @@
 
-# Starter pack rules start here
+# Sphinx Stack rules start here
 
 # Environment
 *env*/
 .venv/
 
 # Sphinx
-.sphinx/warnings.txt
-.sphinx/.wordlist.dic
-.sphinx/.doctrees/
-.sphinx/update/
-.sphinx/node_modules/
-.sphinx/deps/
-.sphinx/_static/swagger-ui/
+_dev/warnings.txt
+_dev/.wordlist.dic
+_dev/.doctrees/
+_dev/update/
+_dev/node_modules/
+_dev/deps/
+_dev/_static/swagger-ui/
 
 # Vale
-.sphinx/styles/*
-.sphinx/vale.ini
+_dev/styles/*
+_dev/vale.ini
 
 # Build outputs
 _build

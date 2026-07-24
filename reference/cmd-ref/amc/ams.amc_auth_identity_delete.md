@@ -32,5 +32,5 @@ $ amc auth identity delete bknj0n9hpuo01q954fq0
 
 ## SEE ALSO
 
-* [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentiation & authorization
+* [ams.amc auth identity](ams.amc_auth_identity.md)	 - Manage authentication & authorization
 
