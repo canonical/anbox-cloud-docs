@@ -7,11 +7,11 @@ myst:
 (exp-security)=
 # Security
 
-Anbox Cloud is designed using secure development practices - its architecture, components and all communication between components are designed to be fundamentally secure.
+Anbox Cloud is built on secure development practices. Its architecture, components, and all inter-component communication are designed to be fundamentally secure.
 
 Anbox Cloud uses [LXD](https://canonical.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
-The following security guides provide you information about each component's security and the cryptographic technology that they use:
+The following guides describe the security model and cryptographic technology used by each component:
 
 ```{toctree}
 :maxdepth: 1
@@ -48,17 +48,17 @@ The following table shows the authentication methods that are in place for the d
 
 ## Security updates
 
-Anbox Cloud provides images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with `application.auto_update`,See {ref}`ref-ams-configuration`).
+Anbox Cloud provides images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with `application.auto_update`, see {ref}`ref-ams-configuration`).
 
 In addition, to ensure that the latest Ubuntu security patches are applied outside of image updates as well, Anbox Cloud checks for and installs available security updates every time an application is bootstrapped. So when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to bootstrap the application again, and thus install the latest security patches.
 
 It is possible to turn off this update mechanism by setting `container.security_updates` to `false`, but it is not recommended to do so. See {ref}`ref-ams-configuration`.
 
-For security reasons, always keep your systems up-to-date at all times. To ensure this, snaps update automatically, and the snap daemon is by default configured to check for updates four times a day.
+For security reasons, always keep your systems up-to-date. To ensure this, snaps update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
 ## Snap confinement
 
-Since Anbox Cloud uses [snaps](https://snapcraft.io/), [Snap confinement](https://snapcraft.io/docs/snap-confinement) restricts the amount of access the applications have to system resources and provides an additional layer of security when creating applications and addons.
+Since Anbox Cloud uses [snaps](https://snapcraft.io/), [Snap confinement](https://snapcraft.io/docs/snap-confinement) restricts application access to system resources and provides an additional layer of security when creating applications and addons.
 
 ## Data security
 
@@ -73,48 +73,52 @@ The following table helps you understand how data related to you or provided by 
 
 Services used by Anbox Cloud have configuration files that contain secrets. The secrets are automatically generated and managed by the respective charms or the appliance. The authentication methods used for managing secrets are explained in the security topics.
 
-A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
+The data that you provide to your applications in Android is stored within the instance, for the duration of the instance.
 
-`/var/snap/ams/common/server/settings.yaml`
+```{dropdown} Configuration files that contain secrets
 
-`/var/snap/aar/common/conf/main.yaml`
+**Charmed Anbox Cloud deployment:**
 
-`/var/snap/anbox-cloud-dashboard/common/service/config.yaml`
-
-`/var/snap/anbox-stream-agent/common/agent/config.yaml`
-
-`/var/snap/anbox-stream-gateway/common/service/config.yaml`
-
-`/etc/turnserver.conf`
-
-`/etc/coturn/auth_secret`
-
-`/var/snap/nats/common/server/nats.cfg`
-
-An Anbox Cloud Appliance deployment contains the following configuration files that contain secrets:
-
-`/var/snap/anbox-cloud-appliance/common/daemon/config.yaml`
-
-`/var/snap/anbox-cloud-appliance/common/telegraf/main.conf`
-
-`/var/snap/anbox-cloud-appliance/common/agent/config.yaml`
-
-`/var/snap/anbox-cloud-appliance/common/coturn/turnserver.conf`
-
-`/var/snap/anbox-cloud-appliance/common/ams/server/settings.yaml`
-
-`/var/snap/anbox-cloud-appliance/common/dashboard/config.yaml`
-
-`/var/snap/anbox-cloud-appliance/common/nats/nats.cfg`
-
-`/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
-
-`/var/snap/anbox-cloud-appliance/common/config.yaml`
+- `/var/snap/ams/common/server/settings.yaml`
+- `/var/snap/aar/common/conf/main.yaml`
+- `/var/snap/anbox-cloud-dashboard/common/service/config.yaml`
+- `/var/snap/anbox-stream-agent/common/agent/config.yaml`
+- `/var/snap/anbox-stream-gateway/common/service/config.yaml`
+- `/etc/turnserver.conf`
+- `/etc/coturn/auth_secret`
+- `/var/snap/nats/common/server/nats.cfg`
 
 For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
 
-The data that you provide to your applications in Android is stored within the instance, for the duration of the instance.
+**Anbox Cloud Appliance deployment:**
+
+- `/var/snap/anbox-cloud-appliance/common/daemon/config.yaml`
+- `/var/snap/anbox-cloud-appliance/common/telegraf/main.conf`
+- `/var/snap/anbox-cloud-appliance/common/agent/config.yaml`
+- `/var/snap/anbox-cloud-appliance/common/coturn/turnserver.conf`
+- `/var/snap/anbox-cloud-appliance/common/ams/server/settings.yaml`
+- `/var/snap/anbox-cloud-appliance/common/dashboard/config.yaml`
+- `/var/snap/anbox-cloud-appliance/common/nats/nats.cfg`
+- `/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
+- `/var/snap/anbox-cloud-appliance/common/config.yaml`
+```
+
+## Reporting vulnerabilities
+
+If you discover a security vulnerability with Anbox Cloud, report it following the process described in the {ref}`ref-security-policy`. At a minimum, report a bug at <https://bugs.launchpad.net/anbox-cloud> and set the information type to *Private Security*.
+
+The [Ubuntu Security disclosure and embargo policy](https://ubuntu.com/security/disclosure-policy) details what you can expect when you contact us and what we expect from you.
+
+For information about known vulnerabilities and fixes, see {ref}`ref-security-notices`. Each Anbox Cloud release also includes a summary of security fixes in the {ref}`ref-release-notes`.
+
+To stay informed about new releases and security updates, subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on Ubuntu Discourse.
 
 ## See also
 
-- How-to: {ref}`howto-harden`
+How-to guide: 
+- {ref}`howto-harden`
+
+Reference: 
+- {ref}`ref-security-policy`
+- {ref}`ref-security-notices`
+- {ref}`ref-release-notes`

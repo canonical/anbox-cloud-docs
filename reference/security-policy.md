@@ -1,15 +1,16 @@
 ---
 myst:
   html_meta:
-    "description": "Reference documentation for Anbox Cloud security policy, covering release cadence and vulnerability reporting."
+    "description": "Reference documentation for Anbox Cloud security policy, covering vulnerability reporting and response process."
 ---
 
 (ref-security-policy)=
 # Security policy
 
-Learn about our [release and support policy](#release-and-support-policy) for the nature of our releases and versions.
+Learn about our {ref}`release and support policy <release-and-support-policy>` to understand how we manage releases and versions.
 
-All our public repositories have a `SECURITY.md` file that details our security policy. However, Anbox Cloud has components for which the source is not publicly available. The same policy as listed below applies for a security vulnerability for any component of Anbox Cloud.
+All our public repositories have a `SECURITY.md` file that details our security policy. However, Anbox Cloud has components for which the source is not publicly available. The same policy listed below applies to security vulnerabilities in any component of Anbox Cloud.
+
 
 ## Reporting a vulnerability
 
@@ -31,6 +32,16 @@ The [Ubuntu Security disclosure and embargo policy](https://ubuntu.com/security/
 
 The Anbox Cloud team will be notified of the issue and review the vulnerability. We may reach out to you for further information or clarification if needed.
 
-If the issue is confirmed as a valid security vulnerability, we use the [NVD scoring system](https://nvd.nist.gov/vuln-metrics/cvss) for deciding the severity and assign a CVE number.
+If the issue is confirmed as a valid security vulnerability, we use the [NVD scoring system](https://nvd.nist.gov/vuln-metrics/cvss) to assess the severity and assign a CVE number.
 
-We fix vulnerabilities classified as *critical* or *high* with the subsequent monthly release of Anbox Cloud and also document them as {ref}`ref-security-notices`.
+We fix vulnerabilities classified as *critical* or *high* with the next release of Anbox Cloud and also document them as {ref}`ref-security-notices`.
+
+## Related topics
+
+Reference:
+
+- {ref}`ref-security-notices`
+- {ref}`ref-release-notes`
+
+Explanation:
+- {ref}`exp-security`

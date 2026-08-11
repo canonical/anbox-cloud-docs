@@ -11,6 +11,11 @@ This page contains information about security vulnerabilities found and fixed in
 
 For information about our security policy, see {ref}`ref-security-policy`.
 
+You can also find security-related information in these places:
+
+- {ref}`ref-release-notes`: Each release includes a list of security fixes.
+- [Anbox Cloud category on Ubuntu Discourse](https://discourse.ubuntu.com/c/anbox-cloud/49) — Subscribe to receive release and security announcements.
+
 (sec-CVE-2024-8287)=
 ## CVE-2024-8287
 
