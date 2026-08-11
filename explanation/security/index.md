@@ -27,13 +27,14 @@ streaming-stack
 
 ## Communication among components
 
-The architecture of Anbox Cloud has been designed in a way that ensures secure communication among all components.
+The architecture of Anbox Cloud is designed to ensure secure communication among all components.
 
-All communication among services uses TLS encryption and authentication. Access is controlled through secure authentication tokens or temporary passwords. There are no insecure HTTP endpoints - all HTTP communication is secured by TLS and happens over HTTPS.
+All communication among services uses TLS for encryption and authentication. Access is controlled through secure authentication mechanisms, including TLS client certificates, authentication tokens, and temporary passwords. There are no insecure HTTP endpoints; all HTTP communication is secured with TLS and takes place over HTTPS.
 
-Secure communication is achieved using TLS and public-key encryption with a chain of trust, up to a shared root Certificate Authority (CA). However, when the cluster is being brought up or a new unit is being added, the chain of trust and certificates required must be bootstrapped into the machines.
+Secure communication relies on TLS and public-key encryption, with a chain of trust anchored to a shared root Certificate Authority (CA). When a cluster is being brought up or a new unit is added, the required certificates and chain of trust must be bootstrapped into the machines.
 
-The following table shows the authentication methods that are in place for the different components.
+The following table shows the authentication methods used by each component.
+
 
 | Component             | Authentication method        |
 |-----------------------|------------------------------|
@@ -45,6 +46,12 @@ The following table shows the authentication methods that are in place for the d
 | Stream agent <-> NATS | TLS and token authentication |
 | Coturn with STUN      | No authentication needed     |
 | Coturn with TURN      | Temporary user and password  |
+
+## Cryptography
+
+Anbox Cloud enforces TLS 1.2 or later for all inter-component communication, with most components enforcing TLS 1.3. Components use RSA 4096-bit keys, and users cannot reduce the minimum TLS version or weaken the cryptographic algorithms.
+
+For details on the algorithms, key lengths, and cryptographic packages used by each component, see the per-component security guides linked above. For user-facing cryptographic controls such as TLS certificate replacement, external CA integration, and OIDC configuration, see {ref}`howto-set-up-tls`, {ref}`exp-security-charms`, and {ref}`exp-auth`.
 
 ## Security updates
 
