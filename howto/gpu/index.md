@@ -7,11 +7,11 @@ myst:
 (howto-gpu)=
 # GPU
 
-This guide provides instructions for tuning GPU configuration for Anbox Cloud deployment, helping you benchmark GPU workloads, improve instance density, and achieve optimal GPU resource utilization.
+This guide provides instructions for tuning GPU configuration in Anbox Cloud deployments. Use it to benchmark GPU workloads, improve instance density, and optimize GPU resource utilization.
+
+- {ref}`howto-increase-instance-density`
 
 ```{toctree}
-:titlesonly:
-
+:hidden:
 
 increase-instance-density
-```
