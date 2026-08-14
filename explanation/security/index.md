@@ -7,9 +7,9 @@ myst:
 (exp-security)=
 # Security
 
-Anbox Cloud is built on secure development practices. Its architecture, components, and all inter-component communication are designed to be fundamentally secure.
+Anbox Cloud is built on secure development practices. Security principles are incorporated throughout the design of its architecture and components and the communication between them.
 
-Anbox Cloud uses [LXD](https://canonical.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
+Anbox Cloud uses [LXD](https://canonical.com/lxd) for container and virtual machine management. To provide isolation between Android systems, Anbox Cloud runs a single Android system per LXD instance.
 
 The following guides describe the security model and cryptographic technology used by each component:
 
@@ -27,11 +27,9 @@ streaming-stack
 
 ## Communication among components
 
-The architecture of Anbox Cloud is designed to ensure secure communication among all components.
+Communication among Anbox Cloud services is secured with TLS for encryption and authentication. Access is controlled through mechanisms including TLS client certificates, authentication tokens, and temporary passwords. All HTTP communication takes place over HTTPS; Anbox Cloud does not expose insecure HTTP endpoints.
 
-All communication among services uses TLS for encryption and authentication. Access is controlled through secure authentication mechanisms, including TLS client certificates, authentication tokens, and temporary passwords. There are no insecure HTTP endpoints; all HTTP communication is secured with TLS and takes place over HTTPS.
-
-Secure communication relies on TLS and public-key encryption, with a chain of trust anchored to a shared root Certificate Authority (CA). When a cluster is being brought up or a new unit is added, the required certificates and chain of trust must be bootstrapped into the machines.
+TLS and public-key encryption establish a chain of trust anchored to a shared root Certificate Authority (CA). When a cluster is being brought up or a new unit is added, the required certificates and chain of trust must be bootstrapped into the machines.
 
 The following table shows the authentication methods used by each component.
 
@@ -49,9 +47,7 @@ The following table shows the authentication methods used by each component.
 
 ## Cryptography
 
-Anbox Cloud enforces TLS 1.2 or later for all inter-component communication, with most components enforcing TLS 1.3. Components use RSA 4096-bit keys, and users cannot reduce the minimum TLS version or weaken the cryptographic algorithms.
-
-For details on the algorithms, key lengths, and cryptographic packages used by each component, see the per-component security guides linked above. For user-facing cryptographic controls such as TLS certificate replacement, external CA integration, and OIDC configuration, see {ref}`howto-set-up-tls`, {ref}`exp-security-charms`, and {ref}`exp-auth`.
+Anbox Cloud uses TLS and public-key cryptography to secure inter-component communication. For details about the cryptographic algorithms and key lengths used by each component, see the per-component security guides. For user-facing cryptographic controls such as TLS certificate replacement, external CA integration, and OIDC configuration, see {ref}`howto-set-up-tls`, {ref}`exp-security-charms`, and {ref}`exp-auth`.
 
 ## Security lifecycle
 
@@ -63,24 +59,11 @@ To ensure you receive the latest security fixes, upgrade to each new release sho
 
 Anbox Cloud delivers security updates through:
 
-- **Anbox Cloud images**: Updated with the latest security patches. When an image is updated, all Anbox Cloud applications using that image are automatically updated as well (unless disabled with `application.auto_update`, see {ref}`ref-ams-configuration`).
+- **Anbox Cloud images**: Anbox Cloud images are updated with the latest security patches. When an image is updated, all Anbox Cloud applications using that image are automatically updated as well (unless disabled with `application.auto_update`, see {ref}`ref-ams-configuration`).
 - **Instance bootstrap**: Anbox Cloud checks for and installs available Ubuntu security updates every time an application is bootstrapped. This means that when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to trigger a fresh bootstrap and install the latest patches. This mechanism can be disabled by setting `container.security_updates` to `false`, but doing so is not recommended. See {ref}`ref-ams-configuration`.
 - **Snap packages**: Snaps update automatically. The snap daemon checks for updates four times a day by default.
 
-### How to manually trigger updates
-
-To manually trigger an update:
-
-- **Appliance:** `sudo snap refresh anbox-cloud-appliance`. See {ref}`howto-upgrade-appliance`.
-- **Charmed deployment:** `juju refresh` for each charm. See {ref}`howto-upgrade-anbox-cloud`.
-
-### How to verify an update was applied
-
-To check the currently installed version:
-
-- **Appliance:** Run `anbox-cloud-appliance status` and check the version in the output.
-- **Charmed deployment:** Run `juju status` and check the charm revision and workload version for each unit.
-- **Images:** Run `amc image ls` and check the image version column.
+For instructions on upgrading Anbox Cloud, see {ref}`howto-upgrade-appliance` and {ref}`howto-upgrade-anbox-cloud` depending on your deployment.
 
 ## Snap confinement
 
@@ -114,8 +97,6 @@ The data that you provide to your applications in Android is stored within the i
 - `/etc/coturn/auth_secret`
 - `/var/snap/nats/common/server/nats.cfg`
 
-For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
-
 **Anbox Cloud Appliance deployment:**
 
 - `/var/snap/anbox-cloud-appliance/common/daemon/config.yaml`
@@ -127,17 +108,10 @@ For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
 - `/var/snap/anbox-cloud-appliance/common/nats/nats.cfg`
 - `/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
 - `/var/snap/anbox-cloud-appliance/common/config.yaml`
+
+For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
+
 ```
-
-## Reporting vulnerabilities
-
-If you discover a security vulnerability with Anbox Cloud, report it following the process described in the {ref}`ref-security-policy`. At a minimum, report a bug at <https://bugs.launchpad.net/anbox-cloud> and set the information type to *Private Security*.
-
-The [Ubuntu Security disclosure and embargo policy](https://ubuntu.com/security/disclosure-policy) details what you can expect when you contact us and what we expect from you.
-
-For information about known vulnerabilities and fixes, see {ref}`ref-security-notices`. Each Anbox Cloud release also includes a summary of security fixes in the {ref}`ref-release-notes`.
-
-To stay informed about new releases and security updates, subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on Ubuntu Discourse.
 
 ## See also
 
