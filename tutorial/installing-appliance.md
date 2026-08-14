@@ -44,17 +44,17 @@ The *Ubuntu Pro (Infra-only)* token does not work and will result in a failed de
 
 1. Install Multipass:
 
-        snap install multipass
+       snap install multipass
 
 2. Create a virtual machine:
 
-        multipass launch --name=anbox --cpus 8 --disk 50G --memory 8G
+       multipass launch --name=anbox --cpus 8 --disk 50G --memory 8G
 
 Make sure to allocate sufficient disk space, memory and CPUs as shown in the example. Otherwise, the VM will run out of space while creating the application. See {ref}`ref-requirements` for information on minimum resource requirements.
 
 3. Shell into the virtual machine:
 
-        multipass shell anbox
+       multipass shell anbox
 
 ## Attach the machine to Ubuntu Pro
 
