@@ -59,9 +59,9 @@ To ensure you receive the latest security fixes, upgrade to each new release sho
 
 Anbox Cloud delivers security updates through:
 
-- **Anbox Cloud images**: Anbox Cloud images are updated with the latest security patches. When an image is updated, all Anbox Cloud applications using that image are automatically updated as well (unless disabled with `application.auto_update`, see {ref}`ref-ams-configuration`).
+- **Anbox Cloud images**: Anbox Cloud images are updated with the latest security patches within the same minor version. When an image is updated, all Anbox Cloud applications using that image are automatically updated as well (unless disabled with `application.auto_update`, see {ref}`ref-ams-configuration`). Updates to a new minor version require an explicit upgrade of the deployment.
 - **Instance bootstrap**: Anbox Cloud checks for and installs available Ubuntu security updates every time an application is bootstrapped. This means that when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to trigger a fresh bootstrap and install the latest patches. This mechanism can be disabled by setting `container.security_updates` to `false`, but doing so is not recommended. See {ref}`ref-ams-configuration`.
-- **Snap packages**: Snaps update automatically. The snap daemon checks for updates four times a day by default.
+- **Snap packages**: Snaps update automatically. See [Managing updates](https://snapcraft.io/docs/managing-updates). The snap daemon checks for updates four times a day by default.
 
 For instructions on upgrading Anbox Cloud, see {ref}`howto-upgrade-appliance` and {ref}`howto-upgrade-anbox-cloud` depending on your deployment.
 
