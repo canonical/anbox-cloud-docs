@@ -55,7 +55,7 @@ For a different cloud, just substitute the cloud name with the name returned by 
 (sec-setup-juju-controller)=
 ## Add a controller and model
 
-The [Juju controller](https://documentation.ubuntu.com/juju/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://documentation.ubuntu.com/juju/latest/user/reference/model/).
+The [Juju controller](https://canonical.com/juju/docs/juju-cli/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://canonical.com/juju/docs/juju-cli/latest/user/reference/model/).
 
 For example, run the following command to bootstrap the controller for AWS:
 
