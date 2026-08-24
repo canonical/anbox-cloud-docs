@@ -407,6 +407,8 @@ YUV
 ZFS
 zpool
 zsh
+chmod
+systemctl
 
 # To be removed after AMS sync
 authrorization
