@@ -7,6 +7,10 @@ myst:
 (exp-applications)=
 # Applications
 
+```{caution}
+Applications including hooks, are deprecated and are being removed from Anbox Cloud. See {ref}`ref-deprecation-notes` for the removal schedule and {ref}`howto-migrate-from-addon-and-app-hooks` for how to replicate hook behavior without addons.
+```
+
 Applications are one of the main objects managed by Anbox Management Service (AMS). A single application encapsulates one Android APK ([Android Package Kit](https://en.wikipedia.org/wiki/Android_application_package)) and manages it within the cluster. It takes care of installing the supplied APK and making it available to users. AMS also manages updates to existing applications, which includes allowing the operator to test new uploaded versions before making them available to any users.
 
 ## Application requirements
