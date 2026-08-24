@@ -66,4 +66,5 @@ delete-instance
 backup-restore-application-data
 configure-geographic-location
 expose-services
+migrate-from-addon-and-app-hooks
 ```
