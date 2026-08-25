@@ -7,6 +7,10 @@ myst:
 (home)=
 # Anbox Cloud documentation
 
+```{important}
+This is a test of the redesigned documentation workflows.
+```
+
 **Anbox Cloud runs Android in the cloud using lightweight LXD system containers or full virtual machines.**
 
 **Built on Ubuntu, it provides a scalable platform to deploy, manage, and stream Android workloads across public and private infrastructure with consistent performance and low latency.** It can run up to 100 Android instances per server while maintaining security and isolation.
