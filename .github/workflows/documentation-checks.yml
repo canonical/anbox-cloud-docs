@@ -29,6 +29,8 @@ jobs:
             target: linkcheck
           - name: Inclusive language check
             target: woke
+          - name: Markdown linting
+            target: lint-md
     defaults:
       run:
         working-directory: .
