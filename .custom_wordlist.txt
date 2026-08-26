@@ -409,19 +409,4 @@ zpool
 zsh
 chmod
 systemctl
-
-# To be removed after AMS sync
-authrorization
-virtualise
-sudo
-su
-url
-authentiation
-redirections
-assing
-revertable
-seprated
-dasboard
-
-# Figure out why this is needed
 virtualize
