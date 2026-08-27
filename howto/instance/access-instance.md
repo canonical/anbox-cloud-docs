@@ -20,6 +20,8 @@ This command opens a bash shell inside the instance.
 
 ## Access the Android environment
 
+The command for accessing Android depends on the instance's execution model.
+
 ### Containerized Android
 
 Use anbox-shell to access the Android container. If you combine the anbox-shell command with amc exec, you can get direct access to the Android container:
@@ -34,6 +36,6 @@ If you only want to watch the Android log output, use the following command:
 
 ### Virtualized Android
 
-Use ADB instead of anbox-shell:
+Use `adb shell` instead of `anbox-shell` for an instance running virtualized Android. The command connects to the Android environment inside the Cuttlefish virtual machine:
 
-    adb exec <id> -- adb shell
+    amc exec <id> -- adb shell
