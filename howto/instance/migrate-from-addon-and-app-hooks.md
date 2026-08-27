@@ -10,6 +10,7 @@ myst:
 ```{important}
 Addons and application hooks are deprecated and will be removed from Anbox Cloud. See {ref}`ref-deprecation-notes` for the exact release in which support ends.
 ```
+
 Addon and application hooks (`pre-start`, `post-start`, `post-stop`) are available only for instances with containerized Android (`jammy:*` images) and are not supported for virtualized Android (see {ref}`exp-android-execution-models`).
 
 This guide shows how to replace addon and application hook behavior with a `systemd` unit baked into a custom Anbox image. This approach works for both containerized and virtualized Android and does not depend on the addon subsystem.
