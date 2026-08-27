@@ -409,7 +409,7 @@ zpool
 zsh
 chmod
 systemctl
-
+virtualize
 # To be removed after AMS sync
 authrorization
 virtualise
@@ -422,6 +422,3 @@ assing
 revertable
 seprated
 dasboard
-
-# Figure out why this is needed
-virtualize

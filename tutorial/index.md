@@ -7,17 +7,14 @@ myst:
 (tutorials)=
 # Tutorials
 
-The tutorials in this section guide you through the workflows of {term}`Anbox Cloud Appliance`, from installation to running and streaming Android instances.
-
-## Containerized Android
+The tutorials in this section guide you through getting started with the
+{term}`Anbox Cloud Appliance`, from installation to running and streaming
+Android instances.
 
 - {ref}`tut-installing-appliance`
 - {ref}`tut-create-virtual-device`
-- {ref}`tut-set-up-stream-client`
-
-## Virtualized Android
-
 - {ref}`tut-getting-started-virtualized-android`
+- {ref}`tut-set-up-stream-client`
 
 ## See also
 
@@ -28,6 +25,6 @@ The tutorials in this section guide you through the workflows of {term}`Anbox Cl
 :maxdepth: 1
 installing-appliance
 create-test-virtual-device
-stream-client
 getting-started-with-virtualized-android
+stream-client
 ```
