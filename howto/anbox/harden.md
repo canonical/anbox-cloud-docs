@@ -1,21 +1,22 @@
 ---
 myst:
   html_meta:
-    "description": "How to harden an Anbox Cloud deployment by restricting network exposure and managing TLS certificates."
+    "description": "How to harden an Anbox Cloud deployment by restricting network exposure, securing credentials, and applying security best practices across components."
 ---
 
 (howto-harden)=
 # Harden your deployment
 
-Anbox Cloud is designed with secure development practices but there are certain aspects to consider on your side to make sure the entire deployment is secure.
+Anbox Cloud includes security controls for its components and inter-component communication. However, you must also configure and operate your deployment securely to reduce its exposure to attacks.
 
 ## General guidelines
 
-Consider the following simple yet impactful measures to ensure that you run a secure Anbox Cloud deployment:
+Consider the following simple yet impactful measures to ensure a secure Anbox Cloud deployment:
 
 - Always run the latest supported version of Anbox Cloud and keep your deployment up to date. See {ref}`ref-release-notes`.
 - Make sure your deployment uses machines running a supported Ubuntu version. See {ref}`ref-requirements`.
-- If you find a security issue, report it to the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
+- Consider the host-level security measures, guidelines and benchmarks offered by Ubuntu Pro such as CIS, USG and Livepatch. For more information, see the Ubuntu Pro Client documentation for enabling [CIS/USG](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_cis/) and [Livepatch](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_livepatch/).
+- If you discover a security vulnerability in Anbox Cloud, report it following the [Anbox Cloud security policy](https://github.com/canonical/anbox-cloud-docs/blob/main/SECURITY.md). For Ubuntu-level security issues, contact the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
 
 ## Reduce attack surface
 
@@ -23,58 +24,72 @@ The following diagram illustrates the attack surface and potential points of thr
 
 ![Anbox Cloud attack surface|690x398](/images/anbox_attack_surface.svg)
 
-### 1 - Web client
-
-- Consider the security measures, guidelines and benchmarks offered by Ubuntu Pro such as CIS, USG and Livepatch. For more information, see the Ubuntu Pro Client documentation for enabling [CIS/USG](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_cis/) and [Livepatch](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_livepatch/).
+### 1 - Secure the web client
 
 - Use the {ref}`exp-web-dashboard` as your default stream client. If you want to use a custom client, ensure you have set it up securely as described in the {ref}`tut-set-up-stream-client` tutorial.
 
-### 2 - Instances
+### 2 - Harden instances
 
-- Limit the ports and services that you expose over the network. {ref}`ref-network-ports` lists the ports that are exposed externally by default. If your deployment exposes additional ports for communication between components, consider other ways the communication channel can be implemented without exposing more ports.
+- Expose only the ports and services that your deployment requires. See {ref}`ref-network-ports` for the ports exposed externally by default. Before exposing an additional port, consider whether the communication can be routed internally instead.
 
-  Disable services on inactive instances. The ideal scenario is to never expose a service endpoint over the internet. Instead, use a proxy.
+- Avoid exposing service endpoints directly over the internet; use a proxy instead. When an instance needs to communicate with a service, design your deployment to allow the instance to reach out to the control plane rather than exposing an endpoint.
 
-  Exposing service endpoints is typically required when the instance needs to communicate with the service. Design your deployment to allow the instance to reach out and communicate with the control plane.
+- Keep automatic security updates enabled:
 
-- Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. These settings will disable automatic updates at the application or the instance level. See {ref}`ref-ams-configuration` for more information.
+  - `application.auto_update` (default: `true`): when enabled, AMS automatically bootstraps a new application version whenever the base image is updated, ensuring image security patches flow through to your applications.
+  - `instance.security_updates` (default: `true`): when enabled, the latest Ubuntu security patches are applied at instance creation. Disabling it leaves new instances exposed to known vulnerabilities.
 
-- When considering the communication between the instance and the stream agent, if your deployment does not use a load balancer, do not disable TLS pinning.
-Without a load balancer, the instance is directly communicating with the stream agent. So it is important to keep TLS pinning enabled to ensure that the communication is directly and securely established with the correct stream agent.
+  See {ref}`ref-ams-configuration`.
 
-- Monitor resources used by instances regularly. See {ref}`howto-monitor-anbox` for detailed steps.
+- Keep TLS pinning enabled to ensure that instances connect to the intended stream agent and to protect the signaling channel from man-in-the-middle attacks. For charmed deployments, disable TLS pinning only when instances connect to the stream agent through a load balancer. Configure TLS pinning using the [`tls_use_pinning`](https://charmhub.io/anbox-stream-agent/configurations#tls_use_pinning) charm option. For appliance deployments, TLS pinning must remain enabled. No manual configuration is required.
 
-### 3 - AMC
+- Monitor resources used by instances regularly to detect resource exhaustion that could affect service availability. See {ref}`howto-monitor-anbox` for detailed steps.
 
-Secure and back up the following folders on the Anbox Management Client (AMC) because they contain the TLS client certificate and key used to access the AMS API:
+### 3 - Protect AMC credentials
+
+Restrict access to and securely back up the following directories on the machine running the Anbox Management Client (AMC). They contain the TLS client certificate and key used to authenticate against the AMS API. Losing these credentials locks you out of the AMS API; if they are compromised, an attacker gains authenticated access to AMS.
 
 - `$HOME/snap/amc/current/client`
 - `$HOME/snap/anbox-cloud-appliance/current/client`
 
-### 4 - Stream gateway
+### 4 - Secure the stream gateway
 
-- Expose endpoints only when required. When doing so, limit [API exposure](/reference/api-reference/gateway-api.md) by using a reverse proxy or a web application firewall.
-The appliance has a built-in reverse proxy but if you are using the charmed deployment, remember to set up one for the deployment.
+- Expose endpoints only when required. When doing so, limit [API exposure](/reference/api-reference/gateway-api.md) by using a reverse proxy or a web application firewall. The appliance has a built-in reverse proxy. For the charmed deployment, configure a reverse proxy for publicly exposed stream gateway endpoints.
 
-These are the endpoints that you may require to expose for specific purposes:
+  The following endpoints may need to be publicly accessible; no other gateway endpoints should be exposed over the public network:
 
-- `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` - This endpoint is required for streaming
-- `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` - This endpoint is required for seamless ADB support
+  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` — required for streaming
+  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` — required for ADB support
 
-  No other endpoint is required to be exposed over the public network and can be used instead through internal services.
+- [Adjust the API rate limiting](https://charmhub.io/anbox-stream-gateway/configurations#max_http_requests_per_second) for the gateway API endpoint to reduce the risk of resource exhaustion caused by excessive requests.
 
-- You can [adjust how strict the API rate limiting](https://charmhub.io/anbox-stream-gateway/configurations#max_http_requests_per_second) must be configured for the gateway API endpoint.
-- Rotate authentication tokens used for the gateway API on a regular basis.
-- When you share a session with others, do not create ephemeral shares. Instead, create a share with a limited validity and then extend the expiration period, if required.
+- Rotate authentication tokens used for the gateway API on a regular basis rather than waiting for them to expire. Regular rotation limits the period during which a leaked token remains usable. Anbox Cloud does not currently provide a built-in token rotation mechanism. If you use a custom stream client, replace its token by deleting the existing account, creating a new account, and updating the client to use the new token.
 
-### 5- TURN/STUN
+  * For appliance deployments:
 
-Disable TURN support if it is not needed. TURN is only needed to handle clients with complicated firewall or NAT configurations. If your users don't require TURN, disable support for it in the coturn charm configuration by setting both [`enable_udp_relay`](https://charmhub.io/coturn/configurations#enable_udp_relay) and [`enable_tcp_relay`](https://charmhub.io/coturn/configurations#enable_tcp_relay) to `false`.
+   ```
+   sudo anbox-cloud-appliance.gateway account delete <user_name>
+   sudo anbox-cloud-appliance.gateway account create <user_name> --expiration <expiration_time>
+   ```
 
-Keep in mind that irrespective of whether you are using STUN/TURN, using a public, externally hosted serve expands the attack surface. Hence consider using the built-in TURN/STUN server provided with the Anbox Cloud deployment for better security.
+  * For charmed deployments, create a new authentication token using the [create-auth-token action](https://charmhub.io/anbox-stream-gateway/actions#create-auth-token).
 
-Alternatively you can also use an externally hosted STUN server and configure it as part of the [Anbox Stream Agent charm configuration](https://charmhub.io/anbox-stream-agent/configurations#extra_stun_servers). TURN is currently not supported to be externally hosted.
+  For complete token-management instructions, refer to [create a token](https://canonical.com/anbox-cloud/docs/howto/stream/access-stream-gateway/#creating-a-token).
+
+- When sharing a session, do not create shares with no expiry. Create a share with a defined validity period and extend it only if needed. A share with no expiry remains accessible until it is explicitly removed.
+
+### 5 - Minimize TURN/STUN exposure
+
+Disable TURN if it is not required. An unnecessary TURN service exposes an additional network endpoint to the internet. TURN is only needed for clients with restrictive firewall or NAT configurations. If your users do not need it, disable it in the coturn charm configuration by setting both [`enable_udp_relay`](https://charmhub.io/coturn/configurations#enable_udp_relay) and [`enable_tcp_relay`](https://charmhub.io/coturn/configurations#enable_tcp_relay) to `false`.
+
+Use the TURN/STUN server bundled with your Anbox Cloud deployment rather than a publicly hosted external server. An external STUN or TURN service adds an additional publicly reachable endpoint to your attack surface.
+
+If you require an external STUN server, configure it via the [Anbox Stream Agent charm configuration](https://charmhub.io/anbox-stream-agent/configurations#extra_stun_servers). Note that externally hosted TURN is not supported.
 
 ## Related topics
 
 - {ref}`exp-security`
+- {ref}`ref-security-policy`
+- {ref}`howto-set-up-tls`
+- {ref}`ref-network-ports`
+- {ref}`ref-ams-configuration`
