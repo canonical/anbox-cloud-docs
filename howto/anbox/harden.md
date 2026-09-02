@@ -56,10 +56,10 @@ Restrict access to and securely back up the following directories on the machine
 
 - Expose endpoints only when required. When doing so, limit [API exposure](/reference/api-reference/gateway-api.md) by using a reverse proxy or a web application firewall. The appliance has a built-in reverse proxy. For the charmed deployment, configure a reverse proxy for publicly exposed stream gateway endpoints.
 
-  The following endpoints may need to be publicly accessible; no other gateway endpoints should be exposed over the public network:
+  These are the endpoints that you may require to expose for specific purposes:
 
-  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` — required for streaming
-  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` — required for ADB support
+  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/sockets/(slave|adb)[/]?$` — This endpoint is required for streaming
+  - `^/1.0/sessions/[a-zA-Z0-9-_:]+/connect$` — This endpoint is required for seamless ADB support
 
 - [Adjust the API rate limiting](https://charmhub.io/anbox-stream-gateway/configurations#max_http_requests_per_second) for the gateway API endpoint to reduce the risk of resource exhaustion caused by excessive requests.
 
