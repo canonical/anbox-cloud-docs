@@ -41,7 +41,7 @@ The following diagram illustrates the attack surface and potential points of thr
 
   See {ref}`ref-ams-configuration`.
 
-- Keep TLS pinning enabled to ensure that instances connect to the intended stream agent and to protect the signaling channel from man-in-the-middle attacks. For charmed deployments, disable TLS pinning only when instances connect to the stream agent through a load balancer. Configure TLS pinning using the [`tls_use_pinning`](https://charmhub.io/anbox-stream-agent/configurations#tls_use_pinning) charm option. For appliance deployments, TLS pinning must remain enabled. No manual configuration is required.
+- Keep TLS pinning enabled to ensure that instances connect to the intended stream agent and to protect the signaling channel from on-path attacks. For charmed deployments, disable TLS pinning only when instances connect to the stream agent through a load balancer. Configure TLS pinning using the [`tls_use_pinning`](https://charmhub.io/anbox-stream-agent/configurations#tls_use_pinning) charm option. For appliance deployments, TLS pinning must remain enabled. No manual configuration is required.
 
 - Monitor resources used by instances regularly to detect resource exhaustion that could affect service availability. See {ref}`howto-monitor-anbox` for detailed steps.
 
