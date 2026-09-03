@@ -12,7 +12,7 @@ Decommission an Anbox Cloud deployment by removing the deployment and its associ
 The procedure differs depending on whether you are using the Anbox Cloud Appliance or a charmed deployment.
 
 ```{caution}
-The following steps remove deployment resources and may permanently delete data. Make sure that you do not need this data before proceeding.
+The following steps remove deployment resources and may permanently delete data. Make sure that you do not need this data or that you have backups before proceeding.
 ```
 
 ## Anbox Cloud Appliance
