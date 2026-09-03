@@ -117,6 +117,7 @@ For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
 
 How-to guide: 
 - {ref}`howto-harden`
+- {ref}`howto-decommission`
 
 Reference: 
 - {ref}`ref-security-policy`
