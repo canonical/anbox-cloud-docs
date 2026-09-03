@@ -5,27 +5,29 @@ myst:
 ---
 
 (howto-decommission)=
-# Decommission your deployment
+# Decommission your Anbox Cloud deployment securely
 
 Decommission an Anbox Cloud deployment by removing the deployment and its associated resources.
 
 The procedure differs depending on whether you are using the Anbox Cloud Appliance or a charmed deployment.
 
 ```{caution}
-The following steps remove deployment resources and may permanently delete data. Make sure that you have backed up any data that you need to retain before proceeding.
+The following steps remove deployment resources and may permanently delete data. Make sure that you do not need this data before proceeding.
 ```
 
 ## Anbox Cloud Appliance
 
 ### Remove the appliance snap
 
-Remove the appliance snap and its data. This removes all Anbox Cloud Appliance configuration, databases, credentials, secrets, identities, and logs:
+Remove the appliance snap and its data:
 
     sudo snap remove --purge anbox-cloud-appliance
 
+This removes all Anbox Cloud Appliance configuration, databases, credentials, secrets, identities and logs.
+
 ### Clean up LXD resources
 
-The snap removal does not currently remove all LXD resources created by Anbox Cloud. Remove these resources manually.
+Removing the Appliance snap does not currently remove all LXD resources created by Anbox Cloud. Remove these resources manually.
 
 ```{caution}
 The following commands permanently delete resources in the `anbox-cloud` LXD project. Make sure that you do not need this data before proceeding.
@@ -63,13 +65,14 @@ Verify that the Anbox Cloud LXD project has been removed:
 
 The `anbox-cloud` project should no longer be listed.
 
-### Remove external integrations (optional)
+### Remove external integrations
 
 If you configured OIDC authentication with an external identity provider, remove the Anbox Cloud application registration from that provider.
 
-If you integrated the Anbox Cloud Appliance with [COS](https://canonical.com/anbox-cloud/docs/howto/monitor/#integrate-cos-with-anbox-cloud-appliance), remove the `anbox-appliance-metrics` application from the COS Juju model. From a machine with access to the COS Juju controller, run:
+If you integrated the Anbox Cloud Appliance with [COS](https://canonical.com/anbox-cloud/docs/howto/monitor/#integrate-cos-with-anbox-cloud-appliance), remove the `anbox-appliance-metrics` application from the COS model.
 
-    juju remove-application anbox-appliance-metrics -m <cos-model-name>
+    juju switch cos
+    juju remove-application anbox-appliance-metrics
 
 ## Charmed deployment
 
@@ -89,28 +92,27 @@ Destroy the Juju controller, including all models and storage:
 
 Replace `<controller-name>` with the name of the Juju controller used for your Anbox Cloud deployment.
 
-This command removes the Anbox Cloud deployment, its models, and their persistent storage, including all instances, applications, images, identities, credentials, secrets, and logs. All models under the controller are removed, including the Anbox Application Registry, subclusters, and any cross-model relations. If you deployed Anbox Cloud on a public cloud provider, the machines used by the deployment are also removed.
+This command removes the Anbox Cloud deployment, including all models, persistent storage, instances, applications, identities, credentials, secrets and logs managed by the controller. This includes the Anbox Application Registry, subclusters and their cross-model relations. On public cloud providers, the machines used by the deployment are also removed.
 
 For more information about this command and its options, see [Destroy a controller](https://canonical.com/juju/docs/juju-cli/latest/user/howto/manage-controllers/#destroy-a-controller) in the Juju documentation. For an overview of what the `--destroy-storage` flag removes, see [Manage storage](https://canonical.com/juju/docs/juju-cli/latest/user/howto/manage-storage/) in the Juju documentation.
 
-If the `juju destroy-controller` command encounters a deadlock or repeatedly fails, either perform a manual cleanup (for example, `snap remove --purge juju` on the controller machine) or terminate the underlying cloud resources directly through your cloud provider.
+```{note}
+If `juju destroy-controller` encounters a deadlock or repeatedly fails, manual cleanup may be required. For example, on the controller machine,remove the Juju snap:
+
+    sudo snap remove --purge juju
+
+If resources remain on a public cloud after the controller is destroyed,terminate them directly through your cloud provider.
+```
 
 ### Verify the removal
 
-Run:
+Verify that the Juju controller has been removed, run:
 
-    juju status
+    juju controllers
 
-A successful decommissioning returns an error indicating that no controllers are registered:
+The controller used for the Anbox Cloud deployment should no longer be listed.
 
-```
-ERROR No controllers registered.
-
-Please either create a new controller using "juju bootstrap" or connect to
-another controller that you have been given access to using "juju register".
-```
-
-### Remove external integrations (optional)
+### Remove external integrations
 
 If you configured OIDC authentication with an external identity provider, remove the Anbox Cloud application registration from that provider.
 

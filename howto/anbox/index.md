@@ -22,6 +22,7 @@ Harden your deployment by restricting network exposure and setting up TLS for th
 
 - {ref}`howto-harden`
 - {ref}`howto-set-up-tls`
+- {ref}`howto-decommission`
 
 ## Storage and performance
 
@@ -42,4 +43,5 @@ resize-storage
 benchmarks
 tls-for-appliance
 scx
+decommission
 ```
