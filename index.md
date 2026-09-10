@@ -68,7 +68,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Migrate from addon hooks to system units </howto/instance/migrate-from-addon-and-app-hooks>`
 ```
 
-### Streaming Android
+### Streaming and rendering
 
 ```{eval-rst}
 ..  domain::
@@ -87,7 +87,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Supported GPUs </reference/supported-rendering-resources>`
 ```
 
-### Android workflows
+### Use cases
 
 ```{eval-rst}
 ..  domain::
