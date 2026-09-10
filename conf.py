@@ -346,6 +346,7 @@ extensions = [
     "sphinx_related_links",
     "sphinx_rerediraffe",
     "sphinx_roles",
+    "sphinx_structured_toc",
     "sphinx_tabs.tabs",
     "sphinx_terminal",
     "sphinx_ubuntu_images",
