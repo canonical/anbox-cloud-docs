@@ -7,48 +7,61 @@ myst:
 (home)=
 # Anbox Cloud documentation
 
-**Anbox Cloud runs Android in the cloud using lightweight LXD system containers or full virtual machines.**
+**Anbox Cloud runs Android workloads at scale** across public cloud, private cloud, and bare-metal infrastructure.
 
-**Built on Ubuntu, it provides a scalable platform to deploy, manage, and stream Android workloads across public and private infrastructure with consistent performance and low latency.** It can run up to 100 Android instances per server while maintaining security and isolation.
+It supports high-density, fast-starting **containerized Android** in LXD system containers and **virtualized Android** in [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machines for a standard, unmodified Android environment with stronger isolation.
 
-Anbox Cloud is available as a single-machine {ref}`appliance <sec-variants>` for small-scale deployments or as a {ref}`charmed deployment <sec-variants>` using Juju for production environments and multi-cluster scaling.
+Teams can launch **reproducible Android environments on demand** without the overhead of maintaining and scaling physical device fleets.
 
-**You should consider Anbox Cloud for the wide range of Android workloads it supports.** Cloud gaming providers can deliver high-performance streaming at scale, automotive OEMs can test infotainment systems without physical hardware, Android developers can preview UI changes instantly, and enterprises can provide remote Android workspaces as a service.
+Anbox Cloud serves cloud gaming and application streaming providers, Android developers and CI teams, automotive and embedded developers, OEMs, and enterprises building managed Android services.
+[Get in touch with the Anbox Cloud team](https://canonical.com/anbox-cloud#get-in-touch) to talk through your Android workload, deployment, or evaluation.
 
 ## In this documentation
 
-### Lifecycle
+### Getting started
 
-- **Installation:** {ref}`ref-requirements` • {ref}`tut-installing-appliance` • {ref}`howto-deploy-anbox-baremetal`
-- **Authentication and authorization:** {ref}`howto-set-up-idp` • {ref}`howto-configure-oidc` • {ref}`howto-auth` • {ref}`exp-auth` • {ref}`ref-auth`
-- **Configuration:** {ref}`ref-appliance-preseed-config` • {ref}`ref-addon-manifest` • {ref}`ref-application-manifest` • {ref}`ref-ams-configuration` • {ref}`ref-ams-instance-configuration`
-- **Deployment:** {ref}`howto-validate-deployment` • {ref}`howto-use-ceph-storage` • {ref}`howto-customize-installation`
-- **Scaling:** {ref}`exp-nodes` • {ref}`exp-clustering` • {ref}`howto-configure-cluster-nodes` • {ref}`howto-scale-up-cluster` • {ref}`howto-scale-down-cluster`
-- **Upgrading:** {ref}`howto-upgrade-appliance` • {ref}`howto-upgrade-anbox-cloud`
+- **Anbox Cloud:** {ref}`Overview <exp-anbox-cloud>` • {ref}`Deployment variants <sec-variants>` • {ref}`Android execution models <exp-android-execution-models>`
+- **Tutorials:** {ref}`Install the appliance <tut-installing-appliance>` • {ref}`Create a virtual device <tut-create-virtual-device>` • {ref}`Get started with virtualized Android <tut-getting-started-virtualized-android>` • {ref}`Set up a stream client <tut-set-up-stream-client>`
 
-### Artifacts and interfaces
+### Workloads
 
-- **Appliance:** {ref}`sec-variants` • {doc}`CLI </reference/cmd-ref/appliance/anbox-cloud-appliance>` • {ref}`exp-web-dashboard`
-- **Anbox Management Service:** {ref}`exp-ams` • {ref}`howto-access-ams-remote` • {doc}`CLI </reference/cmd-ref/amc/ams.amc>`
-- **Anbox Application Registry:** {ref}`exp-aar` • {ref}`howto-configure-aar` • {ref}`howto-deploy-aar` • {ref}`howto-revoke-aar`
-- **Images:** {ref}`exp-images` • {ref}`howto-configure-image-server` • {ref}`howto-add-image` • {ref}`howto-delete-image` • {ref}`howto-use-specific-release`
-- **Instances:** {ref}`exp-instances` • {ref}`exp-resources-presets` • {ref}`howto-create-instance` • {ref}`howto-configure-instance` • {ref}`howto-start-instance` • {ref}`howto-stop-instance` • {ref}`howto-delete-instance` • {ref}`howto-expose-services` • {ref}`howto-view-instance-logs` • {ref}`howto-backup-restore-application-data` • {ref}`ref-hooks`
-- **Applications:** {ref}`howto-create-application` • {ref}`howto-delete-application` • {ref}`howto-update-application` • {ref}`howto-pass-custom-data-application` • {ref}`howto-extend-application` • {ref}`howto-stream-applications`
-- **Addons:** {ref}`howto-create-addon` • {ref}`howto-enable-addons-globally` • {ref}`howto-migrate-addons` • {ref}`howto-update-addons` • {ref}`exp-addons`
-- **SDKs:** {ref}`ref-sdks` • [Platform SDK API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+- **Images:** {ref}`Overview <exp-images>` • {ref}`Manage images <howto-manage-images>` • {ref}`Provided images <ref-provided-images>` • {ref}`Feature support by image type <ref-feature-support-by-image-type>`
+- **Instances:** {ref}`Overview <exp-instances>` • {ref}`Manage instances <howto-instance>` • {ref}`Resource presets <exp-resources-presets>`
+- **Applications:** {ref}`Overview <exp-applications>` • {ref}`Manage applications <howto-manage-applications>` • {ref}`Application manifest <ref-application-manifest>`
+- **Addons:** {ref}`Overview <exp-addons>` • {ref}`Manage addons <howto-addons>` • {ref}`Migrate from addon hooks to system units <howto-migrate-from-addon-and-app-hooks>`
 
-### Features
+### Streaming and rendering
 
-- **Streaming:** {ref}`exp-application-streaming` • {ref}`tut-set-up-stream-client` • {doc}`Stream Gateway API </reference/api-reference/gateway-api>` • {ref}`ref-webrtc` • {ref}`exp-platforms` • {ref}`howto-share-session`
-- **Rendering:** {ref}`exp-rendering-architecture` • {ref}`exp-rendering-graphics`
-- **Images:** {ref}`exp-custom-images` • {ref}`exp-aaos`
-- **Supported features:** {ref}`ref-android-features` • {ref}`ref-aosp-aaos` • {ref}`ref-rendering-resources` • {ref}`ref-codecs` • {ref}`ref-feature-flags`
+- **Streaming:** {ref}`Overview <exp-application-streaming>` • {ref}`Access the gateway <howto-access-stream-gateway>` • {ref}`Share a session <howto-share-session>` • {ref}`Supported codecs <ref-codecs>`
+- **Rendering:** {ref}`Rendering architecture <exp-rendering-architecture>` • {ref}`Configure rendering <exp-rendering-graphics>` • {ref}`Supported GPUs <ref-rendering-resources>`
 
-### Quality
+### Use cases
 
-- **Security:** {ref}`ref-security-policy` • {ref}`howto-harden` • {ref}`howto-set-up-tls` • {ref}`exp-security`
-- **Performance:** {ref}`howto-run-benchmarks` • {ref}`ref-performance-benchmarks` • {ref}`ref-prometheus-metrics`
-- **Plan a deployment:** {ref}`exp-capacity-planning` • {ref}`exp-production-planning` • {ref}`howto-enable-ha` • {ref}`howto-monitor-anbox`
+- **Testing and automation:** {ref}`Test your application <howto-test-application>` • {ref}`Debug Android test environments <howto-access-android-instance>` • {ref}`Port Android apps <howto-port-android-apps>` • {ref}`Compatibility considerations <ref-compatibility-considerations>`
+- **Android automotive:** {ref}`Work with AAOS <exp-aaos>` • {ref}`Set vehicle properties <howto-set-automotive-properties>` • {ref}`Integrate a custom VHAL <howto-replace-anbox-vhal>`
+- **Custom Android and platform development:** {ref}`Custom images <exp-custom-images>` • {ref}`Package a custom Android build <howto-package-custom-android-build>` • {ref}`Develop a platform plugin <howto-develop-platform-plugin>`
+
+### Interfaces
+
+- **Dashboard:** {ref}`Overview <exp-web-dashboard>` • {ref}`Use the dashboard <howto-use-web-dashboard>`
+- **CLI:** {doc}`AMC </reference/cmd-ref/amc/ams.amc>` • {doc}`Anbox Cloud Appliance </reference/cmd-ref/appliance/anbox-cloud-appliance>` • {doc}`AAR </reference/cmd-ref/aar/aar>`
+- **APIs:** {doc}`AMS HTTP API </reference/api-reference/ams-api>` • {doc}`Stream Gateway API </reference/api-reference/gateway-api>` • {doc}`Anbox HTTPS API </reference/api-reference/anbox-https-api>`
+- **SDKs:** {ref}`SDK overview <ref-sdks>` • [Platform SDK](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+
+### Deployment lifecycle
+
+- **Deploy:** {ref}`Requirements <ref-requirements>` • {ref}`Anbox Cloud Appliance <howto-install-appliance>` • {ref}`Charmed deployment <howto-install-anbox-cloud>`
+- **Configure:** {ref}`AMS configuration <ref-ams-configuration>` • {ref}`Appliance configuration <ref-appliance-configuration>` • {ref}`Charm configuration <ref-charm-configuration>`
+- **Scale:** {ref}`Clustering <exp-clustering>` • {ref}`Nodes <exp-nodes>` • {ref}`Manage a cluster <howto-manage-cluster>` • {ref}`Enable high availability <howto-enable-ha>`
+- **Plan:** {ref}`Capacity planning <exp-capacity-planning>` • {ref}`Production planning <exp-production-planning>`
+- **Monitor and troubleshoot:** {ref}`Monitor Anbox Cloud <howto-monitor-anbox>` • {ref}`View logs <howto-ts-view-logs>` • {ref}`Prometheus metrics <ref-prometheus-metrics>` • {ref}`Troubleshooting guides <howto-ts-anbox-cloud>`
+- **Upgrade:** {ref}`Upgrade the appliance <howto-upgrade-appliance>` • {ref}`Upgrade a charmed deployment <howto-upgrade-anbox-cloud>`
+
+### Security and performance
+
+- **Security:** {ref}`Overview <exp-security>` • {ref}`Harden your deployment <howto-harden>` • {ref}`Set up TLS <howto-set-up-tls>` • {ref}`Security policy <ref-security-policy>`
+- **Access control:** {ref}`Authentication and authorization <exp-auth>` • {ref}`Configure OIDC for the appliance <howto-configure-oidc>` • {ref}`Configure user permissions <howto-auth>`
+- **Performance:** {ref}`Overview <exp-performance>` • {ref}`Performance benchmarks <ref-performance-benchmarks>` • {ref}`Run benchmarks <howto-run-benchmarks>` • {ref}`GPU instance density <howto-increase-instance-density>`
 
 ## How this documentation is organised
 
