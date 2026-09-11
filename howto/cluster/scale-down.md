@@ -11,6 +11,10 @@ Scaling down a LXD cluster involves more checks than scaling up.
 
 ## Prerequisites
 
+```{note}
+If the node you are removing has been assigned the `control-plane` role, reassign that role to a different member first. See {ref}`howto-cluster-manage-control-plane` for details. Removing a control-plane member without reassigning the role first can unexpectedly deactivate control plane mode for the whole cluster if it drops the count below 3.
+```
+
 The following are important requirements when scaling down:
 
 - The node you remove must not have any instances left.
