@@ -18,6 +18,7 @@ Understand the underlying architecture of Anbox Cloud, its variants and how the 
 - {ref}`exp-aar`
 - {ref}`exp-web-dashboard`
 - {ref}`exp-application-streaming`
+- {ref}`exp-multi-display`
 - {ref}`exp-rendering-architecture`
 
 ## Working with Anbox Cloud
@@ -73,6 +74,7 @@ ams
 AAOS <aaos>
 applications
 application-streaming
+multi-display
 auth
 capacity-planning
 clustering
