@@ -66,9 +66,11 @@ Details about messages exchanged between the client and the instance are not cov
 
 ### Establishing the stream
 
-When optimal ICE candidates have been selected and codec capabilities have been agreed upon, the actual tracks are sent. These tracks can be either video, audio or binary. The binary data channel can be useful to send arbitrary data-like controls.
+When optimal ICE candidates have been selected and codec capabilities have been agreed upon, the media tracks are sent. A single-display instance has one video track and one audio track. A multi-display instance has one video track per display and one shared audio track, all carried by the same WebRTC peer connection.
 
-The streams can then be consumed to display the final content.
+The client receives the video tracks in display order, starting with the primary display (display `0`), followed by displays `1`, `2` and `3` when configured. Each video track can be rendered independently. See {ref}`exp-multi-display` for how displays map to tracks and how their lifecycles relate.
+
+The binary data channel can be used to send arbitrary data, such as controls.
 
 ## Stream-enabled instances
 

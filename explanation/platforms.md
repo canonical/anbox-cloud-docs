@@ -51,6 +51,10 @@ Instead of supplying the display settings via `userdata` through the `amc launch
 
 The `webrtc` platform can be configured through user data provided to the instance in JSON format. AMS puts the configuration data at `/var/lib/anbox/userdata`.
 
+### Single-display configuration
+
+Use the following fields to configure a single display through user data:
+
 Field name | Type | Default | Description
 -----------|------|---------|------------
 `display_width` | `int` | `1280` | Width of the display provided to Android.
@@ -61,6 +65,40 @@ Field name | Type | Default | Description
 For example, to configure the platform for a display height of 1080p and 60 FPS, set the user data for an instance like this:
 
     amc launch -p webrtc --userdata '{"display_width":1920, "display_height":1080, "fps": 60}'
+
+(sec-webrtc-platform-multi-display)=
+### Multi-display configuration
+
+For multi-display instances, AMS passes a `displays` array to the runtime in the session data. It is derived from `config.displays` in the instance creation request. Each entry contains `width`, `height`, `density` and `fps`. The first entry defines the primary display (display `0`), and subsequent entries define secondary displays in order.
+
+For example, the display-related portion of the generated session data for two displays has this shape:
+
+```json
+{
+  "displays": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "density": 240,
+      "fps": 60
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "density": 160,
+      "fps": 30
+    }
+  ],
+  "display_width": 1920,
+  "display_height": 1080,
+  "display_density": 240,
+  "fps": 60
+}
+```
+
+AMS populates the flat `display_width`, `display_height`, `display_density` and `fps` fields from the primary display for compatibility with older runtimes. These fields do not describe the secondary displays.
+
+Configure multiple displays through AMS when creating the instance. The single-display user data fields do not configure additional displays. See {ref}`exp-multi-display` for supported images, display limits and the display lifecycle.
 
 ## Related topics
 

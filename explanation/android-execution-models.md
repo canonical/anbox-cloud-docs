@@ -9,7 +9,7 @@ Both execution models provide access to Android through the same streaming infra
 
 With containerized Android, the Android system runs directly inside the LXD container. This is the execution model used by `jammy:*` images (for example, `jammy:android14:amd64`).
 
-Containerized Android supports the full set of Anbox Cloud features:
+Containerized Android supports the following Anbox Cloud features:
 
 - {ref}`Applications <exp-applications>` and the application lifecycle (bootstrap, updates, versions)
 - {ref}`Addons <exp-addons>` for image customisation
@@ -31,11 +31,14 @@ Virtualized Android is a good fit for the following scenarios:
 - **Standard Android environments** where you need Android to behave exactly as it does on a real device, without any Anbox-specific modifications to the Android system.
 - **Custom Android or AAOS builds** where you want to run your own Android system image inside Anbox Cloud. See {ref}`howto-package-custom-android-build` for instructions.
 - **VHAL development** where native gRPC support for the vehicle HAL simplifies automotive development.
+- {ref}`Multi-display streaming <exp-multi-display>` when you need several independent display outputs from one Android instance. This requires a Cuttlefish-based `euphotic` image.
 - **Workloads that benefit from stronger isolation** where the additional virtualisation boundary between Android and the host is desirable.
 
 ## Choosing between the two execution models
 
 Use **virtualized Android** when you need a standard Android environment that behaves exactly like a physical device or Google's reference implementation, when you want to run a custom Android or AAOS build, or when you need native VHAL support for automotive use cases.
+
+For {ref}`multi-display streaming <exp-multi-display>`, choose virtualized Android with a Cuttlefish-based `euphotic` image. Containerized Android does not support multi-display streaming.
 
 Use **containerized Android** when you are building on top of Anbox Cloud's application and addon model for managed APK deployment, or when you need platform plugins for custom rendering and input pipelines.
 

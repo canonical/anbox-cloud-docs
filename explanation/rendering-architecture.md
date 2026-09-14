@@ -41,6 +41,12 @@ Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs.
 
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use [ANGLE](https://chromium.googlesource.com/angle/angle) on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA.
 
+## Multiple displays
+
+For multi-display streaming, each display has a dedicated frame renderer and thread with an independent video encoding pipeline. This allows displays to use different frame rates without sharing a single rendering pipeline. Each pipeline produces its own WebRTC video track.
+
+The initial multi-display implementation uses Cuttlefish with software rendering and encoding, rather than the GPU paths described above. See {ref}`exp-multi-display` for the end-to-end display pipeline and resource considerations.
+
 ## Related topics
 
 - {ref}`ref-rendering-resources`
