@@ -20,7 +20,7 @@ This is the execution model that Anbox Cloud has used since its first release. T
 
 ## Virtualized Android
 
-With virtualized Android, the Android system runs inside a [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machine within the LXD instance. This is the execution model used by `resolute:*-cf:*` images (for example, `resolute:android16-cf:amd64`). The `-cf` suffix in the image name indicates that the image uses the Cuttlefish virtual device.
+With virtualized Android, the Android system runs inside a [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machine within the LXD instance. This is the execution model used by `resolute:*-cf:*` images (for example, `resolute:android17-cf:amd64`). The `-cf` suffix in the image name indicates that the image uses the Cuttlefish virtual device.
 
 Cuttlefish is Google's reference virtual Android device. Running Android through Cuttlefish means you get a standard, unmodified Android environment with no Anbox-specific changes to the Android system itself — the Android system image comes directly from Google's build infrastructure. This is the right choice when you need Android to behave exactly as it does on a physical device or in Google's own test environments.
 
