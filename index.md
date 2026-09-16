@@ -37,7 +37,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Set up a stream client </tutorial/stream-client>`
 ```
 
-### Workloads
+### Manage workloads
 
 ```{eval-rst}
 ..  domain::
@@ -68,7 +68,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Migrate from addon hooks to system units </howto/instance/migrate-from-addon-and-app-hooks>`
 ```
 
-### Streaming and rendering
+### Stream Android
 
 ```{eval-rst}
 ..  domain::
@@ -80,7 +80,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Share a session </howto/instance/share-session>`
         :doc:`Supported codecs </reference/supported-codecs>`
 
-    ..  slice:: Rendering
+    ..  slice:: Rendering and GPUs
 
         :doc:`Rendering architecture </explanation/rendering-architecture>`
         :doc:`Configure rendering </explanation/rendering-graphics>`
@@ -105,7 +105,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Set vehicle properties </howto/android/set-automotive-properties>`
         :doc:`Integrate a custom VHAL </howto/android/custom-vhal>`
 
-    ..  slice:: Custom Android and platform development
+    ..  slice:: Custom Android development
 
         :doc:`Custom images </explanation/custom-images>`
         :doc:`Package a custom Android build </howto/images/package-custom-android-build>`
