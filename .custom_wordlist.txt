@@ -11,6 +11,7 @@ ACLs
 adb
 addon
 addons
+agentic
 allocator
 Altra
 amc
