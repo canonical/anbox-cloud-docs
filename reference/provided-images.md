@@ -17,6 +17,10 @@ The following table lists supported images available on the official image serve
 
 | Name                        | Based on | Android Version | Ubuntu Version | Execution model | Available since |
 |-----------------------------|----------|-----------------|----------------|-----------------|---------------|
+| `resolute:android17-cf:amd64` | AOSP  | 17              | 26.04          | Virtualized | 1.31.0 |
+| `resolute:android17-cf:arm64` | AOSP  | 17              | 26.04          | Virtualized | 1.31.0 |
+| `resolute:aaos17-cf:amd64`    | AAOS  | 17              | 26.04          | Virtualized | 1.31.0 |
+| `resolute:aaos17-cf:arm64`    | AAOS  | 17              | 26.04          | Virtualized | 1.31.0 |
 | `resolute:android16-cf:amd64` | AOSP  | 16              | 26.04          | Virtualized | 1.30.0 |
 | `resolute:android16-cf:arm64` | AOSP  | 16              | 26.04          | Virtualized | 1.30.0 |
 | `resolute:aaos16-cf:amd64`    | AAOS  | 16              | 26.04          | Virtualized | 1.30.0 |

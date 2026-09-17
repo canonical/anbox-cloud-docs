@@ -25,7 +25,7 @@ To proceed with the tutorial, we need:
 
 Launch an instance from the image:
 
-    amc launch resolute:android16-cf:amd64 --name test0
+    amc launch resolute:android17-cf:amd64 --name test0
 
 Note the instance ID in the output. Wait for the instance to reach the `running` state:
 

@@ -8,7 +8,7 @@ Anbox Cloud provides two types of images, each using a different {ref}`Android e
 | Pattern | Execution model | Example |
 |---------|----------------|---------|
 | `jammy:*` | Containerized Android | `jammy:android14:amd64` |
-| `resolute:*-cf:*` | Virtualized Android | `resolute:android16-cf:amd64` |
+| `resolute:*-cf:*` | Virtualized Android | `resolute:android17-cf:amd64` |
 
 The `-cf` suffix identifies a Cuttlefish-based image using virtualized Android.
 

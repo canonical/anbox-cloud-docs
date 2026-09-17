@@ -42,7 +42,7 @@ See the following table for a comparison of features for the different variants:
 |---------|-----------------------|-------------|
 | {ref}`exp-application-streaming` | ✓ | ✓ |
 | {ref}`exp-web-dashboard` | ✓ | ✓ |
-| {ref}`Android versions <ref-provided-images>` | 14, 15, 16 | 14, 15, 16 |
+| {ref}`Android versions <ref-provided-images>` | 14, 15, 16, 17 | 14, 15, 16, 17 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
 | [Community support](https://discourse.ubuntu.com/c/project/anbox-user/148) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
