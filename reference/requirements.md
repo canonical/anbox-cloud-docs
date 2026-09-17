@@ -40,11 +40,11 @@ The appliance supports the following Ubuntu versions:
 
 ### LXD
 
-The appliance supports LXD >= 5.0.
+The appliance supports LXD >= 5.21.
 
-By default, LXD is installed from the `5.21/stable` track.
+By default, LXD is installed from the `6/stable` track.
 
-If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.21/stable lxd` to update it. If you are already on LXD version 5.21, [do not downgrade it as it may render LXD unusable](https://canonical.com/lxd/docs/latest/installing/#upgrade-lxd).
+If LXD is already installed but the version is earlier than 6, run `snap refresh --channel=6/stable lxd` to update it. If you are already on LXD version 6, [do not downgrade it as it may render LXD unusable](https://canonical.com/lxd/docs/latest/installing/#upgrade-lxd).
 
 ### Hardware requirements
 
@@ -82,7 +82,7 @@ In the 1.27.0 release of Anbox Cloud, we plan to switch to the latest version of
 
 ### LXD
 
-Charmed Anbox Cloud requires LXD version >= 5.0.
+Charmed Anbox Cloud requires LXD version >= 5.21.
 
 (sec-juju-version-requirements)=
 ### Juju
