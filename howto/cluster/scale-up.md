@@ -23,6 +23,10 @@ Bypassing any of these requirements could lead to a broken LXD cluster.
 
 ## Scaling up
 
+```{note}
+If you plan to autoscale a LXD cluster, first assign the `control-plane` role to a fixed set of members that should never be scaled down. See {ref}`howto-cluster-manage-control-plane` for details.
+```
+
 Adding additional LXD units or removing existing ones is not an instant operation. Adding a new node, for example, can take 5-10 minutes and must be planned in advance. The deployment of a single node will include the following steps:
 
 1. Allocation of a new machine from the underlying cloud provider

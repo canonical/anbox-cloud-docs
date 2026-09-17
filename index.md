@@ -23,7 +23,7 @@ Anbox Cloud is available as a single-machine {ref}`appliance <sec-variants>` for
 - **Authentication and authorization:** {ref}`howto-set-up-idp` • {ref}`howto-configure-oidc` • {ref}`howto-auth` • {ref}`exp-auth` • {ref}`ref-auth`
 - **Configuration:** {ref}`ref-appliance-preseed-config` • {ref}`ref-addon-manifest` • {ref}`ref-application-manifest` • {ref}`ref-ams-configuration` • {ref}`ref-ams-instance-configuration`
 - **Deployment:** {ref}`howto-validate-deployment` • {ref}`howto-use-ceph-storage` • {ref}`howto-customize-installation`
-- **Scaling:** {ref}`exp-nodes` • {ref}`exp-clustering` • {ref}`howto-configure-cluster-nodes` • {ref}`howto-scale-up-cluster` • {ref}`howto-scale-down-cluster`
+- **Scaling:** {ref}`exp-nodes` • {ref}`exp-clustering` • {ref}`howto-configure-cluster-nodes` • {ref}`howto-scale-up-cluster` • {ref}`howto-scale-down-cluster` • {ref}`howto-manage-control-plane-members`
 - **Upgrading:** {ref}`howto-upgrade-appliance` • {ref}`howto-upgrade-anbox-cloud`
 
 ### Artifacts and interfaces

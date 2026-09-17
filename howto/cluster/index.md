@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    "description": "How to manage an Anbox Cloud LXD cluster, including adding nodes, configuring capacity, and scaling up or down."
+    "description": "How to manage an Anbox Cloud LXD cluster, including adding nodes, configuring capacity, managing control plane members and scaling up or down."
 ---
 
 (howto-manage-cluster)=
@@ -16,6 +16,7 @@ These guides describe how to distribute the load of your Anbox Cloud installatio
 - {ref}`howto-configure-cluster-nodes`
 - {ref}`howto-scale-up-cluster`
 - {ref}`howto-scale-down-cluster`
+- {ref}`howto-manage-control-plane-members`
 
 ## See also
 
