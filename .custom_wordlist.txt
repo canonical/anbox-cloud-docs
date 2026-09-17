@@ -123,6 +123,8 @@ FEC
 ffmpeg
 FidelityFX
 FormatException
+framebuffer
+framebuffers
 frontend
 FSR
 fullscreen
@@ -142,6 +144,7 @@ HIDL
 HMAC
 Honkai
 hotfix
+hotplugging
 http
 https
 HVAC
@@ -282,9 +285,11 @@ RTC
 RTP
 RTT
 runtime
+runtimes
 RUSTSEC
 scalability
 scalable
+scanout
 schedulable
 scrcpy
 SDK
