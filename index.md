@@ -7,48 +7,205 @@ myst:
 (home)=
 # Anbox Cloud documentation
 
-**Anbox Cloud runs Android in the cloud using lightweight LXD system containers or full virtual machines.**
+**Anbox Cloud runs Android workloads at scale** across public cloud, private cloud, and bare-metal infrastructure.
 
-**Built on Ubuntu, it provides a scalable platform to deploy, manage, and stream Android workloads across public and private infrastructure with consistent performance and low latency.** It can run up to 100 Android instances per server while maintaining security and isolation.
+It supports high-density, fast-starting **containerized Android** in LXD system containers and **virtualized Android** in [Cuttlefish](https://source.android.com/docs/devices/cuttlefish) virtual machines for a standard, unmodified Android environment with stronger isolation.
 
-Anbox Cloud is available as a single-machine {ref}`appliance <sec-variants>` for small-scale deployments or as a {ref}`charmed deployment <sec-variants>` using Juju for production environments and multi-cluster scaling.
+Teams can launch **reproducible Android environments on demand** without the overhead of maintaining and scaling physical device fleets.
 
-**You should consider Anbox Cloud for the wide range of Android workloads it supports.** Cloud gaming providers can deliver high-performance streaming at scale, automotive OEMs can test infotainment systems without physical hardware, Android developers can preview UI changes instantly, and enterprises can provide remote Android workspaces as a service.
+Anbox Cloud serves cloud gaming and application streaming providers, Android developers and CI teams, automotive and embedded developers, OEMs, and enterprises building managed Android services.
+[Get in touch with the Anbox Cloud team](https://canonical.com/anbox-cloud#get-in-touch) to talk through your Android workload, deployment, or evaluation.
 
 ## In this documentation
 
-### Lifecycle
+### Getting started
 
-- **Installation:** {ref}`ref-requirements` • {ref}`tut-installing-appliance` • {ref}`howto-deploy-anbox-baremetal`
-- **Authentication and authorization:** {ref}`howto-set-up-idp` • {ref}`howto-configure-oidc` • {ref}`howto-auth` • {ref}`exp-auth` • {ref}`ref-auth`
-- **Configuration:** {ref}`ref-appliance-preseed-config` • {ref}`ref-addon-manifest` • {ref}`ref-application-manifest` • {ref}`ref-ams-configuration` • {ref}`ref-ams-instance-configuration`
-- **Deployment:** {ref}`howto-validate-deployment` • {ref}`howto-use-ceph-storage` • {ref}`howto-customize-installation`
-- **Scaling:** {ref}`exp-nodes` • {ref}`exp-clustering` • {ref}`howto-configure-cluster-nodes` • {ref}`howto-scale-up-cluster` • {ref}`howto-scale-down-cluster`
-- **Upgrading:** {ref}`howto-upgrade-appliance` • {ref}`howto-upgrade-anbox-cloud`
+```{eval-rst}
+..  domain::
 
-### Artifacts and interfaces
+    ..  slice:: Anbox Cloud
 
-- **Appliance:** {ref}`sec-variants` • {doc}`CLI </reference/cmd-ref/appliance/anbox-cloud-appliance>` • {ref}`exp-web-dashboard`
-- **Anbox Management Service:** {ref}`exp-ams` • {ref}`howto-access-ams-remote` • {doc}`CLI </reference/cmd-ref/amc/ams.amc>`
-- **Anbox Application Registry:** {ref}`exp-aar` • {ref}`howto-configure-aar` • {ref}`howto-deploy-aar` • {ref}`howto-revoke-aar`
-- **Images:** {ref}`exp-images` • {ref}`howto-configure-image-server` • {ref}`howto-add-image` • {ref}`howto-delete-image` • {ref}`howto-use-specific-release`
-- **Instances:** {ref}`exp-instances` • {ref}`exp-resources-presets` • {ref}`howto-create-instance` • {ref}`howto-configure-instance` • {ref}`howto-start-instance` • {ref}`howto-stop-instance` • {ref}`howto-delete-instance` • {ref}`howto-expose-services` • {ref}`howto-view-instance-logs` • {ref}`howto-backup-restore-application-data` • {ref}`ref-hooks`
-- **Applications:** {ref}`howto-create-application` • {ref}`howto-delete-application` • {ref}`howto-update-application` • {ref}`howto-pass-custom-data-application` • {ref}`howto-extend-application` • {ref}`howto-stream-applications`
-- **Addons:** {ref}`howto-create-addon` • {ref}`howto-enable-addons-globally` • {ref}`howto-migrate-addons` • {ref}`howto-update-addons` • {ref}`exp-addons`
-- **SDKs:** {ref}`ref-sdks` • [Platform SDK API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
+        :doc:`Overview </explanation/anbox-cloud>` slice
+        :doc:`Deployment variants </explanation/anbox-cloud>`
+        :doc:`Android execution models </explanation/android-execution-models>`
 
-### Features
+    ..  slice:: Tutorials
 
-- **Streaming:** {ref}`exp-application-streaming` • {ref}`tut-set-up-stream-client` • {doc}`Stream Gateway API </reference/api-reference/gateway-api>` • {ref}`ref-webrtc` • {ref}`exp-platforms` • {ref}`howto-share-session`
-- **Rendering:** {ref}`exp-rendering-architecture` • {ref}`exp-rendering-graphics`
-- **Images:** {ref}`exp-custom-images` • {ref}`exp-aaos`
-- **Supported features:** {ref}`ref-android-features` • {ref}`ref-aosp-aaos` • {ref}`ref-rendering-resources` • {ref}`ref-codecs` • {ref}`ref-feature-flags`
+        :doc:`Install the appliance </tutorial/installing-appliance>`
+        :doc:`Create a virtual device </tutorial/create-test-virtual-device>`
+        :doc:`Get started with virtualized Android </tutorial/getting-started-with-virtualized-android>`
+        :doc:`Set up a stream client </tutorial/stream-client>`
+```
 
-### Quality
+### Manage workloads
 
-- **Security:** {ref}`ref-security-policy` • {ref}`howto-harden` • {ref}`howto-set-up-tls` • {ref}`exp-security`
-- **Performance:** {ref}`howto-run-benchmarks` • {ref}`ref-performance-benchmarks` • {ref}`ref-prometheus-metrics`
-- **Plan a deployment:** {ref}`exp-capacity-planning` • {ref}`exp-production-planning` • {ref}`howto-enable-ha` • {ref}`howto-monitor-anbox`
+```{eval-rst}
+..  domain::
+
+    ..  slice:: Images
+
+        :doc:`Overview </explanation/images>` slice
+        :doc:`Manage images </howto/images/index>`
+        :doc:`Provided images </reference/provided-images>`
+        :doc:`Feature support by image type </reference/feature-support-by-image-type>`
+
+    ..  slice:: Instances
+
+        :doc:`Overview </explanation/instances>` slice
+        :doc:`Manage instances </howto/instance/index>`
+        :doc:`Resource presets </explanation/resources>`
+
+    ..  slice:: Applications
+
+        :doc:`Overview </explanation/applications>` slice
+        :doc:`Manage applications </howto/application/index>`
+        :doc:`Application manifest </reference/application-manifest>`
+
+    ..  slice:: Addons
+
+        :doc:`Overview </explanation/addons>` slice
+        :doc:`Manage addons </howto/addons/index>`
+        :doc:`Migrate from addon hooks to system units </howto/instance/migrate-from-addon-and-app-hooks>`
+```
+
+### Stream Android
+
+```{eval-rst}
+..  domain::
+
+    ..  slice:: Streaming
+
+        :doc:`Overview </explanation/application-streaming>` slice
+        :doc:`Access the gateway </howto/stream/access-stream-gateway>`
+        :doc:`Share a session </howto/instance/share-session>`
+        :doc:`Supported codecs </reference/supported-codecs>`
+
+    ..  slice:: Rendering and GPUs
+
+        :doc:`Rendering architecture </explanation/rendering-architecture>`
+        :doc:`Configure rendering </explanation/rendering-graphics>`
+        :doc:`Supported GPUs </reference/supported-rendering-resources>`
+```
+
+### Use cases
+
+```{eval-rst}
+..  domain::
+
+    ..  slice:: Testing and automation
+
+        :doc:`Test your application </howto/application/test-application>`
+        :doc:`Debug Android test environments </howto/android/access-android-instance>`
+        :doc:`Port Android apps </howto/port/index>`
+        :doc:`Compatibility considerations </reference/compatibility-considerations>`
+
+    ..  slice:: Android automotive
+
+        :doc:`Work with AAOS </explanation/aaos>`
+        :doc:`Set vehicle properties </howto/android/set-automotive-properties>`
+        :doc:`Integrate a custom VHAL </howto/android/custom-vhal>`
+
+    ..  slice:: Custom Android development
+
+        :doc:`Custom images </explanation/custom-images>`
+        :doc:`Package a custom Android build </howto/images/package-custom-android-build>`
+        :doc:`Develop a platform plugin </howto/anbox-runtime/develop-platform-plugin>`
+```
+
+### Interfaces
+
+```{eval-rst}
+..  domain::
+
+    ..  slice:: Dashboard
+
+        :doc:`Overview </explanation/web-dashboard>`
+        :doc:`Use the dashboard </howto/dashboard/index>`
+
+    ..  slice:: CLI
+
+        :doc:`AMC </reference/cmd-ref/amc/ams.amc>`
+        :doc:`Anbox Cloud Appliance </reference/cmd-ref/appliance/anbox-cloud-appliance>` slice
+        :doc:`AAR </reference/cmd-ref/aar/aar>`
+
+    ..  slice:: APIs
+
+        :doc:`AMS HTTP API </reference/api-reference/ams-api>`
+        :doc:`Stream Gateway API </reference/api-reference/gateway-api>`
+        :doc:`Anbox HTTPS API </reference/api-reference/anbox-https-api>`
+
+    ..  slice:: SDKs
+
+        :doc:`SDK overview </reference/sdks>`
+```
+
+### Deployment lifecycle
+
+```{eval-rst}
+..  domain::
+
+    ..  slice:: Deploy
+
+        :doc:`Requirements </reference/requirements>`
+        :doc:`Anbox Cloud Appliance </howto/install-appliance/index>` slice
+        :doc:`Charmed deployment </howto/install/index>`
+
+    ..  slice:: Configure
+
+        :doc:`AMS configuration </reference/ams-configuration>`
+        :doc:`Appliance configuration </reference/appliance-configuration>`
+        :doc:`Charm configuration </reference/charm-configuration>`
+
+    ..  slice:: Scale
+
+        :doc:`Clustering </explanation/clustering>`
+        :doc:`Nodes </explanation/nodes>`
+        :doc:`Manage a cluster </howto/cluster/index>`
+        :doc:`Enable high availability </howto/install/enable-high-availability>`
+
+    ..  slice:: Plan
+
+        :doc:`Capacity planning </explanation/capacity-planning>`
+        :doc:`Production planning </explanation/production-planning>`
+
+    ..  slice:: Monitor and troubleshoot
+
+        :doc:`Monitor Anbox Cloud </howto/monitor/index>`
+        :doc:`View logs </howto/troubleshoot/view-logs>`
+        :doc:`Prometheus metrics </reference/prometheus>`
+        :doc:`Troubleshooting guides </howto/troubleshoot/index>`
+
+    ..  slice:: Upgrade
+
+        :doc:`Upgrade the appliance </howto/upgrade/upgrade-appliance>`
+        :doc:`Upgrade a charmed deployment </howto/upgrade/upgrade-anbox>`
+```
+
+### Security and performance
+
+```{eval-rst}
+..  domain::
+
+    ..  slice:: Security
+
+        :doc:`Overview </explanation/security/index>` slice
+        :doc:`Harden your deployment </howto/anbox/harden>`
+        :doc:`Set up TLS </howto/anbox/tls-for-appliance>`
+        :doc:`Security policy </reference/security-policy>`
+
+    ..  slice:: Access control
+
+        :doc:`Authentication and authorization </explanation/auth>`
+        :doc:`Configure OIDC for the appliance </howto/setup-custom-idp/configure-oidc>`
+        :doc:`Configure user permissions </howto/anbox/auth>`
+
+    ..  slice:: Performance
+
+        :doc:`Overview </explanation/performance>` slice
+        :doc:`Performance benchmarks </reference/perf-benchmarks>`
+        :doc:`Run benchmarks </howto/anbox/benchmarks>`
+        :doc:`GPU instance density </howto/gpu/increase-instance-density>`
+```
 
 ## How this documentation is organised
 
