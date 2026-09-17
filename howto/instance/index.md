@@ -14,6 +14,7 @@ Instances are the running workloads in Anbox Cloud. These guides walk you throug
 Create instances from applications or images, configure them, list or copy existing ones, and remove those you no longer need.
 
 - {ref}`howto-create-instance`
+- {ref}`howto-create-multi-display-instance`
 - {ref}`howto-configure-instance`
 - {ref}`howto-configure-geographic-location`
 - {ref}`howto-list-instances`
@@ -52,6 +53,7 @@ Back up application data across restarts and expose instance services to the ext
 :hidden:
 
 create-instance
+create-multi-display-instance
 list-instances
 configure-instance
 access-instance

@@ -358,7 +358,7 @@ On the stream page, inside the right sidebar, we can see options for:
 - Viewing the network, audio and video statistics for the stream
 - Setting the location for a maps application
 - A *Developer tools* toggle that offers access to the Ubuntu and Android instances. For example, if you are performing an resource intensive operation in your Android stream, you can monitor its impact using this terminal.
-- And many more. For a full list, see {ref}`ref-stream-page-actions`.
+- And many more. For a full list, see {ref}`ref-stream-controls-bar`.
 
 Let's try a simple operation of sharing our stream: Click *Set up sharing*, give your share a title and an expiry date.
 

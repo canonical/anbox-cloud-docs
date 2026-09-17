@@ -325,7 +325,7 @@ html_search_scorer = "_static/js/search_scorer.js"
 # NOTE: By default, the following MyST extensions are enabled:
 #       substitution, deflist, linkify
 
-myst_enable_extensions = set({"colon_fence"})
+myst_enable_extensions = set({"colon_fence", "attrs_inline"})
 
 
 # Custom Sphinx extensions; see
