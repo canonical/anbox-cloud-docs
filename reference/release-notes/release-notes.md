@@ -56,7 +56,7 @@ If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/s
 
 Along with bug fixes and general improvements, Anbox Cloud 1.30.x includes:
 
-- Stream controls overhaul with a redesigned and expanded stream page actions sidebar in the dashboard
+- Stream controls overhaul with a redesigned and expanded stream controls bar in the dashboard
 - Instance copy support in the dashboard for near-instantaneous cloning of existing instances
 - Anbox Cloud Terraform plan as the supported method for charm-based deployments
 - Virtualized Android as a new execution model using Cuttlefish virtual machines, with new `resolute:*-cf:*` images for Android 16 on `amd64` and `arm64`
