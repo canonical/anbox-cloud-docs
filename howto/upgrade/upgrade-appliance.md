@@ -7,6 +7,12 @@ myst:
 (howto-upgrade-appliance)=
 # Upgrade appliance
 
+```{caution}
+You need to make sure to upgrade the Anbox Cloud Appliance to 1.31.0 or later before upgrading LXD to 6.10 and later.
+
+Not doing so might result in NVIDIA GPU instances being unable to start until the Anbox Cloud Appliance is upgraded.
+```
+
 The upgrade process for the Anbox Cloud Appliance is as simple as updating the snap package to the appropriate channel. Before upgrading the appliance, consider the changes that the new version brings as downgrades are not supported.
 
 If you are on the `latest` track, upgrade to the newest snap version by running:
