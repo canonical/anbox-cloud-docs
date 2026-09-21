@@ -38,7 +38,7 @@ Client SDKs, network ports, addon manifests, hooks, and stream page action defin
 - {ref}`ref-network-ports`
 - {ref}`ref-addon-manifest`
 - {ref}`ref-hooks`
-- {ref}`ref-stream-page-actions`
+- {ref}`ref-stream-controls-bar`
 
 ## Authorization
 
@@ -131,7 +131,7 @@ release-notes/release-notes.md
 requirements
 security-notices
 security-policy
-stream-page-actions
+stream-controls-bar
 android-features
 compatibility-considerations
 Supported features <anbox-features>

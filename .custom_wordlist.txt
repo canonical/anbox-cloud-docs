@@ -117,6 +117,7 @@ EOL
 ERD
 ETag
 etcd
+euphotic
 executables
 favicon
 FEC
