@@ -16,7 +16,7 @@ Consider the following simple yet impactful measures to ensure a secure Anbox Cl
 - Always run the latest supported version of Anbox Cloud and keep your deployment up to date. See {ref}`ref-release-notes`.
 - Make sure your deployment uses machines running a supported Ubuntu version. See {ref}`ref-requirements`.
 - Consider the host-level security measures, guidelines and benchmarks offered by Ubuntu Pro such as CIS, USG and Livepatch. For more information, see the Ubuntu Pro Client documentation for enabling [CIS/USG](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_cis/) and [Livepatch](https://documentation.ubuntu.com/pro-client/en/latest/howtoguides/enable_livepatch/).
-- If you discover a security vulnerability in Anbox Cloud, report it following the [Anbox Cloud security policy](https://github.com/canonical/anbox-cloud-docs/blob/main/SECURITY.md). For Ubuntu-level security issues, contact the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
+- If you discover a security vulnerability in Anbox Cloud, report it following the [Anbox Cloud security policy](https://github.com/canonical/anbox-cloud-docs/blob/main/SECURITY.md). For Ubuntu-level security issues, contact the [Ubuntu security team](https://wiki.ubuntu.com/Security/FAQ#Contact).
 
 ## Reduce attack surface
 
