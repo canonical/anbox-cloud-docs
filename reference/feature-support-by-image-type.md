@@ -10,8 +10,6 @@ Anbox Cloud provides two types of images, each using a different {ref}`Android e
 | `jammy:*` | Containerized Android | `jammy:android14:amd64` |
 | `resolute:*-cf:*` | Virtualized Android | `resolute:android17-cf:amd64` |
 
-The `-cf` suffix identifies a Cuttlefish-based image using virtualized Android.
-
 See {ref}`ref-provided-images` for the full list of available images.
 
 ## Images with containerized Android
