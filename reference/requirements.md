@@ -87,10 +87,8 @@ Charmed Anbox Cloud requires LXD version >= 5.21.
 (sec-juju-version-requirements)=
 ### Juju
 
-The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://canonical.com/juju) to manage the different components and their dependencies.
-The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://canonical.com/juju) to manage the different components and their dependencies.
-
-Anbox Cloud charms support user secrets and if you would like to use that feature, use Juju 3.3 or later.
+The charmed Anbox Cloud requires a minimum of [Juju 3.3 or later](https://canonical.com/juju) to manage the different components and their dependencies.
+The charmed Anbox Cloud requires a minimum of [Juju 3.3 or later](https://canonical.com/juju) to manage the different components and their dependencies.
 
 We recommend using Juju 3.6, so that you will be using the latest LTS version of Juju and can manage user secrets. Juju 3.6 has the full range of features that Anbox Cloud charms support. See [Juju documentation](https://canonical.com/juju/docs/juju-cli/latest/howto/manage-secrets/) for more information about managing secrets.
 
