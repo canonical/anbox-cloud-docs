@@ -20,7 +20,7 @@ Anbox Cloud implements support for various Android features. The following table
 | NFC                |      |            |
 | [Bluetooth](https://source.android.com/docs/core/connect/bluetooth) | | |
 | WiFi               |  ✓  | Only simulated WiFi is provided to the Android instance. |
-| [Multi-Display](https://source.android.com/docs/core/display/multi_display) | | |
+| [Multi-Display](https://source.android.com/docs/core/display/multi_display) |  ✓  | Only on virtualized Android images (See {ref}`ref-provided-images`). |
 | [Data use](https://source.android.com/docs/core/data)| | |
 | Telephony / mobile connectivity | ✓ | |
 | Hardware-accelerated video decoding (H.264) | ✓ | |

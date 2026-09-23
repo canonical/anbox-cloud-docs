@@ -39,6 +39,7 @@ The Android system runs inside a Cuttlefish virtual machine within the LXD insta
 - Shell access via `adb shell`
 - VHAL support with native gRPC
 - QEMU-based isolation between Android and the host
+- Multi-display support (see {ref}`exp-multi-display`)
 
 **Minimum resource requirements:**
 - 4 CPU cores per instance.
