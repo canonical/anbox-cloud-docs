@@ -36,7 +36,7 @@ The following table lists supported images available on the official image serve
 
 ## Support for Anbox Cloud images
 
-Currently, Anbox Cloud provides images based on Ubuntu 22.04 LTS (Jammy Jellyfish) and Ubuntu 26.04 LTS (Resolute Raccoon). Deprecations, if any, are announced at least two releases in advance.
+Currently, Anbox Cloud provides containerized Android images (`jammy:*`) based on Ubuntu 22.04 LTS (Jammy Jellyfish) and virtualized Android images (`resolute:*-cf:*`) based on Ubuntu 26.04 LTS (Resolute Raccoon). Deprecations, if any, are announced at least two releases in advance.
 
 Images with containerized Android (`jammy:*`) and images with virtualized Android (`resolute:*-cf:*`) differ in their supported features. See {ref}`ref-feature-support-by-image-type` for a detailed comparison and {ref}`exp-android-execution-models` for an explanation of the two execution models.
 
