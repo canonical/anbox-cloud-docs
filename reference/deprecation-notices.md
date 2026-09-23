@@ -9,6 +9,11 @@ myst:
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
+## Multiple subclusters from the dashboard
+*Deprecated in 1.30.2* ; *Unsupported in 1.31.0*
+
+Support for multiple subclusters from the dashboard is deprecated as of 1.30.2 and will be removed in 1.31.0.
+
 ## VM images
 *Deprecated in 1.28.0* ; *Unsupported in 1.30.0*
 

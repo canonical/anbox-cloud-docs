@@ -107,9 +107,9 @@ For more comprehensive monitoring, you can use the [Canonical Observability Stac
 
 ### Install COS
 
-The following steps describe a sample setup of COS. Adjust it for your environment as needed. For further information, see the [official COS documentation](https://charmhub.io/topics/canonical-observability-stack/tutorials/install-microk8s) and the [documentation for Canonical K8s](https://documentation.ubuntu.com/canonical-kubernetes/latest/).
+The following steps describe a sample setup of COS. Adjust it for your environment as needed. For further information, see the [official COS documentation](https://charmhub.io/topics/canonical-observability-stack/tutorials/install-microk8s) and the [documentation for Canonical Kubernetes](https://documentation.ubuntu.com/canonical-kubernetes/latest/).
 
-1. Deploy [Canonical K8s](https://ubuntu.com/kubernetes) into a separate model on an existing Juju controller:
+1. Deploy [Canonical Kubernetes](https://ubuntu.com/kubernetes) into a separate model on an existing Juju controller:
 
    ```bash
    juju add-model k8s
