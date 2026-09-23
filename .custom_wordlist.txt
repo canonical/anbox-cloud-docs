@@ -132,6 +132,7 @@ GiB
 gl
 GMS
 Golang
+goroutine
 GPG
 GPUs
 Grafana
