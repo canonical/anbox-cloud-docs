@@ -10,8 +10,6 @@ Anbox Cloud provides two types of images, each using a different {ref}`Android e
 | `jammy:*` | Containerized Android | `jammy:android14:amd64` |
 | `resolute:*-cf:*` | Virtualized Android | `resolute:android17-cf:amd64` |
 
-The `-cf` suffix identifies a Cuttlefish-based image using virtualized Android.
-
 See {ref}`ref-provided-images` for the full list of available images.
 
 ## Images with containerized Android
@@ -41,6 +39,7 @@ The Android system runs inside a Cuttlefish virtual machine within the LXD insta
 - Shell access via `adb shell`
 - VHAL support with native gRPC
 - QEMU-based isolation between Android and the host
+- Multi-display support (see {ref}`exp-multi-display`)
 
 **Minimum resource requirements:**
 - 4 CPU cores per instance.
