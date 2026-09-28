@@ -22,7 +22,7 @@ watchdog:
 ...
 ```
 
-When you finish debugging your application, make sure to enable the watchdog again. The watchdog must be running for Anbox Cloud to collect tombstones or [ANR](https://developer.android.com/topic/performance/vitals/anr) if a crash happens during the application runtime, and to terminate the failing instance.
+When you finish debugging your application, make sure to enable the watchdog again. The watchdog must be running for Anbox Cloud to collect tombstones or [ANR](https://developer.android.com/topic/performance/issues/anr) if a crash happens during the application runtime, and to terminate the failing instance.
 
 ## Add exceptions for allowed apps
 
