@@ -8,7 +8,7 @@ myst:
 # Create an instance with multiple displays
 This guide shows you how to create an instance with multiple displays. A multi-display instance can have up to four displays, each with its own resolution, frame rate and density.
 
-Multi-display is supported only with {term}`Virtualized Android`. For an overview of multi-display instances, see <>.
+Multi-display is supported only with {term}`Virtualized Android`. For an overview of multi-display instances, see {ref}`exp-multi-display`.
 
 ::::{tab-set}
 :::{tab-item} CLI
@@ -52,11 +52,11 @@ For example, when *Capture keyboard input* is enabled, keyboard input is sent to
 
 ## Adjust the view
 
-Use *Zoom in* () and *Zoom out* (), or use the mouse wheel, to adjust the view. You can pan across the stream page to move around the display area.
+Use *Zoom in* ( ![Zoom in button](/images/icons/zoom-in-button.png){width=25px} ) and *Zoom out* ( ![Zoom out button](/images/icons/zoom-out-button.png){width=25px} ), or use the mouse wheel, to adjust the view. You can pan across the stream page to move around the display area.
 
-To fit all displays within the view, click *Fit all* ().
+To fit all displays within the view, click *Fit all* ( ![Fit all displays button](/images/icons/fit-all-displays-button.png){width=60px} ).
 
-To fit a single display within the view, hover over it and click *Fit* (). The other displays are temporarily hidden. To return to the view showing all displays, click *Show all* ().
+To fit a single display within the view, hover over it and click *Fit* ( ![Fit display button](/images/icons/fit-display-button.png){width=45px} ). The other displays are temporarily hidden. To return to the view showing all displays, click *Show all* ( ![Show all displays button](/images/icons/show-all-displays-button.png){width=65px} ).
 
 ```{note}
 *Rotate left*, *Rotate right*, and *Resize* are not supported for multi-display instances.
@@ -66,3 +66,6 @@ To fit a single display within the view, hover over it and click *Fit* (). The o
 ::::
 
 ## Related topics
+
+- {ref}`exp-multi-display`
+- {ref}`ref-stream-controls-bar`
