@@ -36,7 +36,19 @@ Depending on the resources that your application requires, if the {ref}`default 
 
 When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarizes the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see {ref}`sec-over-committing` for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
-    No suitable node to satisfy instance requirement available
+    no suitable node to satisfy instance requirements available
+
+This error also appears when no node in the cluster supports the requested instance type, for example launching a Cuttlefish instance when nested virtualization is unavailable across all cluster nodes (see {ref}`exp-android-execution-models`).
+
+To help you diagnose why no node could satisfy the request, AMS appends the specific reason to the error message, such as unsupported instance types:
+
+    no suitable node to satisfy instance requirements available (instance type: vm not supported)
+
+Otherwise, the message lists why each evaluated node failed to meet the resource requirements, for example:
+
+    no suitable node to satisfy instance requirements available (node0: cpu: available 2 < required 4)
+
+The reported resources can include CPU, memory, disk space, GPU(including GPU type and slots), and VPU slots, depending on what the instance requested and which of them the available nodes cannot satisfy. You could use this information together with the guidance in this page to determine whether you need to free up resources, add more nodes, or adjust your instance's resource preset.
 
 If an instance stops with an error, its disk space is preserved for inspection. Other resources are released. Therefore, if you have many instances with `error` status, you might run out of disk space.
 
