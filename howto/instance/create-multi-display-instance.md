@@ -8,12 +8,29 @@ myst:
 # Create an instance with multiple displays
 This guide shows you how to create an instance with multiple displays. A multi-display instance can have up to four displays, each with its own resolution, frame rate and density.
 
-Multi-display is supported only with {term}`Virtualized Android`. For an overview of multi-display instances, see <>.
+Multi-display is supported only with {term}`Virtualized Android`. For an overview of multi-display support in Anbox Cloud, see {ref}`exp-multi-display`.
 
 ::::{tab-set}
 :::{tab-item} CLI
 :sync: cli
 
+To create an instance with multiple displays, use `amc launch` with one `--display` flag per display. You can pass `--display` up to four times to configure up to four displays.
+
+Each `--display` flag takes a comma-separated list of `key=value` pairs, in the following format:
+
+    --display=width=<W>,height=<H>[,dpi=<D>,fps=<FPS>]
+
+- `width` and `height` are required and must each be greater than `0`.
+- `dpi` is optional. If not set, it defaults to `320`.
+- `fps` is optional and must be between `0` and `60`. If not set, it defaults to `60`, or to `30` if the instance has no GPU slots assigned.
+
+`--display` cannot be combined with the legacy `--display-size`, `--display-density`, and `--fps` flags, which only configure a single display.
+
+For example, the following command creates an instance with four displays, each with its own resolution, density and frame rate:
+
+```bash
+amc launch resolute:aaos16-cf:amd64 --enable-streaming --name multi-display-instance --display=width=1280,height=720,fps=60 --display=width=480,height=640,dpi=120 --display=width=800,height=600,fps=30 --display=width=1280,height=720,fps=30
+```
 
 :::
 
