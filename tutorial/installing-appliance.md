@@ -7,7 +7,7 @@ myst:
 (tut-installing-appliance)=
 # Install the appliance
 
-In this tutorial, we will install the [Anbox Cloud Appliance snap](https://snapcraft.io/anbox-cloud-appliance), initialize the appliance within a [Multipass](https://canonical.com/multipass) virtual machine. By the end of this tutorial, we should be able to interact with the appliance using the Anbox Cloud dashboard.
+In this tutorial, we will install the [Anbox Cloud Appliance snap](https://snapcraft.io/anbox-cloud-appliance) and initialize the appliance within a [Multipass](https://canonical.com/multipass) virtual machine. By the end of this tutorial, we should be able to interact with the appliance using the Anbox Cloud dashboard.
 
 Before beginning the tutorial, it is important to understand that:
 
@@ -32,7 +32,7 @@ Before beginning the tutorial, it is important to understand that:
 To proceed with the tutorial, we need:
 
 - An Ubuntu SSO account. If you don't have one yet, [create one now](https://login.ubuntu.com).
-- Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://canonical.com/anbox-cloud#get-in-touch). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
+- An Ubuntu Pro subscription token. Ubuntu Pro is **required** to install and run Anbox Cloud, and it is **free for personal use on up to 5 machines**. Log in to [Ubuntu Pro](https://ubuntu.com/pro) to get your token at no cost.
 
 ```{note}
 The *Ubuntu Pro (Infra-only)* token does not work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
@@ -58,6 +58,10 @@ Make sure to allocate sufficient disk space, memory and CPUs as shown in the exa
 
 ## Attach the machine to Ubuntu Pro
 
+```{important}
+You must attach the machine to Ubuntu Pro before enabling the `anbox-cloud` service. Without an attached Ubuntu Pro subscription, you cannot enable the service or access the Android images required to use Anbox Cloud.
+```
+
 Run the following command by replacing `$token` with your Ubuntu Pro token:
 
     sudo pro attach $token
@@ -78,7 +82,7 @@ Then, it installs the `anbox-cloud-appliance` snap from the `latest/stable` trac
 (sec-install-additional-packages)=
 ## Install additional packages
 
-After enabling the `anbox-cloud` service, we still need some additional packages, kernel modules and optionally GPU driver packages
+After enabling the `anbox-cloud` service, we still need some additional packages, kernel modules and optionally GPU driver packages.
 
 To do all this, we offer a script that helps prepare machines. Let's first review the script:
 
@@ -110,7 +114,7 @@ For the purpose of this tutorial, let's leave the default answers for all questi
 
 The reason we switch from the default answer *No* to *Yes* for this question is that the snap strict confinement policy requires the application manifest and other necessary files such as the APK to be located in the home directory of the user executing the commands. If this answer is not set, you will still be able to use the dashboard path of the {ref}`tut-create-virtual-device` tutorial but you will not be able to use the command line path.
 
-For everything else, accept the defaults for everything else until the bootstrap process starts.
+Accept the defaults for everything else until the bootstrap process starts.
 
 (sec-register-dashboard)=
 ## Register with the dashboard
