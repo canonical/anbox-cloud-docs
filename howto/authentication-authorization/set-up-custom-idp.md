@@ -131,9 +131,3 @@ Once you have the issuer URL, client ID, audience API:
 For using the appliance with the dashboard (web client), your next step is to {ref}`initialize the appliance with a preseed <howto-configure-oidc>`.
 
 For using the appliance with the command line client or using the charmed deployment, your next step is to {ref}`connect to the remote AMS using the IdP <sec-oidc-idp>`.
-
-```{toctree}
-:hidden:
-
-Configure OIDC (Appliance) <configure-oidc>
-```
