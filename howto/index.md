@@ -16,7 +16,6 @@ Deploy Anbox Cloud on a single machine with the Appliance or at scale with a cha
 - {ref}`howto-install-anbox-cloud`
 - {ref}`howto-install-appliance`
 - {ref}`howto-upgrade`
-- {ref}`howto-set-up-idp`
 
 ## Using Anbox Cloud
 
@@ -36,6 +35,7 @@ Build applications from images, manage instances, extend behavior with addons, s
 
 Distribute the load of Anbox Cloud over several machines in a cluster, share applications via AAR and work with Anbox runtime.
 
+- {ref}`Manage authentication and authorization <howto-manage-auth>`
 - {ref}`howto-manage-anbox`
 - {ref}`howto-manage-cluster`
 - {ref}`howto-aar`
@@ -63,9 +63,9 @@ For background information and concepts, see {ref}`explanation`.
 
 Install the appliance <install-appliance/index>
 Install Anbox Cloud <install/index>
-Set up a custom IdP <setup-custom-idp/index>
 Manage AAR <aar/index>
 Manage Addons <addons/index>
+Manage authentication and authorization <authentication-authorization/index>
 Manage Anbox Cloud <anbox/index>
 Manage Images <images/index>
 Manage Applications <application/index>
