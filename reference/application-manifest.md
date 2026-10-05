@@ -122,7 +122,7 @@ watchdog:
 
 If one of the following scenarios occurs, the watchdog will be triggered. The instance will be terminated and ends up with `error` status.
 
-- The application crashes or an [ANR](https://developer.android.com/topic/performance/vitals/anr) is triggered.
+- The application crashes or an [ANR](https://developer.android.com/topic/performance/issues/anr) is triggered.
 - The application is not in the foreground when an application which is not listed in `allowed-packages` was brought to the foreground and gained the focus.
 - The boot package or activity is invalid.
 - One of the `allowed-packages` is invalid.
