@@ -39,9 +39,7 @@ The generator will then guide you through the configuration:
 Do you want to test AMS? [default=yes]
 What is the address of AMS? https://1.2.3.4:8444
 Generating TLS certificate and key for AMS ...
-NOTE: You have to register the certificate generated manually with
- AMS. See https://documentation.ubuntu.com/anbox-cloud/howto/anbox/control-ams-remotely/ for
- details
+NOTE: You have to register the certificate generated manually with AMS.
 Do you want to test the Anbox Stream Gateway? [default=yes]
 What is the location of the Anbox Stream Gateway? https://2.3.4.5
 Which API token should the tests use to talk with the gateway? xxxx
