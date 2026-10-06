@@ -9,9 +9,7 @@ myst:
 
 To be able to configure user permissions in Anbox Cloud, you need to first configure OpenFGA.
 
-::::{tab-set}
-:::{tab-item} CLI
-:sync: cli
+For an overview of authentication and authorization, see {ref}`exp-auth`.
 
 ## Configure OpenFGA
 
@@ -37,6 +35,10 @@ When the API URL and store ID are set, AMS starts synchronizing the data with Op
 ```{important}
 For fine-grained permissions to work in Anbox Cloud Dashboard, OpenFGA must be used in conjunction with a configured OIDC provider. Follow the instructions in {ref}`howto-set-up-idp` to configure Auth0, Keycloak, or Ory Hydra.
 ```
+
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
 
 (sec-create-identity)=
 ## Create identities
@@ -144,8 +146,6 @@ To revoke the global admin permission, run:
 :::{tab-item} Dashboard
 :sync: dashboard
 
-Anbox Cloud Dashboard allows you to manage identities and their access through groups and permissions.
-
 ## Identities
 
 The **Permissions > Identities** page displays the identities that the currently logged-in user is authorized to view.
@@ -196,3 +196,10 @@ Permission changes to groups the logged-in user belongs to take effect immediate
 
 :::
 ::::
+
+To view the entire list of entitlements, see {ref}`ref-auth`.
+
+## Related topics 
+
+- {ref}`Explanation: Authentication and authorization <exp-auth>`
+- {ref}`Reference: Authentication and authorization <ref-auth>`

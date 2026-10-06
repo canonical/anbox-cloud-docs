@@ -196,8 +196,8 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
     ..  slice:: Access control
 
         :doc:`Authentication and authorization </explanation/auth>`
-        :doc:`Configure OIDC for the appliance </howto/setup-custom-idp/configure-oidc>`
-        :doc:`Configure user permissions </howto/anbox/auth>`
+        :doc:`Configure OIDC for the appliance </howto/authentication-authorization/configure-oidc>`
+        :doc:`Configure user permissions </howto/authentication-authorization/configure-user-permissions>`
 
     ..  slice:: Performance
 
