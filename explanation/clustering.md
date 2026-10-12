@@ -35,6 +35,7 @@ The following guidelines are both recommended and must-have aspects of an auto s
 1. Scaling down **MUST** strictly happen in a sequential order with no other scaling operations (for example, scale up) running in parallel.
 1. Before removing a LXD node from the cluster you **MUST** delete all instances on it.
 
+(sec-clustering-control-plane-members)=
 ### Control plane members
 
 LXD supports designating a fixed set of cluster members as [control-plane](https://canonical.com/lxd/docs/latest/explanation/clusters/#clustering-control-plane) members.
