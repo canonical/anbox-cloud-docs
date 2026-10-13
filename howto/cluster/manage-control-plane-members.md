@@ -7,7 +7,7 @@ myst:
 (howto-manage-control-plane-members)=
 # Manage control plane members
 
-This guide shows how to assign, remove and check the `control-plane` role on LXD cluster members via Juju actions. See {ref}`sec-lxd-auto-scaling` for an explanation of control plane members and how they work.
+This guide shows how to assign, remove and check the `control-plane` role on LXD cluster members via Juju actions. See {ref}`control plane members <sec-clustering-control-plane-members>` for an explanation of control plane members and how they work.
 
 ## Assign or remove the control-plane role
 
