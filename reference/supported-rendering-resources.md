@@ -38,7 +38,7 @@ Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel a
 
 ## Supported GPU drivers
 
-For NVIDIA GPUs, Anbox Cloud uses the [Enterprise Ready Driver (ERD) from NVIDIA](https://help.ubuntu.com/community/NvidiaDriversInstallation) for Linux as available in Ubuntu.
+For NVIDIA GPUs, Anbox Cloud uses the [Enterprise Ready Driver (ERD) from NVIDIA](https://ubuntu.com/server/docs/how-to/graphics/install-nvidia-drivers/) for Linux as available in Ubuntu.
 
 For AMD GPUs, Anbox Cloud uses the [Mesa radv](https://docs.mesa3d.org/drivers/radv.html) driver and for Intel GPUs, the [Mesa anv](https://docs.mesa3d.org/drivers/anv.html) driver.
 
