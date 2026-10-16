@@ -18,6 +18,8 @@ The entire deployment process will take 10-15 minutes, depending on the selected
 
 ## Prerequisites
 
+The Anbox Cloud Appliance requires a publicly reachable instance, so the instance must have a public IP address and be placed in an internet-facing subnet.
+
 Deploying the Anbox Cloud Appliance requires some familiarity with AWS. In particular, you should be familiar with:
 
 - Amazon Elastic Compute Cloud (Amazon EC2), for basic EC2 configuration
