@@ -71,7 +71,13 @@ Anbox Platform SDK
     See {ref}`sec-platform-sdk` for more information.
 
 anbox-connect
-    A tool that helps you to remotely connect to an Android container that is running inside the Anbox instance. through a secure ADB connection. It must be installed on your host machine.
+    A tool that helps you to remotely connect to an Android container that is running inside the Anbox instance through a secure ADB connection. It must be installed on your host machine.
+
+    See {ref}`howto-access-android-instance` for more information.
+
+    ```{note}
+    `anbox-connect` is {ref}`deprecated <sec-anbox-connect-deprecation>` as of Anbox Cloud 1.31.0 and is scheduled for removal in 1.33.0. Use `amc connect`, available since Anbox Cloud 1.28.0, instead.
+    ```
 
 anbox-shell
     A command-line tool for interacting with the Android container within the Anbox instance. It acts as a streamlined Android Debug Bridge (ADB) interface, allowing access to the Android environment with `root` privileges. It must be used within the context of an Anbox instance.

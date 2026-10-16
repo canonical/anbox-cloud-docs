@@ -9,6 +9,12 @@ myst:
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
+(sec-anbox-connect-deprecation)=
+## `anbox-connect`
+*Deprecated in 1.31.0* ; *Unsupported in 1.33.0*
+
+Support for `anbox-connect` is deprecated as of 1.31.0 and will be removed in 1.33.0. Use `amc connect` instead. 
+
 ## Multiple subclusters from the dashboard
 *Deprecated in 1.30.2* ; *Unsupported in 1.31.0*
 
