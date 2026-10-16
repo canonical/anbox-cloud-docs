@@ -246,8 +246,12 @@ rediraffe_dir_only = True
 # This repo has no pyproject.toml, so the description must be set explicitly;
 # otherwise the extension has no project description to fall back on.
 llms_txt_description = (
-    "This is the documentation for Anbox Cloud, which runs Android in the "
-    "cloud using lightweight LXD system containers or full virtual machines."
+    "This is the documentation for Anbox Cloud, which runs Android workloads "
+    "at scale across public cloud, private cloud, and bare-metal "
+    "infrastructure. It supports containerized Android in LXD system "
+    "containers and virtualized Android in Cuttlefish virtual machines, and "
+    "is available as a single-machine appliance or as a Juju-based charmed "
+    "deployment."
 )
 
 # Base URL prepended to links in the generated Markdown so they are absolute.
