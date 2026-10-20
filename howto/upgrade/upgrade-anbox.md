@@ -120,12 +120,6 @@ Since the NATS charm has been overhauled to use the modern charm framework (Ops 
 
 ### Upgrade AMS
 
-```{caution}
-You need to make sure to upgrade AMS to 1.31.0 or later before upgrading LXD to 6.10 and later.
-
-Not doing so might result in NVIDIA GPU instances being unable to start until AMS is upgraded.
-```
-
 Upgrade the AMS service independently of the other service components to ensure minimal down time:
 
     juju refresh --channel=1.28/stable ams
