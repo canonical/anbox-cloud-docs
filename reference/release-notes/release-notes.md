@@ -15,19 +15,18 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| October 21, 2026 | [Anbox Cloud 1.30.3](1.30.3.md) |
 | September 23, 2026 | [Anbox Cloud 1.30.2](1.30.2.md) |
 | July 22, 2026 | [Anbox Cloud 1.30.1](1.30.1.md) |
-| June 17, 2026 | [Anbox Cloud 1.30.0](1.30.0.md) |
 
 ## Upcoming release roadmap
 
 The current supported minor release is **1.30.0**. The next one will be **1.31.0**, expected in November 2026.
 
-Target dates for upcoming releases are not final and may vary depending on factors such as the availability of Android security patches.
+Target dates for upcoming releases are not final and may vary depending on factors such as the availability of Android security patches. For details on release scheduling, see {ref}`release-and-support-policy`.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| October 21, 2026 | Anbox Cloud 1.30.3 | Android security updates<br/>Bug fixes |
 | November 25, 2026 | Anbox Cloud 1.31.0 | New features<br/>Android security updates<br/>Bug fixes |
 | December 16, 2026 | Anbox Cloud 1.31.1 | Android security updates<br/>Bug fixes |
 
@@ -42,7 +41,7 @@ Minor releases
 Patch releases
 : A patch release includes Android and Chrome security updates alongside Anbox Cloud-specific bug fixes. No new features are introduced.
 
-  At the start of each month, the team announces in the [Anbox Cloud Discourse category](https://discourse.ubuntu.com/c/anbox-cloud/49) whether a patch release is happening that month.
+  Patch releases are subject to a monthly review. At the start of each month, the team announces in the [Anbox Cloud Discourse category](https://discourse.ubuntu.com/c/anbox-cloud/49) whether a patch release is planned for that month.
 
 Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release is published.
 
@@ -67,6 +66,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.30.x includes:
 
 |  Release date  |  Release notes  |
 |----|----|
+| June 17, 2026 | [Anbox Cloud 1.30.0](1.30.0.md) |
 | April 15, 2026 | [Anbox Cloud 1.29.2](1.29.2.md) |
 | March 18, 2026 | [Anbox Cloud 1.29.1](1.29.1.md) |
 | February 18, 2026 | [Anbox Cloud 1.29.0](1.29.0.md) |

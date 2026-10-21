@@ -11,6 +11,55 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.30.3
+
+### Charms
+
+#### Ubuntu 22.04 LTS
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.30/stable | 1827 | 1828 | 1.30.3-a2271b1 |
+| ams-lxd | 1.30/stable | 1652 | 1653 | 1.30.3-a2271b1 |
+| coturn | 1.30/stable | 1587 | 1588 | 1.30.3-a2271b1 |
+| anbox-stream-gateway | 1.30/stable | 1710 | 1711 | 1.30.3-a2271b1 |
+| anbox-stream-agent | 1.30/stable | 1703 | 1704 | 1.30.3-a2271b1 |
+| anbox-cloud-dashboard | 1.30/stable | 1642 | 1643 | 1.30.3-a2271b1 |
+| aar | 1.30/stable | 1834 | 1835 | 1.30.3-a2271b1 |
+| lxd-integrator | 1.30/stable | 1054 | 1055 | 1.30.3-a2271b1 |
+| anbox-cloud-cos-configuration | 1.30/stable | 935 | 936 | 1.30.3-a2271b1 |
+
+#### Ubuntu 24.04 LTS
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.30/stable | 1829 | 1830 | 1.30.3-a2271b1 |
+| ams-lxd | 1.30/stable | 1654 | 1655 | 1.30.3-a2271b1 |
+| coturn | 1.30/stable | 1589 | 1590 | 1.30.3-a2271b1 |
+| anbox-stream-gateway | 1.30/stable | 1712 | 1713 | 1.30.3-a2271b1 |
+| anbox-stream-agent | 1.30/stable | 1705 | 1706 | 1.30.3-a2271b1 |
+| anbox-cloud-dashboard | 1.30/stable | 1644 | 1645 | 1.30.3-a2271b1 |
+| aar | 1.30/stable | 1836 | 1837 | 1.30.3-a2271b1 |
+| lxd-integrator | 1.30/stable | 1056 | 1057 | 1.30.3-a2271b1 |
+| anbox-cloud-cos-configuration | 1.30/stable | 937 | 938 | 1.30.3-a2271b1 |
+
+### Anbox images
+
+| Name | Version | Execution model |
+|----------------------------|---------------------------------|------------------|
+| `jammy:android14:amd64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:android14:arm64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:android15:amd64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:android15:arm64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:aaos14:amd64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:aaos14:arm64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:aaos15:amd64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `jammy:aaos15:arm64` | `1.30.3-20261015045748.git36904ed` | Containerized |
+| `resolute:android16-cf:amd64` | `1.30.3-20261015045748.git36904ed` | Virtualized |
+| `resolute:android16-cf:arm64` | `1.30.3-20261015045748.git36904ed` | Virtualized |
+| `resolute:aaos16-cf:amd64` | `1.30.3-20261015045748.git36904ed` | Virtualized |
+| `resolute:aaos16-cf:arm64` | `1.30.3-20261015045748.git36904ed` | Virtualized |
+
 ## 1.30.2
 
 ### Charms
