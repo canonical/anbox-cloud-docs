@@ -43,7 +43,7 @@ Patch releases
 
   Patch releases are subject to a monthly review. At the start of each month, the team announces in the [Anbox Cloud Discourse category](https://discourse.ubuntu.com/c/anbox-cloud/49) whether a patch release is planned for that month.
 
-Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release is published.
+Anbox Cloud supports the most recent release. Older releases are only supported for a short time after a new minor release is published. See the [Anbox Cloud release cycle](https://ubuntu.com/about/release-cycle?product=anbox&release=anbox+cloud+snap) for more information.
 
 Feature deprecations are generally announced two releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
 
