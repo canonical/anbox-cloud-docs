@@ -111,4 +111,4 @@ When writing alt text for images, consider the content, its context and purpose.
 
 ## Redirects
 
-Set up redirects in [`conf.py`](/conf.py) whenever a file path changes as it affects the URL of the page.
+Set up redirects in [`redirects.txt`](/redirects.txt) whenever a file path changes as it affects the URL of the page.
