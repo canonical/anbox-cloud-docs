@@ -29,7 +29,7 @@ As part of the WebRTC connection process, Anbox communicates with the HTTP API e
 
 For streaming of audio, video and other data, the Anbox runtime uses WebRTC as provided by the upstream [WebRTC](https://webrtc.org) project from Google. Unlike the upstream default, the WebRTC build for the Anbox runtime utilizes [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/) instead of Google's [BoringSSL](https://boringssl.googlesource.com/boringssl) for any cryptographic use.
 
-The security model and cryptographic use of WebRTC is described in [RFC8827](https://www.rfc-editor.org/rfc/rfc8827) and use of WebRTC in the Anbox runtime does not deviate from this.
+The security model and cryptographic use of WebRTC is described in [RFC8827](https://www.rfc-editor.org/info/rfc8827/) and use of WebRTC in the Anbox runtime does not deviate from this.
 
 ## Packages used for containerized Android
 
