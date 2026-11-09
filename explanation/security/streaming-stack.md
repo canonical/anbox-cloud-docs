@@ -34,7 +34,7 @@ To exchange messages with the Anbox Stream Agent through the [NATS](https://nats
 
 ### Token based authentication
 
-Users can generate API tokens to authenticate with the HTTP API provided by the Anbox Stream Gateway. For the API tokens, a scope-limited [Macaroon](http://theory.stanford.edu/~ataly/Papers/macaroons.pdf) is used. The token is signed with a [HMAC](https://www.okta.com/identity-101/hmac/) using SHA-256 (HS256) and a 64 byte secret key. The [`macaroon.New`](https://pkg.go.dev/gopkg.in/macaroon.v2@v2.1.0#New) method is used internally to generate the [JWT](https://jwt.io/) token.
+Users can generate API tokens to authenticate with the HTTP API provided by the Anbox Stream Gateway. For the API tokens, a scope-limited [Macaroon](https://theory.stanford.edu/~ataly/Papers/macaroons.pdf) is used. The token is signed with a [HMAC](https://www.okta.com/identity-101/hmac/) using SHA-256 (HS256) and a 64 byte secret key. The [`macaroon.New`](https://pkg.go.dev/gopkg.in/macaroon.v2@v2.1.0#New) method is used internally to generate the [JWT](https://jwt.io/) token.
 
 ### Packages used
 

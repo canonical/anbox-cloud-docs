@@ -11,7 +11,7 @@ Anbox Cloud has support for custom identity providers for authentication through
 
 Anbox Cloud uses the [authorization code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) to obtain an identity token. No access token is requested in this flow because authorization is handled within the Anbox Cloud services.
 
-Anbox Cloud also supports authenticating command line clients using [device code flow](https://www.rfc-editor.org/rfc/rfc8628). However, this is an experimental feature and under active development.
+Anbox Cloud also supports authenticating command line clients using [device code flow](https://www.rfc-editor.org/info/rfc8628/). However, this is an experimental feature and under active development.
 
 ```{important}
 Authenticating command line clients using OIDC is an experimental feature in 1.27.0. Hence, the interface and the API endpoints may change in future releases.
