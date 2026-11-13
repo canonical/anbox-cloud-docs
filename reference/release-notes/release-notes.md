@@ -15,20 +15,21 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| November 25, 2026 | [Anbox Cloud 1.31.0](1.31.0.md) |
 | October 21, 2026 | [Anbox Cloud 1.30.3](1.30.3.md) |
 | September 23, 2026 | [Anbox Cloud 1.30.2](1.30.2.md) |
-| July 22, 2026 | [Anbox Cloud 1.30.1](1.30.1.md) |
 
 ## Upcoming release roadmap
 
-The current supported minor release is **1.30.0**. The next one will be **1.31.0**, expected in November 2026.
+The current supported minor release is **1.31.0**. The next one will be **1.32.0**, expected in March 2027.
 
 Target dates for upcoming releases are not final and may vary depending on factors such as the availability of Android security patches. For details on release scheduling, see {ref}`release-and-support-policy`.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| November 25, 2026 | Anbox Cloud 1.31.0 | New features<br/>Android security updates<br/>Bug fixes |
 | December 16, 2026 | Anbox Cloud 1.31.1 | Android security updates<br/>Bug fixes |
+| January 27, 2027 | Anbox Cloud 1.31.2 | Android security updates<br/>Bug fixes |
+| February 24, 2027 | Anbox Cloud 1.31.3 | Android security updates<br/>Bug fixes |
 
 (release-and-support-policy)=
 ## Release and support policy
@@ -45,27 +46,29 @@ Patch releases
 
 Anbox Cloud supports the most recent release. Older releases are only supported for a short time after a new minor release is published. See the [Anbox Cloud release cycle](https://ubuntu.com/about/release-cycle?product=anbox&release=anbox+cloud+snap) for more information.
 
-Feature deprecations are generally announced two releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
+Feature deprecations are generally announced two minor releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
 
 To ensure you receive the latest security updates and bug fixes, you should upgrade to a new release of Anbox Cloud shortly after it is released.
 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
-### What's new in 1.30.x?
+### What's new in 1.31.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.30.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.31.x includes:
 
-- Stream controls overhaul with a redesigned and expanded stream controls bar in the dashboard
-- Instance copy support in the dashboard for near-instantaneous cloning of existing instances
-- Anbox Cloud Terraform plan as the supported method for charm-based deployments
-- Virtualized Android as a new execution model using Cuttlefish virtual machines, with new `resolute:*-cf:*` images for Android 16 on `amd64` and `arm64`
-- Experimental userspace scheduler support via the Linux kernel's `sched_ext` framework
-- NVIDIA driver series 580 as a hard requirement for NVIDIA GPU deployments
+- Projects to group instances with project-level access control and network isolation
+- Multi-display support for virtualized Android, with up to four displays per instance streamed in a single session
+- Android 17 images (AOSP and AAOS) for virtualized Android on `amd64` and `arm64`
+- Host GPU rendering for virtualized Android instances with NVIDIA GPUs
+- Control plane members for charmed deployments to protect LXD database quorum during scale-down
+- Accessibility improvements in the dashboard
+- LXD 6 as the default for new deployments and initial Juju 4.0 support for Anbox Cloud charms
 
 <details><summary>Click to view earlier releases' notes</summary>
 
 |  Release date  |  Release notes  |
 |----|----|
+| July 22, 2026 | [Anbox Cloud 1.30.1](1.30.1.md) |
 | June 17, 2026 | [Anbox Cloud 1.30.0](1.30.0.md) |
 | April 15, 2026 | [Anbox Cloud 1.29.2](1.29.2.md) |
 | March 18, 2026 | [Anbox Cloud 1.29.1](1.29.1.md) |
