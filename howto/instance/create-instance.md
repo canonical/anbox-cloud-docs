@@ -6,7 +6,15 @@ myst:
 
 (howto-create-instance)=
 # Create an instance
-To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
+To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
+
+Every instance belongs to a {ref}`project <exp-projects>`. To create a project first, see {ref}`howto-create-project`.
+
+```{note}
+An instance cannot be moved to another project after it is created.
+```
+
+To create an instance with multiple displays, see {ref}`howto-create-multi-display-instance`.
 
 **Check out this video that explains the differences between an instance created from an application vs an instance created from an image:**
 
@@ -24,7 +32,7 @@ To launch an application or an image, Anbox Cloud creates an instance for it. To
 :::{tab-item} CLI
 :sync: cli
 
-Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
+Depending on what you need, you can use either of the following commands to create an instance for a registered application or an image.
 
 - `amc launch` creates and starts the instance.
 - `amc init` only creates the instance.
@@ -32,6 +40,8 @@ Depending on what you need, you can use the either of the following commands to 
 By default, the instance will run headless.
 
 The following examples demonstrate different ways of launching instances using `amc launch`, but you can use `amc init` in the same way.
+
+To place the instance in a specific project, add `--project <project_name>` to the command. Without it, the instance is created in the `default` project.
 
 (sec-launch-application-instances)=
 ## Launch application instances
@@ -177,6 +187,8 @@ When you create the instance from an application, the attributes you define for 
 ```{note}
 There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
 ```
+
+To create the instance in a specific project, choose that project when creating it. Without a project, the instance is created in the `default` project.
 
 Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
 

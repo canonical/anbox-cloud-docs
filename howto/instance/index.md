@@ -45,6 +45,12 @@ Back up application data across restarts and expose instance services to the ext
 - {ref}`howto-backup-restore-application-data`
 - {ref}`howto-expose-services`
 
+## Migrate from hooks
+
+Migrate from addon or application hooks to a systemd service built into an Anbox image.
+
+- {ref}`howto-migrate-from-addon-and-app-hooks`
+
 ## See also
 
 - Explanation: {ref}`exp-instances`

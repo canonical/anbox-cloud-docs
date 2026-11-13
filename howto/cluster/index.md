@@ -28,4 +28,5 @@ These guides describe how to distribute the load of your Anbox Cloud installatio
 configure-nodes
 Scale down <scale-down>
 Scale up <scale-up>
+Manage control plane members <manage-control-plane-members>
 ```

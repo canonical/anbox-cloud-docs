@@ -9,6 +9,10 @@ myst:
 
 An instance can be deleted, which will cause any connected user to be disconnected immediately.
 
+```{note}
+If an instance has deletion protection (`security.delete_protected`) enabled, disable it before deleting. See {ref}`howto-configure-instance`.
+```
+
 ::::{tab-set}
 :::{tab-item} CLI
 :sync: cli

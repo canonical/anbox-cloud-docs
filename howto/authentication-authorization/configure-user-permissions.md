@@ -7,9 +7,13 @@ myst:
 (howto-auth)=
 # Configure user permissions
 
-To be able to configure user permissions in Anbox Cloud, you need to first configure OpenFGA.
+Configure which resources users can access and which operations they can perform using the CLI or the dashboard.
 
-For an overview of authentication and authorization, see {ref}`exp-auth`.
+To give a user access, assign the required entitlements to a group and add the user's identity to that group.
+
+For an overview, see {ref}`exp-auth`. For the available entitlements, see {ref}`Reference: Authentication and authorization <ref-auth>`.
+
+OpenFGA must be configured before assigning permissions.
 
 ## Configure OpenFGA
 
@@ -36,22 +40,26 @@ When the API URL and store ID are set, AMS starts synchronizing the data with Op
 For fine-grained permissions to work in Anbox Cloud Dashboard, OpenFGA must be used in conjunction with a configured OIDC provider. Follow the instructions in {ref}`howto-set-up-idp` to configure Auth0, Keycloak, or Ory Hydra.
 ```
 
+## Configure access
+
+Follow the workflow for your chosen interface.
+
 ::::{tab-set}
 :::{tab-item} CLI
 :sync: cli
 
 (sec-create-identity)=
-## Create identities
+### Create identities
 
 To create an OIDC identity, run:
 
     amc auth identity create oidc/test@example.com
 
-To create a TLS identity, run:
+To create a TLS identity, provide its client certificate:
 
     cat client.crt | amc auth identity create tls/test-user
 
-{ref}`The security explanation on AMS <exp-security-ams>` provides information about TLS based and token based authentication methods. See {ref}`howto-access-ams-remote` for understanding how to connect to AMS remotely.
+{ref}`The security explanation on AMS <exp-security-ams>` provides information about TLS-based and token-based authentication methods. See {ref}`howto-access-ams-remote` for instructions on connecting to AMS remotely.
 
 You can view the identities you created by using:
 
@@ -74,9 +82,13 @@ amc auth identity ls
 +----------------------+---------------------+-----------------------+--------------------+-------------+
 ```
 
-## Create authorization groups with identities
+Use the identity ID in the group-membership commands below.
 
-### Create groups
+### Create authorization groups with identities
+
+Create a group and add the identities that should receive its access.
+
+#### Create groups
 
 Create a new authorization group:
 
@@ -98,55 +110,96 @@ permissions: []
 immutable: false
 ```
 
-### Add identities
+#### Add identities to the group
 
-Notice that there are currently no identities added to the group yet. The next step is to add an identity to the authorization group:
+Add an identity using its ID from `amc auth identity ls`:
 
     amc auth identity group add d3o2u7vriuenvvlfcae0 --groups 'developer'
 
-Use the `show` command and verify if the identity was added.
+Replace the example ID with the identity that needs access.
 
-### Remove identity from a group
+Use the `show` command to verify that the identity was added.
 
-If you want to remove a particular identity from an authorization group, run:
+```{note}
+A newly created group has no project access until the required entitlements are assigned. Assign them in the following section.
+```
 
-    amc auth identity group delete d3o2u7vriuenvvlfcae0 --groups 'developer'
+### Assign permissions
 
-## Assign permissions
+Choose the grants required for the group's tasks. The examples below are alternatives. You do not need to run all of them.
 
-### Grant permissions
+#### Grant global permissions
 
-To assign server administrative permissions to the developer group you created, run:
+Global entitlements are assigned on the `server` resource. To grant global administrative access, run:
 
-    amc auth group permissions add developer server --permissions admin
+    amc auth group permission add developer server --permissions admin
 
-To verify the access of the developer group, run:
+To allow the group to create projects, run:
+
+    amc auth group permission add developer server --permissions can_create_projects
+
+#### Grant resource-level permissions
+
+Specify the group, resource type, resource identifier and required entitlements:
+
+    amc auth group permission add <group_name> <resource_type> <resource_id> --permissions <entitlements>
+
+For example, to provide read and edit access to a particular LXD node (`lxd0`) to the developer group, run:
+
+    amc auth group permission add developer node lxd0 --permissions "can_view,can_edit"
+
+Use this command structure for other resource types.
+
+```{important}
+For entitlements granted directly on an instance, the same group must also have `can_view` on the project it is in. Grant that project access first (see {ref}`sec-grant-project-access`), then assign the required instance entitlements.
+```
+
+(sec-grant-project-access)=
+#### Grant access to a project and its instances
+
+To grant read-only access to a project and its instances, run:
+
+    amc auth group permission add developer project <project_name> --permissions viewer
+
+Use `editor` for additional instance operations. For details, see {ref}`Authorization model <sec-project-authorization>`.
+
+#### View permissions
+
+As the administrator, check the group's membership and assigned permissions:
 
     amc auth group show developer
 
-The developer group should have `admin` permissions now. If your identity does not have access to the `developer` group, the command will notify you that you are unauthorized to do this operation.
-
-You can set permissions at the object level too. For example, to provide read and edit access to a particular LXD node (`lxd0`) to the developer group, run:
-
-    amc auth group permissions add developer node lxd0 --permissions "can_view,can_edit"
-
-### View permissions
-
-Users can now view their current permissions in the system using the following command:
+Then authenticate using an identity in the group. Users can view their current permissions with:
 
     amc auth permission ls
 
-### Remove permissions
+### Revoke access
 
-To revoke the global admin permission, run:
+Revoke access by removing permissions from a group or removing an identity from the group.
 
-    amc auth group permissions delete developer server --permissions admin
+#### Remove permissions
+
+To revoke the global admin entitlement, run:
+
+    amc auth group permission delete developer server --permissions admin
+
+To revoke an entitlement on a resource, run:
+
+    amc auth group permission delete <group_name> <resource_type> <resource_id> --permissions <entitlement>
+
+#### Remove an identity from the group
+
+To remove an identity from an authorization group, run:
+
+    amc auth identity group delete <identity_id> --groups developer
+
+Check access again after removing a grant or group membership. Other grants or group memberships may still provide access.
 :::
 
 :::{tab-item} Dashboard
 :sync: dashboard
 
-## Identities
+### Create an identity
 
 The **Permissions > Identities** page displays the identities that the currently logged-in user is authorized to view.
 
@@ -162,7 +215,7 @@ To manage an identity’s group memberships, click *Groups count* or *Manage gro
 
 Authorized users can delete other identities. However, logged-in users cannot delete their own identity.
 
-## Groups
+### Create a group
 
 On the **Permissions > Groups** page, follow these steps to create a group:
 
@@ -184,6 +237,12 @@ On the **Permissions > Groups** page, follow these steps to create a group:
 The *Server* resource type does not have an associated resource. When creating permissions for the *Server* resource type, no resource selection is required and the field remains disabled.
 ```
 
+To grant a group access to a project and its instances, select the *Project* resource type, the target project and the `viewer` or `editor` entitlement set. The entitlement set applies to all existing and future instances in the project, so you do not need to grant access to each instance separately.
+
+Access to an individual instance depends on access to the project it is in. If you grant a group entitlements directly on an instance, the group must also have at least `can_view` on the project that contains the instance. The group does not need to have the same entitlement on both resources.
+
+For more information, see {ref}`Authorization model <sec-project-authorization>`.
+
 To manage group membership, click *Identities count* or *Edit* to add or remove identities from the group.
 
 To manage group permissions, click *Permissions count* or *Edit* to add or remove permissions assigned to the group.
@@ -196,8 +255,6 @@ Permission changes to groups the logged-in user belongs to take effect immediate
 
 :::
 ::::
-
-To view the entire list of entitlements, see {ref}`ref-auth`.
 
 ## Related topics 
 

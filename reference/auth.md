@@ -7,6 +7,8 @@ myst:
 (ref-auth)=
 # Authentication and authorization
 
+Entitlements define the access granted to groups in AMS.
+
 ## Global entitlements
 
 This table lists the entitlements that can be assigned at a global level.
@@ -25,9 +27,9 @@ This table lists the entitlements that can be assigned at a global level.
 | `can_create_addons` | Allows requests to `POST /1.0/addons`  |
 | `can_create_groups` | Allows requests to `POST /1.0/auth/groups` |
 | `can_create_applications` | Allows requests to `POST /1.0/applications` |
-| `can_create_instances` | Allows requests to:<br/> `POST /1.0/instances`<br/>`POST /1.0/containers`  |
 | `can_create_nodes` | Allows requests to `POST /1.0/nodes`  |
 | `can_create_images` | Allows requests to `POST /1.0/images` |
+| `can_create_projects` | Allows requests to `POST /1.0/projects` |
 | `can_register_identities` | Allows requests to `POST /1.0/auth/identities` |
 | `can_view_operations` (deprecated) | Deprecated since 1.29.0, operation visibility is now limited to resources the user can access  |
 
@@ -44,6 +46,7 @@ This table lists the resource types and their endpoints that can be assigned res
 | image | `/1.0/images/<id>` |
 | instance | `/1.0/instances/<id>`, `/1.0/containers/<id>` |
 | node | `/1.0/nodes/<id>` |
+| project | `/1.0/projects/<name>` |
 
 The following entitlements define the level of access an identity or group has to resources and they are available across all resource types:
 
@@ -60,3 +63,11 @@ The following entitlements are available only for specific resource types:
 | instance | `can_view_logs` | Grants permission to view instance or container logs. | `GET /1.0/instances/{id}/logs`<br/>`GET /1.0/instances/{id}/logs/{name}`<br/>`GET /1.0/containers/{id}/logs`<br/> `GET /1.0/containers/{id}/logs/{name}`  |
 | instance | `can_exec` | Grants permission to execute commands within an instance or container. | `POST /1.0/instances/{id}/exec`<br/>`POST /1.0/containers/{id}/exec` |
 | application | `can_publish`  | Grants permission to publish or update an application version. | `PATCH /1.0/applications/{id}/{version}`  |
+| project | `can_create_instances` | Allows creation of instances in the project. | `POST /1.0/instances` |
+| project | `can_view_instances` | Allows viewing of instances in the project. The list endpoints automatically filter the results based on project access. | `GET /1.0/instances`<br/>`GET /1.0/instances/{id}` |
+| project | `can_edit_instances` | Allows updates to instances in the project. | `PATCH /1.0/instances/{id}`<br/>`PUT /1.0/instances/{id}` |
+| project | `can_delete_instances` | Allows deletion of instances in the project. | `DELETE /1.0/instances`<br/>`DELETE /1.0/instances/{id}` |
+| project | `can_exec_instances` | Allows execution of commands in instances in the project. | `POST /1.0/instances/{id}/exec` |
+| project | `can_view_instance_logs` | Allows access to view logs for instances in the project. | `GET /1.0/instances/{id}/logs`<br/>`GET /1.0/instances/{id}/logs/{name}` |
+| project | `viewer` | Grants read-only access to the project and its instances. | `GET /1.0/instances`<br/>`GET /1.0/instances/{id}`<br/>`GET /1.0/projects/{name}` |
+| project | `editor` | Grants viewer access, plus instance creation, modification, deletion, command execution and logs access. | `GET /1.0/instances`<br/>`GET /1.0/instances/{id}`<br/>`POST /1.0/instances`<br/>`PATCH /1.0/instances/{id}`<br/>`PUT /1.0/instances/{id}`<br/>`DELETE /1.0/instances`<br/>`DELETE /1.0/instances/{id}`<br/>`POST /1.0/instances/{id}/exec`<br/>`GET /1.0/instances/{id}/logs`<br/>`GET /1.0/instances/{id}/logs/{name}` |
