@@ -26,7 +26,7 @@ Configure the displays when you create the instance. The first configured displa
 
 Each display can have its own resolution, density and frame rate. For example, one display at 1080p and 60 FPS and another at 720p and 30 FPS.
 
-If you do not set values for a display, it uses the defaults: 720p resolution, 240 DPI density and 60 FPS frame rate
+If you do not set values for a display, it uses the defaults.
 
 All displays are available when Android starts. You cannot add, remove or reconfigure a display while the instance is running. To use a different display configuration, create another instance.
 

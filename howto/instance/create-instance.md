@@ -6,9 +6,11 @@ myst:
 
 (howto-create-instance)=
 # Create an instance
-To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
+To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
-Every instance belongs to a {ref}`project <exp-projects>`. If you don't choose a project, the instance is created in the `default` project, and it cannot be moved to another project afterwards. Creating an instance in a project requires the `can_create_instances` permission on that project. To create a project first, see {ref}`howto-create-project`.
+Every instance belongs to a {ref}`project <exp-projects>`. To create a project first, see {ref}`howto-create-project`.
+
+To create an instance with multiple displays, see {ref}`howto-create-multi-display-instance`.
 
 **Check out this video that explains the differences between an instance created from an application vs an instance created from an image:**
 

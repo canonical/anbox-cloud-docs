@@ -31,7 +31,7 @@ The `default` project preserves the networking that existed before projects. It 
 
 Project access is granted to groups through entitlements and entitlement sets. Newly created groups have no project access until an administrator grants it.
 
-Access to an instance depends on the access to the project it is in. A group must have the `can_view` entitlement on that project before it can use any entitlements granted directly on the instance.
+Access to an instance depends on the access to the project it is in. A group must have the `can_view` entitlement on that project before it can use any entitlements granted directly on the instance. Creating an instance in a project requires the `can_create_instances` entitlement on that project.
 
 A project provides two entitlement sets:
 
