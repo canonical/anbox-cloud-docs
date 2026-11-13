@@ -26,6 +26,7 @@ AMS comes with a pre-defined, immutable `default` project that users cannot edit
 
 The `default` project preserves the networking that existed before projects. It uses a fixed address `192.168.100.1/20` that maps to a special network bridge `amsbr0` on LXD. Its bridge mapping cannot be changed.
 
+(sec-project-authorization)=
 ## Authorization model
 
 Project access is granted to groups through entitlements and entitlement sets. Newly created groups have no project access until an administrator grants it.
