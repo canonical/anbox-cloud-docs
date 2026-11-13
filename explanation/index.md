@@ -9,54 +9,55 @@ myst:
 
 These topics explain how Anbox Cloud works, what its components do, and how they fit together.
 
-## Anbox Cloud: Architecture and components
+## Architecture and components
 
-Understand the underlying architecture of Anbox Cloud, its variants and how the different components of Anbox Cloud relate to each other.
+The underlying architecture of Anbox Cloud, its variants and how the different components of Anbox Cloud relate to each other.
 
 - {ref}`exp-anbox-cloud`
 - {ref}`exp-ams`
-- {ref}`exp-aar`
 - {ref}`exp-web-dashboard`
-- {ref}`exp-application-streaming`
-- {ref}`exp-multi-display`
-- {ref}`exp-rendering-architecture`
+- {ref}`exp-aar`
+- {ref}`exp-nodes`
+- {ref}`exp-clustering`
 
-## Working with Anbox Cloud
+## Workloads
 
-Explore the different objects used in the product stack and how to use them to tune the performance of Anbox Cloud.
+Applications, images, instances, and projects for running and managing Android workloads.
 
+- {ref}`exp-android-execution-models`
+- {ref}`exp-images`
+- {ref}`exp-custom-images`
 - {ref}`exp-applications`
 - {ref}`exp-instances`
-- {ref}`exp-images`
-- {ref}`exp-nodes`
+- {ref}`exp-projects`
 - {ref}`exp-addons`
 - {ref}`AAOS <exp-aaos>`
-- {ref}`exp-platforms`
-- {ref}`exp-clustering`
-- {ref}`exp-android-execution-models`
 
-## Authentication and authorization
+## Rendering and streaming
 
-Identities, groups, and permissions control access in Anbox Cloud.
+The streaming stack, multi-display support, and the architecture behind graphics rendering in Anbox Cloud.
 
-- {ref}`exp-auth`
-
-## Deploying Anbox Cloud
-
-Plan your deployment with guidance on capacity requirements, resource presets, rendering configuration, and whether you need custom Android images.
-
-- {ref}`exp-production-planning`
-- {ref}`exp-capacity-planning`
+- {ref}`exp-application-streaming`
+- {ref}`exp-multi-display`
 - {ref}`exp-rendering-graphics`
-- {ref}`exp-resources-presets`
-- {ref}`exp-custom-images`
-- {ref}`exp-performance`
+- {ref}`exp-rendering-architecture`
+- {ref}`exp-platforms`
 
-## Security with Anbox Cloud
+## Security and access control
 
-Learn how Anbox Cloud ensures security across its components, including communication, isolation, and cryptography.
+Isolation, cryptography, authentication and authorization mechanisms that protect your deployment and control access to its resources.
 
 - {ref}`Security <exp-security>`
+- {ref}`exp-auth`
+
+## Deployment planning and performance
+
+Resource requirements, capacity considerations, and factors that affect deployment performance.
+
+- {ref}`exp-production-planning`
+- {ref}`exp-resources-presets`
+- {ref}`exp-capacity-planning`
+- {ref}`exp-performance`
 
 If you are new to Anbox Cloud, start with the {ref}`tutorials` for step-by-step instructions.
 For operational tasks, see the {ref}`how-to-guides`.
@@ -85,6 +86,7 @@ instances
 nodes
 performance
 production-planning
+projects
 rendering-architecture
 rendering-graphics
 resources
