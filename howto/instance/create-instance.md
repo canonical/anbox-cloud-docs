@@ -10,6 +10,10 @@ To create and launch an instance, you can use the Anbox Cloud dashboard or the C
 
 Every instance belongs to a {ref}`project <exp-projects>`. To create a project first, see {ref}`howto-create-project`.
 
+```{note}
+An instance cannot be moved to another project after it is created.
+```
+
 To create an instance with multiple displays, see {ref}`howto-create-multi-display-instance`.
 
 **Check out this video that explains the differences between an instance created from an application vs an instance created from an image:**
