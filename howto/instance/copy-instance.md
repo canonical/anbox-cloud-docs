@@ -15,6 +15,7 @@ Important considerations before copying instances:
 - Resource availability: Ensure the cluster has enough capacity (CPU, GPU, RAM) to host the new copy.
 - State awareness: Understand that a copied instance will inherit the file system state of the source.
 - Log isolation: When copying an instance in an error state, the new instance is a fresh clone and will not include logs from the source instance.
+- Project placement: The copy is created in the same {ref}`project <exp-projects>` as the source instance.
 
 ## Copy an instance
 
