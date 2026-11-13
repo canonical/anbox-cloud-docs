@@ -368,6 +368,7 @@ extensions = [
 exclude_patterns = [
     'contribute/doc-cheat-sheet.md',
     'README.md',
+    'AGENTS.md',
     'SECURITY.md',
     '.github/pull_request_template.md',
     '.venv',
