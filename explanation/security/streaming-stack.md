@@ -62,7 +62,7 @@ In order to exchange messages with the Anbox Stream Gateway through the [NATS](h
 
 ### Token based authentication
 
-Individual Anbox instances have access to a limited set of API endpoints exposed by the Anbox Stream Agent to receive commands or exchange WebRTC signaling information with a connecting client. Access is authenticated by a scope-limited [Macaroon](http://theory.stanford.edu/~ataly/Papers/macaroons.pdf) based token. The token is signed with a [HMAC](https://www.okta.com/identity-101/hmac/) using SHA-256 (HS256) and a 64 byte secret key. The [`macaroon.New`](https://pkg.go.dev/gopkg.in/macaroon.v2@v2.1.0#New) method is used internally to generate the JWT token.
+Individual Anbox instances have access to a limited set of API endpoints exposed by the Anbox Stream Agent to receive commands or exchange WebRTC signaling information with a connecting client. Access is authenticated by a scope-limited [Macaroon](https://theory.stanford.edu/~ataly/Papers/macaroons.pdf) based token. The token is signed with a [HMAC](https://www.okta.com/identity-101/hmac/) using SHA-256 (HS256) and a 64 byte secret key. The [`macaroon.New`](https://pkg.go.dev/gopkg.in/macaroon.v2@v2.1.0#New) method is used internally to generate the JWT token.
 
 For authentication purposes with the [Coturn TURN server](https://github.com/coturn/coturn) the Anbox Stream Agent generates short living authentication tokens signed with a [HMAC](https://www.okta.com/identity-101/hmac/) using SHA-1 and a 64 byte secret key. See [RFC5389](https://datatracker.ietf.org/doc/html/rfc5389#section-15.4) and the [Coturn documentation](https://github.com/coturn/coturn/blob/master/README.turnserver) for more details.
 
