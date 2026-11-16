@@ -25,7 +25,7 @@ The Android system runs directly in the LXD container. These images support:
 - VHAL support via adapter
 
 **Minimum resource requirements:**
-- 2 CPU cores per instance.
+- 1 CPU core per instance.
 - 3GB memory per instance.
 - 3GB disk space per instance.
 - KVM not required.
@@ -42,7 +42,7 @@ The Android system runs inside a Cuttlefish virtual machine within the LXD insta
 - Multi-display support (see {ref}`exp-multi-display`)
 
 **Minimum resource requirements:**
-- 4 CPU cores per instance.
+- 2 CPU cores per instance.
 - 5GB memory per instance.
 - 15GB disk space per instance.
 - KVM required on the host.
