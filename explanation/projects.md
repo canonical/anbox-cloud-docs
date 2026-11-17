@@ -18,13 +18,13 @@ Projects allow users to group workloads according to their intended purposes and
 A project in Anbox Cloud acts as a scope with two boundaries:
 
 1. Clear object ownership and access: Every instance belongs to one project. The project defines the scope for managing access to its instances. A user must belong to a group with access to the project it is in before the group's direct instance entitlements can apply.
-1. Network isolation: Each project uses a LXD-managed network. Instances connect to their project's network, which is isolated from other project networks by default.
+1. Network isolation: Each project uses a LXD-managed network. Instances connect to their project's network, which is isolated from other project networks by default. Every project has a capacity of 8 instances. Since each project uses a unique subnet to assign IP addresses to instances, these subnet addresses are carved out from a subnet pool with address 100.64.0.0/10.
 
 ## The default project
 
 AMS comes with a pre-defined, immutable `default` project that users cannot edit or delete. If no project is specified when launching an instance, AMS places it in the `default` project. Instances that existed before projects were introduced are assigned to the `default` project during upgrade.
 
-The `default` project preserves the networking that existed before projects. It uses a fixed address `192.168.100.1/20` that maps to a special network bridge `amsbr0` on LXD. Its bridge mapping cannot be changed.
+The `default` project preserves the networking that existed before projects. It uses a fixed address `192.168.100.1/20` that maps to a special network bridge `amsbr0` on LXD. Its bridge mapping cannot be changed. All base instances created during the initialization of an application will still be launched within the `default` project.
 
 (sec-project-authorization)=
 ## Authorization model

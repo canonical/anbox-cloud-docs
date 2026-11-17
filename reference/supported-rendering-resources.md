@@ -9,10 +9,6 @@ myst:
 
 This guide lists various supported GPU vendors, drivers, platforms, APIs and discuss the rendering pipelines used for different GPUs.
 
-```{important}
-Currently Anbox Cloud does not support GPU for virtual machines.
-```
-
 (sec-supported-gpus)=
 ## Supported GPU vendors and models
 

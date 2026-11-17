@@ -53,10 +53,6 @@ Use the following commands to set the allocation rates on a node (for example, `
 
 ## Configure if a node can accept new instances
 
-```{note}
-Currently Anbox Cloud does not support GPUs for virtual machine instances. This feature is planned for a future release.
-```
-
 You can configure a node to stop accepting new instances. This is especially important in certain scenarios such as scaling down a LXD cluster. When you want to remove a node from the LXD cluster, the node must not have any instances. Hence, all running instances must be removed or disconnected and AMS must stop considering the node for new instances. See {ref}`howto-scale-down-cluster` for instructions on scaling down a cluster.
 
 Use the following command to prevent the node from accepting new instances:

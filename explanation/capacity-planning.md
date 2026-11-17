@@ -1,40 +1,44 @@
 ---
 myst:
   html_meta:
-    "description": "Explanation of capacity planning for Anbox Cloud, with guidance on estimating resources based on user load and application profiles."
+    "description": "Explanation of capacity planning for Anbox Cloud, with guidance on estimating resources based on user load."
 ---
 
 (exp-capacity-planning)=
 # Capacity planning
 
-When planning your Anbox Cloud deployment, you should start by estimating how much capacity you need, to be able to provide your application to your users and how many users (translating to the number of Android containers) you expect. Based on this estimate, you can then size your deployment and figure out how many cluster nodes you need and what resources they should have.
+When planning your Anbox Cloud deployment, you should start by estimating how much capacity you need, how many instances you expect to run concurrently and what resources each instance needs. Based on this estimate, you can then size your deployment and figure out how many cluster nodes you need and what resources they should have.
 
 When estimating capacity, consider the following questions to better understand your requirements:
 
-- Application resources:
-  * How much CPU, memory and disk space does your application need?
-  * Will the application use hardware- or software-based video encoding?
-  * If the application uses hardware-based encoding, how much GPU capacity is needed?
-- CPU and memory:
+- Instance resources:
+  * How much CPU, memory and disk space does each instance require?
   * Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
-- Application:
-  * What type of application are you running?
-  * What frame rate and what resolution does your application need?
+  * Does each instance need GPU acceleration for rendering? If so, how demanding is its rendering workload?
+
+- Streaming:
+  * Is streaming enabled?
+  * Does the instance use hardware- or software-based video encoding?
+  * If the instance uses hardware-based encoding, how much GPU capacity is needed?
+  * What frame rate and resolution do your instances need?
+  * For virtualized Android, how many displays does each instance have?
+
+- Demand:
   * How many instances will be running simultaneously?
   * What would be the impact of not being able to serve all users?
+  * What is the impact if the deployment reaches capacity and cannot start additional instances?
 
-## Application resources
 
-A default resource preset will be set for every application. A resource preset specifies the resources that are available to the application:
+## Instance resources
 
-- The number of vCPU cores
-- The amount of RAM
-- The amount of disk space
-- The number of GPU slots
+Each instance is allocated a number of vCPU cores, an amount of RAM, an amount of disk space and, optionally, a number of {ref}`GPU slots <sec-gpu-slots>`. The source of these values depends on how the instance is configured:
 
-Depending on the resources that your application requires, if the {ref}`default resource preset <exp-resources-presets>` does not suit, you can choose suitable {ref}`sec-application-manifest-resources` that fit your application.
+- Instances launched from {ref}`application <exp-applications>` use the application's {ref}`resource preset <exp-resources-presets>` or the {ref}`sec-application-manifest-resources` defined in its manifest by default. This is true for containerized Android only.
+- Instances launched from images use the resources you specify at launch, with the `--cpus`, `--memory`, `--disk-size` and `--gpu-slots` options of `amc launch`. This applies for both containerized and virtualized Android.
 
-When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarizes the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see {ref}`sec-over-committing` for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
+AMS rejects an instance whose CPU, memory or disk space is below the minimum.
+
+AMS internally summarizes the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see {ref}`sec-over-committing` for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
     no suitable node to satisfy instance requirements available
 
@@ -48,18 +52,42 @@ Otherwise, the message lists why each evaluated node failed to meet the resource
 
     no suitable node to satisfy instance requirements available (node0: cpu: available 2 < required 4)
 
-The reported resources can include CPU, memory, disk space, GPU(including GPU type and slots), and VPU slots, depending on what the instance requested and which of them the available nodes cannot satisfy. You could use this information together with the guidance in this page to determine whether you need to free up resources, add more nodes, or adjust your instance's resource preset.
+The reported resources can include CPU, memory, disk space, GPU (including GPU type and slots), depending on what the instance requested and which of them the available nodes cannot satisfy. You could use this information together with the guidance in this page to determine whether you need to free up resources, add more nodes, or adjust your instance's resource allocation.
 
 If an instance stops with an error, its disk space is preserved for inspection. Other resources are released. Therefore, if you have many instances with `error` status, you might run out of disk space.
 
+### Containerized Android
+
+Instances with containerized Android can be launched from an application or directly from an image. They use GPU-accelerated rendering when a GPU is assigned and software rendering otherwise.
+
+For instances launched from applications, the video encoder configuration in the application manifest determines whether GPU resources are required for encoding. See {ref}`sec-application-manifest-video-encoder`.
+
+For the minimum resources per instance, see {ref}`ref-feature-support-by-image-type`.
+
+### Virtualized Android
+
+Instances with virtualized Android are launched directly from an image. They require higher minimum resources than instances with containerized Android, as well as KVM on the host. For the minimum resources per instance, see {ref}`ref-feature-support-by-image-type`.
+
+These instances use GPU-accelerated rendering when an NVIDIA GPU is assigned. Without a GPU, they use software rendering.
+
+#### Multi-display instances
+
+Multi-display ({ref}`exp-multi-display`) is supported only for instances with virtualized Android.
+
+Each additional active display increases CPU and memory usage, because each display has its own rendering and video encoding pipeline.
+
+When estimating resources for a multi-display instance, consider:
+
+- The number of displays.
+- The resolution and frame rate of each display.
+- Instance density per LXD node decreases as display count increases. Account for this in cluster sizing.
+
+Additional displays can increase the resources required by each instance and reduce the number of instances that a node can host.
+
 (sec-gpu-slots)=
-### GPU slots
+## GPU slots
 
 An additional aspect to take into account when planning your resources is the number of required GPU slots.
-
-```{note}
-Currently, Anbox Cloud does not have GPU support for virtual machines. This feature is planned for a future release.
-```
 
 GPUs have limited capacity that can be shared among multiple instances, and GPU slots are a way to fine-tune how many instances can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see {ref}`sec-config-gpu-slots` for instructions).
 
@@ -69,10 +97,14 @@ To determine the best number of GPU slots for a specific GPU model, consider the
 - The memory that an instance uses
 - The number of parallel encoding pipelines that the GPU offers
 
-When you launch an instance for an application, AMS reserves the number of GPU slots defined for the application on the node where it is launched. These GPU slots are marked as unavailable until the instance is terminated. If no GPU slots are available on the node, instances that require a GPU (with video encoder type as `gpu`) will not be launched on it. Instances that don't require a GPU (with video encoder type as `software` or `gpu-preferred`) can still be launched. See {ref}`sec-application-manifest-video-encoder` for more information on video encoder types.
+Each node has a configured number of GPU slots. When AMS launches an instance that requests GPU slots, it reserves that number of slots on the selected node until the instance is terminated.
+
+AMS can place an instance on a node only if that node has enough available GPU slots to satisfy the request. Instances that do not require GPU resources can still be placed on a node when no GPU slots are available.
+
+For instances launched from applications, the video encoder type determines whether a GPU is required: `gpu` requires an available GPU, while `software` and `gpu-preferred` do not. See {ref}`sec-application-manifest-video-encoder` for more information.
 
 ```{important}
-GPU slots are used to share GPUs among instances, but they do not impose limits on GPU usage. Therefore, increasing the number of required GPU slots for an application does not guarantee that more GPU resources are allocated to the corresponding application instances. For example, an intensive game that is configured to use one GPU slot might consume more GPU resources than a simple photo gallery app that is configured to use five GPU slots.
+GPU slots are used to share GPUs among instances, but they do not impose limits on GPU usage. Therefore, increasing the number of required GPU slots for an application or an instance does not guarantee that more GPU resources are allocated to it. For example, an intensive game that is configured to use one GPU slot might consume more GPU resources than a simple photo gallery app that is configured to use five GPU slots.
 
 A {ref}`default number <sec-node-configuration>` of GPU slots and GPU encoder slots are configured depending on the GPU used but this value can be changed. The main purpose of GPU slots is to control the number of instances that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
 ```
@@ -80,7 +112,7 @@ A {ref}`default number <sec-node-configuration>` of GPU slots and GPU encoder sl
 (sec-over-committing)=
 ## Over-committing resources
 
-If the unused resources on a cluster node don't suffice to launch an instance for an application with its defined resource requirements, the instance cannot be launched. This behavior is very restrictive, and in many cases unnecessary.
+If the unused resources on a cluster node don't suffice to launch an instance with its defined resource requirements, the instance cannot be launched. This behavior is very restrictive, and in many cases unnecessary.
 
 Usually, an instance doesn't use its dedicated vCPU cores and memory at 100% all the time. Therefore, AMS allows over-committing available resources. By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`, which means that it allows four times the number of vCPU cores and twice the amount of RAM per node. See {ref}`sec-config-allocation-rates` for instructions on how to define the allocation rates for a node.
 
@@ -100,7 +132,7 @@ Another aspect is, of course, the number of users expected and hence, the number
 
 ## An example calculation
 
-Let's consider an application that has a resource preset of 4 vCPU cores, 3 GB of RAM, 3 GB of disk space and 1 GPU slot. The application is quite CPU-intensive, which means you should not over-commit resources by a large margin. You expect an average of 100 instances running at the same time, with peaks up to 200.
+Let's consider an instance with 4 vCPU cores, 3 GB of RAM, 3 GB of disk space and 1 GPU slot. The workload is quite CPU-intensive, which means you should not over-commit resources by a large margin. You expect an average of 100 instances running at the same time, with peaks up to 200.
 
 We now want to determine the capacity that is needed for the overall deployment. This capacity can be either for a single machine (which is rather unlikely for the given requirements) or for a cluster with multiple nodes.
 
@@ -129,10 +161,11 @@ To avoid your cluster running out of resources even at peak loads, you must size
 
 - Use a higher CPU and/or memory allocation rate, which might decrease performance at peak loads.
 - Configure your cluster nodes to use more GPU slots per GPU, which might decrease video quality.
-- Tweak the resource preset for your application to give less resources to each instance. The impact of doing this depends very much on your application.
+- Reduce the resource allocation per instance (for example, using `--cpus`, `--memory` or `--disk-size` when launching instances). The impact depends on the workload, and allocations must still meet the minimum requirements for the Android execution model.
 - Base your estimate on a lower maximum number of instances (for example, 150 instances), which will lead to your cluster running out of resources before the peak load is reached.
 
 ## Related topics
 
 - {ref}`exp-clustering`
 - {ref}`ref-application-manifest`
+- {ref}`ref-feature-support-by-image-type`
