@@ -79,7 +79,7 @@ In addition to optimizing the performance of your Anbox Cloud deployment, you mu
 
 All client devices that access an Anbox Cloud deployment must be capable of low-latency video decoding. They must also use a compatible version of Android WebView (version 90 at the minimum, and ideally the latest stable release).
 
-For instances with multiple displays, the client receives a separate video stream for each display, even if it shows only some of them. Make sure client devices have enough network bandwidth and decoding capacity for all displays in the session.
+For instances with multiple displays, the client receives a separate video stream for each display. Make sure client devices have enough network bandwidth and decoding capacity for all displays in the session.
 
 Furthermore, the network connection is crucial. When implementing your applications, you must take into account what kind of connection the client devices will usually have (for example, 4G, 5G or WiFi), so that you can optimize the network traffic that your applications require.
 
