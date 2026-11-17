@@ -78,7 +78,7 @@ The `amc launch` command fails if you provide the ID of an application that is n
 You can launch a raw instance from an image. To do so, get the ID of the image by running:
 
 ```{tip}
-If you don't know what a raw instance is, see {ref}`sec-application-raw-instances`.
+If you don't know what a raw instance is, see {ref}`sec-instances-from-images`.
 ```
 
     amc image ls
