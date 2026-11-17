@@ -84,7 +84,7 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Overview </explanation/application-streaming>` slice
         :doc:`Access the gateway </howto/stream/access-stream-gateway>`
         :doc:`Share a session </howto/instance/share-session>`
-         :doc:`Stream controls bar </reference/stream-controls-bar>`
+        :doc:`Stream controls bar </reference/stream-controls-bar>`
 
     ..  slice:: Multi-display
 
