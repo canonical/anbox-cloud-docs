@@ -10,7 +10,7 @@ myst:
 Instances are the center piece of the Anbox Cloud stack. You can create an instance from an image or copy an existing instance. Every instance provides a full Android system managed by Anbox Management Service (AMS) and belongs to exactly one {ref}`project <exp-projects>`, which defines its network and access scope.
 
 
-Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through addons. See {ref}`howto-backup-restore-example` for information on how to do this.
+Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately.
 
 (sec-instances-and-projects)=
 ## Instances and projects
@@ -31,10 +31,6 @@ Instances created from images are called *raw instances*.
 
 (sec-application-instances)=
 ## Instances created from applications (deprecated)
-
-```{important}
-Applications are deprecated and are available only for instances with containerized Android. See {ref}`ref-deprecation-notes`.
-```
 
 If you use {ref}`applications <exp-applications>`, AMS works with two additional kinds of instances:
 
