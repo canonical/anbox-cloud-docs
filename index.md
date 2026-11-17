@@ -55,6 +55,12 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Manage instances </howto/instance/index>`
         :doc:`Resource presets </explanation/resources>`
 
+    ..  slice:: Projects
+
+        :doc:`Overview </explanation/projects>` slice
+        :doc:`Manage projects </howto/projects/index>`
+        :doc:`Create a project </howto/projects/create-project>`
+
     ..  slice:: Applications
 
         :doc:`Overview </explanation/applications>` slice
@@ -78,7 +84,13 @@ Anbox Cloud serves cloud gaming and application streaming providers, Android dev
         :doc:`Overview </explanation/application-streaming>` slice
         :doc:`Access the gateway </howto/stream/access-stream-gateway>`
         :doc:`Share a session </howto/instance/share-session>`
-        :doc:`Supported codecs </reference/supported-codecs>`
+         :doc:`Stream controls bar </reference/stream-controls-bar>`
+
+    ..  slice:: Multi-display
+
+        :doc:`Overview </explanation/multi-display>` slice
+        :doc:`Create a multi-display instance </howto/instance/create-multi-display-instance>`
+        :doc:`Support multiple displays in a stream client </howto/stream/support-multiple-displays>`
 
     ..  slice:: Rendering and GPUs
 

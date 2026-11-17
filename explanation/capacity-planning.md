@@ -7,14 +7,14 @@ myst:
 (exp-capacity-planning)=
 # Capacity planning
 
-When planning your Anbox Cloud deployment, you should start by estimating how much capacity you need, how many instances you expect to run at the same time and what resources each instance needs. Based on this estimate, you can then size your deployment and figure out how many cluster nodes you need and what resources they should have.
+When planning your Anbox Cloud deployment, you should start by estimating how much capacity you need, how many instances you expect to run concurrently and what resources each instance needs. Based on this estimate, you can then size your deployment and figure out how many cluster nodes you need and what resources they should have.
 
 When estimating capacity, consider the following questions to better understand your requirements:
 
 - Instance resources:
   * How much CPU, memory and disk space does each instance require?
   * Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
-  * Does each instance require GPU resources, and if so, how many GPU slots does it require?
+  * Does each instance need GPU acceleration for rendering? If so, how demanding is its rendering workload?
 
 - Streaming:
   * Is streaming enabled?
@@ -31,10 +31,12 @@ When estimating capacity, consider the following questions to better understand 
 
 ## Instance resources
 
-Each instance is allocated a number of vCPU cores, an amount of RAM, an amount of disk space and, optionally, a number of GPU slots. The source of these values depends on how the instance is configured:
+Each instance is allocated a number of vCPU cores, an amount of RAM, an amount of disk space and, optionally, a number of {ref}`GPU slots <sec-gpu-slots>`. The source of these values depends on how the instance is configured:
 
 - Instances launched from {ref}`application <exp-applications>` use the application's {ref}`resource preset <exp-resources-presets>` or the {ref}`sec-application-manifest-resources` defined in its manifest by default. This is true for containerized Android only.
 - Instances launched from images use the resources you specify at launch, with the `--cpus`, `--memory`, `--disk-size` and `--gpu-slots` options of `amc launch`. This applies for both containerized and virtualized Android.
+
+AMS rejects an instance whose CPU, memory or disk space is below the minimum.
 
 AMS internally summarizes the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see {ref}`sec-over-committing` for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
@@ -64,9 +66,9 @@ For the minimum resources per instance, see {ref}`ref-feature-support-by-image-t
 
 ### Virtualized Android
 
-Instances with virtualized Android are launched directly from an image. They require higher minimum resources than instances with containerized Android, as well as KVM on the host. AMS rejects an instance whose CPU, memory or disk space is below the minimum. For the minimum resources per instance, see {ref}`ref-feature-support-by-image-type`.
+Instances with virtualized Android are launched directly from an image. They require higher minimum resources than instances with containerized Android, as well as KVM on the host. For the minimum resources per instance, see {ref}`ref-feature-support-by-image-type`.
 
-These instances use the instance's GPU for accelerated rendering when it has an NVIDIA GPU. Without a GPU, they use software rendering.
+These instances use GPU-accelerated rendering when an NVIDIA GPU is assigned. Without a GPU, they use software rendering.
 
 #### Multi-display instances
 

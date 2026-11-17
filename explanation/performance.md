@@ -28,7 +28,7 @@ Generally, applications should use the smallest suitable resource preset. Howeve
 
 ### Virtualized Android
 
-Instances with virtualized Android require higher minimum resources than instances with containerized Android, as well as KVM on the host. They use GPU-accelerated rendering when a GPU is assigned, and software rendering otherwise, which puts the rendering workload on the CPU. See {ref}`exp-android-execution-models`.
+Instances with virtualized Android require higher minimum resources than instances with containerized Android, as well as KVM on the host. They use GPU-accelerated rendering when an NVIDIA GPU is assigned, and software rendering otherwise, which puts the rendering workload on the CPU. See {ref}`exp-android-execution-models`.
 
 #### Multi-display instances
 
@@ -70,7 +70,11 @@ A very noticeable performance issue is a long wait time when starting an instanc
 
 By default, Anbox Cloud turns off image compression in LXD when launching an instance from an image. This method speeds up the launch of the instance (because the image does not need to be uncompressed), but it causes more traffic over the network (because the image is transferred uncompressed). If the network connection between your cluster nodes is rather slow, the overall instance startup time might improve by enabling image compression. You can change the default configuration by setting the [images_compression_algorithm](https://charmhub.io/ams-lxd/configurations#images_compression_algorithm) configuration on the `ams-lxd` charm. Of course, in addition to compression, the size of the image is also relevant. The smaller the image, the faster it can be synchronized across the LXD nodes in a cluster.
 
-For containerized Android, you should also check the hooks that you use in your application. If you use any startup hooks (`pre-start` or `post-start`) that take a long time or wait for resources to become available, the instance startup is delayed. If you use a `post-stop` hook that prolongs the shutdown of an instance, this might also affect the startup time of new instances (because it might not be possible to start more instances until the existing instances terminate). Addon and application hooks are deprecated. See {ref}`howto-migrate-from-addon-and-app-hooks`.
+```{important}
+Addon and application hooks are deprecated. See {ref}`howto-migrate-from-addon-and-app-hooks`.
+```
+
+For containerized Android, you should also check the hooks that you use in your application. If you use any startup hooks (`pre-start` or `post-start`) that take a long time or wait for resources to become available, the instance startup is delayed. If you use a `post-stop` hook that prolongs the shutdown of an instance, this might also affect the startup time of new instances (because it might not be possible to start more instances until the existing instances terminate).
 
 (sec-client-devices)=
 ## Client devices
