@@ -333,7 +333,7 @@ The *Create instance* button becomes available when the application is *ready*. 
 
 While creating the instance, we can observe some interesting behaviors:
 
-- It is possible to create an instance from an image instead of an application. If you want to learn more about the different types of instances, you can later refer to {ref}`sec-application-raw-instances`.
+- It is possible to create an instance from an image instead of an application. If you want to learn more about the different types of instances, you can later refer to {ref}`exp-instances`.
 - Some of the details are pre-populated based on the context of our application.
 - There can be multiple versions of an application and an instance can be based on any of the active versions.
 

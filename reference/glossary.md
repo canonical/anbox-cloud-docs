@@ -116,7 +116,7 @@ Application
 Application instance
     An instance that is created when launching an application.
 
-    See {ref}`sec-application-raw-instances` for more information.
+    See {ref}`sec-application-instances` for more information.
 
 Application manifest
     A file that defines the attributes of an Anbox Cloud application.
@@ -126,7 +126,7 @@ Application manifest
 Base instance
     A temporary instance that is used when bootstrapping an application. It is automatically deleted when the application bootstrap is completed.
 
-    See {ref}`sec-regular-base-instances` for more information.
+    See {ref}`sec-application-instances` for more information.
 
 Boot package
     The package to launch in an application instance once the system has booted.
@@ -227,12 +227,12 @@ Prometheus
 Raw instance
     An instance that is created when launching an image. It runs the full Android system, without any additional apps installed.
 
-    See {ref}`sec-application-raw-instances` for more information.
+    See {ref}`sec-instances-from-images` for more information.
 
 Regular instance
     An instance that is launched from either an application or an image. It exists until it is deleted.
 
-    See {ref}`sec-regular-base-instances` for more information.
+    See {ref}`sec-application-instances` for more information.
 
 Scrcpy
     An open-source screen mirroring application that allows displaying and controlling Android devices from a desktop computer.
