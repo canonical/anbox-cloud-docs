@@ -94,7 +94,7 @@ The Anbox Application Registry (AAR) can be upgraded independently of other serv
 
 Upgrade the registry:
 
-    juju refresh --channel=1.28/stable aar
+    juju refresh --channel=1.30/stable aar
 
 ### Upgrade control plane
 
@@ -106,10 +106,10 @@ If you don't run any of the services in a high availability configuration, upgra
 
 To upgrade all charms, run the following commands:
 
-    juju refresh --channel=1.28/stable anbox-cloud-dashboard
-    juju refresh --channel=1.28/stable anbox-stream-gateway
-    juju refresh --channel=1.28/stable anbox-stream-agent
-    juju refresh --channel=1.28/stable coturn
+    juju refresh --channel=1.30/stable anbox-cloud-dashboard
+    juju refresh --channel=1.30/stable anbox-stream-gateway
+    juju refresh --channel=1.30/stable anbox-stream-agent
+    juju refresh --channel=1.30/stable coturn
     juju refresh --channel=2/stable nats
 
 ```{note}
@@ -122,7 +122,7 @@ Since the NATS charm has been overhauled to use the modern charm framework (Ops 
 
 Upgrade the AMS service independently of the other service components to ensure minimal down time:
 
-    juju refresh --channel=1.28/stable ams
+    juju refresh --channel=1.30/stable ams
 
 ### Upgrade LXD
 
@@ -170,7 +170,7 @@ where `5.21/stable` is the currently installed LXD snap channel. Not doing this 
 
 To start, upgrade the AMS LXD charm to the latest revision using:
 
-    juju refresh --channel=1.28/stable lxd
+    juju refresh --channel=1.30/stable lxd
 
 Upgrading the charm does not upgrade the LXD snap or any of the internal packages on the LXD node. After updating the charm, check which nodes have package updates available using:
 
