@@ -3215,6 +3215,11 @@ paths:
           name: node
           in: query
         - type: string
+          example: default
+          description: Filter instances by the project name.
+          name: project
+          in: query
+        - type: string
           example: cilsiomnfpfec9b1kteg
           description: Filter instances by the application ID. This is an exact match
             for the string.
@@ -3776,6 +3781,11 @@ paths:
           name: node
           in: query
         - type: string
+          example: default
+          description: Filter instances by the project name.
+          name: project
+          in: query
+        - type: string
           example: cilsiomnfpfec9b1kteg
           description: Filter instances by the application ID. This is an exact match
             for the string.
@@ -4304,6 +4314,242 @@ paths:
                 type: array
                 items:
                   $ref: '#/definitions/Operation'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/projects:
+    get:
+      description: This endpoint returns a list of projects known to AMS.
+      produces:
+        - application/json
+      tags:
+        - projects
+      summary: Get a list of projects
+      operationId: projects_get
+      parameters:
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Expand the returned resource definition
+          name: recursion
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per project. This only
+            works when `recursion=1` is also passed.
+          name: entitlements
+          in: query
+        - type: string
+          description: Filter projects by name. This is a fuzzy match for the string.
+          name: name
+          in: query
+        - type: string
+          description: Filter projects by their current status.
+          name: status
+          in: query
+      responses:
+        '200':
+          description: Success response of the service
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/CollectionResponse'
+            properties:
+              metadata:
+                description: List of endpoints
+                type: array
+                items:
+                  type: string
+                example: "[\n  \"/1.0/projects/default\",\n  \"/1.0/projects/team-a\"\
+                  \n ]"
+        default:
+          $ref: '#/responses/InternalServerError'
+    post:
+      description: 'This endpoint creates a new project in AMS. At this stage this
+        is purely a
+
+        metadata operation - no network isolation is provisioned yet.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - projects
+      summary: Create a project
+      operationId: projects_post
+      parameters:
+        - description: AMS Project to create
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/ProjectsPost'
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '409':
+          $ref: '#/responses/ErrorAlreadyExists'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/projects/{name}:
+    get:
+      description: This endpoint returns information about a project in AMS.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - projects
+      summary: Get information about a project
+      operationId: project_get
+      parameters:
+        - type: string
+          description: Name of the project to get
+          name: name
+          in: path
+          required: true
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements for this project.
+          name: entitlements
+          in: query
+      responses:
+        '200':
+          description: Success response of the service
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                $ref: '#/definitions/Project'
+          headers:
+            Etag:
+              type: string
+              description: E-Tag of the resource
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
+    delete:
+      description: This endpoint deletes a project from AMS.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - projects
+      summary: Delete a project
+      operationId: project_delete
+      parameters:
+        - type: string
+          description: Name of the project to delete
+          name: name
+          in: path
+          required: true
+        - description: details for deleting the project
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/ProjectDelete'
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
+    patch:
+      description: This endpoint updates the description of a project.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - projects
+      summary: Update a project
+      operationId: project_patch
+      parameters:
+        - type: string
+          description: Etag of the resource
+          name: Etag
+          in: header
+        - type: string
+          description: Name of the project to update
+          name: name
+          in: path
+          required: true
+        - description: Info required to update the resource
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/ProjectsPatch'
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/projects?recursion=1:
+    get:
+      description: This endpoint returns a list of projects known to AMS.
+      produces:
+        - application/json
+      tags:
+        - projects
+      summary: Get a list of projects
+      operationId: projects_get_recursion1
+      parameters:
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Expand the returned resource definition
+          name: recursion
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Attach current identity's entitlements per project. This only
+            works when `recursion=1` is also passed.
+          name: entitlements
+          in: query
+      responses:
+        '200':
+          description: Success response of the service
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/CollectionResponse'
+            properties:
+              metadata:
+                type: array
+                items:
+                  $ref: '#/definitions/Project'
         default:
           $ref: '#/responses/InternalServerError'
   /1.0/registry/applications:
@@ -5601,6 +5847,26 @@ definitions:
         type: integer
         format: int64
         example: 1
+  DisplaySpec:
+    type: object
+    title: DisplaySpec specifies the attributes of a virtual display for an instance.
+    properties:
+      density:
+        description: Density is the pixel density of the virtual display
+        type: integer
+        format: int64
+      fps:
+        description: FPS is the frame rate of the virtual display
+        type: integer
+        format: int64
+      height:
+        description: Height is the height of the virtual display in pixels
+        type: integer
+        format: int64
+      width:
+        description: Width is the width of the virtual display in pixels
+        type: integer
+        format: int64
   Event:
     description: Event defines the structure of an event sent on the events API endpoint
     type: object
@@ -5979,24 +6245,13 @@ definitions:
             description: DisableWatchdog defines whether the watchdog is disabled
             type: boolean
           display:
-            type: object
-            properties:
-              density:
-                description: Density is the piel density of the virtual display
-                type: integer
-                format: int64
-              fps:
-                description: FPS is the frame rate of the virtual display
-                type: integer
-                format: int64
-              height:
-                description: Height is the height of the virtual display
-                type: integer
-                format: int64
-              width:
-                description: Width is the width of the virtual display
-                type: integer
-                format: int64
+            $ref: '#/definitions/DisplaySpec'
+          displays:
+            description: Displays specifies the configuration for multiple virtual
+              displays.
+            type: array
+            items:
+              $ref: '#/definitions/DisplaySpec'
           enable_streaming:
             description: EnableStreaming specifies if streaming should be enabled
               for the instance or not
@@ -6015,6 +6270,7 @@ definitions:
             type: string
             example: webrtc
           security:
+            description: Security settings for the instance
             type: object
             properties:
               delete_protected:
@@ -6079,6 +6335,11 @@ definitions:
         description: Node the instance is running on
         type: string
         example: lxd0
+      project:
+        description: Project the instance is attached to. Empty means the "default"
+          project.
+        type: string
+        example: team-a
       public_address:
         description: 'PublicAddress is the external IP address the instance is accessible
           on (in most
@@ -6412,26 +6673,17 @@ definitions:
             description: DisableWatchdog defines whether the watchdog is disabled
             type: boolean
           display:
-            description: Display specifies the configuration of the virutal display
-              of the instance
-            type: object
-            properties:
-              density:
-                description: Density is the piel density of the virtual display
-                type: integer
-                format: int64
-              fps:
-                description: FPS is the frame rate of the virtual display
-                type: integer
-                format: int64
-              height:
-                description: Height is the height of the virtual display
-                type: integer
-                format: int64
-              width:
-                description: Width is the width of the virtual display
-                type: integer
-                format: int64
+            $ref: '#/definitions/DisplaySpec'
+          displays:
+            description: 'Displays specifies the configuration for multiple virtual
+              displays.
+
+              The first element represents the primary display (ID 0).
+
+              A maximum of 4 displays is supported.'
+            type: array
+            items:
+              $ref: '#/definitions/DisplaySpec'
           enable_streaming:
             description: EnableStreaming specifies if streaming should be enabled
               for the instance or not
@@ -6482,6 +6734,11 @@ definitions:
           selected.
         type: string
         example: lxd0
+      project:
+        description: Project to attach the instance to. Empty means the "default"
+          project.
+        type: string
+        example: team-a
       resources:
         description: Resources specifies the resources allocated for the instance
         type: object
@@ -6791,6 +7048,11 @@ definitions:
           intel'
         type: string
         example: nvidia
+      uuid:
+        description: UUID is the Nvidia GPU UUID, used as the CDI device id. Empty
+          for non-Nvidia GPUs.
+        type: string
+        example: GPU-6ddadebd-dafe-2db9-f10f-125719770fd3
   NodeGPUAllocation:
     description: NodeGPUAllocation describes a single allocation on a GPU
     type: object
@@ -7117,6 +7379,10 @@ definitions:
         type: object
         additionalProperties: {}
         example: {}
+      requestor:
+        description: The identity that requested the operation
+        type: string
+        example: dbfmti00520j4f90fp0g
       resources:
         description: 'Dictionnary of resource types (containers, snapshots, images)
 
@@ -7180,6 +7446,100 @@ definitions:
           server.'
         type: string
         example: instance:foo
+  Project:
+    type: object
+    title: Project is the public API representation of an Anbox Project.
+    properties:
+      created_at:
+        description: Creation UTC timestamp of the project
+        type: integer
+        format: int64
+        example: 1532150640
+      description:
+        description: Description of the project
+        type: string
+        example: Project for team A
+      entitlements:
+        description: Entitlements available to the user for this project
+        type: array
+        items:
+          type: string
+        example:
+          - can_view
+          - can_edit
+          - can_delete
+      immutable:
+        description: 'Immutable indicates that the project cannot be updated or deleted,
+
+          regardless of any force flag. Only true for the built-in "default" project.'
+        type: boolean
+      instance_count:
+        description: InstanceCount is the number of instances currently attached to
+          this project.
+        type: integer
+        format: int64
+        example: 3
+      name:
+        description: Name of the project
+        type: string
+        example: team-a
+      status:
+        description: Current status of the project
+        type: string
+        enum:
+          - unknown
+          - created
+          - ready
+          - deleted
+          - error
+        example: ready
+      status_code:
+        $ref: '#/definitions/ProjectStatus'
+      subnet:
+        description: Subnet the project is configured with in CIDR notation
+        type: string
+        example: 100.64.0.0/28
+  ProjectDelete:
+    type: object
+    title: ProjectDelete is the request body for deleting a Project.
+    properties:
+      force:
+        description: 'Whether deletion of the project should be forced, deleting any
+
+          contained instances first. Never overrides immutability.'
+        type: boolean
+        example: false
+  ProjectStatus:
+    type: integer
+    format: int64
+    title: ProjectStatus represents the lifecycle status of a Project.
+  ProjectsPatch:
+    type: object
+    title: ProjectsPatch is the request body for updating a Project.
+    properties:
+      description:
+        description: Description of the project
+        type: string
+        example: Project for team A
+  ProjectsPost:
+    type: object
+    title: ProjectsPost is the request body for creating a Project.
+    properties:
+      description:
+        description: Description of the project
+        type: string
+        example: Project for team A
+      name:
+        description: Name of the project
+        type: string
+        example: team-a
+      subnet:
+        description: 'Subnet to assign to the project in CIDR notation. Only validated
+          for
+
+          well-formedness; no allocation from a pool happens yet.'
+        type: string
+        example: 100.64.0.0/28
   RegistryApplication:
     description: RegistryApplication describes a single application available in the
       registry
