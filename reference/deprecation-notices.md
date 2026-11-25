@@ -13,7 +13,7 @@ This document contains a list of deprecation notices for Anbox Cloud and its com
 ## `anbox-cloud-dashboard` snap and charm
 *Deprecated in 1.31.0* ; *Unsupported in 1.33.0*
 
-The `anbox-cloud-dashboard` snap and the `anbox-cloud-dashboard` charm are deprecated as of 1.31.0 and will no longer be supported in 1.33.0.
+The `anbox-cloud-dashboard` snap and the `anbox-cloud-dashboard` charm are deprecated as of 1.31.0 and will no longer be supported in 1.33.0. Starting with the 1.33.0 release, dashboard functionality will remain available as a built-in component of the `ams` snap.
 
 (sec-anbox-connect-deprecation)=
 ## `anbox-connect`
