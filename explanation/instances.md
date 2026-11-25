@@ -7,44 +7,56 @@ myst:
 (exp-instances)=
 # Instances
 
-Instances are the center piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
+Instances are the center piece of the Anbox Cloud stack. You can create an instance from an image or copy an existing instance. Every instance provides a full Android system managed by Anbox Management Service (AMS) and belongs to exactly one {ref}`project <exp-projects>`, which defines its network and access scope.
 
-All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through addons. See {ref}`howto-backup-restore-example` for information on how to do this.
 
-(sec-regular-base-instances)=
-## Regular vs. base instances
+Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately.
 
-Anbox Cloud differentiates between two types of instances: regular and base. The instance type is visible in the output of the `amc ls` command.
+(sec-instances-and-projects)=
+## Instances and projects
 
-Regular instances are containers or virtual machines that are launched from either an application or an image. They exist until they are deleted.
+Every instance belongs to exactly one {ref}`project <exp-projects>`. A project gives its instances a shared network and access scope:
 
-Base instances are temporary containers or virtual machines that are used when bootstrapping an application. They are automatically deleted when the application bootstrap is completed. See {ref}`sec-application-bootstrap` for more information on the bootstrapping process.
+- Network:  An instance connects to its project's LXD-managed network, which is isolated from other project networks by default.
+- Access: a group can act on an instance only if it has access to the instance's project, in addition to any instance-level permissions. See {ref}`configure user permission page <howto-auth>`.
 
-When we refer to instances in this documentation without specifying the instance type, we mean regular instances.
+You choose the project when you create the instance. If you do not specify one, the instance is placed in the default project. An instance cannot be moved to another project after it is created.
 
-(sec-application-raw-instances)=
-## Application vs. raw instances
+(sec-instances-from-images)=
+## Instances created from images
 
-Instances are based on either {ref}`exp-applications` or {ref}`Images <ref-provided-images>`. So if you launch an application or an image, Anbox Management Service (AMS) automatically creates an instance for it.
+You create an instance from an {ref}`image <ref-provided-images>`. The instance runs the full Android system, without any additional apps installed. The image determines the {ref}`Android execution model <exp-android-execution-models>` of the instance: containerized Android or virtualized Android.
 
-Application instances are containers or virtual machines created when launching an application and run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the {ref}`sec-application-manifest-watchdog`. With the default configuration, you will see only the app and not the Android launcher.
+Instances created from images are called *raw instances*.
 
-Raw instances are containers or virtual machines created when launching an image. They run the full Android system, without any additional apps installed.
+(sec-application-instances)=
+## Instances created from applications (deprecated)
 
-Instances can be based on images with containerized Android or images with virtualized Android. The image determines the {ref}`Android execution model <exp-android-execution-models>` used by the instance.
+If you use {ref}`applications <exp-applications>`, AMS works with two additional kinds of instances:
+
+- **Application instances** are created when you launch an application and run the full Android system. If the application is based on an Android app (an APK package), the app is launched after the system boots and is monitored by the {ref}`sec-application-manifest-watchdog`. With the default configuration, you see only the app and not the Android launcher.
+- **Base instances** are temporary instances that AMS uses to bootstrap an application. They are deleted automatically when the bootstrap completes. See {ref}`sec-application-bootstrap` for more information on the bootstrapping process.
+
+The `TYPE` column in the `amc ls` output shows `base` for base instances and `regular` for all other instances. Instances created from images are always regular instances.
 
 ## Life cycle of an instance
 
+This section describes the life cycle of instances with {ref}`containerized Android <exp-android-execution-models>`.
+
+```{important}
+Applications, addons, and hooks are deprecated. See {ref}`ref-deprecation-notes`. To replace hooks, see {ref}`howto-migrate-from-addon-and-app-hooks`.
+```
+
 ### Creating an instance
 
-When you create an instance by either launching or initializing an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
+When you create an instance, AMS schedules it on a LXD node. The instance then executes the following steps in order:
 
 1. Configure the network interface and gateway.
-1. (Only for raw instances) Install addons that are specified with `--addons`.
-1. Expose services that are specified with `--service` or through the application manifest.
-1. Execute the `pre-start` hook provided by the installed addons.
-1. Launch the Android container.
-1. Execute the `post-start` hook provided by the installed addons.
+2. (Only for raw instances) Install addons that are specified with `--addons`.
+3. Expose services that are specified with `--service` or through the application manifest.
+4. Execute the `pre-start` hook provided by the installed addons.
+5. Launch the Android container.
+6. Execute the `post-start` hook provided by the installed addons.
 
 ![Instance start|584x646](/images/instance_start.png)
 
@@ -64,10 +76,11 @@ When an instance is stopped, it executes the following steps in order:
 2. Execute the `post-stop` hook provided by the installed addons.
 3. Shut down the instance.
 
-Beyond that, the instance will be removed from AMS either because you deleted it or because an error occurred during its runtime.
+Beyond that, an instance is removed from AMS only when you delete it. An instance in the `error` status remains in AMS until you delete it.
+
 ![Instance stop|575x521](/images/instance_stop.png)
 
-### Possible instance statuses
+## Possible instance statuses
 
 An instance moves through different stages and correspondingly can have the following statuses depending on its current state.
 
@@ -75,14 +88,14 @@ An instance moves through different stages and correspondingly can have the foll
 |-------------------|--------------|
 | `created`         | AMS has created an internal database object for the instance and will next schedule the instance onto a suitable LXD node. |
 | `prepared`        | AMS has decided the LXD node on which it will schedule the instance. |
-| `started`         | The instance is started and now booting. During the boot sequence, possible hooks are executed. Once all hooks have been executed, the instance will switch to `running`. |
+| `started`         | The instance is started and Android is booting. The instance switches to `running` when the boot completes. |
 | `running`         | The instance is fully up and running. |
 | `stopped`         | The instance has been stopped and can be restarted when required.|
 | `deleted`         | The instance has been deleted and will be removed from the AMS database soon. |
 | `error`           | An error occurred while processing the instance. The instance is stopped. |
 | `unknown`         | A possible error occurred and the real state of the instance cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](/reference/cmd-ref/amc/ams.amc_show.md) or [`amc-showlog`](/reference/cmd-ref/amc/ams.amc_show-log.md) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <sec-view-stored-logs>`.
+If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](/reference/cmd-ref/amc/ams.amc_show.md) or [`amc show-log`](/reference/cmd-ref/amc/ams.amc_show-log.md) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <sec-view-stored-logs>`.
 
 (sec-dev-mode)=
 ## Development mode
@@ -91,20 +104,11 @@ AMS allows starting an instance in development mode. This mode turns off some fe
 
 When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test addons or develop a platform plugin.
 
-To check whether development mode is enabled, run `amc show <instance_ID>` or look at the `/var/lib/anbox/session.yaml` file in the instance. If the `devmode` field in the configuration file is set to `true`, development mode is active.
+To check whether development mode is enabled, run `amc show <instance_ID>`. If the `devmode` field in the configuration file is set to `true`, development mode is active.
 
 ## Related topics
 
-- {ref}`exp-addons`
-- [Platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)
-- {ref}`howto-access-instance`
-- {ref}`howto-backup-restore-application-data`
+- {ref}`exp-android-execution-models`
+- {ref}`howto-instance`
 - {ref}`howto-create-instance`
-- {ref}`howto-configure-geographic-location`
-- {ref}`howto-delete-instance`
-- {ref}`howto-expose-services`
-- {ref}`howto-list-instances`
-- {ref}`howto-start-instance`
-- {ref}`howto-stop-instance`
-- {ref}`howto-view-instance-logs`
-- {ref}`howto-wait-for-application`
+- {ref}`howto-migrate-from-addon-and-app-hooks`

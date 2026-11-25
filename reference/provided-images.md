@@ -17,6 +17,10 @@ The following table lists supported images available on the official image serve
 
 | Name                        | Based on | Android Version | Ubuntu Version | Execution model | Available since |
 |-----------------------------|----------|-----------------|----------------|-----------------|---------------|
+| `resolute:android17-cf:amd64` | AOSP  | 17              | 26.04          | Virtualized | 1.31.0 |
+| `resolute:android17-cf:arm64` | AOSP  | 17              | 26.04          | Virtualized | 1.31.0 |
+| `resolute:aaos17-cf:amd64`    | AAOS  | 17              | 26.04          | Virtualized | 1.31.0 |
+| `resolute:aaos17-cf:arm64`    | AAOS  | 17              | 26.04          | Virtualized | 1.31.0 |
 | `resolute:android16-cf:amd64` | AOSP  | 16              | 26.04          | Virtualized | 1.30.0 |
 | `resolute:android16-cf:arm64` | AOSP  | 16              | 26.04          | Virtualized | 1.30.0 |
 | `resolute:aaos16-cf:amd64`    | AAOS  | 16              | 26.04          | Virtualized | 1.30.0 |
@@ -32,7 +36,7 @@ The following table lists supported images available on the official image serve
 
 ## Support for Anbox Cloud images
 
-Currently, Anbox Cloud provides images based on Ubuntu 22.04 LTS (Jammy Jellyfish) and Ubuntu 26.04 LTS (Resolute Raccoon). Deprecations, if any, are announced at least two releases in advance.
+Currently, Anbox Cloud provides containerized Android images (`jammy:*`) based on Ubuntu 22.04 LTS (Jammy Jellyfish) and virtualized Android images (`resolute:*-cf:*`) based on Ubuntu 26.04 LTS (Resolute Raccoon). Deprecations, if any, are announced at least two releases in advance.
 
 Images with containerized Android (`jammy:*`) and images with virtualized Android (`resolute:*-cf:*`) differ in their supported features. See {ref}`ref-feature-support-by-image-type` for a detailed comparison and {ref}`exp-android-execution-models` for an explanation of the two execution models.
 

@@ -13,6 +13,7 @@ This section contains guides for implementing specific streaming features in you
 - {ref}`howto-exchange-oob-data`
 - {ref}`howto-integrate-virtual-keyboard`
 - {ref}`howto-enable-client-side-video-upscaling`
+- {ref}`howto-support-multiple-displays`
 
 ## See also
 
@@ -26,4 +27,5 @@ access-stream-gateway
 exchange-oob-data
 integrate-virtual-keyboard
 enable-client-side-video-upscaling
+support-multiple-displays
 ```

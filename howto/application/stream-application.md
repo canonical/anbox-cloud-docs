@@ -47,6 +47,7 @@ To understand how the streaming stack of Anbox Cloud works, see {ref}`exp-applic
 :::
 ::::
 
+(howto-streaming-statistics)=
 ## Streaming statistics
 
 You can view the streaming statistics for your running sessions by selecting the **Statistics** button on the session. The statistics display on the right pane and also have a download option to download the statistics in a `.csv` format for further analysis.
@@ -100,6 +101,7 @@ To share your stream with users without an account, click *Set up sharing* ( ![s
 
 Set your stream title and expiration details and generate a link that can be shared with others.
 
+(howto-stream-developer-tools)=
 ### Developer Tools
 
 Toggle the *Developer Tools* panel on the *Stream* page to interact with your Android stream and monitor its performance. It helps you to track resource usage, view logs, and perform various actions while interacting with your Android stream in real-time to enhance your workflow. This panel is resizable, allowing you to customize your layout as needed, and can also be undocked into a separate window.

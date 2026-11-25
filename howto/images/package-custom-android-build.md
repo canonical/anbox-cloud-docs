@@ -84,11 +84,11 @@ This produces a file like `my-custom-android_1.0_amd64.snap` in the current dire
 
 Launch a virtualized Android instance in development mode so that you can push files to it:
 
-    id="$(amc launch --devmode resolute:android16-cf:amd64)"
+    id="$(amc launch --devmode resolute:android17-cf:amd64)"
 
 Or, for an automotive Android build:
 
-    id="$(amc launch --devmode resolute:aaos16-cf:amd64)"
+    id="$(amc launch --devmode resolute:aaos17-cf:amd64)"
 
 Wait for the instance to reach the `running` state:
 

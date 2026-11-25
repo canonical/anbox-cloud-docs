@@ -40,11 +40,11 @@ The appliance supports the following Ubuntu versions:
 
 ### LXD
 
-The appliance supports LXD >= 5.0.
+The appliance supports LXD >= 5.21. LXD 6.10 or later requires the Anbox Cloud Appliance 1.31.0 or later.
 
-By default, LXD is installed from the `5.21/stable` track.
+By default, LXD is installed from the `6/stable` track.
 
-If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.21/stable lxd` to update it. If you are already on LXD version 5.21, [do not downgrade it as it may render LXD unusable](https://canonical.com/lxd/docs/latest/installing/#upgrade-lxd).
+If LXD is already installed but the version is earlier than 6, run `snap refresh --channel=6/stable lxd` to update it. If you are already on LXD version 6, [do not downgrade it as it may render LXD unusable](https://canonical.com/lxd/docs/latest/installing/#upgrade-lxd).
 
 ### Hardware requirements
 
@@ -57,7 +57,7 @@ The following hardware specifications are required for running the appliance:
 
 The above recommendation is the minimum requirement to run the appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible Android containers. See {ref}`exp-capacity-planning` for an explanation on how to plan for a specific capacity on your appliance.
 
-Images with virtualized Android have additional requirements: the host CPU must support hardware virtualisation and `/dev/kvm` must be available. Each instance requires a minimum of 4 CPUs, 5GB of memory, and 15GB of disk space. See {ref}`ref-feature-support-by-image-type` for details.
+Images with virtualized Android have additional requirements: the host CPU must support hardware virtualisation and `/dev/kvm` must be available. Each instance requires a minimum of 2 CPU cores, 5GB of memory, and 15GB of disk space. See {ref}`ref-feature-support-by-image-type` for details.
 
 On public clouds, it is always recommended to allocate an additional storage volume for instance storage. If no additional storage volume is available, the appliance creates an on-disk image and uses it for instance storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and instance startup time.
 
@@ -82,15 +82,12 @@ In the 1.27.0 release of Anbox Cloud, we plan to switch to the latest version of
 
 ### LXD
 
-Charmed Anbox Cloud requires LXD version >= 5.0.
+Charmed Anbox Cloud requires LXD version >= 5.21. LXD 6.10 or later requires AMS 1.31.0 or later.
 
 (sec-juju-version-requirements)=
 ### Juju
 
-The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://canonical.com/juju) to manage the different components and their dependencies.
-The charmed Anbox Cloud requires a minimum of [Juju 3.0 or later](https://canonical.com/juju) to manage the different components and their dependencies.
-
-Anbox Cloud charms support user secrets and if you would like to use that feature, use Juju 3.3 or later.
+The charmed Anbox Cloud requires a minimum of [Juju 3.3 or later](https://canonical.com/juju) to manage the different components and their dependencies.
 
 We recommend using Juju 3.6, so that you will be using the latest LTS version of Juju and can manage user secrets. Juju 3.6 has the full range of features that Anbox Cloud charms support. See [Juju documentation](https://canonical.com/juju/docs/juju-cli/latest/howto/manage-secrets/) for more information about managing secrets.
 

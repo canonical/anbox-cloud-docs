@@ -29,11 +29,21 @@ There are two types of permissions:
 
 **Global permissions** are a set of predefined permissions that can be assigned to a group to provide access to server level operations. In case of global permissions, the targeted resource name is `server`.
 
-**Resource permissions** help in providing entitlements to existing resources in AMS. For example, specific entitlements can be assigned at instance level to control what operations can be performed on that instance. The resource types can be any of these: *identity*, *group*, *addon*, *application*, *image*, *instance*, *node*.
+**Resource permissions** help in providing entitlements to existing resources in AMS. For example, specific entitlements can be assigned at instance level to control what operations can be performed on that instance. The resource types can be any of these: *identity*, *group*, *addon*, *application*, *image*, *instance*, *node*, *project*.
 
 The entitlements for resource permissions can be for all resource types in general or for a specific resource type.
 
 For a complete list of the global and resource level entitlements, see {ref}`ref-auth`.
+
+## Projects and access
+
+Projects introduce a *project* resource type to the authorization model. For entitlements granted directly on an instance to take effect, the same group must also have `can_view` on the project that contains it.
+
+Project entitlement sets provide viewer access or editor access. The `viewer` entitlement set grants read-only access to the project and its instances. The `editor` entitlement set includes viewer access and allows users to manage instances in the project. It does not grant permission to edit or delete the project itself.
+
+Creating projects requires the global `can_create_projects` entitlement. Deleting a project requires administrator access or the `can_delete` entitlement on that specific project. The `default` project cannot be deleted.
+
+For details, see {ref}`Authorization model <sec-project-authorization>`.
 
 ## Methods of authorization
 
