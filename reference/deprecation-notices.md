@@ -101,7 +101,8 @@ This transition provides a two-year migration window before legacy charms become
 *Deprecated in 1.32.0* ; *Unsupported in 1.34.0*
 
 Support for [applications](/howto/application/index.md), [addons](/howto/addons/index.md), and Anbox Application Registry [AAR](/howto/aar/index.md) will be deprecated starting with 1.32.0.
-- In 1.32.0: Creating applications and registry management via the Anbox Cloud dashboard will be disabled. However, applications, addons, and registry management will remain functional through the CLI for transition purposes.
-- In 1.34.0: All support for applications, addons and registry will be officially removed. Users will no longer be able to create, manage, or utilize these features via the CLI or dashboard.
+- In 1.32.0: Creating applications and registry management will be removed from the Anbox Cloud dashboard. However, applications, addons, and registry management will remain functional through the CLI for transition purposes.
+- In 1.33.0: Applications, addons and registry management will be supported in the CLI but disabled by default.
+- In 1.34.0: All support for applications, addons, hooks and registry will be officially removed. Users will no longer be able to create, manage, or utilize these features via the CLI or dashboard.
 
 See {ref}`howto-migrate-from-addon-and-app-hooks` for how to replicate addon hook behavior using a custom image instead.
