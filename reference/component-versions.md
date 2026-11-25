@@ -11,6 +11,73 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.31.0
+
+### Charms
+
+#### Ubuntu 22.04 LTS
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.31/stable | 1921 | 1922 | 1.31.0-129a64a |
+| ams-lxd | 1.31/stable | 1735 | 1736 | 1.31.0-129a64a |
+| coturn | 1.31/stable | 1675 | 1676 | 1.31.0-129a64a |
+| anbox-stream-gateway | 1.31/stable | 1798 | 1799 | 1.31.0-129a64a |
+| anbox-stream-agent | 1.31/stable | 1791 | 1792 | 1.31.0-129a64a |
+| anbox-cloud-dashboard | 1.31/stable | 1734 | 1735 | 1.31.0-129a64a |
+| aar | 1.31/stable | 1932 | 1933 | 1.31.0-129a64a |
+| lxd-integrator | 1.31/stable | 1142 | 1143 | 1.31.0-129a64a |
+| anbox-cloud-cos-configuration | 1.31/stable | 1027 | 1028 | 1.31.0-129a64a |
+
+#### Ubuntu 24.04 LTS
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.31/stable | 1923 | 1924 | 1.31.0-129a64a |
+| ams-lxd | 1.31/stable | 1737 | 1738 | 1.31.0-129a64a |
+| coturn | 1.31/stable | 1677 | 1678 | 1.31.0-129a64a |
+| anbox-stream-gateway | 1.31/stable | 1800 | 1801 | 1.31.0-129a64a |
+| anbox-stream-agent | 1.31/stable | 1793 | 1794 | 1.31.0-129a64a |
+| anbox-cloud-dashboard | 1.31/stable | 1736 | 1737 | 1.31.0-129a64a |
+| aar | 1.31/stable | 1934 | 1935 | 1.31.0-129a64a |
+| lxd-integrator | 1.31/stable | 1144 | 1145 | 1.31.0-129a64a |
+| anbox-cloud-cos-configuration | 1.31/stable | 1029 | 1030 | 1.31.0-129a64a |
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| ams | 1.31/stable | 3310 | 3309 | 1.31.0-18faf33e1 |
+| ams-node-controller | 1.31/stable | 2883 | 2882 | 1.31.0-18faf33e1 |
+| amc | latest/stable | 3101 | 3100 | 1.31.0-18faf33e1 |
+| aar | 1.31/stable | 3253 | 3252 | 1.31.0-18faf33e1 |
+| anbox-stream-agent | 1.31/stable | 3522 | 3521 | 1.31.0-18faf33e1 |
+| anbox-stream-gateway | 1.31/stable | 3487 | 3486 | 1.31.0-18faf33e1 |
+| anbox-cloud-appliance | 1.31/stable | 3162 | 3161 | 1.31.0-18faf33e1 |
+| anbox-cloud-dashboard | 1.31/stable | 4989 | 4988 | 1.31.0-18faf33e1 |
+| anbox-connect | latest/stable | 2312 | 2311 | 1.31.0-18faf33e1 |
+
+### Anbox images
+
+| Name | Version | Execution model |
+|----------------------------|---------------------------------|------------------|
+| `jammy:android14:amd64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:android14:arm64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:android15:amd64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:android15:arm64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:aaos14:amd64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:aaos14:arm64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:aaos15:amd64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `jammy:aaos15:arm64` | `1.31.0-20261119144833.git67f91bc` | Containerized |
+| `resolute:android16-cf:amd64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:android16-cf:arm64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:android17-cf:amd64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:android17-cf:arm64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:aaos16-cf:amd64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:aaos16-cf:arm64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:aaos17-cf:amd64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+| `resolute:aaos17-cf:arm64` | `1.31.0-20261119144833.git67f91bc` | Virtualized |
+
 ## 1.30.3
 
 ### Charms

@@ -32,6 +32,7 @@ Name            |  Value
 `type`          |  Type of the instance, possible values: "base", "regular"
 `node`          |  Node on which the instance runs
 `status`        |  Instance status, possible values: "created", "prepared", "started", "stopped", "running", "error", "deleted", "unknown"
+`project`       |  Name of the {ref}`project <exp-projects>` the instance belongs to
 
 To list all regular instances:
 
@@ -42,3 +43,9 @@ If you need to apply multiple filters, pass multiple flags:
     amc ls --filter type=regular --filter node=lxd0
 
 This will query all regular instances that are placed on the node with the name `lxd0`.
+
+To list the instances in a {ref}`project <exp-projects>`, filter by project name:
+
+    amc ls --filter project=<project_name>
+
+In the dashboard, the *Instances* page shows the instances in the currently selected project. Use the project selector to switch projects.

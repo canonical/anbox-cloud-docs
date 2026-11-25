@@ -7,19 +7,7 @@ myst:
 (howto-access-android-instance)=
 # Access an Android instance
 
-As an Android application developer, you need access to the Android instance when developing and debugging applications. Depending on the kind of access you would like to the Android instance, you can use [anbox-connect](https://snapcraft.io/anbox-connect) to connect over the network from a remote machine or use {term}`anbox-shell` to connect from within the Anbox instance.
-
-Here's a video demonstration of how to access an Android instance securely using anbox-connect:
-
-```{raw} html
-<iframe width="640" height="360"
-        src="https://www.youtube.com/embed/bkmK2M9nlb4"
-        title="Debug an Android application with Android studio"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-</iframe>
-```
+As an Android application developer, you need access to the Android instance when developing and debugging applications. Depending on the kind of access you would like to the Android instance, you can use [amc](https://snapcraft.io/amc) to connect over the network from a remote machine or use {term}`anbox-shell` to connect from within the Anbox instance.
 
 This guide uses the Anbox Cloud Appliance to demonstrate both ways of connecting to an Android instance. So if you don't have an existing Anbox Cloud deployment already, first {ref}`install the appliance <tut-installing-appliance>`.
 
@@ -49,23 +37,15 @@ Running anbox-shell provides you root access to the Android instance.
 
 ## Public access: Connect to the Android instance using ADB
 
-Using anbox-connect lets you securely connect to an Android instance via the Android Debug Bridge (ADB).
+Using `amc connect` lets you securely connect to an Android instance via the Android Debug Bridge (ADB).
 
-> Video demonstration:
->
-> ```{raw} html
-> <iframe width="640" height="360"
->        src="https://www.youtube.com/embed/qsFF0eqj_JE"
->        title="Debug an Android application with Android studio"
->        frameborder="0"
->        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
->        allowfullscreen>
-> </iframe>
-> ```
+```{note}
+If your dashboard still shows `anbox-connect`, replace it with `amc connect`. `anbox-connect` is {ref}`deprecated <sec-anbox-connect-deprecation>` as of 1.31.0.
+```
 
-Install anbox-connect on your host machine:
+If your host machine is not the one where the appliance is installed, install `amc` on it:
 
-    snap install anbox-connect
+    snap install amc
 
 [Install ADB](https://developer.android.com/tools/releases/platform-tools) on your host machine. You can [install Android Studio](https://developer.android.com/studio) which also installs the Android SDK (which includes ADB as part of the platform tools). You can choose to use another IDE of your choice and install ADB independently.
 
@@ -79,7 +59,11 @@ Wait until the instance is running. To check, run:
 
     amc ls
 
-After verifying that the instance is running and has a session ID, share the session:
+Once the instance is running and has a session ID, connect using either a share URL or its instance ID or name, then complete the ADB connection.
+
+### Connect using a share URL
+
+On the machine where the appliance is installed, share the session:
 
 ```{note}
 If you are using the charmed deployment, use `anbox-stream-gateway` instead of `anbox-cloud-appliance.gateway` in the commands.
@@ -91,7 +75,7 @@ If you are using the charmed deployment, use `anbox-stream-gateway` instead of `
 Providing a description helps you identify a shared session when you are sharing a session multiple times with different people.
 ```
 
-The output returns the command you need to run next from your host machine: `anbox-connect <connection_url>`
+The output returns the command you need to run next from your host machine: `amc connect <connection_url>`
 
 Copy this output. The `<connection_url>` is a presigned URL that establishes a single ADB connection — if multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted and only the last request succeeds.
 
@@ -99,7 +83,17 @@ Copy this output. The `<connection_url>` is a presigned URL that establishes a s
 
 Now, create the connection from the terminal of your host machine (where ADB is installed). Run:
 
-    anbox-connect <connection_url>
+    amc connect <connection_url>
+
+### Connect using the instance ID or name
+
+This works directly if you are running `amc` on the AMS host. From a remote machine, first {ref}`set up remote access to AMS <howto-access-ams-remote>`.
+
+From the terminal of your host machine (where ADB is installed), run:
+
+    amc connect <instance_id_or_name>
+
+### Connect ADB to the instance
 
 Accept the message to trust the connection. Once the ADB channel is established, the output returns guidance for the next step:
 

@@ -161,11 +161,11 @@ If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by defau
 </details>
 
 ```{important}
-If you are running LXD clusters with the LXD snap from a channel other than 5.21/stable, you need to set the current LXD channel before running the `upgrade-cluster` command. You can set this by running a command like
+If you are running LXD clusters with the LXD snap from a channel other than 6/stable, you need to set the current LXD channel before running the `upgrade-cluster` command. You can set this by running a command like
 
-    juju config lxd channel=5.0/stable
+    juju config lxd channel=5.21/stable
 
-where `5.0/stable` is the currently installed LXD snap channel. Not doing this might lead to a broken LXD cluster.
+where `5.21/stable` is the currently installed LXD snap channel. Not doing this might lead to a broken LXD cluster.
 ```
 
 To start, upgrade the AMS LXD charm to the latest revision using:

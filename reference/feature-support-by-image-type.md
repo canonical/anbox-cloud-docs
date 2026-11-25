@@ -8,9 +8,7 @@ Anbox Cloud provides two types of images, each using a different {ref}`Android e
 | Pattern | Execution model | Example |
 |---------|----------------|---------|
 | `jammy:*` | Containerized Android | `jammy:android14:amd64` |
-| `resolute:*-cf:*` | Virtualized Android | `resolute:android16-cf:amd64` |
-
-The `-cf` suffix identifies a Cuttlefish-based image using virtualized Android.
+| `resolute:*-cf:*` | Virtualized Android | `resolute:android17-cf:amd64` |
 
 See {ref}`ref-provided-images` for the full list of available images.
 
@@ -27,7 +25,7 @@ The Android system runs directly in the LXD container. These images support:
 - VHAL support via adapter
 
 **Minimum resource requirements:**
-- 2 CPU cores per instance.
+- 1 CPU core per instance.
 - 3GB memory per instance.
 - 3GB disk space per instance.
 - KVM not required.
@@ -41,9 +39,10 @@ The Android system runs inside a Cuttlefish virtual machine within the LXD insta
 - Shell access via `adb shell`
 - VHAL support with native gRPC
 - QEMU-based isolation between Android and the host
+- Multi-display support (see {ref}`exp-multi-display`)
 
 **Minimum resource requirements:**
-- 4 CPU cores per instance.
+- 2 CPU cores per instance.
 - 5GB memory per instance.
 - 15GB disk space per instance.
 - KVM required on the host.

@@ -19,10 +19,6 @@ However, if you do not use the `--enable-graphics` flag when launching an instan
 
 Now your environment may or may not include a GPU. If Anbox Cloud detects a GPU device during deployment, it adjusts itself to use the GPU. AMS configures each LXD instance to pass through a GPU device from the host. Every instance that owns a GPU slot will have access to the GPU. For NVIDIA GPUs, LXD uses the [NVIDIA container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to the instance.
 
-```{important}
-Anbox Cloud currently does not support GPU provisioning for instances that are virtual machines and not containers. This feature is planned for a future release.
-```
-
 To use container instances with a GPU,
 
 - Configure the number of available GPU slots on the node. This decides how many instances can run on a given node because GPUs have limited sharing capacity among multiple instances. See {ref}`sec-gpu-slots` for detailed information.
