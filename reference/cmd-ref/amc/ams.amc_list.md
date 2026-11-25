@@ -22,6 +22,7 @@ They are of the following form:
 	| app    | string (application id or name)        |
 	| status | string (prepared, started, error, etc) |
 	| node   | string                                 |
+	| project  | string                                 |
 	| type   | string (regular/base)                  |
 	| tags   | comma-separated list                   |
 	| vm     | boolean (true/false)                   |

@@ -42,6 +42,7 @@ ams.amc copy <instance_id_or_name> [flags]
   -c, --cpus int                Number of CPU cores to be assigned for the instance (for example, 2). If not specified, the number of CPU cores specified by the instance type will be used. (default 2)
       --devmode                 Enable developer mode for the instance (default disabled)
       --disable-watchdog        Disable watchdog for the instance (regular instances only)
+      --display stringArray     display configuration in the format width=<W>,height=<H>[,dpi=<D>,fps=<FPS>]. Supports at most 4 displays. Mutually exclusive with --display-size, --display-density, and --fps.
       --display-density int     Pixel density of the virtual display of the instance (default 240)
       --display-size string     Size of the virtual display of the instance in the format <width>x<height> (default "1280x720")
       --enable-graphics         Enable graphics for the instance (default: disabled)
@@ -60,6 +61,7 @@ ams.amc copy <instance_id_or_name> [flags]
       --no-wait                 Don't wait for the instance to start before returning (default: disabled)
   -n, --node string             LXD node to use for creating the instance
   -p, --platform string         Anbox platform to use
+      --project string          Project to attach the instance to. Empty means the "default" project
   -r, --raw                     If specified, create a raw instance for the specified image instead of an application instance
   -s, --service stringArray     Services to expose on the instance IP endpoint for external access (public or private)
       --tags string             Comma-separated list of tags to set for the instance
