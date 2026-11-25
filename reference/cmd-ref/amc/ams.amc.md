@@ -38,6 +38,7 @@ with Anbox Cloud.
 * [ams.amc logs](ams.amc_logs.md)	 - Show runtime logs of a running instance
 * [ams.amc monitor](ams.amc_monitor.md)	 - Listen for events generated in AMS
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
+* [ams.amc project](ams.amc_project.md)	 - Manage projects
 * [ams.amc publish](ams.amc_publish.md)	 - Publish an instance as an image
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 * [ams.amc restart](ams.amc_restart.md)	 - Restart a running instance
