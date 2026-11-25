@@ -25,6 +25,7 @@ $ amc auth group permission delete test-group-1 application foo --permissions ca
 ```
   -h, --help                  help for delete
   -p, --permissions strings   Comma separated list of permissions to add to the group.
+  -y, --yes                   Assume 'yes' as answer to all prompts and run non-interactively
 ```
 
 ## SEE ALSO

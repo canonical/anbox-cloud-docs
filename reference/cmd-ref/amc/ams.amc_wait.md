@@ -12,6 +12,7 @@ A condition is of the form 'key=value', where 'key' is a supported attribute
 and 'value' defines what to wait on.
 
 Valid attributes:
+
  - For applications: published, status
  - For application versions: published, status
  - For instances: status
